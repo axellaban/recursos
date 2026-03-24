@@ -1,0 +1,880 @@
+[00:00:00] Nano Banana just made it possible to
+[00:00:01] create incredible images in seconds that
+[00:00:04] used to take designers [music] hours to
+[00:00:06] do. And in this video, I'm going to show
+[00:00:07] how you can build anything with Nano
+[00:00:09] Banana and NH10. [music] I'm going to
+[00:00:11] show you how you can scrape hundreds of
+[00:00:13] leads, get email addresses for those
+[00:00:15] leads, and then create a unique [music]
+[00:00:17] image from Nanabanana for all of those
+[00:00:19] people. And I'm also going to show you
+[00:00:20] how you can create an AI [music] app to
+[00:00:22] automate the process of anything in your
+[00:00:24] social media pipeline so you can get
+[00:00:26] more customers and completely crush it.
+[00:00:28] One of the coolest hacks from Nana
+[00:00:29] Banana is its ability to incorporate
+[00:00:31] logos into images and even recreate
+[00:00:34] thumbnails, which I'll get to in this
+[00:00:36] video, but we're going to start this
+[00:00:37] whole thing off in the beautiful,
+[00:00:38] wonderful NA10, which is our no code
+[00:00:41] platform of choice. Now, how does this
+[00:00:43] thing actually work? Well, I'm going to
+[00:00:44] show you two different examples. I'm
+[00:00:46] going to show you how you can get an
+[00:00:48] image, ask it to do something on that
+[00:00:50] image, and then create something new.
+[00:00:51] And then I'm going to show you how you
+[00:00:52] can then actually automate the process
+[00:00:54] of getting hundreds of leads and then
+[00:00:55] creating unique images for all of them.
+[00:00:57] So let's go through exactly what this
+[00:00:59] one looks like first of all. So the
+[00:01:00] first thing we want to do is submit this
+[00:01:02] to run through. That's the best way to
+[00:01:03] explain this. So let me come down here
+[00:01:05] and show you what I mean. So we execute
+[00:01:06] on submission. We're going to give it um
+[00:01:08] information. So anytime going to give it
+[00:01:10] an image and what this is going to do is
+[00:01:12] you feed it a logo, you feed it the name
+[00:01:14] of that business. And then what this
+[00:01:15] will do is take that image then
+[00:01:17] incorporate it into a pre-existing thing
+[00:01:19] that we've already determined. The very
+[00:01:21] and again just think about it like this.
+[00:01:23] you in this flow here, you can give it
+[00:01:24] any image and then give it any custom
+[00:01:27] command around that image and it will
+[00:01:28] automate it for you. One of the cool
+[00:01:30] things about doing it this way is the
+[00:01:31] fact that you won't get the watermark
+[00:01:33] and the price is around 10 cents per
+[00:01:36] generation. Now, let me explain to you
+[00:01:37] exactly what's happening and then how
+[00:01:38] you can automate this for hundreds in
+[00:01:40] the image to image. So, first thing
+[00:01:41] that's happening here is we are taking
+[00:01:43] the image and we're throwing it onto
+[00:01:45] image BB. Now, what image BB does
+[00:01:48] effectively is hosts that image. So, we
+[00:01:50] upload any image we want to and it will
+[00:01:52] then live on this website when when that
+[00:01:54] loads up for us in the background. The
+[00:01:55] next thing that's happening here, guys,
+[00:01:57] is we're calling the Nano Badano uh API.
+[00:02:00] And we're doing that with this service
+[00:02:03] here, which is Kia API. All you're going
+[00:02:05] to do is create an account. You'll get
+[00:02:06] free credits. So, you don't actually
+[00:02:08] physically need to pay to get started. I
+[00:02:11] found the generation cost is around 10
+[00:02:13] cents per generation, which is really,
+[00:02:15] really cheap for this. And all you do is
+[00:02:16] you come over here, you're going to log
+[00:02:18] in to your account and you're going to
+[00:02:19] grab an API key from this platform. And
+[00:02:21] if you'd like to get API key from
+[00:02:22] imageB, you scroll down to the bottom,
+[00:02:24] click on API, and then you'll see here,
+[00:02:26] you can literally copy that and then
+[00:02:27] enter it into the workflow. And
+[00:02:29] obviously in the workflow here, it's
+[00:02:30] just coming down here and you can enter
+[00:02:32] the value in there. You're ready to go.
+[00:02:33] And then with Nana Banana, it's the
+[00:02:34] exact same thing. What I've done here is
+[00:02:36] actually hardcoded in the prompt to
+[00:02:39] generate this thing, which you can do if
+[00:02:41] you want the same kind of style for
+[00:02:42] everything. You can do various different
+[00:02:43] things like add an AI agents to make it
+[00:02:45] more complicated. But I just want to
+[00:02:47] show you the power of doing it and how
+[00:02:48] you can leverage it. So I've got a
+[00:02:49] prompt here which is a hyperrealistic
+[00:02:51] image of a phone on a desk with
+[00:02:52] notifications. I've dynamically
+[00:02:54] populated the brand so we can have that
+[00:02:57] incorporated in the image. And then I've
+[00:02:58] specified 4K 16x9 resolution output as
+[00:03:01] an image. Beautiful. We come down and
+[00:03:03] then it's ready to go. Then what happens
+[00:03:04] guys is we have this beautiful circle
+[00:03:06] this cycle. We're effectively we're
+[00:03:08] calling the API to say hey a is it
+[00:03:11] ready? And if it's not ready, we
+[00:03:13] physically want to go ahead and download
+[00:03:15] it. So what this guy here was going to
+[00:03:16] do is query it. It's looking for is it
+[00:03:19] successful or not. Now the state is the
+[00:03:20] thing we're looking after here, which is
+[00:03:22] not to be generated, but to be
+[00:03:24] completed. And when it's completed, it
+[00:03:26] will progress downwards. And at any time
+[00:03:29] during the entire process, we can
+[00:03:30] actually come over here to the API,
+[00:03:32] which I'll pull up very quickly by
+[00:03:33] coming on to kia.ai/market.
+[00:03:36] You can actually see logs on the left
+[00:03:38] hand side. And you can see here for
+[00:03:39] example this one is running. This one
+[00:03:42] down here failed because I didn't have
+[00:03:43] balance. But you can see it's basically
+[00:03:45] running and how many credits it
+[00:03:46] consumes. So you can check in at any
+[00:03:48] time everything that has happened. And
+[00:03:50] if you want to check out the result of
+[00:03:51] something that you made like this one
+[00:03:52] for example, you can do that and it will
+[00:03:53] usually just show you on screen. But my
+[00:03:55] internet's a little bit fudgy at the
+[00:03:57] moment because it decided not to come
+[00:03:58] and rock and roll with this today. So
+[00:04:00] that's effective what's happening. Now
+[00:04:02] this will keep going till it's complete
+[00:04:03] and it has literally just completed and
+[00:04:05] then we'll get the um result here. So
+[00:04:07] what I'm now doing here is grabbing it
+[00:04:09] and uploading it to my Google Drive so
+[00:04:11] that I can physically store that
+[00:04:13] whenever I want to. So if I come over to
+[00:04:15] my Google Drive now, we can see that has
+[00:04:17] created this beautiful image for us here
+[00:04:18] which is combining NA10 with our
+[00:04:21] specific prompt. How freaking cool is
+[00:04:24] this guys? So look, new lead NA10. New
+[00:04:26] lead NA10. And it's kind of blurred
+[00:04:27] things out. So maybe we'd want to change
+[00:04:29] that, but how freaking crazy is this?
+[00:04:31] It's actually got their logo perfectly.
+[00:04:34] It's got that. So say for example you
+[00:04:35] wanted to work with a client and you
+[00:04:37] want to show what kind of leads you
+[00:04:38] imagine getting a custom image that
+[00:04:39] looks like this. It's freaking crazy.
+[00:04:42] This is another example that you can do
+[00:04:43] with the notifications are actually
+[00:04:44] popping out. This example didn't have
+[00:04:46] the brand name but the concept that I
+[00:04:48] want to leave you with here is brand
+[00:04:49] logo. There's nothing more special than
+[00:04:51] the brand logo plus the name is
+[00:04:53] incredible and we can do amazing things
+[00:04:54] with that. So that's what the flow does.
+[00:04:56] But let's just say well this is cool
+[00:04:57] Jack. What if I wanted to actually
+[00:04:59] leverage this cool nano banana thing to
+[00:05:02] generate like leads and customers,
+[00:05:05] right? How would I actually go and do
+[00:05:06] this? Well, you can use a system like
+[00:05:07] this. So, what I'm going to show you
+[00:05:09] here is the here's the idea is we're
+[00:05:11] going to get a air table and I prefer
+[00:05:13] air table because you can actually host
+[00:05:14] the images in it as like raw files and
+[00:05:17] that's really important to bear in mind.
+[00:05:18] What I want to do is find leads in your
+[00:05:21] niche. Okay? And then once I've got
+[00:05:22] those leads, I want to scrape them to
+[00:05:24] get information about the company. So, I
+[00:05:25] want hundreds of them and lots of
+[00:05:26] information. Then what we're going to
+[00:05:28] do, the next plan is to enrich that
+[00:05:30] data. So we get email addresses for all
+[00:05:32] of them. So we're going to have hundreds
+[00:05:33] of leads, thousands of leads, loads of
+[00:05:35] email addresses. Once we've gotten those
+[00:05:37] two things, I then want AI to generate
+[00:05:39] like a custom prompt for every single
+[00:05:42] one of those customers. And then once
+[00:05:43] we've gotten that, I then want to run
+[00:05:45] the whole scenario together to create a
+[00:05:47] unique image for every single one of
+[00:05:49] them. But what's the first step? Well,
+[00:05:51] the first step is deciding what is the
+[00:05:53] image that we actually want to share. We
+[00:05:55] know from data that if you send a
+[00:05:58] personalized a genuinely believable
+[00:06:00] personalized email over a
+[00:06:01] non-personalized one, your response rate
+[00:06:03] usually doubles. And there's little
+[00:06:05] hacks and stuff around that, but that's
+[00:06:06] the bottom line. So the first step in
+[00:06:07] this process is to do what I call a JSON
+[00:06:10] prompt. What I mean by that is if you
+[00:06:12] head over to Google, I want you to find
+[00:06:14] and think of the concept that you want
+[00:06:15] to do. So for example, a good one is a
+[00:06:17] cereal bowl with a logo in it, right?
+[00:06:20] with their name in it like you know we
+[00:06:21] this is what you're thinking about over
+[00:06:23] breakfast or we eat your competition for
+[00:06:24] breakfast. So if you had some kind of
+[00:06:26] like angle based on the service that
+[00:06:28] you're targeting you could do something
+[00:06:30] like that. But let's just say for
+[00:06:31] example we had I don't know if I just
+[00:06:33] say nano
+[00:06:35] banana examples.
+[00:06:38] Okay let's just say you're looking for
+[00:06:40] inspiration for this. What you can
+[00:06:42] probably do is find an image. So, let's
+[00:06:45] just say that we had a really cool
+[00:06:47] example here, which I'm not finding any
+[00:06:49] on here right now. Okay, weirdly enough,
+[00:06:51] guys, I go on to X.com and I find it
+[00:06:53] like instantaneously. So, this one is
+[00:06:56] really cool. Uh, but let's just say that
+[00:06:57] we want something like this, right?
+[00:06:58] Which is somebody eating noodles,
+[00:07:00] something funny. Um, and with their logo
+[00:07:03] on the hat and maybe like our campaign
+[00:07:04] is, hey, just saw a friend eating eating
+[00:07:08] noodles with your with your with your
+[00:07:09] cap on or something like that. I mean,
+[00:07:10] this is just an example, right? I just
+[00:07:12] want to show you like the art of what's
+[00:07:13] possible and how this is so cool. So
+[00:07:14] what we would then do is head over to
+[00:07:16] chat GBT. So the idea is that you got to
+[00:07:17] pick something specific to a merge. So
+[00:07:19] now I would say something like, hey, I
+[00:07:21] would like you to reverse engineer and
+[00:07:22] create a JSON prompt based on this
+[00:07:24] image. So the only information that I
+[00:07:26] will provide to it is going to be the
+[00:07:27] text that will go onto the cap. Okay,
+[00:07:30] something really simple like that. We
+[00:07:31] paste this one in real quick. Oh, let me
+[00:07:33] just come back and make sure I copy the
+[00:07:34] image. So again, this could be something
+[00:07:37] funny, something eye-catching like, you
+[00:07:38] know, maybe if you're doing real estate,
+[00:07:40] she was eating like cereal with houses
+[00:07:42] on it. You can imagine like it's just
+[00:07:44] something eye-catching but no one is
+[00:07:46] sending. And this is the cool thing cuz
+[00:07:48] I always asked the question this tech is
+[00:07:49] awesome but so what like apart from the
+[00:07:52] cool things we can do obviously but like
+[00:07:53] I like to think about how can my lead
+[00:07:55] genen to make things really exciting. So
+[00:07:57] we've now got this beautiful JSON prompt
+[00:08:00] here which is very very cool. All right
+[00:08:01] sweet. So we've got down here.
+[00:08:02] Beautiful. So this is very very very
+[00:08:05] cool. All right. But what we need to do
+[00:08:07] is now we've got the JSON prompt broken
+[00:08:08] down. So I've just told it to turn this
+[00:08:10] into text with the only variables being
+[00:08:12] like the text itself. So this is a
+[00:08:14] really great way. We can get this all
+[00:08:15] here. So now we've got a beautiful
+[00:08:17] prompt and again JSON prompts are
+[00:08:18] exceptional for things like GPTs where
+[00:08:20] if you want to get reliable result and
+[00:08:21] give this as a front end app which we're
+[00:08:23] going to build later. It's perfect. So
+[00:08:25] you ready? So we copy this here.
+[00:08:27] Beautiful. Now we've got this prompt.
+[00:08:28] We're going to save that to one side.
+[00:08:29] Now the next thing you want to do is go
+[00:08:31] and get the leads. So let's go do this
+[00:08:32] together right now and do some scraping
+[00:08:34] cuz I'm in a very scrapy mood. You're
+[00:08:36] going to head over to appify.com, which
+[00:08:38] is the Willy Wonkers Emporium for
+[00:08:40] scraping. So, let me log into this
+[00:08:42] account over here. Right now, first
+[00:08:44] thing I want to do is head over to this
+[00:08:46] scraper here. So, I'm going to go and
+[00:08:47] use the leads finder. You can do this by
+[00:08:49] coming on the left hand side to actors
+[00:08:50] and again, actually, best to go on to
+[00:08:52] the Appy store and then you can just
+[00:08:54] type in leads finder. There's many
+[00:08:56] different scrapers. Um, all of the
+[00:08:58] pluses and minuses. Obviously, since the
+[00:09:00] Apollo thing, these haven't been like as
+[00:09:03] premium as some of the other ones, but
+[00:09:04] you can still some great results with
+[00:09:06] these. So, we're going to come down here
+[00:09:07] and use this guy right here. Beautiful.
+[00:09:09] And then, let's just say that the niche
+[00:09:11] we're going after, and I'm just going to
+[00:09:12] fetch something like 10 leads, but
+[00:09:14] obviously you can do significantly more.
+[00:09:15] This is just for the purposes of the
+[00:09:16] video. You can do job title. You can
+[00:09:18] specify by locations to include and
+[00:09:20] exclude. So, we want um the UK to make
+[00:09:22] sure that's included. You can do it by
+[00:09:23] city. If you're doing something
+[00:09:24] geographically based, so if you're doing
+[00:09:26] a campaign for people in leads, then
+[00:09:28] that's something that you would really
+[00:09:29] emphasize in there like, hey dude, we're
+[00:09:31] just working with leads based, blah blah
+[00:09:32] blah. Cool. Email status. We want that
+[00:09:34] to be validated. Company website, we
+[00:09:36] don't need that in. Then you've got
+[00:09:38] keywords, which you can enter for the
+[00:09:40] industries and targets that you're
+[00:09:41] going. So if you're going after coaches,
+[00:09:43] you may say coach, you may say high
+[00:09:44] ticket, you may say blah blah blah,
+[00:09:46] whatever the thing is. Okay? And then
+[00:09:47] we're call to ready and rock. Then all
+[00:09:48] we're going to do is to save and start.
+[00:09:50] And again, we would just let this run
+[00:09:51] and get loads and just get quite a few
+[00:09:53] beautiful leads. So, this is going to
+[00:09:54] run for us in the background. And then
+[00:09:56] what we're going to have off the back of
+[00:09:57] this guys is a beautiful list of lots of
+[00:10:00] businesses with further information. So,
+[00:10:02] not only we're going to get the URLs,
+[00:10:04] we're going to get things like LinkedIn
+[00:10:05] profiles. We're going to get lots of
+[00:10:06] cool stuff. Cool. So, we have some
+[00:10:09] phenomenal things here. So, if I just
+[00:10:10] come down here, this is a UK dentist
+[00:10:12] allegedly. We open up and see what we
+[00:10:14] think. Cool. Welcome to the dental
+[00:10:15] start. More reasons to smile. Cool. So,
+[00:10:18] then what we'll do is we're going to
+[00:10:19] come over here. We are going to go down
+[00:10:20] and export all this data. Export data
+[00:10:22] set. Yes, sir. We do that as a CSV.
+[00:10:25] Okay. And then click on download. Sweet.
+[00:10:27] Fantastic. Great. Now, the next thing we
+[00:10:29] want to do is enrich the emails. Now,
+[00:10:32] allegedly, it's got all the emails here,
+[00:10:33] which is fine. And to be fair with you,
+[00:10:36] actually, it does have the emails, but
+[00:10:38] if you found a list that didn't really
+[00:10:41] have the emails, the go-to one to use is
+[00:10:43] this. You'll find this based on the
+[00:10:44] scraper that you're using. Like if
+[00:10:45] you're doing Google map scraping, if
+[00:10:47] you're doing um scraping on LinkedIn or
+[00:10:49] whatever it might be, you're basically
+[00:10:51] going to do that. And what you can
+[00:10:52] actually come down here is to bulk
+[00:10:53] search, you upload the list and then you
+[00:10:55] can just select the thing that you need.
+[00:10:57] So person name search. So this is great
+[00:10:58] if you want emails for specific people
+[00:11:00] and your file has names and the company.
+[00:11:02] So that' be like I know his name is John
+[00:11:04] and I know he works at Microsoft. How do
+[00:11:05] I find him? So you basically upload your
+[00:11:07] CSV and then you can see it's identified
+[00:11:08] here the last name and also the company
+[00:11:10] name and you can use that to enrich.
+[00:11:12] Since we've got that information, the
+[00:11:14] next thing that I want to do now is
+[00:11:16] basically use that. So, if you actually
+[00:11:18] check on Appify, for instance, one of
+[00:11:20] the things that we've gotten from the
+[00:11:21] scraper, which is really cool. We've got
+[00:11:22] the headline, which is great, but we
+[00:11:24] should also have a little bit of a
+[00:11:26] company description, which is really
+[00:11:27] sweet. So, this explains a little bit
+[00:11:29] about them and their information and the
+[00:11:31] company, what they do. So, I want to use
+[00:11:33] that to basically create some kind of
+[00:11:35] personalized image for them using this
+[00:11:36] nano banana, Google's beautiful nano
+[00:11:38] banana API. And by the way, the cost of
+[00:11:40] this cost me 22 cents and I got uh 100
+[00:11:44] leads which is not bad for 22 cents,
+[00:11:47] right? So what I do then we are then
+[00:11:49] going to head over to we're going to use
+[00:11:51] Air Table for this which is fine. So let
+[00:11:52] me come over and create a brand new Air
+[00:11:54] Table and again you don't need to. You
+[00:11:56] can technically just use Google Sheets.
+[00:11:58] The only reason I'm using Air Table is
+[00:11:59] because I just want the images linked up
+[00:12:01] to the data entries. So let's come over
+[00:12:04] to and create a brand new table real
+[00:12:05] quick. Beautiful. And let's open up a
+[00:12:07] new one. Um we'll call uh build an app
+[00:12:09] on your own. That's fantastic. And we
+[00:12:11] should be able just to simply import
+[00:12:13] some cool stuff. So there should be an
+[00:12:14] option found on the left hand side to
+[00:12:15] import data from a CSV and other. I'm
+[00:12:18] going to call local files and browse the
+[00:12:19] files. I've just selected the thing we
+[00:12:21] downloaded and we just upload this file.
+[00:12:23] And I think good automation um for your
+[00:12:25] business and for clients is about
+[00:12:26] knowing which platform to use when. So
+[00:12:29] this is really cool guys. I am a sucker
+[00:12:31] for the design and I love it when I get
+[00:12:33] these this multiolarity in it. So, we're
+[00:12:35] just going to throw everything into the
+[00:12:36] whole database for us. Uh, and give that
+[00:12:39] a hot second. And it should just appear
+[00:12:40] magically. We need to give it a call,
+[00:12:42] man. And since today is Tuesday, why
+[00:12:44] don't we call this one Tuesday
+[00:12:47] banana? Okay, beautiful.
+[00:12:50] All right. And give of course it is
+[00:12:52] nothing without it beautiful emoji. And
+[00:12:54] of course, it needs to be yellow. All
+[00:12:56] right. Sweet. So, now you'll notice a
+[00:12:58] couple of things that we've got here.
+[00:12:59] Okay. We have the first name, surname,
+[00:13:01] uh emails, we have company name, loads
+[00:13:04] of really cool data and information you
+[00:13:05] can use then to test and validate, which
+[00:13:07] I recommend you keep track of actually
+[00:13:09] because one of the things that you're
+[00:13:10] going to want to do when you're running
+[00:13:11] these email campaigns, your outreach
+[00:13:12] campaigns, which I recommend that you do
+[00:13:13] on different platforms, is that you want
+[00:13:15] to see like what are the commonalities
+[00:13:17] with the guys that giving the positive
+[00:13:18] response rates. Obviously, you need to
+[00:13:19] understand things like the problems and
+[00:13:21] solutions, but that that's content for a
+[00:13:23] different video. I want to focus on the
+[00:13:24] image generation for this one. And bear
+[00:13:26] in mind, guys, we've got stuff in here
+[00:13:27] like the company address. And I mean
+[00:13:29] it's insane the amount of detail we've
+[00:13:30] got here. Okay, so I've got a lot of
+[00:13:32] data here. I'm going to delete these 17
+[00:13:33] fields as you wish, but obviously this
+[00:13:34] will be up for thousands. It's very,
+[00:13:36] very, very cool. Now, for this,
+[00:13:37] basically what we need to do is add two
+[00:13:39] different fields. So, one is going to be
+[00:13:40] the prompt. So, we're going to call this
+[00:13:42] one image prompt. Okay, beautiful. Now,
+[00:13:45] instead of long text, we're going to
+[00:13:46] find a field agent. Let me just figure
+[00:13:49] out how we get into this guy. I think it
+[00:13:51] is down here. So, now we got image
+[00:13:52] prompt. I'm going to add in a beautiful
+[00:13:55] emoji cuz we are nothing without our
+[00:13:57] beautiful emojis. Fantastic. And then we
+[00:13:59] want to come down here and convert it
+[00:14:00] into a field agent. But let me just copy
+[00:14:03] this just in case it boots us out real
+[00:14:04] quick. So what we can do with this now
+[00:14:05] guys is bring in that custom prompt that
+[00:14:07] we got from TypeGBT earlier. So let's
+[00:14:09] come here and grab this here. And the
+[00:14:11] prompt is really quite straightforward
+[00:14:12] actually. So what we basically want to
+[00:14:14] say here guys is I would like you to
+[00:14:15] take the below company name. And what we
+[00:14:17] can do in company name uh which is going
+[00:14:19] to be let's find here insert field and
+[00:14:22] let's find company name right beautiful
+[00:14:25] okay and then we want to say something
+[00:14:27] like and create a unique and interesting
+[00:14:31] image prompt about using the blood
+[00:14:33] template and based on the info about the
+[00:14:37] company and then we will just simply
+[00:14:39] insert that which is going to be I think
+[00:14:41] the field we've got for this guys is
+[00:14:43] about company let's have a quick look
+[00:14:45] let me just make sure uh just save this
+[00:14:46] and have a quick look. What did we save
+[00:14:48] that information as? It is under company
+[00:14:50] description. Okay, cool. So, come down
+[00:14:52] here. Let's have a quick look uh and
+[00:14:54] edit this guy. Come down here on the
+[00:14:56] company description. Insert field.
+[00:14:58] Company description. Beautiful. I'm
+[00:14:59] going to say um menders prompt. Cool.
+[00:15:02] And then I'm going to come over to the
+[00:15:03] prompt we got from Chat GBT, which is
+[00:15:04] right here. Fantastic. Actually, what we
+[00:15:06] probably need to do, guys, is be
+[00:15:08] specific about this as well. So, we
+[00:15:10] would probably say whatever text that
+[00:15:12] you provide in the below prompt, it must
+[00:15:15] be something that would fit on the cap
+[00:15:17] and must include the company's logo, but
+[00:15:19] the text around that can be unique based
+[00:15:21] on the description. Okay, beautiful.
+[00:15:23] Then we click on save. Now, one of the
+[00:15:25] things you'll notice in Air Table is
+[00:15:27] that you can click this run agent and it
+[00:15:29] will do it for us. So, if I click run
+[00:15:30] agent, for example, this will then flare
+[00:15:32] around the background and it has done
+[00:15:34] that for us. And you can see it's has it
+[00:15:36] got the name uh for that particular
+[00:15:37] brand in there. I think it does
+[00:15:39] innovating insurance for medical
+[00:15:40] professionals on the refrigerator door
+[00:15:42] behind us. Blah blah blah blah blah lots
+[00:15:43] of cool stuff which is very cool. Now in
+[00:15:46] air table you can actually add an
+[00:15:48] automation that basically means that
+[00:15:49] anytime I add a new row this will then
+[00:15:51] trigger the agent automatically. So you
+[00:15:53] can come down here and again this is now
+[00:15:55] changed it for that specific thing but
+[00:15:56] the image prompt is consistent. Now you
+[00:15:59] don't actually have to use the same one
+[00:16:00] for everyone. You can give AI latitude
+[00:16:03] to think of something creative you. But
+[00:16:05] this is a cool strategy of how you can
+[00:16:06] actually force it to create the same
+[00:16:08] kind of thing, but then actually only
+[00:16:09] specify and change out different things.
+[00:16:11] So to test this one out, what I'm
+[00:16:13] actually going to do, guys, is zoom out
+[00:16:14] a little bit. I'm going to come over
+[00:16:16] here and I'm going to delete everything
+[00:16:18] apart from one row. Cool. And now we've
+[00:16:19] done that, what we need to do then is
+[00:16:21] come back over to our beautiful Nitan
+[00:16:22] scenario. Now the way that this one's
+[00:16:24] working and let me just unpin this. I
+[00:16:25] don't know why I've got the click
+[00:16:26] unpinned and let me undo this guy real
+[00:16:28] quick. I'm going to unpin all this
+[00:16:29] information and then we can run through
+[00:16:31] this one together. Beautiful. Then we
+[00:16:32] come back over to NA10. Now the the way
+[00:16:33] this scenario is going to work is once
+[00:16:34] you've uploaded everything, you've got
+[00:16:36] your loads of different leads. We're
+[00:16:37] going to click on search records. So if
+[00:16:38] we click on search records, I need to
+[00:16:40] obviously change what this one is. So
+[00:16:41] instead of personalized images, we call
+[00:16:43] this one banana, I think, didn't we?
+[00:16:45] Banana something, which was Tuesday
+[00:16:47] banana. Fantastic. And then we pick the
+[00:16:49] table, which is just going to be the
+[00:16:50] imported table, which is fine. And you
+[00:16:52] can execute the step and it will bring
+[00:16:53] down that one record for us on the right
+[00:16:56] hand side which when I refresh and come
+[00:16:57] over here you can see we've got Tom,
+[00:16:59] we've got the image prompt to all the
+[00:17:00] values which is code for really
+[00:17:02] coolness. So we're then going to connect
+[00:17:03] these ones together and then we've got
+[00:17:05] our prompt here which we're going to
+[00:17:06] come down here and literally copy this
+[00:17:09] prompt over here. And the reason I've
+[00:17:10] done that by the way guys is because
+[00:17:12] prompt in the API call is under the word
+[00:17:15] prompt but you might yourself name
+[00:17:17] something different in the air table. So
+[00:17:19] it just makes sense to have a kind of
+[00:17:20] intermediate thing. Then naman is going
+[00:17:22] to ahead and create this. We're going to
+[00:17:23] download it and then we're going to get
+[00:17:25] the basically file and then we can
+[00:17:27] actually upload to the exact same thing.
+[00:17:30] So let's actually put this to the test
+[00:17:32] and run this one through real quick.
+[00:17:33] Beautiful. So we run a scenario. We're
+[00:17:34] going to download the records from Air
+[00:17:35] Table so we can see all of the
+[00:17:37] information there. We've got our prompt.
+[00:17:38] All this is doing, like I say, is just
+[00:17:40] taking the thing we've got here and just
+[00:17:42] kind of like actually setting it as
+[00:17:43] something so it's going to be
+[00:17:44] consistent. And once that whole process
+[00:17:46] connects, guys, you can actually click
+[00:17:47] on this now and see. So, if I double
+[00:17:49] click into this and I click on view, I
+[00:17:51] should actually see a woman eating
+[00:17:53] noodles with it. Look at this, guys. Oh
+[00:17:55] my gosh. All Med Pro innovating
+[00:17:58] insurance for medical professionals.
+[00:18:00] Again, this is just a random thing we
+[00:18:02] found online, right? And you can see
+[00:18:03] they've got things nice, you know,
+[00:18:04] there's some nice details in the
+[00:18:06] background. You can create these scenes
+[00:18:07] to be anything. But if you're doing
+[00:18:08] campaign on say something like, I don't
+[00:18:10] know, maybe noodles was a joke. Maybe
+[00:18:11] noodles was something that the owner
+[00:18:13] said that they liked. Do you know what I
+[00:18:14] mean? It's really or like say I love
+[00:18:15] spring spinals for example. So if
+[00:18:17] somebody sent me like a spring spinal
+[00:18:18] wearing a hat with my name on it or
+[00:18:20] their it's like it really does create
+[00:18:22] this unique thing. So if this is saying
+[00:18:25] pro if we actually go back now and check
+[00:18:27] you can see Tom at all. This is crazy
+[00:18:32] all pro. They've completely grabbed that
+[00:18:34] and created completely bespoke and
+[00:18:35] unique image. Then let's come back over
+[00:18:37] to our beautiful scenario. Click on this
+[00:18:40] guy. And then if I come down here to
+[00:18:42] image, this is the one that you want.
+[00:18:45] Basically, you have to add some extra
+[00:18:46] things around it just to make sure that
+[00:18:47] it's ready and happy for air table. So
+[00:18:49] if I come back and just run this one
+[00:18:51] more time just to show what that looks
+[00:18:52] like. Okay, generated waiting. It'll
+[00:18:54] download and then we should see that
+[00:18:55] fully updated. Actually, one thing I
+[00:18:57] need to do before I do this, my
+[00:18:58] apologies, is come down here. I need to
+[00:19:00] make sure we're on the right thing. So
+[00:19:01] we're not on this one. We need to go to
+[00:19:02] uh Nano Banana Tuesday. I really want to
+[00:19:04] make sure that you can see the
+[00:19:06] fullfledged how this works. Let me just
+[00:19:08] come down and get the image and then
+[00:19:11] let's just refresh this whole thing real
+[00:19:13] quick which you can do by clicking the
+[00:19:14] arrows and click on refresh column list
+[00:19:15] and then this will now update with the
+[00:19:17] new beautiful table. So then the way
+[00:19:18] this all connects then to the air table
+[00:19:20] guys once you come down here you connect
+[00:19:22] it based on the ID for the first air
+[00:19:24] table and then at the bottom you're
+[00:19:25] going to add in this specific code which
+[00:19:27] basically means it will upload to the
+[00:19:29] image just like it did over here for the
+[00:19:31] one that I did earlier. And then when
+[00:19:32] you click on that you can see it
+[00:19:33] actually connects it. This one was an
+[00:19:34] example of a bowl of cereal with their
+[00:19:36] name on it and then it will upload it
+[00:19:37] and you can simply grab that, insert
+[00:19:39] into email campaigns and kick some
+[00:19:41] serious butt. So that's how we can
+[00:19:42] create hundreds now and obviously that
+[00:19:44] will just run for us automatically down
+[00:19:46] the entire list creating all these
+[00:19:47] unlimited images for us for our clients.
+[00:19:49] The next thing that we're going to look
+[00:19:50] at now is social media because the
+[00:19:53] technology is just one thing but how we
+[00:19:55] then leverage and use that to generate
+[00:19:57] something incredible is completely
+[00:19:58] different. So what we're going to do now
+[00:20:00] is we are going to head over to AI
+[00:20:02] Studio. Okay. And what we're going to do
+[00:20:04] here is we're going to build an app with
+[00:20:06] Nano Banana. Now, here's the plan. Now,
+[00:20:08] I want to show you something absolutely
+[00:20:09] crazy before I do this, and this is
+[00:20:10] going to blow your mind. I showed you
+[00:20:12] earlier on this Canva document here how
+[00:20:14] you can actually get yourself and put
+[00:20:16] yourself in these images of anything you
+[00:20:19] want to. But what I found is when you're
+[00:20:21] using Nano Banana is that sometimes it
+[00:20:24] takes four or five different responses.
+[00:20:26] But what I want to do is create an app
+[00:20:27] that lets us oneshot killer that can
+[00:20:30] take account of what we're trying to do.
+[00:20:32] We can give it an image. it will analyze
+[00:20:33] this particular image and put us in
+[00:20:35] there. And one thing, guys, that it is
+[00:20:37] amazing at is facial expressions. The
+[00:20:40] fact that it can give you any facial
+[00:20:41] expression and still keep the essence of
+[00:20:44] what it is that you look like. That is
+[00:20:46] so freaking crazy to me. So, let's
+[00:20:48] actually go ahead and see if we can
+[00:20:49] build this app together on Google AI
+[00:20:51] Studio. So, let's come over here, bring
+[00:20:53] this one up, and let's have a quick look
+[00:20:54] at what we're doing. So, we can actually
+[00:20:56] see that we've got supercharge your apps
+[00:20:57] with AI. I'm going on a nano banana
+[00:21:00] powered app, which is very cool. Okay.
+[00:21:01] Okay. And I'm going to say the
+[00:21:02] following. I would like you to create me
+[00:21:04] a YouTube thumbnail creator. By the way,
+[00:21:07] guys, this could be done for YouTube. It
+[00:21:08] could be done for Instagram. I can even
+[00:21:10] show you examples of people with
+[00:21:11] millions of followers on Instagram that
+[00:21:12] are currently bespoke graphics using
+[00:21:15] Nana Banana that are crushing it. So,
+[00:21:16] insert this for any platform that you're
+[00:21:17] focusing on. Okay. I'm going to give you
+[00:21:19] an image and what I want you to do is
+[00:21:22] then take that image and analyze it and
+[00:21:24] give a really specific prompt. And then
+[00:21:26] I'm going to give you a second image of
+[00:21:28] me and I want you to basically enable me
+[00:21:30] to insert into that image and then edit
+[00:21:32] it in the actual app in studio. Make the
+[00:21:34] design visually engaging and beautiful.
+[00:21:36] Fantastic. Okay. Now, what's really cool
+[00:21:39] here is that we can actually build out a
+[00:21:40] full YouTube thumbnail system in this
+[00:21:43] application, which is insane, guys. The
+[00:21:47] reason why that's insane is because, you
+[00:21:48] know, when it comes to YouTube, we know
+[00:21:49] that 80% of it is the idea and then the
+[00:21:52] packaging of that idea. And thumbnails
+[00:21:54] are something people have often
+[00:21:55] struggled with. So there's no need for
+[00:21:57] you to reinvent the hook. You don't need
+[00:21:59] to reinvent what a good thumbnail is.
+[00:22:01] One website that I highly recommend you
+[00:22:02] check out if you haven't already is one
+[00:22:04] of 10.com. It's really, really good. If
+[00:22:06] you're interested in YouTube, I
+[00:22:07] recommend it. And even if you're doing
+[00:22:08] Instagram and not YouTube, I would say
+[00:22:10] this is relevant for you because it's
+[00:22:12] the same techniques just different
+[00:22:13] platform. And you can see based on the
+[00:22:16] like the outliers and that's effect what
+[00:22:17] you're doing. You're finding things that
+[00:22:18] have already worked because this this
+[00:22:21] YouTube video here for example, 20,000
+[00:22:22] views. It's 9.3 times higher than the
+[00:22:26] average, which means that for some
+[00:22:28] reason something about this video really
+[00:22:32] really resonated with the audience. Like
+[00:22:33] this one here from my guy Brock, this
+[00:22:35] one here from my man Daniel Priestley.
+[00:22:37] You can see there's something about this
+[00:22:39] topic that people want. So you
+[00:22:42] prevalidate. When we had Dan Martell
+[00:22:44] inside the community doing a master
+[00:22:45] class, he's now I don't know 3 million
+[00:22:47] or whatever it is. He was talking about
+[00:22:48] this idea that they don't do videos
+[00:22:50] until they're prevalidated. And in fact,
+[00:22:52] one of the reasons why I'm doing a
+[00:22:53] banana banana, apart from the fact my
+[00:22:54] community said, "Hey, Jack, this is
+[00:22:56] really cool. Could you talk about it?"
+[00:22:57] is it's also validated and people really
+[00:22:59] want to learn about how to rock this.
+[00:23:00] So, look, this is going to generate for
+[00:23:02] us in the background. I've done a full
+[00:23:03] video, by the way, breaking down what I
+[00:23:05] really genuinely consider to be the best
+[00:23:07] workflow with Nana Banana and creating
+[00:23:10] incredible applications. I'll put a link
+[00:23:12] on screen so you can click that button
+[00:23:14] and have a great time. Now, the way that
+[00:23:16] this works, it's going to do things.
+[00:23:17] It's going to actually pop up with
+[00:23:18] suggestions to see how we want to
+[00:23:20] improve it as we go. video
+[00:23:21] understanding, blah, blah, blah. But
+[00:23:23] ultimately, I just want to create an app
+[00:23:24] that's going to make me more efficient
+[00:23:25] as a creator, and it's perfect. So,
+[00:23:28] we've got the background image. Now, I
+[00:23:29] think it hasn't quite understood the
+[00:23:31] thing. Just to be clear, I'm going to
+[00:23:33] upload an image of a viral thumbnail,
+[00:23:34] and I basically want you to take the
+[00:23:36] second image of me and place me in the
+[00:23:38] thumbnail, maintaining the expression
+[00:23:41] and everything else about that. Then, I
+[00:23:43] would like the ability to chat with that
+[00:23:44] image to improve its quality. All right,
+[00:23:47] cool. So, let's just give it that last
+[00:23:48] little bit update. Send that one off.
+[00:23:50] And then we've created this thumb studio
+[00:23:52] AI. Okay, which is going to be very very
+[00:23:53] cool. So I'm very curious to see how
+[00:23:55] this is going to fit in together because
+[00:23:57] most of Nana Banana stuff that I've done
+[00:23:59] has either been via API, the direct chat
+[00:24:02] window. I've not built it with an
+[00:24:03] inbuilt thing before. We've done loads
+[00:24:05] of videos on the channel about bald new
+[00:24:07] and lovable and how you connect those to
+[00:24:09] things like nan and make.com because you
+[00:24:13] you connect it via web hooks. Now, given
+[00:24:15] the fact this is all part of Google's
+[00:24:16] ecosphere, it's very, very interesting
+[00:24:18] to me because I'm very curious to see
+[00:24:20] how this is going to flex in together.
+[00:24:22] So, we'll let it complete this and then
+[00:24:23] we can actually see how it performs.
+[00:24:24] Okay, guys. So, allegedly this is done.
+[00:24:26] So, let's come and do this together. So,
+[00:24:28] we've got the best YouTube videos. So,
+[00:24:30] why don't we try and replicate this one
+[00:24:32] here from Daniel Priestley. So, what I'm
+[00:24:33] going to do is open this in a new tab.
+[00:24:35] I'm going to grab the URLs. Okay, cool.
+[00:24:38] Then I'm going to come over to this
+[00:24:38] website here which is YouTube download
+[00:24:40] thumbnails where I can literally enter
+[00:24:42] in the URL of a video that I think is
+[00:24:43] really cool. I get a really cool image.
+[00:24:45] I am going to save this image real
+[00:24:47] quick. Beautiful. And let's come back
+[00:24:49] over to our cool app and then let's
+[00:24:50] upload the composition asset, the
+[00:24:52] background image. Let's click on this
+[00:24:54] one. Okay, good. That one's uploaded.
+[00:24:55] Now let's upload the image of me and see
+[00:24:57] if it can actually do that properly. So
+[00:24:58] let's come down and add a subject.
+[00:24:59] Beautiful. It's got both. I'm going say,
+[00:25:01] "Hey, put me in the image above with the
+[00:25:03] same facial expression." Okay. Hit
+[00:25:05] enter. Let's just see if it does this
+[00:25:07] cuz this works natively, guys. Not a
+[00:25:09] single requirement to actually faf
+[00:25:11] around with the web hook integration.
+[00:25:12] It's just going to work natively. You
+[00:25:13] can see how you can package this. We
+[00:25:15] officially in the era of creating these
+[00:25:16] incredible SASes, but for me, from my
+[00:25:18] point of view, Tai, our agency, it's
+[00:25:20] great to be able to build these sorts of
+[00:25:22] things for clients. Obviously, oh my
+[00:25:25] goodness, guys. Look at that. That's
+[00:25:27] freaking crazy. It's literally added me
+[00:25:29] into the image, which I think is insane.
+[00:25:31] And it's just literally bought me in, no
+[00:25:32] questions asked. And guys, just to show
+[00:25:34] how cool this is, I want to show an
+[00:25:35] example I did earlier. So, this is one
+[00:25:36] that I had like again like I've never
+[00:25:38] ever ever pulled that face expression
+[00:25:40] ever, right? How freaking crazy that.
+[00:25:42] And I just gave it this reference image
+[00:25:43] and you could tell it's the same thing
+[00:25:44] cuz it's got that uh t-shirt on and it
+[00:25:46] did it for me instantaneously. Then the
+[00:25:48] way we would build on this is and help
+[00:25:50] it solve things like titles, um video
+[00:25:52] ideation, and you can build out a full
+[00:25:54] YouTube agent and you can do the same
+[00:25:55] thing for Instagram. And you can combine
+[00:25:57] that with the first automation that I
+[00:25:59] shared with you on NA10 and how you get
+[00:26:01] the automated thing and create brilliant
+[00:26:03] and beautiful images for everything.
+[00:26:04] Now, knowing how to leverage Nana Banana
+[00:26:07] and Sonores is one thing, but the next
+[00:26:08] thing we need to do is be able to build
+[00:26:10] out fully custom AI apps that crush it,
+[00:26:14] which you can learn by watching this
+[00:26:15] video right Here.

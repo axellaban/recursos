@@ -1,0 +1,2328 @@
+{
+    "name": "Parking Against Humanity 🅿️🚨",
+    "flow": [
+        {
+            "id": 2,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 914556,
+                "maxResults": 1
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 40,
+                    "y": 39
+                },
+                "restore": {
+                    "parameters": {
+                        "hook": {
+                            "data": {
+                                "editable": "true"
+                            },
+                            "label": "voice and image"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "hook",
+                        "type": "hook:gateway-webhook",
+                        "label": "Webhook",
+                        "required": true
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of results"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "audio",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "mime",
+                                "type": "text"
+                            },
+                            {
+                                "name": "data",
+                                "type": "buffer"
+                            },
+                            {
+                                "name": "files",
+                                "spec": {
+                                    "spec": [
+                                        {
+                                            "name": "name",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "mime",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "data",
+                                            "type": "buffer"
+                                        }
+                                    ],
+                                    "type": "collection"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "type": "collection"
+                    },
+                    {
+                        "name": "email",
+                        "type": "text"
+                    },
+                    {
+                        "name": "photo",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "mime",
+                                "type": "text"
+                            },
+                            {
+                                "name": "data",
+                                "type": "buffer"
+                            },
+                            {
+                                "name": "files",
+                                "spec": {
+                                    "spec": [
+                                        {
+                                            "name": "name",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "mime",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "data",
+                                            "type": "buffer"
+                                        }
+                                    ],
+                                    "type": "collection"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "type": "collection"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "dropbox:uploadLargeFile",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 1427849
+            },
+            "mapper": {
+                "data": "{{2.audio.data}}",
+                "path": "/Magoo2",
+                "filename": "{{2.audio.name}}",
+                "overwrite": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 324,
+                    "y": -167,
+                    "name": "Upload Audio 🎙️"
+                },
+                "restore": {
+                    "expect": {
+                        "path": {
+                            "mode": "chose"
+                        },
+                        "overwrite": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection (itsssssjack@outlook.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "path",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "filename",
+                        "type": "filename",
+                        "label": "File Name",
+                        "required": true
+                    },
+                    {
+                        "name": "data",
+                        "type": "buffer",
+                        "label": "Data",
+                        "required": true
+                    },
+                    {
+                        "name": "overwrite",
+                        "type": "boolean",
+                        "label": "Overwrite an existing file",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 11,
+            "module": "dropbox:makeApiCall",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 1427849
+            },
+            "mapper": {
+                "url": "/2/files/get_temporary_link",
+                "body": "{\"path\":\"{{4.path_lower}}\"}",
+                "type": "api",
+                "method": "POST",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "disablePathRoot": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 537,
+                    "y": 70,
+                    "name": "Download Audio 🎙️"
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "type": {
+                            "label": "https://api.dropboxapi.com"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection (itsssssjack@outlook.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "type",
+                        "type": "select",
+                        "label": "Dropbox API Endpoint",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "api",
+                                "content"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    },
+                    {
+                        "name": "disablePathRoot",
+                        "type": "boolean",
+                        "label": "Disable Dropbox API Path Root",
+                        "required": true
+                    },
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "module": "openai-gpt-3:CreateTranscription",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "fileName": "{{2.audio.name}}",
+                "fileData": "{{2.audio.data}}",
+                "model": "whisper-1",
+                "prompt": "Transcribe this audio",
+                "response_format": "json",
+                "temperature": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 825,
+                    "y": -173,
+                    "name": "Transcribe Audio 🎙️"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "Whisper-1"
+                        },
+                        "response_format": {
+                            "mode": "chose",
+                            "label": "JSON"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "fileName",
+                        "type": "filename",
+                        "label": "File Name",
+                        "required": true
+                    },
+                    {
+                        "name": "fileData",
+                        "type": "buffer",
+                        "label": "File Data",
+                        "required": true
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "prompt",
+                        "type": "text",
+                        "label": "Prompt"
+                    },
+                    {
+                        "name": "response_format",
+                        "type": "select",
+                        "label": "Response Format",
+                        "validate": {
+                            "enum": [
+                                "json",
+                                "text",
+                                "srt",
+                                "verbose_json",
+                                "vtt"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "language",
+                        "type": "text",
+                        "label": "Language"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "dropbox:uploadLargeFile",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 1427849
+            },
+            "mapper": {
+                "data": "{{2.photo.data}}",
+                "path": "/Magoo2",
+                "filename": "{{2.photo.files[].name}}",
+                "overwrite": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1118,
+                    "y": 23,
+                    "name": "Upload Image 🌅"
+                },
+                "restore": {
+                    "expect": {
+                        "path": {
+                            "mode": "chose"
+                        },
+                        "overwrite": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection (itsssssjack@outlook.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "path",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "filename",
+                        "type": "filename",
+                        "label": "File Name",
+                        "required": true
+                    },
+                    {
+                        "name": "data",
+                        "type": "buffer",
+                        "label": "Data",
+                        "required": true
+                    },
+                    {
+                        "name": "overwrite",
+                        "type": "boolean",
+                        "label": "Overwrite an existing file",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "module": "dropbox:makeApiCall",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 1427849
+            },
+            "mapper": {
+                "url": "/2/files/get_temporary_link",
+                "body": "{\"path\":\"{{8.path_lower}}\"}",
+                "type": "api",
+                "method": "POST",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "disablePathRoot": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1325,
+                    "y": -168,
+                    "name": "Download Image 🌅"
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "type": {
+                            "label": "https://api.dropboxapi.com"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection (itsssssjack@outlook.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "type",
+                        "type": "select",
+                        "label": "Dropbox API Endpoint",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "api",
+                                "content"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    },
+                    {
+                        "name": "disablePathRoot",
+                        "type": "boolean",
+                        "label": "Disable Dropbox API Path Root",
+                        "required": true
+                    },
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "module": "openai-gpt-3:analyzeImages",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "model": "gpt-4o",
+                "top_p": "1",
+                "images": [
+                    {
+                        "imageUrl": "{{9.body.link}}",
+                        "imageUploadType": "url"
+                    }
+                ],
+                "prompt": "summarise this image; only describe the image and add no additional text",
+                "max_tokens": "300",
+                "temperature": "1",
+                "n_completions": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1557,
+                    "y": 118,
+                    "name": "Explain Image 🌅"
+                },
+                "restore": {
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "gpt-4o"
+                        },
+                        "images": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "imageUploadType": {
+                                        "mode": "chose",
+                                        "label": "Image URL"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            },
+                            "label": "My OpenAI connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "prompt",
+                        "type": "text",
+                        "label": "Prompt",
+                        "required": true
+                    },
+                    {
+                        "name": "images",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "imageUploadType",
+                                    "type": "select",
+                                    "label": "How would you like to specify an image?",
+                                    "options": [
+                                        {
+                                            "label": "Image URL",
+                                            "value": "url",
+                                            "nested": [
+                                                {
+                                                    "help": "Public URL of the image. For example, `https://getmyimage.com/myimage.png`.",
+                                                    "mode": "edit",
+                                                    "name": "imageUrl",
+                                                    "type": "url",
+                                                    "label": "Image URL",
+                                                    "mappable": {
+                                                        "help": "Public URL of the image. For example, `https://getmyimage.com/myimage.png`."
+                                                    },
+                                                    "required": true
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Image File",
+                                            "value": "imageFile",
+                                            "nested": [
+                                                {
+                                                    "help": "Binary data of the image. For example, you can retrieve the binary data of your image using the __HTTP: Get a file__ module.",
+                                                    "name": "imageFileData",
+                                                    "type": "buffer",
+                                                    "label": "Image File",
+                                                    "required": true,
+                                                    "semantic": "file:data"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Image"
+                        },
+                        "type": "array",
+                        "label": "Images",
+                        "required": true
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "n_completions",
+                        "type": "number",
+                        "label": "Number"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 28,
+            "module": "openai-gpt-3:CreateCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "select": "chat",
+                "max_tokens": "0",
+                "temperature": "1",
+                "top_p": "1",
+                "n_completions": "1",
+                "response_format": "text",
+                "model": "gpt-4o",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "You are \"Officer Ticket,\" a witty parking violation chatbot. Your mission is to inform drivers of their parking infractions with humorous exaggeration. You'll receive:\n\n1. A summary of an image showing a car violating a parking law: {{6.result}}\n2. An audio transcript from a parking agent detailing the broken laws: {{5.text}}\n\nYour task: Craft a 150-word response that playfully overstate the parking violation's severity. Follow these guidelines:\n\n2. Refer to the parking violation using crime-related language throughout.\n3. Incorporate specific details from both the image summary and audio transcript.\n4. Use dramatic, flowery language to describe the \"heinous\" nature of the offense.\n5. Include humorous analogies or metaphors comparing the violation to serious crimes.\n6. Conclude with an absurdly exaggerated consequence.\n\nAim for a tone that's clearly exaggerated for comedic effect. Make the violation sound ridiculously serious while still conveying the actual infraction details. For instance, call a car parked slightly over a line \"a brazen territory grab\" or a meter violation \"a diabolical scheme to defraud the city coffers.\"\n\nKeep it light and entertaining. Your goal is to amuse the recipient while informing them of their actual violation, using crime-related language creatively throughout your response."
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1804,
+                    "y": -170,
+                    "name": "Report ⚡️"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "select": {
+                            "label": "Create a Chat Completion (GPT Models)"
+                        },
+                        "logit_bias": {
+                            "mode": "chose"
+                        },
+                        "response_format": {
+                            "mode": "chose",
+                            "label": "Text"
+                        },
+                        "stop": {
+                            "mode": "chose"
+                        },
+                        "additionalParameters": {
+                            "mode": "chose"
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "gpt-4o (system)"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Select Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "chat",
+                                "prompt"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens",
+                        "required": true
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "n_completions",
+                        "type": "number",
+                        "label": "Number"
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "logit_bias",
+                        "type": "array",
+                        "label": "Token Probability",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "token",
+                                    "type": "text",
+                                    "label": "Token ID",
+                                    "required": true
+                                },
+                                {
+                                    "name": "probability",
+                                    "type": "number",
+                                    "label": "Probability",
+                                    "required": true,
+                                    "validate": {
+                                        "max": 100,
+                                        "min": -100
+                                    }
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Token Probability",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "response_format",
+                        "type": "select",
+                        "label": "Response Format",
+                        "validate": {
+                            "enum": [
+                                "text",
+                                "json_object"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "seed",
+                        "type": "integer",
+                        "label": "Seed"
+                    },
+                    {
+                        "name": "stop",
+                        "type": "array",
+                        "label": "Stop Sequences",
+                        "validate": {
+                            "maxItems": 4
+                        },
+                        "spec": {
+                            "type": "text",
+                            "label": "Stop Sequence",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "additionalParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Parameter Name",
+                                    "required": true
+                                },
+                                {
+                                    "name": "type",
+                                    "type": "select",
+                                    "label": "Input Type",
+                                    "options": [
+                                        {
+                                            "label": "Text",
+                                            "value": "text",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "text",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Number",
+                                            "value": "number",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "number",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Boolean",
+                                            "value": "boolean",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "boolean",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "date",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "date",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Any",
+                                            "value": "any",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "any",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Input Parameter",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true,
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": [
+                                        {
+                                            "label": "System",
+                                            "value": "system"
+                                        },
+                                        {
+                                            "label": "User",
+                                            "value": "user"
+                                        },
+                                        {
+                                            "label": "Assistant",
+                                            "value": "assistant"
+                                        }
+                                    ],
+                                    "required": true
+                                },
+                                {
+                                    "name": "content",
+                                    "type": "text",
+                                    "label": "Message Content"
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message",
+                            "name": "value"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 18,
+            "module": "google-docs:createADocumentFromTemplate",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "from": "drive",
+                "name": "{{2.photo.name}}",
+                "image": {
+                    "kix.6bsxya3vpbx0": "{{9.body.link}}"
+                },
+                "select": "dropdown",
+                "document": "/1R7kYL4aAu5zoTe6b0o8Li8Jof7doZuu5kMBDItwaHB4",
+                "folderId": "/",
+                "requests": {
+                    "EMAIL": "{{2.email}}",
+                    "YOUR CRIMES": "{{28.result}}"
+                },
+                "destination": "drive"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1902,
+                    "y": 110
+                },
+                "restore": {
+                    "expect": {
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "select": {
+                            "label": "By Dropdown"
+                        },
+                        "document": {
+                            "path": [
+                                "Parking Against Humanity 🅿️🚨"
+                            ]
+                        },
+                        "folderId": {
+                            "mode": "chose",
+                            "path": [
+                                "/"
+                            ]
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "Google Connection (jack@aiautomationswithjack.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Create a Document from a Template",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "map",
+                                "dropdown"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Title",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "New Drive Location",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "document",
+                        "type": "file",
+                        "label": "Document ID",
+                        "required": true
+                    },
+                    {
+                        "name": "requests",
+                        "spec": [
+                            {
+                                "name": "EMAIL",
+                                "type": "any"
+                            },
+                            {
+                                "name": "YOUR CRIMES",
+                                "type": "any"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Values"
+                    },
+                    {
+                        "name": "image",
+                        "spec": [
+                            {
+                                "name": "kix.6bsxya3vpbx0",
+                                "type": "url",
+                                "label": "Body: Image No. 1 (Placeholder graphic)"
+                            },
+                            {
+                                "name": "kix.14vh32ydbkr1",
+                                "type": "url",
+                                "label": "Body: Image No. 2 (Placeholder image)"
+                            },
+                            {
+                                "name": "kix.rhn5sg28ze0",
+                                "type": "url",
+                                "label": "Footer: Image No. 1 (horizontal line)"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Image URLs"
+                    },
+                    {
+                        "name": "folderId",
+                        "type": "folder",
+                        "label": "New Document's Location",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 19,
+            "module": "google-docs:exportADocument",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "document": "{{18.id}}",
+                "mimeType": "application/pdf",
+                "destination": "drive"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 2221,
+                    "y": -203,
+                    "name": "Download PDF 🎉"
+                },
+                "restore": {
+                    "expect": {
+                        "document": {
+                            "mode": "edit",
+                            "path": []
+                        },
+                        "mimeType": {
+                            "mode": "chose",
+                            "label": "PDF Document (.pdf)"
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "Google Connection (jack@aiautomationswithjack.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "mimeType",
+                        "type": "select",
+                        "label": "Type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                                "application/vnd.oasis.opendocument.text",
+                                "application/rtf",
+                                "application/pdf",
+                                "text/plain",
+                                "text/html",
+                                "application/epub+zip"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "document",
+                        "type": "file",
+                        "label": "Document ID",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 21,
+            "module": "dropbox:uploadLargeFile",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 1427849
+            },
+            "mapper": {
+                "data": "{{19.data}}",
+                "path": "/Magoo2",
+                "filename": "{{19.filename}}",
+                "overwrite": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 2398,
+                    "y": 145,
+                    "name": "Upload PDF 📄"
+                },
+                "restore": {
+                    "expect": {
+                        "path": {
+                            "mode": "chose"
+                        },
+                        "overwrite": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection (itsssssjack@outlook.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "path",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "filename",
+                        "type": "filename",
+                        "label": "File Name",
+                        "required": true
+                    },
+                    {
+                        "name": "data",
+                        "type": "buffer",
+                        "label": "Data",
+                        "required": true
+                    },
+                    {
+                        "name": "overwrite",
+                        "type": "boolean",
+                        "label": "Overwrite an existing file",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 22,
+            "module": "dropbox:makeApiCall",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 1427849
+            },
+            "mapper": {
+                "url": "/2/files/get_temporary_link",
+                "body": "{\"path\":\"{{21.path_lower}}\"}",
+                "type": "api",
+                "method": "POST",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "disablePathRoot": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 2625,
+                    "y": -262,
+                    "name": "Download PDF 📄"
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "type": {
+                            "label": "https://api.dropboxapi.com"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            },
+                            "label": "My Dropbox connection (itsssssjack@outlook.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "type",
+                        "type": "select",
+                        "label": "Dropbox API Endpoint",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "api",
+                                "content"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    },
+                    {
+                        "name": "disablePathRoot",
+                        "type": "boolean",
+                        "label": "Disable Dropbox API Path Root",
+                        "required": true
+                    },
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 15,
+            "module": "airtable:ActionCreateRecord",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 1532818
+            },
+            "mapper": {
+                "base": "app0tyUKoL3o8JKoJ",
+                "typecast": false,
+                "useColumnId": false,
+                "table": "tblR1JPEaz11FVIxq",
+                "record": {
+                    "fld1uE7HjCdZPr6vU": "{{2.email}}",
+                    "fldlCKyUnPj6A9D9g": [
+                        {
+                            "url": "{{11.body.link}}",
+                            "filename": "{{2.audio.name}}"
+                        }
+                    ],
+                    "flddWtYIDfpy1bMrT": "{{5.text}}",
+                    "fldJSQWcfoTGcJeM9": [
+                        {
+                            "url": "{{22.body.link}}"
+                        }
+                    ],
+                    "fld09sD0shj9pjeaO": [
+                        {
+                            "url": "{{9.body.link}}",
+                            "filename": "{{2.photo.name}}"
+                        }
+                    ],
+                    "fldvvOIhM4ykIa4A6": "{{6.result}}"
+                }
+            },
+            "metadata": {
+                "designer": {
+                    "x": 2826,
+                    "y": 118
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Airtable OAuth connection (User ID: usrWHZndszJIS5AWQ)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "base": {
+                            "label": "Parking Ticket Database 🅿️ "
+                        },
+                        "typecast": {
+                            "mode": "chose"
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        },
+                        "table": {
+                            "nested": [
+                                {
+                                    "name": "record",
+                                    "spec": [
+                                        {
+                                            "name": "fld1uE7HjCdZPr6vU",
+                                            "type": "text",
+                                            "label": "Email 📧"
+                                        },
+                                        {
+                                            "name": "fldlCKyUnPj6A9D9g",
+                                            "spec": [
+                                                {
+                                                    "help": "Airtable will download the file at the given url and keep its own copy of it.",
+                                                    "name": "url",
+                                                    "type": "text",
+                                                    "label": "File URL"
+                                                },
+                                                {
+                                                    "help": "If empty, Airtable will generate the name automatically.",
+                                                    "name": "filename",
+                                                    "type": "filename",
+                                                    "label": "File name"
+                                                }
+                                            ],
+                                            "type": "array",
+                                            "label": "Voice 🎙️",
+                                            "editable": true
+                                        },
+                                        {
+                                            "name": "flddWtYIDfpy1bMrT",
+                                            "type": "text",
+                                            "label": "Transcript 💬",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fldJSQWcfoTGcJeM9",
+                                            "spec": [
+                                                {
+                                                    "help": "Airtable will download the file at the given url and keep its own copy of it.",
+                                                    "name": "url",
+                                                    "type": "text",
+                                                    "label": "File URL"
+                                                },
+                                                {
+                                                    "help": "If empty, Airtable will generate the name automatically.",
+                                                    "name": "filename",
+                                                    "type": "filename",
+                                                    "label": "File name"
+                                                }
+                                            ],
+                                            "type": "array",
+                                            "label": "Report 📄",
+                                            "editable": true
+                                        },
+                                        {
+                                            "name": "fld09sD0shj9pjeaO",
+                                            "spec": [
+                                                {
+                                                    "help": "Airtable will download the file at the given url and keep its own copy of it.",
+                                                    "name": "url",
+                                                    "type": "text",
+                                                    "label": "File URL"
+                                                },
+                                                {
+                                                    "help": "If empty, Airtable will generate the name automatically.",
+                                                    "name": "filename",
+                                                    "type": "filename",
+                                                    "label": "File name"
+                                                }
+                                            ],
+                                            "type": "array",
+                                            "label": "Image 🚗",
+                                            "editable": true
+                                        },
+                                        {
+                                            "name": "fldvvOIhM4ykIa4A6",
+                                            "type": "text",
+                                            "label": "Image Description 💬",
+                                            "multiline": true
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Record"
+                                }
+                            ],
+                            "label": "Parking Fines 💸"
+                        },
+                        "record": {
+                            "nested": {
+                                "fldlCKyUnPj6A9D9g": {
+                                    "mode": "chose",
+                                    "items": [
+                                        null
+                                    ]
+                                },
+                                "fldJSQWcfoTGcJeM9": {
+                                    "mode": "chose",
+                                    "items": [
+                                        null
+                                    ]
+                                },
+                                "fld09sD0shj9pjeaO": {
+                                    "mode": "chose",
+                                    "items": [
+                                        null
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "typecast",
+                        "type": "boolean",
+                        "label": "Smart links",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "record",
+                        "type": "collection",
+                        "label": "Record",
+                        "spec": [
+                            {
+                                "name": "fld1uE7HjCdZPr6vU",
+                                "type": "text",
+                                "label": "Email 📧"
+                            },
+                            {
+                                "name": "fldlCKyUnPj6A9D9g",
+                                "type": "array",
+                                "label": "Voice 🎙️",
+                                "spec": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "File URL"
+                                    },
+                                    {
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File name"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "flddWtYIDfpy1bMrT",
+                                "type": "text",
+                                "label": "Transcript 💬"
+                            },
+                            {
+                                "name": "fldJSQWcfoTGcJeM9",
+                                "type": "array",
+                                "label": "Report 📄",
+                                "spec": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "File URL"
+                                    },
+                                    {
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File name"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "fld09sD0shj9pjeaO",
+                                "type": "array",
+                                "label": "Image 🚗",
+                                "spec": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "File URL"
+                                    },
+                                    {
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File name"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "fldvvOIhM4ykIa4A6",
+                                "type": "text",
+                                "label": "Image Description 💬"
+                            }
+                        ]
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "Email 📧",
+                        "label": "Email 📧",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Unique ID 🆔",
+                        "label": "Unique ID 🆔",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Voice 🎙️",
+                        "label": "Voice 🎙️",
+                        "type": "array",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "width",
+                                "type": "uinteger",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "height",
+                                "type": "uinteger",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File name"
+                            },
+                            {
+                                "name": "size",
+                                "type": "uinteger",
+                                "label": "Size"
+                            },
+                            {
+                                "name": "type",
+                                "label": "MIME type",
+                                "type": "text"
+                            },
+                            {
+                                "name": "thumbnails",
+                                "label": "Thumbnails",
+                                "type": "collection",
+                                "spec": [
+                                    {
+                                        "name": "small",
+                                        "label": "Small",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "large",
+                                        "label": "Large",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "full",
+                                        "label": "Full",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Transcript 💬",
+                        "label": "Transcript 💬",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Report 📄",
+                        "label": "Report 📄",
+                        "type": "array",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "width",
+                                "type": "uinteger",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "height",
+                                "type": "uinteger",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File name"
+                            },
+                            {
+                                "name": "size",
+                                "type": "uinteger",
+                                "label": "Size"
+                            },
+                            {
+                                "name": "type",
+                                "label": "MIME type",
+                                "type": "text"
+                            },
+                            {
+                                "name": "thumbnails",
+                                "label": "Thumbnails",
+                                "type": "collection",
+                                "spec": [
+                                    {
+                                        "name": "small",
+                                        "label": "Small",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "large",
+                                        "label": "Large",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "full",
+                                        "label": "Full",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Image 🚗",
+                        "label": "Image 🚗",
+                        "type": "array",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "width",
+                                "type": "uinteger",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "height",
+                                "type": "uinteger",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File name"
+                            },
+                            {
+                                "name": "size",
+                                "type": "uinteger",
+                                "label": "Size"
+                            },
+                            {
+                                "name": "type",
+                                "label": "MIME type",
+                                "type": "text"
+                            },
+                            {
+                                "name": "thumbnails",
+                                "label": "Thumbnails",
+                                "type": "collection",
+                                "spec": [
+                                    {
+                                        "name": "small",
+                                        "label": "Small",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "large",
+                                        "label": "Large",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "full",
+                                        "label": "Full",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Image Description 💬",
+                        "label": "Image Description 💬",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Created Time 🕰️",
+                        "label": "Created Time 🕰️",
+                        "type": "date"
+                    },
+                    {
+                        "name": "Last Modified Time 📆",
+                        "label": "Last Modified Time 📆",
+                        "type": "date"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

@@ -1,0 +1,1048 @@
+[00:00:00] in this video we're going to build a
+[00:00:01] very powerful social media scraping
+[00:00:03] system using n8n and a really cool API
+[00:00:06] scraping technology that will basically
+[00:00:08] give us for any particular platform that
+[00:00:10] we like uh transcripts uh descriptions
+[00:00:12] statistics on views comments likes
+[00:00:14] shares whatever that you'd like top
+[00:00:16] creators consistently outperform their
+[00:00:17] competition because they use data and
+[00:00:20] you might have great content ideas but
+[00:00:21] how do you know what the stuff is that
+[00:00:23] actually resonates to the audience and
+[00:00:24] the thing is guys it's one of the
+[00:00:26] hardest things to figure out when you're
+[00:00:27] starting out creating content but there
+[00:00:29] is good new and there is actually a
+[00:00:31] science to it and I'll will show you how
+[00:00:32] you build this entire thing in a clear
+[00:00:34] five-step process so even if you're
+[00:00:36] complete beginner with no coding
+[00:00:37] experience you will have this working by
+[00:00:39] the end of the video and I'll also
+[00:00:40] integrate and show you some loal
+[00:00:41] technologies and hacks that will help
+[00:00:43] you on your journey so if you haven't
+[00:00:45] already grab that coffee and let's dive
+[00:00:47] straight in so step one is to decide
+[00:00:49] which social media platform you'd like
+[00:00:51] to use in this case guys I'm going to go
+[00:00:53] with Tik Tok because I've done lots of
+[00:00:54] content on Instagram and YouTube but it
+[00:00:56] will be the same process for all of them
+[00:00:58] though they have slightly different
+[00:00:59] quirks and you'll figure that out as we
+[00:01:01] go along so what I'm going to do just to
+[00:01:02] show you how this works is grab the
+[00:01:04] blueprint from my community so I can
+[00:01:05] head over to the classroom every
+[00:01:07] Automation and it's this one here say
+[00:01:09] free and Powerful Tik Tok one all you do
+[00:01:12] guys is you come down you download the
+[00:01:13] resource then you come over click these
+[00:01:15] three little buttons and then import
+[00:01:16] from file and just choose the file that
+[00:01:18] you just downloaded and just like magic
+[00:01:20] it will appear and we're going to give
+[00:01:21] this one the name of Tik Tok scraper so
+[00:01:23] how is this actually working so what
+[00:01:25] we're using with this scenario just to
+[00:01:27] give you a quick tldr of how this works
+[00:01:29] okay we we have an air table now what
+[00:01:32] we're storing here is every single
+[00:01:34] account that we would like to stroke and
+[00:01:36] what we do is we grab their user ID and
+[00:01:39] this thing called a sec ID and whatever
+[00:01:40] the account is I'll show you a very easy
+[00:01:43] one button way of how you get that so
+[00:01:44] it's basically the way to Tik Tok in
+[00:01:46] this case for us identifies that user so
+[00:01:51] once we've got this air tub and we
+[00:01:52] create this database what do we do well
+[00:01:54] we're actually going to call down and
+[00:01:55] grab all the videos from that individual
+[00:01:57] we're going to do a little bit of code a
+[00:01:59] little bit of field management don't
+[00:02:00] worry about that it's just some
+[00:02:01] technical Goble the G that will make
+[00:02:02] sense we grab the video we download it
+[00:02:05] we transcribe it and what we do when we
+[00:02:07] grab this guys is we grab all of the
+[00:02:09] data and we're adding it all to this
+[00:02:11] Google dog so we have the transcript the
+[00:02:13] description and some statistics
+[00:02:14] information about the Creator and then
+[00:02:16] what we can do with this is essentially
+[00:02:18] give all of this data to chat GPT to
+[00:02:21] claw to deeps to any particular language
+[00:02:23] model that you want to and we can say
+[00:02:25] hey this is all of the perform basically
+[00:02:27] these are every single you know Tik Tok
+[00:02:29] been going on in my niche in the past 7
+[00:02:31] days and this will run for you
+[00:02:32] automatically on autopilot by the way
+[00:02:34] and essentially what we do in step five
+[00:02:36] at the end of the video is we say great
+[00:02:37] based on this information what's
+[00:02:39] performing you know what what the types
+[00:02:41] of content that has resonance with the
+[00:02:43] audience and then we're going to use
+[00:02:44] that to make your strategy better on a
+[00:02:47] week-by-week basis so what we're going
+[00:02:48] to do first of all is build this entire
+[00:02:50] thing together step by step to do that
+[00:02:52] I'm going to delete all this stuff and
+[00:02:54] we're going to begin so step one we've
+[00:02:55] done we're going to choose Tik Tok for
+[00:02:57] this video the second step that we need
+[00:02:59] to look at guys is is to find the right
+[00:03:00] scraper for the job if we're using
+[00:03:03] YouTube we can use the Google API and
+[00:03:05] the skills I'll show in this video it
+[00:03:06] shows you how you can basically use this
+[00:03:08] C stuff to scrape anything now we use
+[00:03:10] appify a lot in this video guys I'm
+[00:03:12] going to show you something really cool
+[00:03:13] about rapid rapid API so you're going to
+[00:03:15] come this big beautiful screen I'll put
+[00:03:16] all the links down below so you can just
+[00:03:17] click and go you're going to sign up or
+[00:03:19] basically sign in if you have an account
+[00:03:21] okay now what's really cool about rapid
+[00:03:23] API is it has access to enable you to
+[00:03:26] essentially scrape whatever you could
+[00:03:28] possibly imagine guys they got dark mode
+[00:03:30] you know what they also got they've got
+[00:03:31] light mode I I get some critiques for
+[00:03:33] not having dark mode on sometimes but
+[00:03:35] you know man I got to I got to run to
+[00:03:36] the light I got to run to the good place
+[00:03:38] so what we've got here we've got logical
+[00:03:39] stuff the one that we're going to be
+[00:03:40] interested in you can see we've got
+[00:03:42] Instagram Zillow lots of stuff I would
+[00:03:44] like the Tik Tok one so let's go for Tik
+[00:03:45] Tok in the search bar like so beautiful
+[00:03:48] scrap tick that sounds really decent so
+[00:03:51] we just click on the top one obviously
+[00:03:52] it's just like a willy wers and pour in
+[00:03:54] with different scrapers you select the
+[00:03:56] scraper that you like and then you'll
+[00:03:57] see a page that looks like this and just
+[00:03:59] to give you Thea of how this works guys
+[00:04:01] don't worry about the fact it looks like
+[00:04:02] code everything on the left is an end
+[00:04:04] point in other words it's a particular
+[00:04:06] request so think of it kind of like each
+[00:04:08] one of them is doors and behind each
+[00:04:10] door is a piece of information which is
+[00:04:12] really handy now what we first wanted to
+[00:04:14] do is get a user ID this is Tik tok's
+[00:04:16] identifier so what I would like you to
+[00:04:18] do is on the left hand side you can
+[00:04:20] scroll down or type it in if you prefer
+[00:04:22] we are going to look for if this will
+[00:04:23] load down one moment there you go
+[00:04:26] username to ID on the bottom left when
+[00:04:28] we click on that then it loads head up
+[00:04:30] then what you do is this is what the app
+[00:04:32] is the rapid API key the request you
+[00:04:33] want run you click on to parameters
+[00:04:36] there click on parameters and enter a
+[00:04:38] username so for this one I think we
+[00:04:39] should do let's do Ali abdal actually CU
+[00:04:42] he is really cool and we'll just check
+[00:04:43] out his thing so Ali abdal Tik Tok as a
+[00:04:46] quick for instance and there is his
+[00:04:47] username so let's copy that he's got 2.7
+[00:04:50] million likes and 300,000 followers so
+[00:04:52] what do we do we enter in the username
+[00:04:55] and then guys in the top right you're
+[00:04:56] going to click on test endpoint if
+[00:04:58] you've never created a rapid account
+[00:05:00] before you basically just subscribe to
+[00:05:01] it and it'll pop up so we click on test
+[00:05:03] end point like sir and wait for the
+[00:05:05] results to appear and would you believe
+[00:05:07] it it has appeared so we've got aliab do
+[00:05:09] so what we do then guys is head over to
+[00:05:12] air table in this instance which is
+[00:05:14] really cool so I'm going to build one of
+[00:05:15] those with you together right now so
+[00:05:17] let's go over to airtable.com I'm just
+[00:05:19] going to duplicate this and we'll do it
+[00:05:21] a table if you're not familiar it's kind
+[00:05:23] of like Google Sheets that's been
+[00:05:25] hitting Mexican supplements and by that
+[00:05:26] I mean it's been smashing the steroids
+[00:05:28] because it's way more configur we can do
+[00:05:30] a bazillion things with it and it just
+[00:05:32] makes our life easier and your first 500
+[00:05:33] records are completely free so you don't
+[00:05:35] need to worry about cost uh in this case
+[00:05:37] so we've got the name the other two
+[00:05:39] Fields I want to get guys is user ID and
+[00:05:41] Sack U ID so we're going to come here
+[00:05:43] we're going to call this one double
+[00:05:45] click on it user ID long text is fine
+[00:05:47] singleand text is okay and then the
+[00:05:49] second one I want you to grab guys is
+[00:05:51] the SEC ID SEC U idid come on here
+[00:05:55] instead of user just put single line
+[00:05:57] text and here SECU ID and then the first
+[00:06:00] one what I'd love you to do uh once that
+[00:06:03] finishes loading for us is we're going
+[00:06:04] to come here I'm going to type in
+[00:06:06] creator of course we're going to give it
+[00:06:07] a fire magic because that's super
+[00:06:09] important uh that we keep the visuals
+[00:06:11] pipping and popping of course so we come
+[00:06:13] here Creator beautiful so we Ali
+[00:06:18] abdal the creativity King we come back
+[00:06:21] over then to our API which is right here
+[00:06:25] what we got seu ID we copy this guy
+[00:06:28] beautiful come back over this
+[00:06:30] paste this in and then user
+[00:06:32] ID copy this come back over paste them
+[00:06:36] in there awesome and by the guys I got
+[00:06:38] some really freaking epic little
+[00:06:39] shortcuts and hacks in nend I think
+[00:06:41] you're going to really appreciate in
+[00:06:41] this video so we've got Ali abdor what
+[00:06:43] would be the first step you do here you
+[00:06:45] would then think about every Creator in
+[00:06:46] your space in your Niche if your
+[00:06:48] productivity what are all the top
+[00:06:49] productivity content creators like that
+[00:06:51] are making the content and then the
+[00:06:52] system will allow us to say hey this are
+[00:06:55] of there's 50 videos that went out in in
+[00:06:57] your Niche right these freaking seven
+[00:06:59] killing it we can use AI to analyze that
+[00:07:01] and say dude like you this is where the
+[00:07:03] resonance with customers are this is
+[00:07:05] where we want you to create content go
+[00:07:06] forth and do that so we've done this one
+[00:07:08] we're going to call this one
+[00:07:10] productivity
+[00:07:12] scraper Tick Tock all right beautiful
+[00:07:16] what is going on with the Tik Tok ban in
+[00:07:18] America by the way I don't know I've
+[00:07:19] been curious to know what the latest is
+[00:07:20] with that cool so we've got this now
+[00:07:22] what is the next step so we've got the
+[00:07:24] scrap for job so just read through we've
+[00:07:25] chosen Tik Tok could be anyone we've
+[00:07:27] picked a scraper if you didn't choose a
+[00:07:29] you easily could have guys chosen
+[00:07:31] Instagram from this or YouTube is any
+[00:07:33] any platform that you want to it's the
+[00:07:35] same sort of process cool so we've got
+[00:07:37] the user ID so we're going to now head
+[00:07:39] over to n8n doio on NOCO platform uh
+[00:07:42] builder of choice I'll put a link below
+[00:07:44] so you can check that out and if you are
+[00:07:45] need to an I've just buil out a master
+[00:07:47] class in the community because there's
+[00:07:49] some quirks to it which are which can
+[00:07:50] really help you know shortcut your
+[00:07:52] Learning Journey so what do we do now
+[00:07:54] just to get started with n8m there's
+[00:07:56] always trigger with these things in
+[00:07:57] other words what is the thing that
+[00:07:58] starts at another way I'm going to
+[00:08:00] configure this with you is I'm going to
+[00:08:01] have it run every 7even days because I
+[00:08:03] want to review this content every Sunday
+[00:08:05] so basically every Sunday it's going to
+[00:08:06] run I'll get a document and then I can
+[00:08:08] start thinking about you know what I'd
+[00:08:10] like to do and what that looks like for
+[00:08:11] the time being we're going to click on
+[00:08:12] trigger manually which basically means
+[00:08:14] we can click this beautiful orange burn
+[00:08:16] and it will run which is flipping cool
+[00:08:18] now what we want to do first of all is
+[00:08:20] basically have it grab the information
+[00:08:23] from Air table because in our table what
+[00:08:25] we have is every single creator that we
+[00:08:28] want to look at in this case it's just
+[00:08:31] Al abdor when you do it you'll have 5 10
+[00:08:33] 12 people the more the better you don't
+[00:08:35] want to give it defunct data although it
+[00:08:37] will understand like views and Tik Tok
+[00:08:38] is quite a merous platform in other
+[00:08:40] words every piece of content has every
+[00:08:42] opportunity to go viral so it's actually
+[00:08:44] fine it's really interesting that sense
+[00:08:45] there's no algorithm bias like that so
+[00:08:47] what do we do we look on the plus you're
+[00:08:49] going to type in a table hit this up and
+[00:08:52] you look for search records now you
+[00:08:55] won't have a credential so come down and
+[00:08:57] click on create a new credential and
+[00:08:59] you'll see here here you need an access
+[00:09:00] token okay so what do we do we come over
+[00:09:02] to air table I'm just going to duplicate
+[00:09:04] this and head over to airtable.com to
+[00:09:06] show you exactly where you get that from
+[00:09:07] you come on to the homepage guys click
+[00:09:09] on that beautiful J at the top and I
+[00:09:11] believe it's account then guys scroll
+[00:09:12] down and click on the developer Herber
+[00:09:14] place where developers like to hang out
+[00:09:15] and have a rock and roll a good time uh
+[00:09:17] and then here you click on create token
+[00:09:19] and then here click on create a new
+[00:09:21] token you want to give it a cool name
+[00:09:23] like uh Tik Tok like that and then
+[00:09:25] Scopes add all the Scopes that you think
+[00:09:26] you might need U you can add all them if
+[00:09:28] you want to this is basically want toble
+[00:09:29] to read to write to do whatever you like
+[00:09:31] to so add all the ones that you'd like
+[00:09:32] so I've selected all of them and then
+[00:09:33] access um I would say all current and
+[00:09:36] future bases just so I'm not having a f
+[00:09:37] around and come back and then we create
+[00:09:40] the token you're then going to copy that
+[00:09:41] token guys come over to the access token
+[00:09:43] and just pop it in here and there we go
+[00:09:46] it's done and we click save and that
+[00:09:47] should work for us fine credential
+[00:09:49] successfully saved and that's account
+[00:09:50] through decent so now we have access and
+[00:09:53] we'll get rid of this no bra we're okay
+[00:09:54] thank you so we now connected so now
+[00:09:56] let's choose the base that we picked now
+[00:09:57] what did we call our database the
+[00:09:59] productivity scriper cool so it come
+[00:10:02] down from list and we'll just type in
+[00:10:06] product productivity scraper come to me
+[00:10:09] okay cool and then we're also going to
+[00:10:10] pick the table now this is cool
+[00:10:12] basically I'd recommend you have Tik Tok
+[00:10:13] Instagram YouTube Facebook blah blah
+[00:10:15] blah all the way down LinkedIn on the
+[00:10:16] actual tabs here but we've just got
+[00:10:18] table one just to keep it very simple so
+[00:10:21] table is going to be table one
+[00:10:22] phenomenal no need to form no no formuls
+[00:10:25] need at all and we just test step cool
+[00:10:27] and as you can see guys the left of
+[00:10:30] every panel na10 is the information that
+[00:10:31] comes in and the right is all the
+[00:10:33] outputs which you can view in table Json
+[00:10:36] or the schema if you want to and
+[00:10:37] everything's very D and Dr so you can
+[00:10:38] see here when it's created the Creator
+[00:10:40] user ID and a sec ID how cool is that
+[00:10:43] it's very cool so what's the next thing
+[00:10:45] we need to do the next thing we now need
+[00:10:47] to do is hey okay we know the Creator
+[00:10:49] okay we've got all the creators listed
+[00:10:50] and we know who they are we've got their
+[00:10:51] ideas we kind of want to just go and
+[00:10:53] grab that post right we want to kind of
+[00:10:55] say what the hell is he actually posted
+[00:10:57] give me the last 10 posts he done give
+[00:10:59] me 20 post is done so to do that we're
+[00:11:01] going to pop back over to Rapid API so
+[00:11:04] guys the one that we want next is user
+[00:11:06] posts so in the endpoint section of the
+[00:11:08] left just type in user post and you'll
+[00:11:11] see that get user post and then this
+[00:11:13] thing here will appear for you user post
+[00:11:15] you can see so what do we do we click on
+[00:11:17] the parameters and we've got user ID in
+[00:11:20] other words that is the individual who's
+[00:11:22] posted it so what do we do we come over
+[00:11:23] to uh this one's mine we're going to
+[00:11:25] copy Ali AB doll's user ID this is just
+[00:11:28] as a for instance to show that it works
+[00:11:30] we come back over here we go all right
+[00:11:31] come in delete that hit enter and you
+[00:11:33] can see as I change things on the left
+[00:11:35] changes things on the right and then
+[00:11:37] what we want to do is just simply test
+[00:11:39] the end point for us let that load up
+[00:11:41] for a moment and one of the things I
+[00:11:42] really like about rapid guys is it just
+[00:11:44] kind of pulls the stuff in yeah and like
+[00:11:46] what's really cool is there's no need to
+[00:11:48] go take the API keys back and forth and
+[00:11:50] I'll show you a real cool hack that how
+[00:11:51] that works it's really tasty so we've
+[00:11:53] got all this information and like I
+[00:11:54] click on zero and this is every piece of
+[00:11:57] information that we need the description
+[00:11:59] I I was today years old when I realized
+[00:12:00] I've been using post all wrong life hack
+[00:12:02] video blah blah blah and we've got all
+[00:12:04] the information an automatically dream
+[00:12:06] of so we know that works right so what
+[00:12:08] do we do now what I want you to do code
+[00:12:10] snippet can you see this is shell and
+[00:12:11] curl all you're going to do guys and
+[00:12:13] this is a cool this is so freaking cool
+[00:12:14] you're going to copy the snippet right
+[00:12:16] we're going to go back over to n8m and
+[00:12:18] what we're going to do is click on this
+[00:12:20] button click on HTTP request right
+[00:12:23] sounds complicated don't worry about it
+[00:12:24] look import curl and then just paste
+[00:12:27] that thing in and look at this
+[00:12:29] by Magic and the whole thing will just
+[00:12:31] pre-populate for us what does that mean
+[00:12:33] it means it's pretty freaking cool now
+[00:12:35] you'll see guys can you see here it's B
+[00:12:37] the value over and it's brought that
+[00:12:39] value over because that's what I put
+[00:12:41] into
+[00:12:42] it uh not on this one I've got so many
+[00:12:44] tabs open it's crazy that's what I put
+[00:12:46] into it here so whatever if I change
+[00:12:47] this to something crazy it would update
+[00:12:50] that on the right hand side that's why
+[00:12:51] that's brought that over but in reality
+[00:12:53] we're going to have several creators
+[00:12:54] we're going to have Ali we're going to
+[00:12:55] have all these different productivity
+[00:12:56] ones so instead of the number here under
+[00:12:58] the user ID I want to rid of that I need
+[00:13:00] to grab and bring it over here okay now
+[00:13:03] check this out what I'm going to do is
+[00:13:05] I'm going to click off one cool thing
+[00:13:06] one cool feature of of um n8n guys is
+[00:13:09] the fact that if you think about we have
+[00:13:11] this process going from left to right
+[00:13:14] sometimes we don't want to have to keep
+[00:13:15] going back to air table and scraping it
+[00:13:17] and doing loads of things so what we can
+[00:13:18] do instead is what's known as pinning so
+[00:13:20] we can pin the data and when that data
+[00:13:22] is pinned and you see that beautiful
+[00:13:24] little pink it means that basically
+[00:13:26] we're just going to assume that this
+[00:13:27] already happened and we'll start from
+[00:13:28] the this point onwards so now if I come
+[00:13:30] to the HTTP request and I hit press play
+[00:13:34] it will just grab the add table record
+[00:13:36] and it's completed and if we look over
+[00:13:37] to the right hand side now can you see
+[00:13:39] this is all of the beautiful information
+[00:13:41] that we got from Ali that's all the
+[00:13:43] posts that he's done it's like it's like
+[00:13:44] all these data information which is
+[00:13:46] really freaking cool and that's all the
+[00:13:47] secret source that we need to create
+[00:13:49] this incredible Tik Tok scraper but
+[00:13:51] there is one kind of Quirk when I was
+[00:13:53] building this in the lab guys that was
+[00:13:55] quite interesting to me and that's the
+[00:13:56] way this API works you can see it's come
+[00:13:58] out as one item which isn't that helpful
+[00:14:00] to us because I kind of want to go
+[00:14:02] download all the videos I want the
+[00:14:03] transcript all videos I want all the
+[00:14:04] text all the videos so we've got to find
+[00:14:06] a way of pulling out the right
+[00:14:08] information so to do that we're going to
+[00:14:10] add in a set field so I can move to set
+[00:14:13] edit field set now we're going to do
+[00:14:14] manual mapping that's absolutely fine
+[00:14:16] and htb request Okay cool so you can see
+[00:14:19] if I come over to schema here we've got
+[00:14:21] all of this stuff here what I want to do
+[00:14:24] is you've got the name so this name is
+[00:14:25] just going to be video one and the value
+[00:14:28] is going to be the
+[00:14:29] this that's it that is I'm going to save
+[00:14:32] you about 15 minutes of be live okay and
+[00:14:34] I'm going to tell you that's the one
+[00:14:35] that you want okay just enter that in
+[00:14:37] there you copy and paste it if you if
+[00:14:38] you're not in the community you got the
+[00:14:39] blueprint you can just screenshot it
+[00:14:41] whatever and just have it transcribed
+[00:14:42] that's the one that you want then guys
+[00:14:44] we just do it again and we go for what
+[00:14:46] comes after one well it's two right boom
+[00:14:48] and instead of zero you're going to go
+[00:14:50] for one beautiful and then same thing
+[00:14:53] again instead of one you're going to go
+[00:14:55] for two and call this one video three
+[00:14:58] okay and you you basically do this for
+[00:15:00] as many videos as you
+[00:15:02] have I'm going to do it for five just
+[00:15:05] for respect for your time um beautiful
+[00:15:08] and then let's just do one final one
+[00:15:10] here which is going to be video 5
+[00:15:13] beautiful I'm going to change that one
+[00:15:15] two four sound cool sounds pretty cool
+[00:15:17] to me we're going to click off and once
+[00:15:19] again let's just pin this data so we
+[00:15:21] don't have to keep rep playing it
+[00:15:22] although it was a cool step I enjoyed it
+[00:15:24] now Look test step let's see what comes
+[00:15:26] out and all we're saying is I want to
+[00:15:27] bring that information pull right and
+[00:15:29] you can see we have five URLs what is
+[00:15:32] the significance of URLs well if I click
+[00:15:34] on it and I open up a tab here which I'm
+[00:15:36] just going to duplicate and have a good
+[00:15:38] luck what do we see you're probably
+[00:15:40] using Post-it notes wrong here's how you
+[00:15:41] use them properly normally we rip off
+[00:15:43] Post-it notes like this but the problem
+[00:15:45] is that it then like want okay is it bad
+[00:15:48] that I kind of wanted to see what
+[00:15:49] happened with that post actually let's
+[00:15:51] watch it let's see what happens to
+[00:15:52] naturally unstick itself instead you
+[00:15:54] should rip them off sideways because
+[00:15:55] then because then it sticks properly tip
+[00:15:58] number three for can see
+[00:16:00] okay okay I actually don't what to say I
+[00:16:03] I haven't used I'm I'm I'm going to be
+[00:16:05] using that hack that was a good use of a
+[00:16:06] 5 minutes cool so we've got it and let's
+[00:16:09] pin this data phenomenal now guys here's
+[00:16:11] a really cool hack for an na10 now you
+[00:16:13] can see that I've got six things here I
+[00:16:15] need right so five things here video 1 2
+[00:16:17] 3 four five however if I try to download
+[00:16:20] that I'm not going toble to run it five
+[00:16:22] times it's just going to download the
+[00:16:23] first one so what we can do with nent I
+[00:16:25] call this the super glue of nent I call
+[00:16:27] it like the WD 40 familiar with that and
+[00:16:30] we can actually add into nhn code so
+[00:16:33] look if I click on this button and I
+[00:16:35] type in code now we're not coding here
+[00:16:38] right that's the thing this is a no code
+[00:16:39] platform but what we can do is say hey
+[00:16:41] AI this is the problem that I've got I
+[00:16:43] want you to create some code that will
+[00:16:44] fix it and then basically you can
+[00:16:46] literally paste it into here and it will
+[00:16:48] do it for you right so I'm going to do
+[00:16:50] this with you step by step and show you
+[00:16:51] this so I'm going to head over to chat
+[00:16:52] GPT right quick in fact I'm going to
+[00:16:53] have to clae and the reason I'm going to
+[00:16:55] show you this guys is just so you get
+[00:16:56] the skill of learning how to do this so
+[00:16:58] like I'm going to copy this to the
+[00:16:59] clipboard and essentially The Prompt is
+[00:17:01] basically what you're doing I'm an A10 I
+[00:17:02] want to have some code that will make
+[00:17:04] these processes as six different items
+[00:17:07] so that I can download them individually
+[00:17:09] then we paste a screenshot then guys we
+[00:17:10] copy the code that appears there come
+[00:17:12] back over then and just type in the code
+[00:17:14] like so okay now if I run a test step
+[00:17:16] we'll see what happens here I'm not
+[00:17:19] expecting it to work on the first Cent
+[00:17:20] we'll see and it has inputed five items
+[00:17:23] and we know this because we can see the
+[00:17:25] five items and when you realize guys
+[00:17:28] that you can use code to fix things like
+[00:17:29] there's always going to be some really
+[00:17:30] minute technical way that you can do
+[00:17:32] something in na1 like if you know enough
+[00:17:34] there's always going to be a little way
+[00:17:35] to do it for me these little mini code
+[00:17:38] blocks these little mini code Rockets
+[00:17:40] are freaking awesome like if you're just
+[00:17:42] struggling to get something done just
+[00:17:43] freaking throw a code Block in there
+[00:17:45] that does something say hey I want this
+[00:17:46] to this and often times you'll find you
+[00:17:48] can work some magic but what's the T
+[00:17:50] right now we've got the we've got the
+[00:17:52] videos we have them as five items which
+[00:17:53] now means that we are ready to download
+[00:17:55] them and I already went through the
+[00:17:56] trouble of figuring out how to get the
+[00:17:57] video to the transcript and 10 so we're
+[00:17:59] going to Breeze through this a little
+[00:18:01] bit so what's next well the next thing
+[00:18:03] guys is a little Quirk so you see this
+[00:18:05] video here Tik tok. al. if I try to
+[00:18:07] download this URL I'm not going to get
+[00:18:09] the actual video because this isn't the
+[00:18:11] video this is a page on Tik Tok that has
+[00:18:13] a video embedded into it so you're never
+[00:18:15] actually ever going to be able to
+[00:18:16] download this and this will be a really
+[00:18:18] cool hack for if you're ever trying to
+[00:18:19] actually get a video URL which You'll
+[00:18:21] Always Find in some scenario or another
+[00:18:22] so what we kind of want to do is give it
+[00:18:25] the identifying URL like hey this is the
+[00:18:27] video on Tik Tok give me something I can
+[00:18:30] actually download that's basically what
+[00:18:31] we're saying okay so we come back over
+[00:18:33] to the beautiful rapid API and what
+[00:18:35] we're going to look for I'm going to get
+[00:18:36] rid the end point thing here on the left
+[00:18:38] hand side is we want to get the video
+[00:18:40] without the watermark which I think is
+[00:18:42] pretty cool so let's try and find that
+[00:18:44] can you see on my left oh my goodness if
+[00:18:45] I just type in Watermark maybe it pops
+[00:18:47] up video without Watermark why is this
+[00:18:50] important because we need to download it
+[00:18:52] okay and this gives us a URL so yeah
+[00:18:55] it's fine just leave that URL for now
+[00:18:56] and once again guys uh we can test end
+[00:18:59] point and look at this this is beautiful
+[00:19:00] you're going to love this look at this
+[00:19:03] now it gives us this link now check this
+[00:19:04] out by the way no Walmart link music
+[00:19:06] link uh cover link Avatar thumbnails
+[00:19:09] guys what else do you need oh my this is
+[00:19:11] outrageous stuff and the cool thing is
+[00:19:13] it gives us all the information so look
+[00:19:15] how many comments how many digs I think
+[00:19:16] dig is like a vote up on Tik Tok I know
+[00:19:18] why they using such Str language but you
+[00:19:19] know WhatsApp share count share count
+[00:19:21] Play Count this is all the gold dust
+[00:19:23] that we're going to use to start making
+[00:19:24] things cuz we can then once we have the
+[00:19:26] data and the performance we can marrow
+[00:19:28] those things together to create
+[00:19:29] something pretty epic and by the way
+[00:19:30] guys I sold an automation recently uh
+[00:19:33] for like a a kind of a Scraper on a
+[00:19:35] social media things like literally
+[00:19:37] thousands of dollars in in one pop
+[00:19:39] they're really really really
+[00:19:40] straightforward uh they're not
+[00:19:41] straightforward when you know how but
+[00:19:43] like yeah this stuff not only is it
+[00:19:44] valuable guys it really sells so look
+[00:19:46] I've got this noow Watermark link I copy
+[00:19:48] this let me give you a quick example
+[00:19:50] this looks like uh so you can see the
+[00:19:52] difference the
+[00:19:54] [Music]
+[00:19:55] Wonders okay yeah so this is I don't
+[00:19:58] know what what's going on actually man
+[00:19:59] we really picked a strange account
+[00:20:00] didn't we this is funny okay cool so
+[00:20:02] we've got this odd bizarre thing with
+[00:20:04] Ali abdall don't know what he's doing oh
+[00:20:05] wait no that isn't Ali AB doll this is a
+[00:20:07] random one okay that's that kind of
+[00:20:08] makes more sense I Ali doll went a
+[00:20:10] little bit left field with that so we
+[00:20:11] come over with to code Snippets and
+[00:20:13] we're going to copy the text and then we
+[00:20:14] come back over guys to our n10 scenario
+[00:20:16] and in fact let me just do something
+[00:20:18] really clean with this I'm just going to
+[00:20:19] name these as we go so this one was grab
+[00:20:23] the video URLs so if we name them I
+[00:20:27] think that'll be really handy right
+[00:20:28] because then we know like what they're
+[00:20:30] all doing so then let's go to here
+[00:20:32] another HTTP
+[00:20:33] request beautiful now check this one out
+[00:20:36] import cool you know what guys boom get
+[00:20:38] this one in here bam and it has
+[00:20:41] populated but it's this value here so
+[00:20:43] check this out what we need to do now is
+[00:20:45] give it the value from the code and we
+[00:20:47] can't really just grab the video right
+[00:20:48] so this is another challenge we've got
+[00:20:50] here we can't just grab video one
+[00:20:51] because it'll just do video one so
+[00:20:53] instead we're going to give this value
+[00:20:55] here which is basically saying Hey I
+[00:20:57] want the Json URL from code and since
+[00:20:59] it's going to far off five times we
+[00:21:01] should get it five times so should we
+[00:21:04] physically test it and see what it looks
+[00:21:05] like by clicking test step and we'll see
+[00:21:07] the output on the right hand side so
+[00:21:09] give that a hot second and we should see
+[00:21:11] Five results thn watermart link oh my
+[00:21:14] gosh this is really freaking cool I
+[00:21:16] really love this and we got no one guys
+[00:21:18] this is freaking perfect I love this so
+[00:21:20] now this should be something of alleys
+[00:21:22] if I open up not this crazy sock video
+[00:21:24] you're probably using post notes wrong
+[00:21:26] cool and now we've got something we can
+[00:21:27] work with we got something we can
+[00:21:28] actually download with I think it's
+[00:21:30] freaking cool so let's come back over
+[00:21:32] and then let's look at what the next
+[00:21:33] step is well first of all of course we
+[00:21:35] need to rename this right which is uh
+[00:21:38] get
+[00:21:39] downloadable URL beautiful well actually
+[00:21:42] guys the next step is really simple and
+[00:21:43] what I really like about this n8n thing
+[00:21:45] is we can see the number of items quite
+[00:21:47] simply guys we just want to download it
+[00:21:49] now that's it so let's just do that HTTP
+[00:21:51] HTTP request and get is fine and then
+[00:21:54] we're just going to give it the URL and
+[00:21:55] the URL is very simply the no watermart
+[00:21:57] link so I don't believe we need to add
+[00:22:00] anything else so I'm just going to test
+[00:22:02] this step and see how we go this should
+[00:22:04] give me five things on the right hand
+[00:22:05] side I should be able to see them if
+[00:22:06] it's done it properly and I should be
+[00:22:08] able to download them also so we let
+[00:22:09] that download give that a hot
+[00:22:11] second okay the suspense is intense this
+[00:22:15] looks good to me so should we view let's
+[00:22:17] view this one tip number three for
+[00:22:18] typing insanely fast which is this is
+[00:22:21] dude do you know maybe we should I think
+[00:22:22] if we made a commitment that we were
+[00:22:24] going to watch every one of the videos
+[00:22:25] every time it came up I think by the end
+[00:22:26] of the video we'd all be productive
+[00:22:28] that's a nice little value right that
+[00:22:30] would be pretty tasty so we've got this
+[00:22:32] the next thing we want to do is well
+[00:22:33] we're going to need the transcript right
+[00:22:35] because the captions are cool the stats
+[00:22:36] are cool but what the hell is he talking
+[00:22:38] about is he talking about Post-it notes
+[00:22:40] or typing quickly this is important
+[00:22:41] information so we need to then start
+[00:22:43] transcribing things so to do that we are
+[00:22:45] then going to click on a new module
+[00:22:46] Advanced ai go for open AI like so and
+[00:22:50] then go for I think it's just
+[00:22:52] transcription yeah transcriber recording
+[00:22:54] beautiful and then we need to get the
+[00:22:56] data over all right so uh I'm going to
+[00:22:58] show you something interesting here
+[00:22:59] actually so if you haven't got a
+[00:23:01] credential with open a yet here's what
+[00:23:02] you need to do it's platform to open.com
+[00:23:05] well not assistant but come on to API
+[00:23:07] keys on the bottom left and you
+[00:23:08] basically create a new key get the key
+[00:23:10] then you able to create that new thing
+[00:23:12] but look I come back over out the
+[00:23:13] scenario I'm going to show something
+[00:23:15] really interesting this this is not
+[00:23:16] going to work and I'll show you why look
+[00:23:17] I test this
+[00:23:19] step wow oh credentials issue okay that
+[00:23:23] that isn't the reason why it wasn't
+[00:23:24] going to work by the way um there was
+[00:23:25] another reason but I just wanted to show
+[00:23:26] you what this is like cuz this is really
+[00:23:28] look at this bad request it's not very
+[00:23:30] nice when they tell us it's bad request
+[00:23:32] is it here's a reason why this isn't
+[00:23:34] working because this is basically saying
+[00:23:37] here that I need it to be an MP4 format
+[00:23:40] in reality it is but the difference here
+[00:23:42] guys is the fact that this title the
+[00:23:45] name of this video that we've downloaded
+[00:23:47] very gloriously only one module ago
+[00:23:49] doesn't end in mp form which essentially
+[00:23:51] means that open AI is like a bang in its
+[00:23:53] head on the wall and doesn't have the
+[00:23:55] the wherewithal to understand that so
+[00:23:57] what we're going to do is use the WD40
+[00:23:59] of na1 once again at n is the code
+[00:24:01] module okay so what we're going to do
+[00:24:03] with the code module is basically grab
+[00:24:05] the video we're going to call it MP4 and
+[00:24:08] then we're going to fit it to open a and
+[00:24:09] that will actually then work for it so
+[00:24:11] look I come here I type in code run some
+[00:24:13] custom code so instead of using the code
+[00:24:14] from the last video guys what I'm going
+[00:24:16] to do is I'm just going to screenshot
+[00:24:17] this and show you how I would chat with
+[00:24:19] Claude to do this by the way Claude I do
+[00:24:21] prefer because it's coding ability is
+[00:24:23] just a few levels higher so chat gbt
+[00:24:24] runs around the circle sometimes so I if
+[00:24:26] I were trying to solve this problem this
+[00:24:28] is why I wanted this video to be
+[00:24:29] something that you could learn a lot
+[00:24:30] from I going to say hey uh this um I
+[00:24:34] need to in fact I need to rename these
+[00:24:40] MP4s to end in
+[00:24:43] MP4 so that I might transcribe
+[00:24:48] them this is an
+[00:24:52] n10 um I want them to be
+[00:24:59] processed
+[00:25:03] individually call them video1
+[00:25:07] do uh MP4 video 2. MP4 Etc boom so I've
+[00:25:14] just given it something that's like
+[00:25:15] three lines guys three four lines so
+[00:25:17] this will give us some
+[00:25:19] code I written some JavaScript and we'll
+[00:25:21] see if this works uh on the first time
+[00:25:23] if it doesn't we will figure out why not
+[00:25:25] so I copy it and going to come back over
+[00:25:27] then to a beautiful phenomenal scenario
+[00:25:30] I click on code I'm going to all boom
+[00:25:33] and let's just test this
+[00:25:34] up it's executing the
+[00:25:37] nerde cool and look at this guy's file
+[00:25:39] name video1 MP4 video 2. MP4 okay cool
+[00:25:43] you can't pin it annoyingly which is
+[00:25:44] strange but I've come back over and then
+[00:25:46] I attach it to open a transcriber
+[00:25:48] recording let's see if this works so
+[00:25:49] let's just go and pin everything that is
+[00:25:51] pinnable just so we don't have to go
+[00:25:53] through and live live on repeat uh as
+[00:25:56] fun as this journey has been with you
+[00:25:57] and I freaking love it uh you can always
+[00:25:59] go back and check this out but look okay
+[00:26:01] you ready so come I hit play Let's see
+[00:26:03] if it'll work this time have we got
+[00:26:05] something magical before us is it going
+[00:26:07] to work what do you think you back CLA
+[00:26:09] you back CLA as a player let's see what
+[00:26:10] happens so this the fact it's taking a
+[00:26:13] couple of seconds I think is quite
+[00:26:15] positive so if this has work properly we
+[00:26:16] will see all of Ali Abdul's transcripts
+[00:26:19] magically appear for us in the output
+[00:26:20] section which I think is really cool and
+[00:26:22] you social media is such an incredible
+[00:26:24] way to get clients the more guys here
+[00:26:26] you go guys look at this this is every
+[00:26:28] single one of Al those transcript so we
+[00:26:30] just bam got into N1 and what's cool
+[00:26:33] about these techniques guys is these
+[00:26:34] techniques can be applied in many
+[00:26:35] different ways across many different
+[00:26:37] lenses um in N1 which I think is really
+[00:26:39] cool so good little tools for your tool
+[00:26:40] belt there so finally what we want to do
+[00:26:42] is add it to a Word document of course
+[00:26:44] you could add it to an a table I'm going
+[00:26:45] to add it to a word because and
+[00:26:47] obviously we could then give it all to
+[00:26:49] AI to analyze and give the promps but
+[00:26:51] I'm just going to show you this so you
+[00:26:52] have it in a Word document form because
+[00:26:54] maybe you want to share with your team
+[00:26:55] uh either way we could add an AI module
+[00:26:56] or we could do something so what do we
+[00:26:58] do and bar we're still on step three
+[00:27:00] here because once we've gotten the AI
+[00:27:02] data then we can go to step four to
+[00:27:04] analyze it and then finally guys we want
+[00:27:05] to add in Google dogs if you're' not
+[00:27:07] connected with uh Google Cloud that sort
+[00:27:09] of stuff I'll put a link below in the
+[00:27:10] description so you can follow that step
+[00:27:12] by step of how you integrate it but just
+[00:27:13] out of respect for time I won't repeat
+[00:27:15] it in this video I'll also put a little
+[00:27:16] card on screen somewhere so you can grab
+[00:27:17] it type in Google Docs and by the way
+[00:27:20] when you're in this console where you're
+[00:27:22] adding things this is where you add
+[00:27:23] everything by the way in this API the
+[00:27:25] console Cloud Google library like
+[00:27:27] YouTube Google Docs all your permissions
+[00:27:28] it's dead straightforward but again I'll
+[00:27:30] put a link down below for you so you can
+[00:27:31] just crack on with it cool but what we
+[00:27:33] go here guys we want it to create no we
+[00:27:35] don't want it to create actually what is
+[00:27:36] better here have I had to corate a
+[00:27:38] document oh my goodness I did I did the
+[00:27:40] wrong thing right let's come back over
+[00:27:41] Google Document cool I actually wanted
+[00:27:44] to update a document right and I want to
+[00:27:46] go to to create a document that we can
+[00:27:48] use like this called Tik Tok scriper for
+[00:27:50] instance um and then we want to be able
+[00:27:52] to do some cool stuff like this right so
+[00:27:55] how does that work basically we come
+[00:27:57] back over to or nhn scenario uh doc ID
+[00:28:00] or URL we need the ID so how do you find
+[00:28:03] the ID well basically you copy the URL
+[00:28:06] of the Google Doc and you paste it in
+[00:28:09] and the thing you're looking at here is
+[00:28:11] you can see it's D1 you get rid of this
+[00:28:13] bit beforehand and then it's all
+[00:28:16] this up until the slash edit bam okay
+[00:28:21] that's it text is insert action is
+[00:28:23] insert body segment and then you've got
+[00:28:25] the text now I'm just going to give give
+[00:28:26] a tldr guys of what this looks like like
+[00:28:28] just to just to make it super simple for
+[00:28:29] you so I've pasted this stuff in here
+[00:28:31] okay let's have a look and let me just
+[00:28:33] pop this up so what I got here okay now
+[00:28:35] look check this out I got the transcript
+[00:28:37] which is cool Json do and basically what
+[00:28:39] I want to do is just json. text for the
+[00:28:41] transcript that's how that's going to
+[00:28:42] work then we've got video details
+[00:28:44] description uh all this sort of stuff so
+[00:28:46] let's just actually let's just leave
+[00:28:47] that as it is for a moment and we can
+[00:28:48] clean it up in a second right so if I
+[00:28:51] come off this for a moment let me just
+[00:28:53] test the step and delete everything in
+[00:28:54] here okay so I've deleted everything
+[00:28:56] with the scrapers so we know now this is
+[00:28:57] all going to be
+[00:28:58] uh pretty decent so let me just test
+[00:28:59] this step very quickly and explain what
+[00:29:01] all this stuff does reference code items
+[00:29:03] does not exist cool so as you can see
+[00:29:04] here we got the transcripts if I just
+[00:29:06] get rid of this stuff for the moment and
+[00:29:08] test this step and see what that looks
+[00:29:09] like give that a hot moment and see if
+[00:29:12] it brings over then I'm going to want to
+[00:29:13] bring over all the data and the call
+[00:29:14] bits and pieces so it's done five
+[00:29:16] different ads which is cool so let's go
+[00:29:18] over to the uh document and see as you
+[00:29:21] can see it's just batched all the
+[00:29:22] transcripts together cool why is it all
+[00:29:24] in one way it's all in one way because
+[00:29:25] we haven't had added any spaces or
+[00:29:28] information in between it just yet so
+[00:29:29] let's come up here for instance and what
+[00:29:31] we can do guys is we can actually check
+[00:29:33] if we come back over to one of these
+[00:29:35] modules I think it was the get
+[00:29:37] downloadable URL can you see here how
+[00:29:40] we've got all this information right
+[00:29:42] like the text boom that's a downloadable
+[00:29:45] URL great we want that right the created
+[00:29:48] Time Boom I like that um and then
+[00:29:51] statistics so we've got all this cool
+[00:29:53] stuff so if I just copy maybe all the
+[00:29:54] statistics here uh and bring that in and
+[00:29:57] let's see see what this one does just so
+[00:29:58] you can get a sense of what that looks
+[00:29:59] like now again it should just be all a
+[00:30:02] mangled jangled different different
+[00:30:04] thing so come back over and check out
+[00:30:06] what we've got and you can see so it's
+[00:30:08] starting to bring things over okay it's
+[00:30:09] got the ID but it's not bought
+[00:30:11] everything over perfectly just yet so
+[00:30:14] let me come back and delete this stuff
+[00:30:15] so guys what I've done now is just added
+[00:30:17] a bit of detail up the transcript here's
+[00:30:18] a description get downloadable URL
+[00:30:21] statistics get download and you can see
+[00:30:23] I've grabbed and pulled that one over
+[00:30:24] specifically uh this will be in the
+[00:30:26] blueprint when you upload it but
+[00:30:27] basically you can do this and if it
+[00:30:28] doesn't work guys one of the cool things
+[00:30:30] you can do is chat with beautiful clae
+[00:30:32] or chat gbt to make this freaking
+[00:30:33] phenomenal so this should be everything
+[00:30:35] that we need have I deleted everything I
+[00:30:38] have I come back over I test the step
+[00:30:40] and then that should work for us
+[00:30:41] perfectly give that hot second and then
+[00:30:43] we should see the stuff starting to
+[00:30:45] appear and voila we've got all the
+[00:30:46] information we got the transcript with
+[00:30:48] the video details we've got the
+[00:30:49] description we've got everything you
+[00:30:50] could possibly need um ready to rock and
+[00:30:53] R so that is the end of step three step
+[00:30:55] four is the point now where we use this
+[00:30:57] information with a language model to
+[00:30:58] improve our own content and to do that
+[00:31:00] i' recommend using a prompt something
+[00:31:01] like this okay so analyze the tict data
+[00:31:03] provided obviously in this case you're
+[00:31:04] can to have 2034 generate a concise list
+[00:31:06] of video ideas and content themes
+[00:31:08] organized with bullets emergis based on
+[00:31:09] what's working focus on identifying
+[00:31:11] content blah blah blah then we say uh
+[00:31:14] competitor
+[00:31:17] oops analisis there we go beautiful so
+[00:31:21] then we go over to our document and
+[00:31:22] let's just copy everything come back
+[00:31:24] over enter and see what it comes back
+[00:31:26] with obviously you're going to finesse
+[00:31:28] this out a little bit and play around
+[00:31:28] with it and I've got some full prompts
+[00:31:30] that go into way more detail I just want
+[00:31:31] to show you something quick on the hand
+[00:31:33] here so so you can get an idea so look
+[00:31:34] you can see productivity hats type of
+[00:31:36] video has 1.1 the highest Financial
+[00:31:37] advice video ideas and basically guys
+[00:31:40] the AI will then take this and create
+[00:31:41] something unique how you take this to
+[00:31:43] another level by the way is you're going
+[00:31:44] to give it information about your
+[00:31:45] business you're going to give it
+[00:31:46] information about the types of content
+[00:31:48] that you make your avatar who you focus
+[00:31:49] on we have so many blueprints in the
+[00:31:50] community for this there's one on the
+[00:31:52] blue making your YouTube channel
+[00:31:53] Unstoppable here in your um your YouTube
+[00:31:55] blueprint prompt I'd recommend using
+[00:31:57] this one guys it basic says hey this is
+[00:31:58] the overview here's my information my
+[00:32:00] channel my Target demographic my Niche
+[00:32:02] uh and you can basically transpose this
+[00:32:03] and these are good examples of videos
+[00:32:05] that crush the titles thumnails that
+[00:32:06] sort of stuff and then we can use that
+[00:32:08] to create incredible content ideas based
+[00:32:10] on the content that's actually
+[00:32:11] performing and you can do that every
+[00:32:12] Sunday meaning that you have a full
+[00:32:14] calendar of items that you can make
+[00:32:16] content on that you know will do well
+[00:32:17] and step five of the process is actually
+[00:32:19] improving the content improving on
+[00:32:21] social media is a thousand micro
+[00:32:23] decisions and not more micro decisions
+[00:32:24] if you commit to getting better every
+[00:32:26] single week you will start to enjoy
+[00:32:28] those compounding effects over time
+[00:32:30] using this AI is incredible it gives you
+[00:32:32] such data and the fact that we can scrp
+[00:32:34] this stuff now from all these scenarios
+[00:32:36] at the click of a finger and get all
+[00:32:37] this things of every competitor every
+[00:32:40] every video in the niche is unbelievable
+[00:32:41] but it's only as good as your ability to
+[00:32:44] implement it so with that in mind you
+[00:32:46] got to take on one new thing every week
+[00:32:47] and try your best to improve on the
+[00:32:49] content check out your comments your
+[00:32:50] video ideas and combine all this
+[00:32:52] together for something that truly
+[00:32:54] crushes it and the technolog is one
+[00:32:56] thing but if you don't know how to build
+[00:32:57] funnels that sell you're really going to
+[00:32:59] trip up as you grow so check out this
+[00:33:01] video on screen right now where Alex OSI
+[00:33:03] basically sat down and he roasted my
+[00:33:04] entire YouTube thumel for a full hour I
+[00:33:07] think you'll really enjoy it

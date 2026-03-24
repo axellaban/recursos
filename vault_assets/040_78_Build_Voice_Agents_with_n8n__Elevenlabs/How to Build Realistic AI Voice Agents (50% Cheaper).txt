@@ -1,0 +1,1269 @@
+[00:00:00] buil incredibly powerful AI voice agents
+[00:00:02] using 810 and 11 Labs hey there I'm JD
+[00:00:06] fit the friendly voice assistant for JD
+[00:00:08] gyms we have a fantastic offer for
+[00:00:10] firsttime members just10 for your first
+[00:00:13] month you'll get access to all our
+[00:00:15] awesome classes 24/7 access to the gym
+[00:00:18] and no contract these AI boys agents are
+[00:00:22] low cost they are zero latency and the
+[00:00:24] cool thing is we can embed them into any
+[00:00:27] AI web application you could possibly
+[00:00:29] imagine any website so we have this
+[00:00:31] beautiful widget on the bottom right
+[00:00:32] hand corner meaning that basically at
+[00:00:34] any website individuals can chat to a
+[00:00:36] voice agent and in this video I'm going
+[00:00:38] show you exactly how you build these AI
+[00:00:40] voice agents with a 11 lasts the cost
+[00:00:42] has never been lower I'll show you how
+[00:00:43] you connect it together and then we're
+[00:00:45] also going to do isue a real life
+[00:00:47] business case story of how we could
+[00:00:48] build this together there something that
+[00:00:50] you could do to S CES or how you build
+[00:00:52] your own AI web app so that sounds
+[00:00:54] interesting grab that coffee andless
+[00:00:57] stated it i' to show you how this works
+[00:00:58] I'm going to grab the star of my school
+[00:00:59] Comm and now we're going to build
+[00:01:01] together step by step so to do that I'm
+[00:01:02] just going to head over to the classroom
+[00:01:05] we're going to head over to AI
+[00:01:06] automations over here very simply it
+[00:01:09] says 78 build voice agents with A10 and
+[00:01:12] all we do guys we come down and we
+[00:01:13] download this upload me to A10 Thing by
+[00:01:15] clicking this button right here in the
+[00:01:16] middle then we head over to edit end.com
+[00:01:18] but click these three beautiful little
+[00:01:19] buttons you click on input from file and
+[00:01:21] the entire snar will ppet for you
+[00:01:23] automatically and then we'll just give
+[00:01:24] this one a name right here cool so how's
+[00:01:26] this going to work I'll show you briefly
+[00:01:27] that kind of full process so we using
+[00:01:29] using 11 Labs as the voice AI agent now
+[00:01:33] that voice AI agent I think of it is a
+[00:01:35] hierarchy Li a tip we have a Lael here
+[00:01:38] which is basically I'll show you in a
+[00:01:39] moment right now where is he he's here
+[00:01:42] this is our agent this is who we're
+[00:01:44] giving proms to this is basically how we
+[00:01:46] power and supercharge The Voice
+[00:01:47] functionality and then what we're doing
+[00:01:49] go is giving him a tool and one of his
+[00:01:51] tools is the ability to call an8 AD now
+[00:01:54] in n8n basically this is one of the sub
+[00:01:57] agent so think of it hierarchy l manip
+[00:02:00] this guy works in the manip and this guy
+[00:02:02] can do three things he can check calar
+[00:02:04] appointment he can create calar
+[00:02:05] appointments and he can also send emails
+[00:02:08] and obviously we can bug these
+[00:02:09] functionality to do anything you could
+[00:02:11] possibly imagine like Rag and database
+[00:02:13] and Les all cool stuff so how does this
+[00:02:15] work we start comment section and we're
+[00:02:17] going to ask him to check if Jack
+[00:02:18] Roberts is available for a chat later
+[00:02:20] today so how does this work I'll show
+[00:02:21] you in app and then later in the video
+[00:02:23] and we show you how to integrate this
+[00:02:25] into everything so let's start the call
+[00:02:26] and see how the chat goes hey there how
+[00:02:28] can I help how's it going man I'd like
+[00:02:30] to sh with Jack does he offer 30 minute
+[00:02:34] conversations hey there Jack only offers
+[00:02:37] 15minute Discovery calls but they're
+[00:02:39] free would you like to schedule one with
+[00:02:41] him yeah what do could you just check is
+[00:02:44] Jack available at 100 p.m.
+[00:02:47] tomoro sure thing let me check Jack's
+[00:02:50] calendar okay to check availability I
+[00:02:52] need your email address what's your
+[00:02:53] email
+[00:02:55] ben.com
+[00:02:57] okay so that's bn7 at o u l k. M that's
+[00:03:05] right okay Jack is available at 1:00
+[00:03:08] p.m. tomorrow would you like to book
+[00:03:10] that time sounds cool manate thank you
+[00:03:13] and so guys basically what happens is
+[00:03:15] you convers with this agent he'll check
+[00:03:17] the calendar he'll crate emails to do
+[00:03:18] everything for you and then calendarize
+[00:03:20] it which is flip at now one things I
+[00:03:23] just call out with this is essentially
+[00:03:25] the cost the what is the cost it works
+[00:03:27] out if you're on the quota plan like I
+[00:03:29] have which is 22 bucks a month you get
+[00:03:31] 250 minutes for free then after that
+[00:03:34] it's
+[00:03:35] $720 per hour which compared to what you
+[00:03:38] pay like a customer service advisor is
+[00:03:40] extremely low so we're going to do three
+[00:03:42] things first one is we going to build
+[00:03:43] the AI agent in 11 Labs then we're going
+[00:03:45] to head over to edad and build that
+[00:03:47] section of it after stall and then
+[00:03:48] thirdly we're going to use this as a
+[00:03:49] real life production use case example
+[00:03:51] where we can have information about
+[00:03:53] anything for instance if I come back
+[00:03:55] over here I actually gave it information
+[00:03:56] about my school group so check this out
+[00:03:58] right they live pull up right now hey
+[00:04:00] there how can I help Hey there bro dude
+[00:04:01] what can you tell me about Jack's school
+[00:04:05] Community hey there I'm happppy to H
+[00:04:08] Jack is passionate about helping people
+[00:04:10] automate their businesses he's got a
+[00:04:12] great community of entrepreneurs who are
+[00:04:14] always learning and growing together is
+[00:04:17] there anything specific you'd like to
+[00:04:19] know about the community yeah what what
+[00:04:21] what else could you tell me about
+[00:04:23] it the community is really active and
+[00:04:26] supportive people share their
+[00:04:28] experiences ask questions and help each
+[00:04:30] other out Jack also hosts regular events
+[00:04:33] and workshops to help members learn new
+[00:04:35] skills and grow their businesses okay
+[00:04:37] that's corol right how does it know that
+[00:04:39] it knows that because of this so if I go
+[00:04:41] back to the agent guys when we build and
+[00:04:42] construct this we can actually give it
+[00:04:44] URLs so understands all the information
+[00:04:47] builds its own datab so let's start at
+[00:04:49] the beginning now and create a brand new
+[00:04:51] agent you're going to head over to
+[00:04:52] levels. I'm going to put a link down
+[00:04:54] down below so you can push the button
+[00:04:56] and head over so you learn the level ABS
+[00:04:58] guys I wait to click on agents on the
+[00:04:59] left hand side and we click on this plus
+[00:05:01] button to crit an AI agent we'll call
+[00:05:04] this one uh let's call this one not M
+[00:05:05] Tyson we'll call
+[00:05:07] him uh Jack helper okay that's pretty
+[00:05:10] cool and you know we got be different
+[00:05:12] templates you can use video game
+[00:05:14] characters really cool so if you're
+[00:05:15] building video game like the application
+[00:05:17] anything you could possibly imagine to
+[00:05:19] have an interface with is pretty
+[00:05:20] cool so click on Jack help her click on
+[00:05:22] create a template so we click on blank
+[00:05:24] template and then create agent like
+[00:05:27] so I i' I've spent some time around with
+[00:05:30] these agents and there's a lot of little
+[00:05:31] nooks and cres that I picked up that I
+[00:05:32] think are going to be really viable for
+[00:05:34] just to kind of cut through and get you
+[00:05:35] to the bottom line so iow TR to be
+[00:05:38] English uh we don't be any langes yet
+[00:05:40] first message is
+[00:05:43] hey how can I help my man how can I help
+[00:05:47] my man cool system prompt you are Happ
+[00:05:50] so here's a couple of best practices
+[00:05:52] when you when you basically prompting
+[00:05:54] airb agents less is more like the longer
+[00:05:58] the prompt is sometimes it's like it's
+[00:05:59] it's going back and forth trying to
+[00:06:00] figure out what the hell is going on and
+[00:06:02] it makes it more difficult I'll show you
+[00:06:04] the pr that I gave my last one just as a
+[00:06:05] quick for instance okay so I'm just
+[00:06:07] going to duplicate this tab so I don't
+[00:06:09] uh lose
+[00:06:10] progress okay come down here let me show
+[00:06:12] the promp I had here okay so you're
+[00:06:14] going to give it a promp like this you
+[00:06:15] are a friendly AI voice assistant for
+[00:06:18] Jack Roberts's business your job is to
+[00:06:20] answer questions and Bug 15minute
+[00:06:22] Discovery course great customers wly
+[00:06:24] offer for calls uh when appropriate when
+[00:06:26] booking collect name email and prefer
+[00:06:28] time verifiable details I confirm B
+[00:06:30] clearly using the calendar tool now
+[00:06:33] whatever you want to call it put it like
+[00:06:34] a bracket set which identifies checkbook
+[00:06:36] email to minus Jack's calar behind
+[00:06:38] scenes keep all cool tool Communications
+[00:06:40] internal maintain a conversational tone
+[00:06:42] blah blah blah when using the calar tool
+[00:06:44] to check you know you can call this tool
+[00:06:47] to check book um to just check just book
+[00:06:50] or just email or any combination of
+[00:06:52] those three you do not need to have the
+[00:06:54] customer's email check times confirm
+[00:06:56] emails phonetically that was something I
+[00:06:58] found if if a customer gives email it
+[00:06:59] could be like hey my name is jacket
+[00:07:01] ja.com and it spells incorrectly when it
+[00:07:03] creates the Cal invite it basically
+[00:07:06] won't go through so I found that by
+[00:07:08] having it spell it back out phonetically
+[00:07:10] makes more a difference so you get a
+[00:07:12] problem that you want again I I'd
+[00:07:13] encourage you to be on the shorter side
+[00:07:14] of these things guys ra them the loger
+[00:07:17] okay cool so we' got the Jack helper
+[00:07:19] agent and we've been that PRP it awesome
+[00:07:22] Dynamic variables don't worry about that
+[00:07:23] now here's the thing about LS you're
+[00:07:25] basically going to hear decide the brain
+[00:07:28] of your AI voice agent now I'm going to
+[00:07:30] tell you this right now there are there
+[00:07:31] are trade-offs Gemini 1.5 flash is the
+[00:07:35] fastest so when we when we talk about a
+[00:07:36] voice agents the key thing is latency in
+[00:07:40] other words what's how long does it take
+[00:07:41] from me finishing speaking to it respond
+[00:07:44] me and low latency be lat seem like a
+[00:07:47] big thing but it's really long it's a
+[00:07:48] real pain on the backside so but here's
+[00:07:51] the other thing some that there is the
+[00:07:52] fastest model which if it's just
+[00:07:54] conversation that's fine however if
+[00:07:56] you're using tools you may want to use
+[00:07:59] GB 4 Turbo or maybe cl. 5 son and B2 so
+[00:08:03] I would say start with flash to see does
+[00:08:06] it work and call the tools if it's
+[00:08:07] conversational I would always use
+[00:08:09] fastest anyway but if it's using tools
+[00:08:11] it may like um fail because not all
+[00:08:14] these models are customed to trade use
+[00:08:16] the tools as well as others so that's
+[00:08:17] just a tradeoff you've got you've got to
+[00:08:19] to use this is speed that that's the
+[00:08:21] kind of Paradigm you got in moments so I
+[00:08:23] do flash just get started but I just
+[00:08:25] wanted to about that mind then we can
+[00:08:26] move things like temperature uh token
+[00:08:28] usage uh we can use a rag and I'm going
+[00:08:31] to use a rag here as well just to show
+[00:08:32] you so I'm going to click on Rag and
+[00:08:33] click on ADD document and what I'm to do
+[00:08:35] here guys is you can see up obviously in
+[00:08:38] NN and I've done videos on it in the
+[00:08:40] past you know we can use retrieval
+[00:08:43] augment generation fans where of saying
+[00:08:44] huge dat based Slots of information to
+[00:08:46] power either in N itself okay i' like a
+[00:08:49] rag database but I'm going to show you
+[00:08:51] this as a use case for a business and
+[00:08:53] I'm going to keep it very flipp and
+[00:08:54] simple to get you started and you can
+[00:08:56] make it more complicated after the fact
+[00:08:57] okay so if I say I want to add a
+[00:08:59] document okay I can create document cool
+[00:09:02] thing about this I can choose file URL
+[00:09:04] or just add text myself if I say URL I
+[00:09:07] can go over to my school Community for
+[00:09:09] example like this and I can just copy it
+[00:09:11] I can come back over to the agent and
+[00:09:14] basically realize what I can do is just
+[00:09:16] type the URL in right there and then
+[00:09:18] click on create document and what that
+[00:09:19] will do is create a document from that
+[00:09:21] URL so if you're trying to create this
+[00:09:23] is a kind of use case for business it's
+[00:09:25] a very Lether way of say called I'll get
+[00:09:27] the homepage I'll get their about page I
+[00:09:29] get this page that page and then I'll
+[00:09:31] just throw all in there together it's
+[00:09:32] meaning that it knows a lot about the
+[00:09:35] business and everything on that page and
+[00:09:37] it will understand that we give it to it
+[00:09:38] and it's using R which means it won't be
+[00:09:40] too much of a delay what it CS it so
+[00:09:42] very cheeky very cool and that's why the
+[00:09:44] lesson questions about it then guys I'm
+[00:09:46] come over to the tool section now the
+[00:09:47] tool section remember that structure
+[00:09:49] talked about this in this scenario a
+[00:09:51] voice agent is the master agent and we
+[00:09:53] give it several tools that we can plun
+[00:09:55] underneath it one of those tools is as
+[00:09:57] we developed here a calendar AG or this
+[00:10:00] calendar topic can be three things in
+[00:10:01] theory we could have one that does
+[00:10:03] research we could have one that
+[00:10:04] calendarize appointments one that does
+[00:10:05] emails one that kind of speaks to the pp
+[00:10:08] any kind of possible use case you could
+[00:10:09] possibly you only imagine we can do that
+[00:10:12] now what you going to do is you to add
+[00:10:13] tool click on Custom Tool and we we're
+[00:10:17] going to call this one Cal tool a second
+[00:10:21] calend tool and then give it description
+[00:10:23] now description has posted over so hey
+[00:10:24] use this tool to check Jack's caliber
+[00:10:27] and book an appointment send the message
+[00:10:29] to get this agent asking it what you
+[00:10:30] like it to do be specific it will return
+[00:10:33] information and Confirmation and what
+[00:10:35] we're going to do guys is we got two
+[00:10:36] methods here what that really kind of
+[00:10:38] interested which is get and to post and
+[00:10:40] really quick distinction of get and post
+[00:10:41] as I understand it post enables us to
+[00:10:44] attach information in a body so it's
+[00:10:46] better if you're sending larger data get
+[00:10:49] I I believe send it in the URL so you're
+[00:10:51] limited by the character amount in the
+[00:10:53] actual Ur itself and also it's visible
+[00:10:55] with the information so post is going to
+[00:10:57] be handy cuz it means that we can send
+[00:10:58] information
+[00:10:59] in the body with this request and then
+[00:11:02] it's going to ask us for a URL and this
+[00:11:03] is the very first part where we head
+[00:11:05] over to the beautiful n8n and also say
+[00:11:08] guys you can build this make if you like
+[00:11:10] to um it's just slightly more difficult
+[00:11:12] but not more difficult but it requires
+[00:11:14] slightly more steps so go I first step
+[00:11:16] I'm going to type on AI I type in web
+[00:11:20] hook okay here we go beautiful HTTP
+[00:11:24] method so this is just said hey what is
+[00:11:25] the method by which Informer will arrive
+[00:11:28] it's post okay
+[00:11:29] beautiful I know we've got the S open
+[00:11:31] you see it's got this massive gobble
+[00:11:33] good we could just say something like
+[00:11:35] Jack right and just simplifies it down a
+[00:11:37] little bit and we can copy it and we got
+[00:11:39] production test URL back and forth uh
+[00:11:41] stand the best practices until it's live
+[00:11:43] you test URL and then production
+[00:11:45] finished we simply click on it and it's
+[00:11:47] start and we can get a list for a test
+[00:11:48] if we want to so we come back over to
+[00:11:51] our agent here and then we enter in the
+[00:11:53] URL right there you see beautiful now
+[00:11:55] what do we do we've got headers we've
+[00:11:57] got query parameters and body parameters
+[00:11:59] I just scroll down here guys to body
+[00:12:01] parameters and click on enable I'm going
+[00:12:03] to give it a description which is going
+[00:12:04] to be to understand from the user what
+[00:12:06] they would like to Buck a 15minute
+[00:12:07] discovery appointment if they were to
+[00:12:09] grab their email address so we can send
+[00:12:11] confirmation of the appointment after we
+[00:12:12] find up a that works so stop by a
+[00:12:14] properties first one is going to be Jack
+[00:12:17] and the description will be find out if
+[00:12:19] Jack is available at that time so it
+[00:12:20] will far off that's all to find out if
+[00:12:22] Jack's going to be available in case me
+[00:12:24] then got add a new property this one is
+[00:12:26] going to be two and this one's going to
+[00:12:27] be who to send the confirmation email
+[00:12:29] too cool and then we add new property
+[00:12:30] obviously guys just kind of configure
+[00:12:32] this however you'd like to do based on
+[00:12:33] your particular use case and then this
+[00:12:35] one we can do book and then of course
+[00:12:37] will have book an appointment in Jack's
+[00:12:39] calendar beautiful and add our further
+[00:12:41] property scroll down and we call us for
+[00:12:43] email contact and description is what
+[00:12:45] the email is about they would quite
+[00:12:47] simply guys at all and and you can see
+[00:12:49] it's giv us a littleit Waring about the
+[00:12:50] model we using but we'll come back to
+[00:12:52] that in a second then we just click on
+[00:12:53] Save on the bottom right corner for
+[00:12:55] example beautiful then we got the voice
+[00:12:57] so we could pick the voice could be
+[00:12:58] yours could be anybody let's just have a
+[00:13:00] good look at a run one here by Brian
+[00:13:01] always happens that you really believe
+[00:13:03] in and the belief in a thing solve I'm
+[00:13:06] Sol that's cool we've got those
+[00:13:07] different bits we can look at here at
+[00:13:09] different settings play around with it
+[00:13:10] one of the things that I would say guys
+[00:13:12] with any voice agent is that the hard
+[00:13:14] work is actually once it's been created
+[00:13:16] testing it having conversations with it
+[00:13:19] it's never going to work the way that
+[00:13:20] you are't be completely 100% I've always
+[00:13:22] been so transp of the you're not going
+[00:13:24] to see some random prompt and then it's
+[00:13:25] going to be Flawless it doesn't exist we
+[00:13:27] don't live in that world today day but
+[00:13:29] because that's not the thing I believe
+[00:13:31] that's that's why it's an opportunity
+[00:13:33] because what will happen is you Le it
+[00:13:34] I've been it all Zig when it should
+[00:13:35] desire he said Okay cool so we need to
+[00:13:37] reward the pr so you are essentially
+[00:13:39] becoming like an artist with the way
+[00:13:41] that you create a upon these things so
+[00:13:43] don't expect it to be perfect the second
+[00:13:45] you create it you will need to come back
+[00:13:46] and play around Pro a little bit play
+[00:13:48] around with the models until it
+[00:13:50] functions in the way you desire doesn't
+[00:13:52] mean you've done anything wrong it just
+[00:13:53] means that these voice agents you know
+[00:13:55] they can be a bit crazy some sometimes
+[00:13:57] and that's how you kind of cor them it
+[00:13:58] and that's why it's a skill that you're
+[00:14:00] learning and it's really cool cool so
+[00:14:01] we've got analysis evaluation criteria
+[00:14:03] de to collect this is stuff like um from
+[00:14:05] the conversation do order to pull it
+[00:14:06] back one of the things it will do is
+[00:14:08] save the call history which I think is
+[00:14:09] really freaking cool we got L seconds of
+[00:14:11] security and actually guys in this here
+[00:14:13] we can basically specify the maximum de
+[00:14:16] the core limit which is really important
+[00:14:18] um and we've got different ERS can which
+[00:14:20] is Ace i' to Advan here I think there's
+[00:14:22] a CO setting here turn time Outlet the
+[00:14:24] maximum number of seconds since the use
+[00:14:26] a last spoke if exceeded the agent will
+[00:14:28] respond and force a turn in other words
+[00:14:31] if they're just hanging up like this and
+[00:14:32] they're just doing nothing burning our
+[00:14:34] credits so what this guy sing is like he
+[00:14:36] doesn't stop us spiling say hey do you
+[00:14:37] don't he from me the's going on let talk
+[00:14:39] to me and if not he'll put the phone
+[00:14:41] down and then also we can set the
+[00:14:43] maximum length of a conversation which
+[00:14:45] is these are just features to keep your
+[00:14:46] cost out and to prevent abuse which is
+[00:14:49] really cool cool so window do is come
+[00:14:51] out we are going to save the whole thing
+[00:14:52] which is cool obiously you can start
+[00:14:54] audio here delete audio all those kind
+[00:14:55] of things also this right here says how
+[00:14:57] long do you want to keep the audio safe
+[00:14:58] for for so in your privacy polic on the
+[00:15:00] website you can say hey we saw
+[00:15:02] conversations for in certain number of
+[00:15:03] days so all that stuff is beautifully
+[00:15:05] configurable that so what we're going to
+[00:15:06] do guys is test the agent by clicking
+[00:15:08] speedle button now the first thing we
+[00:15:10] can do okay is check that the data from
+[00:15:13] our 11 Labs AI agent will make its way
+[00:15:16] into na1 I will'll call this one build
+[00:15:20] uh together AI agent okay cool and it's
+[00:15:24] boys should we get it like a speech
+[00:15:26] bubble right I like that
+[00:15:29] sweet okay cool says come over Let's
+[00:15:31] test listen for the test event and then
+[00:15:33] come back over to LBS and I think this
+[00:15:36] is our guy isn't it where a second I got
+[00:15:37] so many Ty crazy all right jack helper
+[00:15:39] let's chat to
+[00:15:40] it hey how can I help my man hey brosi
+[00:15:43] uh I want to check if Jack is available
+[00:15:45] tomorrow at 9900 p.m.
+[00:15:48] dude hey no problem I can check Jack's
+[00:15:51] calendar for you tomorrow at 9:00 p.m.
+[00:15:53] you said that's right
+[00:15:56] man okay just confirming you want to
+[00:15:59] check if Jack is available tomorrow at
+[00:16:00] 9:00 p.m. is that correct yes bro that's
+[00:16:02] exactly
+[00:16:04] right okay let me check okay so I need
+[00:16:07] your email address to check Jack's
+[00:16:09] calendar what is your email bad7
+[00:16:18] outlook.com okay so that's bn7 at o
+[00:16:22] ok. let me check Jack's calendar okay it
+[00:16:25] looks like Jack is available tomorrow at
+[00:16:27] 900 p.m. would you like to to book a
+[00:16:29] call with
+[00:16:30] him okay guys so what's happened is
+[00:16:32] nothing has come through so could it be
+[00:16:34] the case that our guy is hallucinating
+[00:16:36] guys one of thing I'm going to do is
+[00:16:37] play around with the l l so we've got
+[00:16:38] 1.5 flasher if we go for something along
+[00:16:40] the lines of G GT4 turbo click on
+[00:16:44] Save and you'll see the difference now
+[00:16:46] with this and okay so I look test AI
+[00:16:49] agent Okay cool so let's go to our
+[00:16:51] scenario right here beautiful okay it's
+[00:16:53] listening let's just uh relisten the
+[00:16:55] workbook come over and let some chat
+[00:16:57] with him hey how can I help my man hey
+[00:16:59] dude I'd like to book a 15-minute call
+[00:17:01] in with
+[00:17:03] Jack I'd be happy to help you book a
+[00:17:06] 15minute discovery call with Jack to get
+[00:17:08] that schedule I'll need a few details
+[00:17:10] from you one what's your name two what's
+[00:17:13] your email address three do you have a
+[00:17:16] preferred date and time for the call yes
+[00:17:18] I have this information I can check
+[00:17:20] Jack's availability and get that call
+[00:17:22] booked for you yeah sure dude so my name
+[00:17:24] is bad my email address is ben7 atl.com
+[00:17:27] and I would like to call Jack on
+[00:17:29] Thursday the 6th of March at 2: p.m. UK
+[00:17:33] time
+[00:17:35] please thanks for the details Ben I
+[00:17:38] noticed your email address might have
+[00:17:39] bit tighted differently than intended
+[00:17:42] did you mean benow look.com rather than
+[00:17:44] ben7 outlook.com yeah to make sure we
+[00:17:47] get the so it's it's bet
+[00:17:49] bn7
+[00:17:55] outlook.com got it Ben let me check
+[00:17:58] Jack's availability for Thursday March
+[00:18:00] 6th at 2. beautiful okay great I'm going
+[00:18:03] at this guys then we've got all of the
+[00:18:04] information Okay so we've got Thursday 6
+[00:18:07] March at 2 p.m. time guys and actually
+[00:18:09] one of the things that I think I'm
+[00:18:10] realizing with this might be a slightly
+[00:18:12] better way to do this if I come back
+[00:18:14] over to the agent and I just want to
+[00:18:16] test us with the lab of the core I think
+[00:18:18] because of the way we set the body is
+[00:18:20] that we are requiring it to send over
+[00:18:23] all of the information at the same time
+[00:18:25] so for example if I actually delete
+[00:18:28] these three because it needs the way
+[00:18:31] we've configured this for this
+[00:18:33] particular scenario is that we're asking
+[00:18:34] it to give us who you sending to what's
+[00:18:37] this what's this what's this in
+[00:18:38] actuality what we wanted to do is what
+[00:18:39] if we said instead of fire we said
+[00:18:41] action and then we said hey um you can
+[00:18:45] do three
+[00:18:47] things three things here
+[00:18:53] okay one is to
+[00:18:56] check Jack's calend
+[00:19:01] for uh
+[00:19:03] availability oh my goodness what's I
+[00:19:05] need more C this is crazy check death
+[00:19:07] Cal for avilability two would be to
+[00:19:10] let's just say book
+[00:19:14] appointments and three would be send
+[00:19:16] confirmation
+[00:19:20] emils you can do as many of
+[00:19:24] these at the same time
+[00:19:31] as you like cool beautiful right so
+[00:19:33] let's actually just give this one a
+[00:19:34] little try and click on Save changes and
+[00:19:36] see if that changes the experience we're
+[00:19:37] talking to so come down click save I
+[00:19:40] think it's good to specify okay let's
+[00:19:42] say that it's an email agent okay and
+[00:19:44] it's early jobs to send emails we would
+[00:19:45] hard code in for example this is who
+[00:19:47] you're sending it to this is what you're
+[00:19:49] saying so it's easier that way I think
+[00:19:51] with this kind of scenario since it's a
+[00:19:53] bit more Dynamic we're giving it a
+[00:19:54] little bit more leeway so let's put that
+[00:19:55] into production and then we can bu the
+[00:19:57] SAR together so you cont test agent one
+[00:19:59] more time click call call the agent hey
+[00:20:02] how can I KN my man hey brosi uh I just
+[00:20:04] want to check dude is uh Jack available
+[00:20:07] for call on Wednesday the 6th of March
+[00:20:09] at 2 p.m. UK
+[00:20:13] time let me check Jack's availability
+[00:20:16] for you I'll look at his calendar for
+[00:20:18] Wednesday March 6th at 2 p.m. UK time
+[00:20:20] I've just checked Jack's okay bro so do
+[00:20:23] you see this now like it in this instant
+[00:20:26] this instance it didn't actually then
+[00:20:27] have to require the emot and who a two
+[00:20:29] all this sort of stuff so when you
+[00:20:31] specify the things out the body
+[00:20:32] basically what this is say is I need all
+[00:20:34] these five things for I can continue so
+[00:20:36] think of it as a checklist that the
+[00:20:38] agent needs to solve before it sends off
+[00:20:40] to the sub agent what I've done here
+[00:20:42] which I think is a better way of doing
+[00:20:44] it if you do want f dnamic is that you
+[00:20:46] actually say look this is the tool This
+[00:20:48] Is The Stuff the tool can do just ask it
+[00:20:51] to do one but and now we'll have this
+[00:20:52] more iterative you know basically coming
+[00:20:54] back and forth of the agent which I
+[00:20:56] think is a cooler way alternatively if
+[00:20:58] he if the agent job is only one thing in
+[00:21:00] other words create an appointment or
+[00:21:01] send an email we hard code this is this
+[00:21:04] this is and this hopefully that come
+[00:21:05] makes good sense cool so what's the good
+[00:21:07] news the good news is that you can help
+[00:21:09] build a voice agent and you've got the
+[00:21:11] information into na10 and always say and
+[00:21:13] get it into n10 or make you can
+[00:21:15] effectively do anything that you like
+[00:21:17] cool so we've got the web hook what's
+[00:21:18] the first we want to do well we want to
+[00:21:19] kind of throw in an AI agent right to S
+[00:21:22] this beautiful guy and now what's the
+[00:21:24] first thing we want to do this is the
+[00:21:26] tools agent in other words it's an agent
+[00:21:28] whose purpose is to have several tools
+[00:21:29] that plug into it so you can see this uh
+[00:21:32] almost hierarchy bed right the master
+[00:21:34] agent has several sub agents and the sub
+[00:21:36] agent has several tools that pin into it
+[00:21:39] and the more complex use case more
+[00:21:41] complex you can get but think of like a
+[00:21:42] management structure in organization
+[00:21:45] which is why by the way there's all this
+[00:21:46] conversation about it'll be the first
+[00:21:47] Trend our company so one of the things
+[00:21:49] we do when we create any module make is
+[00:21:51] we def excuse me an na1 is we Define
+[00:21:53] where the information come from I'm
+[00:21:55] going to say look we're going to do two
+[00:21:57] things here we're going to say hey this
+[00:21:58] is is the taxi you get in scenario and
+[00:22:00] then we're going to give it a system PL
+[00:22:02] system instructions the only thing I
+[00:22:04] care about the only thing I care about
+[00:22:06] is the body I just grab the body and I
+[00:22:09] bring it oh my gosh I think I miss CLI
+[00:22:11] that bring the body over that's it
+[00:22:12] that's the only I care about now what we
+[00:22:14] going to do guys is CLI add option click
+[00:22:16] I want to click on system message and we
+[00:22:18] going to give it a prpt just that
+[00:22:19] respect for your time guys I'm just
+[00:22:21] going to grab the pr that I used
+[00:22:22] previously again all this is available
+[00:22:24] in the community of the blueprints if
+[00:22:26] you want to grab that and know basically
+[00:22:27] the T it is hey this is what the date is
+[00:22:30] so it knows you have to give it the date
+[00:22:32] if not these these models think it's
+[00:22:34] like March 23 or something crazy so EV
+[00:22:37] hey what you are which is an AI Cal
+[00:22:39] management system ID process request on
+[00:22:41] The Voice
+[00:22:42] agent um cilities um basically check for
+[00:22:46] availability you can bug point you can
+[00:22:48] send confirmation things when you
+[00:22:49] process requests to this this is what
+[00:22:51] happens when this bucking requests
+[00:22:53] happen and this is what happen so
+[00:22:54] essentially what we're kind of doing
+[00:22:55] here guys is we are saying for every one
+[00:22:59] of the things that you can do for each
+[00:23:00] tool this is what the tool does and this
+[00:23:02] is how I want you to use it again you
+[00:23:04] want to be more on the slight of brevity
+[00:23:05] than extreme leg if you can but that's a
+[00:23:08] basic to the problem of bit a classic PR
+[00:23:10] technique is telling what good about
+[00:23:11] looks like so we'll give a chat model in
+[00:23:13] other words the bra uh just forli sake
+[00:23:15] we're going to give him an open ey bra
+[00:23:16] keep for minut is fine if you haven't
+[00:23:18] connected that by the way uh the way
+[00:23:20] that you do that of course is to head
+[00:23:22] over to at platform oh my goodness oh
+[00:23:26] Play No platform. open.com and you can
+[00:23:28] AK Keys guys you create your secret key
+[00:23:30] you come over to your edit Zar and you
+[00:23:32] plug in and taing cool so we've got this
+[00:23:34] guy at M don't worry about the tools so
+[00:23:37] the first we need the first two we need
+[00:23:38] is Gmail right so Gmail consumer Gmail
+[00:23:40] API if you're not familiar with how to
+[00:23:42] connect Google to editab I'll put a link
+[00:23:44] on the video to my first AI agent video
+[00:23:46] so you can follow that step by step and
+[00:23:48] grab it I'll also time side the boys and
+[00:23:49] go exactly to that section course we got
+[00:23:52] to account now what want we wanted to
+[00:23:54] send a message who we sending a message
+[00:23:55] to you going to click on this let the
+[00:23:57] model Define us parameter this beautiful
+[00:23:59] purple button actually it could be more
+[00:24:01] beautiful if when I hover over at the
+[00:24:02] gray turns to White for contrast but I'm
+[00:24:04] not going to nitpick so essentially what
+[00:24:07] we're saying is like this who we're
+[00:24:08] sending it to we're letting our agents
+[00:24:10] decide okay the subject will let the
+[00:24:13] agent decide the email type is HTML and
+[00:24:15] the message but the agent deide what
+[00:24:17] does that mean it means it's just we
+[00:24:18] don't have to F lots of code and stuff
+[00:24:19] it's just really simple now the options
+[00:24:21] always to come down always to click on
+[00:24:23] apparent edit and attribution this is
+[00:24:25] just a personal preference um I don't
+[00:24:28] like when it says this is from Ed so
+[00:24:30] what I'd like to do is just remove that
+[00:24:32] uh just so it looks less crisp and clean
+[00:24:34] one of the things you can do if you want
+[00:24:35] to take this to aad by the way a specify
+[00:24:36] h2l template there's loads of really
+[00:24:38] cool stuff that you can do cool now it's
+[00:24:40] done what do we do we click off and
+[00:24:42] that's email done yeah so then click on
+[00:24:44] to on the time now we're going to go for
+[00:24:46] calendar so we go for Google Calendar
+[00:24:47] tool and there's two things we want to
+[00:24:49] do one is to come down here to operation
+[00:24:53] which is to get many okay from after now
+[00:24:56] is fine cuz we're not looking back into
+[00:24:58] to the feature unless you saw a time
+[00:24:59] traveling which case uh let me know um
+[00:25:01] some cool sub happs please there click
+[00:25:04] on uh this so say Hey you can only look
+[00:25:07] it from today uh I will let you
+[00:25:09] determine how far into the future you
+[00:25:10] would like to look get many is fine uh
+[00:25:13] pretty much that's everything that you
+[00:25:14] need to set the calendar of course set
+[00:25:16] my email address there and then we're
+[00:25:18] going to click off 50 is also fine then
+[00:25:20] finally guys we can just right click and
+[00:25:22] duplicate this little guy bring him over
+[00:25:24] and collect this oops collect this tool
+[00:25:26] here now this one not be getting events
+[00:25:29] this one we want him to create an event
+[00:25:32] and again um we don't really want you
+[00:25:34] can push it in like get him booked over
+[00:25:36] the next hour subject to your thing if
+[00:25:38] you're a thr if you're really clear on I
+[00:25:40] the way to bookon the next 24 hours we
+[00:25:42] can hard cut that which is really cool
+[00:25:44] but for the purs of this I'm MD a decide
+[00:25:47] what it looks like we click off we're
+[00:25:49] done then finally guys but last thing
+[00:25:51] what you can do is come over click on
+[00:25:52] this plus button you're going to click
+[00:25:54] on web hook and this is returns data for
+[00:25:56] the web hook and what I also want you to
+[00:25:59] do let's have it first coming item yeah
+[00:26:01] that's absolutely fine the bit we do
+[00:26:03] need to specify though on this guy is
+[00:26:06] instead of respond immediately respond
+[00:26:08] using the respond to web hop mode if you
+[00:26:11] don't mind that's I called beautiful so
+[00:26:14] for example if I pin this data what does
+[00:26:16] pin with data mean the beautiful thing
+[00:26:18] about pining with data it basically
+[00:26:20] means that I can now check everything
+[00:26:22] after the web hog without having to
+[00:26:24] constantly ref fire the entire SAR it
+[00:26:26] kind of let me just carry a data over
+[00:26:28] and try out so for instance if I click
+[00:26:31] on AI agent what he will do it's almost
+[00:26:33] as if he's been asked right there dude
+[00:26:36] is Jack available on this day he's
+[00:26:37] checked the calendar let's see what he
+[00:26:38] says we click on it success Jack is
+[00:26:40] available on Wednesday the 6th March at
+[00:26:42] 2 p.m. UK time did you know that I
+[00:26:44] didn't that well power the my I'm
+[00:26:45] available which is cool cool so then
+[00:26:47] let's test this whole thing so what
+[00:26:49] store from Top we will unpen we will
+[00:26:52] come here we'll test work for now let's
+[00:26:54] go R this real life so we have saved
+[00:26:58] this actually this is the other one
+[00:26:59] isn't it okay we make sure we're on the
+[00:27:02] right guy but check on the calendar
+[00:27:03] toour we've got the post we got the body
+[00:27:05] that's cool let's give Jack a little bit
+[00:27:07] of the conversation see what's up all
+[00:27:08] right guys let's give him a bit of a
+[00:27:10] test hey how can I help my man hey the
+[00:27:14] Broski I would love to speak with Jack
+[00:27:15] could you check if he's available on
+[00:27:18] Thursday the 6th of March for a chat at
+[00:27:21] 11 a.m.
+[00:27:25] please I'd be happy to check Jack
+[00:27:28] availability for you let me look at his
+[00:27:30] calendar for Thursday March 6th at 11:00
+[00:27:32] a.m. great news Jack is available on
+[00:27:35] Thursday March 6th at 11:00 a.m. would
+[00:27:38] you like me to go ahead and book a
+[00:27:39] 15-minute Discovery call with him at
+[00:27:41] that time if so I'll just leave your
+[00:27:43] name and email address to the book dude
+[00:27:46] that sounds perfect my name is Ban my
+[00:27:48] email address is Ban
+[00:27:54] outlook.com great Ben I'll book that
+[00:27:57] 15minute discuss call with Jack for you
+[00:27:59] let me confirm your email address is
+[00:28:02] that b n Ur o u t l o o o I'll go ahead
+[00:28:06] and book this appointment for Thursday
+[00:28:08] March 6th at 11:00 a.m. I apologize B it
+[00:28:12] seems there was an issue with booking
+[00:28:13] the appointment the system tried to send
+[00:28:16] you a confirmation email but the actual
+[00:28:18] appointment couldn't be created in
+[00:28:19] Jack's Calendar let me try booking this
+[00:28:21] again for you could we try once more to
+[00:28:24] schedule your 15-minute Discovery call
+[00:28:26] with Jack for Thursday March 6th at 11:
+[00:28:28] a.m. yes I apolog yes did so basically
+[00:28:30] yeah my email address is
+[00:28:32] BN outlook.com could you try and book
+[00:28:35] that again for me
+[00:28:42] please no problem Ben let me try booking
+[00:28:45] that appointment again for you I'll use
+[00:28:47] your email address Ben outlook.com for
+[00:28:50] the booking on Thursday March 6 at 11:00
+[00:28:52] a.m. with
+[00:28:53] Jack okay uh it needs you need to have
+[00:28:56] the ampan it's ban at
+[00:29:07] outlook.com got it Ben let me try
+[00:29:10] booking that again with your email
+[00:29:11] address properly formatted I'll book you
+[00:29:14] for Thursday March 6 at 11:00. with Jack
+[00:29:17] I apologize for the continued issues Ben
+[00:29:19] while the system was able to send a
+[00:29:21] confirmation all right guys so what I
+[00:29:24] was trying to do there live on the call
+[00:29:25] was what I thought was happening is that
+[00:29:27] we giving it a valid email address you
+[00:29:31] see so we've got ban at.com so that is
+[00:29:34] actually valid so let's just find out
+[00:29:36] why this failed bad request let's have a
+[00:29:38] look at the error details okay guys
+[00:29:40] what's actually happened here is we
+[00:29:41] didn't specify who we are inviting to
+[00:29:44] the meeting which is probably something
+[00:29:46] we need to do set okay has come down to
+[00:29:48] attend is I will just specify that with
+[00:29:50] the model okay that's really cool uh I
+[00:29:52] never come back half and we should be
+[00:29:53] fly with that so let's come back and
+[00:29:55] test it and I want to include this in
+[00:29:56] just to sh you the live nuts and bolts
+[00:29:58] of testing it a real life environment
+[00:30:00] okay come back here we go hey how can I
+[00:30:03] help my man hey Bry I'd like to book and
+[00:30:05] call Jack please on Thursday the 6th of
+[00:30:08] March at 11:
+[00:30:12] a.m. I'd be happy to help you book a
+[00:30:15] discovery call with Jack for Thursday
+[00:30:17] March 6th at 11:00 a.m. let me check if
+[00:30:19] that time is available in Jack's
+[00:30:21] calendar great news Jack is available on
+[00:30:24] Thursday March 6th at 11:00 a.m. to book
+[00:30:27] this 15-minute Discovery call I'll need
+[00:30:29] your full name and email address could
+[00:30:31] you please provide those details so I
+[00:30:33] can complete the booking for you sure
+[00:30:34] dude my name is Ben my email address is
+[00:30:37] Ben outlook.com and I would like to
+[00:30:41] discuss why coffee is the best drink in
+[00:30:44] the
+[00:30:50] world excellent your appointment has
+[00:30:53] been successfully booked here are the
+[00:30:55] confirmed details name Dad Cod thank you
+[00:30:58] bro oh my goodness so R again small
+[00:31:00] adjustment and it works fine so just
+[00:31:02] check out what the details we've got
+[00:31:03] here so I've been booked in for March
+[00:31:05] 6th 2025 at 11:00 a.m. so let's head to
+[00:31:08] my Gmail account and check that that's
+[00:31:10] actually happened guys as you can see on
+[00:31:11] the 6th at 11:00 a.m. we have the
+[00:31:13] appointment of about click into that for
+[00:31:14] example here we got down at.com hasn't
+[00:31:17] included a name to the appointment so
+[00:31:19] one of the changes we probably like to
+[00:31:21] make on that is let's get back up the
+[00:31:23] scenario and have a look at the correct
+[00:31:25] event thing and have we even specify the
+[00:31:27] title I think we have right can I field
+[00:31:30] let's see if I the description let's add
+[00:31:32] a description in very good cool
+[00:31:34] brilliant and then let's add another one
+[00:31:35] in there which should be let's see if we
+[00:31:38] can find this one so I believe that's
+[00:31:39] going to be the summary field guys and
+[00:31:41] we just want to make sure it's specified
+[00:31:42] by any end and this is always the case
+[00:31:44] you want a few times make sure it works
+[00:31:45] perfectly and we're able to physically
+[00:31:48] flip and create it amazing so next step
+[00:31:50] guys though is to create an app which is
+[00:31:51] really cool integrate this in and then
+[00:31:52] we can basically start to use something
+[00:31:54] that is really exciting okay guys so
+[00:31:55] building this together step by step then
+[00:31:57] let's let's head over to let's go over
+[00:32:00] to liable dode oops oh my goodness right
+[00:32:04] and I'm going to pick a run of business
+[00:32:06] in the UK to do this with Okay so let's
+[00:32:08] just say I go to a gym very Co gym
+[00:32:10] eventually and we'll and we're just
+[00:32:11] going to use that one I think scri
+[00:32:13] Google by type in leads gyms as if for
+[00:32:16] instance let's have a look what we got
+[00:32:18] we got JD gyms leads North so why don't
+[00:32:20] we just read design their website and
+[00:32:21] make it epic okay all right so first
+[00:32:24] thing I'm going to do if I was building
+[00:32:25] this for client is forance I'd give it
+[00:32:27] to Claude and hey if I were to make a
+[00:32:30] gym
+[00:32:33] website insanely cool with amazing know
+[00:32:38] AI apps
+[00:32:41] on to improve experience to actually
+[00:32:45] improve signups what could I include uh
+[00:32:49] write a full
+[00:32:52] wath prompt fat rful prompt to cred this
+[00:32:57] including all this
+[00:33:01] information from the old website but
+[00:33:05] enter B There we go so again I'm just
+[00:33:07] fudging this through very quickly just
+[00:33:08] to show the power of it so this is going
+[00:33:10] to give us some cool ideas uh so we're
+[00:33:13] going to ask it to create all this kind
+[00:33:14] of this if bits and pieces and again I'm
+[00:33:16] going to show you how you integrate it
+[00:33:17] into this website all right you go you
+[00:33:19] ready for this so we're just going to
+[00:33:20] copy all this all right give this a
+[00:33:23] beautiful
+[00:33:25] moment all right cool so what's the idea
+[00:33:27] of this IDE there is we come back over
+[00:33:28] to Li ball and we just enter the S we
+[00:33:31] hit enter bam now little start to spin
+[00:33:33] up all this cool stuff and all the back
+[00:33:35] all pling in the back at now the idea of
+[00:33:36] this would be that we would find a
+[00:33:37] business that we want to work with an on
+[00:33:39] edge we would that ideally you've got
+[00:33:41] some ideas I'm just using I'm being lazy
+[00:33:43] with Claude just to kind of prove a play
+[00:33:45] so you create a better version of the
+[00:33:48] site with some called apps for example
+[00:33:49] could there be an Roi card C could be
+[00:33:51] different bit and pieces once it's
+[00:33:53] created we're going to embed in all
+[00:33:55] voice agent on front end the bit so
+[00:33:56] basically JD JD Sports happen to be like
+[00:33:58] or JD J and be like hey do you want to
+[00:34:00] sign up the idea would be we could then
+[00:34:02] program the agent to do that so let's
+[00:34:04] make some modifications to our agent
+[00:34:05] just to prove this so whilst that's
+[00:34:07] spinning up in the background let's go
+[00:34:08] over to this we are going to remove the
+[00:34:10] system prompt let's go over to CL on
+[00:34:13] more time and say hey Write a brief uh
+[00:34:17] system Pro System
+[00:34:19] prompt for an AI voice agent for this uh
+[00:34:25] web its job is to check a calendar and
+[00:34:30] get people to sign
+[00:34:32] up boom keep it short bro I like to call
+[00:34:36] my AI Bros cuz I think that's really
+[00:34:38] cool and important cool we'll keep that
+[00:34:40] quite sure bro voice agent system any
+[00:34:42] problems there we go by SP in the
+[00:34:44] background let's see how this one's
+[00:34:45] going he working in the background
+[00:34:46] called This is multitasking right called
+[00:34:49] very good some com to JD fit we are
+[00:34:51] going to respond there he going to Happ
+[00:34:54] fine then we just want to come and
+[00:34:55] change the C the uh
+[00:34:58] um and instead of that let's just say
+[00:35:01] you can use this tool to check a
+[00:35:05] database for
+[00:35:08] appointments there we go boom uh of
+[00:35:12] availability for our
+[00:35:15] induction okay beautiful then we click
+[00:35:18] on Save changes come back over to the
+[00:35:21] prom which is going to be here um use
+[00:35:25] the C tool to check back
+[00:35:31] appointments for
+[00:35:34] consultations in the gym cool and then
+[00:35:37] let's see how this is now getting on
+[00:35:38] this is still building also going to
+[00:35:40] save this guy which is all Ace and now
+[00:35:42] what we'll do is we'll come over to Art
+[00:35:44] scenario here and since we're doing a
+[00:35:45] different thing we will just simply copy
+[00:35:47] and delete those and then we will then
+[00:35:49] come back up the CL and say write me a
+[00:35:52] prompt for an agent that will receive a
+[00:35:56] request
+[00:35:58] an aot a yes now
+[00:36:04] availability it will be checking on at
+[00:36:07] table database actually I'll do Google
+[00:36:10] Sheets database just kick it simple
+[00:36:12] Google Sheets database
+[00:36:15] cool now we'll do is come tool we'll
+[00:36:18] type on Google Sheets tool and then
+[00:36:21] let's go corate Google Sheets actually
+[00:36:22] guys in fact what I'm going to do is
+[00:36:24] just check uh my beds I'm just going to
+[00:36:26] keep it as a calendar check talk I think
+[00:36:27] that's going to be easier and say it
+[00:36:31] will check my
+[00:36:33] [Music]
+[00:36:34] calendar not at
+[00:36:37] table cool the that up day beautiful all
+[00:36:42] right
+[00:36:45] sweet sweet come over here got this uh
+[00:36:48] we do want to includ the Tim is now
+[00:36:50] that's
+[00:36:51] important all PS on 2025 that's fine
+[00:36:54] enter that guy in and we save it decent
+[00:36:57] that let's go back over to L bolt see
+[00:36:59] how we getting
+[00:37:01] on all right bu is unsuccessful let's
+[00:37:04] try to fix it again with little Bol it's
+[00:37:06] a bit of back and forth It's a flirt
+[00:37:08] yeah it will try things it will fail uh
+[00:37:10] I know we just basically go back and
+[00:37:11] forth like that so let's give this a
+[00:37:12] second to fix it mistakes cool so the
+[00:37:14] whole page is white it's not working hey
+[00:37:15] the whole page is wi reduce
+[00:37:21] functionality to make it work okay guys
+[00:37:23] I also tried to get it to simplify the
+[00:37:25] entire build it's not working what I
+[00:37:26] think's probably happened is it's too
+[00:37:28] much for to process so what I'm going to
+[00:37:30] say is how create a simple uh g
+[00:37:36] website with the below
+[00:37:38] information and they'll say hey
+[00:37:41] include one cool AI
+[00:37:45] feature that is
+[00:37:48] interactive make the design amazing now
+[00:37:52] we can be specific with the code but I'm
+[00:37:53] just going to keep it really flipping
+[00:37:55] basic like that come back to J website
+[00:37:58] come back over to Li board and hit enter
+[00:38:00] and then we just public publicize it
+[00:38:02] like that now this is normal sometimes
+[00:38:03] if you try to overload it too much it
+[00:38:05] can break these tools are not perfect
+[00:38:08] they require bit of finess so let's give
+[00:38:10] this one a crack and see how it Go all
+[00:38:11] it all right guys here we go here's the
+[00:38:13] easy fresh crisp JD gyms where F this
+[00:38:15] just got serious find your gy few
+[00:38:17] classes and has all this beautiful
+[00:38:19] things in there how to the website find
+[00:38:21] a g this is cool all right sweet so we
+[00:38:23] got a easy quick Fresh Mark up for
+[00:38:27] membership options I think that's really
+[00:38:29] cool I love how it pops up there come
+[00:38:31] down lead bit lead G North there C
+[00:38:33] images blah blah blah F GS all this cool
+[00:38:36] stuff make sure de SS amazing then we
+[00:38:39] got wey but I mean I think this is
+[00:38:41] really fcking cool guys so one thing I
+[00:38:42] want to do just improve the design
+[00:38:44] little bit is head over to codepen.io
+[00:38:46] Let's see we can fire something really
+[00:38:49] decent we got a cool login for s look at
+[00:38:52] this no I'm not a big fan of that I've
+[00:38:55] got look this kill looks cool right you
+[00:38:56] can move these things up in down I so
+[00:38:58] say we want to include this for example
+[00:38:59] I could say go back to loable and let's
+[00:39:03] say add an
+[00:39:05] interactive uh
+[00:39:07] element using the below
+[00:39:10] code uh and I'm also going to say guys
+[00:39:14] use a lime green uh color
+[00:39:18] scheme another the code and let's just
+[00:39:20] add this in and then well we go right
+[00:39:22] now also copy this what I also recommend
+[00:39:25] you do guys is screenshot right here
+[00:39:27] just so it can follow it what it looks
+[00:39:29] like has a visual view of it and see how
+[00:39:32] accurately this could actually
+[00:39:33] physically copy and bring that in come
+[00:39:35] over C to clipboard hit back over and
+[00:39:38] paste that one in and then hit enter let
+[00:39:40] work it magic background then what we're
+[00:39:41] also going to do guys is come over to
+[00:39:43] our build in 11 labs and what I wanted
+[00:39:47] to show guys is canot Advanced you're
+[00:39:49] going to widget and you're going to
+[00:39:50] click this embed code you some just
+[00:39:52] going to copy it and after hit you can
+[00:39:54] specify all the things you see how it
+[00:39:56] looks in the bottom right how call that
+[00:39:57] so I could change the first color so I
+[00:39:59] would then specify this to JD James so
+[00:40:02] i' make that green and then what else
+[00:40:04] that Bradley like it's green and black
+[00:40:06] is it cut so then would come down and
+[00:40:08] let's go for
+[00:40:10] black let's call right but you get the
+[00:40:12] idea you can basically specify as you
+[00:40:14] want to we got a background color play
+[00:40:17] Ro that a little
+[00:40:19] bit what instead of white sometimes
+[00:40:21] what's often best is to go to an
+[00:40:23] extremely light version of the color
+[00:40:27] there you go cool sweet text color so
+[00:40:29] you can basically you know white and
+[00:40:30] black black and white whatever you want
+[00:40:31] to fact if we did for the background
+[00:40:33] what if we for the background had like
+[00:40:35] black and then text color could be like
+[00:40:37] a really
+[00:40:40] light green like this I mean I'm just
+[00:40:43] kind of spit B here we have to have a
+[00:40:44] proper look at this
+[00:40:46] but yeah that's cool and a bone color
+[00:40:48] call the black bone color also needs to
+[00:40:53] be let me make that red actually
+[00:40:59] I'm spit bored here but you get the idea
+[00:41:00] you basically have a play around with it
+[00:41:02] start cells cool let's just make the
+[00:41:04] color the same color as this uh come
+[00:41:07] here beautiful all right sweet the one
+[00:41:09] we do we just copy this guy we come back
+[00:41:11] over to our liable build right here okay
+[00:41:13] so we added that in it said that we got
+[00:41:15] an arrow which is cool so we just ask to
+[00:41:17] fix it real quick all right guys so good
+[00:41:19] look at what we got here very cool in
+[00:41:22] specifics and Design Your Perfect
+[00:41:25] Workout check this up this is freaking
+[00:41:26] Coss
+[00:41:27] straight clel oh my gosh this is
+[00:41:30] freaking amazing guys check this
+[00:41:33] out wow an gener for workout plan I
+[00:41:36] haven't specified that I'm guess that W
+[00:41:38] really do anything but then you could
+[00:41:39] say based on that do something cool and
+[00:41:41] that's all based for a Cod guard that's
+[00:41:42] our crazy now final we're going to do is
+[00:41:44] hey add this code to the website B and
+[00:41:50] in and then basically once that's
+[00:41:52] complete we should have a level labs in
+[00:41:54] the bottom right hand corner and then we
+[00:41:55] can have a conversation pull all
+[00:41:56] together and and then that's entire
+[00:41:58] build complete so you can see with this
+[00:41:59] use case Builder we've got some of the
+[00:42:01] troubleshoot we've had to do and on top
+[00:42:02] of that how actually work I st perfectly
+[00:42:05] so let's bring him out into a new
+[00:42:06] story and let's get him check Court
+[00:42:09] laying up all right sweet so we just
+[00:42:12] need that guy to lead up with
+[00:42:14] us okay he's not popping up why is he
+[00:42:17] not popping
+[00:42:18] up yeah he should be right there right
+[00:42:20] so let's bring him up let's refresh the
+[00:42:22] page there we go cool Ed it with little
+[00:42:25] ball that's not right just get rid of it
+[00:42:28] let's start the cup have a CH with you
+[00:42:30] we read some conditions we allow the
+[00:42:35] microphone hey there how can I help Bry
+[00:42:38] um I would love to oh in fact one thing
+[00:42:41] we didn't do is we didn't give it the JD
+[00:42:43] GM as a knowledge base so let me just
+[00:42:46] add that in real quick to his awareness
+[00:42:50] come agent we need to go to knowledge
+[00:42:53] base so let me just Del the last one I
+[00:42:56] document
+[00:42:57] uh create a document want to come down
+[00:42:59] to URL enter that URL and click create
+[00:43:02] document this means that it can
+[00:43:03] basically Converse and talk to add a
+[00:43:05] piece information we've got there that's
+[00:43:07] loading rag indexing 0% come on you can
+[00:43:10] make it to 100% I believe in you cool
+[00:43:12] it's complete he's done can we save
+[00:43:14] him phom right now let's go to our edit
+[00:43:17] end scenario let's just test this
+[00:43:19] workflow real quick come back up to our
+[00:43:22] beautiful website where we at right now
+[00:43:24] it
+[00:43:25] is here I think let's I'm up in the
+[00:43:28] top all right cool let's do it
+[00:43:32] guys hey there how can I help he dude um
+[00:43:35] I'm thinking about joining JD jyms dude
+[00:43:37] uh what can you tell me about your
+[00:43:38] membership
+[00:43:40] offers hey there I'm JD fit the friendly
+[00:43:43] Bo assistant for JD gims we have a
+[00:43:46] fantastic offer for firsttime members
+[00:43:48] just10 for your first month you'll get
+[00:43:51] access to all our awesome classes 24/7
+[00:43:54] access to the gym and no contract what
+[00:43:57] do you think dude I think that sounds
+[00:43:59] going to fice I'm so convinced I would
+[00:44:01] have come on doubt I would have come
+[00:44:02] down on I don't know Friday the 7th of
+[00:44:05] March at 1 p.m. is anybody free to meet
+[00:44:08] me for a consultation time could you
+[00:44:10] just check for
+[00:44:12] me that's awesome we're super excited to
+[00:44:15] have you join the JD Jims family let me
+[00:44:17] check our calendar real quick so you're
+[00:44:20] looking for a consultation on Friday
+[00:44:21] March 7th at 1:00 p.m. that's right bro
+[00:44:25] yes
+[00:44:29] okay I'm checking the calendar for you
+[00:44:30] it looks like someone is already builted
+[00:44:32] that time how about Friday March 7th at
+[00:44:35] 2:
+[00:44:38] p.m. cool let me check guys I think that
+[00:44:41] didn't work because I am on a different
+[00:44:44] URL so let me just grab this real quick
+[00:44:48] um let me just copy the post request
+[00:44:50] come back over to 11 labs and then I'm
+[00:44:53] going to come down to C
+[00:44:55] tall and a
+[00:45:00] sec no that should work I
+[00:45:03] come basically I we wrote over a
+[00:45:06] different agent r that we used so that's
+[00:45:07] why it wouldn't work all right guys so
+[00:45:08] let's give this guy a test out see if he
+[00:45:10] can help us
+[00:45:11] out hey there how can I help hey dude I
+[00:45:14] would love to come down for
+[00:45:18] induction hi great to hear you're
+[00:45:20] interested in joining JD Jims I'd be
+[00:45:22] happy to help you schedule an induction
+[00:45:24] could you let me know what date and time
+[00:45:26] would work best for you
+[00:45:27] you how about how about how about Friday
+[00:45:31] the 7th of March it's 300
+[00:45:36] p.m. I'll check the availability for
+[00:45:39] March 7th at 300 p.m. right away using
+[00:45:41] our calendar system great news that time
+[00:45:44] slot is available on Friday March 7th at
+[00:45:47] 300 p.m. would you like me to book this
+[00:45:49] induction appointment for you and that's
+[00:45:51] pretty much the whole system and and so
+[00:45:53] the idea of this would be that you could
+[00:45:54] then send this off to
+[00:45:57] C uh it knows everything about the
+[00:45:58] website it knows all the different
+[00:45:59] specifics you can ask any question it's
+[00:46:01] got the knowledge face it's freaking
+[00:46:02] Crush so guys I hope you find this build
+[00:46:04] interesting if there's anything you'd
+[00:46:05] love to see video on let me know Down
+[00:46:07] Below in any case YouTube think you love
+[00:46:09] this video on screen well have a
+[00:46:10] beautiful week and I'll see you in my
+[00:46:12] next video

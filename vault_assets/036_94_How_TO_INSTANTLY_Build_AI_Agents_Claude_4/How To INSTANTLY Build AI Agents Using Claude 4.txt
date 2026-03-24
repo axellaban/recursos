@@ -1,0 +1,463 @@
+[00:00:00] Great. So, we copy the code from Claude,
+[00:00:01] head over to NA10, hit paste, and the
+[00:00:03] entire AI agent has populated. Claude
+[00:00:06] generate this entire thing in about 20
+[00:00:08] seconds. This is a Slack integration
+[00:00:10] that grabs information from Slack, has
+[00:00:12] an AI agent that has internet access and
+[00:00:14] it can send information back over to
+[00:00:15] Slack and it also has a full access to
+[00:00:18] rack database. These agents, it's
+[00:00:19] created uh has full information
+[00:00:22] explaining how it all works, the
+[00:00:23] scenario overview, what the agent does,
+[00:00:25] the integrations, and the search
+[00:00:26] knowledge and tool. This was made in
+[00:00:28] about 20 seconds. So, what I'm going to
+[00:00:30] show in this video is all the prompts I
+[00:00:31] use to create this. We're going to build
+[00:00:32] a few together. So, you can just run
+[00:00:34] these off and save yourself loads of
+[00:00:36] time. So, we're going to build this in
+[00:00:38] Claude. And the first one we build is an
+[00:00:39] AI agent with internet access. Now,
+[00:00:41] we're building this in Claude in
+[00:00:42] projects because it has access to
+[00:00:45] basically capabilities that we can't
+[00:00:46] access in NA10. Deeper reasoning modes,
+[00:00:49] parallel tool calls, lots of cool stuff
+[00:00:51] like that. We give it a big and
+[00:00:52] beautiful prompt which I'm going to run
+[00:00:53] you through and provide with you
+[00:00:54] completely for free in this video and
+[00:00:55] also going to give you all the resources
+[00:00:57] that you need to run and crush this.
+[00:00:58] This includes uh hundreds of scenarios
+[00:01:00] including a short description of what
+[00:01:02] they do and all the JSON blueprints that
+[00:01:04] also includes this beautiful NA10
+[00:01:05] infrastructure document with 33 pages of
+[00:01:08] NA10 goodness. We've got the NA10 JSON
+[00:01:10] validation rules. And then we've got of
+[00:01:12] course the big and beautiful 43page
+[00:01:14] ultimate NA10 guide. So we're what we're
+[00:01:17] basically going to do guys is create the
+[00:01:19] prompt. We are then going to go to
+[00:01:20] Claude and give it these resources and
+[00:01:23] just pull it together. So, let's pull
+[00:01:24] this one together completely from
+[00:01:26] scratch. So, come back over to projects,
+[00:01:27] click on new project. We give it a big
+[00:01:30] beautiful name, which is big beautiful
+[00:01:34] NHN build. And by the way, if it's a
+[00:01:36] summary atmosphere, it's cuz I'm in
+[00:01:37] France right now, so I'm real
+[00:01:39] climatizing. Create 10 scenarios simply.
+[00:01:42] Sweets. All right. Now, we done we're
+[00:01:43] going to create the project. Now, we
+[00:01:44] need to do two things. One is give it
+[00:01:46] the big beautiful prompt. And secondly,
+[00:01:48] it's going to be the project knowledge.
+[00:01:49] So step one, go into comment section,
+[00:01:51] download all the materials that you need
+[00:01:52] to upload it, and then basically come
+[00:01:53] down to uh here and project knowledge,
+[00:01:55] click plus, and then we're going to
+[00:01:56] upload from device. Now, what's really
+[00:01:58] cool about these resources, guys, is
+[00:02:00] they break down specifically for CLA.
+[00:02:02] Now, Claude's got a lot of knowledge
+[00:02:03] already, plus it can search the
+[00:02:04] internet. But what we do is actually
+[00:02:06] provide it the specific code snippets
+[00:02:08] for things that it's going to use a lot
+[00:02:10] of the time, meaning it can then go
+[00:02:12] forth and generate them way more
+[00:02:13] reliably. And in building out all these
+[00:02:15] documentations here guys and all these
+[00:02:17] different um files, one of the things
+[00:02:19] that I did was basically run it through
+[00:02:21] where it failed, fix the failures and
+[00:02:23] did a lot of iterations just to save you
+[00:02:24] all the time and hassle of physically
+[00:02:26] doing it. And obviously it comes with
+[00:02:27] all these beautiful um yeah beautiful
+[00:02:30] kind of like sticky notes and stuff. So
+[00:02:31] the next thing we want to do now we've
+[00:02:32] uploaded those documents is to quite
+[00:02:34] simply give it prompt. And do that guys
+[00:02:36] come down to set project instructions
+[00:02:37] and just paste in the big prompt that
+[00:02:39] I'm going to give you. So why is this so
+[00:02:40] valuable? Well, basically it just covers
+[00:02:42] all the common errors it's going to get.
+[00:02:43] explain specifically what I want it to
+[00:02:45] do. So, we can include things in here
+[00:02:47] like uh struct JSON validity, which is
+[00:02:49] making sure it's functional JSON. Uh
+[00:02:51] give it a comprehensive overview, robust
+[00:02:52] error handling, clarity, and
+[00:02:53] documentation, verifiable and practical
+[00:02:55] tools, visual clarity, blah blah blah,
+[00:02:57] all the way down. Loads of really cool
+[00:02:58] examples that would just validate
+[00:02:59] everything. Click instructions. Once
+[00:03:01] that's done, we can now begin and test
+[00:03:03] it out. So, for example, hey, I'd like
+[00:03:04] you to create me a simple AI agent
+[00:03:06] triggered by Slack uh that has the
+[00:03:09] ability to search the internet uh and
+[00:03:11] has memory. Bam. Then we hit enter and
+[00:03:13] then claude will go forth and research
+[00:03:14] it. I'm being very transparent with you
+[00:03:16] guys like what is the big value of this.
+[00:03:18] The biggest value of building and
+[00:03:20] creating JSONs using claude 4. It's like
+[00:03:24] time saving is a big piece of it. But
+[00:03:26] actually the best part I think is the
+[00:03:28] architectural design. This isn't going
+[00:03:30] to like change your world. You got 50
+[00:03:33] different hours a week. So some aspects
+[00:03:35] of this are really overhyped. The best I
+[00:03:37] think pieces I think where this drives
+[00:03:39] value is actually its ability to create
+[00:03:41] architecture for you based on the
+[00:03:42] prompts and stuff that I've given it
+[00:03:44] because I've really positioned this as a
+[00:03:45] business critical context where I want
+[00:03:47] you to really think about and apply your
+[00:03:49] business logic and how you're actually
+[00:03:50] creating these things and the
+[00:03:51] architectural thought is really what
+[00:03:53] kind of crushes it with this and even
+[00:03:54] based on the prompts I gave it now
+[00:03:56] actually searching the internet to go
+[00:03:57] forth and enrich it which basically
+[00:03:59] means as more things come out and it
+[00:04:00] gets published the better your agent
+[00:04:02] will be in creating these things
+[00:04:03] beautiful and based on the research of
+[00:04:04] entertain documentation and it provided
+[00:04:06] workflow examples. It is creating a
+[00:04:07] comprehensive AI agent triggered by
+[00:04:09] Slack with internet search capabilities
+[00:04:10] and memory and then bam, it starts
+[00:04:12] creating everything for us in the
+[00:04:13] background. We just simply copy and
+[00:04:14] paste that into Claude and we're ready
+[00:04:16] to kick some ass. And if you've got your
+[00:04:17] own prompts that you're playing with, I
+[00:04:18] would absolutely still recommend that
+[00:04:20] you use what I call the JSON validation
+[00:04:22] rules cuz if your prompts fall down,
+[00:04:24] it's usually going to be for one of
+[00:04:25] these reasons like UU ID generation, no
+[00:04:27] type verification. So grab that and just
+[00:04:29] add it to anything that you're doing to
+[00:04:31] make your life just a little bit easier.
+[00:04:32] Cool. So this is now completing up. And
+[00:04:34] guys, I must admit, France is very, very
+[00:04:37] sunny. Coming from the UK, I must admit
+[00:04:39] I was not ready for the climate that
+[00:04:41] France was going to bring. So, it's very
+[00:04:43] beautiful. We got our coffees on
+[00:04:44] lockdown. We're enjoying our coffees.
+[00:04:46] Didn't know. Well, what better place to
+[00:04:47] automate than in France with some
+[00:04:49] beautiful coffees. Cool. So, it's now
+[00:04:50] done everything there. It's also given
+[00:04:52] explainer of what how it works. All we
+[00:04:53] do, we come over, we click copy, we come
+[00:04:55] over to our beautiful scenario. Come
+[00:04:57] down here and we click paste. And just
+[00:04:59] like that, we then have our beautiful
+[00:05:01] agent that has all the things. So, check
+[00:05:02] this out, guys. Again, it's given us
+[00:05:04] error handling information. Bring this
+[00:05:05] over here. Now, this is not at the point
+[00:05:07] where it's absolutely perfect every
+[00:05:09] single time. And the only thing I think
+[00:05:10] we need to change here, guys, is
+[00:05:11] probably just delete one of these
+[00:05:12] branches, which is cool. So, just I just
+[00:05:14] delete all these guys. We don't really
+[00:05:15] need those. And to be honest, we also
+[00:05:17] don't need this. And we can bring it in.
+[00:05:18] So, you're going to have to do a little
+[00:05:19] bit of of of tweak around the edges.
+[00:05:21] Like people saying this is off the
+[00:05:22] shelf. You'll never prompt again. It's
+[00:05:24] not true. You are going to have to do
+[00:05:25] things. But the key bit of it here is
+[00:05:27] that we can use AI's intelligence now to
+[00:05:28] help us create more effective flows and
+[00:05:30] just build the thing that we actually
+[00:05:31] want to do. And then you can click in
+[00:05:32] and just move things around. And
+[00:05:33] actually, if you just come into the
+[00:05:34] agent, you can see it's actually given
+[00:05:36] it full prompt and instructions. I mean,
+[00:05:37] look at how great this is. It's just
+[00:05:39] like given everything. So, literally, as
+[00:05:41] opposed to, and this is the stage of how
+[00:05:43] AI works, right? You are you create 100%
+[00:05:45] of things. Now, we're at the position
+[00:05:46] where it creates it and you're
+[00:05:48] modifying. So, instead of doing 100% of
+[00:05:49] work, now you're doing like 10 to 15%.
+[00:05:51] Which is freaking crazy. It explains
+[00:05:52] what the AI agent is. It gives us a
+[00:05:53] scenario and now we're ready to rock and
+[00:05:55] roll. So, which is, I think, really
+[00:05:56] freaking cool. So, for a second one,
+[00:05:58] guys, let's come over and give it a
+[00:05:59] slightly different prompt, something a
+[00:06:00] little bit more complex. So create an
+[00:06:01] enterain workflow that automatically
+[00:06:02] processes new lead submissions. It
+[00:06:04] should be triggered by a web hook when a
+[00:06:06] new lead form is submitted. The workflow
+[00:06:08] should then add the lead's name, email,
+[00:06:09] and company to a designated Google sheet
+[00:06:12] for tracking. Immediately following it
+[00:06:14] should then send a concise Slack
+[00:06:15] notification for Celsius channel
+[00:06:17] announcing the new lead, including their
+[00:06:18] name and company. Implement basic error
+[00:06:20] handling for the Google Sheets and Slack
+[00:06:22] steps. Bam. So let's send this one off.
+[00:06:23] And then what I'm going to do in the
+[00:06:25] last prompt, guys, is show you what it
+[00:06:26] can do in terms of architecture. So what
+[00:06:28] I'm actually going to do is give it a
+[00:06:30] problem to say, hey, this is the outcome
+[00:06:32] I want. And it's always better to think
+[00:06:33] about, you know, when you're building
+[00:06:34] scenarios, think about what is the
+[00:06:36] outcome that I want and then work
+[00:06:38] backwards from that. So we're going to
+[00:06:39] do outcomebased prompting with this,
+[00:06:41] which I think is going to be super
+[00:06:42] exciting. This is going to start
+[00:06:43] building things in the background and
+[00:06:45] then we can actually explore and see the
+[00:06:46] magic that it's creating for us. Another
+[00:06:48] thing I'd just add in for your
+[00:06:48] knowledge, guys, is that Claude, in my
+[00:06:50] view, is the best model I've seen at
+[00:06:52] creating code. So, it stands to reason
+[00:06:54] it would also be the best one to use
+[00:06:55] when creating JSON for NAM. Um, and
+[00:06:59] actually it's been my experience because
+[00:07:00] we built the Chrome extension that was
+[00:07:02] freaking awesome. Follows you around,
+[00:07:03] connects loads of cool stuff. Claude
+[00:07:05] does take it a slight level higher than
+[00:07:07] that. It's gotten way better and expect
+[00:07:09] literally in the coming months the
+[00:07:11] generations to go up up and up to the
+[00:07:12] point where it will be semi- flawless at
+[00:07:14] some point where we can just say things.
+[00:07:16] Now, this is all complete. So, we just
+[00:07:17] copy. Uh, let's head back over to our
+[00:07:19] scenario now and see what we're dealing
+[00:07:20] with. And we control V and see what
+[00:07:21] we're dealing with. And one thing I'll
+[00:07:23] also say guys, in every single occasion,
+[00:07:25] it creates it successfully, right? So,
+[00:07:27] it's actually creating what's happening
+[00:07:28] here. So, let's have a quick look at
+[00:07:29] what we've got. All right. So, come down
+[00:07:31] here. Let's see what we're dealing with.
+[00:07:32] So, a little bit on formatting thing we
+[00:07:34] can do. I think we can improve the um
+[00:07:36] formatting with this stuff. So, again,
+[00:07:38] we need to move things around a little
+[00:07:39] bit. Just make sure it's nice and
+[00:07:40] pretty. So, guys, this one is really
+[00:07:42] interesting. So, it's not perfect, but
+[00:07:44] it's actually not done a bad job. So, in
+[00:07:45] the web hook trigger, initially, what
+[00:07:47] this did is instead of using respond to
+[00:07:49] web hook node, it did it immediately. So
+[00:07:51] what we would then do is just we just
+[00:07:52] update that prompt slightly. I'll do
+[00:07:54] that for you. So when the doc you get
+[00:07:55] that'll be live for you. But effectively
+[00:07:57] that was not quite right but the logical
+[00:07:59] flow it's taken I'm really really
+[00:08:01] impressed with. It's validating data
+[00:08:03] right and then you can see how it's
+[00:08:04] doing things like notify the sales team
+[00:08:06] and logging things in Google Sheets. Now
+[00:08:07] we'd want to reorganize this slightly.
+[00:08:09] So we need to validate the data. Would
+[00:08:11] we want to send a message to Slack? No,
+[00:08:13] probably not. But what we probably want
+[00:08:14] to do actually is remove this and just
+[00:08:16] send a response back like hey incorrect
+[00:08:18] data whatever we want to right then we
+[00:08:19] can format. We basically log it and then
+[00:08:21] we can send a new message stack. So you
+[00:08:22] can basically pick the bits that you
+[00:08:24] want, right? So say we get rid of this
+[00:08:25] guy, we don't want this, we don't want
+[00:08:26] this, we don't want this. We can bring
+[00:08:28] this in. But you can see how this is
+[00:08:29] really freaking really valuable, right?
+[00:08:31] So if this has got an error, then we can
+[00:08:33] say, hey, there's been an issue there.
+[00:08:34] So you can see how sequentially it's
+[00:08:35] starting to log things together. And
+[00:08:37] that was just from from one single
+[00:08:38] freaking prompt and you can kind of like
+[00:08:40] basically eat your heart's content with
+[00:08:41] this sort of stuff. Then it explains
+[00:08:43] exactly how it works. Now, if you want
+[00:08:44] to get the most out of this stuff, guys,
+[00:08:46] what you need to do is run it, see if it
+[00:08:47] meets your criteria, come back, edit it,
+[00:08:49] and then do it again. So, in the last
+[00:08:51] example, what we're going to do is give
+[00:08:53] Claude a challenge, something to think
+[00:08:55] about architecturally for our purposes.
+[00:08:57] And guys, I'm going to be really vague
+[00:08:58] with this. Build me a really effective
+[00:09:00] customer onboarding automation. You'll
+[00:09:02] receive their name, their email address,
+[00:09:04] their budget, um when they want to get
+[00:09:07] started, and a few other pieces of
+[00:09:09] information. Just build me out what
+[00:09:10] would be the most epic, useful flow uh
+[00:09:12] that would deliver value. be creative
+[00:09:13] and just, you know, surprise me. So now
+[00:09:16] we can actually test it ability to think
+[00:09:17] creatively about the problem that we've
+[00:09:18] got and see how it leans onto this. I
+[00:09:20] think the most impressive thing is that
+[00:09:21] its failure rate for creating a scenario
+[00:09:23] is really low and but it's all about
+[00:09:25] kind of fine-tuning and building it
+[00:09:27] around the kind of stuff that you want
+[00:09:28] to do. So you can kind of use it very
+[00:09:29] very very robustly. But this is really
+[00:09:30] impressive stuff. See, but look at this
+[00:09:32] guys like best customer onboarding
+[00:09:33] automation workflows 2025 AI person
+[00:09:35] customer. It's like its ability to go
+[00:09:37] forward and like check all these
+[00:09:38] different results on Google to find out
+[00:09:40] like actually what is the latest that's
+[00:09:42] happening and again it's going to search
+[00:09:43] that again. So it's up 20 different
+[00:09:45] websites it's searching now to actually
+[00:09:48] inform external knowledge in the
+[00:09:50] internet with building scenarios on any
+[00:09:52] which I think is really freaking cool.
+[00:09:53] Now guys one interesting to call out is
+[00:09:54] that if the response is really long
+[00:09:56] you'll have to nudge Claude and say hey
+[00:09:58] yeah I still want you to keep working.
+[00:09:59] I'm not quite sure why Claude does that.
+[00:10:01] Maybe it just needs some encouragement.
+[00:10:03] Maybe it needs a little bit of a little
+[00:10:04] bit of coffee as it goes. Now, a couple
+[00:10:06] of things that might be helpful for you
+[00:10:06] to know and that I learned kind of
+[00:10:08] building this stuff out was the fact
+[00:10:10] that the more complex you try to make it
+[00:10:12] scenario building capabilities. Think of
+[00:10:14] it as like you the more that can
+[00:10:16] potentially go wrong. So, if you want
+[00:10:17] agent workflows, sub aent workflows, you
+[00:10:19] want to produce like four or five
+[00:10:21] different JSONs, like the
+[00:10:23] interoperability of it can create
+[00:10:24] problems. So, what I want to do in this
+[00:10:26] video is keep it kind of like really
+[00:10:28] business focused, like actually trying
+[00:10:29] to solve that. Make sure it's
+[00:10:30] researching business focused resources,
+[00:10:32] leveraging all the prompts stuff we've
+[00:10:34] gave it, the way that we set the things
+[00:10:35] up. So it can give you robust um
+[00:10:38] workable, functionable, you know,
+[00:10:39] basically hopefully almost client ready
+[00:10:41] stuff with just a few tweaks. All right,
+[00:10:42] guys. So we've got this scenario here.
+[00:10:43] We come over, let's paste it in and see
+[00:10:45] how we get on. Let's come over and see
+[00:10:46] what we've got. All right, let's have a
+[00:10:48] quick look. Now guys, I just ran a
+[00:10:49] scenario and the code didn't work. And
+[00:10:51] when that happens, come back and say,
+[00:10:52] "Hey, please amend it so it's valid and
+[00:10:54] we'll actually post into NA10." So
+[00:10:56] occasionally if you're doing something
+[00:10:57] particularly complex it can get it wrong
+[00:11:00] which is I just want to be really
+[00:11:01] transparent about where this is good and
+[00:11:03] where it's bad and occasionally for big
+[00:11:05] stuff you need to give it a second nudge
+[00:11:07] but that is one of the cool things about
+[00:11:08] it is that you can say hey it ain't
+[00:11:10] working or hey could you change this
+[00:11:12] could you modify that and actually make
+[00:11:13] it more of a conversation than something
+[00:11:15] that's like super single shot. So we'll
+[00:11:17] let this finish and then we can enter it
+[00:11:18] in and see the magic is created. Okay
+[00:11:20] beautiful. So now we've got it we paste
+[00:11:21] it in and let's see what we are dealing
+[00:11:23] with. All right I like it. I like it.
+[00:11:25] Let's have a look at what it said. So
+[00:11:26] the epic customer and bear in mind I
+[00:11:28] just said hey I just want onboarding
+[00:11:30] journey. So look what will it do? This
+[00:11:31] workflow creates hyperpersonalized
+[00:11:32] AIdriven onboarding experience that
+[00:11:34] segments customers by budget timelines
+[00:11:36] and needs personalizes everything with
+[00:11:38] AI analysis multi- channelannel
+[00:11:39] engagement smart analytics and sentiment
+[00:11:41] tracking supplies and delight moments AI
+[00:11:43] powered success predictions and the
+[00:11:45] inputs. Beautiful but having this kind
+[00:11:46] of documentation especially when you're
+[00:11:48] selling this to clients is so so
+[00:11:50] freaking cool. So we've got the web hook
+[00:11:51] that comes in. We're going to format the
+[00:11:53] data. We're going to analyze it and it's
+[00:11:55] given us the code to analyze it. That is
+[00:11:58] freaking crazy. So, of course, we need
+[00:12:00] to do our classic cosmetic sweep up as
+[00:12:03] we always invariably do. Let's just
+[00:12:04] bring everything down here. So, I guess
+[00:12:06] the logic here is it would send it down
+[00:12:08] one or three pathways. So, it's missing
+[00:12:10] something to do that basically. Um, and
+[00:12:12] then we're basically messages could
+[00:12:13] slack, which is cool. And what's really
+[00:12:15] cool here is we've got these different
+[00:12:16] follow-up sequences. So, we'd we'd want
+[00:12:19] to restructure the order of how this
+[00:12:20] works. Think about it from an
+[00:12:22] architectural point of view like what's
+[00:12:23] the stuff that it's doing and obviously
+[00:12:25] then we can come back and say hey I want
+[00:12:26] you to do it in XYZ sequence but this is
+[00:12:29] a really really freaking powerful piece
+[00:12:30] of technology we obviously need to
+[00:12:32] change a few things but just in terms of
+[00:12:33] where it's at from a conceptual point of
+[00:12:35] view the fact that it wants to wait 3
+[00:12:36] days to do check-ins and emails this is
+[00:12:38] going to be something super super
+[00:12:39] exciting. Let me know how you find it
+[00:12:41] down below in the comment section. I'll
+[00:12:42] put all the resources there and if you
+[00:12:43] haven't seen this video on screen about
+[00:12:45] AI operating systems I strongly
+[00:12:48] recommend that you go check that one
+[00:12:49] out. In any case, have a beautiful week
+[00:12:51] and I'll see you in my next

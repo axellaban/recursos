@@ -1,0 +1,511 @@
+[00:00:00] 99% of people are still ignoring this
+[00:00:02] profitable AI system. Or if you are
+[00:00:04] using it, you're just not using it
+[00:00:06] properly. Personally, it made me tens of
+[00:00:08] thousands of dollars. And in this video,
+[00:00:10] I'm going to show how to build
+[00:00:11] profitable AI dashboards whilst
+[00:00:14] everybody else gets left behind. I'm
+[00:00:15] going to build this out step by step
+[00:00:17] using bolt new, nat, and Google Sheets.
+[00:00:20] And I'm going to show you across three
+[00:00:23] levels of complexity. And at the end of
+[00:00:25] the video, I'm going to show you five
+[00:00:27] high ROI use cases you can adapt in your
+[00:00:29] own business or agency to grow. All
+[00:00:31] meaning that you can unlock more clients
+[00:00:32] and grow your business and be in the
+[00:00:34] beautiful 1% that are crushing it. So,
+[00:00:36] the premise of this video is to use
+[00:00:38] three technologies as part of our AI
+[00:00:40] operating system. Technology number one
+[00:00:42] is going to be Bolt, which is going to
+[00:00:44] be the platform. It's the no code AI app
+[00:00:46] builder. Then, we're going to use Google
+[00:00:48] Sheets. You could use air table which as
+[00:00:50] I always say is Google sheets been
+[00:00:51] hitting the gym getting a little bit of
+[00:00:52] that Mexican supplements and steroids
+[00:00:54] but Google sheets very accessible very
+[00:00:56] easy to integrate great to get started
+[00:00:58] and then we're going to use NA10 which
+[00:00:59] is our no code platform I'll explain
+[00:01:01] everything which means that you probably
+[00:01:03] end up with a system that looks a little
+[00:01:04] bit something like this some really cool
+[00:01:06] looking dashboard some Google sheets of
+[00:01:08] data and then some automations in 910
+[00:01:10] and if you want to build an operating
+[00:01:11] system you can add in other things later
+[00:01:12] on okay so level one is going to be
+[00:01:14] giving it the prompt now all we're going
+[00:01:16] to do with this one is we're going to
+[00:01:17] create a beautiful dashboard that is
+[00:01:18] connected to some data. The data that
+[00:01:20] I'm going to be using here is this lead
+[00:01:23] pipeline stuff. So, can I display
+[00:01:25] dynamically this information? So, let's
+[00:01:27] give it first of all, come down here,
+[00:01:28] get the data you want, click share, make
+[00:01:30] sure it's available to anybody with a
+[00:01:32] link, and then we'll just copy it. Then,
+[00:01:33] we go over to Bolt, and we're going to
+[00:01:35] give it the following prompt. Hey, there
+[00:01:36] I would like you to create me a visually
+[00:01:37] engaging, beautiful dashboard that is
+[00:01:39] going to display the following metrics.
+[00:01:42] I would like you to pull this
+[00:01:43] information from this Google sheet and
+[00:01:45] do so every time the application is
+[00:01:47] loaded. And then we come down and we
+[00:01:48] pipe in the equal sheet doc. And then
+[00:01:50] what we're going to do guys is quite
+[00:01:51] simply copy the headers that we like
+[00:01:53] like so. Come back over here. Enter that
+[00:01:56] in. And then we are just going to add
+[00:01:58] some beautiful color, some detail. And
+[00:02:00] once that's done, we hit enter and let
+[00:02:02] Bolt do the work in the background. Bam.
+[00:02:04] And just like this guys, we've got a big
+[00:02:06] and beautiful dashboard. Check this out.
+[00:02:08] It's got Jack Roberts 2 million, 300K,
+[00:02:10] and 10K for James Smith. And also, it's
+[00:02:12] mapped this against purchase and
+[00:02:13] prospects. How freaking cool is And it's
+[00:02:15] connected to freaking Google Sheets. How
+[00:02:17] insane is that? So question is, will it
+[00:02:20] update dynamically? Let's check it.
+[00:02:21] Let's say James Smith, let's say Jack
+[00:02:23] doesn't have a budget of 2 million. Jack
+[00:02:25] actually has a budget of $3 million.
+[00:02:28] Let's go back over now to our beautiful
+[00:02:29] workflow, refresh it, and see if this
+[00:02:31] works very quickly. Does update. Bam.
+[00:02:33] Automatically total budget now 3.31
+[00:02:35] million. And Jack's budget has updated
+[00:02:38] dynamically. Now, this is very good.
+[00:02:39] However, what we've done here, okay, if
+[00:02:41] I come back over to our beautiful design
+[00:02:43] here, we have linked together Bolt and
+[00:02:46] uh Google Sheets. But if you don't know
+[00:02:48] how to connect that to N8N, you are
+[00:02:50] leaving a significant amount of value on
+[00:02:52] the table. Which is why in level two,
+[00:02:54] what we're going to do is actually
+[00:02:55] connect this now to an N8 scenario. So,
+[00:02:58] we can update the information
+[00:03:00] dynamically. How does that look like?
+[00:03:01] Well, what we're going to do, guys, is
+[00:03:03] have a chat bar that we can speak to and
+[00:03:06] it will update the um automation
+[00:03:08] automatically. So to do that, we click
+[00:03:10] on this node module here. We're going to
+[00:03:11] come down and we'll go for on chat
+[00:03:13] message. That's basically all we need.
+[00:03:15] Then we're going to add in an AI agent.
+[00:03:18] Uh so come down here. Let's add in an AI
+[00:03:20] agent. We're going to give him a cool
+[00:03:21] model. So let's just give him OpenAI. If
+[00:03:24] you don't have an open key, by the way,
+[00:03:25] it's platform.openai.com.
+[00:03:27] Create it. Add $5. Grab it. You're ready
+[00:03:30] to rock and roll. We're okay with GPT4.1
+[00:03:32] mini. That's okay. Then we're going to
+[00:03:34] add shortterm memory. So we click on
+[00:03:36] this. simple memory is absolutely fine.
+[00:03:38] Fantastic. That's added. Now, in terms
+[00:03:40] of tools, we wanted to do two things. We
+[00:03:42] wanted to be able to go and read the
+[00:03:43] Google sheet so it knows what's going
+[00:03:44] on. And then we want to have the ability
+[00:03:46] to amend it. So, we're going to add two
+[00:03:47] tools. First tool we've got right here
+[00:03:50] is going to be let's have a look at
+[00:03:52] Google Sheets. Fantastic. And if you
+[00:03:56] aren't connected to Google, I'll put a
+[00:03:57] video down below just out of respect for
+[00:03:59] time you can follow just to connect that
+[00:04:00] to any so you're ready to rock and roll.
+[00:04:02] All right. Right. So what we want to do
+[00:04:03] is come down and we want to choose to
+[00:04:05] get rows is absolutely fine. From the
+[00:04:08] list we're going to pick our beautiful
+[00:04:10] lead pipeline which is opened up for us
+[00:04:12] there automatically. And then sheet is
+[00:04:14] simply sheet one. And all we wanted to
+[00:04:16] do is to kind of just get the rows.
+[00:04:18] That's literally it. Cool. And then
+[00:04:19] we're going to duplicate this guy by
+[00:04:21] clicking on these dots. Click on
+[00:04:23] duplicate. And then second functionality
+[00:04:25] is just the ability to update it. So
+[00:04:27] instead of get rows we want it to append
+[00:04:29] or update a row. Okay. then it will load
+[00:04:32] everything automatically and then we
+[00:04:33] just let the guy decide. This magic
+[00:04:35] button by the way just means let the AI
+[00:04:37] decide. Um a mantra that we should take
+[00:04:39] forward boldly column to match on is
+[00:04:42] going to be name. Beautiful. And we can
+[00:04:44] leave that. And the only thing we've got
+[00:04:46] to do next guys is just give it a
+[00:04:48] prompt. So click on the AI agent. Its
+[00:04:49] input is from a chat node. Beautiful.
+[00:04:51] But we need to give it a system prompt.
+[00:04:53] So come down to options. Click on system
+[00:04:55] message. This is kind of like its hard
+[00:04:56] wiring instructions. The thing that go
+[00:04:58] into its brain. So click on expression
+[00:04:59] to full screen. And I'd like you to give
+[00:05:00] it this prompt, which is basically
+[00:05:02] you're an AI agent prompt. Google Sheets
+[00:05:04] manager, call processes, read the
+[00:05:05] message, review the sheets. Oh my
+[00:05:07] goodness. Oh my good. Do you know I get
+[00:05:10] so fired up about these sheets, guys, my
+[00:05:11] watch even flies off. Then what? It's
+[00:05:13] going to analyze. It's going to update.
+[00:05:15] It's going to confirm. And then we just
+[00:05:16] basically list out the available tools
+[00:05:18] it's got. It can read Google Sheets. It
+[00:05:19] can update. And then just some
+[00:05:20] guidelines and response format. So shall
+[00:05:22] we check out to see if this works? Let's
+[00:05:25] open chat. Okay. Number one. Hey, could
+[00:05:27] you just confirm what is Jack Roberts's
+[00:05:29] budget? Bam. Agents working open chat
+[00:05:31] model. Simple memory's been checked. Now
+[00:05:33] you see guys, goes to simple memory. It
+[00:05:34] will tell me. You ask what Jack's budget
+[00:05:36] is. So it's not going to have amnesia
+[00:05:37] like freaking door of the fish or
+[00:05:38] whatever it was called find. I don't
+[00:05:40] know. I don't want to find an email in
+[00:05:41] my spare time. Don't judge me. Now I
+[00:05:43] would like to change Jack Robert's
+[00:05:45] budget to $4 million. Let's just see if
+[00:05:47] it changes. It's working. Now if we see
+[00:05:49] the append one go, we know that it's
+[00:05:50] worked. So it's getting rows. It's
+[00:05:52] checking information. It's using model.
+[00:05:54] It's updating it. Interesting. has that
+[00:05:56] updated. It's update our budget. So, I'm
+[00:05:58] not guys, I'm not even going to check
+[00:05:59] out Google Sheets. I'm just going
+[00:06:00] straight off to bolt because this is our
+[00:06:02] new source of truth. And let me refresh
+[00:06:03] the date. Now, this number here changes
+[00:06:05] to a four. This has worked. Let's see.
+[00:06:07] Refresh it. 4.31 million. Jack Roberts'
+[00:06:11] budget is 4 million. Guys, can you see
+[00:06:13] how crazy this is? Now, you've just got
+[00:06:15] a chatbot that you yap with and it
+[00:06:16] dynamically updates anything that you
+[00:06:18] want to. That's how freaking crazy this
+[00:06:20] thing is. Now, what have we done? We
+[00:06:22] have connected crucially this is really
+[00:06:23] important to understand bolt and this
+[00:06:25] and also this. The question is now what
+[00:06:27] if we could actually from bolt actually
+[00:06:30] go to level three. Now level three is
+[00:06:33] the ability to action automations
+[00:06:35] dynamically from the dashboard. So I'm
+[00:06:37] going to give this a particular prompt
+[00:06:39] here. And before I can do that we're
+[00:06:40] actually going to send that information
+[00:06:42] over to NAM. So what I'm going to do is
+[00:06:45] I'm going to deactivate this guy for a
+[00:06:46] moment. I'm going to come down add a web
+[00:06:48] hook. Okay. Come down to web hook. Now,
+[00:06:50] web hook's just fancy word for how we
+[00:06:52] connect things to other things. It's
+[00:06:55] just how we send information. If you're
+[00:06:56] playing catch, you know, you one catches
+[00:06:58] the ball like the mitts, basically the
+[00:07:00] world's worst analogy. But I think it
+[00:07:02] kind of makes sense. So, we click on
+[00:07:04] post. We click it to copy it. That's it.
+[00:07:06] That's all we're doing, guys. Grab this
+[00:07:08] web hook. Come down here, Mr. Web Hook.
+[00:07:09] Put him down there. Um, actually, I call
+[00:07:12] it he like to call Dr. Web hook this
+[00:07:14] guy. Now, we come over to Bolt and we're
+[00:07:15] going to give it the full imprompt. I
+[00:07:17] would like you to add a chat interface
+[00:07:18] terminal where I can ask questions. Make
+[00:07:21] it a WhatsApp style chat. You're going
+[00:07:23] to send the information to this web hook
+[00:07:25] and then you're going to display the
+[00:07:27] response back as a message from the AI.
+[00:07:29] Make sure it's beautifully formulated
+[00:07:30] and it makes perfect sense. Bam. Guys,
+[00:07:32] all you do paste the web hook in, hit
+[00:07:34] enter, and then bolt works its magic in
+[00:07:36] the background. Now, when why would you
+[00:07:38] use a dashboard like this? What are some
+[00:07:39] of the circumstances which you would use
+[00:07:41] this? Number one, anytime you need to
+[00:07:44] actually make a decision based on data,
+[00:07:46] you would use a dashboard like this
+[00:07:48] because the quality of decision-m goes
+[00:07:50] up. Secondly, anytime you need to do
+[00:07:52] some actions based on the data you get,
+[00:07:54] say for example, I've got loads of
+[00:07:55] projects, right? I've got loads of
+[00:07:56] customers, different budget statuses,
+[00:07:58] meetings are happening, and I need to do
+[00:07:59] things like I need to send emails. I
+[00:08:01] need to take actions, I need to do
+[00:08:02] something. AI dashboards not only
+[00:08:04] display the data in a beautiful visual
+[00:08:06] way, but they also let you take action
+[00:08:08] based on that data. And thirdly, anytime
+[00:08:11] you present anything to a client, make
+[00:08:14] sure you prioritize how it looks and the
+[00:08:16] visual effects. I can't tell you enough
+[00:08:18] times, my last business, one of the
+[00:08:20] biggest piece of feedback I always got
+[00:08:21] was, "It just looks visually amazing.
+[00:08:23] The magic behind it is incredible.
+[00:08:25] Visuality matters." Beautiful guys. Now,
+[00:08:27] do we see the chat style functionality?
+[00:08:29] We do. In the bottom right, we click on
+[00:08:31] this and we're going to send it message
+[00:08:32] says test. All right. Now, let's go over
+[00:08:35] to our N8 and workflow and just validate
+[00:08:37] this for a second. Let's just execute
+[00:08:38] the workflow. Waiting for a test URL.
+[00:08:41] Come back over to our workflow and put
+[00:08:43] on test. Workflow has started. Come back
+[00:08:46] over and it grabbed the information. How
+[00:08:48] freaking cool is that? Now, I'm going to
+[00:08:49] give it a prompt just to kind of add I
+[00:08:51] don't like the fact it's a box in the
+[00:08:52] bottom right. Although it is a freaking
+[00:08:54] gorgeous chat interface, right?
+[00:08:55] Actually, maybe it's fine. I'm just a
+[00:08:57] bit of a stickler for this sort of
+[00:08:58] stuff, but I think it's cool. All right,
+[00:08:59] we have it in the bottom right. Now,
+[00:09:00] what do we want to do? We want to add in
+[00:09:02] another AI agent. Now, this agent, guys,
+[00:09:05] what I'm going to have it to do is to be
+[00:09:07] able to make changes. I'm going to let
+[00:09:08] it go and check my calendar to book
+[00:09:11] things in my calendar and do many
+[00:09:13] different things. So, what we do is we
+[00:09:14] come over and let's add in our AI agent
+[00:09:16] like so. Exactly like before. Come down.
+[00:09:19] Let's give it a good chat model. So,
+[00:09:21] let's go for open AI. Beautiful. And
+[00:09:23] then for the tools, I'm just going to
+[00:09:24] copy these tools from before. Crl + V.
+[00:09:27] Bring them down. Excellent. And then
+[00:09:30] we'll just connect these ones like so.
+[00:09:32] And then let's add a couple of other
+[00:09:33] tools. So, one of the tools that needs
+[00:09:35] to be able to access is create emails,
+[00:09:36] right? Let's go for Gmail consume a
+[00:09:38] Gmail API tool which is cool. Operation
+[00:09:40] is to send. We'll let it determine who
+[00:09:43] subject let the AI determine HTML is
+[00:09:45] fine. Okay, you can see so I've just
+[00:09:47] clicked on this define by model by model
+[00:09:49] and message is also defined by the
+[00:09:50] model. And I believe that's it. Is there
+[00:09:52] anything we want to add in there? No, we
+[00:09:54] are good to rock and roll. Beautiful. So
+[00:09:56] that's going to send a message. So we
+[00:09:57] can now email our people. And then
+[00:09:59] finally, let's do something maybe for
+[00:10:01] calendar. So we can actually create
+[00:10:02] calendar appointments for us. Come down
+[00:10:03] here, which is great. Yeah, this is
+[00:10:06] good. and we'll say plus actually we're
+[00:10:08] going to let AI determine that. I think
+[00:10:09] that's cool. And then add field
+[00:10:11] additional properties is going to be
+[00:10:13] attendees. And then we need to just let
+[00:10:15] the AI model determine who the attendees
+[00:10:17] are and see if there's anything else
+[00:10:18] that we would like. Um all the color ID.
+[00:10:22] So you can add so many different things
+[00:10:23] that you want. Summary. Let's let the AI
+[00:10:25] add a summary as well. I think it' be
+[00:10:26] really cool. And then we check select
+[00:10:28] our calendar which is my calendar. And
+[00:10:30] fantastic. Then guys, we just need to
+[00:10:32] give it a beautiful prompt. But before
+[00:10:34] we do that, we also need to give the
+[00:10:36] ability to check out my calendar, right?
+[00:10:38] So, let's just duplicate this guy real
+[00:10:40] quick cuz it needs to know when I'm free
+[00:10:42] cuz we don't get double book, do we
+[00:10:43] guys? That's a bit crazy. So, instead of
+[00:10:45] create, just come to get menu to get the
+[00:10:47] events. Uh, and I'll let the um AI
+[00:10:50] determine that. And I think that's
+[00:10:51] absolutely fine. And then we want to
+[00:10:52] give the AI agent the prompt. So, click
+[00:10:54] on this guy. Come down and ah, okay. So,
+[00:10:57] instead of connect tracker mode, click
+[00:11:00] on define below. And then we're going to
+[00:11:02] come over here and grab out where we
+[00:11:03] sent the message which is I believe was
+[00:11:06] test. So bam, we pull that over.
+[00:11:08] Fantastic. And then you want to come
+[00:11:10] down to options, add system message. Uh
+[00:11:12] let's go to expression. So we can full
+[00:11:14] screen this. And then come here and then
+[00:11:16] bam. All right. Exact same thing except
+[00:11:18] for I've given it core processes. I've
+[00:11:20] told it tools. It can read, it can
+[00:11:22] update, it can check the calendar, it
+[00:11:24] can check appointments, it can draft
+[00:11:25] emails, and it's got guidelines.
+[00:11:28] Excellent. Okay. And then finally, you
+[00:11:30] want to add in a final web hook node
+[00:11:31] that's just going to respond and send
+[00:11:33] the information back. Respond with uh
+[00:11:36] first incoming item is fine, but what we
+[00:11:38] need to do is click on this guy and
+[00:11:40] instead of respond immediately, just
+[00:11:42] respond using the respond to web node.
+[00:11:44] Awesome. Brilliant. So guys, let's just
+[00:11:46] check this actually works. Hey dude, do
+[00:11:48] me a favor. Change Jack Roberts' budget
+[00:11:50] from 4 million to $5 million. Then we
+[00:11:53] come over to scenario. We've executed it
+[00:11:54] and we come back over to Bolt. We hit
+[00:11:56] enter. It's thinking. It's having some
+[00:11:58] thought. Come back over. We're going to
+[00:11:59] test it. See what happens. It's amending
+[00:12:01] the workflow. Awesome. We come back over
+[00:12:02] to Bolt. Hey, I've updated it. Refresh
+[00:12:04] the data to go from four to five. Bam.
+[00:12:07] How freaking crazy is that? Now, let's
+[00:12:09] say I want to send Jack an email. Okay.
+[00:12:11] Asking him if he can increase his budget
+[00:12:13] to $6 million. So, I'm going back over
+[00:12:15] to the workflow. We're going to execute
+[00:12:17] this one here. Hey, dude. Could you do
+[00:12:19] me a favor? Could you drop Jack an email
+[00:12:21] um to ask if he can increase his budget
+[00:12:23] to $6 million? Thank you.
+[00:12:26] Bam. Right. Now we come back over to the
+[00:12:29] scenario. Let's see what happens here.
+[00:12:30] It's having a little thing. It's
+[00:12:32] creating a message. It sent a message.
+[00:12:33] Comes back over now to Bolt and see what
+[00:12:35] it says when we get our beautiful
+[00:12:37] update. And I can actually check this.
+[00:12:38] It's asked to email. Let's pull this
+[00:12:40] email up. And here we go, guys. I hope
+[00:12:41] this message finds you well. I want to
+[00:12:42] check if you consider increasing your
+[00:12:44] budget to $6 million. Please let me
+[00:12:46] thought know your thoughts. Thank you.
+[00:12:47] Best regard to your name. It said that
+[00:12:48] because we've not specified who we're
+[00:12:50] sending it from. And we also want to
+[00:12:51] remove this N8. The way that you do
+[00:12:53] that, by the way, is come into Gmail,
+[00:12:55] come down, come down to options, and
+[00:12:57] then we want to append any attribution.
+[00:12:59] Turn that off. And then we'll just say
+[00:13:01] on the agent here, all updates must be
+[00:13:03] sent from Jack. Cool. There we go.
+[00:13:05] Beautiful. And now you've learned those
+[00:13:06] three levels. Here are five high ROI
+[00:13:08] systems that you can use right now for
+[00:13:09] your business or somebody else's
+[00:13:11] business to crush it. Number one is a
+[00:13:13] social media system or operating
+[00:13:16] dashboard. We can pull in your LinkedIn,
+[00:13:18] your Instagram, your Facebook, your X
+[00:13:20] numbers. So, you can dynamically see all
+[00:13:22] of this information in the dashboard.
+[00:13:24] You can even pull in like competitive
+[00:13:27] videos to see what is crushing it,
+[00:13:28] what's got really high levels of
+[00:13:31] resonance, and then use that to inform
+[00:13:32] your own strategy. It's one of the
+[00:13:34] reasons that I've been able to get to
+[00:13:35] over 30,000 follows on Instagram in just
+[00:13:37] a couple of months using these
+[00:13:38] strategies and these exact same
+[00:13:40] dashboards. Number two is using a CRM.
+[00:13:42] Imagine having your customer, right?
+[00:13:44] Their budget, every email that they've
+[00:13:46] ever sent you, any Calendarly
+[00:13:47] appointment, any any contact, any piece
+[00:13:49] of information, all dynamically
+[00:13:51] populated with the ability for you to
+[00:13:53] track exactly where every single one of
+[00:13:55] your leads is. It's like a CRM, but it's
+[00:13:58] got infinite context. And it's context
+[00:14:00] that absolutely crushes it. It gives you
+[00:14:02] such levels of customizability. You can
+[00:14:05] see things at a glance and make better
+[00:14:07] decisions to take it to a completely new
+[00:14:08] level. Number three is using for
+[00:14:11] business operations. Let's say for
+[00:14:12] example, I don't know, you had a
+[00:14:14] recruitment business. Imagine a
+[00:14:16] beautiful dashboard. Candidates apply.
+[00:14:18] They appear on the board. We can assess
+[00:14:19] it. We can have AI that does it. We can
+[00:14:21] move them over to consider to approve to
+[00:14:23] next stage. That then can trigger at the
+[00:14:26] simple mere movement of considering to
+[00:14:28] next stage or level one, level two, a
+[00:14:30] voice agent to call them up, to send
+[00:14:32] them a text, to send them an email, to
+[00:14:33] send them assessments. It can then grade
+[00:14:35] it and show you everything in a
+[00:14:36] dashboard. You basically build a full
+[00:14:39] recruitment system in one freaking
+[00:14:41] terminal. you can use whenever you want
+[00:14:42] to and that's just one example of the
+[00:14:44] kind of system you can build for your
+[00:14:46] clients or for your own business. Number
+[00:14:47] four is actually like a custom GPT. So I
+[00:14:50] built something in my community called
+[00:14:51] Jack GPT. It's trained on every single
+[00:14:53] video I've ever done. It's trained on my
+[00:14:56] entire classroom. It knows how I speak.
+[00:14:58] It's trained on all of the databases for
+[00:15:00] all the knowledge. And people can ask
+[00:15:01] that questions whenever they want to
+[00:15:03] say, "Hey, what should I do next? Cuz
+[00:15:05] I'm struggling with this." And Jack GPT,
+[00:15:06] unlike the real Jack, doesn't actually
+[00:15:09] sleep. He doesn't drink as much coffee
+[00:15:10] as I do, but he doesn't sleep and he can
+[00:15:11] answer all that stuff. And I built this
+[00:15:13] in an application like Bolt. Um, so
+[00:15:15] people can just talk to dynamically and
+[00:15:17] it's got so much freaking potential
+[00:15:19] because now it kind of just democratizes
+[00:15:22] me in a way and it can answer sometimes
+[00:15:24] things way better than I can. Well, I
+[00:15:26] don't want to admit that yet, but it
+[00:15:27] basically essentially can answer things
+[00:15:29] better than I can at certain times. So,
+[00:15:30] it's literally insane. You can use that
+[00:15:32] to completely revolutionize your
+[00:15:34] customer experience beyond a basic
+[00:15:36] simple silly chatbot. and it can make it
+[00:15:38] do so much more. And number five, which
+[00:15:40] I think is the most important here, is
+[00:15:42] you. You can use these dashboards to
+[00:15:44] completely change anything you're doing
+[00:15:45] right now. If you want to track what
+[00:15:46] you're eating, your productivity, your
+[00:15:48] meetings, your appointments, your
+[00:15:49] calendars, it is next generation
+[00:15:52] productivity management and its
+[00:15:54] functionalities are insane. Now, to
+[00:15:56] learn how to do this in an AI operating
+[00:15:58] system and take this to the next level,
+[00:16:00] watch this video on

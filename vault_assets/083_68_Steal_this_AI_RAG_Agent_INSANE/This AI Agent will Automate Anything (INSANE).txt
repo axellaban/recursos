@@ -1,0 +1,1208 @@
+[00:00:00] hey vaa I fancy nandos do me favor list
+[00:00:02] every single nandos that exist in leads
+[00:00:04] and their addresses thanks we test the
+[00:00:06] workflow and check this out guys I come
+[00:00:08] over goes AI agent he checks the model
+[00:00:10] he's going to check with the Sur API and
+[00:00:12] look at the response we get back right
+[00:00:14] there every single Nando we've got the
+[00:00:16] city center kkol and how it works guys
+[00:00:18] in this video I'm going to show you how
+[00:00:19] you can build a very simple AI agent in
+[00:00:23] N8 and I'm going to show you how we can
+[00:00:25] add a very easy to ous rag retrieval
+[00:00:29] system and also how we can update any
+[00:00:31] document we wish to to this database so
+[00:00:33] that you can recall it at any time you
+[00:00:35] want to now this is going to look really
+[00:00:37] different than make so I want to explain
+[00:00:38] briefly start with an overview of what
+[00:00:40] we're going to cover why we're covering
+[00:00:41] it and then I'm going to show you step
+[00:00:42] by step how you can build this system
+[00:00:44] with memory with rag retrieval and as
+[00:00:47] simple terms as humanly possible so if
+[00:00:49] you follow it step by step you'll be
+[00:00:50] able to use this system now in my last
+[00:00:52] video I showed you a full system of how
+[00:00:54] to build an AI agent in meg.com now one
+[00:00:57] of the really big differences between
+[00:00:59] me.com and na1 is that make is linear in
+[00:01:02] other words it starts from like the left
+[00:01:04] and builds all the way over to the right
+[00:01:06] but one of the key differences with n8n
+[00:01:08] is that it it's a nonlinear workflow so
+[00:01:11] for example we can have this agent in
+[00:01:13] this system here and this agent can
+[00:01:15] access multiple different tools come
+[00:01:18] back and then decide what it wants to do
+[00:01:19] so we don't have to make it sequential
+[00:01:22] I'd say that the Flows In n8n can be
+[00:01:24] simpler but they're more complicated to
+[00:01:27] learn and which platform we use for
+[00:01:29] which circum stands depends broadly on
+[00:01:31] what we want to achieve almost in all
+[00:01:33] cases make.com is going to be easier and
+[00:01:35] simpler but n does have some advantages
+[00:01:38] in some respects so I wanted to run
+[00:01:39] through and show you how you build this
+[00:01:41] in a sort of really simple way now the
+[00:01:44] basic flow of this is going to be this
+[00:01:45] we're going to send a message via
+[00:01:46] telegram we can also use WhatsApp if we
+[00:01:47] wish to but I'm just going use telegram
+[00:01:49] to keep it very simple just like in my
+[00:01:50] last automation we've got the agent
+[00:01:53] which is this beautiful guy we need to
+[00:01:55] give him a little bit of a haircut give
+[00:01:56] him an upgrade on the Emoji but he's
+[00:01:57] there ready to rock and roll and then
+[00:01:59] with got a few key functionalities the
+[00:02:01] first one is going to be Memory its
+[00:02:03] ability to retain knowledge so what's
+[00:02:05] really cool about this is we can add in
+[00:02:07] this thing here memory which means that
+[00:02:09] it will have retained context for either
+[00:02:12] that chat window that chat conversation
+[00:02:14] or um for a certain period of time if we
+[00:02:16] wish to so if I said to it something
+[00:02:17] like hey the secret number is 11 and he
+[00:02:20] says great got it and then I ask another
+[00:02:22] message hey what's the secret number it
+[00:02:23] will know because it will have context
+[00:02:25] of the conversation that we already had
+[00:02:27] with it on top of that it's able to
+[00:02:30] search our rag database if you're not
+[00:02:32] familiar with what retrievable augmented
+[00:02:34] generation is it's think of it like an
+[00:02:36] infinite bookshelf where we give um
+[00:02:39] either a million different pieces of
+[00:02:40] information and it all goes into an
+[00:02:41] individual draw and instead of like
+[00:02:43] looking through every single piece of
+[00:02:45] information it only grabs the bits that
+[00:02:47] are required based on a unique code that
+[00:02:49] is generated and it basically means we
+[00:02:51] can give it near infinite memory and
+[00:02:53] it's way more Dynamic to use and you
+[00:02:55] know way quicker and just a lot better
+[00:02:57] and scalable and more production ready
+[00:02:59] than simp simply just giving it the
+[00:03:00] information in the prompt now we've got
+[00:03:02] that as well the other thing we've got
+[00:03:03] is the tools so I just added some really
+[00:03:05] basic simple tools so we've got the Sur
+[00:03:07] API I'll show you how to use that that's
+[00:03:09] its ability to go into Google and pull
+[00:03:11] different informations from the surf API
+[00:03:13] you can see all the different things
+[00:03:15] that we can do here with this it's
+[00:03:17] really cool actually and so I'll show
+[00:03:18] you how you connect that and give it
+[00:03:19] some internet access there's other
+[00:03:20] things we can do like connected to
+[00:03:22] perplexity and all these other different
+[00:03:23] tools and I can show you that in future
+[00:03:25] videos if you'd like um the other tools
+[00:03:27] we got there is the classic stuff like
+[00:03:28] Gmail Google Calendars just really
+[00:03:30] really basic bread and butter stuff uh
+[00:03:32] and then ultimately what it will do is
+[00:03:33] send a response back to us so key featur
+[00:03:36] this video now built an NN it is modular
+[00:03:38] so you can then have agents that use
+[00:03:40] other agents uh we can even call other
+[00:03:42] workflows at na10 but just to keep this
+[00:03:44] one very simple because I wanted to
+[00:03:46] build this system in a way that you
+[00:03:48] really would just get it live and
+[00:03:50] minimize any kind of like um you know
+[00:03:52] trip wise you fall over uh again you can
+[00:03:54] trigger this WhatsApp telegram slack
+[00:03:55] whichever one you like to um you can
+[00:03:57] also execute multiple different tools in
+[00:04:00] one request so we can use creating a
+[00:04:01] draft and creating events and also
+[00:04:04] checking Google and checking our
+[00:04:05] database all with one simple thing which
+[00:04:07] I think is really flipping cool um and
+[00:04:09] then also we've got all the other bits
+[00:04:10] that I showed you as we go through that
+[00:04:12] so I think what I'd like to do first of
+[00:04:14] all is I'll we're going to build the AI
+[00:04:16] agents together to get that
+[00:04:17] functionality set up and ready once
+[00:04:18] we've done that I'm going to show you
+[00:04:19] how you canr this rag system which is so
+[00:04:23] fraking simple it's unbelievable to the
+[00:04:25] point that guys all you ever do you
+[00:04:27] upgrade basically you upload any
+[00:04:29] document any type and it will just go
+[00:04:31] straight through to Pine code and it
+[00:04:32] figures everything else out with the
+[00:04:34] automation itself which I think is so
+[00:04:36] refreshing and easy and simple and then
+[00:04:38] what we do at the end of it we've even
+[00:04:40] got these recursive character text
+[00:04:41] Splitters which by the way if your
+[00:04:42] reference I'll explain when we get there
+[00:04:45] but if you like have a very long
+[00:04:46] document or something it will chunk it
+[00:04:48] for us so for example if we have a
+[00:04:50] thousand characters in a document we
+[00:04:53] want the last 100 characters of that to
+[00:04:55] then also be the next one so of a
+[00:04:57] continuity perspective and we can pull
+[00:04:58] the best information possible but don't
+[00:05:00] worry that will make sense when we get
+[00:05:01] there and then finally how we can then
+[00:05:03] use this Vector store retrieval as a
+[00:05:05] tool to get information so we're going
+[00:05:07] to create a brand new scenario of course
+[00:05:08] if you want the blueprint the agents or
+[00:05:09] the scenario so you can literally come
+[00:05:11] over here input from file and get the
+[00:05:14] entire automation pop automatically
+[00:05:16] that'll be available over in the school
+[00:05:17] Community I'll pull link down below for
+[00:05:18] you so the first thing we do guys is we
+[00:05:20] head over to nn.com for this workflow
+[00:05:22] and you create a brand new workflow now
+[00:05:24] our first St pit is going to be telegram
+[00:05:26] so we come over here and I'll try to
+[00:05:28] explain some of the differences between
+[00:05:29] this a meg.com and if this at any point
+[00:05:32] feels complicated that's absolutely fine
+[00:05:34] I'll do my very best to break this down
+[00:05:35] for you step by step and it will make
+[00:05:37] sense if you stick through this so the
+[00:05:39] first thing we want to do now one of the
+[00:05:41] cool things that we can do with uh an it
+[00:05:43] has like an inbt chat functionality
+[00:05:45] which you can then go and Ed on websites
+[00:05:47] which is really cool but because we're
+[00:05:48] building the next Javis we you know
+[00:05:50] we're Iron Man right we want something
+[00:05:52] that we can trigger really easily so
+[00:05:54] we're going to use telegram for that so
+[00:05:56] all we do is we type in the beautiful
+[00:05:57] word telegram over here we click this
+[00:05:59] guy and look at this very very easy and
+[00:06:01] we're going to click on on message for
+[00:06:03] trigger like this and you're going to
+[00:06:05] see whenever looks something like this
+[00:06:07] so the first thing we need to do is
+[00:06:08] connect this with our telegram account
+[00:06:11] so for to do that I'm going to come down
+[00:06:12] here and you won't see this one
+[00:06:14] obviously you'll need to create your
+[00:06:15] credential like so and you'll be looking
+[00:06:17] for an access token and to do that guys
+[00:06:19] you come over to telegram search
+[00:06:20] functionality and you're going to search
+[00:06:22] for the bot F like so he'll pop up
+[00:06:24] you're then going to give him this
+[00:06:25] particular thing here which is new for
+[00:06:28] SL new bot like so
+[00:06:30] all right we want to call name what we
+[00:06:32] going to call it we're going to call
+[00:06:33] this one coffee actually I'm going to
+[00:06:35] say coffee with loads of ease there we
+[00:06:37] go beautiful can you imagine if that's
+[00:06:39] taken okay we need to give that with a
+[00:06:40] do bot that's absolutely fine come back
+[00:06:42] over here coffee bot new bot bot oh my
+[00:06:46] goodness this guy needs his coffee this
+[00:06:48] is crazy all right cool so we got this
+[00:06:50] okay
+[00:06:51] coffeebot beautiful it's done and then
+[00:06:53] it gives us this access token here which
+[00:06:55] is great and all we do guys is we simply
+[00:06:56] copy that we come up to the access token
+[00:06:59] we enter it in and then we click save
+[00:07:01] and just like that we've created the
+[00:07:03] credential for n10 now you'll notice
+[00:07:05] user interface is a little bit different
+[00:07:06] than make make is a lot more beginner
+[00:07:08] friendly it's like I think the learning
+[00:07:10] curve for na10 is slightly higher it's
+[00:07:12] more complicated for those people who
+[00:07:13] really want to take it to a bit more of
+[00:07:14] an advanced level um it's great so
+[00:07:16] that's that connection has been created
+[00:07:17] we like that trigger on message that's
+[00:07:19] absolutely fine and then what we're
+[00:07:21] going to do is we're going to test a
+[00:07:22] step over here once this Google thing
+[00:07:24] decides it's fine to what's it cool all
+[00:07:26] right cool so we're going to come over
+[00:07:27] to telegram where then we've got the
+[00:07:28] coffee bot we're going to start I'm
+[00:07:29] going to say one a
+[00:07:31] second hey there and let's test the step
+[00:07:34] we come back up with the telegram and we
+[00:07:36] just enter the message in and as it
+[00:07:38] picked it up we come and have a look and
+[00:07:40] do we see this and just right that guys
+[00:07:42] we see right there hey there it's pul
+[00:07:43] the text awesome but what we're going to
+[00:07:45] do guys is we are going to pull through
+[00:07:47] an audio message so we're going to test
+[00:07:48] this work for likeo come over to
+[00:07:50] telegram bar and let's say yo yo yo
+[00:07:52] what's up give me the 411 bam that's
+[00:07:55] done and as you can see if we click on
+[00:07:56] this guy we can see basically we get
+[00:07:58] this file IDE cool first thing you want
+[00:08:00] to do is download the file so we come
+[00:08:01] over here to telegram it's pretty much
+[00:08:03] just like I showed in the last video
+[00:08:04] it's the exact same steps I showed you
+[00:08:05] in the video last week where we have
+[00:08:07] this thing and we set it up but if you
+[00:08:08] haven't seen that video I'll just show
+[00:08:10] you again here because we're basically
+[00:08:11] just replicating it in n8m cool so again
+[00:08:14] what we do guys is we type in here
+[00:08:16] telegram bring this guy up and then
+[00:08:18] going to for get a file option which is
+[00:08:20] awesome now the way this it's a lot more
+[00:08:23] program Centric in the way the language
+[00:08:26] works so think of it like this the way
+[00:08:28] that telegram works on left hand side we
+[00:08:30] have the inputs so what's coming from
+[00:08:32] before it on the right hand side is the
+[00:08:34] outputs and other words what it
+[00:08:35] generates and what it pushes forward
+[00:08:37] they will always feel a little bit
+[00:08:38] strange when you compare it to a
+[00:08:40] beautiful familiar make but it will make
+[00:08:42] sense if you stick with it for a short
+[00:08:43] period of time so the resources file
+[00:08:46] what we're saying here is file ID now
+[00:08:49] nine times out of 10 you have this
+[00:08:50] choice between fixed and expression you
+[00:08:53] really probably will be leaning on
+[00:08:54] expression more often than that okay and
+[00:08:56] as you can see I'm hovering over this so
+[00:08:58] unlike make.com where you can see the
+[00:09:00] screen as it goes this is you kind of
+[00:09:01] grab and go so what we're saying to this
+[00:09:03] is I want you to download the file that
+[00:09:06] was just created so I see this file ID
+[00:09:08] I'll hover over I can grab it bring him
+[00:09:11] over and when it goes green that means
+[00:09:12] you can let go just like that and it's
+[00:09:14] done and then all times you can test
+[00:09:17] step like this one thing I would say
+[00:09:19] about any Ed it does make testing
+[00:09:21] individual modules a lot easier to make
+[00:09:23] you have to bring it over I mean you can
+[00:09:24] right click and run module I guess so to
+[00:09:26] be fair it isn't that difficult okay
+[00:09:28] awesome and we've got that flipping cool
+[00:09:31] next thing we want to do here guys is
+[00:09:32] then just simply um download that so
+[00:09:34] we're going to go for chat GPT open AI
+[00:09:37] beautiful and then what we're going to
+[00:09:38] go for here is
+[00:09:40] transcribe a uh recording like so
+[00:09:43] transcribe a recording which is great
+[00:09:45] and what's really cool here guys it's
+[00:09:46] autop populated data so can you see the
+[00:09:49] left hand side this is just called Data
+[00:09:51] so it's already done that for us so if I
+[00:09:53] test this step here for instance execute
+[00:09:55] the noes yo yo yo what's up give me the
+[00:09:57] 411 it's simple is that and pretty much
+[00:10:00] that's the first three steps already
+[00:10:02] done so the next stage you want to do
+[00:10:03] now is add in the AI agent and you'll
+[00:10:05] notice when we built this smake we had
+[00:10:07] kind of like because we built linear
+[00:10:09] agents they went down different Pathways
+[00:10:11] and there's advantages of that but this
+[00:10:13] na an agent is going to be one guy that
+[00:10:15] does have all these incredible tools
+[00:10:17] plugged into him so we come over here
+[00:10:18] we're going to type in AI agent of
+[00:10:20] course we've got AI agent we're going to
+[00:10:21] click on him over here which is awesome
+[00:10:24] all right so let's start off with the
+[00:10:25] chat model again for this one let's just
+[00:10:27] do open AI oops
+[00:10:30] now you'll need to create a new
+[00:10:31] credential the way that you do that is
+[00:10:32] you click on this create new credential
+[00:10:34] It'll ask for an API key to get that API
+[00:10:37] key we go to platform. open.com and on
+[00:10:39] this page here guys you come down here
+[00:10:41] click on API Keys create a new secret
+[00:10:43] key Give It Whatever language you'd want
+[00:10:45] to like n an loads of stuff you can then
+[00:10:47] copy that key we can then come back over
+[00:10:48] to NN and we just type in the a API key
+[00:10:51] here and it's all on there and then we
+[00:10:53] click on Save awesome so that credential
+[00:10:56] has been created successfully and once
+[00:10:57] you've done that guys it will Auto
+[00:10:58] Select you 4 or many that's absolutely
+[00:11:01] fine you can use this button here to
+[00:11:03] basically test proofs modules but we
+[00:11:04] don't need that right now we come off
+[00:11:06] and then we've got the model which is
+[00:11:07] Ace now memory is an interesting one
+[00:11:09] guys we can do things that connect it to
+[00:11:11] what we call postgress don't worry about
+[00:11:13] that for now for the purposes of our
+[00:11:15] personal assistant using this thing here
+[00:11:17] which is the window buffer memory is
+[00:11:20] absolutely fine and we won't really need
+[00:11:22] to use anything else um above that for
+[00:11:24] just as purposes at the moment that's
+[00:11:26] okay we come and click off and we click
+[00:11:27] okay there which is good so we've got
+[00:11:29] the model that is going to power the
+[00:11:31] agent we've got this memory which is
+[00:11:33] going to be it's kind of like retained
+[00:11:35] the memory for the conversations that
+[00:11:36] we're going to have and then we've got a
+[00:11:38] list of tools that it's going to flip
+[00:11:39] and use okay now just to close off the
+[00:11:41] loop what I want to add at the end of
+[00:11:43] this is just its ability to send us back
+[00:11:44] a message and then we're going to stack
+[00:11:46] it up with different tools so we come
+[00:11:48] down here we're going to type in
+[00:11:50] telegram we're going to send send a
+[00:11:52] message let's have a look send a text
+[00:11:55] message that sounds pretty good to me
+[00:11:56] and the message is absolutely fine let's
+[00:11:58] just test a step real quick quick no one
+[00:12:00] put data yet that's fine and we got the
+[00:12:02] chat ID so question is how do we find
+[00:12:04] the chat ID guys to find your
+[00:12:05] information you can go to Raw data bot
+[00:12:07] start a chat like I did do before hit
+[00:12:08] for/ start and your chat ID and all the
+[00:12:11] information will appear for you
+[00:12:12] automatically and all we simply do is
+[00:12:14] copy that chat ID cool so before we
+[00:12:15] enter the information just come off here
+[00:12:17] let's just check the AI agent for
+[00:12:18] instance let's just hit play on him
+[00:12:20] error in sub no window buffer memory no
+[00:12:22] session ID find okay that's absolutely
+[00:12:24] fine okay so what this needs is we're
+[00:12:26] going to come down to Define below and
+[00:12:28] session ID and then we've got the key
+[00:12:29] for an expression and let's click on
+[00:12:31] mapping on the left hand side and we
+[00:12:33] come down to AI agent and we're going to
+[00:12:35] look for um telegram trigger which is
+[00:12:38] fine and for the session ID guys just
+[00:12:41] add in let's have a quick look chat ID
+[00:12:44] here like
+[00:12:46] that which is going to be into the key
+[00:12:49] cool beautiful then come off perfect
+[00:12:51] then we come back over to AI agent let's
+[00:12:53] just give him a little test test step no
+[00:12:55] prompt specified that's absolutely fine
+[00:12:57] so we want to do guys in a prompt is
+[00:12:59] come down here click on Define below and
+[00:13:01] the text here is going to be on
+[00:13:03] expression and let's just grab this and
+[00:13:05] bring it over here like so and then we
+[00:13:07] can simply text the step test for step
+[00:13:09] excuse me there we go which is really
+[00:13:11] cool come down to Output yo yo yo what's
+[00:13:13] up give me the 41 one yo not much and
+[00:13:15] it's giving us a little bit of an output
+[00:13:17] which is really flipping cool then we
+[00:13:18] can come back over to our telegram
+[00:13:19] module over here we double click on this
+[00:13:22] guy chat ID just enter the ID that you
+[00:13:24] got from your telegram bot and then in
+[00:13:25] terms of text we click on expression and
+[00:13:28] we just Gra grab output and drop it in
+[00:13:31] right there and then enter your chat ID
+[00:13:32] from telegram cool and I think guys we
+[00:13:34] are ready to test the entire scenario so
+[00:13:36] click on test workflow like this for
+[00:13:37] example comes to telegram I've got the
+[00:13:39] coffee guide so let's ask it a really
+[00:13:40] simple question like hey do me a favor
+[00:13:43] tell me what number comes after
+[00:13:45] 235 we hit enter it goes to the AI agent
+[00:13:49] and then let's have this sure thing the
+[00:13:50] number that comes after 235 is 236 do
+[00:13:53] you need help with anything else now
+[00:13:54] just to show you how the memory Works
+[00:13:56] guys let's just ask it the number that I
+[00:13:57] just gave it
+[00:13:59] hey there do me a favor what was the
+[00:14:00] last number that I gave you now this I
+[00:14:03] think is really cool I come down I test
+[00:14:05] the workflow and what I do like about
+[00:14:08] how this works see 235 so it has that
+[00:14:11] memory already so like it has you see
+[00:14:13] what I'm saying on the make scario we
+[00:14:15] had to add that to air table and bring
+[00:14:16] it back what is Nifty about N1 is the
+[00:14:18] fact it will reach back and has that
+[00:14:20] kind of retained memory which I think is
+[00:14:21] really flipping cool amazing so we've
+[00:14:24] done this we basically built a
+[00:14:25] functional agent now obviously there's
+[00:14:27] other things we can do like make it
+[00:14:28] texing split it out but I just want to
+[00:14:30] keep this very simple for your first
+[00:14:31] automation on N1 so what we're going to
+[00:14:33] start doing now guys is adding in some
+[00:14:35] tools and abilities to do different
+[00:14:36] things the first thing I want to give it
+[00:14:38] access to is the beautiful internet so
+[00:14:41] to do that come down to Tool and you're
+[00:14:43] going to type in sep which is the surf
+[00:14:46] API for Google search we click on this
+[00:14:48] guy now what you're going to need to do
+[00:14:50] is come down and create new credential
+[00:14:52] but it asks for an API key now to get
+[00:14:54] the API key we're going to head over to
+[00:14:55] the Sur API website okay I'm on the Sur
+[00:14:58] API website here guys you're going to
+[00:14:59] come top right and click on register now
+[00:15:01] you can sign in with Google or whatever
+[00:15:03] different platforms that you would like
+[00:15:04] and once you've done that guys you just
+[00:15:05] need to validate your email address and
+[00:15:07] your phone number now for free you get a
+[00:15:09] 100 searches a month with this API we
+[00:15:11] can also do different things like build
+[00:15:13] tools to use complexity but again I just
+[00:15:15] wanted to keep this extremely simple for
+[00:15:17] you and as you can see here you need to
+[00:15:18] email which I've already done but if I
+[00:15:20] just refresh this page I should go
+[00:15:21] straight through to the homepage Now
+[00:15:23] Incredible and as you can see down here
+[00:15:24] guys You' got the private API key and
+[00:15:26] all you simply do is copy that API ke
+[00:15:29] and head back over to na cool and then
+[00:15:30] once you've selected that guys your
+[00:15:32] credentials will be completely done and
+[00:15:34] we come off like this and now it's got
+[00:15:36] the beautiful Sur so let's test this
+[00:15:38] workflow and ask it a question it
+[00:15:39] wouldn't know unless it was able to
+[00:15:41] search internet so why don't we ask it
+[00:15:42] something like I don't know what would
+[00:15:44] it only know how about this list me five
+[00:15:48] coffee shops at existing leads with
+[00:15:50] their
+[00:15:50] address okay beautiful and we should see
+[00:15:53] it's using the tool which is awesome
+[00:15:55] it's using this model over here it's
+[00:15:56] making moves and let's just see what it
+[00:15:58] comes back with now
+[00:15:59] we give us a beautiful second and look
+[00:16:01] at this guys Lanes Lega and we've got
+[00:16:04] coffee room for Beds which I think is I
+[00:16:06] can get I can actually I've drunk at
+[00:16:08] three two of these places the p is
+[00:16:10] phenomenal and Lance is good cable so
+[00:16:13] now it's now got this Internet access
+[00:16:15] which I think is pretty flipping cool so
+[00:16:16] that's internet access signed sealed and
+[00:16:18] delivered let's do something else now
+[00:16:20] about giving it the ability to create
+[00:16:22] appointments and you'll know from the
+[00:16:23] last module that I did over here one of
+[00:16:25] the things we enabled it to do was to
+[00:16:26] add things to notion which we can do
+[00:16:28] here create a point appointments check
+[00:16:29] appointments all that sort of stuff so
+[00:16:31] if you want to replicate that in here
+[00:16:33] all we do we hit this Plus tool we're
+[00:16:34] going to go for Google uh calendar
+[00:16:37] Google Calendar tool like so now the
+[00:16:39] first thing you want to do here is add
+[00:16:40] your own credentials and that's a tiny
+[00:16:42] bit complicated so I'm going to show you
+[00:16:43] exactly how that works step by step cool
+[00:16:45] guys so the first you want to do is sign
+[00:16:46] in with Google so select on this and
+[00:16:48] enter your email address and password
+[00:16:49] and once you land the Google Cloud
+[00:16:51] console guys you're going to to select a
+[00:16:52] project in the top left uh you can
+[00:16:54] create anyone that you want to it really
+[00:16:55] depends on what you'd like so we'll call
+[00:16:56] this one here new project to the top uh
+[00:16:58] let's call this one
+[00:17:01] build together oh you can go N1 or
+[00:17:04] whatever you'd like to come down and
+[00:17:05] then click on create in the bottom left
+[00:17:07] hand side beautiful now that's done guys
+[00:17:08] click on select project to make sure
+[00:17:10] that that is the one that is fully
+[00:17:10] loaded up which is fantastic going to
+[00:17:12] come back off this close this down for a
+[00:17:14] second and as you can see we know it's
+[00:17:16] right one here because we've got Build
+[00:17:17] Together in the top left hand side cool
+[00:17:18] guys on this page just contrl F API
+[00:17:20] you'll see down here explore and enable
+[00:17:22] apis like so which is awesome and then
+[00:17:24] come down on the left hand side and
+[00:17:25] click on o consent screen to load this
+[00:17:28] page up right here so I'm going external
+[00:17:29] because I've got my own Don name but
+[00:17:31] otherwise it' be internal we come down
+[00:17:32] and we click on create we give it the
+[00:17:34] app name we call this one N8 and build
+[00:17:37] together and crucially guys what's
+[00:17:38] really important is you add in your
+[00:17:39] email address into the support email so
+[00:17:41] here for example I'm going to type in
+[00:17:42] this one here which is my name no for
+[00:17:45] logo app domain is fine develop a
+[00:17:46] contact information authorized domain is
+[00:17:48] really important so click on ADD domain
+[00:17:50] you're going to type in nn. Cloud which
+[00:17:52] basically means n8n can use and access
+[00:17:53] this which would be phenomenal develop
+[00:17:54] content information I'm just going to
+[00:17:56] use the same email address I did before
+[00:17:58] if it would like let me copy it which it
+[00:18:00] is not doing so let me just enter that
+[00:18:01] one here AI automations beautiful
+[00:18:05] phenomenal click on Save and continue
+[00:18:06] when you fin email address in that's
+[00:18:08] fine it's going to come down uh sens of
+[00:18:10] Scopes no worries about that for the
+[00:18:11] moment come down save and continue
+[00:18:13] that's absolutely fine test users yes
+[00:18:16] that's fine I'm going to enter in my
+[00:18:17] information there again once more click
+[00:18:19] on ADD that's awesome beautiful and
+[00:18:21] we've been added in then come down click
+[00:18:22] on Save and
+[00:18:23] continue that's fine scroll all the way
+[00:18:26] down and click on back to dashboard at
+[00:18:27] the bottom once we've landed hit let's
+[00:18:28] head to the library and select the
+[00:18:30] things we wanted to use so for this
+[00:18:32] particular case it's going to be Google
+[00:18:33] Drive top one here Google Drive
+[00:18:36] API come down click on enable which is
+[00:18:38] flipping cool let that load up for a
+[00:18:40] second phenomenal then we'll come back
+[00:18:41] and also guys I guess anything else you
+[00:18:43] want to add here at this stage you can
+[00:18:44] do one of the things we'll be doing is
+[00:18:46] Gmail so let's add in Gmail API on top
+[00:18:48] of that click on this pretty much the
+[00:18:49] same as before enable blah blah blah all
+[00:18:52] the Google Cloud stuff that you could
+[00:18:53] possibly want to connect you may as well
+[00:18:54] at this stage just add it all in which
+[00:18:57] is cool that load up and that is for P
+[00:18:59] complete decent now we're going to head
+[00:19:00] over with to credentials on the left
+[00:19:01] hand side so here we come now and click
+[00:19:02] on create credentials it's our client
+[00:19:04] idea that we're going to need for this
+[00:19:05] one application type is web application
+[00:19:07] web name client again call this 8 and
+[00:19:10] Build Together which is cool and then
+[00:19:13] we've got these two things down here the
+[00:19:14] key one is authorized redirect uis and
+[00:19:16] guys if you come back to N1 you should
+[00:19:18] physically see this URI I haven't got it
+[00:19:19] because I'm already in there but
+[00:19:20] basically it is this one here uh which
+[00:19:23] is decent and we come down and then we
+[00:19:24] click on Create and that is pretty much
+[00:19:26] the almost the end of the process and
+[00:19:27] then guys on this page here you got
+[00:19:28] client ID and client secret and all you
+[00:19:30] do is copy those two things over and
+[00:19:32] then paste it into na turn and that will
+[00:19:33] connect you to all of the Google cloud
+[00:19:35] services cool and then once we're
+[00:19:36] connected this here is where we can
+[00:19:37] start to configure some of the things
+[00:19:39] we'd like Google Calendar to do for us
+[00:19:41] so what sort of stuff do we actually
+[00:19:42] physically want to do well let's have a
+[00:19:44] good look over here so set automatically
+[00:19:46] let's get to create let's select our
+[00:19:47] calendar let's select the calendar
+[00:19:49] invite here start date now this is a
+[00:19:51] cool thing here okay so what we want to
+[00:19:53] do is come down to expression now
+[00:19:54] anytime we want the AI to fill in the
+[00:19:57] information the really cool thing we can
+[00:19:59] do is just enter this in here like that
+[00:20:01] beautiful and end dat again we just fill
+[00:20:03] in the exact same thing for it's right
+[00:20:05] there oops come down that's cuz we need
+[00:20:07] to click on expression I believe okay
+[00:20:09] Ace typ the one in there as well decent
+[00:20:11] beautiful beautiful Perfect come down
+[00:20:13] and pretty much guys that's the only
+[00:20:14] thing it needs the only other one that
+[00:20:16] we may want to add in there if we come
+[00:20:17] down to ad field click on
+[00:20:19] attendees and again expression let's
+[00:20:21] just type in the exact same thing that
+[00:20:23] as a placeholder and pretty much you can
+[00:20:24] keep on adding these fields of things
+[00:20:26] you'd want like do you want location do
+[00:20:28] you want summary so let's say you want
+[00:20:30] the summary of what we're talking about
+[00:20:31] okay decent come down here beautiful all
+[00:20:34] placeholder for AI to figure out which
+[00:20:35] is decent and then if we come off here
+[00:20:37] we can just literally end this one here
+[00:20:39] now what we're going to want to start
+[00:20:40] doing guys is giving some contacts and
+[00:20:42] information to this AI agent about its
+[00:20:44] purpose and the kinds of tools it has
+[00:20:45] available to it now I've got a full-on
+[00:20:47] AI agent template that you can use again
+[00:20:49] this is all avable down below in school
+[00:20:50] Community but basically it's a really
+[00:20:51] cool handy thing you can set out all the
+[00:20:53] Scopes all the things it's going to be
+[00:20:54] responsible for and it will create you a
+[00:20:56] beautiful detailed um template that you
+[00:20:58] can use to pretty much include there and
+[00:21:00] it'll know exactly what it's doing
+[00:21:01] basically what you'll do guys come to
+[00:21:03] chat GB to your CL and say hey using
+[00:21:04] this
+[00:21:05] template um give this
+[00:21:10] agent the following
+[00:21:14] abilities and for that for example it
+[00:21:17] would be internet
+[00:21:18] search
+[00:21:22] oops you know create
+[00:21:25] appointments check appointments
+[00:21:29] uh be things like uh search database for
+[00:21:33] knowledge and we could also say create
+[00:21:36] and send emails boom enter the template
+[00:21:39] go down and then we can actually wait
+[00:21:41] for response to come back and then use
+[00:21:42] that actually within the na10 system and
+[00:21:44] the cool thing about this template here
+[00:21:45] guys is it it actually specifies it to
+[00:21:47] use good examples and bad examples you
+[00:21:49] can check in the context document here
+[00:21:50] in fact I'd recommend that you give all
+[00:21:52] of this to the um to chat gbt or Claude
+[00:21:55] whoever when you're actually giving it
+[00:21:56] the prompt so it can really give you
+[00:21:57] some specific stuff and because it's our
+[00:21:59] personal assistant we want it to work
+[00:22:00] really flipping well so this template we
+[00:22:02] just used to chat gbt let's copy the
+[00:22:04] output come over to our AI agent I'm
+[00:22:05] going to double click on him here tools
+[00:22:07] agent which is fine and so on this AI
+[00:22:08] agent guys what we do is we come down
+[00:22:10] here to add option and we're going to
+[00:22:11] add a system message which is basically
+[00:22:13] all the information that we want we
+[00:22:14] enter all that beautiful stuff in there
+[00:22:16] let's just get rid of this and this
+[00:22:17] specifies a role and then user message
+[00:22:18] is just simply something that the user
+[00:22:20] is going to speak to so this is systemic
+[00:22:22] systemically what we want this AI agent
+[00:22:24] to do and then obviously the text is a
+[00:22:25] variable thing that we get from the user
+[00:22:27] which is decent we come off beautiful
+[00:22:30] phenomenal fantastic so let's just see
+[00:22:32] if this works right now let's test it so
+[00:22:33] you're going to come down here let's
+[00:22:34] test the
+[00:22:35] workflow beautiful it's SCP to telegram
+[00:22:37] let's ask it to create an appointment
+[00:22:39] for us hey that do me a favor I'd like
+[00:22:41] you to create an appointment for me oh
+[00:22:43] you know what actually in fact one of
+[00:22:45] the things we need to do with this AI
+[00:22:46] agent is give it the ability to know
+[00:22:47] what data is um as you remember from the
+[00:22:50] scenario I did earlier on my last
+[00:22:51] Channel yeah on my last video we
+[00:22:52] basically need to give it a date so
+[00:22:53] let's come over here and do that so
+[00:22:55] where are we now we're here okay
+[00:22:57] beautiful click on this uh and we should
+[00:22:59] probably say on the roll let's just say
+[00:23:03] hey the current date is okay Beau so the
+[00:23:07] current date is you can enter this
+[00:23:08] expression here there we go uh we go
+[00:23:11] come in I think we'll put that in
+[00:23:12] expression right okay beautiful there
+[00:23:14] you go so now I'll know exactly what the
+[00:23:15] date and time is phenomenal so if I say
+[00:23:17] hey dude today it will have context of
+[00:23:19] what that is which is flipping cool so
+[00:23:21] let's run this one more time just wait
+[00:23:22] for trigger event let's come over here
+[00:23:25] hey my guy do me favorite CR appointment
+[00:23:26] for me tonight at 700 p.m. with Adam his
+[00:23:29] email address is Adam adam.com the
+[00:23:32] appointment is going to be about how
+[00:23:34] delicious coffee is thank you beautiful
+[00:23:36] that's done open eyes done it he his
+[00:23:38] chat model which is good let's see if
+[00:23:39] it'll go down and create a calendar run
+[00:23:41] for us okay it's had some kind of
+[00:23:43] failure which is cool it seems I
+[00:23:44] encountered a problem with set the
+[00:23:45] appointment could you please confirm the
+[00:23:47] date for the appointment you mentioned
+[00:23:48] tonight which would be the 16th of
+[00:23:50] October 2023 so I's find out what
+[00:23:52] happened in troubleshoot by request
+[00:23:54] please check your parameters okay cool
+[00:23:56] let's have a quick look at that okay
+[00:23:57] cool so what we to do here is specify
+[00:24:00] what we want basically what it's
+[00:24:01] actually filling out so I'm going to
+[00:24:03] enter in this thing here come down to
+[00:24:04] expression which is fine it's undefined
+[00:24:07] don't worry about that date to start at
+[00:24:09] the event okay that's fine and let's
+[00:24:11] just do the same one down here just copy
+[00:24:12] this paste this one here we put end date
+[00:24:15] to uh date to finish the event which is
+[00:24:19] fine attendees again just same thing
+[00:24:21] down
+[00:24:23] here attendees who's coming to the event
+[00:24:32] so we're basically just giving it the
+[00:24:34] context of what should go in in each one
+[00:24:35] come down summary uh and then here we'll
+[00:24:38] just say um what the event is
+[00:24:47] about cool beautiful all right Dent we
+[00:24:50] come back off this Dent let's try this
+[00:24:52] one more time come down test workflow
+[00:24:54] come
+[00:24:55] over hey bug me appointment this
+[00:24:57] afternoon with Adam at
+[00:24:58] we're going to be talking about um
+[00:25:02] coffee okay sweet let's see if this
+[00:25:05] works phenomenal then has been
+[00:25:07] created it's finished we come back over
+[00:25:10] let's check on telegram see what it's
+[00:25:11] done and has it done it it has day W
+[00:25:14] look at this guys 7: to 8 p.m.
+[00:25:15] discussion about delicious coffee 10 at
+[00:25:17] Adam adam.com location link below and we
+[00:25:20] can even view the appointment so I click
+[00:25:21] on this and open up let's see what we
+[00:25:23] get and guys would you look at this
+[00:25:25] we've got discussion about delicious
+[00:25:26] coffee at 7:00 to 8:00 p.m. and if I
+[00:25:27] scroll out oh my goodness and guys look
+[00:25:29] at this it's got his exact thing in
+[00:25:30] there so not only has it done this for
+[00:25:32] it but like in our flipping scenario
+[00:25:33] it's actually sent everything through
+[00:25:35] which I think is freaking crazy that it
+[00:25:38] can do this I mean this is unbelievable
+[00:25:40] stuff guys if you want to think like AI
+[00:25:41] agents in the future the future is 100%
+[00:25:44] arrived so we can start to do the exact
+[00:25:46] same things now with Google I'll just do
+[00:25:48] that very quickly just to show you a
+[00:25:49] quick for instance come to Gmail consume
+[00:25:51] the Gmail API that's decent again you
+[00:25:53] should have exact access to this based
+[00:25:54] on the steps we did do before we'll come
+[00:25:56] down set automatically message and let's
+[00:25:58] just say this one we wanted to I don't
+[00:26:00] know get many which is fine um limit of
+[00:26:04] 50 that's absolutely fine set
+[00:26:06] automatically which Gmail account is it
+[00:26:08] I've already connected mine here set
+[00:26:09] automatically that's decent um let's
+[00:26:11] execute previous nodes right here okay
+[00:26:13] decent we come down and let's just see
+[00:26:15] if we can find out what our last email
+[00:26:17] was for example test workflow come over
+[00:26:19] here hey what was the last email that I
+[00:26:21] got thank you okay beautiful testing it
+[00:26:24] weome and check Gmail for us it did
+[00:26:26] check Gmail let's come back and see what
+[00:26:27] it says and guys would you look at this
+[00:26:29] from The Rundown AI this is a subject
+[00:26:31] line blah blah blah and guys what we
+[00:26:32] could do is say hey respond to this and
+[00:26:34] we can add in create a Gmail so
+[00:26:36] hopefully this stage you can get just
+[00:26:37] how flipping crazy and epic this thing
+[00:26:39] is so what you've done now let's take a
+[00:26:40] step back you've connected to telegram
+[00:26:42] you've now got a system your own AI
+[00:26:44] agent which we need to call and work on
+[00:26:46] branding with this guy but apart from
+[00:26:47] that what can he do he has a memory okay
+[00:26:49] so he knows what's happened recently um
+[00:26:51] he's able to go on to uh the internet
+[00:26:53] and find information out for us they can
+[00:26:54] do things our calendars they can do
+[00:26:55] things with our Gmail the next thing I
+[00:26:57] want to know right into it is the
+[00:26:59] ability for it to access a database now
+[00:27:01] to do this what we first want to do is
+[00:27:04] find a way of actually giving unique
+[00:27:06] information to this database and
+[00:27:07] building it in the first place now to do
+[00:27:09] that we're going to head over to Pine
+[00:27:10] Cone to create our Vector database so
+[00:27:12] you can head over to pinec cone. you're
+[00:27:14] going to see this very 2000's corporate
+[00:27:16] looking website we going to head over
+[00:27:17] here and hit on login now I've got a
+[00:27:19] couple of databases here what I'm going
+[00:27:20] to do just for this video is delete so
+[00:27:23] let me delete this one here type in
+[00:27:25] Christmas and get rid of this guy all
+[00:27:27] right beautiful he's gone he's out of
+[00:27:28] here we don't need him anymore we come
+[00:27:30] down here we click on create index we
+[00:27:31] can call this one na10 or whatever you
+[00:27:33] like to come down serice is fine AWS is
+[00:27:36] fine Virginia Us East is fine uh we need
+[00:27:38] to do we do need to select one thing
+[00:27:39] which is text embedding three small for
+[00:27:41] this purposes of this come down and
+[00:27:43] create index now this index here guys is
+[00:27:46] going to be essentially the epicenter of
+[00:27:48] where we upload our information so this
+[00:27:50] could be every piece of information you
+[00:27:52] got from your email uh your emails it
+[00:27:53] could be uh websites it could be
+[00:27:55] anything to when we are speaking to our
+[00:27:57] agent we are a ble to recall all of this
+[00:27:59] data and information and have that
+[00:28:01] directly available for it like Javis so
+[00:28:02] we may give it the Javis update we may
+[00:28:04] say I won't you just speak to me like
+[00:28:05] Javis dude cuz we're flipping Iron Man
+[00:28:07] right now so we've got this beautiful
+[00:28:08] Pine thing here at A10 incredible come
+[00:28:11] back over to our workflow now what we
+[00:28:12] need to do is add new trigger now one of
+[00:28:14] the other interesting things about n n
+[00:28:16] here guys is the fact that you can have
+[00:28:17] multiple triggers happening within one
+[00:28:19] environment which I think is pretty
+[00:28:20] interesting so when you come down here
+[00:28:22] we're going to go for Google
+[00:28:24] Drive if I can find it here beautiful
+[00:28:27] Google Drive now what I wanted to do is
+[00:28:30] let's have a look here for triggers
+[00:28:31] let's just open up these triggers we're
+[00:28:33] looking for un changes to uh involving a
+[00:28:35] specific folder okay which is decent so
+[00:28:38] come down here SEL select our credential
+[00:28:40] I will basically create a new one here
+[00:28:41] and then you're going to come down anti
+[00:28:42] Clan ID secrets that sort of stuff and
+[00:28:44] then you're going to sign in with n10
+[00:28:46] cloud and click allow beautiful account
+[00:28:48] is phenomenally connected that's exactly
+[00:28:50] what we like to see you can check how
+[00:28:51] frequently you'd like it to check it now
+[00:28:53] just take a step back what's going to
+[00:28:54] happen here guys if I come off this for
+[00:28:56] a second all right is a file is going to
+[00:28:59] be created we're going to download that
+[00:29:02] file and then we're going to throw it in
+[00:29:04] this database uh this is going to create
+[00:29:06] an embedding a unique reference key for
+[00:29:08] the purposes of this uh and then we've
+[00:29:10] got data default loader and then the
+[00:29:11] recursive text player that's it and
+[00:29:13] whatever the document is we'll just
+[00:29:15] download it and do its magic so let's
+[00:29:16] come over here for
+[00:29:17] example beautiful changes on to pick
+[00:29:20] folder that's absolutely fine let's pick
+[00:29:21] the folder here let that light up for a
+[00:29:24] moment I'm going to say Jack's YouTube
+[00:29:27] it's absolutely fine select and what
+[00:29:28] we're going to say is file basically
+[00:29:30] we're going to say file created then we
+[00:29:32] can do different things like the file's
+[00:29:33] been updated and we can replace it we
+[00:29:35] can upsert things but just to keep this
+[00:29:37] very simple for you to get it functional
+[00:29:38] and working which is really important we
+[00:29:40] all about the stuff that works we want
+[00:29:41] to make sure that works us perfectly so
+[00:29:43] come down here uh and then we're going
+[00:29:44] to do a fetch test event so to find a
+[00:29:46] document that's been uploaded there
+[00:29:47] previously and just is a quick FY guy
+[00:29:49] when you do want to download this guys
+[00:29:50] all you ever have to do in the community
+[00:29:52] is you come over down here to classroom
+[00:29:53] you come over to every AO automation on
+[00:29:55] the left hand side you have every single
+[00:29:57] automation that I've ever done and all
+[00:29:59] you do guys is you come down here you
+[00:30:01] pretty much download the scenario you
+[00:30:03] upload it and you get the full scenario
+[00:30:05] there ready to rock and roll for rock
+[00:30:06] and rolling good time one thing I'm
+[00:30:08] really proud about our group is how
+[00:30:09] freaking supportive and active if you
+[00:30:11] have any questions we're on it we'll
+[00:30:12] make life happen we freaking love it
+[00:30:14] because ultimately it's about the stuff
+[00:30:16] that actually work we need to get the
+[00:30:17] stuff that really makes the difference
+[00:30:18] and moves the needle so this is pulled
+[00:30:20] down something that I uploaded
+[00:30:22] previously to this folder uh which is
+[00:30:23] good display data and that's absolutely
+[00:30:25] fine let's just see what this document
+[00:30:26] is about okay cool and we got all the
+[00:30:28] information there phenomenal great so
+[00:30:29] let's bring this go drive trigger down
+[00:30:31] here next thing I wanted to do is just
+[00:30:32] to Simply uh download the file so we
+[00:30:35] come over to Google Drive once again
+[00:30:37] phenomenal click on this guy click on
+[00:30:39] download a file phenomenal and again all
+[00:30:42] we're going to do guys as you can see
+[00:30:43] download from list no going to download
+[00:30:45] by ID click on this guy click on
+[00:30:48] expression and let's see if we can find
+[00:30:49] the ID uh if we come down to the sker
+[00:30:52] which is cool come down let's find out
+[00:30:54] where the idea is I believe it is just
+[00:30:58] down here there you go ID bring this one
+[00:31:01] over phenomenal so that will then
+[00:31:03] download it by ID we click on test app
+[00:31:04] as a quick for instance okay that's not
+[00:31:06] worked because there's no far so let me
+[00:31:07] head over to the drive very quickly uh I
+[00:31:09] know where that's happened it's cuz I
+[00:31:10] deleted that particular thing so it's
+[00:31:12] not Jack's YouTube we want n8n so
+[00:31:16] basically you can create a unique folder
+[00:31:17] for this if you want to n8n agent that's
+[00:31:19] cool fetch test event Das Port something
+[00:31:21] through click on download a file and
+[00:31:23] let's test a step here for example okay
+[00:31:26] that's absolutely fine let's go over to
+[00:31:27] the actual folder of course I've redone
+[00:31:29] this one now with a file
+[00:31:32] on singer Enterprises which was if
+[00:31:35] you're curious by the way just some fake
+[00:31:36] thing I did in the previous automation
+[00:31:38] which is about creating unique bespoke
+[00:31:39] PDFs so we've got this beautiful PDF
+[00:31:41] here cool we come back over to our
+[00:31:43] scenario we come off this guy here come
+[00:31:44] over to Google drive to download the
+[00:31:46] file let's just test this one for
+[00:31:47] instance okay I wonder if that's because
+[00:31:50] we've not given it the right ID so let's
+[00:31:52] come down here for example bring this ID
+[00:31:54] over a Jon ID that's cool test this one
+[00:31:57] more
+[00:31:58] time and would you look at that guys it
+[00:32:01] has actually worked usually it's it's
+[00:32:03] zigging when it should zag but Co let
+[00:32:05] just click on view for example and then
+[00:32:06] we've got the exact same folder there
+[00:32:08] which is flipping cool now the next
+[00:32:10] thing we want to do guys is add it to
+[00:32:12] Pine C let's come down here like so
+[00:32:13] click on this we're going to type in
+[00:32:15] Pine Cone pine cone Vector store that's
+[00:32:17] exactly right and you're going to click
+[00:32:19] on this add document to Vector store
+[00:32:22] beautiful first of all embedding now do
+[00:32:24] you know I told you we pick on that that
+[00:32:25] we chose that small one we're just going
+[00:32:27] to do exact same thing so we come down
+[00:32:28] here embeddings open eye embeddings text
+[00:32:31] embedding through small if you chose a
+[00:32:32] large one you might guess it you just
+[00:32:34] pick the large one but that's absolutely
+[00:32:35] freaking cool that's decent and then
+[00:32:38] here we got the document section click
+[00:32:39] on that there you want the default data
+[00:32:42] loader which is fine now instead of Json
+[00:32:44] I just want you to come down here and
+[00:32:45] select binary load all input data is
+[00:32:47] absolutely fine automatically detect by
+[00:32:49] the mime type that means that based on
+[00:32:50] the document it is it will do its magic
+[00:32:52] here and upload it whether it's PDF or a
+[00:32:54] document it will figure all that workout
+[00:32:55] for us us itself once that's done we're
+[00:32:57] going to come off and click out out of
+[00:32:58] that which is cool and then we come down
+[00:32:59] here with a text splitter and we're
+[00:33:01] going to recursive character text
+[00:33:02] splitter trunk size is a th000 so this
+[00:33:04] is basically like let's say you have
+[00:33:07] like Harry Potter okay like how many
+[00:33:08] chunks do you want it in Harry Potter
+[00:33:10] say it's a million characters let's say
+[00:33:12] we say I want you chunk at every th
+[00:33:14] characters the chunk overlap is let's
+[00:33:16] say we have 0 to 1,000 is number one
+[00:33:19] number two would start at 900 to 1900 so
+[00:33:23] basically we have this beautiful overlap
+[00:33:24] to give it context in terms of what it
+[00:33:26] should be pulling so theun overlap I'm
+[00:33:28] going to put call it 200 for argument s
+[00:33:30] come down here that's absolutely
+[00:33:32] beautiful and then we'll click on our
+[00:33:33] pine cone Vector store very quickly you
+[00:33:35] going to come down to insert documents
+[00:33:36] here and now we got to pick choose the
+[00:33:37] pine cone index so we should see an NAA
+[00:33:39] one there phenomenal fantastic and guys
+[00:33:42] let's just test that as a moment of
+[00:33:44] truth I click on Tex step test step
+[00:33:46] excuse me it's executed node it has been
+[00:33:48] completed successfully so if we head
+[00:33:50] over now to Pine Cone we should see this
+[00:33:52] information about sing Enterprises which
+[00:33:54] is in the PDF by the way which is really
+[00:33:55] cool in that actual database for let's
+[00:33:58] go check that out so here we are guys
+[00:33:59] na1 at the top I come down and what do
+[00:34:01] we have guys of course it's information
+[00:34:04] from singer Enterprises how flipping
+[00:34:06] cool is that and the beautiful thing
+[00:34:07] about this guys is that this will run
+[00:34:09] for us automatically now in the
+[00:34:11] background so when TW and it basically
+[00:34:13] activate this whenever you upload any
+[00:34:15] document to that G drive that's going
+[00:34:17] directly to Pine code and into knowledge
+[00:34:19] base the only thing we have to do now is
+[00:34:22] give this guy the ability to reach over
+[00:34:25] and grab that information to make sure I
+[00:34:27] can answer answer your question so to do
+[00:34:29] that we've going to add one final
+[00:34:30] beautiful tool and as you can see from
+[00:34:32] this guys it's the vector store tool so
+[00:34:34] let's go ahead and do that right here
+[00:34:36] come down here add a tool and we type in
+[00:34:38] Vector store tool which is decent I'm
+[00:34:40] going to give this one vector store I
+[00:34:43] think it needs to be all in one thing
+[00:34:45] there and then for the description let's
+[00:34:46] just say hey Vector database with
+[00:34:48] information which is cool and then we've
+[00:34:50] got Vector store and the model so again
+[00:34:52] let's come for model let's go for open
+[00:34:55] AI beautiful that's how absolutely fine
+[00:34:58] fantastic and we're going to bring him
+[00:35:00] over here just cuz I like it to be nice
+[00:35:01] and tidy and it's a little bit not tidy
+[00:35:02] at the moment so we come over here and
+[00:35:04] let me just add some notes a little tip
+[00:35:05] by the way guys if you want to like kind
+[00:35:07] of like help you understand what's going
+[00:35:08] on if you come top right if you type in
+[00:35:10] note sticky note you have this beautiful
+[00:35:12] note and you can actually move this guy
+[00:35:14] around like this which means it can help
+[00:35:17] you understand exactly what you are
+[00:35:19] looking at and let's just call this one
+[00:35:21] AI agent because of all the things we
+[00:35:22] are guys Savages is not one of it but I
+[00:35:25] want asterisk is like I think heading
+[00:35:28] AI agent beautiful cool and I'll just
+[00:35:30] add the other two real quick go this
+[00:35:31] one's upload Vector let's just change it
+[00:35:33] color cuz we can't be having all me the
+[00:35:34] same color let's have a quick look all
+[00:35:35] right cool we got upload Vector we got
+[00:35:37] this guy AI agent and finally we've got
+[00:35:39] our memory cool so it's picked on the
+[00:35:41] vector store right here and for this one
+[00:35:42] we're going to do pine cam which is the
+[00:35:44] pine con Vector store phenomenal from
+[00:35:46] list and you can just pick which Vector
+[00:35:48] store and if you're building this for
+[00:35:49] clients guys you can obviously just
+[00:35:50] duplicate the scenario choose one that
+[00:35:51] they've got and you''ll be ready to rock
+[00:35:53] and roll we're going go for n8m which is
+[00:35:54] flipping awesome fantastic come off this
+[00:35:56] and then finally but last last thing we
+[00:35:57] need to do is add in an embedding and
+[00:35:59] you might have guessed it guys it's the
+[00:36:00] exact same thing as before at text
+[00:36:02] embedding three small Perfect all right
+[00:36:05] cool now hope we come down here we come
+[00:36:06] here now the last moment of truth is
+[00:36:08] let's ask it a question that it couldn't
+[00:36:10] possibly know unless it had access to
+[00:36:12] our memory database and finally let me
+[00:36:14] just add in one more note very quick
+[00:36:16] just so we are looking very beautiful
+[00:36:18] and tasty and everything aligns and
+[00:36:20] again like it will take just a tiny bit
+[00:36:22] of getting used to here um because it's
+[00:36:24] a new it's a new software um let's just
+[00:36:27] say retrieval beautiful and of course
+[00:36:30] let's just give it a slightly different
+[00:36:31] color let's give it this beautiful grein
+[00:36:33] phenomenal so the moment truth is that
+[00:36:35] we've run this a agent and we ask it a
+[00:36:36] question it would only never had access
+[00:36:38] to that so what would that be well let's
+[00:36:39] get to Singo Enterprises um let's see
+[00:36:43] the quarterly fee so if I said hey with
+[00:36:45] singer Enterprises what is a quarterly
+[00:36:47] fee I've never asked that question so we
+[00:36:49] know it works if it tells us it's 20,000
+[00:36:52] so test workflow here we go waiting for
+[00:36:54] a trigger come over
+[00:36:56] here hey singer Enterprises what was the
+[00:36:59] quarterly fee cool so we've tested that
+[00:37:02] let's see AI agent let's see if it goes
+[00:37:03] down to the vector store
+[00:37:05] retrieval it does it's done some stuff
+[00:37:08] and we should see some information here
+[00:37:10] and guys the quarterly fee for sing
+[00:37:12] Enterprises is 20,000 paid in advance is
+[00:37:15] that true is it actually paid in advance
+[00:37:17] let's have a look it is and guys just
+[00:37:19] like that you have built a fully-fledged
+[00:37:21] AI agent self contain and we've learned
+[00:37:23] how to upload documents its ability to
+[00:37:25] retrieve those documents and use few d
+[00:37:27] dynamically and once you said this it's
+[00:37:29] completely there forever now in school
+[00:37:31] Community we're going to go deeper about
+[00:37:33] the things at work how you can do things
+[00:37:34] like monetizes s to different agencies
+[00:37:36] or just build like the ultimate
+[00:37:38] productivity tool but in any case guys I
+[00:37:40] really hope that you enjoyed this video
+[00:37:41] NN is a different technology than we
+[00:37:43] normally use the channel so I hope you
+[00:37:44] followed along any questions let me know
+[00:37:46] down below but any case I have a
+[00:37:47] wonderful week and I'll see you in my
+[00:37:49] next video

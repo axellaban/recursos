@@ -1,0 +1,804 @@
+[00:00:00] Google just released VO3 and it is a
+[00:00:02] disruption in the world of AI. This is
+[00:00:05] the kind of quality video that's already
+[00:00:07] being created with it. All right, so I
+[00:00:09] think the locals left this thing called
+[00:00:10] an energy drink. Let's take a sip.
+[00:00:13] I'm going to crash out. What's life like
+[00:00:15] for you right now? Woke up, stepped in,
+[00:00:18] dung, got taxed,
+[00:00:20] and that was before breakfast. Now, I'm
+[00:00:22] going to show you how you can generate
+[00:00:23] videos just like that. And AI automates
+[00:00:26] hundreds of these videos at scale and
+[00:00:28] three different ways that you can make
+[00:00:29] money from it right now. And as somebody
+[00:00:31] that makes over $120,000 a month with
+[00:00:33] AI, this isn't just posting on social
+[00:00:35] media and hoping for the best. Now, the
+[00:00:38] great news about this stuff is it
+[00:00:39] requires zero coding or editing
+[00:00:41] experience to actually get started and
+[00:00:43] crush it. So, if you haven't already,
+[00:00:45] grab that coffee and let's dive straight
+[00:00:46] in. So, number one is our AI automation
+[00:00:49] system and we're combining three
+[00:00:50] technologies. We are using the first of
+[00:00:52] all the beautiful love.dev that lets us
+[00:00:55] create beautiful interactive and
+[00:00:56] gorgeous applications with just text.
+[00:00:59] We're going to be using of course VO
+[00:01:00] which lets us create videos in any style
+[00:01:03] that we want to and we're going to be
+[00:01:04] powering this with beautiful phenomenal
+[00:01:06] NAN which is our no code platform
+[00:01:08] builder. Now the concept of this
+[00:01:10] business model is essentially going to
+[00:01:11] be to supercharge the acquisition of
+[00:01:14] clients. So what we're going to do is
+[00:01:16] create beautiful videos just like this.
+[00:01:19] I don't think Smith and Associates is
+[00:01:20] getting enough clients. Take it from a
+[00:01:22] wise yeti. You're leaving money on the
+[00:01:25] table.
+[00:01:27] Which basically means we get this
+[00:01:28] application, we can specify the client
+[00:01:30] painoint, the setting, uh the location,
+[00:01:33] the business name and effectively get
+[00:01:34] custom bespoke um beautiful videos for
+[00:01:37] any kind of client. The idea is that we
+[00:01:39] send these to clients to help close a
+[00:01:40] deal. So you imagine getting a cold
+[00:01:42] email for example. That's one thing. To
+[00:01:44] get a bespoke unique video that's 8
+[00:01:46] seconds long that's specific to that
+[00:01:48] business can completely revolutionize
+[00:01:50] your clickthrough rates, your signups
+[00:01:51] and the responses you get to. So there's
+[00:01:53] a million things you can do with it once
+[00:01:54] you get it into any town which I'm going
+[00:01:56] to show you exactly how you can do that
+[00:01:57] step by step. That also includes by the
+[00:01:59] way uh sending off to a million
+[00:02:00] different social media platforms. I just
+[00:02:02] think that applying it to a business
+[00:02:04] context and service of an outcome is
+[00:02:06] going to wield way better results from
+[00:02:07] you. That's how people are actually
+[00:02:08] making money with AI, the systems and
+[00:02:10] the progression. So let's go through
+[00:02:12] I'll show you how this works and then
+[00:02:13] we're going to build it together. So
+[00:02:14] what we do is we build a beautiful form
+[00:02:15] in Liverable and we basically in lovable
+[00:02:17] now this is fantastically refreshed for
+[00:02:19] us. So the TLDDR is we have this form in
+[00:02:21] Lable. We answer the questions there,
+[00:02:22] the client painoints, the avatar, the
+[00:02:24] location where it's happening like on
+[00:02:26] top of a rainbow on a floating iceberg
+[00:02:27] and out of space, the name of the
+[00:02:29] business and then we get where we want
+[00:02:30] to send it. So that's where we'd get the
+[00:02:32] client email. In Liverable we can add
+[00:02:34] things like PayPal, we can let payments
+[00:02:35] or just send this with our marketing
+[00:02:37] team. Then this in is sent via a web
+[00:02:39] hook over here which is grabbed by this
+[00:02:41] automation. We have an AI agent that
+[00:02:43] will take all of that really cool
+[00:02:44] information and turn it into an output
+[00:02:47] into a prompt with this big beautiful
+[00:02:48] prompt right here. Once that's happened,
+[00:02:50] we then send the request over to Vio's
+[00:02:52] API using something called foul, which
+[00:02:55] I'll show you in a second. We wait for
+[00:02:56] it to be created and then once that's
+[00:02:58] done, we then grab it and then we can
+[00:02:59] send the results on email, which is code
+[00:03:01] for pretty cool freaking news. Awesome.
+[00:03:03] So, let's build this one together. Now,
+[00:03:05] a lead magnet automation system has an
+[00:03:07] earning potential of way over $10,000 a
+[00:03:10] month once you get going with this
+[00:03:11] stuff. It's really, really high value
+[00:03:13] when you can prove this conversion. So,
+[00:03:14] we're going to build this one together.
+[00:03:15] So, I'm going to jump over to the
+[00:03:16] community and grab the blueprints real
+[00:03:18] quick. Now, one really interesting thing
+[00:03:19] I want to double click into. So, every
+[00:03:21] automation, let me come down. All right.
+[00:03:22] Sweet. So, if you were just uploading
+[00:03:24] it, we'd come down. We would grab the
+[00:03:25] beautiful documentation here. Just
+[00:03:27] quickly download this one here. We come
+[00:03:28] over to the dots, come down, click
+[00:03:30] import file, you upload the file, and it
+[00:03:31] will populate for you automatically. One
+[00:03:33] of the thing I just want to double click
+[00:03:34] into for a second just to make sure that
+[00:03:35] you understand this with the lead
+[00:03:37] magnet. What's really good best practice
+[00:03:39] here is to specify a variable. So the
+[00:03:41] way that we're going to doing this is
+[00:03:42] client name, painoint, and avatar in the
+[00:03:44] actual agent itself here. All that input
+[00:03:46] is going to be getting is any field that
+[00:03:48] we want. Right? So say for example, you
+[00:03:49] want to create something interesting.
+[00:03:50] One interesting hack by the way that
+[00:03:52] converts is humor. Humor resonates
+[00:03:53] massively, which is why a Yeti with a
+[00:03:55] briefcase of phone can actually make a
+[00:03:57] difference. Now we want to give this AI
+[00:03:58] agent a prompt. I most of the work of
+[00:04:00] this automation is actually just
+[00:04:01] finessing out the prompts and getting it
+[00:04:03] right. Fundamentally, guys, you want to
+[00:04:04] be really specific with the input
+[00:04:06] variables. And whatever you get with
+[00:04:07] your prompt structure, you want some of
+[00:04:09] it that's fixed and some bits that are
+[00:04:11] variable. So, for example, the three
+[00:04:13] things we're going to change here is the
+[00:04:14] client name, the pain point, in other
+[00:04:16] words, hey, you're a lawyer who's
+[00:04:17] struggling with, insert the thing you
+[00:04:18] help them with, and finally, the actual
+[00:04:20] avatar. In other words, like the
+[00:04:21] character type or the yeti or whoever
+[00:04:22] we're dealing with. Cool. So, what we're
+[00:04:24] going to do, guys, is we're going to
+[00:04:25] build this one beautifully from scratch.
+[00:04:27] So, to do this, we're going to add first
+[00:04:28] step. We're going to go for a trigger
+[00:04:29] manual right here. And at the same time,
+[00:04:31] we're going to co-build this in Loveable
+[00:04:32] to get the front end. And then I'm going
+[00:04:33] to show you thing number two and
+[00:04:35] opportunity number three. Third is
+[00:04:37] probably the most undertapped one. I
+[00:04:38] think it's a really interesting one. All
+[00:04:39] right, sweet. So, let's head over to
+[00:04:40] Lable. I'm going to give it a prompt and
+[00:04:42] we're going to give it the following.
+[00:04:43] So, let's just clarify the things that
+[00:04:45] we want. Right. Hey there, I'd like you
+[00:04:46] to design for me a beautiful front-end
+[00:04:48] application asking five questions. Those
+[00:04:51] questions are client pain points in
+[00:04:52] three to five words, the avatar, an
+[00:04:54] outrageous location, and list like 10 of
+[00:04:56] them. for example, could be in a glacia,
+[00:04:58] could be in a volcan, you know, near a
+[00:05:00] volcano, on the moon, somewhere
+[00:05:01] interesting. The name of the business,
+[00:05:03] like Johnson Associates, and where shall
+[00:05:05] we send it to? Uh, I'd like you to call
+[00:05:07] this one, I don't know, Yeti AI. Let's
+[00:05:09] give it a nice beautiful gradient
+[00:05:11] background. And once it sends, I'd like
+[00:05:12] you to send it to this web hook. Now, if
+[00:05:14] you're not familiar with web hook, guys,
+[00:05:15] that's how we can basically send
+[00:05:16] information from anything to anything
+[00:05:18] else. So, if I come down here, you're
+[00:05:19] going to click on web hook, like so.
+[00:05:21] Beautiful. Okay? And we're going to go
+[00:05:23] for post. And all you do guys is just
+[00:05:25] click this and it will copy it for you.
+[00:05:27] And then in lovable itself we just send
+[00:05:29] web hook address like this. So bam and
+[00:05:32] then lovable will work in the
+[00:05:33] background. Now the cool thing is we can
+[00:05:35] do things simultaneously. We can
+[00:05:36] multitask despite what we've been told
+[00:05:38] guys. We can multitask. We can make this
+[00:05:39] reality. Cool. All right. So let's come
+[00:05:41] back over to our beautiful end scenario.
+[00:05:43] Now what I'm going to do in this
+[00:05:44] scenario for a moment is set some data
+[00:05:46] just so that we can actually build it
+[00:05:48] without having to trigger the web hook.
+[00:05:50] Right? So we're going to come over and
+[00:05:51] click on set. Cool. And what this
+[00:05:52] basically to do guys is say hey from
+[00:05:54] this point forward when I say email just
+[00:05:55] use this as dummy data. So I can say hey
+[00:05:57] first thing I want is going to be email
+[00:05:59] and we'll just put my email in there for
+[00:06:01] example. Now the interesting thing with
+[00:06:03] this guys is that there are some
+[00:06:04] business models that don't require AI
+[00:06:06] automations. Things like NAN make are
+[00:06:08] great when I want to take one piece of
+[00:06:10] information and post on every social
+[00:06:11] media platform or want to take one piece
+[00:06:13] of information and um do some do
+[00:06:15] something interesting with the inputs. I
+[00:06:17] think this is a unique bit because
+[00:06:18] people can use Gemini but they can't.
+[00:06:21] Not everyone knows how to use the
+[00:06:22] technologies or think in the way that
+[00:06:23] you can which I think is really
+[00:06:24] interesting and I I also think this is
+[00:06:26] where the big opportunity is. So we've
+[00:06:27] got email. The next thing we're going to
+[00:06:28] want to do if we come over to our
+[00:06:30] questions uh to grab out what we've
+[00:06:31] actually got there. We've got the
+[00:06:32] avatar. Cool. Beautiful. Let's come back
+[00:06:34] over and set that avatar which for us is
+[00:06:37] going to be a giant yeti. Okay. That's a
+[00:06:40] question apparently. I don't know like
+[00:06:41] and see a business name. And we'll call
+[00:06:42] this one Johnson and I call it Johnson
+[00:06:45] and Andrews. Right. It sounds like the
+[00:06:47] most like 1990s uh corporation that
+[00:06:49] you've ever seen in your entire life.
+[00:06:51] Beautiful. And then a couple more
+[00:06:52] questions. Right. We've got name
+[00:06:53] business. Awesome. Outreg location and
+[00:06:55] client pain points. Fantastic. So here
+[00:06:57] we just want client pain points. Ace.
+[00:07:00] And then we'll just say not enough
+[00:07:01] customers. Uh and then let's just do
+[00:07:03] location. So location right here.
+[00:07:05] Beautiful. On a glacier. Fantastic. Test
+[00:07:07] the step. Comes out. And then we can pin
+[00:07:09] this information. And you're just going
+[00:07:10] now we're going to build the AI agent.
+[00:07:11] So we come down here. AI agent. Um, the
+[00:07:14] prompt is we're going to define it below
+[00:07:15] like so. Beautiful. And then we just
+[00:07:17] grab and just pull and yank all these
+[00:07:18] beautiful guys in here. You know, the
+[00:07:20] video is so cool. Like did I'm sure you
+[00:07:22] saw that one with the prompt, right?
+[00:07:23] Where he's like, I'm not a prompt.
+[00:07:25] You're telling me I'm not a prompt. A
+[00:07:26] prompt conspiracy. It's just I think for
+[00:07:28] me underlines a really interesting
+[00:07:29] psychological feature of our brains. By
+[00:07:31] come down to ad option system message,
+[00:07:33] which is the blueprint, the wiring, the
+[00:07:34] kind of this this is your kind of your
+[00:07:36] instructions, your master command for
+[00:07:37] it, right? Uh, let me come down and grab
+[00:07:39] that. So, I'm just going to grab it from
+[00:07:40] my V lead proc magnet. You can build
+[00:07:42] these, write them. I'd say like what's
+[00:07:44] if you're going to test it, I'd say do
+[00:07:46] that on VO in trying Gemini because you
+[00:07:49] can have a couple of flirts with it. You
+[00:07:51] can flirt with it a little bit. You get
+[00:07:52] a couple free, I think, on the pro
+[00:07:54] account there, which is really cool. So,
+[00:07:55] it's a bit more cost effective. Uh, but
+[00:07:57] I've tried to do a lot of hard work for
+[00:07:58] you, so I don't have to worry about
+[00:07:59] that. So, let me just copy all this,
+[00:08:00] come back over to our beautiful uh thing
+[00:08:02] here, and we're going to enter in the
+[00:08:04] system prompt. Beautiful. There we go.
+[00:08:06] All right. Sweet. So, okay, let's
+[00:08:08] actually just detail this one out.
+[00:08:09] What's really important about it,
+[00:08:10] obviously, feel free to have a quick
+[00:08:11] quick read through this and stuff. Um,
+[00:08:13] there's a couple things I really want to
+[00:08:14] call out is is really key. Okay, one is
+[00:08:16] always give it an example output. And
+[00:08:19] for example, this is an example input,
+[00:08:20] an example output of what you expect.
+[00:08:22] Uh, the format. Crucially though, a
+[00:08:24] couple of things I found really
+[00:08:25] important is try to, you know, it's got
+[00:08:27] to be 8 seconds, 8 seconds maximum. The
+[00:08:29] way you can specify that is with a
+[00:08:31] maximum number of words, like probably
+[00:08:32] up to no more than 16, 17 words. Maybe
+[00:08:35] you can do more. It depends. Um, but
+[00:08:37] it's really good worth specifying that.
+[00:08:38] And I've kind of defined here what the
+[00:08:40] input variables are. Okay, cool. Right,
+[00:08:42] so we've done that which is ace. And
+[00:08:43] what we can do is execute a step and see
+[00:08:45] if it gives us something out. It won't
+[00:08:47] work yet because we need to do what is
+[00:08:48] known as give it a chat model. Right. So
+[00:08:50] we come down, give it open AI. Yeah, the
+[00:08:52] psychological thing I was talking about
+[00:08:53] before I was really interrupted by
+[00:08:55] myself. Uh but if you're not connected
+[00:08:56] with this, just head over to
+[00:08:58] platform.openey.com
+[00:09:00] and create an API key. I'll put a link
+[00:09:01] down below in the description for you.
+[00:09:02] Okay, so I've selected open eye account
+[00:09:04] 4. GT4 Mini will be okay for this. Cool,
+[00:09:06] guys. So I've got this now running in
+[00:09:07] the background to get a test output
+[00:09:09] which will be beautiful and has it
+[00:09:11] finished. It has raw video selfie of a
+[00:09:13] giant yeti dressed in a sleek business
+[00:09:14] suit complete with his tie recording
+[00:09:16] himself having a great time. Awesome. So
+[00:09:18] the next I want to do guys is called
+[00:09:19] HTTP request. So the way we're going to
+[00:09:21] connect to vo is through something
+[00:09:23] called foul.ai. So let's head over to
+[00:09:26] beautiful foul.ai and not verify my
+[00:09:28] identity on openai. This is really cool.
+[00:09:30] So what you basically do is create an
+[00:09:32] account. Now there's a cost associated
+[00:09:33] with using this. I believe it's around
+[00:09:35] $5 per API call. So, it's slightly more
+[00:09:37] on the expensive side. There's a couple
+[00:09:39] of things that you can do to bring the
+[00:09:40] cost down. One of those is I'll just
+[00:09:42] pull up and confirm what that is
+[00:09:43] actually. For example, if you take the
+[00:09:45] audio off, right, what you can actually
+[00:09:47] do, and bear in mind, it's cheaper than
+[00:09:49] $250 per month, which which I think is
+[00:09:50] really cool, right? To get this kind of
+[00:09:51] thing, but basically, if you do no
+[00:09:53] audio, it can be cheaper. So, it's kind
+[00:09:54] of like, you know, you need to make sure
+[00:09:55] you're getting a good ROI with this.
+[00:09:57] Now, the great thing is these are high
+[00:09:58] quality outreaches, right? So, the goal
+[00:10:00] isn't to do like a million of them. We
+[00:10:01] want to do kind of personalized outreach
+[00:10:03] at scale with this sort of stuff and
+[00:10:05] actually just enables to get a higher
+[00:10:06] ROI because you know what you send 10
+[00:10:07] out uh and you convert one then it's
+[00:10:09] it's absolutely worth it right so we're
+[00:10:10] paying a bit pre for those conversions
+[00:10:12] so what we do is come down to do a HTTP
+[00:10:14] request um and I'm going to cheat a
+[00:10:16] little bit and I'm going to use a curl
+[00:10:18] and basically what this enables you to
+[00:10:20] do is you can kind of copy this right
+[00:10:22] and this will just paste everything in
+[00:10:24] like this right you see bam uh import it
+[00:10:27] and then it has all the fields that you
+[00:10:28] need right so JSON this is what the
+[00:10:29] prompt is the aspect ratio so for
+[00:10:31] example this. We just click on this and
+[00:10:32] then we can grab the AI agent output.
+[00:10:34] Okay, beautiful. Which is fantastic. I
+[00:10:36] think I might need to change this just
+[00:10:37] to make sure that it's plain text real
+[00:10:39] quick. Uh let me just make this really
+[00:10:40] clear. Please ensure that all outputs
+[00:10:42] are completely plain text. No need to
+[00:10:44] end it with a curly brace at all. Thank
+[00:10:46] you. Or a um exclamation mark. Just
+[00:10:48] start the video, just start the
+[00:10:50] description as you intend. Okay,
+[00:10:51] beautiful. Let me just execute the step
+[00:10:52] real quick to make sure we get a better
+[00:10:54] response and then we are going to be
+[00:10:55] ready to rock and roll. Beautiful. It's
+[00:10:57] done. It listened to me, guys. Who would
+[00:10:58] have thought? We ask it questions, it
+[00:11:00] listens. All right, cool. So, we've done
+[00:11:01] that. That's fantastic. Now, we need to
+[00:11:03] get an API key. Let's grab that from
+[00:11:04] file. To do that, you just basically
+[00:11:06] come over to API keys like so. You come
+[00:11:07] down, you add a key, it'll pop up. I'll
+[00:11:09] do that right now. So, you can see we'll
+[00:11:11] call this one uh let's call this one,
+[00:11:13] you know, v3 with a load of threes,
+[00:11:14] create key like so. And then we've got
+[00:11:16] it. And basically, you just copy this
+[00:11:17] key like so. Uh, and then you can come
+[00:11:19] back over to the beautiful scenario. Uh,
+[00:11:20] and then we can just put it here.
+[00:11:22] Obviously, you can save it under the
+[00:11:23] headers if you want to. I'm just doing
+[00:11:24] this quickly uh just to get this built
+[00:11:26] up. Cool. And that's done. And so what
+[00:11:28] we can actually do guys if we wish is
+[00:11:29] just actually test out. Right? So we
+[00:11:31] come down. You can execute the step real
+[00:11:32] quick and if it works properly it's
+[00:11:34] done. So that being a green tick is what
+[00:11:36] we call good news. Great. Now the other
+[00:11:38] thing is it's going to take like a
+[00:11:40] couple of minutes to load this.
+[00:11:41] Typically it's 3 to 5 minutes. So the
+[00:11:42] next thing we do is just add a weight
+[00:11:44] module. Okay. Weight module. Let's just
+[00:11:45] come down here for minutes. Uh let's
+[00:11:47] just set this one down for 5 minutes.
+[00:11:49] That's absolutely fine. Come over. The
+[00:11:51] next thing you want to do is get. So
+[00:11:52] again HTTP request. Um let's just do a
+[00:11:55] get request. I'm going to be lazy doing
+[00:11:57] this. By the way, if you ever want to
+[00:11:58] build this stuff, you can just look at
+[00:12:00] the documentation. And what I often do,
+[00:12:02] guys, to be honest with you, is I come
+[00:12:03] down, I'll come down to the API section,
+[00:12:05] and I'll just copy and paste all of it.
+[00:12:06] And then I'll actually just go to chat
+[00:12:08] GP or claw and be like, dude, just
+[00:12:09] create me a curl request to insert my
+[00:12:12] desired outcome. Now, it can just go
+[00:12:14] forth and search itself, but I found if
+[00:12:16] you can just say, look, no, no, mate,
+[00:12:17] literally like this is what the website
+[00:12:18] says. It just kind of, you know, saves
+[00:12:20] the back and forth a little bit. So,
+[00:12:21] that's how I generally build those. Uh,
+[00:12:23] but again, just being a little bit lazy.
+[00:12:24] So, great. So, I come back over. Let's
+[00:12:26] grab the file get video. So just come
+[00:12:28] over here. Beautiful. Head back over to
+[00:12:30] the scenario. Click on this guy. And
+[00:12:32] we're going to import the curl. Enter it
+[00:12:33] in and then import. And it should be
+[00:12:34] there for us. Cool. And then we just
+[00:12:36] need to give it the API key again. So
+[00:12:37] just copy this one. Come back over.
+[00:12:39] Fantastic. And we drop this bad boy in.
+[00:12:41] Fantastic. All right. Cool. Now what do
+[00:12:43] we need to do? We need to give it the um
+[00:12:45] link from the other. So what I'm going
+[00:12:47] to do is I'm going to pin this and I'm
+[00:12:49] going to just for the purposes of this
+[00:12:51] just change this to like 2 seconds.
+[00:12:53] Okay. Cool guys. So, I've just execute
+[00:12:54] the previous one and I need to get the
+[00:12:56] request ID brought over. Uh, right
+[00:12:59] there. Okay, cool. Now, you can see
+[00:13:01] guys, this is in cube. Just means it's
+[00:13:02] not been made yet, but when it is, it'll
+[00:13:04] be done. Now, the next thing we want to
+[00:13:05] do, well, actually, let's go back and
+[00:13:06] check over on our lovable real quick to
+[00:13:08] see how that's getting on. Um, again, we
+[00:13:09] we dip and we dip in and dip out. There
+[00:13:11] we go. This is cool. So, what we're also
+[00:13:12] going to do at the same time now is come
+[00:13:14] over to our web hook. We're going to
+[00:13:16] click on this guy. We're going to click
+[00:13:17] on listen for test events. This is
+[00:13:18] testing our ability to grab the
+[00:13:20] information. We come over to Livable.
+[00:13:22] They want more customers. They really
+[00:13:23] want more customers. Okay, we need to
+[00:13:25] change the second pain point here. Okay,
+[00:13:27] let's ask that a few times. Okay, we'll
+[00:13:29] just Mars uh Johnson and co email ate
+[00:13:33] emails.com. Cool. And then send one off.
+[00:13:35] Cool. So, let's say it's been a success.
+[00:13:37] And do we see the data? And guys, look
+[00:13:38] at this. Just like that, we've got all
+[00:13:40] the information land, which is ace. Now
+[00:13:42] you've got a front-end application. Do
+[00:13:44] with that what your heart desires. And
+[00:13:45] let me just tell this guy uh one little
+[00:13:47] thing. Hey dude, just FYI, you only need
+[00:13:49] to describe one painoint, please. Again,
+[00:13:51] the question should be painoint. Um, it
+[00:13:53] should be an outrageous location, name
+[00:13:55] of the business, where you want to send
+[00:13:56] it, and then an outrageous character/
+[00:13:58] avatar. So, only five questions. Thank
+[00:14:00] you very much. Okay, cool. It's done.
+[00:14:02] Right. So, he'll go make the changes,
+[00:14:03] and you can kind of spar back and forth
+[00:14:05] with Liverool to get nice, fresh, and
+[00:14:06] piping and popping, having a good time.
+[00:14:08] Cool. Now, the last thing I kind of want
+[00:14:09] to do is I want to email it, right? So,
+[00:14:12] we need to link these things together.
+[00:14:14] So, basically, what you would do is you
+[00:14:16] exit your previous notes here. uh once
+[00:14:17] that's done and then we link and match
+[00:14:19] up the email to what we get uh in the
+[00:14:21] background, right? So, we're going to do
+[00:14:22] that in a second as well. But what we
+[00:14:24] need to do is email the output, right?
+[00:14:25] So, we come down, we add in Gmail, which
+[00:14:27] is going to be Gmail here. We're going
+[00:14:28] to click on uh create a um I think send
+[00:14:31] a message. Beautiful. And then message
+[00:14:33] is going to be I'll just come over here
+[00:14:35] for a second. Let me just execute the
+[00:14:36] step so we can actually complete it and
+[00:14:38] view the output and then we can actually
+[00:14:40] complete the scenario and send it off
+[00:14:41] which I think is going to be really
+[00:14:42] cool. All right, so give this a hot
+[00:14:44] second. Okay, so it's still generating.
+[00:14:46] So once that's done, we can then send it
+[00:14:47] off to the email. And the way that we do
+[00:14:48] that, by the way, guys, is I'm just
+[00:14:50] going to come do it here real quick just
+[00:14:51] so we can actually do it. If I come down
+[00:14:53] here to edit fields, is this email. So
+[00:14:55] I'm just grabbing the code here, like
+[00:14:56] so. All right, sweet. Come over to the
+[00:14:58] email. Is this And we'll say something
+[00:15:00] like, "Hey, your video is ready for In
+[00:15:03] fact, what we could probably do, guys,
+[00:15:05] is um just include the the name of the
+[00:15:07] business we're sending that to." So
+[00:15:08] let's come down here real quick uh down
+[00:15:09] to edit fields, and let's just say it's
+[00:15:11] going to be business name. All right,
+[00:15:12] sweet. which basically means dynamically
+[00:15:15] it's going to be we can list it like hey
+[00:15:17] this is a Johnson Johnson video right so
+[00:15:19] Johnson Johnson uh video cool and then
+[00:15:22] we want to know what we want in the body
+[00:15:23] which I think will be absolutely fine
+[00:15:25] this is the message oh actually we need
+[00:15:27] to put this over here which is in the
+[00:15:28] subject and it was expression so it
+[00:15:30] knows hey there my man your video is
+[00:15:32] officially ready check it out here cool
+[00:15:34] and then what we'll do when this one is
+[00:15:36] ready here again we'll just give this
+[00:15:38] little weight once this is ready we can
+[00:15:39] include that URL and it'll be ready to
+[00:15:40] rock and roll so we check it one more
+[00:15:42] time and It's still in queue. So, give
+[00:15:44] that probably a minute or so and then
+[00:15:45] we're going to be ready. Beautiful,
+[00:15:46] guys. And just like that, we've got the
+[00:15:47] information back and then you'll
+[00:15:48] effectively get the URL and you can copy
+[00:15:50] that URL and then you can run through
+[00:15:51] and have him rock and rolling. Good
+[00:15:52] times with it. So, let's just duplicate
+[00:15:54] and load him up a little bit to see what
+[00:15:55] we're rocking and rolling with. I don't
+[00:15:57] think Johnson Jackson is struggling to
+[00:15:58] get clients. Take it from a wise yeti.
+[00:16:01] You're leaving money on the table. Okay.
+[00:16:04] Throw his money off that. So, two quick
+[00:16:05] things would change based on this video.
+[00:16:07] Right. Number one is I've noticed we
+[00:16:09] probably had an error with the prompt
+[00:16:10] and how I sent the information. Not
+[00:16:12] enough customers. So I need to be more
+[00:16:14] specific because he was like I don't
+[00:16:15] think he's got a problem. So we just
+[00:16:17] need to be better and specific on the
+[00:16:18] prompt. And the other change that I
+[00:16:19] would make to that is probably just
+[00:16:20] removing the caption side. And you can
+[00:16:22] specify all that stuff that's listed in
+[00:16:23] the API which I think is really cool. So
+[00:16:25] with that guys, you basically got a full
+[00:16:26] system now. And all you ever do on this
+[00:16:28] as you can see you come down, you
+[00:16:29] explain your pain point which is hey I
+[00:16:32] want more clients. Then it could be
+[00:16:33] average avatar location business name.
+[00:16:35] Shall we send this? choose that risk
+[00:16:36] character avatar and then you send it
+[00:16:38] off and then bam it goes. Literally
+[00:16:39] guys, that then goes ahead and lands in
+[00:16:41] the beautiful phenomenal scenario. And
+[00:16:43] what we do is we just simply come over
+[00:16:44] here and we connect these guys together.
+[00:16:46] And what I'm going to do is disconnect
+[00:16:47] these. I'm going to unpin this. And I'm
+[00:16:50] going to uh save this real quick and
+[00:16:52] let's reactivate this guy. And let me
+[00:16:53] just test this one real quick. So we
+[00:16:54] hook it up to Liverable. Come back over.
+[00:16:56] Just quickly go through this stuff
+[00:16:57] again. Okay, beautiful. Send this
+[00:16:58] information over. Come back over to
+[00:17:00] scenario. And now that's actually come
+[00:17:01] through into the scenario. we can just
+[00:17:03] grab those out individually and then
+[00:17:04] link them all up and pull them over to
+[00:17:06] the specific avatar, the email, the
+[00:17:08] business name, and then you're going to
+[00:17:09] be ready to rock and roll. So, that is
+[00:17:11] an incredible way to generate some
+[00:17:13] excellent income with basically
+[00:17:14] automating lead mags. Well, this next
+[00:17:16] one is pretty incredible and is
+[00:17:18] literally removing jobs that people were
+[00:17:20] paying hundreds of thousands of dollars
+[00:17:22] for. That's how transformative this
+[00:17:24] technology is. And that is, of course, a
+[00:17:25] high-end ad creative agency. Now, to do
+[00:17:28] this, you need a couple of skills. First
+[00:17:30] of all, you need the ability to create
+[00:17:31] stories that are going to sit together
+[00:17:33] for the client. You have to understand
+[00:17:34] the experience. But I want to show you
+[00:17:36] just how valuable this is. So 10 days
+[00:17:37] ago, we had this post. I made this ad
+[00:17:39] for my company in under 3 hours using
+[00:17:41] V3. It costs $120,000 in to make in LA.
+[00:17:45] So let's give this a quick check out.
+[00:17:46] I'm the CIO and my budget is bloated by
+[00:17:50] a few million. I have no idea what's in
+[00:17:53] the IT budget.
+[00:17:56] Half my team hates the tools we've got.
+[00:17:58] The other half ignores them. I can't do
+[00:18:00] this, man. So, what's really cool,
+[00:18:02] they're using really basic minimal
+[00:18:03] editing. You build the whole story
+[00:18:05] prompt out there. Humor is a great way
+[00:18:06] to sell as we know. And then you overlay
+[00:18:08] this on tools like Premier Pro or if
+[00:18:10] you're doing um you different basically
+[00:18:12] different dimensions. You can use Cap
+[00:18:13] got loads of free editors online that
+[00:18:15] you could use to build that. And this is
+[00:18:17] all built by the way guys in 3 hours and
+[00:18:19] $7 and $25 in AI credit. So, to make a
+[00:18:22] success of this, you'd want to focus on
+[00:18:23] the kind of playbook that V3 excels at,
+[00:18:26] which is talking head video content.
+[00:18:28] Like we saw on that thing, it's mainly
+[00:18:29] like the guy talking in front of it. The
+[00:18:31] kind of positioning is basically going
+[00:18:33] to be 20 to 30% of the actual cost of an
+[00:18:37] agency. So if an agency charges
+[00:18:39] $100,000, you come in about 20 to 30k
+[00:18:42] mark and you'll get them 80 to 90% of
+[00:18:44] the quality. Like it's completely fine.
+[00:18:46] If I said to you it's going to be 20%
+[00:18:47] the cost, but 80% the quality.
+[00:18:49] Everyone's like, "Oh my gosh, dude. I
+[00:18:51] take that every day of the week and
+[00:18:53] twice on Sundays." And the only thing to
+[00:18:55] overcome with this is this slight AI
+[00:18:56] stigma about people really not being
+[00:18:58] able to understand or differentiate
+[00:19:00] between what is an AI ad and what isn't.
+[00:19:02] This is going to be a question of when
+[00:19:04] this change happens, not if. And at the
+[00:19:06] moment, I think every I mean, I've heard
+[00:19:08] so many cases of full-blown studios who
+[00:19:10] are literally like I think there was
+[00:19:13] there's one in recent history actually,
+[00:19:14] they actually stopped the production of
+[00:19:15] a crazy studio when they saw how
+[00:19:17] effective and how good these things are
+[00:19:19] going. So this is definitely a time in
+[00:19:21] the market opportunity that won't be
+[00:19:23] around forever, but for those people
+[00:19:24] that can actually create those stories
+[00:19:26] and knit it together with music, it
+[00:19:28] makes it genuinely stand out. And so
+[00:19:30] there's so many businesses, SME,
+[00:19:32] enterprises that really benefit from
+[00:19:33] creating this kind of stuff. It also
+[00:19:35] appeals, by the way, to corporate
+[00:19:36] education and corporate enter, you know,
+[00:19:38] like when you basically think of your
+[00:19:39] large companies and you also want to
+[00:19:41] like educate and teach your staff with
+[00:19:43] entertaining visuals, airplane
+[00:19:44] commercials, you literally name it. We
+[00:19:46] no longer need to spend hundreds of
+[00:19:48] thousands of dollars on expensive cruise
+[00:19:50] to make that a reality. And the third
+[00:19:51] opportunity is really becoming a content
+[00:19:53] generation strategic partner for
+[00:19:56] different businesses in particular. This
+[00:19:58] can be what we call the landing page,
+[00:19:59] the VSSL, which is like the holy grail,
+[00:20:02] which is like the main conversion driver
+[00:20:04] for most businesses with V3. Now, what
+[00:20:06] you can do is work with SAS companies,
+[00:20:08] startups, uh online education companies,
+[00:20:10] anybody that has a website to actually
+[00:20:12] build a beautiful landing page. It's
+[00:20:14] that step blow commercial, but the cost
+[00:20:17] of it can be really significant. My
+[00:20:19] first startup, for example, I paid, what
+[00:20:21] did I pay? I must have paid 3 to 5K for
+[00:20:24] an animated one minute uh and actually
+[00:20:27] it was like, it was like 1 to 2 minute
+[00:20:29] like literally like animation video
+[00:20:30] thing. And I also had to go and hire a
+[00:20:32] professional voice actor to do my entire
+[00:20:34] thing. That was really interesting to
+[00:20:35] me. With V3, I wouldn't need to do any
+[00:20:38] of that. I mean, just think of the
+[00:20:40] potential with this kind of thing that
+[00:20:41] you actually do that. And the reason
+[00:20:43] this works is because effective video
+[00:20:44] sales letters, landing pages, you name
+[00:20:47] it, actually can have a significant
+[00:20:48] increase in the customers, right?
+[00:20:50] Because you've got number of eyeballs,
+[00:20:52] number of people that convert and then
+[00:20:53] number of people that stay or make
+[00:20:54] repeat c repeat purchases. You're
+[00:20:56] attacking that middle layer here, which
+[00:20:58] is a number of individuals that convert.
+[00:20:59] And you can offer your services as a
+[00:21:01] storyboard artist, which is how I would
+[00:21:03] position this rather than like an AI
+[00:21:05] video engineer as an a sort of
+[00:21:07] storyboarding artist where you can
+[00:21:08] actually build together and storyboard
+[00:21:10] these things and then connect them and
+[00:21:12] actually interplay them with um you know
+[00:21:14] different actual clips of the individual
+[00:21:16] doing it. And there's just so many
+[00:21:18] different ways you can position that.
+[00:21:19] And what's really mind-blowing to me is
+[00:21:20] the fact that you can actually portray
+[00:21:23] transformations and things happening
+[00:21:25] that would have been literally
+[00:21:27] impossible to do before this or you'd
+[00:21:29] need the budget of you know out of
+[00:21:31] thousands and tens and tens of thousands
+[00:21:32] to do like a Yeti and a Glacia telling
+[00:21:35] Johnson Johnson you haven't got enough
+[00:21:36] clients is crazy. That is just
+[00:21:38] absolutely wild. And if you were a
+[00:21:40] company that was like Yeti blue bottles,
+[00:21:43] right? actually being able to have like
+[00:21:44] your avatar animated like you know my AI
+[00:21:47] agency for example is called Teddy AI so
+[00:21:50] I can now have like in my VSSL like the
+[00:21:52] Teddy interacting with things walking
+[00:21:54] down the street and bring a level of
+[00:21:56] humor and edge and if I didn't know how
+[00:21:58] to use technologies and I I might even
+[00:22:00] pay for it cuz I don't even have time
+[00:22:01] right but someone can come to me and
+[00:22:02] display that is a really beautiful
+[00:22:04] opportunity and you can charge clients
+[00:22:06] thousands of dollars I know this because
+[00:22:08] I've actually paid for it myself and my
+[00:22:09] number one thing I wouldn't want you to
+[00:22:10] form trap of is to think that this is
+[00:22:12] somehow how saturated it isn't. It
+[00:22:15] literally just arrived and you can
+[00:22:17] definitely get followers on by posting
+[00:22:18] things on social media. We've done
+[00:22:20] things on the channel how you connect
+[00:22:21] those in your automations. But the thing
+[00:22:23] is are those uh you know eyeballs
+[00:22:25] actually turnurning into monetization
+[00:22:27] for you. Often times they're not. And
+[00:22:29] it's very easy with social media to get
+[00:22:31] trapped into bounty metrics. I would
+[00:22:32] love you to apply to this to businesses
+[00:22:34] that actually will generate you a
+[00:22:36] revenue and income for your precious
+[00:22:37] time and investment. And we can still do
+[00:22:39] that. I can show you how to do that if
+[00:22:40] you want to build up like a Facebook
+[00:22:41] channel, that sort of stuff. But I just
+[00:22:42] think this stuff is more high leverage.
+[00:22:44] And if you want to get all the resources
+[00:22:45] about in this video and actually join us
+[00:22:47] for a live lovable code building
+[00:22:49] workshop, we're going to build
+[00:22:50] incredible things just like this
+[00:22:51] together uh in our wonderful beautiful
+[00:22:53] classroom. We have lots of stuff
+[00:22:54] happening all the time. Just click the
+[00:22:55] link down below uh in the description
+[00:22:56] somewhere. You can join the community
+[00:22:58] and we'll build that with you together.
+[00:22:59] In any case, there's a video on screen.
+[00:23:01] I'd encourage you to watch. We go deep
+[00:23:02] into some really cool, excellent,
+[00:23:04] lovable building stuff. In any case,
+[00:23:06] guys, have a beautiful week and I'll see
+[00:23:08] you in my next

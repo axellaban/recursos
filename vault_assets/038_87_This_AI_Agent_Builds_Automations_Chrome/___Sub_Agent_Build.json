@@ -1,0 +1,342 @@
+{
+  "name": "👀 Sub Agent Build",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "whatUserWants"
+            },
+            {
+              "name": "Workflow ID"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -380,
+        40
+      ],
+      "id": "b9950e42-285e-458c-9734-1910ab23a284",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "Select 3 workflows that best fit building an automation the user describes below.\n\nOutput only their numbers in a pure JSON array. No explanations, no extra text.\n\nuse this format:\n\n{\n\"numbers\":\n[\"number1\",\"number2\",\"number3\"]\n}",
+              "role": "system"
+            },
+            {
+              "content": "=What the user wants to build:\n{{ $('Names').first().json['what do you want to build?'] }}\n\n\nThe items to choose from:\n\n{{ $json.combinedText }}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        500,
+        40
+      ],
+      "id": "11266f6f-a984-47ce-a00c-221f0274397f",
+      "name": "💎 Golden Selector",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "94601009-522a-4b0f-a3c4-237614cb44fe",
+              "name": "=what do you want to build?",
+              "value": "={{ $json.whatUserWants }}",
+              "type": "string"
+            },
+            {
+              "id": "0008262c-f703-49b1-be43-8d436ab86acf",
+              "name": "Workflow Id",
+              "value": "={{ $json['Workflow ID'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -180,
+        40
+      ],
+      "id": "0835b0ae-bb59-4d8d-ba78-6b9a4b847ddd",
+      "name": "Names"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appIUuRZ00XjIH6Z1",
+          "mode": "list",
+          "cachedResultName": "🔮 Automation Magic",
+          "cachedResultUrl": "https://airtable.com/appIUuRZ00XjIH6Z1"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblemizyeNT0He6b2",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appIUuRZ00XjIH6Z1/tblemizyeNT0He6b2"
+        },
+        "filterByFormula": "=",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        40,
+        40
+      ],
+      "id": "d52a5c1e-f02d-428c-848b-11e89c32887c",
+      "name": "📊 Get Data",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "Xqd3dnjmT0zrv06m",
+          "name": "Airtable Personal Access Token account 6"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 'items' is automatically available here (array of all Airtable records)\n\nconst results = items.map((item, index) => {\n  return (index + 1) + \". [\" + item.json[\"ID\"] + \"] - \" + item.json[\"Short description\"];\n});\n\n// Join everything into a single string\nconst combinedText = results.join(\"\\n\\n\");\n\nreturn [\n  {\n    json: {\n      combinedText\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        300,
+        40
+      ],
+      "id": "fde39580-d8b3-421d-8510-cfe79c78b5d9",
+      "name": "👾 Data Overview"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "message.content.numbers",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        860,
+        40
+      ],
+      "id": "5b346d03-8d9e-4ff7-bddb-2bc3b4e2b6d7",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "jsCode": "const allRecords = $items('📊 Get Data');\nconst selectedId = $json[\"message.content.numbers\"];\n\nconst matchedRecord = allRecords.find(record => record.json[\"ID\"] == selectedId);\n\nif (matchedRecord) {\n  const text = `📄 [${matchedRecord.json[\"ID\"]}]\n  \nDescription:\n${matchedRecord.json[\"Description\"]}\n\nNotes:\n${matchedRecord.json[\"Notes\"]}\n`;\n\n  return [\n    {\n      json: {\n        finalText: text\n      }\n    }\n  ];\n} else {\n  return [\n    {\n      json: {\n        finalText: `⚠️ No workflow found for ID ${selectedId}`\n      }\n    }\n  ];\n}\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1080,
+        40
+      ],
+      "id": "1c82ff43-e4ab-4281-bf77-2f61d9931b91",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are an expert AI assistant specialized in generating JSON configurations for multi-step n8n AI Agent workflows. Your primary function is to translate a user's natural language request describing an AI agent's task, tools, or a desired automation outcome into a logical sequence of appropriate n8n nodes (AI Agent, LLM, Memory, Tools, Core nodes like Set/IF/HTTP etc.).\n\nCore Knowledge Base: Your primary source of information for n8n nodes, their types, parameters, versions, connections, best practices, and JSON examples is the \"Comprehensive Guide to n8n Modules and Workflow Building\" provided to you. You MUST actively consult this knowledge base (via RAG) during your process.\n\nYou must output both a natural language explanation AND the complete, syntactically correct JSON object representing the configuration for these nodes and their connections, including helpful notes and well-crafted prompts. Aim to create more complete, functional workflows rather than minimal single-node outputs when the request implies multiple steps, using the knowledge base for guidance on typical patterns and node combinations.\n\nYour Process:\n\nAnalyze Request & Consult Knowledge Base (RAG) FIRST: This is ESSENTIAL. Meticulously analyze the user's request. Consult your core knowledge base (the Comprehensive n8n Guide) to:\n\nIdentify Overall Goal & Steps.\nSelect Appropriate Nodes for Each Step (Prioritize primary, officially documented nodes). Determine necessary supporting AI nodes (LLM, Memory, Tools) and Core nodes.\nRetrieve Configuration Details (parameters, typeVersion, connection types, JSON structure examples). Pay attention to specific parameter formats (like .item arrays).\nConfigure Node Parameters: Construct the parameters object for each identified node.\n\nConsult RAG & Validate: Use the knowledge base rigorously. Ensure only valid parameter keys for each node type/typeVersion are used. Include standard defaults (like options: {}). Check for special structures.\nConfigure LLM, Memory, Tools: Set up parameters based on the knowledge base, including credentials placeholders.\nConfigure Agent Node (Prompts): Generate clear options.systemMessage (Role, Task, Tools, Constraints) and text (mapping input {{{{ ... }}}}) parameters following best practices. Auto-generate useful defaults.\nMap Dynamic Values: Use correctly escaped n8n expressions ({{{{ ... }}}} when inside generated text like prompts, {{ ... }} when used as direct parameter values) appropriately. Assume input data exists.\nSpecific Node Rules: Apply rules from the knowledge base (e.g., Airtable nodes need baseId/tableId etc.). Assume newest node versions unless docs indicate otherwise.\nGenerate Node Notes: Create a concise note for the notes field for each generated node, explaining its specific role.\n\nDefine Connections: Construct the connections object meticulously based on the knowledge base and workflow steps. Use correct connection types (main, ai_languageModel, ai_memory, ai_tool).\n\nAssemble & Validate Workflow JSON: Construct the final JSON object (nodes, connections). Perform a final check for:\n\nStrict JSON Syntax: Correct braces {}, brackets [], quotes \", colons :, commas ,. No trailing commas. Use only valid JSON types.\nn8n Structure: Root object only has nodes and connections. Nodes have required properties (name, type, typeVersion, position, parameters, notes, optional credentials). id uses \"GENERATED_UUID\".\nConnections Validity (CRITICAL): Ensure the connections object follows the precise structure (Source Name -> Port Name -> Array per Branch -> Connection Object or null). See detailed rules in JSON Requirements below.\nFormat & Output Text AND JSON: Generate the two-part response:\n\nPart 1: Explanation: Write a brief description of the overall workflow generated.\nPart 2: JSON Code Block: Provide the complete generated workflow JSON, enclosed in a markdown code block (json ...).\n(JavaScript Requirements - ONLY for n8n-nodes-base.code node, if needed):\n\nYou must consult the knowledge base section on the Code node for correct variable usage ($input.all(), item.json, $node, $items, $env), return structure ([{ json: {...} }] or modifying and return $input.all()), available libraries (Luxon, JMESPath), and best practices before generating jsCode.\nJSON Output Format Requirements (For the JSON Part of the Output):\n\nThe JSON block MUST be syntactically valid and adhere strictly to the n8n format described in the knowledge base.\nRoot Structure: Root object must contain exactly two keys: \"nodes\" (Array) and \"connections\" (Object). No other top-level keys like settings, active, id, workflowId, tags.\nNode Objects: Each object in \"nodes\" must include: \"name\" (String, unique), \"type\" (String, validated), \"typeVersion\" (Number), \"id\": \"GENERATED_UUID\" (String), \"notes\" (String), \"position\" (Array [N, N], use distinct placeholders), \"parameters\" (Object, validated structure for type), \"credentials\" (Object, empty {} or placeholder structure like {\"credType\": {\"id\": \"PLACEHOLDER_ID\", \"name\":\"Placeholder Name\"}}).\nConnections Object (Precise Rules):\nKeys must be the \"name\" of source nodes from the \"nodes\" array.\nValues must be objects where keys are output port names (e.g., \"main\", \"ai_tool\").\nThe value for each port key must be an array [] containing elements for each output branch index (0, 1, ...).\nIf branch i is connected: Element at index i must be [ { \"node\": \"DestNodeName\", \"type\": \"portName\", \"index\": N } ] (e.g., \"type\": \"main\", \"index\": 0 or \"type\": \"ai_tool\", \"index\": 1).\nIf branch i is unconnected: Element at index i must be null.\nGeneral: Use valid JSON types. Use ={{ ... }} for n8n expressions as parameter values. Use {{{{ ... }}}} for literal examples within generated text parameters (like system messages). Assume latest n8n node versions unless specified otherwise.\nExample 1: Request requiring a Code Node\n\nUser Request: \"n8n code node to combine firstName and lastName fields into a fullName field\"\n\n(AI Process: RAG confirms Code node needed, configures it)\n\nYour Expected Output (Text + JSON):\n\nHere is the configuration for an n8n Code node that combines the firstName and lastName fields from the input JSON into a new fullName field:\n\nJSON\n\n{\n  \"nodes\": [\n    {\n      \"parameters\": {\n        \"jsCode\": \"// Combine firstName and lastName into fullName for each item\\nfor (const item of $input.all()) {\\n  const first = item.json.firstName || '';\\n  const last = item.json.lastName || '';\\n  // Add the new fullName field to the existing JSON data\\n  item.json.fullName = `${first} ${last}`.trim();\\n}\\n// Return all modified items\\nreturn $input.all();\"\n      },\n      \"type\": \"n8n-nodes-base.code\",\n      \"typeVersion\": 2,\n      \"position\": [0, 0],\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"Combine Names\",\n      \"notes\": \"Combines the firstName and lastName fields from the input JSON into a new fullName field.\",\n      \"credentials\": {}\n    }\n  ],\n  \"connections\": {}\n}\nExample 2: AI Agent Workflow Structure (Based on Provided Example)\n\nUser Request (Example leading to this): \"Set up a webhook-triggered AI agent using GPT-4.1, simple memory, and tools for Gmail, Airtable, and HTTP requests. Respond via webhook.\"\n\n(AI Process: RAG identifies necessary nodes, configures parameters using defaults/placeholders, defines connections)\n\nYour Expected Output (Text + JSON):\n\nThis JSON outlines a complete n8n workflow for an AI Agent triggered by a webhook. It includes the Agent node, connected to an OpenAI Chat Model (placeholder GPT-4.1), Simple Memory, and several tools (Gmail, Airtable, HTTP Request), finally responding to the initial webhook:\n\nJSON\n\n{\n  \"nodes\": [\n    {\n      \"parameters\": {\n        \"httpMethod\": \"POST\",\n        \"path\": \"85b18028-bb26-4d6f-8eb6-a99b17b425a1\", // Example Path\n        \"responseMode\": \"responseNode\", // Waits for Respond node\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.webhook\",\n      \"typeVersion\": 2, // Example Version\n      \"position\": [ 480, 300 ], // Placeholder Position\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"Webhook Trigger\", // Descriptive Name\n      \"notes\": \"Receives the initial request to start the AI Agent.\",\n      \"webhookId\": \"PLACEHOLDER_WEBHOOK_ID\" // Placeholder\n    },\n    {\n      \"parameters\": {\n        \"promptType\": \"define\",\n         // NOTE: User input mapped here using expression, braces escaped for LLM\n        \"text\": \"User Request: {{{{ $json.body.command }}}}\",\n        \"hasOutputParser\": false, // Default, adjust if needed\n        \"options\": {\n          // NOTE: Auto-generated based on tools & goal\n          \"systemMessage\": \"You are an AI assistant equipped with tools for Gmail, Airtable, and making HTTP requests. Use these tools as needed to fulfill the user's request.\",\n          \"temperature\": 0.7 // Default\n        }\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.agent\",\n      \"typeVersion\": 1.8,\n      \"position\": [ 740, 300 ], // Placeholder Position\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"AI Agent Core\", // Descriptive Name\n      \"notes\": \"The main AI agent orchestrator, using connected LLM, memory, and tools.\",\n       \"credentials\": {}\n    },\n     {\n      \"parameters\": {\n        \"model\": { // NOTE: 'gpt-4.1' is likely invalid, use actual model names like 'gpt-4o-mini'\n          \"__rl\": true, \"value\": \"gpt-4.1\", \"mode\": \"list\", \"cachedResultName\": \"gpt-4.1\"\n        },\n        \"options\": {}\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.lmChatOpenAi\",\n      \"typeVersion\": 1.2,\n      \"position\": [ 580, 620 ], // Placeholder Position\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"OpenAI Chat Model\", // Descriptive Name\n      \"notes\": \"Provides the LLM (check model name validity) for the Agent.\",\n      \"credentials\": {\n        \"openAiApi\": { \"id\": \"PLACEHOLDER_CREDENTIAL_ID\", \"name\": \"Placeholder OpenAI Creds\" }\n      }\n    },\n    {\n      \"parameters\": {\n        \"sessionIdType\": \"customKey\",\n         // NOTE: Uses expression for session key - must be passed to sub-workflow if this IS one\n         // Or if this is the main workflow, it uses data from trigger node named 'Webhook'\n        \"sessionKey\": \"={{ $('Webhook').item.json.body.sessionId || $json.body.sessionId }}\", // Example using trigger input\n        \"memoryKey\": \"chat_history\", // Default key name\n        \"contextWindowLength\": 20 // Example length\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.memoryBufferWindow\",\n      \"typeVersion\": 1.3,\n      \"position\": [ 780, 620 ], // Placeholder Position\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"Simple Memory\", // Descriptive Name\n      \"notes\": \"Provides conversation memory based on a session key.\",\n      \"credentials\": {}\n    },\n    { // Example Tool 1: Gmail\n      \"parameters\": { \"options\": {} }, // Configure specific operations if needed by agent task\n      \"type\": \"n8n-nodes-base.gmailTool\",\n      \"typeVersion\": 2.1,\n      \"position\": [ 940, 500 ], // Placeholder Position\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"Gmail Tool\", // Descriptive Name\n      \"notes\": \"Provides Gmail capabilities to the agent.\",\n      \"credentials\": {\n        \"gmailOAuth2\": { \"id\": \"PLACEHOLDER_CREDENTIAL_ID\", \"name\": \"Placeholder Gmail Creds\" }\n      }\n    },\n     { // Example Tool 2: Airtable\n      \"parameters\": {\n         // Agent usually passes specific base/table/operation info via input,\n         // so base parameters might just reference credentials. Check node docs.\n        \"options\": {}\n       },\n      \"type\": \"n8n-nodes-base.airtableTool\",\n      \"typeVersion\": 2.1,\n      \"position\": [ 940, 620 ], // Placeholder Position\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"Airtable Tool\", // Descriptive Name\n      \"notes\": \"Provides Airtable capabilities to the agent.\",\n      \"credentials\": {\n        \"airtableTokenApi\": { \"id\": \"PLACEHOLDER_CREDENTIAL_ID\", \"name\": \"Placeholder Airtable Creds\" }\n      }\n    },\n     { // Example Tool 3: HTTP Request\n      \"parameters\": {}, // Agent typically provides URL, method, body etc. as input\n      \"type\": \"@n8n/n8n-nodes-langchain.toolHttpRequest\",\n      \"typeVersion\": 1.1,\n      \"position\": [ 940, 740 ], // Placeholder Position\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"HTTP Request Tool\", // Descriptive Name\n      \"notes\": \"Provides generic HTTP request capability to the agent.\",\n       \"credentials\": {} // Or configure default credentials if needed\n    },\n    { // Final Response Node\n      \"parameters\": {\n        \"responseCode\": 200, // Default OK\n        \"responseData\": \"={{ $('AI Agent Core').item.json.output }}\", // Respond with agent output\n        \"options\": {}\n      },\n      \"type\": \"n8n-nodes-base.respondToWebhook\",\n      \"typeVersion\": 1.1,\n      \"position\": [ 1120, 300 ], // Placeholder Position\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"Respond to Webhook\", // Descriptive Name\n      \"notes\": \"Sends the final output from the AI agent back to the caller.\",\n       \"credentials\": {}\n    }\n  ],\n  \"connections\": {\n    \"Webhook Trigger\": {\n      \"main\": [ [ { \"node\": \"AI Agent Core\", \"type\": \"main\", \"index\": 0 } ] ]\n    },\n    \"AI Agent Core\": {\n      \"main\": [ [ { \"node\": \"Respond to Webhook\", \"type\": \"main\", \"index\": 0 } ] ]\n    },\n    \"OpenAI Chat Model\": {\n      \"ai_languageModel\": [ [ { \"node\": \"AI Agent Core\", \"type\": \"ai_languageModel\", \"index\": 0 } ] ]\n    },\n    \"Simple Memory\": {\n      \"ai_memory\": [ [ { \"node\": \"AI Agent Core\", \"type\": \"ai_memory\", \"index\": 0 } ] ]\n    },\n    \"Gmail Tool\": {\n      \"ai_tool\": [ [ { \"node\": \"AI Agent Core\", \"type\": \"ai_tool\", \"index\": 0 } ] ] // Tool indexes start at 0\n    },\n    \"Airtable Tool\": {\n      \"ai_tool\": [ [ { \"node\": \"AI Agent Core\", \"type\": \"ai_tool\", \"index\": 1 } ] ] // Second tool is index 1\n    },\n    \"HTTP Request Tool\": {\n      \"ai_tool\": [ [ { \"node\": \"AI Agent Core\", \"type\": \"ai_tool\", \"index\": 2 } ] ] // Third tool is index 2\n    }\n  }\n}\nExplanation of Example 2: This workflow starts with a Webhook trigger. The data received is passed to the AI Agent Core node's text input (along with instructions). The Agent node is connected to supporting nodes via specific connection types: the OpenAI Chat Model (ai_languageModel), Simple Memory (ai_memory), and three different Tools (ai_tool for each). The Agent orchestrates using these components based on the user input and system message. The Simple Memory node uses an expression {{ $('Webhook').item.json.body.sessionId }} as an example to get a Session ID from the initial trigger (assuming content.js sends sessionId). Finally, the main output of the Agent is sent to the Respond to Webhook node, which sends the result back to the original caller. Note: The model name 'gpt-4.1' in the example is likely invalid; use current valid names like 'gpt-4o-mini'. Credential IDs and specific parameters like Base/Table IDs would need to be set correctly.",
+              "role": "system"
+            },
+            {
+              "content": "=the user wants to build:\n{{ $('Names').first().json['what do you want to build?'] }}\n\nuse this information as a resouce to ensure you build a valid N8N workflow:\n{{ $json.finalText }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1320,
+        40
+      ],
+      "id": "a35b2514-c14a-48ab-ac22-f61f2a416727",
+      "name": "🤩 Creator",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are an expert AI assistant specialized in generating JSON configurations for n8n AI Agent workflows. Your primary function is to translate a user's natural language request into a configuration for the most appropriate n8n AI Agent node(s) and supporting components (LLM, Memory, Tools). You must output both a natural language explanation AND the complete, syntactically correct JSON object representing the configuration, including helpful notes and well-crafted prompts.\n\nYour Process:\n\nAnalyze Request & Consult Knowledge Base (RAG) FIRST: This is ESSENTIAL. Meticulously analyze the user's request related to creating or configuring an n8n AI Agent. Consult your internal knowledge base (n8n documentation, AI/LangChain concepts, structured examples) to:\n\nIdentify the core goal.\nIdentify the required Agent, LLM, Memory, and Tool nodes.\nRetrieve configuration details (parameters, typeVersion, connection types, JSON templates/examples).\nDecide if standard AI nodes suffice or if supporting nodes (like n8n-nodes-base.code for pre/post-processing) are needed based only on the knowledge base.\nIdentify Node Types & Versions: Confirm the final target node type and typeVersion for all required nodes based on RAG.\n\nConfigure Node Parameters: Construct the parameters object for each identified node.\n\nConsult RAG & Validate: Use RAG data to ensure only valid parameter keys for each node type/typeVersion are used. Include standard defaults (like options: {}).\nConfigure LLM, Memory, Tools: Set up parameters for these supporting nodes.\nConfigure Agent Node (Prompts):\nGenerate System Message: Auto-generate a clear options.systemMessage defining the AI's Role, Task, Capabilities/Tools, and Constraints, based on the user's request. Use best practices for clarity. Provide a sensible default if the request is generic.\nGenerate User Message / text: Auto-generate the text parameter content, clearly instructing the agent and mapping necessary input data using n8n expressions (e.g., {{{{ $json.userInput }}}} - note escaped braces if showing examples).\nMap Dynamic Values: Use n8n expressions (like {{{{ $json.someField }}}} , {{{{ $env.API_KEY }}}} , {{{{ $node[\\\"Previous Node\\\"].json.outputValue }}}} - Note: Examples use escaped braces ) appropriately when configuring parameters that you generate, assuming input data is available.\nGenerate Node Notes: Create a concise note for the notes field for each generated node, explaining its specific role.\n\nAssemble Workflow JSON: Construct the final JSON object.\n\nInclude all generated nodes in the nodes array.\nDefine the connections between nodes, using correct types (main, ai_languageModel, ai_memory, ai_tool).\nFinal Validation: Check if the generated nodes, parameters, and connections form a logical structure consistent with the request and documentation.\n\nFormat & Output Text AND JSON: This is the required output format:\n\nPart 1: Explanation: Write a brief, user-friendly sentence or two describing what the generated JSON configuration does.\nPart 2: JSON Code Block: Below the explanation, provide the complete generated workflow JSON, enclosed in a markdown code block (json ...). Do not include any other text before the explanation or after the JSON code block.\n(JavaScript Requirements - ONLY for n8n-nodes-base.code node, if needed):\n\n[Keep existing detailed JS rules: valid JS, n8n context vars, robust input, return structure, comments, simplicity]\nJSON Output Format Requirements (For the JSON Part of the Output):\n\nThe JSON block itself MUST be syntactically valid.\nRoot object MUST contain nodes array and connections object.\nEach n8n node object MUST include: type (validated), typeVersion, id: \"GENERATED_UUID\", name: \"Descriptive Name\", notes: \"Generated note...\", position: [0, 0] (use distinct placeholders if multiple nodes), parameters: { ... } (validated), credentials: {} (or placeholder structure).\nConnections MUST be correctly structured using appropriate types (main, ai_languageModel, etc.).\nExample 1: Request requiring a Code Node\n\nUser Request: \"n8n code node to combine firstName and lastName fields into a fullName field\"\n\n(AI Process: RAG confirms Code node needed, configures it)\n\nYour Expected Output (Text + JSON):\n\nHere is the configuration for an n8n Code node that combines the firstName and lastName fields from the input JSON into a new fullName field:\n\nJSON\n\n{\n  \"nodes\": [\n    {\n      \"parameters\": {\n        \"jsCode\": \"// Combine firstName and lastName into fullName for each item\\nfor (const item of $input.all()) {\\n  const first = item.json.firstName || '';\\n  const last = item.json.lastName || '';\\n  // Add the new fullName field to the existing JSON data\\n  item.json.fullName = `${first} ${last}`.trim();\\n}\\n// Return all modified items\\nreturn $input.all();\"\n      },\n      \"type\": \"n8n-nodes-base.code\",\n      \"typeVersion\": 2,\n      \"position\": [\n        0,\n        0\n      ],\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"Combine Names\",\n      \"notes\": \"Combines the firstName and lastName fields from the input JSON into a new fullName field.\",\n      \"credentials\": {}\n    }\n  ],\n  \"connections\": {}\n}\nExample 2: Request requiring an AI Agent Node (with Auto-Prompt)\n\nUser Request: \"create an n8n agent node with simple memory to act as a helpful assistant answering questions based on incoming text using gpt-4o-mini\"\n\n(AI Process: RAG identifies Agent, LLM, Memory nodes; configures params; auto-generates prompts; defines connections)\n\nYour Expected Output (Text + JSON):\n\nThis configuration sets up an AI Agent workflow. It uses GPT-4o mini via an OpenAI Chat Model node and includes simple buffer memory. The agent acts as a helpful assistant answering questions based on the input provided in the 'text' parameter:\n\nJSON\n\n{\n  \"nodes\": [\n    {\n      \"parameters\": {\n        \"promptType\": \"define\",\n        // Note: Braces escaped here as they are inside the Agent's text parameter being sent to the LLM\n        \"text\": \"Answer the following question based on our conversation history if relevant:\\n\\n{{{{ $json.question }}}}\",\n        \"options\": {\n          \"systemMessage\": \"You are a helpful AI assistant. Answer the user's questions clearly and concisely, using conversation history for context.\", // Auto-generated\n          \"temperature\": 0.7\n        },\n        \"hasOutputParser\": false\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.agent\",\n      \"typeVersion\": 1.8,\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"Helpful Assistant Agent\",\n      \"notes\": \"Acts as a helpful AI assistant using an LLM and memory to answer questions.\",\n      \"position\": [-200, 0],\n      \"credentials\": {}\n    },\n    {\n      \"parameters\": {\n        \"model\": { \"__rl\": true, \"mode\": \"list\", \"value\": \"gpt-4o-mini\" },\n        \"options\": {}\n      },\n      \"type\": \"@n8n/n8n-nodes-langchain.lmChatOpenAi\",\n      \"typeVersion\": 1.2,\n      \"position\": [-200, -200],\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"OpenAI Chat Model (LLM)\",\n      \"notes\": \"Provides the GPT-4o mini language model for the AI Agent.\",\n      \"credentials\": {\n        \"openAiApi\": { \"id\": \"PLACEHOLDER_CREDENTIAL_ID\", \"name\": \"Placeholder OpenAI Creds\" }\n      }\n    },\n    {\n      \"parameters\": { \"memoryKey\": \"chat_history\", \"k\": 5 },\n      \"type\": \"@n8n/n8n-nodes-langchain.memoryBufferWindow\",\n      \"typeVersion\": 1.3,\n      \"position\": [-200, 200],\n      \"id\": \"GENERATED_UUID\",\n      \"name\": \"Window Buffer Memory\",\n      \"notes\": \"Provides conversation memory (last 5 interactions) for the AI Agent.\",\n      \"credentials\": {}\n    }\n  ],\n  \"connections\": {\n    \"OpenAI Chat Model (LLM)\": {\n       \"ai_languageModel\": [ [ { \"node\": \"Helpful Assistant Agent\", \"type\": \"ai_languageModel\", \"index\": 0 } ] ]\n    },\n     \"Window Buffer Memory\": {\n       \"ai_memory\": [ [ { \"node\": \"Helpful Assistant Agent\", \"type\": \"ai_memory\", \"index\": 0 } ] ]\n    }\n     // Note: Assuming no tools requested in this specific example\n     // Note: Assuming no trigger/response nodes requested in this specific example\n  }\n}",
+              "role": "system"
+            },
+            {
+              "content": "=the input to check:\n{{ $json.message.content }}\n\nRemember do not insert \\n in your output"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1700,
+        40
+      ],
+      "id": "a5084770-3eed-4bcd-a33e-73361ae637d7",
+      "name": "👀 Editor",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Names",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Names": {
+      "main": [
+        [
+          {
+            "node": "📊 Get Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📊 Get Data": {
+      "main": [
+        [
+          {
+            "node": "👾 Data Overview",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "👾 Data Overview": {
+      "main": [
+        [
+          {
+            "node": "💎 Golden Selector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "💎 Golden Selector": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🤩 Creator": {
+      "main": [
+        [
+          {
+            "node": "👀 Editor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "🤩 Creator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "11652ed4-743c-4506-8b24-b865bdadcddf",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "50DnvmkZzW88CJym",
+  "tags": []
+}

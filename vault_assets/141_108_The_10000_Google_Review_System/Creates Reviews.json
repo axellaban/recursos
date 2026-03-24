@@ -1,0 +1,1179 @@
+{
+  "name": "Creates Reviews",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5398b869-32f3-449f-9cfe-b639c8ebfa12",
+              "name": "Full name",
+              "value": "={{ $json.payload.name }}",
+              "type": "string"
+            },
+            {
+              "id": "3b21ef60-5c9b-4229-9ef1-64dcaabcc8f4",
+              "name": "Email",
+              "value": "={{ $json.payload.email }}",
+              "type": "string"
+            },
+            {
+              "id": "6bf4fe12-ada3-483b-b7e0-be61fc03535d",
+              "name": "Number",
+              "value": "={{ $json.payload.questions_and_answers[0].answer }}",
+              "type": "string"
+            },
+            {
+              "id": "1859e702-32bd-440b-9f12-5767ad51e776",
+              "name": "About",
+              "value": "={{ $json.payload.questions_and_answers[1].question }}",
+              "type": "string"
+            },
+            {
+              "id": "88eee2f8-1cae-405b-a917-6efbbd8ba635",
+              "name": "Appointment",
+              "value": "={{ $json.payload.scheduled_event.start_time }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        304,
+        96
+      ],
+      "id": "38ae71bb-c008-4d4a-9d6c-0d616d8392da",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "INSERT GHL WEBHOOK",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $json.Email }}"
+            },
+            {
+              "name": "name",
+              "value": "={{ $json.Name }}"
+            },
+            {
+              "name": "appointment_time",
+              "value": "={{ $json.Appointment }}"
+            },
+            {
+              "name": "about_me",
+              "value": "= {{ $json.About }}"
+            },
+            {
+              "name": "number",
+              "value": "={{ $json.Number }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        528,
+        96
+      ],
+      "id": "6ade3bfe-9df5-4957-a800-c38274535bd1",
+      "name": "Create GHL Contact"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "apptBUE8kREQA34Pz",
+          "mode": "list",
+          "cachedResultName": "⭐️ Med Spa Review",
+          "cachedResultUrl": "https://airtable.com/apptBUE8kREQA34Pz"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl0Pxh7aowzd8GdV",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/apptBUE8kREQA34Pz/tbl0Pxh7aowzd8GdV"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "🔮 Appointment Complete?": false,
+            "👋 Full Name": "={{ $('Edit Fields').item.json['Full name'] }}",
+            "📧 Email": "={{ $('Edit Fields').item.json.Email }}",
+            "📞 Number": "={{ $('Edit Fields').item.json.Number.replace(/[^0-9]/g, \"\") }}",
+            "📅 Date": "={{ $('Edit Fields').item.json.Appointment }}",
+            "💪 About": "={{ $('Edit Fields').item.json.About }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "👋 Full Name",
+              "displayName": "👋 Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "📧 Email",
+              "displayName": "📧 Email",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "📞 Number",
+              "displayName": "📞 Number",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "📅 Date",
+              "displayName": "📅 Date",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "💪 About",
+              "displayName": "💪 About",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "🔮 Appointment Complete?",
+              "displayName": "🔮 Appointment Complete?",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "boolean",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        736,
+        96
+      ],
+      "id": "cc26055f-3619-4312-bd3b-9f9b90620f2e",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "U9c2cggYnLoCrorD",
+          "name": "Use this token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "events": [
+          "invitee.created"
+        ]
+      },
+      "type": "n8n-nodes-base.calendlyTrigger",
+      "typeVersion": 1,
+      "position": [
+        80,
+        96
+      ],
+      "id": "28aac885-2aa2-413f-8bcf-1407052d0e62",
+      "name": "Calendly Trigger",
+      "webhookId": "c86efd49-bbbe-4eb8-95f0-729bdb286459",
+      "credentials": {
+        "calendlyOAuth2Api": {
+          "id": "VTgBKGzA2IdtJn0p",
+          "name": "Calendly account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "authentication": "airtableTokenApi",
+        "baseId": {
+          "__rl": true,
+          "value": "https://airtable.com/apptBUE8kREQA34Pz/tbl0Pxh7aowzd8GdV/viwSD1iBB0IHXpZwW?blocks=hide",
+          "mode": "url"
+        },
+        "tableId": {
+          "__rl": true,
+          "value": "https://airtable.com/apptBUE8kREQA34Pz/tbl0Pxh7aowzd8GdV/viwSD1iBB0IHXpZwW?blocks=hide",
+          "mode": "url"
+        },
+        "triggerField": "Last modified time",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.airtableTrigger",
+      "typeVersion": 1,
+      "position": [
+        64,
+        448
+      ],
+      "id": "457ad395-2ec2-40e3-be8b-bf6573fdd2d0",
+      "name": "Airtable Trigger",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "U9c2cggYnLoCrorD",
+          "name": "Use this token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "008701c3-aa5e-4bc1-a130-de08706c4826",
+              "leftValue": "={{ $json.fields['🔮 Appointment Complete?'] }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        272,
+        448
+      ],
+      "id": "2d5f625e-1e7a-41d9-a71e-f49ec047156e",
+      "name": "If"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        528,
+        432
+      ],
+      "id": "604cb7ef-973d-4815-ae40-8ab58ccc1e0e",
+      "name": "Wait",
+      "webhookId": "807dddfb-24c5-4c6f-b168-a1aa049961be"
+    },
+    {
+      "parameters": {
+        "content": "# 👋 Check-in Message",
+        "height": 320,
+        "width": 1008,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        352
+      ],
+      "typeVersion": 1,
+      "id": "c2d56b82-a553-4d29-bc1f-42e634f40673",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "# 🔥 Appointment Booked",
+        "height": 288,
+        "width": 1008,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 1,
+      "id": "1d3c6913-e7e1-4fdf-bc9f-c7cb0ca2deeb",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "# ⭐️ 5 Star Review Agent",
+        "height": 416,
+        "width": 1776
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        704
+      ],
+      "typeVersion": 1,
+      "id": "fb2a2aca-eb2c-42fe-8ddc-ed76a51a95fe",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "01f2bcb2-0de2-43b3-bd3c-9f09ee376c7e",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        64,
+        800
+      ],
+      "id": "fe765969-98aa-4272-a0d4-45be74326581",
+      "name": "Webhook",
+      "webhookId": "01f2bcb2-0de2-43b3-bd3c-9f09ee376c7e"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Latest message: {{ $('Edit Fields1').item.json.Last_Message }}\n\nMessage History:\nHere are 50 lines following that format:\n{{ $('Edit Fields1').item.json.Message_History }}",
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "=You are INSERT COMPANY International’s WhatsApp support agent responding to post-service follow-ups.\n\nObjectives\n\nGauge client sentiment after their visit.\n\nIf sentiment is slightly positive or greater → guide them towards leaving a review (with explicit permission first).\n\nIf neutral/negative → acknowledge, thank, and log details (no review request).\n\nIf the client asks a question about something else (rebooking, treatments, pricing, etc.), answer helpfully first — then, only if appropriate, return to the review flow.\n\nGolden Rules\n\nAlways gauge sentiment first.\n\nIf slightly positive or greater:\n\nAsk 1 light follow-up question (max 2). Example:\n\n“That’s incredible! Who looked after you today? And what did you like most about the service? ✨”\n\nThen explicitly ask permission:\n\n“Would you consider leaving a review? It makes such a big difference for our small business. 🙏”\n\nIf yes → share review link + optional SEO-friendly draft review.\n\nIf neutral or negative:\n\nThank them for feedback.\n\nAcknowledge politely.\n\nOffer a team follow-up.\n\n❌ Do not request a review.\n\nIf client asks about something else (e.g. appointment times, service details, payment, staff):\n\nBe helpful and answer their question directly.\n\nKeep tone warm, concise, and professional.\n\nOnly return to the review flow if it feels natural and appropriate.\n\nWorkflow\n\nCheck Airtable\n\nStop if marked “do not contact.”\n\nIf review link already shared, don’t mention reviews again.\n\nGauge sentiment + branch\n\nPositive → guiding question → ask permission → share link + draft (if yes).\n\nNeutral/negative → thank, log, no review.\n\nOther questions → answer helpfully, then optionally return to review flow.\n\nReview suggestion (if approved)\n\nDraft short SEO-friendly review using their words (treatment name, staff, benefits, recommendation).\n\nPhrase as optional:\n\n“Here’s a quick draft you could copy or edit if it helps: …”\n\nOther reminders\n\nIf not yet mentioned, share rebooking link:\n\n“By the way, you can book again anytime here: https://calendly.com/jack-aiautomationswithjack/lava_facial”\n\nEscalation\n\nIf high-risk/controversial → mark “do not contact” + escalate.\n\nAirtable Update\n\nAfter each chat log:\n\nSentiment (positive / neutral / negative)\n\nFeedback highlights\n\nWhether review link/draft shared\n\nNext steps (follow-up, rebook, escalation, no action)\n\nContact preferences\n\nOpt-Out Protocol\n\nIf client says stop:\nReply:\n\n“Got it, you’re opted out and won’t get more texts.”\nMark “do not contact” in Airtable."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        1184,
+        784
+      ],
+      "id": "31543c74-d08e-4ce3-90ca-a32d25661ce2",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8dbbde4c-2ee1-4c3a-bd99-4b2d1493e7e0",
+              "name": "Chat Id",
+              "value": "={{ $('Webhook').item.json.body.chat_id }}",
+              "type": "string"
+            },
+            {
+              "id": "75aff8ac-17a7-4034-b939-40bbe1eeaedf",
+              "name": "Last_Message",
+              "value": "={{ $('Webhook').item.json.body.message }}",
+              "type": "string"
+            },
+            {
+              "id": "6b3a3926-f696-42f8-9e25-485a12dc8826",
+              "name": "Message_History",
+              "value": "={{ $json.items[0].text }} {{ $json.items[1].text }} {{ $json.items[2].text }} {{ $json.items[3].text }} {{ $json.items[4].text }} {{ $json.items[5].text }} {{ $json.items[6].text }} {{ $json.items[7].text }} {{ $json.items[8].text }} {{ $json.items[9].text }} {{ $json.items[10].text }} {{ $json.items[11].text }} {{ $json.items[12].text }} {{ $json.items[13].text }} {{ $json.items[14].text }} {{ $json.items[15].text }} {{ $json.items[16].text }} {{ $json.items[17].text }} {{ $json.items[18].text }} {{ $json.items[19].text }} {{ $json.items[20].text }} {{ $json.items[21].text }} {{ $json.items[22].text }} {{ $json.items[23].text }} {{ $json.items[24].text }} {{ $json.items[25].text }} {{ $json.items[26].text }} {{ $json.items[27].text }} {{ $json.items[28].text }} {{ $json.items[29].text }} {{ $json.items[30].text }} {{ $json.items[31].text }} {{ $json.items[32].text }} {{ $json.items[33].text }} {{ $json.items[34].text }} {{ $json.items[35].text }} {{ $json.items[36].text }} {{ $json.items[37].text }} {{ $json.items[38].text }} {{ $json.items[39].text }} {{ $json.items[40].text }} {{ $json.items[41].text }} {{ $json.items[42].text }} {{ $json.items[43].text }} {{ $json.items[44].text }} {{ $json.items[45].text }} {{ $json.items[46].text }} {{ $json.items[47].text }} {{ $json.items[48].text }} {{ $json.items[49].text }}",
+              "type": "string"
+            },
+            {
+              "id": "8b301f5f-4d82-462e-b039-7658ceae76bc",
+              "name": "Number",
+              "value": "={{ $('Webhook').item.json.body.attendees[0].attendee_provider_id.replace(/[^0-9]/g, \"\") }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        480,
+        800
+      ],
+      "id": "e5e3f950-8de0-49be-b119-389384560262",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "url": "=https://INSERT_UNPILE_ID/api/v1/chats/{{ $json.body.chat_id }}/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-KEY",
+              "value": "INSERT_API_KEY"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        272,
+        800
+      ],
+      "id": "1eabd902-d2d1-4892-b31e-3745749990f9",
+      "name": "Get History"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "apptBUE8kREQA34Pz",
+          "mode": "list",
+          "cachedResultName": "⭐️ Med Spa Review",
+          "cachedResultUrl": "https://airtable.com/apptBUE8kREQA34Pz"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl0Pxh7aowzd8GdV",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/apptBUE8kREQA34Pz/tbl0Pxh7aowzd8GdV"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        688,
+        800
+      ],
+      "id": "84eeb4f5-d160-4205-aac6-76febd62ba4b",
+      "name": "Search records",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "U9c2cggYnLoCrorD",
+          "name": "Use this token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "79941431-8563-4a94-9f93-6eaa232f63eb",
+              "leftValue": "={{ $json['📞 Number'] }}",
+              "rightValue": "={{ $('Edit Fields1').item.json.Number }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "30b62afc-3787-489c-9e6f-74211ca98594",
+              "leftValue": "={{ $('Edit Fields1').item.json.Last_Message }}",
+              "rightValue": "It's Jack. Did you have a good time today? 😊",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        896,
+        800
+      ],
+      "id": "3dd753fc-5438-43d9-b798-8c674f7ea8f7",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://<UNIPILE_ID>/api/v1/chats/{{ $('Edit Fields1').item.json['Chat Id'] }}/messages\n\n\n",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-KEY",
+              "value": "INSERT_API_KEY"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "text",
+              "value": "={{ $json.output }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1488,
+        784
+      ],
+      "id": "8820e012-7ba8-4194-9033-1fb5dd6c8db3",
+      "name": "Respond"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=INSERT_WEBHOOK_URL_GHL",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "full_name",
+              "value": "Full name"
+            },
+            {
+              "name": "email",
+              "value": "Email"
+            },
+            {
+              "name": "number",
+              "value": "number"
+            },
+            {
+              "name": "date",
+              "value": "date"
+            },
+            {
+              "name": "about",
+              "value": "about"
+            },
+            {
+              "name": "appointment_complete",
+              "value": "true"
+            },
+            {
+              "name": "last_modified_time",
+              "value": "2025-09-26T09:17:28.000Z"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        752,
+        352
+      ],
+      "id": "7056bcba-2c2e-49d6-9bac-70e1369d9fa3",
+      "name": "💬 Text"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://<UNIPILEID>api/v1/chats",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-KEY",
+              "value": "API_KEY"
+            },
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "account_id",
+              "value": "INSERT_ACCOUNT_ID"
+            },
+            {
+              "name": "text",
+              "value": "How was your Lava Facial today? 😊"
+            },
+            {
+              "name": "attendees_ids",
+              "value": "={{ $json.fields['📞 Number'] }}@s.whatsapp.net"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        752,
+        512
+      ],
+      "id": "3794bc7c-6a70-4562-8ece-a80958e6cb6b",
+      "name": "🔥 Whatsapp"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "apptBUE8kREQA34Pz",
+          "mode": "list",
+          "cachedResultName": "⭐️ Med Spa Review",
+          "cachedResultUrl": "https://airtable.com/apptBUE8kREQA34Pz"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl0Pxh7aowzd8GdV",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/apptBUE8kREQA34Pz/tbl0Pxh7aowzd8GdV"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtableTool",
+      "typeVersion": 2.1,
+      "position": [
+        1664,
+        976
+      ],
+      "id": "be4f71c0-7f5e-4a77-a1e3-7b7870007044",
+      "name": "Search",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "U9c2cggYnLoCrorD",
+          "name": "Use this token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "base": {
+          "__rl": true,
+          "value": "apptBUE8kREQA34Pz",
+          "mode": "list",
+          "cachedResultName": "⭐️ Med Spa Review",
+          "cachedResultUrl": "https://airtable.com/apptBUE8kREQA34Pz"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl0Pxh7aowzd8GdV",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/apptBUE8kREQA34Pz/tbl0Pxh7aowzd8GdV"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "🔮 Appointment Complete?": false,
+            "id": "={{ $('Search records').item.json.id }}",
+            "🛑 Do Not Contact": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('___Do_Not_Contact', ``, 'string') }}",
+            "💪 About": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('___About', ``, 'string') }}",
+            "📧 Email": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('___Email', ``, 'string') }}",
+            "📞 Number": "=",
+            "AI notes": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('AI_notes', ``, 'string') }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "👋 Full Name",
+              "displayName": "👋 Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "📧 Email",
+              "displayName": "📧 Email",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "📞 Number",
+              "displayName": "📞 Number",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "📅 Date",
+              "displayName": "📅 Date",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "💪 About",
+              "displayName": "💪 About",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "🔮 Appointment Complete?",
+              "displayName": "🔮 Appointment Complete?",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "boolean",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "🛑 Do Not Contact",
+              "displayName": "🛑 Do Not Contact",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "AI notes",
+              "displayName": "AI notes",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Last modified time",
+              "displayName": "Last modified time",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtableTool",
+      "typeVersion": 2.1,
+      "position": [
+        1552,
+        976
+      ],
+      "id": "188fab81-27b0-4ec0-b0b5-cd18e76e000f",
+      "name": "Create",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "U9c2cggYnLoCrorD",
+          "name": "Use this token"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Edit Fields1').item.json['Chat Id'] }}",
+        "contextWindowLength": 50
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        1216,
+        976
+      ],
+      "id": "144abdc3-43b9-4d0a-9b81-e57bff429eb0",
+      "name": "Memory"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        976,
+        976
+      ],
+      "id": "af3cf4ed-fd0a-46e7-908b-7e22abd89040",
+      "name": "ChatGPT",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-4-20250514",
+          "cachedResultName": "Claude 4 Sonnet"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        1104,
+        976
+      ],
+      "id": "93aa5f07-4abf-43ce-8395-977b89cbf072",
+      "name": "Claude",
+      "credentials": {
+        "anthropicApi": {
+          "id": "fGKXx4d2Qv5CUq9Y",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "INSERT EMAIL",
+        "subject": "Tricky Customer Query",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        1424,
+        976
+      ],
+      "id": "c1976703-cd75-4cc9-885f-126a1db5ca7e",
+      "name": "Human",
+      "webhookId": "269b6822-4bfc-451d-9ae9-d2488d2ce17e",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "EEOefGalPHDXpz39",
+          "name": "Connected account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Create GHL Contact",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create GHL Contact": {
+      "main": [
+        [
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calendly Trigger": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "💬 Text",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "🔥 Whatsapp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Get History",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Search records",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get History": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search records": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ChatGPT": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Human": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ec7c9c71-57f6-46e0-94d7-3c046bc22800",
+  "meta": {
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "svu4AzeNewchWtOL",
+  "tags": []
+}

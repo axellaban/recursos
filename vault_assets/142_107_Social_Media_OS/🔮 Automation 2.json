@@ -1,0 +1,473 @@
+{
+  "name": "🔮 Automation 2",
+  "nodes": [
+    {
+      "parameters": {
+        "inputSource": "jsonExample",
+        "jsonExample": "{\n  \"prompt\": \"Replace the background with a modern office setting, brighten the subject, and add a subtle shadow under the chair.\",\n  \"google_id\": \"1x2y3z4a5b6c7d8e9f0g\",\n  \"new_file_name\": \"OfficeEdit_v001\"\n}"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -288,
+        -112
+      ],
+      "id": "3e8f5d14-e922-4e59-b4c0-546a0203854e",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "43b6587a-e660-4ed8-b348-39fe355c20be",
+              "name": "Google ID",
+              "value": "={{ $json.google_id }}",
+              "type": "string"
+            },
+            {
+              "id": "b60319c4-cebe-4a66-b753-1072006abcb0",
+              "name": "Prompt",
+              "value": "={{ $json.prompt }}",
+              "type": "string"
+            },
+            {
+              "id": "bf618a5b-9eae-49d1-891a-d0954fb74603",
+              "name": "new file name",
+              "value": "={{ $json.new_file_name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -64,
+        -112
+      ],
+      "id": "5666c5d5-4a8e-4601-8f7f-06b5daebb07b",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json['Google ID'] }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        160,
+        -112
+      ],
+      "id": "3b2c591c-a1d7-4272-b753-de1010d0940c",
+      "name": "Download file1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "0dgudlDM1F7mp5nt",
+          "name": "Google Drive account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.imgbb.com/1/upload",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "api key"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "image",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        352,
+        -112
+      ],
+      "id": "2102ca37-9a6a-41d5-977e-eb24d517a0b0",
+      "name": "Image URL"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        768,
+        -112
+      ],
+      "id": "0e36b233-2ab1-4f57-841b-9a0090d03d44",
+      "name": "Wait",
+      "webhookId": "e434cb79-f061-4fc8-81bd-c84e3eb2ed79"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.urls.get }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer api_key"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        944,
+        -112
+      ],
+      "id": "56c11fb7-b4fb-45ab-8053-fb6edc533abc",
+      "name": "Grab Status"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.output }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1232,
+        -176
+      ],
+      "id": "f1b03004-0913-4103-9e22-ea0f454bf0df",
+      "name": "Download"
+    },
+    {
+      "parameters": {
+        "content": "# 🤝 Improve image",
+        "height": 320,
+        "width": 864
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        496,
+        -208
+      ],
+      "typeVersion": 1,
+      "id": "1ef3b70f-7377-4f1b-8d65-d48c3f6dc054",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.replicate.com/v1/models/google/nano-banana/predictions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer api_key"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"input\": {\n    \"prompt\": \"{{ $('Edit Fields').item.json.Prompt.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, ' ') }}\",\n    \"image_input\": [\n      \"{{ $json.data.url }}\"\n    ],\n    \"output_format\": \"jpg\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        592,
+        -112
+      ],
+      "id": "d968e654-8659-474a-8b84-45935952ee26",
+      "name": "Improve"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.imgbb.com/1/upload",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "API_KEY"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "image",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1424,
+        16
+      ],
+      "id": "c622a4ca-ee89-495f-8e26-d22f18334954",
+      "name": "Image URL1"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.output }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1232,
+        16
+      ],
+      "id": "e5fe6725-0562-42ea-86d0-80a86f2b022a",
+      "name": "Download1"
+    },
+    {
+      "parameters": {
+        "name": "={{ $('When Executed by Another Workflow').item.json.new_file_name }}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1pCLEUAJlE4fb16qNmjvwJiRY0QtcobTl",
+          "mode": "list",
+          "cachedResultName": "🍌 Nano Banana",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1pCLEUAJlE4fb16qNmjvwJiRY0QtcobTl"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1424,
+        -176
+      ],
+      "id": "4db490ce-d6b8-4d8f-a25a-296865246249",
+      "name": "Upload file",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d404ba25-9b72-4195-9160-961d6de3f545",
+              "name": "Output",
+              "value": "=Excellent, that's all complete here's the image url:  {{ $json.data.url_viewer }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1728,
+        -96
+      ],
+      "id": "a476b7d1-ebcb-4b16-9246-b1db4b1d2494",
+      "name": "Edit Fields1"
+    }
+  ],
+  "pinData": {
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "prompt": "Change the text in the thumbnail to 'Coffee is good.'",
+          "google_id": "19d1KMJINAgaApcgMofAfgWoUrQgIbIv2",
+          "new_file_name": "brisk-raven_v001"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download file1": {
+      "main": [
+        [
+          {
+            "node": "Image URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Download file1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Grab Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Grab Status": {
+      "main": [
+        [
+          {
+            "node": "Download",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Download1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image URL": {
+      "main": [
+        [
+          {
+            "node": "Improve",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Improve": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download": {
+      "main": [
+        [
+          {
+            "node": "Upload file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image URL1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download1": {
+      "main": [
+        [
+          {
+            "node": "Image URL1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload file": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d0571f7c-7107-416f-92da-0ecab8c9afb6",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "PgFhdiOsqaKEWW7G",
+  "tags": []
+}

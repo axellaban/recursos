@@ -1,0 +1,352 @@
+[00:00:00] what if you could build a $100,000 AI powered dashboard that was powered by several no code AI automations and it
+[00:00:07] required zero code experience to actually build it you had 50 appointments which led to 20 presentations resulting in a conversion
+[00:00:14] rate of 30% based on these numbers I'd recommend focusing on a couple of key areas now this dashboard knows
+[00:00:21] everything about our clients that has retrieval augmented generation and we're
+[00:00:26] going to build this on Lovable and it can display beautiful actionable graphics and steps that they can take in
+[00:00:32] a matter of seconds and this isn't just theory i run a seven figure AI automation business myself and I've helped thousands of people sell AI
+[00:00:39] automations and these are the AI systems that clients actually want and pay money for so I'm going to show you exactly
+[00:00:44] what we've got here so we've got this dashboard we're going to build we're going to build it on the beautiful Lovable 2.0 which lets you just type
+[00:00:50] text in or speak text in and get beautiful fully functional applications then here's what we're going to do we're
+[00:00:56] then going to go build a rag voice agent powered by the wonderful 11 Labs now this voice agent is going to speak
+[00:01:02] exactly as we want it to we're going to give it prompts we're going to give it all the information about crucially what
+[00:01:07] crucially about the client's website right so you can actually ask it any question you want to on top of that what
+[00:01:13] we're going to give this agent access to is all of the data right so if it looks at the database and says "Hey you know
+[00:01:19] um what's going on with this number or what should I do next?" It can actually have a conversation and it knows everything about the client really
+[00:01:25] important right what we're also going to do to get the information is we're going to scrape all of their website with the beautiful phenomenal Appify so it's
+[00:01:31] super big brain and intelligent and will blow our clients away and we can give this to every single client to have an
+[00:01:36] actionable dashboard after that what we're going to do is basically focus on systems of automations ultimately it's
+[00:01:42] not AI automations itself you're never selling AI you're never building AI ultimately what you're doing is you are
+[00:01:48] solving problems right we're driving business outcomes like "Hey I want more
+[00:01:53] right customers." Sweet okay well how do we physically do this i've got this graphic here that was created by Charlie
+[00:01:58] Morgan and it's a really beautiful example of thinking in terms of systems rather than basic automation so for
+[00:02:04] example here we have uh users in there's so many steps right the offer the CTA link the opt-in um if they don't turn up
+[00:02:10] what does that look like we want to be able to provide to clients um the basic core numbers that help drive
+[00:02:15] decision-making so I said to say we're going to think in terms of systems and this is the front end for several
+[00:02:20] automations that form a system for an outcome and the outcome that we're going to drive is going to be beautiful what
+[00:02:25] we call laps so we're going to have uh the we're going to show I'm going to keep it simple to show you how this works but we're going to do five things
+[00:02:31] we're going to do leads which is top end how many people are using the thing so we go hey we have 100 people using it
+[00:02:37] awesome of those 100 people how many appointments did we have well we had 100 people on the calls and actually we booked 50 appointments awesome how many
+[00:02:44] people actually turned up to the appointments right we can say well actually we had only 20 people right so
+[00:02:49] by act by checking checking labs right cuz then we have sales which is of those 20 how many converted and we'll assume
+[00:02:55] at a 30% conversion rate ps by the way 35% is what you want to aim for we have six sales so what we can show to our
+[00:03:01] client is look you had 100 leads 50 appointments 200 presentations and six sales therefore we know exactly what we
+[00:03:07] want to focus on and we can show the conversions so your conversion rates are 6% isn't that really cool oh and by the
+[00:03:13] way here's a step-by-step AI generated powered uh blueprint of what you need to do this guys right here is a system not
+[00:03:20] a simple automation now what's really cool here is we can say well look actually guys look if we have only 40%
+[00:03:26] of people turning up so if we could just you know increase this somehow if we could focus on this area and by the
+[00:03:32] here's like five systematic things that you need to be doing and instead of 20 we now had for example 30 right we've
+[00:03:38] increased it by 50% our sales go by 50 so now we have nine sales and think about what that does to your bottom line
+[00:03:44] right now you got 9% conversions we've just increasing your entire sales by 50 so we're going to build this entire thing step by step for the purpose of
+[00:03:49] this video we're also going to put the data in air table so you can rock and roll i've also put down below for you a
+[00:03:54] full guide on lovable cheat sheet which is exactly all stuff you need to do uh best practices on building this things
+[00:04:00] architecture first mentality response design etc etc so if you haven't already grabbed that beautiful coffee and let's
+[00:04:06] dive straight in so I'm on the beautiful lovable.dev now one of the key things that you'll see actually I've outlined
+[00:04:11] in the guide for you which I'll pull over here which is oh my gosh right here okay is the structure of how we explain
+[00:04:18] things to it okay which is context location and goal approach and obviously restrictions and guardrails so we're
+[00:04:24] going to give it a prompt here now the most important part of this and we see this with days with AI you want to be as specific as possible in the first one so
+[00:04:30] context you are a world-class fullstack developer at building client face client facing business dashboard you're going to build a beautiful and responsive
+[00:04:37] dashboard that displays six key business metrics with the voice agent integration by connecting directly to air tableable
+[00:04:42] data guidelines we're going to specify a load of stuff want to use its mobile first responsive design it's going to
+[00:04:47] connect to air tableable via a sharable URL it's going to fetch and display real data from air table automatically and
+[00:04:53] then we're going to basically explain how we link all the data together the things we want it to show it and I'm
+[00:04:58] going to add one little thing in here actually by the way the core focus is going to be a text field beautiful and
+[00:05:03] then we the basically detail the features so real-time data updates from air table voice agent can discuss live metrics intelligently clean carpace
+[00:05:10] layout and then we've got constraints all right very very very very cool and in fact what I'm going to do I'm going
+[00:05:16] to completely change what I've just put there because I think we cover it in the final section all right cool and then what we're going to do is share the air table URL now it doesn't have to be air
+[00:05:23] tableable it could be Google it could be anything but I'm just doing it for this purpose so we're going to head over to the beautiful airable.com now let's come
+[00:05:29] over here and create a new um we're going to create a new table air table by the way it's like Google Sheets been
+[00:05:35] hitting the gems on steroids it's been absolutely crushing it and what we want to do first of all is detail the six
+[00:05:40] categories so we'll call this one here lovable database okay fantastic and let's give it a nice heart emoji to
+[00:05:47] represent that now the six metrics that I want to include here are very simply which I've put down here is uh leads
+[00:05:53] number one so all you're going to do guys is double click change to leads and you can single line text is absolutely fine just do that save and then come to
+[00:05:59] the next one and just repeat this process for appointments and I've done these five as just an example in reality
+[00:06:05] you can do it for any any set number of things that you want to as it increases with complexity you may want to do
+[00:06:10] different presentations different things but what is really cool about this is once you build it once make sure you change this to single line or multiext
+[00:06:16] you can use this for every client you build the software once and then every single client comes on board they get this beautiful visual experience of how
+[00:06:23] they can change things and by the way throughout the entire video I'm going to show you the hacks and the guides that I found working with so many clients of
+[00:06:28] the stuff that works so make sure you stick to the end so you get the full picture and you can drive it for your business or for businesses with whom you
+[00:06:34] would love to work presentations cool and next thing we go is sales let's come here double click onto this bad boy come
+[00:06:39] down to sales single line text fantastic and I'm going to click right click in fact just double click on this one they
+[00:06:45] want conversion rate beautiful that should be very very simple to do we'll just get a um little uh you know formula
+[00:06:52] in there conversion rate and I think the final one here is just going to be core focus sweet and we can do AI with that as well right core focus and we'll as AI
+[00:06:59] AI generate text great so what I'm going to do here is basically specify I want it to take all the information and say
+[00:07:05] where it thinks the focus should be so let's come down here gpt 4.0 is absolutely fine we want it to generate automatically which is important so as
+[00:07:11] other numbers pop up it will do that uh we will give it access to internet it's no problem and then what we can do is insert the fields right see this we just
+[00:07:17] insert every single one of these fields sales and then um I think that's all of them actually we got all There we go beautiful in fact we're missing
+[00:07:24] conversion right no conversion yeah we got leads appointments presentations where's presentations ah there we go
+[00:07:29] fantastic yeah and that's all of them beautiful then we give it a prompt so the prompt is going to be this there we go you'll see data on leads appointments
+[00:07:36] presentations and sales your responsibility is to provide a succinct no more than two sentence focus plan on
+[00:07:42] what our client should focus on write it as if you're speaking to the client directly use normal humanized language
+[00:07:47] don't make it cringe fundamentally this whole sales process goes leads appointments presentations and sales you
+[00:07:53] need to identify where the biggest opportunity for growth and focus should be so for example if we have 100 leads
+[00:07:59] 50 appointments and 20 presentations and six sales we know that the biggest ROI focus therefore should be on getting
+[00:08:05] more people from appointments to presentations so you will always recommend one or two key actions that the client can do in that week to
+[00:08:12] improve it ideally we want to be shooting for 35% conversions on sales calls we would like roughly 80% of all
+[00:08:18] appointments turned to presentations and we would like circa 50% of leads to turn into appointments again if we're not
+[00:08:24] getting 50% um that means that maybe the leads aren't very qualified in the first place so think about that and make sure
+[00:08:29] you crush it do I need to tell it to crush it no but I think it's quite important right cool and then we're going to keep existing data all right
+[00:08:35] sweet and then confirm the change that's beautiful ace and then I'm going to add it i'm going to add in some dummy data here so I'm going to go for 100 i'm
+[00:08:41] going to go for appointments we got we say it's 50 presentations we had again was 20 and the sales got that was six
+[00:08:48] and then we need to do a little um basically a little kind of a calculation here it'll just do that automatically
+[00:08:53] for us another conversion rate guys what we can do instead is click on the percentage thing here on to basically generate B by AI give it a prompt like
+[00:09:00] simply display the percentage conversion rate between sales presentations add those two fields that you want click save and then it should do that for us
+[00:09:06] automatically so let's just come up here and we have 30% which is freaking awesome how cool is that guys yeah and
+[00:09:12] then we can click on core focus and it'll explain and everything we need to do which is called for freaking good news so whatever those numbers are now that will update for us automatically
+[00:09:18] all right sweet so the next thing we want to do guys is basically share the document so we can give that to lovable to build it so let's come over here and
+[00:09:25] share and we do that by clicking share and sync uh we'll create a link to view which is decent that's fine copy this
+[00:09:31] and then we can get over to lovable and then we just sort of say at the bottom uh come on a second the link to view the
+[00:09:37] air table is this and say I'd like this to inspire your design for the dashboard in fact what we can then do guys is we
+[00:09:43] can head over to a website like codepen.io if you haven't used it before very very cool basically you can just see all the beautiful wonderful
+[00:09:49] fantastical uh designs that you can do you can actually give it that code if you like to build this kind of dashboard
+[00:09:54] i'm going to give Lovable a chance to build it without it but you can basically replicate this entire thing so it's going to go through and give
+[00:10:00] Lovable uh one of the things one of the principles by the way and now it's going to start working for us in the background is you want to get
+[00:10:05] functionality first design second and you know I am a stickler for design so sometimes I go design first
+[00:10:10] functionality second and it comes to to bite me in the backside sometimes so this is going to work for us in the background and start developing it while
+[00:10:17] this is working guys the next thing I want us to cross off our beautiful fantastical list is going to be uh what
+[00:10:23] we call 11 Labs okay so 11 Labs is really really really freaking cool they've built these voice agents so you
+[00:10:28] know we do a lot on this channel around me.com NA10 we have a lot of stuff like that in the community if you're talking
+[00:10:34] voice you're looking a great time so for instance if I know we're when I'm going to head over while lovable's doing this because a really good best practice by
+[00:10:40] the way uh is to kind of co-build when you're vibe coding right and that's simply because it just takes time to
+[00:10:46] work in the background so we can twint beautiful things so you're going to go to 11labs.io i'll put all the links down
+[00:10:51] below in the description so you can click and have a great time going to come on the left hand side now to conversational AI and you're going to
+[00:10:56] come down to agents all right very very very cool now I want to show you an example this looks like in a moment going to click on create a brand new
+[00:11:03] agent you know we're going to go with a um support agent I think in this case as
+[00:11:08] a sample uh sample use mate use case click on this guy okay this one's going to be client sales strategist all right
+[00:11:15] cool and uh what would be an appropriate emoji i think a rocket okay beautiful and click on create an agent from scratch voice AI is so cool i used to
+[00:11:22] work in a contact center very very early on with the team and used to sit there listen to calls but thank god AI doesn't
+[00:11:28] skip beats right ai turns to everything one of the guys my accelerator sells like these setups for like $1,000 a pop
+[00:11:34] i mean like voice AI is insane you can make a lot of great money a lot of really good money with this stuff all right so first thing we want to do uh we
+[00:11:39] got agent language uh English is fine obviously you can just pick whatever you want to based on the model though it will just speak multiple languages very
+[00:11:45] cool additional languages you can specify first message all right howdy I'm Archer the cell specialist with
+[00:11:52] Teddy AI how can I help beautiful all right sweet and then we've got this beautiful system prompt down here so
+[00:11:57] what I then propose we do is we're going to write a system prompt that gives it the context and the information so it can start to have those um those
+[00:12:03] conversations with us now the way that we see this working there you go so we've got this information here now what we haven't seen is the data being pulled
+[00:12:10] now from air table so the first integration is to actually physically do that hey there the we'll say the
+[00:12:15] design's okay for the moment i'd love to focus on you pulling the information from the air table are you able to see
+[00:12:21] what the data is from this link and then what we're going to do is grab the share link uh that we had and if it can't do
+[00:12:27] that we're just going to integrate it directly with credentials sometimes though it will actually just take it if it can visually see the information so
+[00:12:33] we're going to make sure that we can connect it properly and if not we're going to give it the viewable information that you see so you cannot
+[00:12:38] see the Okay so we're going to do the the API authentication all right sweet so let's do this it needs the air table
+[00:12:44] API key and the base ID beautiful so it's got the base ID which is fantastic base ID by the way is very much simply
+[00:12:50] um if I come over to Air Table for a moment uh what's in the URL so what we need to do is get the API key so let's
+[00:12:56] head over then totable.com and grab an API key for it which is fantastic so come down here we are going to
+[00:13:02] integrations it's either integrations or builder hub for the party integrations okay all my crazy integrations here okay
+[00:13:07] this is cool uh we're going to want to connect accounts connect new account um I think we just go on to custom I
+[00:13:13] believe uh I think actually what we do is we come down to builder hub and then we create a new token which is cool
+[00:13:19] lovable great and then we can add the scripts that you want to so whatever scripts you think are appropriate i'm just I'm gonna delete this uh as soon as
+[00:13:25] the video is done um so I'm just going to give it access to everything okay beautiful all right sweet so give it
+[00:13:31] access to all the stuff that you think it needs uh don't give it access to everything uh I'm going to put add uh access we'll just do all resources okay
+[00:13:38] cool and create token beautiful then you copy it you come back over to Air Table excuse me to our beautiful lovable and
+[00:13:43] say amazing i've got the code here is the API key would you like me to enter
+[00:13:49] it cool so it's going to give us the ability to give the actual API key and if you've got multiple clients guys one
+[00:13:55] of the things that you can see let's have a quick look okay so we're setting something for air tableable is I'd recommend you build this once and
+[00:14:01] essentially what you can give the clients is like an access code and that access code can just be the information
+[00:14:06] from um your actual air table thing right so for example to log in you need to know that code which kind of functions as a password anyway so you
+[00:14:12] have the same application which then only will go and pull down the data that is specifically used for that client
+[00:14:18] which is very very very very cool and just saves you having to rebuild the same application out like a thousand times so while this is building out in
+[00:14:24] the background um what we're going to do then is zip back over then to the exceptional conversation agent so we kind of want a good um best use case of
+[00:14:31] doing this and I asked loads in my community for like the best examples of what really kills it with voice agents
+[00:14:36] and we've got a very beautiful guide for that which is this big beautiful guide that explains absolutely everything so
+[00:14:42] what we're going to do very quickly is we're just going to copy all of it we are going to head over to the phenomenal uh cl you can see he's got the bear on
+[00:14:48] as well that bear's having a phenomenal time hey babeski I'd like you to use the below AI agent voice template to create
+[00:14:53] a template for me basically the TLDDR of it his name is Archer and its job is to coach the business based on the
+[00:14:59] information it's got it can call one tool that tool is called data and that will basically pull for it the
+[00:15:06] information for its current and latest data performance otherwise it's to use its own knowledge base and adviser as a
+[00:15:12] sales expert it is a sales expert agent whose sole responsibility is to help them get more sales it's very helpful no
+[00:15:19] need for any kind of CTAs okay beautiful and then we paste the entire thing in bam and then what we're going to do next is build once we get the voice agent
+[00:15:24] live we're going to build it's a sub agent to the agent so we can call and ask it loads of really cool questions
+[00:15:30] all right cool so we've got this beautiful text it's popping up which is fantastic meanwhile let's go back onto Liverpool and check out how he's getting
+[00:15:36] on okay cool so we come over here we can connect to Air Table we're going to give it the table name and there's the API key which is awesome and then we've got
+[00:15:42] the table name which is lovable database and we come back over to air table here enter that in connect to air table and
+[00:15:48] see if the data pulls through and it hasn't done it just yet which is absolutely fine hey there dude i'd like to hardcode into the application itself
+[00:15:54] the database ID and I'd enter in the API key this hasn't pulled to the data just yet okay beautiful then we come back
+[00:16:00] over here and we can copy the uh data that we got from Claude which is Ace and then come back over to our conversation
+[00:16:06] here hit enter in fantastic now we've got dynamic variables which I'll come to in a second so if it's just chat Gemini
+[00:16:13] 2.0 flash is ACE but if you're going to use it to call different sub aents we'll want to change that a little bit we've
+[00:16:18] got all the stuff down here temperature which is how variable will it be in its information and then we've got knowledge base so what we can do with the
+[00:16:24] knowledge base which is really cool is um let's do let's enable rag which is retrieval augmented generation we can
+[00:16:29] add documents and what we can actually do is add URLs right so for example let's say that we are in fact a dental
+[00:16:36] clinic okay um dental clinic leads so let's just say we are in fact leads dental clinic i say this cuz I'm wearing
+[00:16:42] these beautiful shiny uh braces and we could say look let's say that the business we're actually working with now is leads dental clinic so what we can do
+[00:16:49] is come over to 11 Labs give it a URL hit add URL and what it will do is go to that website it will scrape everything
+[00:16:55] from that website index it so you can do this for everything if you want to um what else have we got that might be
+[00:17:00] interesting right maybe we've got um general dentistry or we've got all the different bits of information you can just go ahead and grab all the stuff
+[00:17:07] that you want to say for example we want to give it information that's just background about it add document the exact same thing again type is going to
+[00:17:13] be URL right and add URL down here add it in bam the other thing we could do if you wanted to add everything into it is
+[00:17:20] actually head over to appy.com like so beautiful i'll put a link down below for you go to console and left hand side
+[00:17:25] you're going to go all the way to appy store you're going to go for websites content crawler you're going to enter in a website here I've got leads dental
+[00:17:31] clinic.co.co.co.co.co.co.co.co.co.co.uk this is really cool right then I can click save and start and what this will do is scrape the entire website for us
+[00:17:39] just to show you what that looks like an example if I come back here to run this is one I did earlier it downloaded for
+[00:17:44] me um 321 pages that cost me $1.90 you get by
+[00:17:49] the way $5 free credit with Appy i think you get a discount actually if you use my code down below i have to check with the team but you can see uh here's a
+[00:17:55] page here's the extracted text and then what we do we can download all this stuff give it to our agent and now it has this full beautiful memory that it
+[00:18:02] can just access and knows everything about what the client's talking about if you want to go to the next level you can do that and then you can export the
+[00:18:08] results and just simply upload it to um basically just loaded to 11 Labs and you're kicking some ass cool so we've got that which is fantastic what we're
+[00:18:15] going to do is just save once you've added all the data that you want in there i'm not going to give it calls just yet uh I'm going to just test that
+[00:18:20] it works it's very decent so flash is fine for the moment let's actually just pick the voice i'm a big fan of this guy
+[00:18:26] Archer it's not about what we have or what we achieve i would encourage you generally speaking one of the things did a big experiment where they found like
+[00:18:32] if you can speak to the uh individual the client in their accent did you know
+[00:18:37] that sales goes up so for example if you owe debt in America you live in Nebraska guess who's calling you a Nebraskan
+[00:18:43] there's something about trust it makes a difference at scale so if you can use at least the same accent that's good there's nothing more off-putting for
+[00:18:49] like someone in the UK if it's like an American voice calling like try to tie it and taper it to the country to which
+[00:18:54] you're dealing with cool so let's have a quick look at this one we got so we've hard your base ID amazing uh based on a 43 error it's likely either the API key
+[00:19:00] doesn't have right permissions or the table name isn't exactly matching what's in our air table so let's just go ahead and add the air table settings uh we go
+[00:19:07] one moment hey could you remove the need for me to detail anything about the database name like table name i would love to just simply basically provide to
+[00:19:14] you the API key and that is it thank you very much okay awesome so we're just working on getting that locked down with lovable meanwhile we're going to come
+[00:19:20] back over to 11 Labs uh and let's actually test the agent to give it a quick conversation give him a call and we click allow howdy i'm Archer the
+[00:19:27] sales specialist with Teddy AI how can I help okay cool so what happened there is we didn't save it so when you go to new
+[00:19:33] voice you have to save at the bottom of the page right so click on Archer come down click on save okay cool this one's
+[00:19:38] good and now if we test agent it should sound more like Archer howdy I'm Archer the sales specialist with Teddy AI how
+[00:19:44] can I help hey Archer how's it going brother i'm doing well thanks for asking and ready to help you boost those sales
+[00:19:50] what's on your mind today awesome now we've got the sales support agent in the dashboard very very very cool i can just
+[00:19:55] ask questions about it what we can also do with this guys is give him access to our calendar so we can book appointments
+[00:20:01] he can do various different things so this is now asking for the API key which is very cool we can provide that to clients they can access it as and when
+[00:20:06] they want to or we could just hardcode it whatever we fancy so let's go over and grab the API key come back over to
+[00:20:12] the beautiful situation connect to air table fantastic all right sweet so we'll say hey we provided the API key however
+[00:20:18] no data has appeared yet please fix this and please provide an error troubleshooting functionality at the bottom so we can see what's happening
+[00:20:24] okay cool if we refresh does anything happen no okay that's cool so we put that in fantastic so we've got this guy
+[00:20:30] now the next thing we wanted to do is we want to give him access to a tool and that tool should be access to data so to
+[00:20:36] do that we're going to head over to nn.com let's go over there right now i should say natn.io my sincere apologies
+[00:20:43] and the way we're going to run this one guys is just simple web hooks so come into web hook start the flow with a web hook very very cool and we'll go test
+[00:20:49] URL for the moment click this link and then come back over here and then what we're looking for basically is we want
+[00:20:56] to give it a tool so add tool we're going to ask it a custom tool and on the right hand side we're going to call this one data find out the metrics for the
+[00:21:03] business this includes sales presentations conversions leads beautiful and the method is get i believe we've got it as post though
+[00:21:09] actually i know we'll post what it is as post okay cool and there is URL actually you know I think get's going to be fine
+[00:21:15] i think get will be okay actually in this instance all right cool beautiful come down headers no need for that no need for that and just click on add tool
+[00:21:21] fantastic uh and we'll click save on this okay sweet so then what we're going to do is just give this a bit of a test
+[00:21:27] so again it's gets fine so listen for test event come back over here we're going to save it click on test AI agent
+[00:21:33] howdy i'm Archer the sales specialist with Teddy AI how can I help hey dude um could you just confirm to me what my
+[00:21:39] sales were please i can certainly help with that just to confirm are you looking for the sales figures for your business overall specific product or
+[00:21:46] service just overall just overall please brother okay I can get the overall sales figures for you okay I have started a
+[00:21:53] workflow to get that information cool all right so this is good basically it's uh asked for some information so let's
+[00:21:59] just see what information we've got if we had anything that comes through here so we need to specify what information and data needs to come through so we're
+[00:22:05] going to come back over and edit this beautiful guy let's come down to um make sure he can index and do everything
+[00:22:11] properly so we're going to go for data over here and then we need to add headers the header is simply going to be
+[00:22:16] type is secret that's absolutely fine actually guys we're going to come down to query parameters um identifier is
+[00:22:21] just going to be request and description is going to be something like hey what are the metrics for the business and
+[00:22:26] then we can save changes cool and then we should be able to get that now when we have a conversation with it and you can obviously just add different things
+[00:22:32] like if you could you can link different data sources and give it different commands so one could be get the data one could be um create a calendar
+[00:22:38] appointment one could be send an email so it becomes a living brea breathing super dynamic thing i'm just doing that
+[00:22:43] to keep it really simple just to show you like what's possible howdy i'm Archer the sales specialist with Teddy
+[00:22:48] AI how could you just check my sales numbers please i can certainly help with that to give you the most relevant sales
+[00:22:54] numbers the latest sales numbers brother the latest sales numbers okay I can get the latest sales numbers for you just to
+[00:22:59] confirm are you interested in overall sales or would you like to focus on a specific product overall sales region or
+[00:23:05] overall sales okay I will get the overall cool so we just search for overall sales and then then what we're going to do here guys very cool is we're
+[00:23:11] going to pin this information like so and we're going to give it a beautiful AI agent a sub agent okay how cool is
+[00:23:17] this come down to AI agent which is fantastic we're going to have it from the previous input um system message you
+[00:23:22] are a helpful AI agent your responsibility is to call the air table tool you're going to be asked one
+[00:23:27] question and only one question regardless of as to how it's phrased and that is to simply produce and share the
+[00:23:33] numbers that you can access in air table send them out in a format that explains it very very clearly so the agent can
+[00:23:39] then relay that to the individual cool all right sweet it's a chat model obviously you can build up these prompts make them super cool i'm just showing
+[00:23:44] you as a quick example so we will go with OpenAI as chat model for this guy you can connect your credentials very straightforward if you don't know that
+[00:23:50] by the way you head over to platform.opai.com uh which I'll show you very very briefly just in case you're
+[00:23:55] not fully connected you should be super connected at this stage but basically login it'll be on the left hand side and rock and roll it likes to kick me out
+[00:24:01] when I don't use it all the time which is quite crazy so we give it this connection detail dt4 and many is fine and then memory don't worry about but we
+[00:24:07] can give it a tool tool is going to be air table which is read write update data fantastic so we're going to pick
+[00:24:13] the base now base is going to be lovable okay I think we need to come here actually let's have a quick look
+[00:24:19] actually I think we're going to go for the search on the operation and then this one should be lovable if I give it the right emoji there lovable database
+[00:24:26] amazing table is just going to be table one which is very cool and we'll ask it to return all which is very decent uh
+[00:24:32] and actually what we can probably do is just test the step okay no prompt is specified all right let's come down here
+[00:24:38] and we'll say define below and what we're going to do is come down here and just simply bring over the request fantastic come out and then we can
+[00:24:44] actually give this a little run through using the model should search the air table record and then it should give us
+[00:24:49] if it doesn't show up properly all the information that we need let's have a look look at this guys leads 100 appointments 50 conversion rate 30 then
+[00:24:56] crucially we click on this go for web hook and think of a sub agent is really cool like you can actually create multiple different workflows to do
+[00:25:02] things and I'd encourage simpler more consistent builds generally speaking so I'd like a tool for Gmail a tool for
+[00:25:08] this a tool for that so this agent doesn't have to do thinking let your top macro manager level agents be the kind
+[00:25:13] of delegators you're the appointment guy you're the email guy you're the data guy it's a lot simpler that way to do that
+[00:25:19] so I'd rather three sub aents for those things rather than just one agent with a million different categories okay it
+[00:25:24] it's just way simpler to give it more tools like that cool so then we've got these different things here what we're going to do is respond uh using respond
+[00:25:30] to web hook node which is fine uh and I think Dan we are good actually I need to change this one my bad come here go to
+[00:25:36] web hook no it's not web hook it's web hook response so ah response to web hook
+[00:25:41] beautiful uh and we'll do first incoming items absolutely fine and that's connected and then if you click on this guy we want to not respond immediately
+[00:25:48] uh use respond to web hook node cool and then we can save this guy fantastic so we can do it one more time test workflow
+[00:25:53] come back over to Oh it's already done my bad let me unpin this information all right ready for this guys so we're going
+[00:25:59] to save it we're going to validate that he can actually do it and connect it so test workflow come over to 11 Labs howdy
+[00:26:05] i'm Archer hey Archer what were my sales last week what were my sales last week Arjo we want the last seven days all
+[00:26:11] right here's the sales data for the last 7 days sales amount six leads 100
+[00:26:18] appointments 50 presentations 20 thank you Archer very much appreciated so guys
+[00:26:24] just like that it's gone through and grabbed the data one little difference I should have trusted my initial instincts it's been a week or so since I double
+[00:26:30] clicked into this but just make sure on agent um one of the key things here on your data I found actually is going for
+[00:26:37] post instead of get make sure that you change this to be post instead of get uh and then also what you want to do is
+[00:26:43] come down your query parameters awesome body parameters request little information description lm prompt save
+[00:26:49] the changes and you're ready to rock so let's zoom back out for a second okay we've now got this beautiful agent what
+[00:26:54] we kind of want to do is click in these buttons we want to share it as a widget so we come down here and we got this embed code now check this out guys we
+[00:27:01] copy it by the way if you want to know the prices for this last time it's around about seven bucks for an entire hour and if you've got a client that's
+[00:27:07] paying you tens of thousands of dollars it's code for being extremely extremely cheap cool so we copy this information going to head back over now to our
+[00:27:13] beautiful uh database and just like this guys we have also now got the fantastic data that's fully live and ready to rock
+[00:27:18] and roll i'm going to give this prompt here hey dude i'd like you to make sure you're using Poppins as fonting please
+[00:27:24] and make sure you embed the below HTML code beautiful now guys when this goes live what's going to happen is we're
+[00:27:30] going to be able to have a chat with it the other cool thing I really want to double click into as well is there is no more beautiful word in English language
+[00:27:36] than your own name and the same applies for logos when my last startup when I was scaling that I made an exit on it and we had a lot of businesses we work
+[00:27:43] with and once I got a presentation deck came across my inbox and you know most people when they do presentation decks
+[00:27:48] they have their logo on and stuff it had my logo at the beginning and it just makes you feel like oh my gosh I love it
+[00:27:54] so much why do I mention that i mentioned that to say that guys go that extra mile show their logo and stuff and
+[00:28:00] that's exactly what we're going to do right now so we are going to go over to let's have a quick look let's just go to Google and grab a logo if I go dental
+[00:28:06] logo um what's fine this is not a great logo by the way i'll just be honest with you but let's just say that it is for
+[00:28:12] instance um this guy okay this is a cool log right sweet copy this guy here come back over to Lovable hey dude I'd like
+[00:28:18] you to include this logo top left um really improve the color palette make sure you're using Poppins font as well
+[00:28:23] give it a logo and then I would like you to increase the design using the below code okay fantastic so then we are going
+[00:28:29] to head over to the beautiful code pan to grab our data which is going to be
+[00:28:34] How cool is this by the way like it's so such a freaking cool website you can give all the design graphics and stuff
+[00:28:39] like this like a space anomaly thing i mean this is really cool i mean oh wow this is insane by the way on the on the
+[00:28:45] horizon of like clarity versus fanciness always go it's better to be clear than it is to be fancy genuinely speaking and
+[00:28:51] that's from someone who freaking loves I love the design and flare so we're going to copy all we're going to do this one's
+[00:28:56] really simple we're going to copy CSS come back over boom come back over here copy to JS Babble uh come over here and
+[00:29:02] there we go bam do you need to know what it does absolutely not does it matter not really okay it makes no You don't
+[00:29:08] need to know what it is because now we're coding with text which is good obviously there are some certain circumstances where when you're scaling
+[00:29:13] this to production and you have loginins and things like that you want certain levels of uh measures and it's good to
+[00:29:19] get an expert to check it when you're going production ready and you're selling this to like loads and loads and loads of production environments but for
+[00:29:25] the purpose of dashboard I would say this is more on the safer side of it's okay one of the key principles I covered
+[00:29:30] in my AI safety uh video was about like um principle of least access like for example um if you think about what data
+[00:29:38] is exposed here the only data we're exposing realistically is what's in this air table right that's basically it and
+[00:29:44] also access to air table itself with the API so again you want to restrict that to make sure it can do read only access
+[00:29:49] restricted to that particular database and then we can just kind of like password control everything from there which is cool so level is going to work
+[00:29:54] in the background once that's done we're going to have a beautiful fantastically designed website with a logo with the ability to have conversations and now
+[00:30:00] guys what we can do and crucially what we've done just to come back over here and reiterate how freaking Cool this is You've got this amazing guys yeah I got
+[00:30:08] a notepad to draw stuff and some say that you know I feel like I'm 10 years old again some cuz I can draw things crazy now but think about it we've got
+[00:30:14] this beautiful system now guys and this is the future this is why Lovable is so cool cuz Lovable is what lovable is the
+[00:30:20] front end a very sexy front end at that okay and it's just a great way to display everything um one of the biggest
+[00:30:26] lessons I learned the last couple years ago is that when you give something like a name or a logo or just a visuality to
+[00:30:31] it it becomes real and now we've got all these fantastic and all these things can be automations right so for example
+[00:30:37] where you take this to another level and I can do a follow on this if you want to is if I come over to our air table database um come off the tokenage for a
+[00:30:43] moment and come here uh where is our beautiful air table i think it is right there all right now each of these
+[00:30:49] numbers can be underpinned by an independent automation right say for example great well we've identified uh
+[00:30:55] Mrs higgins okay that you are losing so many leads because we've got all these inquiries on your website right so what
+[00:31:01] we need to do is basically make sure they can have the right chat maybe that's a chat support agent down here maybe it's a really clear form right one
+[00:31:07] of the cool things is like you got time to lead okay if you can get back to your lead and I think it's like 30 minutes
+[00:31:13] your conversions I don't remember the exact number but go up by 390 plus% that's code for freaking amazing so what
+[00:31:18] we want to do is you want to be a provider that is embedding systems okay and what we do on these websites is
+[00:31:24] build out these fundamental systems so the second a client submits that triggers this automation and that
+[00:31:29] automation is going to send them an email it's going to send them an SMS which by the way have circa 98% open
+[00:31:35] rates and the other thing it's going to do is going to give them a call automatically if you haven't seen my last video uh which I'll put on screen
+[00:31:40] somewhere about how you actually build voice agents on retail that can make outbound calls instantaneously in any
+[00:31:46] way you want to to get conversions confirm appointments do that because you will lose people from interest to actual
+[00:31:52] appointment and that's the entire and this is what we do we build out these systems and what we do is we update the number to air table right all these
+[00:31:59] things connect to air tableable the everything links back to air tableable here and then air table's now visible in
+[00:32:04] this dashboard again this isn't just theory this is stuff I know that actually physically works in drive sales and now you've got the tools the how to
+[00:32:10] in the system to do that so we've got this stuff here i'm just going to make a quick cosmetic change hey dude great first step let's just make the call like
+[00:32:16] a very dark i'm unable to see certain things contrast just tighten up a little bit also core focus can you reduce the
+[00:32:22] size of the text it's far too large and add several different colors into it as well just really make it futuristic and
+[00:32:27] gorgeous design also try and make the logo the transparent background because I can't really see it cool and now we on the actual production itself and oh my
+[00:32:34] gosh guys look at this now we've got the beautiful information dude amazing could you actually add a graphic underneath
+[00:32:40] remove the troubleshooting diagnostics now and add a beautiful graphic that is created from the amazing uh data and
+[00:32:45] numbers that we've got top please cuz ultimately guys what we want is visual stuff right we want it to be visual and
+[00:32:51] I wonder if we can edit on the text here which we can do i think we can yeah so what you can do with you can pinpoint
+[00:32:57] things and change it over time which is very very cool so we're going to get the graphs and then we can actually test this live in the environment to make
+[00:33:03] sure it is absolutely kickass and just like this guys we've now got this beautiful website that has different growth trends obviously we can like
+[00:33:09] improve it over time but we've got a call focus so let's give him a quick call and see what we can do let's just activate our scenario in the background
+[00:33:14] to make sure that it's decent we come back over and have a conversation we accept howdy I'm Archer the sales
+[00:33:20] specialist with Teddy AI how can I help archer I'd love some advice on our sales dude you know based on our leads or our
+[00:33:25] presentations like what's the best thing for me to be focusing on right now okay I can help with that to give you the most relevant advice I need to take a
+[00:33:32] look at your current performance data all right I've pulled your sales data for the last 7 days it looks like you've
+[00:33:37] generated six sales from 100 leads you had 50 appointments which led to 20 presentations resulting in a conversion
+[00:33:44] rate of 30% based on these numbers I'd recommend focusing on a couple of key areas first increasing the conversion
+[00:33:51] rate from appointments to presentations thank you Archer and guys just like that we've now got a live AI voice AI agent
+[00:33:58] in our futuristic cool badass dashboard which is connected to our incredible phenomenal uh database which itself is
+[00:34:05] now powered by AI automations we can ask it questions it can now dynamically fetch things we can say "Dude could you
+[00:34:11] just book an appointment with Jack for 20 minutes on Tuesday to organize that?" It can now do a billion different things
+[00:34:16] guys I'll put a link down below so you can grab that specific prompting blueprint but if you haven't seen the last build I did where we can build
+[00:34:22] these lovable builds um with Stripe check that one out and in the community this week we've got a brilliant master
+[00:34:27] class on actually building this lovable stuff live so you can join grab that coffee sit down for a few hours and
+[00:34:32] build it live for your business or you're selling at different agencies so you can absolutely crush it have a beautiful week and I'll see you inside
+[00:34:39] the next

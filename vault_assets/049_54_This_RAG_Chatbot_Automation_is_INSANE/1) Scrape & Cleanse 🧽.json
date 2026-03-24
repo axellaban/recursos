@@ -1,0 +1,876 @@
+{
+    "name": "1) Scrape & Cleanse 🧽",
+    "flow": [
+        {
+            "id": 2,
+            "module": "rss:ActionReadArticles",
+            "version": 4,
+            "parameters": {
+                "include": []
+            },
+            "mapper": {
+                "url": "https://rss.app/feeds/vTtHbi9imI1XhUSo.xml",
+                "gzip": true,
+                "password": "",
+                "username": "",
+                "maxResults": "15",
+                "filterDateTo": "",
+                "filterDateFrom": ""
+            },
+            "metadata": {
+                "designer": {
+                    "x": -12,
+                    "y": 10
+                },
+                "restore": {},
+                "parameters": [
+                    {
+                        "name": "include",
+                        "type": "select",
+                        "label": "Process RSS fields",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "google-merchant-center",
+                                "itunes"
+                            ]
+                        }
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "username",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "password",
+                        "type": "text",
+                        "label": "Password"
+                    },
+                    {
+                        "name": "filterDateFrom",
+                        "type": "date",
+                        "label": "Date from"
+                    },
+                    {
+                        "name": "filterDateTo",
+                        "type": "date",
+                        "label": "Date to "
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of returned items",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "title",
+                        "type": "text",
+                        "label": "Title"
+                    },
+                    {
+                        "name": "description",
+                        "type": "text",
+                        "label": "Description"
+                    },
+                    {
+                        "name": "summary",
+                        "type": "text",
+                        "label": "Summary"
+                    },
+                    {
+                        "name": "author",
+                        "type": "text",
+                        "label": "Author"
+                    },
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL"
+                    },
+                    {
+                        "name": "dateUpdated",
+                        "type": "date",
+                        "label": "Date updated"
+                    },
+                    {
+                        "name": "dateCreated",
+                        "type": "date",
+                        "label": "Date created"
+                    },
+                    {
+                        "name": "comments",
+                        "type": "url",
+                        "label": "Comments"
+                    },
+                    {
+                        "name": "image",
+                        "spec": [
+                            {
+                                "name": "title",
+                                "type": "text",
+                                "label": "Name"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Image"
+                    },
+                    {
+                        "name": "categories",
+                        "spec": {
+                            "type": "text"
+                        },
+                        "type": "array",
+                        "label": "Categories"
+                    },
+                    {
+                        "name": "source",
+                        "spec": [
+                            {
+                                "name": "title",
+                                "type": "text",
+                                "label": "Name"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Source"
+                    },
+                    {
+                        "name": "enclosures",
+                        "spec": [
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "type",
+                                "type": "text",
+                                "label": "Type"
+                            },
+                            {
+                                "name": "length",
+                                "type": "number",
+                                "label": "Length"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Enclosures"
+                    },
+                    {
+                        "help": "Other RSS fields. All values are in text format.",
+                        "name": "rssFields",
+                        "spec": [
+                            {
+                                "name": "title",
+                                "type": "text",
+                                "label": "title"
+                            },
+                            {
+                                "name": "description",
+                                "type": "text",
+                                "label": "description"
+                            },
+                            {
+                                "name": "link",
+                                "type": "text",
+                                "label": "link"
+                            },
+                            {
+                                "name": "guid",
+                                "type": "text",
+                                "label": "guid"
+                            },
+                            {
+                                "name": "pubdate",
+                                "type": "text",
+                                "label": "pubdate"
+                            },
+                            {
+                                "name": "media:content",
+                                "spec": [
+                                    {
+                                        "name": "props",
+                                        "spec": [
+                                            {
+                                                "name": "medium",
+                                                "type": "text",
+                                                "label": "medium"
+                                            },
+                                            {
+                                                "name": "url",
+                                                "type": "text",
+                                                "label": "url"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Properties"
+                                    },
+                                    {
+                                        "name": "value",
+                                        "type": "text",
+                                        "label": "Value"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "media:content"
+                            },
+                            {
+                                "name": "enclosure",
+                                "type": "text",
+                                "label": "enclosure"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "RSS fields"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1,
+            "module": "app#dark-arts-yt-summary-3s1jj4:darkartsyttranscriber",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 3292784
+            },
+            "mapper": {
+                "raw": true,
+                "TargetURL": "{{2.url}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 295,
+                    "y": 10,
+                    "name": "Scrape 👾"
+                },
+                "restore": {
+                    "expect": {
+                        "raw": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "app#dark-arts-yt-summary-3s1jj4"
+                            },
+                            "label": "My Dark Arts YT Transcript API connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:app#dark-arts-yt-summary-3s1jj4",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "TargetURL",
+                        "type": "url",
+                        "label": "Enter webpage URL",
+                        "required": true
+                    },
+                    {
+                        "name": "raw",
+                        "type": "boolean",
+                        "label": "Raw",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "anthropic-claude:createAMessage",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1528134
+            },
+            "mapper": {
+                "model": "claude-3-5-sonnet-20240620",
+                "max_tokens": "4000",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": "You are a data cleansing assistant tasked with refining YouTube video transcripts. Your goal is to enhance the transcript's quality by removing unnecessary content while preserving the core message, important details, and all step-by-step instructions.\n\n\n```\nYouTube Video URL: {{2.url}}\n\nTranscript:\n{{1.mapping.transcript}}\n```\n\nTasks to Perform:\n\nReference Inclusion:\n\nStart by acknowledging the YouTube video URL to maintain context.\n\nBreak all information in the transcript into a comprehensive step by step process\n\nthen provide a long and detailed list of additional information.\n\nThere should be no question your output could not answer about the initial transcript. You are omitting fluff only."
+                            }
+                        ]
+                    }
+                ],
+                "metadata": {},
+                "temperature": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 597,
+                    "y": -16,
+                    "name": "Cleanse 🧽"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Anthropic Claude connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "anthropic-claude"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "claude-3-5-sonnet-20240620"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    },
+                                    "content": {
+                                        "mode": "chose",
+                                        "items": [
+                                            {
+                                                "type": {
+                                                    "mode": "chose",
+                                                    "label": "Text"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "stop_sequences": {
+                            "mode": "chose"
+                        },
+                        "additionalParameters": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:anthropic-claude",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "uinteger",
+                        "label": "Max Tokens",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true,
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": [
+                                        {
+                                            "label": "User",
+                                            "value": "user",
+                                            "nested": [
+                                                {
+                                                    "name": "content",
+                                                    "spec": {
+                                                        "spec": [
+                                                            {
+                                                                "help": "You can send image content blocks starting with Claude 3 models.",
+                                                                "name": "type",
+                                                                "type": "select",
+                                                                "label": "Type",
+                                                                "options": [
+                                                                    {
+                                                                        "label": "Text",
+                                                                        "value": "text",
+                                                                        "nested": [
+                                                                            {
+                                                                                "help": "Content of the message on behalf of the selected **Role** .",
+                                                                                "name": "text",
+                                                                                "type": "text",
+                                                                                "label": "Text",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "label": "Image",
+                                                                        "value": "image",
+                                                                        "nested": [
+                                                                            {
+                                                                                "name": "source",
+                                                                                "spec": [
+                                                                                    {
+                                                                                        "help": "File name, including the extension, for example, `image.jpg`.",
+                                                                                        "name": "filename",
+                                                                                        "type": "filename",
+                                                                                        "label": "Filename",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:name",
+                                                                                        "extension": [
+                                                                                            "jpeg",
+                                                                                            "jpg",
+                                                                                            "png",
+                                                                                            "gif",
+                                                                                            "webp"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "help": "Binary data of the image. For example, you can retrieve the binary data of your image using the **HTTP: Get a file** module.",
+                                                                                        "name": "data",
+                                                                                        "type": "buffer",
+                                                                                        "label": "Data",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:data"
+                                                                                    }
+                                                                                ],
+                                                                                "type": "collection",
+                                                                                "label": "Source",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "label": "Tool Result",
+                                                                        "value": "tool_result",
+                                                                        "nested": [
+                                                                            {
+                                                                                "name": "tool_use_id",
+                                                                                "type": "text",
+                                                                                "label": "Tool Use ID",
+                                                                                "required": true
+                                                                            },
+                                                                            {
+                                                                                "name": "content",
+                                                                                "type": "text",
+                                                                                "label": "Content",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "required": true
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Content"
+                                                    },
+                                                    "type": "array",
+                                                    "label": "Content",
+                                                    "labels": {
+                                                        "add": "Add content"
+                                                    },
+                                                    "required": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Assistant",
+                                            "value": "assistant",
+                                            "nested": [
+                                                {
+                                                    "help": "If the request ends with an assistant turn, then the response content will continue directly from that last turn.",
+                                                    "name": "content",
+                                                    "type": "text",
+                                                    "label": "Content",
+                                                    "required": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Tool Assistant",
+                                            "value": "tool_assistant",
+                                            "nested": [
+                                                {
+                                                    "name": "content",
+                                                    "spec": {
+                                                        "spec": [
+                                                            {
+                                                                "help": "You can send image content blocks starting with Claude 3 models.",
+                                                                "name": "type",
+                                                                "type": "select",
+                                                                "label": "Type",
+                                                                "options": [
+                                                                    {
+                                                                        "label": "Text",
+                                                                        "value": "text",
+                                                                        "nested": [
+                                                                            {
+                                                                                "help": "Content of the message on behalf of the selected **Role** .",
+                                                                                "name": "text",
+                                                                                "type": "text",
+                                                                                "label": "Text",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "label": "Tool Use",
+                                                                        "value": "tool_use",
+                                                                        "nested": [
+                                                                            {
+                                                                                "name": "id",
+                                                                                "type": "text",
+                                                                                "label": "Tool Use ID",
+                                                                                "required": true
+                                                                            },
+                                                                            {
+                                                                                "name": "name",
+                                                                                "type": "text",
+                                                                                "label": "Tool Name",
+                                                                                "required": true
+                                                                            },
+                                                                            {
+                                                                                "name": "input",
+                                                                                "type": "any",
+                                                                                "label": "Input",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "required": true
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Content"
+                                                    },
+                                                    "type": "array",
+                                                    "label": "Content",
+                                                    "labels": {
+                                                        "add": "Add content"
+                                                    },
+                                                    "required": true
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "system",
+                        "type": "text",
+                        "label": "System Prompt"
+                    },
+                    {
+                        "name": "metadata",
+                        "type": "collection",
+                        "label": "Metadata",
+                        "spec": [
+                            {
+                                "name": "user_id",
+                                "type": "text",
+                                "label": "User ID"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "stop_sequences",
+                        "type": "array",
+                        "label": "Stop Sequences",
+                        "spec": {
+                            "type": "text",
+                            "label": "Stop Sequence",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "uinteger",
+                        "label": "Top K"
+                    },
+                    {
+                        "name": "additionalParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Parameter Name",
+                                    "required": true
+                                },
+                                {
+                                    "name": "type",
+                                    "type": "select",
+                                    "label": "Input Type",
+                                    "options": [
+                                        {
+                                            "label": "Text",
+                                            "value": "text",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "text",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Number",
+                                            "value": "number",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "number",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Boolean",
+                                            "value": "boolean",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "boolean",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "date",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "date",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Tools",
+                                            "value": "tools",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "spec": {
+                                                        "type": "text",
+                                                        "label": "Parameter Value"
+                                                    },
+                                                    "type": "array",
+                                                    "label": "Parameter Values",
+                                                    "labels": {
+                                                        "add": "Add parameter value"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Any",
+                                            "value": "any",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "any",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Input Parameter",
+                            "name": "value"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "google-docs:createADocument",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "name": "{{2.title}}",
+                "footer": false,
+                "header": false,
+                "content": "{{4.textResponse}}",
+                "folderId": "/1wN9xbRp2D00Wb-ad5W7ybUqNUITFDbd_",
+                "destination": "drive"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "folderId": {
+                            "mode": "chose",
+                            "path": [
+                                "🧨 Jack's YouTube"
+                            ]
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "Google Connection (jack@aiautomationswithjack.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Name",
+                        "required": true
+                    },
+                    {
+                        "name": "content",
+                        "type": "text",
+                        "label": "Content",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "header",
+                        "type": "boolean",
+                        "label": "Insert a Header",
+                        "required": true
+                    },
+                    {
+                        "name": "footer",
+                        "type": "boolean",
+                        "label": "Insert a Footer",
+                        "required": true
+                    },
+                    {
+                        "name": "folderId",
+                        "type": "folder",
+                        "label": "New Document's Location",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

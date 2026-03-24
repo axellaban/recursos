@@ -1,0 +1,434 @@
+{
+    "name": "🔥 Whatsapp (Part 1) B2G",
+    "flow": [
+        {
+            "id": 1,
+            "module": "http:ActionSendData",
+            "version": 3,
+            "parameters": {
+                "handleErrors": true,
+                "useNewZLibDeCompress": true
+            },
+            "mapper": {
+                "url": "https://XXXXXXXXXX/api/v1/chats",
+                "serializeUrl": false,
+                "method": "get",
+                "headers": [
+                    {
+                        "name": "X-API-KEY",
+                        "value": "XXXXXXXXXXXXX"
+                    },
+                    {
+                        "name": "accept",
+                        "value": "application/json"
+                    }
+                ],
+                "qs": [],
+                "bodyType": "",
+                "parseResponse": true,
+                "authUser": "",
+                "authPass": "",
+                "timeout": "",
+                "shareCookies": false,
+                "ca": "",
+                "rejectUnauthorized": true,
+                "followRedirect": true,
+                "useQuerystring": false,
+                "gzip": true,
+                "useMtls": false,
+                "followAllRedirects": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": -221,
+                    "y": -14,
+                    "name": "🚀 Get Whatsapp Chats"
+                },
+                "restore": {
+                    "expect": {
+                        "method": {
+                            "mode": "chose",
+                            "label": "GET"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null,
+                                null
+                            ]
+                        },
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "bodyType": {
+                            "label": "Empty"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    },
+                    {
+                        "name": "useNewZLibDeCompress",
+                        "type": "hidden"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "get",
+                                "head",
+                                "post",
+                                "put",
+                                "patch",
+                                "delete",
+                                "options"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "type": "array",
+                        "label": "Headers",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "label": "Name",
+                                "type": "text",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "label": "Value",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "qs",
+                        "type": "array",
+                        "label": "Query String",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "label": "Name",
+                                "type": "text",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "label": "Value",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "bodyType",
+                        "type": "select",
+                        "label": "Body type",
+                        "validate": {
+                            "enum": [
+                                "raw",
+                                "x_www_form_urlencoded",
+                                "multipart_form_data"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "parseResponse",
+                        "type": "boolean",
+                        "label": "Parse response",
+                        "required": true
+                    },
+                    {
+                        "name": "authUser",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "authPass",
+                        "type": "password",
+                        "label": "Password"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "uinteger",
+                        "label": "Timeout",
+                        "validate": {
+                            "max": 300,
+                            "min": 1
+                        }
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    },
+                    {
+                        "name": "ca",
+                        "type": "cert",
+                        "label": "Self-signed certificate"
+                    },
+                    {
+                        "name": "rejectUnauthorized",
+                        "type": "boolean",
+                        "label": "Reject connections that are using unverified (self-signed) certificates",
+                        "required": true
+                    },
+                    {
+                        "name": "followRedirect",
+                        "type": "boolean",
+                        "label": "Follow redirect",
+                        "required": true
+                    },
+                    {
+                        "name": "useQuerystring",
+                        "type": "boolean",
+                        "label": "Disable serialization of multiple same query string keys as arrays",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    },
+                    {
+                        "name": "useMtls",
+                        "type": "boolean",
+                        "label": "Use Mutual TLS",
+                        "required": true
+                    },
+                    {
+                        "name": "followAllRedirects",
+                        "type": "boolean",
+                        "label": "Follow all redirect",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "builtin:BasicFeeder",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "array": "{{1.data.items}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 98,
+                    "y": -14
+                },
+                "restore": {
+                    "expect": {
+                        "array": {
+                            "mode": "edit"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "array",
+                        "type": "array",
+                        "label": "Array",
+                        "mode": "edit",
+                        "spec": []
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "airtable:ActionCreateRecord",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 1532818
+            },
+            "mapper": {
+                "base": "appBVQOu4FQzVzg3O",
+                "typecast": false,
+                "useColumnId": false,
+                "table": "tblGGPuG6JoV0WkJX",
+                "record": {
+                    "fldsLfKnmg5DCo0Ek": "{{2.name}}",
+                    "fldMbWZQOi0174OWe": "{{2.id}}"
+                }
+            },
+            "metadata": {
+                "designer": {
+                    "x": 430,
+                    "y": -18
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Airtable OAuth connection (User ID: usrWHZndszJIS5AWQ)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "base": {
+                            "label": "📈 Whatsapp Builder"
+                        },
+                        "typecast": {
+                            "mode": "chose"
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        },
+                        "table": {
+                            "nested": [
+                                {
+                                    "name": "record",
+                                    "spec": [
+                                        {
+                                            "name": "fldsLfKnmg5DCo0Ek",
+                                            "label": "💬 Group Chat/Name",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "fldMbWZQOi0174OWe",
+                                            "label": "Chat ID 🆔",
+                                            "type": "text",
+                                            "multiline": true
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Record"
+                                }
+                            ],
+                            "label": "Table 1"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "typecast",
+                        "type": "boolean",
+                        "label": "Smart links",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "record",
+                        "type": "collection",
+                        "label": "Record",
+                        "spec": [
+                            {
+                                "name": "fldsLfKnmg5DCo0Ek",
+                                "type": "text",
+                                "label": "💬 Group Chat/Name"
+                            },
+                            {
+                                "name": "fldMbWZQOi0174OWe",
+                                "type": "text",
+                                "label": "Chat ID 🆔"
+                            }
+                        ]
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "💬 Group Chat/Name",
+                        "label": "💬 Group Chat/Name",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Chat ID 🆔",
+                        "label": "Chat ID 🆔",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Unique ID",
+                        "label": "Unique ID",
+                        "type": "text"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

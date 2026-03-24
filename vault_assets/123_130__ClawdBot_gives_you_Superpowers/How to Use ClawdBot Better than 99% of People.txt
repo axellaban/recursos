@@ -1,0 +1,792 @@
+0:00
+Cordbot just launched and it is dangerously powerful. It's definitely not AGI. And in this video, I'm going to
+0:05
+cut through all the hype and explain everything that we know so far. So, you know exactly how to set it up step by
+0:11
+step without buying 16 Mac minis and show you the capabilities that have a lot of the internet excited and most
+0:17
+importantly whether or not it is right for you to think about using. And if you don't know who I am, my name is Jack Roberts. I built and sold my last tech
+0:23
+startup with over 60,000 customers and now I run a sevenfigure AI automation business. So, if you haven't already,
+0:30
+grab that coffee and let's dive straight in. Open Claw, formerly Claudebot or Maltbar, let's talk about it. So, why
+0:37
+was this and is this so hyped and why is it so controversial and what does it all
+0:42
+mean for the future of using AI and anti-gravity and all stuff like that? Well, this week has been pretty crazy
+0:48
+for content on Claudeb. Um, and I would describe it as kind of giving bazookas to babies, hence why there's been a lot
+0:55
+of interesting articles about it. Now, my objective with this video is just to help you make an informed decision about
+1:01
+whether or not it's a good fit for you or something you should think about doing. Uh, and I want to start by covering some of the important things
+1:06
+that are really worthwhile knowing that I didn't really see covered too much online. So, first thing to bear in mind is that this is a project that is highly
+1:13
+vated up on GitHub and it's 3 weeks old, which means it's alpha software, which essentially means that it's going to break and it is imperfect, which is
+1:19
+often the case when you try to push the envelope. It is controversial and I'll touch on some of those points in a second. And a lot of the controversy
+1:25
+basically drives from people setting it up without the basics in terms of
+1:30
+security. And so we'll cover what makes a more secure setup so you can make a really good informed decision about it.
+1:36
+So let's actually talk about what Maltbot Claudebot actually is. Well, it's best thought of in three layers. So
+1:43
+layer one would be the interface. This is probably one of the reasons why it blows so quickly is because you can chat to it on Telegram or WhatsApp when
+1:50
+you're on the go, when you're at the gym or a coffee shop. So it's really it's a lot easier to chat to in our respect. Then we have the brain. So these are the
+1:55
+models that power it like all the classic models and then basically the fact that it's got access to different tools and it can do things for you
+2:01
+autonomously. But why is it different than what we've been playing with before? Well, um one of the reasons is
+2:06
+that it's always on. In other words, that when you especially when you host this on let's say a VPS or maybe in a
+2:12
+Mac Mini that you have you should go and buy a Mac Mini specifically, but when you do that, what it means is when your laptop's closed down, you can still chat
+2:18
+to it and do different things. So this morning, for example, like if you're at the gym and you said, "Oh, great. Could you do some research on this or I need
+2:24
+to talk to you about my YouTube channel? I need to talk to you about my business," you can still have that back and forth. So having an AI uh whether
+2:29
+it's Claudebot or something else in a VPS is really handy because you can talk to it 24/7, which is cool. So the idea
+2:35
+is that it's always on. Uh and the cool thing is it can kind of work whilst you're sleeping. So you know, if you're going to bed at 10:00 and you can say,
+2:41
+"Hey, I want you to do a full competitive rundown on ABC or I want you to build this cool thing." This can actually run for you on your VPS whilst
+2:48
+you're kind of sleeping. Like I say, this can happen 24/7, 24/7 access. Uh, it's also event driven, so it can be
+2:53
+triggered by other things that happen, like if the temperature exceeds a certain amount or you can set events.
+2:59
+And the cool thing about it, I suppose, is the fact it can react on its own and proactively message you. Hence why so
+3:04
+many people got uh really excited about it. The coolest thing though, I think, about it, if you were to make the steelman argument for it, is the memory
+3:11
+nativeness of it. So what it does with memory uh and it kind of remembers, the idea is it's supposed to remember you
+3:16
+and everything you're talking about. Um, so you can come back to anytime you want to. So it remembers projects, people,
+3:22
+uh, habits and decisions. And the idea is it kind of is supposed to be this process that lives in your digital life.
+3:28
+Now, there's some interesting things here which we're going to talk touch on which I've not seen a lot of people really delve into how to fix uh, which
+3:34
+is a lot of the concerns on the um, the way that you would create and set this up. So we're going to cover a secure setup in this video. We're going to
+3:40
+cover SSH hardening, firewall protection, zero public exposure, and keybased authentication. And I'm going
+3:45
+to give you all the blueprints for all this stuff so you can actually go ahead and create this uh in a more secure manner. This is a new technology. It's
+3:52
+trying to innovate. It is not perfect. Uh and I'm going to try and help you make an informed decision on it. And then we'll also loop back around to
+3:58
+where does anti-gravity fit into this entire picture. So if I land on open core website, you can see some different things on here. You can go over and have
+4:04
+a look at the use case and all the integrations. And it runs through what it basically does. Talks about running on the machine. Now my personal
+4:11
+philosophy of this is that I would not let this run on my computer. Number one, I would never install it on my own
+4:16
+laptop. I I wouldn't want to give it that level of access because it doesn't really need it. Like we want to do stuff on our computer, we can use anti-gravity
+4:22
+and other models. Secondly, uh the other thing really from a connection point of view is you want to avoid ever
+4:27
+connecting this with a lot of your like look at personal emails for example is something that I'm not going to connect this to, but you can still give it
+4:34
+information about things like this is what my business strategy is. This is what I'm working on that isn't necessarily just 100% linked to it. So I
+4:41
+think it can run your machine, but I don't run it. I'm running on its own separate VPS in the cloud cuz I think
+4:46
+it's really cool there. The persistent memory is very cool. The fact it integrates very quickly and easily with things like Telegram is also really
+4:52
+decent. I think those are the main things and also different bits and pieces in terms of skills and plugins. And so I would say that Open Claw is
+4:59
+really more for your power users. Like if you're somebody that's using the basics um and you're just a beginner,
+5:05
+you may not really want to play with this. But if you're a power user that can set this up properly like with some of the stuff that we're going to talk about in this video, it's interesting
+5:11
+and it's got some really cool use cases, just make a really cool informed decision on whether you want to rock and roll and ride the lobster and come this
+5:17
+journey with it. So, we're now going to cover the three core statups of Claudebot or Maltbot if you prefer. But
+5:23
+the first question you have to ask yourself is where does Claudebot live? The three options typically speaking are on your laptop uh in a VPS which is a
+5:31
+kind of virtual computer. So basically we get a a computer that lives somewhere else completely detached from ear and
+5:36
+your all your own files and stuff and it lives there. And the third option is like a few people have been doing is you buy a Mac Mini and it sits on your desk
+5:42
+and it runs. The option that we're going to cover in this video is going to be your virtual computer a because it is
+5:48
+like unbelievably cheaper than actually buying a Mac OS and it's also a really cool skill to learn how to actually set
+5:54
+up these VPSs and integrate it with everything. Now for the setup I'm going to sh over to my school community and grab this resource. Um, to really make
+6:00
+this simple, let me come down to the vault, which is all the resources from the YouTube section. And what's really
+6:05
+interesting with the Claudebot here, guys, is let me just open up. I'm going to put a link for you down below as well, so you can just click this and use
+6:11
+it and have a rock and roll good time. So, let's go through what the setup does. And I just want to call this out. This is so important to understand as we
+6:17
+enter the new era of this cool AI intelligence, right? So, instead of calling B, there's some issues people
+6:23
+have when they don't protect their server. So, this is going to do a lot of things. The process I'm going to show you here gives you zero public exposure.
+6:29
+So people attackers can't find your server. It's going to give you a remote brain you can use from anywhere. And it's going to be a private AI that only
+6:35
+you can access and no password login keys on it. Super cool. So first thing we're going to do is head over to Hostinger or your platform of choice. I
+6:41
+always like Hostinger because they're very cool. They're rock and roll. I find the setup very very easy. And once we land on Hostinger, you're going to come
+6:47
+down and we can claim a deal. Now the one I've always used personally has been KVM2. Obviously pick the one that you want to get two vCPU scores, 8 gigs of
+6:55
+RAM. Sounds absolutely perfect for our use cases. Beautiful. So you can choose a plan that you want to. Again, you can
+7:00
+laptop for free. This just means it's separated from our desktop and can't do anything to the files if we don't want
+7:06
+it to do that. So on this page here, you can pick as long or as little as you want to completely your call whenever you want to play around with this. Going
+7:12
+to come down. You've got your server location. This is going to be organized basically by latency. So they'll usually
+7:17
+give you the fastest one, but if you've got certain like data requirements for whatever reason, you can do that. So I'm going to go with the fastest here for
+7:23
+the sake of it. And then what we want to do is be on plane operating system. and Ubuntu is perfect and that is absolutely
+7:29
+fine. Ubuntu 25.10 is decent. Come down and click on confirm. Give that a hot second. Then once you click continue,
+7:35
+it'll then start to download into your hosting giver instance. Beautiful. And so once it's installed, you're going to see a page like this. And all you're
+7:41
+going to do is you're going to come over and you see here's our one right here. I'm going to come down. You're going to click on manage. Now there's one thing
+7:46
+that we need from this page here. Well, actually two, but the first one is this root password here. So, what you're
+7:52
+going to do is you're going to copy this number and just put that somewhere safe. Then, I went to head over to the
+7:58
+terminal and click this guy here. So, you can click on the terminal, give that a hot second, and it will pop up. And you might be thinking, "Oh my gosh, that
+8:04
+that looks like a lot of code. What the hell is going on with that?" Well, this is just how you talk to your computer. You can do the exact same thing on your
+8:10
+own terminal. And basically, it just writes things. You can install programs on the computer by using language code,
+8:16
+but because of AI now, you don't have to necessarily know the code. So, let's go over now to the document you've got.
+8:22
+Again, I'll put the link in description for you. I'm going to look at a setup. So, we've got a couple of things to do here. Now, here's a really cool thing I
+8:27
+want to show you that we can do with this is that I've often I've not seen many tutorials and let's talk about the
+8:32
+safety aspect of it. But one thing I would love you to do if you're if you're like a proficient, you can just whiz through this if you're a pro coding pro.
+8:39
+But if not, you might find this really helpful. So, head over to anti-gravity for example, spin up a new project. And
+8:45
+what we can do is we can actually have conversations with this now to as a kind of guide to set everything up. So one of
+8:51
+the things you can do on the left hand side if you haven't yet is if you come down to extensions install cloud code very very cool. You can use the native
+8:58
+conversations if you want to. I just think I just want to show you alternative ways to use this. It's very very decent. But once you install this
+9:04
+and you connect claude you are rocking and rolling if you've got the desktop app. And then when you're with an anti-gravity you can just actually what
+9:09
+you can do is paste everything here. So what I'd recommend you do is you come over here. You're going to control a all this sort of stuff. Control come back
+9:16
+and say, "Hey there, dude. I want to set up this thing on my VPS in Hostinger.
+9:21
+Below is a guide I want to follow. I want you to walk me through setting this up step by step as it's outlined in the
+9:26
+guide." All right. And then you're going to come down and paste this in. And the reason we're doing this is because we can actually leverage AI to help us to
+9:33
+do that. The other option you've got if you've installed Claude Code in the extensions on the left hand side, you can just double click and then click on
+9:39
+this Claude code thing here. And now we can actually chat with Claude Code to get it done. I can just paste that in for example and then just pull edit
+9:45
+automatically and send that off. And there we've got conversations. Again, you don't need to do this. I just want I think this is really valuable because it
+9:52
+can teach you about what's happening as you physically go. So, one of the things you'll notice if you come back, the
+9:58
+first thing we need to do is set up the SSH key. So, effectively what's happening in step two is we're creating
+10:05
+like a digital um kind of like pass key relationship between our own laptop and
+10:10
+this digital service. So, we're connecting them and removing the need for a password, which makes this so secure. So, if I come down here and I
+10:17
+just copy this, for example, then sweep back over, it's going to say, do you already have VPS set up in hosting with
+10:22
+IP address? Yes, I do. And the IP is ready. Awesome. And you can see now how it's kind of like running through. And
+10:28
+this has terminal access, which is really freaking sick. So, we see that's cool. What would that help with? Walk me through each step interactively, which
+10:34
+is cool. Let's do that. So, you can see how this works. Awesome. And if you ever run any Roblox, you then have the facility to set this up, which is really
+10:40
+cool. So let's go through and set the first command which is going to be awesome. Okay, so we're going to come over here and I'm going to post this one
+10:46
+here. Beautifully as you can see. Great. Let's generate a fresh SSH key specifically for this VPS connection.
+10:51
+This is great security practice. Cool. I would like you to run that. You have terminal access. And then by the way, if you want to, you can always come down
+10:57
+here to terminal, click on new terminal, and then you can run the commands here directly within terminal if you'd like to. Of course, we're just going to
+11:03
+delete this for the time being. I'm going to show you set it all up within club code. And beautiful. So that's been generated automatically. The keys been
+11:08
+saved here. Now I need your VPS IP to copy. Awesome. So how do we do that? Well, we just go back over. We are then
+11:14
+going to go over to our hosting scenario. And all you're going to do is literally copy this root access and then shoot back over to anti-gravity. And
+11:21
+when you're here, you're going to come down and just post it in. And so what we need next is going to be the root password, which you can grab here. If you don't have it, you can click on
+11:26
+change. Basically create that brand new password and then click on confirm. Then once you've got the root password, sweep back over to anti-gravity and paste it
+11:33
+in here. And just like that, after some combobulating and lolly gagging, we had this in our wizards WhatsApp chat in our
+11:38
+community, lolly gagging. You'll get that if you've seen that. But I want to run through everything it's done. And cloud's actually gone ahead and and it
+11:44
+with anti-gravity installed this for us after it's made a connection. So I want to run through quickly what it's done.
+11:50
+So SSH hardening, so it's got a key designed specifically for it. Password authentication disabled. SSH keys only.
+11:56
+Keybase authentication active and tested. We've got firewall protection now, which is awesome. So your firewall is enabled. Uh we've got certain ports
+12:03
+enabled, zero public exposure, which is great for amazing uh with code for amazing, excuse me, network security.
+12:09
+We've got clawbot installation and access to our AI assistant and our cloudbot is now live on this local host,
+12:15
+which is cool. And it basically breaks down all the stuff. So you can feel free to go through and check this out, which is really beautiful and really awesome.
+12:20
+So without further ado, why don't we go ahead and and test it out. So we're going to control C this. Let's head over to a browser and give this a whirl. So,
+12:27
+I've entered the local host and almost like that we have the Claudebot that has magically mystically appeared. But what
+12:33
+we haven't done is actually set it up yet. So, let's go ahead and do that in the terminal first. So, let's click on
+12:38
+the terminal and get this bad boy opened and then we can basically go through the whole configuration which is decent.
+12:44
+Waiting on data from server. Very cool. So, let's just type in cloudbot like so.
+12:50
+Give that a hot second and then we want to do the onboard which is cool. So, let's do the onboard which is great. So
+12:56
+we come down, type in claudebot onboard and it'll run through an interactive wizard to get everything started for us.
+13:01
+Cool. And I've just brought this over to the side just so you can see in a little bit more detail. I'm always appreciate conscious of your v experience. So let's
+13:07
+come down. This is powerful and inherently risky. Do we continue? Feels like the beginning of a credible movie.
+13:13
+So yep, we're happy with that. We're going to do the quick start. We're going to use existing values. Now here's the
+13:18
+thing. You can connect to all these models. So a couple of really good facts to know on when you're selecting your models. Number one is don't use oorthth
+13:24
+for anthropic. There are reports of people who are using the super mega plan at max ultrum and you can sign in
+13:29
+basically via the browser and I understand that anthropic are shutting down and and sometimes banning accounts like that. So the best way in that sense
+13:36
+to use it is to connect it with open router and go via that way or lean on the chat GBT models. Second one is to be
+13:43
+really conscious about token usage with this. One of I guess the complaints about Claudebot is the fact that it
+13:49
+burns a lot of tokens if you give it your like your API key. So one of the things that I've looked at doing with
+13:55
+this is essentially use the smarter more intelligent models for the thinking and the conversations but then when you want
+14:01
+to go ahead and do some deep research on stuff just say hey dude I want you to switch to this different model. So I
+14:07
+call mine Maverick. I might say Ma I want Mav Pro or Mav L. I might actually do switch to Maverick Lie or like use
+14:13
+the the stupid the quote unquote stupid more stupid model whatever it is to go and do it. So you can dynamically switch
+14:18
+the models in the actual conversation. Anyway, so just one thing to watch on token usage because those can blow up if
+14:25
+you're not careful. Little side tip as well is whenever you're connecting any token to anything, make sure that you
+14:31
+have set limits in it. So for example, if you go over to console.anthropic or you go over to OpenAI APIs, you can set
+14:38
+weekly and monthly limits. I strongly recommend that you do that and also make sure that you're rotating your tokens
+14:43
+all the time for best practice. Let's do open as for example and we'll come down with the open AI codeex because for
+14:50
+example here they don't really mind it too much which is fine. So paste redirect URL or authorization code. So
+14:56
+I'm going to copy this open up any window throw that one in there and then we can actually authorize this. So all we do is we come down and sign up. So,
+15:02
+OpenAI don't mind codeex coding with the thing cuz what's happening here is you've got your chat GPT subscription
+15:09
+and what you're doing is you're coding with that rather than using an API token which basically means that you're going to save money on your existing
+15:16
+subscription. So now it's complete. We're going to paste the redirect URL in right here. And now we can pick from all the models we want. So I think we go
+15:21
+down with the GBT 5.1 codeex which is cool. Just click on space bar and that is activated. Awesome. Now we can
+15:28
+obviously pick the channel that we want to connect to which is awesome. You can Telegram, WhatsApp, whatever you want to. I'm going to go ahead and do
+15:33
+Telegram cuz Telegram is really cool. Of course, you can do WhatsApp. So, I'm going to do spacebar to select it and then put on enter. And then what you
+15:39
+need to do is basically create a bot in Telegram, which is dead easy. So, all you do is you open up Telegram. And I'd
+15:44
+recommend Telegram actually cuz they've got an amazing API. So, what you want to do is on Telegram, you come down, you
+15:51
+slash the botfather, and you basically follow these things. So you do r/ newbot
+15:56
+in that window. Then select a name in that chat window which is whatever it is underscorebot. You'll be given a bot
+16:01
+token by telegram. Just paste it in there and then you'll be ready to rock and roll. And then it's going to ask us to configure skills. I'm going to say no
+16:08
+for the time being and I'll show you why in a second. So come down and click on no. Then enable hooks. We're going to say yes to boot MD command logger and
+16:14
+session memory and click on enter. So on this one I'm going to come down and open the web UI. We love that web interface.
+16:19
+So click on space bar and then enter. Onboarding complete which is awesome. And then to open it, guys, you can do
+16:24
+one of two things. You can head it back over to anti-gravity and say, "Hey, open it up for me." And it'll do it. Or very
+16:30
+simply, all you're going to do is come down and type in Claudebot dashboard into your terminal like so. And then it
+16:36
+will give you a token like this. And I'm going to do is copy that token, open a new window, paste that in, and then it
+16:42
+is ready to rock and roll. So now you've officially configured Claudebot and gotten that set up. That's the hardest
+16:48
+part out the way. Now you can start to get ready to the future. The first thing we want to do now is basically give it
+16:53
+context. Now the idea here is that the more that Claudebot knows about us, the better it can actually physically help
+16:59
+you, right? Knows about your business, your goals, everything you're working on. Claudebot can be that to give you the specific information that you need
+17:06
+for whatever next step we're going to do, the second of the third steps we're going to do a is to give it the
+17:11
+information, but then also to give it a really interesting task based on that information. So for example, we've got some information here. It's asking for
+17:18
+some for some details. All right. Hey, you should call me Jack. I would like to call you Maverick. For the preference
+17:25
+for Vibe, I would like you to be critical. I want you to have your own opinions. I want you to challenge me. I
+17:31
+want you to have a little bit of humor, a little bit of personality. I want you to all times think about the question behind the question. I'd like you to be
+17:38
+challenging, a little bit humorous, and always consider what my end objective is in anything that you're doing. always
+17:44
+ask me for clarification questions and I'd like an AI with some freaking badass personality to be honest with you. Okay.
+17:50
+Then you're going to specify what you want to help most with. You are going to help me excel in business and also my
+17:56
+personal life. So that could be physique, that could be working on my my companies, whatever the thing is, you
+18:02
+you're there to help me. You're going to help me brainstorm. I'll ask your help for your help across a spectrum of things. And you'll have tools to
+18:08
+facilitate that. You need to be an independent thinker and always think seven steps ahead. Beautiful. And then
+18:14
+we can give it lots of core information. Now, interestingly, if you've got a business, you may find this really valuable. So, this is one of the things
+18:20
+I picked up in I put in my community. I'll I'll share a link for it as well uh in the business system section and I
+18:27
+call this brain.md. Now, brain.md basically is a series of questions that you can ask yourself about your
+18:34
+business, right? Who is the business? Who does it serve? How much money does it make? What does it believe? Uh your target customers um their biggest pain
+18:41
+points. And the idea is that you can actually fill out this information. Uh, and then once the AI and CloudBot knows that, the level of specificity and
+18:48
+support it can give you just by having this data is incredible. So, I'd strongly recommend that you grab the
+18:53
+biggest coffee you can, a big beautiful whiteboard, and just finish out, fill out all that data right there. So,
+18:59
+basically, you're going to give it loads of interesting context, and you're going to send that off to Claudebot. Check this out, guys. Look at these
+19:04
+clarifications here. My name is Maverick. I'm to help you search your defaults. I'm here to challenge you, not codly, or push on your assumptions. aim
+19:10
+at your real objective and I won't pretend anything's a good idea if it's weak. Do you want to help across your business, your personal? So, it's asking
+19:16
+for clarification questions. Now, I also want to take a second to show you this, right? I created a bot on Telegram, right? So, not only can I chat to it
+19:23
+here, I can also send messages to this. This is why this is so cool because I can then have, let's say I'm out and
+19:30
+about, right? And this is the other key thing I want to point out here. If you run this on your laptop locally, the
+19:35
+second that laptop liter shuts down, you cannot talk to it at all. When you run it virtually, if I'm at the gym pumping
+19:42
+weights, doing incline chest press, decline chest press, whatever it is, I can say, "Oh, clubbot, you know, go do a little research on this or go and action
+19:48
+this." And it can do that for me. So, I've got a telegram up right now. As you can see, I don't if you can see it here. I'll see if I can show you, but you see
+19:55
+the chat there. I can say to it, for example, or actually, what's really interesting here, it's got a pairing code. So, what I need to do is give the
+20:00
+pairing code to Claude Bots. I'm going to say, "These are great questions. Hold on to those questions and give them me
+20:05
+back when I prompt you. For the time being, I want to give you the pairing code for Telegram. So, I've given that message with my pairing code. So, within
+20:11
+Claude Butter, anytime you want to, you can come over and refresh a session by hitting this thing here, which is cool. Or click on new session, whatever you
+20:16
+want to, right? Very, very, very cool. Now, how do we message it on the go? So, I've got Telegram up right here. I can say, for example, hey, so you hopefully
+20:23
+you can see this if you can zoom in. I don't if you can see it perfectly, but look, I said hey. Bam. I sent that one off. Now, look, what's cool is the
+20:30
+message will be reflected now. He's going to reply to me both here and there. So, now I can issue commands. So,
+20:35
+let's get started. Let's do something fun. So, the very first thing that we're going to build together is we're going to connect our now super intelligent
+20:42
+virtual AI assistant to our notion database. Which means, let's say that you and I are out at the gym like we
+20:48
+were earlier or a coffee shop or working on a deal together somewhere and we have an idea. We can say, "Hey, I've got this
+20:53
+really cool idea about opening a coffee shop. Just add that to my to-do list or go and check out this video." And this
+20:59
+agent can not only do research for us, but then manage our to-do list within Notion. Now, it's worth calling out that there's going to be basically two
+21:06
+interfaces for this thing. So, this is the hosting dashboard. Now, whenever you want to do something and manage what we
+21:11
+call the user interface, we do this. So, you come over to terminal like so. You're going to click on that, and this
+21:16
+is going to open up the terminal of that computer. You can also do this with an anti-gravity if you like. So, all you're
+21:22
+going to do is you're going to come down, you're going to type in claude um claudebot space dashboard. Okay? Like
+21:30
+that. And once it's done that, it's going to give you a unique URL. All right, you see this dashboard URL. Uh,
+21:36
+you won't see it. Let me just bring that over for you. Okay, so I've just opened this up so you can see on the left hand side is going to be Telegram. This is
+21:42
+going to be basically for your intents and purposes where we have the conversations. Probably 95% of the way
+21:47
+you interact with Claudebot is going to be through this interface. And then we use this to open up what we call like
+21:54
+their kind of dashboard. So you can see it's given us this dashboard URL. And then once you click on that link, you'll have access to the dashboard. So let me
+22:00
+full screen this for a second to show you some cool stuff. So this is going to be where we do our connections. Now on the left hand side we have skills which
+22:06
+is cool and these are things that we can connect our wonderful clawbot to to give it basically interesting access to Apple
+22:13
+notes, Apple reminders. You can basically go down all the way through this and find cool things to connect to.
+22:19
+Right? But let's say we want to connect to notion. So I do control F and I search for notion and we can see there.
+22:24
+Awesome. And it's eligible. So let's actually connect it. So we need to connect this together. And to do that, we're going to first head over to
+22:29
+notion. Let's do this real quick. And this could be any kind of place where you manage your chats. Well, let's create a brand new page. And we'll call
+22:35
+this one clawbot. And we'll give it a lobster just so we can have a bit of visual identity. And then let's also
+22:41
+give it a nice cover. Something random. Okay. Now, what you're going to do is you're going to come down here to the dots and going to come over here and
+22:48
+you're going to see at the bottom something on connections. All right. Click on connections and you're going to create a brand new connection just for
+22:55
+Claudebot. So come down here to manage connections like so. All right, sweet. And then what you're going to click on, guys, is develop integration, which is
+23:01
+going to be something unique we can connect to Claudeb. Click down here to new integration. Let's give this one,
+23:06
+we'll call this one Claudeb. Awesome. Associated Workspace will be the main one that you've got. And then you can
+23:12
+even load an image if you want to. I've given it stacked, which is the name of the podcast that my my buddy and I Nick
+23:17
+do. So, we click on save for that. And the integration is successfully created. Awesome. Great. And then we come down to
+23:23
+configure integration settings. And you'll have an internal integration secret. Awesome. And so when it comes to integrating basically the tokens into
+23:30
+Claudebot, we really want to make sure we put it in the environmental variables directly on the skills on the left hand
+23:36
+side. And one of the reasons for that is we don't want to put it in the chat window. There was some report that everything you put in the chat window is
+23:41
+logged somewhere. So we don't really want those tokens being logged anywhere. So it's much safer and easier to come onto the skill section, come all the way
+23:48
+down and basically find the thing you want to do. That could be YouTube research or whatever it is. We'll come to that soon. I can put my information
+23:54
+in here. Click on save key and then that will actually save the key for us. So it's way way better to do it in your
+23:59
+environmental variables. Remember as well that you always want to be rotating your tokens and restricting the access
+24:05
+so you're ready to rock and roll. Then once we're in notion itself, the way that it works in notion is you kind of like grab a unique give unique access to
+24:11
+every page. So if I'm on this floor bot blueprint and by the way I've added even further additional things in here that you might find very helpful in terms of
+24:17
+the ports. Really really cool. Basically just copy and paste that. But if you click over here for example down here and you're going to come down to
+24:23
+connections. What you can do is basically select the one that you created. So say for example I wanted to connect to anti-gravity. I click on this
+24:29
+and I click on confirm. And now like our cordbot will have access to this particular page. And so now what I'm
+24:35
+going to do is head back over. We're going to give it a prompt and a challenge. Ask it to I don't know create some to-do list on something. And we're going to see what Cordbot can do in our
+24:41
+notion database without us touching a single thing. So he's come back with a thing. He's basically got a nice to-do list. Hey, would you like me to pull up
+24:47
+the direct donation link for K9 friends or save this list into notion? So he's gone ahead and done some freaking research. which I'm going to show you
+24:53
+how you do that in a second. But it's asking us, do we want to add that into notion? I'm like, dude, go ahead and do that. And it's come back and said, done
+24:59
+both to the list on our clawback notion page. Is that freaking true? Let's go back over and check it out. Why don't we ask it to do one additional thing from
+25:05
+our phone? It's the same thing. Hey dude, could you add one additional action to get that coffee? And that needs to be at the very top. This is, I
+25:11
+think, is one of the most interesting things about this platform is the fact that it runs 247. And now the fact that it runs on our server is really
+25:18
+important because whether this laptop's open or not, it's going to work for us instantaneously. And if I actually come
+25:23
+over to this chat window now, which is over here, you can see that it's working. So it replies often times when
+25:29
+it's completed and finished its task and it comes back. But this is the advantage of it not being there. And look at this. It's added in get a coffee. It's done
+25:35
+that for us like that. So you've literally now got the ability to do research and do anything simultaneously
+25:40
+and have this updated to your notion database or any database that you want to. And now we have this wonderful AI personal assistant that can manage our
+25:47
+to-do list. The next thing we need to do is give it the power to get any information from the internet. But I'm
+25:52
+not just talking about a simple web page search. We can go way deeper than that. But before I even show you that, I want
+25:58
+to give you a very quick little hack. So what I would love you to do in this document I put down here is the starting and managing Clawude. And I basically
+26:05
+created this. And what I recommend that you do on your desktop is have a file called Claude uh Claudebot, excuse me.
+26:12
+And what we effectively want to do is you can pull up your terminal or anti-gravity or anything. And if you're
+26:17
+ever trying to troubleshoot cloud bar or you're trying to figure something out, the way that I've set this up is I've asked it to document your memory. So all
+26:24
+you're going to do is copy all this text here. For example, right, I put just literally copy and paste it. Then if you
+26:29
+ever have any issues with the clawbar or you want to have to do certain things, you can add it. Now occasionally what happens is the port closes. And what it
+26:36
+will need to do if you close your laptop down and come back to it, it needs to run a reopen the port because otherwise
+26:42
+you just can't access it online. You'll always still be able to message it because it's still running on the service on the server. But if you ever
+26:48
+want to use that dashboard I showed you, you'll need to do it. But the great news for you is you'll have this folder and you can just throw it into anti-gravity
+26:55
+or even your terminal and it will have it'll be able to support all that stuff. So all again, all you need to do literally grab this file here, pass on
+27:01
+to anti-gravity and you'll be ready to rock and roll. Cool. So with that in mind, let's now show you something really freaking cool about Clawbot that
+27:07
+you probably didn't know. So you probably might not know this, but we can give different commands to pick models. So for example, I can do forward slash I
+27:13
+can do models, which is cool. So show me a list of providers or models. I click on that and it says great, here are the
+27:19
+providers. And if you want to choose that one and switch, we can just do model. And then we could do something like anthropic. And that means we're now
+27:26
+connected with anthropic. Or if you want to add that, you can do that in the main terminal. But one really cool thing we can do here is add in skills. So, for
+27:33
+example, I've actually connected two skills to this uh when I had a coffee this wonderful morning. But let me show
+27:38
+you what I'm talking about. Now, if you come over to skills in this dashboard, um the default one is brave. But what if you wanted to add something different
+27:44
+like what if you wanted to add fire crawl so you could actually chat to websites or you wanted to get taby.
+27:49
+Well, you'll notice that they don't exist there. Except for me, they do. They're right here at the bottom. How
+27:56
+crazy is that? That's because I added it as a custom skill. So, this is a really crazy thing. If you don't see if you see
+28:01
+anything in here that doesn't exist that you want to add as a custom skill, we can throw it in there, no problem at
+28:07
+all, which is just crazy. So, for example, we don't have superb base, right? So, if I wanted to add in superbase or whatever. So, to add in
+28:14
+different skills, all you're going to do is right slash. You're going to come down to skills and now you can either run a skill by name. So, I can just say,
+28:19
+"Hey, I want you to run a specific skill." Or if I come down and go skills,
+28:24
+I can create or update my skills. So, check this out. If I click on this, you can see now we've got all these
+28:29
+different ideas and options. So we might want down and do skill creator. Let's come and do that one. Got it. Skill
+28:35
+creator is loaded. Awesome. What skills do you want to build? All right. What do you want to build? So we can specify anything we want to. So say for example,
+28:42
+I now want to be able to chat to my YouTube channel. So I might want to use a YouTube API skill. Now to do that, I
+28:48
+know that we need one API key. So let's check this out. Right? So it's going to be node.js. The scope is essentially
+28:54
+whenever you're pulling any information from YouTube, thumbnails, titles, comments, likes, shares, any of that
+29:00
+information. And yeah, I mean, I'm going to give you a list of URLs. I'd like you to go and access, but I might give you
+29:06
+that specifically in the channel, and I'd like you to be able to go ahead and do that. Use what you think would be the best keywords to activate that. It might
+29:12
+be something I ask you to do frequently, uh, either to help me to become better, to identify outliers, or to just improve
+29:18
+the quality of my channel in general. I believe that you'll need a API key for this. So, just let me know if you need any additional information. All right.
+29:25
+So, I'm giving it a skill to do something that it couldn't do before. So, we just literally chat to it in the
+29:31
+queen's beautiful English like that and give it a hot second to come back. Now, while it's doing that, we need to go ahead and actually grab and create that
+29:38
+scope. So, what we're going to do, as you can see, there we go. It's got some different bits here. So, YouTube research skill triggers when I use it.
+29:44
+Environmental. The only thing you care about here is the YouTube API key, okay? because that's what it needs to go and
+29:50
+do. I think you get like 10,000 searches a day if I'm not mistaken. So, it's even said this is where you get it from. So,
+29:55
+console.cloudgle.com. We open that up. Beautiful. Let's go check it out. Cool. So, once you land on this website, the
+30:00
+first thing you want to do is come over and grab and create a new project if you haven't got already. So, let's come over here and create a new project like so.
+30:07
+And again, we'll call this one Claudebot. So, all of our Claudebot credentials can live within this, which is cool. Come down and then click on
+30:13
+create a. And by the way, if this feels ever complicated, always feel free just to watch this back again. It's
+30:19
+completely normal. Or if you want more support, we can help you with that in the community. Jump on a call, go through everything step by step. One of
+30:24
+our tech master classes, we'll we'll get you flying and we'd love to welcome you. So, if you type in at the top here,
+30:29
+YouTube, what we're going to see now is a YouTube data API B3, which is exactly what we want. And this is a little bit
+30:35
+of a clunky interface to be fair. They don't make it too attractive for the development side. So, you click on
+30:40
+manage, which is awesome. So, I'm in the wrong project. Let me come over and find the one we just created, which is Claudebot. Okay, so this is going to be
+30:46
+more akin to what you see. So you're in your project, click on YouTube, and it should say something like enable once
+30:51
+this loads up. Cool. So we select on this one. This is the one that we'd like. And then click on enable. Wonderful. So once this is loaded on the
+30:57
+left hand side, now we need to create the credentials, right? So click on credentials and then we want to come down to create credentials and API key.
+31:03
+And almost like that guys, the API key has magically appeared. You just come down, click on copy. We're going to come back over to on the left hand side
+31:09
+skills. We're going to come all the way down like so. You're going to grab that YouTube API key and you're going to throw it in here and then come down and
+31:15
+click on saved key. And then we can go back and actually ask it questions about videos. And it's just really convenient
+31:20
+to have an AI assistant that you can query about pretty much anything you want to on YouTube. And guys, look at
+31:25
+this. So, it's come back. It's pulled all of the insights together here, all my things. It's given me some insights about my top performers. Notebook LM.
+31:32
+People love that video. Thank you. Hopefully, you checked it out and you enjoyed it. But then I said, "Look, we'll go ahead. Why don't you grab my
+31:37
+thumbnail?" And it's freaking done it. And I've got it right here. This is the thumbnail from the video and it's ready to rock and roll and I can get anything
+31:43
+I want to. I can click on this link and now I've got it. This is insane. And literally the other thing that I can do
+31:49
+now is ask it to go ahead and search the web. Once again, I can say, "Hey dude, could you create me a skill for Tavly
+31:56
+search?" And you can repeat this process for anything. So I can say, "Hey, go and create me a skill for Tableau Search." Tavi, I've already connected, but just
+32:02
+to show you, it's basically it's got a really nice free plan. They're really cool guys over there. You come over to
+32:07
+tavly.com, connect your AI agents to the web. It's really freaking cool. Just create an account or sign up. I'm not
+32:12
+affiliate with these guys anyway, but that it's just a great way to get started in terms of searching the internet. And then the other one, of
+32:18
+course, is firecrawl. Uh, so come on firecrawl. I think I'm not uh cuz I'm in a different browser. Hold on a sec. All
+32:23
+right. So, come into my different browser. Basically, create an account. All you're going to do, same process I just showed you, and you copy this. And
+32:29
+it's also true with firecrawl, which I'll just open up for you right now. And once you log into these guys, you can see your API key and copy that. So when
+32:35
+you come back over to your chat interface, you see mine says, "Hey, I've already got it, but you just do the exact same thing in chat to it." And
+32:40
+it'll go ahead and do that. So I could say, "Hey dude, could you go and find me the best sushi restaurant in Dubai,
+32:46
+please?" All right, so we'll go ahead and see what it's going to do now. Uh, and again, now this is a research agent. It can compile documents for me. And the
+32:52
+cool thing is you could set this to go ahead and work for you effectively overnight. If you did that, you
+32:57
+definitely want to use a lower model like the Miniax or something like that within the OpenAI family just to save
+33:02
+save your costs on tokens, but it's effectively crazy. Can now go ahead and research and do various different things and it's come back for best sushi Dubai,
+33:09
+the vibe, the Y, best overall, best views, whatever we want basically. And so now you've unleashed this incredible
+33:16
+research agent. The next thing that you want to do to really unlock the full potential of Claudebot is to build and
+33:22
+get it to do something in an automated way. So, what we're going to do now is give it access to an AI that knows all
+33:29
+of our meetings. And then what we can do is get reports on those meetings, get action logs, and then even connect that
+33:35
+to notion. Okay. So, I'm going to be using Fireflyy's AI. There are other options that you can use for this. There's load different places. This is
+33:41
+just the one that we use to get into certain meetings. So, effectively, the idea of this is that it joins your meeting. the AI does and it kind of
+33:47
+takes the whole transcript of the conversation. So, one of the things I'd love to do is once that meeting is complete is just to get that immediately
+33:53
+saved then added to my to-do list for any actions without me touching anything. So, what we can actually get this to do, well, first of all, we need
+34:00
+an API key right from Fireflies. So, let's go ahead and grab that. You're going to come down here onto settings. Then, you're going to come over to
+34:05
+developer settings and then you literally come over and just copy that key. Now, let's head back over to Maverick and I'm going to say this. Hey,
+34:11
+dude. I would like you to create a new skill for Fireflies and then I want you to create an automated task but let's
+34:17
+first connect to it. This is basically going to give you access to the transcript and any actions from the
+34:22
+meeting. All right, beautiful. And we head that one off. And just like that guys, head over to Fireflies, grab the
+34:28
+API key, come back over to the dashboard and you can enter it right here. Then you're ready to give it a prompt. And just like that guys, it's connected. I
+34:34
+said tell me my last three meetings and tell me the first thing that Jack said, her last three meetings. Glido glider to
+34:40
+the AI. And the first thing I said, yeah, it's wild, right? Guys, this is
+34:45
+freaking crazy. So, what I'm going to ask you to do now, if I wanted to combine the two, which is, hey, dude, I want you to take every action for Jack
+34:51
+out of that call, and I want you to add it to that notion database. Then, what I want you to do is set up a regular task
+34:56
+where you are going to check for new meetings every 24 hours at 8:00 a.m. And
+35:02
+then, if I have any additional actions, I want you to add it to my notion base. And if it already exists, no need to add
+35:08
+it in there. Remember, you're only checking for new meetings. Once that meeting has been checked, you don't need to do it again. So, make sure you have a
+35:14
+record and a log to make sure that you can follow that up. All right, send that one off. Bam. Of course, we're using
+35:19
+Glad for speech to text. Also, the meeting with kick and bowl, which is great. Just released in beta. So, we're now going to a second. So, let's it's
+35:25
+going to go ahead and do that for us. Let's add Jack's actions for that call to notion right now. Then set up an daily ATM automation with meeting
+35:32
+tracking. So, now this is done. What's done so far is added the actions from Glider Weekly, which is beautiful, and created a tracking file, which is
+35:38
+fantastic. And then it's it found a few automation issues with the Chronol. No problem. So, we're going to say, I would
+35:44
+like it to go ahead and debug that. Thank you. Beautiful. Now, it can create a heartbeat MD, but that's kind of
+35:49
+beside the point. We want it to create an automation for us. Now, I'll be fair with you here, and this actually is getting onto the point of how and why
+35:56
+this is different than anti-gravity. Now, this is great for I think what I would describe as mini automations.
+36:01
+Okay, so what am I talking about with automations? I mean little small things like give me a daily digest or um just
+36:08
+check this on a regular basis, but it's never going to be as stable, as strong or as reliable as a system you build in
+36:14
+anti-gravity. Just about a short the sheer horsepower behind that and reliability. And ideally, what we want
+36:20
+to do is to codify and have one centralation for that, which I'll touch on very shortly. But if you check here,
+36:26
+it's actually gone ahead and freaking done it. It's freaking only gone and done it, guys. Automation active, job ID, name, schedule, everyday 8 a.m.,
+36:32
+next one's XYZ, delivery. It's going to come to my DMs, guys. They're sending it to my D send to my Telegram. So, what
+36:38
+it's going to do is check Fireflies for new meetings, extract actions, add them to notions of emojis, update the
+36:43
+tracking file, and sends me a summary on Telegram. And that's really cool. So, why don't we just go ahead and test that
+36:49
+right now and see? So, run the Fireflies chron job. All right. And let's just see
+36:55
+what that looks like instantaneously. So you can see what would happen as it pings up there. And then here we go. The only meeting last 24 hours. It's a
+37:01
+glider weekly from 20 January 26, which has already been processed. And remember, it's basing that based on
+37:07
+Fireflies. So if I had a meeting that I didn't take on Fireflies, it wouldn't necessarily see that, which is funny.
+37:12
+It's checking for new meetings, which is cool. And it says down here at the bottom, the automation is working correctly. It would report no new action
+37:18
+step. So the idea is is I sit back now and I just get that daily digest beautifully. And the final thing I'm going to ask you to do here as well at
+37:23
+the bottom is I'd like you to quote for me a daily digest and also send that to me at 8 a.m. alongside that information.
+37:30
+And what I would like that to include is anything that you think would be relevant for me. So why don't you identify any training topics on X to do
+37:37
+with AI and automations and systems based on your understanding of my YouTube channel and the kind of content that I create. Um maybe one really cool
+37:44
+interesting thought for the day. this really good philosophy. Uh the temperature in Dubai and then anything
+37:49
+else that you think it might be relevant and we can refine that over time. Cool. So now I'm going to get my daily digest I can drink with my beautiful coffee
+37:55
+before we rock and roll and kick some butt. And now we've covered up just some of the use cases. The question is what does this mean for anti-gravity? How
+38:01
+does this all fit in together? Well, anti-gravity and malt bar and AI assistance of their kind are actually
+38:06
+completely different use cases. This does not in any way replace or basically
+38:12
+affect cloud code or anti-gravity. Anti-gravity is your orchestration layer. This is where you build your
+38:18
+systems. And in anti-gravity, we can effectively build anything we want to. You can even build, if you wanted to, a
+38:23
+multbot in anti-gravity and with anti-gravity. It just takes time. You'd have to set it all down and configure
+38:28
+and have it running on your machine. So, think of anti-gravity as your systems powerhouse. It's about AI orchestration.
+38:34
+It's about AI systems. It's about infinite connections. And then any kind of personal AI that you use is more
+38:40
+about kind of helping you be a little bit more effective when you go. Yes, you can run automations, but I would say the
+38:45
+more kind of mini automations that you run on a clock. And we've got many videos on this YouTube channel showing
+38:50
+you exactly how you can set up scheduled automations with cloud code and anti-gravity. So anti-gravity is pretty
+38:56
+much if you can think it, you can create it. So that's the difference. And if anything, this just draws more attention
+39:02
+and makes these tools way more powerful within anti-gravity when you think about it. But now we've covered the basics of
+39:07
+cloud code and you have enough information hopefully now to make an informed decision about using it. The next thing that we need to do is learn
+39:12
+how to connect an even more powerful knowledgebased tool to anti-gravity to take you from this to out of this world.

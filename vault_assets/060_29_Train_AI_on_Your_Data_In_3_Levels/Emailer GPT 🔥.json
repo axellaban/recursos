@@ -1,0 +1,696 @@
+{
+    "name": "Emailer GPT 🔥",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-email:TriggerNewEmail",
+            "version": 2,
+            "parameters": {
+                "account": 1480479,
+                "searchType": "simple",
+                "markSeen": false,
+                "maxResults": 1,
+                "folder": "INBOX",
+                "criteria": "ALL",
+                "from": "",
+                "subject": "",
+                "text": ""
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -290,
+                    "y": 32
+                },
+                "restore": {
+                    "parameters": {
+                        "account": {
+                            "label": "My Google Restricted connection (jack@aiautomationswithjack.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            }
+                        },
+                        "searchType": {
+                            "label": "Simple filter"
+                        },
+                        "folder": {
+                            "path": [
+                                "Inbox"
+                            ]
+                        },
+                        "criteria": {
+                            "label": "All emails"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "searchType",
+                        "type": "select",
+                        "label": "Filter type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "simple",
+                                "gmail"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "markSeen",
+                        "type": "boolean",
+                        "label": "Mark email message(s) as read when fetched"
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "uinteger",
+                        "label": "Maximum number of results",
+                        "required": true
+                    },
+                    {
+                        "name": "folder",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "criteria",
+                        "type": "select",
+                        "label": "Criteria",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "ALL",
+                                "SEEN",
+                                "UNSEEN"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "email",
+                        "label": "Sender email address"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Search phrase"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "openai-gpt-3:messageAssistantAdvanced",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "assistantId": "asst_zjRAhNu7gN5ZfPTX0sodc6Lz",
+                "role": "user",
+                "message": "{{1.text}}{{1.subject}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 13,
+                    "y": 33,
+                    "name": "Giraffe GPT 🦒"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "assistantId": {
+                            "mode": "chose",
+                            "nested": [],
+                            "label": "Giraffe GPT 🦒 (gpt-4o)"
+                        },
+                        "role": {
+                            "label": "User"
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "tools": {
+                            "mode": "chose"
+                        },
+                        "file_search_resources": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "code_interpreter_resources": {
+                            "mode": "chose"
+                        },
+                        "response_format": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "truncation_strategy": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "image_files": {
+                            "mode": "chose"
+                        },
+                        "image_urls": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "assistantId",
+                        "type": "select",
+                        "label": "Assistant",
+                        "required": true
+                    },
+                    {
+                        "name": "role",
+                        "type": "select",
+                        "label": "Role",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "user",
+                                "assistant"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "threadId",
+                        "type": "text",
+                        "label": "Thread ID"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model"
+                    },
+                    {
+                        "name": "tools",
+                        "type": "select",
+                        "label": "Tools",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "file_search",
+                                "code_interpreter"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "file_search_resources",
+                        "type": "select",
+                        "label": "File Search Resources"
+                    },
+                    {
+                        "name": "code_interpreter_resources",
+                        "type": "select",
+                        "label": "Code Interpreter Resources",
+                        "validate": {
+                            "maxItems": 20
+                        },
+                        "multiple": true
+                    },
+                    {
+                        "name": "instructions",
+                        "type": "text",
+                        "label": "Instructions"
+                    },
+                    {
+                        "name": "max_prompt_tokens",
+                        "type": "uinteger",
+                        "label": "Max Prompt Tokens"
+                    },
+                    {
+                        "name": "max_completion_tokens",
+                        "type": "uinteger",
+                        "label": "Max Completion Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "response_format",
+                        "type": "select",
+                        "label": "Response Format",
+                        "validate": {
+                            "enum": [
+                                "auto",
+                                "json_object",
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "truncation_strategy",
+                        "type": "select",
+                        "label": "Truncation Strategy",
+                        "validate": {
+                            "enum": [
+                                "auto",
+                                "last_messages"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "type": "text",
+                        "label": "Message",
+                        "required": true
+                    },
+                    {
+                        "name": "image_files",
+                        "type": "select",
+                        "label": "Image Files",
+                        "multiple": true
+                    },
+                    {
+                        "name": "image_urls",
+                        "type": "array",
+                        "label": "Image URLs",
+                        "spec": {
+                            "type": "url",
+                            "label": "Image URL",
+                            "required": true,
+                            "name": "value"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "openai-gpt-3:messageAssistantAdvanced",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "assistantId": "asst_TUqx2BxamMP2ZCnhZjusSrtK",
+                "role": "user",
+                "message": "{{2.result}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 340,
+                    "y": 28,
+                    "name": "Email Agent 🔥"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "assistantId": {
+                            "mode": "chose",
+                            "nested": [],
+                            "label": "Email Agent (gpt-4o)"
+                        },
+                        "role": {
+                            "label": "User"
+                        },
+                        "model": {
+                            "mode": "chose"
+                        },
+                        "tools": {
+                            "mode": "chose"
+                        },
+                        "file_search_resources": {
+                            "mode": "chose"
+                        },
+                        "code_interpreter_resources": {
+                            "mode": "chose"
+                        },
+                        "response_format": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "truncation_strategy": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "image_files": {
+                            "mode": "chose"
+                        },
+                        "image_urls": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "assistantId",
+                        "type": "select",
+                        "label": "Assistant",
+                        "required": true
+                    },
+                    {
+                        "name": "role",
+                        "type": "select",
+                        "label": "Role",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "user",
+                                "assistant"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "threadId",
+                        "type": "text",
+                        "label": "Thread ID"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model"
+                    },
+                    {
+                        "name": "tools",
+                        "type": "select",
+                        "label": "Tools",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "file_search",
+                                "code_interpreter"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "file_search_resources",
+                        "type": "select",
+                        "label": "File Search Resources"
+                    },
+                    {
+                        "name": "code_interpreter_resources",
+                        "type": "select",
+                        "label": "Code Interpreter Resources",
+                        "validate": {
+                            "maxItems": 20
+                        },
+                        "multiple": true
+                    },
+                    {
+                        "name": "instructions",
+                        "type": "text",
+                        "label": "Instructions"
+                    },
+                    {
+                        "name": "max_prompt_tokens",
+                        "type": "uinteger",
+                        "label": "Max Prompt Tokens"
+                    },
+                    {
+                        "name": "max_completion_tokens",
+                        "type": "uinteger",
+                        "label": "Max Completion Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "response_format",
+                        "type": "select",
+                        "label": "Response Format",
+                        "validate": {
+                            "enum": [
+                                "auto",
+                                "json_object",
+                                "text"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "truncation_strategy",
+                        "type": "select",
+                        "label": "Truncation Strategy",
+                        "validate": {
+                            "enum": [
+                                "auto",
+                                "last_messages"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "message",
+                        "type": "text",
+                        "label": "Message",
+                        "required": true
+                    },
+                    {
+                        "name": "image_files",
+                        "type": "select",
+                        "label": "Image Files",
+                        "multiple": true
+                    },
+                    {
+                        "name": "image_urls",
+                        "type": "array",
+                        "label": "Image URLs",
+                        "spec": {
+                            "type": "url",
+                            "label": "Image URL",
+                            "required": true,
+                            "name": "value"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "google-email:ActionCreateDraft",
+            "version": 2,
+            "parameters": {
+                "account": 1480479
+            },
+            "mapper": {
+                "folder": "[Gmail]/Drafts",
+                "to": [
+                    "{{1.from.address}}"
+                ],
+                "subject": "Hey there, {{1.from.name}} 👋",
+                "html": "{{3.result}}",
+                "attachments": [],
+                "cc": [],
+                "bcc": []
+            },
+            "metadata": {
+                "designer": {
+                    "x": 640,
+                    "y": 28
+                },
+                "restore": {
+                    "parameters": {
+                        "account": {
+                            "label": "My Google Restricted connection (jack@aiautomationswithjack.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "folder": {
+                            "mode": "chose",
+                            "path": [
+                                "Drafts"
+                            ]
+                        },
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        },
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "folder",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "to",
+                        "type": "array",
+                        "label": "To",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "html",
+                        "type": "text",
+                        "label": "Content"
+                    },
+                    {
+                        "name": "attachments",
+                        "type": "array",
+                        "label": "Attachments",
+                        "spec": [
+                            {
+                                "name": "fileName",
+                                "label": "File name",
+                                "type": "filename",
+                                "required": true,
+                                "semantic": "file:name"
+                            },
+                            {
+                                "name": "data",
+                                "label": "Data",
+                                "type": "buffer",
+                                "required": true,
+                                "semantic": "file:data"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "cc",
+                        "type": "array",
+                        "label": "Copy recipient",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "bcc",
+                        "type": "array",
+                        "label": "Blind copy recipient",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

@@ -1,0 +1,1228 @@
+{
+    "name": "Article to Database 1/2 💎",
+    "flow": [
+        {
+            "id": 1,
+            "module": "rss:ActionReadArticles",
+            "version": 4,
+            "parameters": {
+                "include": []
+            },
+            "mapper": {
+                "url": "https://rss.app/feeds/tzGsYnGog5gWfU9o.xml",
+                "username": "",
+                "password": "",
+                "filterDateFrom": "",
+                "filterDateTo": "",
+                "maxResults": "2",
+                "gzip": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0,
+                    "name": "Data 📊"
+                },
+                "restore": {},
+                "parameters": [
+                    {
+                        "name": "include",
+                        "type": "select",
+                        "label": "Process RSS fields",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "google-merchant-center",
+                                "itunes"
+                            ]
+                        }
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "username",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "password",
+                        "type": "text",
+                        "label": "Password"
+                    },
+                    {
+                        "name": "filterDateFrom",
+                        "type": "date",
+                        "label": "Date from"
+                    },
+                    {
+                        "name": "filterDateTo",
+                        "type": "date",
+                        "label": "Date to "
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of returned items",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "title",
+                        "type": "text",
+                        "label": "Title"
+                    },
+                    {
+                        "name": "description",
+                        "type": "text",
+                        "label": "Description"
+                    },
+                    {
+                        "name": "summary",
+                        "type": "text",
+                        "label": "Summary"
+                    },
+                    {
+                        "name": "author",
+                        "type": "text",
+                        "label": "Author"
+                    },
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL"
+                    },
+                    {
+                        "name": "dateUpdated",
+                        "type": "date",
+                        "label": "Date updated"
+                    },
+                    {
+                        "name": "dateCreated",
+                        "type": "date",
+                        "label": "Date created"
+                    },
+                    {
+                        "name": "comments",
+                        "type": "url",
+                        "label": "Comments"
+                    },
+                    {
+                        "name": "image",
+                        "type": "collection",
+                        "label": "Image",
+                        "spec": [
+                            {
+                                "name": "title",
+                                "label": "Name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "url",
+                                "label": "URL",
+                                "type": "url"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "categories",
+                        "type": "array",
+                        "label": "Categories",
+                        "spec": {
+                            "type": "text"
+                        }
+                    },
+                    {
+                        "name": "source",
+                        "type": "collection",
+                        "label": "Source",
+                        "spec": [
+                            {
+                                "name": "title",
+                                "label": "Name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "url",
+                                "label": "URL",
+                                "type": "url"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "enclosures",
+                        "type": "array",
+                        "label": "Enclosures",
+                        "spec": [
+                            {
+                                "name": "url",
+                                "label": "URL",
+                                "type": "url"
+                            },
+                            {
+                                "name": "type",
+                                "label": "Type",
+                                "type": "text"
+                            },
+                            {
+                                "name": "length",
+                                "label": "Length",
+                                "type": "number"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "rssFields",
+                        "label": "RSS fields",
+                        "help": "Other RSS fields. All values are in text format.",
+                        "type": "collection",
+                        "spec": [
+                            {
+                                "name": "title",
+                                "label": "title",
+                                "type": "text"
+                            },
+                            {
+                                "name": "description",
+                                "label": "description",
+                                "type": "text"
+                            },
+                            {
+                                "name": "link",
+                                "label": "link",
+                                "type": "text"
+                            },
+                            {
+                                "name": "guid",
+                                "label": "guid",
+                                "type": "text"
+                            },
+                            {
+                                "name": "pubdate",
+                                "label": "pubdate",
+                                "type": "text"
+                            },
+                            {
+                                "label": "media:content",
+                                "name": "media:content",
+                                "type": "collection",
+                                "spec": [
+                                    {
+                                        "name": "props",
+                                        "label": "Properties",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "label": "medium",
+                                                "name": "medium",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "label": "url",
+                                                "name": "url",
+                                                "type": "text"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "Value",
+                                        "name": "value",
+                                        "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "http:ActionGetFile",
+            "version": 3,
+            "parameters": {
+                "handleErrors": false
+            },
+            "mapper": {
+                "url": "{{1.url}}",
+                "serializeUrl": false,
+                "method": "get",
+                "shareCookies": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {},
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "hidden",
+                        "label": "Method"
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "regexp:HTMLToText",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "html": "{{2.data}}",
+                "newline": "lf",
+                "uppercaseHeadings": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "newline": {
+                            "label": "LF (\\n) - Unix/Mac OS X"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "html",
+                        "type": "text",
+                        "label": "HTML"
+                    },
+                    {
+                        "name": "newline",
+                        "type": "select",
+                        "label": "Line break",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "lf",
+                                "crlf",
+                                "cr"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "uppercaseHeadings",
+                        "type": "boolean",
+                        "label": "Uppercase headings",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "module": "perplexity-ai:createAChatCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425898
+            },
+            "mapper": {
+                "model": "mixtral-8x7b-instruct",
+                "messages": [
+                    {
+                        "content": "As an AI language model, your task is to analyze the provided article and generate valuable insights based on its content. Start by carefully reading the entire article to fully comprehend its main ideas and context. Then, identify 1-3 key topics that represent the core themes discussed in the article.\n\nFor each key topic, briefly summarize it in 1-2 concise sentences, capturing the essence of what the article is discussing. Additionally, provide 2-3 insightful observations, analysis, or research points that expand upon the information presented, considering implications, broader connections, unique perspectives, and areas for further exploration.\n\nPresent your findings in a clear and organized manner, listing the key topics with their brief summaries, followed by the insights and research points for each topic. By following this structured approach, you should be able to effectively analyze the article and provide valuable insights that enhance the reader's understanding of the content.\n\nThe text: {{3.text}}",
+                        "role": "user"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0,
+                    "name": "Research 🧐"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Perplexity connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "perplexity-ai"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "mixtral-8x7b-instruct"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:perplexity-ai",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "pplx-7b-chat",
+                                "pplx-7b-online",
+                                "llama-2-70b-chat",
+                                "mistral-7b-instruct",
+                                "mixtral-8x7b-instruct",
+                                "sonar-small-chat",
+                                "sonar-medium-chat",
+                                "sonar-small-online",
+                                "sonar-medium-online"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "messages",
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true,
+                        "spec": [
+                            {
+                                "name": "content",
+                                "type": "text",
+                                "label": "Content",
+                                "required": true
+                            },
+                            {
+                                "name": "role",
+                                "type": "select",
+                                "label": "Role",
+                                "options": [
+                                    {
+                                        "label": "User",
+                                        "value": "user"
+                                    },
+                                    {
+                                        "label": "Assistant",
+                                        "value": "assistant"
+                                    },
+                                    {
+                                        "label": "System",
+                                        "value": "system"
+                                    }
+                                ],
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1.999,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "number",
+                        "label": "Top K",
+                        "validate": {
+                            "max": 2048,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "module": "openai-gpt-3:sendMessageToAssistant",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "message": "{{3.text}}{{5.choices[].message.content}}",
+                "role": "user",
+                "assistantId": "asst_gSSb2NbSbC6ScahFxKx8HTuU"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 0,
+                    "name": "Virality 🚀"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "assistantId": {
+                            "mode": "chose",
+                            "label": "Virality Agent 🟢 (gpt-4-turbo)"
+                        },
+                        "model": {
+                            "mode": "chose"
+                        },
+                        "fileIds": {
+                            "mode": "chose"
+                        },
+                        "tools": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "message",
+                        "type": "text",
+                        "label": "Message",
+                        "required": true
+                    },
+                    {
+                        "name": "role",
+                        "type": "hidden",
+                        "label": "Role"
+                    },
+                    {
+                        "name": "assistantId",
+                        "type": "select",
+                        "label": "Assistant",
+                        "required": true
+                    },
+                    {
+                        "name": "threadId",
+                        "type": "text",
+                        "label": "Thread ID"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model"
+                    },
+                    {
+                        "name": "fileIds",
+                        "type": "array",
+                        "label": "File IDs",
+                        "validate": {
+                            "maxItems": 10
+                        },
+                        "spec": {
+                            "type": "select",
+                            "label": "File ID",
+                            "options": [],
+                            "name": "value",
+                            "dynamic": true
+                        }
+                    },
+                    {
+                        "name": "tools",
+                        "type": "select",
+                        "label": "Tools",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "retrieval",
+                                "code_interpreter"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "type": "text",
+                        "label": "Instructions"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 11,
+            "module": "openai-gpt-3:sendMessageToAssistant",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "message": "{{3.text}}{{5.choices[].message.content}}",
+                "role": "user",
+                "assistantId": "asst_LnnjS6e0r1LxzXf5oPj7e5XT"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1500,
+                    "y": 0,
+                    "name": "1 Liner 🥇"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "assistantId": {
+                            "mode": "chose",
+                            "label": "One liner Agent 1️⃣ (gpt-4-turbo)"
+                        },
+                        "model": {
+                            "mode": "chose"
+                        },
+                        "fileIds": {
+                            "mode": "chose"
+                        },
+                        "tools": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "message",
+                        "type": "text",
+                        "label": "Message",
+                        "required": true
+                    },
+                    {
+                        "name": "role",
+                        "type": "hidden",
+                        "label": "Role"
+                    },
+                    {
+                        "name": "assistantId",
+                        "type": "select",
+                        "label": "Assistant",
+                        "required": true
+                    },
+                    {
+                        "name": "threadId",
+                        "type": "text",
+                        "label": "Thread ID"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model"
+                    },
+                    {
+                        "name": "fileIds",
+                        "type": "array",
+                        "label": "File IDs",
+                        "validate": {
+                            "maxItems": 10
+                        },
+                        "spec": {
+                            "type": "select",
+                            "label": "File ID",
+                            "options": [],
+                            "name": "value",
+                            "dynamic": true
+                        }
+                    },
+                    {
+                        "name": "tools",
+                        "type": "select",
+                        "label": "Tools",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "retrieval",
+                                "code_interpreter"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "type": "text",
+                        "label": "Instructions"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "module": "openai-gpt-3:sendMessageToAssistant",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "message": "{{3.text}}",
+                "role": "user",
+                "assistantId": "asst_brVmNnLyiFfUSGDQCY3m2oav"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1800,
+                    "y": 0,
+                    "name": "Overview 😊"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "assistantId": {
+                            "mode": "chose",
+                            "label": "Overview 💎  (gpt-4-turbo)"
+                        },
+                        "model": {
+                            "mode": "chose"
+                        },
+                        "fileIds": {
+                            "mode": "chose"
+                        },
+                        "tools": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "message",
+                        "type": "text",
+                        "label": "Message",
+                        "required": true
+                    },
+                    {
+                        "name": "role",
+                        "type": "hidden",
+                        "label": "Role"
+                    },
+                    {
+                        "name": "assistantId",
+                        "type": "select",
+                        "label": "Assistant",
+                        "required": true
+                    },
+                    {
+                        "name": "threadId",
+                        "type": "text",
+                        "label": "Thread ID"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model"
+                    },
+                    {
+                        "name": "fileIds",
+                        "type": "array",
+                        "label": "File IDs",
+                        "validate": {
+                            "maxItems": 10
+                        },
+                        "spec": {
+                            "type": "select",
+                            "label": "File ID",
+                            "options": [],
+                            "name": "value",
+                            "dynamic": true
+                        }
+                    },
+                    {
+                        "name": "tools",
+                        "type": "select",
+                        "label": "Tools",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "retrieval",
+                                "code_interpreter"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "type": "text",
+                        "label": "Instructions"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "airtable:ActionCreateRecord",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 1532818
+            },
+            "mapper": {
+                "base": "appCBl841oYre2bry",
+                "typecast": false,
+                "useColumnId": false,
+                "table": "tblrx7AenCtqdxv9H",
+                "record": {
+                    "fld2I0OOUQULnguzQ": "{{11.result}}",
+                    "fldsLxxW4b7LQwlaD": "{{9.result}}",
+                    "fldwzqrAzkzmrGOP3": "{{6.result}}",
+                    "fldn9kM7Y0m743kBe": "{{5.choices[].message.content}}",
+                    "fldlYpcVUJ0LdaO9D": "{{1.url}}",
+                    "fldjsN8md75aoBn8t": {}
+                }
+            },
+            "metadata": {
+                "designer": {
+                    "x": 2100,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Airtable OAuth connection (User ID: usrWHZndszJIS5AWQ)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "base": {
+                            "label": "Shorts Database"
+                        },
+                        "typecast": {
+                            "mode": "chose"
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        },
+                        "table": {
+                            "nested": [
+                                {
+                                    "name": "record",
+                                    "spec": [
+                                        {
+                                            "name": "fld2I0OOUQULnguzQ",
+                                            "label": "One liner 🥇",
+                                            "type": "text",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fldsLxxW4b7LQwlaD",
+                                            "label": "Overview 💎",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "fldwzqrAzkzmrGOP3",
+                                            "label": "Virality Score 🚀",
+                                            "type": "text",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fldn9kM7Y0m743kBe",
+                                            "label": "Additional Data 📊",
+                                            "type": "text",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fldlYpcVUJ0LdaO9D",
+                                            "label": "URL 🔗",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "fldjQyo19ODDy3GlJ",
+                                            "label": "Create Script? 👻",
+                                            "type": "select",
+                                            "mode": "edit",
+                                            "dynamic": true,
+                                            "validate": false,
+                                            "options": [
+                                                {
+                                                    "label": "Create 🔮",
+                                                    "value": "Create 🔮"
+                                                },
+                                                {
+                                                    "label": "Deny ❌",
+                                                    "value": "Deny ❌"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "fldjsN8md75aoBn8t",
+                                            "label": "Assignee",
+                                            "type": "collection",
+                                            "spec": [
+                                                {
+                                                    "name": "id",
+                                                    "type": "text",
+                                                    "label": "ID",
+                                                    "help": "Unique user id"
+                                                },
+                                                {
+                                                    "name": "email",
+                                                    "type": "email",
+                                                    "label": "Email",
+                                                    "help": "User's email address"
+                                                },
+                                                {
+                                                    "name": "name",
+                                                    "type": "text",
+                                                    "label": "Name",
+                                                    "help": "User's display name (may be empty if the user hasn't created an account)"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "fldFwtY7TVfJJPxtj",
+                                            "label": "Status",
+                                            "type": "select",
+                                            "mode": "edit",
+                                            "dynamic": true,
+                                            "validate": false,
+                                            "options": [
+                                                {
+                                                    "label": "Todo",
+                                                    "value": "Todo"
+                                                },
+                                                {
+                                                    "label": "In progress",
+                                                    "value": "In progress"
+                                                },
+                                                {
+                                                    "label": "Done",
+                                                    "value": "Done"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Record"
+                                }
+                            ],
+                            "label": "Table 1"
+                        },
+                        "record": {
+                            "nested": {
+                                "fldjQyo19ODDy3GlJ": {
+                                    "mode": "edit"
+                                },
+                                "fldFwtY7TVfJJPxtj": {
+                                    "mode": "edit"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "typecast",
+                        "type": "boolean",
+                        "label": "Smart links",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "record",
+                        "type": "collection",
+                        "label": "Record",
+                        "spec": [
+                            {
+                                "name": "fld2I0OOUQULnguzQ",
+                                "type": "text",
+                                "label": "One liner 🥇"
+                            },
+                            {
+                                "name": "fldsLxxW4b7LQwlaD",
+                                "type": "text",
+                                "label": "Overview 💎"
+                            },
+                            {
+                                "name": "fldwzqrAzkzmrGOP3",
+                                "type": "text",
+                                "label": "Virality Score 🚀"
+                            },
+                            {
+                                "name": "fldn9kM7Y0m743kBe",
+                                "type": "text",
+                                "label": "Additional Data 📊"
+                            },
+                            {
+                                "name": "fldlYpcVUJ0LdaO9D",
+                                "type": "text",
+                                "label": "URL 🔗"
+                            },
+                            {
+                                "name": "fldjQyo19ODDy3GlJ",
+                                "type": "select",
+                                "label": "Create Script? 👻",
+                                "mode": "edit"
+                            },
+                            {
+                                "name": "fldjsN8md75aoBn8t",
+                                "type": "collection",
+                                "label": "Assignee",
+                                "spec": [
+                                    {
+                                        "name": "id",
+                                        "type": "text",
+                                        "label": "ID"
+                                    },
+                                    {
+                                        "name": "email",
+                                        "type": "email",
+                                        "label": "Email"
+                                    },
+                                    {
+                                        "name": "name",
+                                        "type": "text",
+                                        "label": "Name"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "fldFwtY7TVfJJPxtj",
+                                "type": "select",
+                                "label": "Status",
+                                "mode": "edit"
+                            }
+                        ]
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "One liner 🥇",
+                        "label": "One liner 🥇",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Overview 💎",
+                        "label": "Overview 💎",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Virality Score 🚀",
+                        "label": "Virality Score 🚀",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Additional Data 📊",
+                        "label": "Additional Data 📊",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "URL 🔗",
+                        "label": "URL 🔗",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Create Script? 👻",
+                        "label": "Create Script? 👻",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Script 📈",
+                        "label": "Script 📈",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Assignee",
+                        "label": "Assignee",
+                        "type": "collection",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "email",
+                                "type": "email",
+                                "label": "Email"
+                            },
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Status",
+                        "label": "Status",
+                        "type": "text"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

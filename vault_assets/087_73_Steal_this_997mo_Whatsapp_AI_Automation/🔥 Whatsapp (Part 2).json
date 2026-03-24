@@ -1,0 +1,1489 @@
+{
+    "name": "🔥 Whatsapp (Part 2)",
+    "flow": [
+        {
+            "id": 3,
+            "module": "http:ActionSendData",
+            "version": 3,
+            "parameters": {
+                "handleErrors": true,
+                "useNewZLibDeCompress": true
+            },
+            "mapper": {
+                "url": "https://YOUR_DSN/api/v1/chats/ENTER_ID/messages?limit=250",
+                "serializeUrl": false,
+                "method": "get",
+                "headers": [
+                    {
+                        "name": "X-API-KEY",
+                        "value": "XXXXXXXXXXXXXX"
+                    },
+                    {
+                        "name": "accept",
+                        "value": "application/json"
+                    }
+                ],
+                "qs": [],
+                "bodyType": "",
+                "parseResponse": true,
+                "authUser": "",
+                "authPass": "",
+                "timeout": "",
+                "shareCookies": false,
+                "ca": "",
+                "rejectUnauthorized": true,
+                "followRedirect": true,
+                "useQuerystring": false,
+                "gzip": true,
+                "useMtls": false,
+                "followAllRedirects": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0,
+                    "name": "🚀 Whatsapp Summariser"
+                },
+                "restore": {
+                    "expect": {
+                        "method": {
+                            "mode": "chose",
+                            "label": "GET"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null,
+                                null
+                            ]
+                        },
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "bodyType": {
+                            "label": "Empty"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    },
+                    {
+                        "name": "useNewZLibDeCompress",
+                        "type": "hidden"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "get",
+                                "head",
+                                "post",
+                                "put",
+                                "patch",
+                                "delete",
+                                "options"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "type": "array",
+                        "label": "Headers",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "label": "Name",
+                                "type": "text",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "label": "Value",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "qs",
+                        "type": "array",
+                        "label": "Query String",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "label": "Name",
+                                "type": "text",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "label": "Value",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "bodyType",
+                        "type": "select",
+                        "label": "Body type",
+                        "validate": {
+                            "enum": [
+                                "raw",
+                                "x_www_form_urlencoded",
+                                "multipart_form_data"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "parseResponse",
+                        "type": "boolean",
+                        "label": "Parse response",
+                        "required": true
+                    },
+                    {
+                        "name": "authUser",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "authPass",
+                        "type": "password",
+                        "label": "Password"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "uinteger",
+                        "label": "Timeout",
+                        "validate": {
+                            "max": 300,
+                            "min": 1
+                        }
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    },
+                    {
+                        "name": "ca",
+                        "type": "cert",
+                        "label": "Self-signed certificate"
+                    },
+                    {
+                        "name": "rejectUnauthorized",
+                        "type": "boolean",
+                        "label": "Reject connections that are using unverified (self-signed) certificates",
+                        "required": true
+                    },
+                    {
+                        "name": "followRedirect",
+                        "type": "boolean",
+                        "label": "Follow redirect",
+                        "required": true
+                    },
+                    {
+                        "name": "useQuerystring",
+                        "type": "boolean",
+                        "label": "Disable serialization of multiple same query string keys as arrays",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    },
+                    {
+                        "name": "useMtls",
+                        "type": "boolean",
+                        "label": "Use Mutual TLS",
+                        "required": true
+                    },
+                    {
+                        "name": "followAllRedirects",
+                        "type": "boolean",
+                        "label": "Follow all redirect",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "airtable:ActionSearchRecords",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 1532818
+            },
+            "mapper": {
+                "base": "app5H59tjMjCssBMd",
+                "useColumnId": false,
+                "table": "tblQ2sdXkjq0baw0J",
+                "formula": "{Chat ID} = \"0525tkqrX5W3_n0n7xin5Q\"",
+                "maxRecords": "1",
+                "fields": [
+                    "Person or Group",
+                    "Chat ID",
+                    "RecordID",
+                    "Chat History",
+                    "Chat Summary Report",
+                    "Next Run Date",
+                    "Last Modified",
+                    "Run Now"
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Airtable OAuth connection (User ID: usrWHZndszJIS5AWQ)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "base": {
+                            "mode": "chose",
+                            "label": "🔥 Whatsapp Summariser"
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        },
+                        "table": {
+                            "mode": "chose",
+                            "label": "Whatsapp Chats"
+                        },
+                        "sort": {
+                            "mode": "chose"
+                        },
+                        "view": {
+                            "mode": "chose"
+                        },
+                        "fields": {
+                            "mode": "chose",
+                            "label": [
+                                "Person or Group",
+                                "Chat ID",
+                                "RecordID",
+                                "Chat History",
+                                "Chat Summary Report",
+                                "Next Run Date",
+                                "Last Modified",
+                                "Run Now"
+                            ]
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "formula",
+                        "type": "text",
+                        "label": "Formula"
+                    },
+                    {
+                        "name": "maxRecords",
+                        "type": "integer",
+                        "label": "Limit"
+                    },
+                    {
+                        "name": "sort",
+                        "type": "array",
+                        "label": "Sort",
+                        "spec": [
+                            {
+                                "name": "field",
+                                "type": "select",
+                                "label": "Field",
+                                "options": [],
+                                "dynamic": true
+                            },
+                            {
+                                "name": "direction",
+                                "type": "select",
+                                "label": "Direction",
+                                "options": [
+                                    {
+                                        "label": "Descending",
+                                        "value": "desc"
+                                    },
+                                    {
+                                        "label": "Ascending",
+                                        "value": "asc"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "view",
+                        "type": "select",
+                        "label": "View"
+                    },
+                    {
+                        "name": "fields",
+                        "type": "select",
+                        "label": "Output Fields",
+                        "multiple": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "__IMTLENGTH__",
+                        "label": "Total number of bundles",
+                        "type": "uinteger"
+                    },
+                    {
+                        "name": "__IMTINDEX__",
+                        "label": "Bundle order position",
+                        "type": "uinteger"
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "Person or Group",
+                        "label": "Person or Group",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Chat ID",
+                        "label": "Chat ID",
+                        "type": "text"
+                    },
+                    {
+                        "name": "RecordID",
+                        "label": "RecordID",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Chat History",
+                        "label": "Chat History",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Chat Summary Report",
+                        "label": "Chat Summary Report",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "Next Run Date",
+                        "label": "Next Run Date",
+                        "type": "date",
+                        "time": false
+                    },
+                    {
+                        "name": "Last Modified",
+                        "label": "Last Modified",
+                        "type": "date",
+                        "time": true
+                    },
+                    {
+                        "name": "Run Now",
+                        "label": "Run Now",
+                        "type": "collection",
+                        "spec": [
+                            {
+                                "name": "label",
+                                "type": "text",
+                                "label": "Label"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "util:SetVariables",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "variables": [
+                    {
+                        "name": "items_array",
+                        "value": "{{flatten(map(3.data.items; \"text\"; \"is_event\"; 0))}}"
+                    }
+                ],
+                "scope": "roundtrip"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0,
+                    "name": "map + flatten"
+                },
+                "restore": {
+                    "expect": {
+                        "variables": {
+                            "items": [
+                                null
+                            ]
+                        },
+                        "scope": {
+                            "label": "One cycle"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "variables",
+                        "type": "array",
+                        "label": "Variables",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "label": "Variable name",
+                                "type": "text",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "label": "Variable value",
+                                "type": "any"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "items_array",
+                        "label": "items_array",
+                        "type": "any"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "module": "util:TextAggregator",
+            "version": 1,
+            "parameters": {
+                "feeder": 4,
+                "rowSeparator": ""
+            },
+            "mapper": {
+                "value": "{{4.items_array}},"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "extra": {
+                        "feeder": {
+                            "label": "map + flatten - Set multiple variables [6]"
+                        }
+                    },
+                    "parameters": {
+                        "rowSeparator": {
+                            "label": "Empty"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "rowSeparator",
+                        "type": "select",
+                        "label": "Row separator",
+                        "validate": {
+                            "enum": [
+                                "\n",
+                                "\t",
+                                "other"
+                            ]
+                        }
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "value",
+                        "type": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 14,
+            "module": "openai-gpt-3:CreateCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "select": "chat",
+                "temperature": "1",
+                "top_p": "1",
+                "n_completions": "1",
+                "model": "o3-mini",
+                "max_tokens": "0",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "{{5.text}}"
+                    },
+                    {
+                        "role": "assistant",
+                        "content": "Instructions: You will receive a transcript of a WhatsApp conversation. Your task is to analyze, summarize, and present the content in an engaging, visually appealing format using HTML . Follow these steps carefully:Step 1: Overview Summary (Key Takeaways - 4 Max with Emojis)Provide a concise summary of the most important themes or outcomes from the conversation. Represent each takeaway concisely using emojis and brief descriptions. Ensure they are clear, actionable, and relevant to the discussion.Format:<h2 style=\"font-family: Avenir, sans-serif; color: #333;\">Overview Summary</h2><ul style=\"font-family: Avenir, sans-serif; line-height: 1.6;\"> <li>🌟 [Key Takeaway 1]</li> <li>🔑 [Key Takeaway 2]</li> <li>💡 [Key Takeaway 3]</li> <li>⚡ [Key Takeaway 4]</li></ul>Step 2: General Updates/Points of InterestSummarize any general updates, announcements, or points of interest that don’t fit into specific topics but are still worth noting. Use bullet points and include links if mentioned in the conversation (e.g., websites, articles, videos). \n\nInclude the name of the whatsapp chat, which is: {{2.`Person or Group`}}\n\nAdd as many updates as are relevant to the conversation.Format Example:<h2 style=\"font-family: Avenir, sans-serif; color: #333;\">📢 General Updates/Points of Interest</h2><ul style=\"font-family: Avenir, sans-serif; line-height: 1.6;\"> <li><strong>Update 1:</strong> Brief description (<a href=\"#\" style=\"color: #007BFF; text-decoration: none;\">Link</a>).</li> <li><strong>Update 2:</strong> Brief description (<a href=\"#\" style=\"color: #007BFF; text-decoration: none;\">Link</a>).</li> <li><strong>Point of Interest:</strong> Something interesting shared by someone (<a href=\"#\" style=\"color: #007BFF; text-decoration: none;\">Link</a>).</li></ul>Step 3: Make It BeautifulUse Avenir font throughout the output. Ensure the design is clean and professional with appropriate spacing, colors, and formatting. Links should be styled in blue (#007BFF) with no underline for a modern look. Keep paragraphs short and focused.Example HTML for output:<!DOCTYPE html><html lang=\"en\"><head>  <meta charset=\"UTF-8\">  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">  <title>WhatsApp Conversation Summary</title>  <style>    body {      font-family: Avenir, 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;      background-color: #f9fcff;      color: #333;      padding: 30px;      line-height: 1.6;      max-width: 900px;      margin: 0 auto;    }        .container {      background-color: white;      border-radius: 15px;      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);      padding: 40px;      margin-top: 20px;    }        header {      text-align: center;      margin-bottom: 30px;      padding-bottom: 20px;      border-bottom: 1px solid #eaeef3;    }        header h1 {      color: #205375;      font-weight: 700;      font-size: 32px;      margin-bottom: 10px;    }        header p {      color: #6c757d;      font-size: 18px;    }        .date-container {      text-align: center;      margin-bottom: 30px;    }        .date-badge {      display: inline-block;      background-color: #f0f7ff;      color: #3a7bd5;      padding: 8px 20px;      border-radius: 50px;      font-size: 16px;      font-weight: 600;    }        h2 {      color: #205375;      margin: 35px 0 15px 0;      font-weight: 600;      font-size: 24px;      display: flex;      align-items: center;    }        h2::after {      content: \"\";      flex-grow: 1;      height: 1px;      background-color: #e9ecef;      margin-left: 15px;    }        ul {      list-style-type: none;      padding-left: 5px;    }        ul li {      position: relative;      padding: 12px 0 12px 35px;      margin-bottom: 5px;    }        ul li::before {      content: \"\";      position: absolute;      left: 0;      top: 16px;      height: 12px;      width: 12px;      border-radius: 50%;      background-color: #3a7bd5;      opacity: 0.7;    }        .summary-list li {      background-color: #f8f9fa;      border-radius: 8px;      padding: 15px 15px 15px 50px;      margin-bottom: 15px;      transition: transform 0.2s, box-shadow 0.2s;    }        .summary-list li:hover {      transform: translateY(-3px);      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);    }        .summary-list li::before {      content: attr(data-emoji);      position: absolute;      left: 15px;      top: 50%;      transform: translateY(-50%);      background: none;      height: auto;      width: auto;      font-size: 24px;      opacity: 1;    }        .updates-list li {      border-bottom: 1px solid #f0f0f0;      padding-bottom: 15px;    }        .updates-list li:last-child {      border-bottom: none;    }        a {      color: #007BFF;      text-decoration: none;      transition: color 0.2s;      font-weight: 500;    }        a:hover {      color: #0056b3;      text-decoration: underline;    }        .highlight {      background-color: #ffefd1;      padding: 0 3px;      border-radius: 3px;    }        strong {      color: #205375;      font-weight: 600;    }        footer {      text-align: center;      margin-top: 50px;      color: #6c757d;      font-size: 14px;    }  </style></head><body>  <div class=\"container\">    <!-- Header with Group Chat Name -->    <header>      <h1>[Group Chat Name]</h1>      <p>A concise overview of your group conversation</p>    </header>        <div class=\"date-container\">      <div class=\"date-badge\">📅 February 20, 2025</div>    </div>        <!-- Overview Summary -->    <h2>Overview Summary</h2>    <ul class=\"summary-list\">      <li data-emoji=\"🌟\">Finalized plans for Saturday dinner at 7 PM at La Pasta House.</li>      <li data-emoji=\"🔑\">Agreed on splitting costs equally among 8 participants for all group activities.</li>      <li data-emoji=\"💡\">Selected Italian restaurant after comparing three venues (<a href=\"#\">Menu Link</a>).</li>      <li data-emoji=\"⚡\">Resolved transportation with 2 carpools; drivers confirmed.</li>    </ul>        <!-- General Updates/Points of Interest -->    <h2>📢 General Updates/Points of Interest</h2>    <ul class=\"updates-list\">      <li><strong>Event Reminder:</strong> Team planning meeting scheduled for tomorrow at 10 AM (<a href=\"#\">Zoom Link</a>). Please prepare your quarterly reports.</li>      <li><strong>Interesting Article:</strong> Sarah shared research on successful team dynamics that might help with our project (<a href=\"#\">Article Link</a>).</li>      <li><strong>Upcoming Deadline:</strong> All expense reports for the quarter must be submitted by Friday, February 22nd.</li>      <li><strong>Fun Activity:</strong> John proposed a team-building escape room challenge for next month. Current vote count: 7 yes, 2 undecided.</li>      <li><strong>New Tool:</strong> Marketing team recommended we try Notion for project management (<a href=\"#\">Notion Template</a>).</li>    </ul>        <footer>      Generated on February 20, 2025 • WhatsApp Conversation Summary    </footer>  </div></body></html>"
+                    }
+                ],
+                "response_format": "text"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 0,
+                    "name": "📊 Report Generator"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "select": {
+                            "label": "Create a Chat Completion (GPT and o1 models)"
+                        },
+                        "logit_bias": {
+                            "mode": "chose"
+                        },
+                        "stop": {
+                            "mode": "chose"
+                        },
+                        "additionalParameters": {
+                            "mode": "chose"
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "o3-mini (system)"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                },
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "Assistant"
+                                    }
+                                }
+                            ]
+                        },
+                        "response_format": {
+                            "mode": "chose",
+                            "label": "Text"
+                        },
+                        "reasoning_effort": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Select Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "chat",
+                                "prompt"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "n_completions",
+                        "type": "number",
+                        "label": "Number"
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "logit_bias",
+                        "type": "array",
+                        "label": "Token Probability",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "token",
+                                    "type": "text",
+                                    "label": "Token ID",
+                                    "required": true
+                                },
+                                {
+                                    "name": "probability",
+                                    "type": "number",
+                                    "label": "Probability",
+                                    "required": true,
+                                    "validate": {
+                                        "max": 100,
+                                        "min": -100
+                                    }
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Token Probability",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "seed",
+                        "type": "integer",
+                        "label": "Seed"
+                    },
+                    {
+                        "name": "stop",
+                        "type": "array",
+                        "label": "Stop Sequences",
+                        "validate": {
+                            "maxItems": 4
+                        },
+                        "spec": {
+                            "type": "text",
+                            "label": "Stop Sequence",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "additionalParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Parameter Name",
+                                    "required": true
+                                },
+                                {
+                                    "name": "type",
+                                    "type": "select",
+                                    "label": "Input Type",
+                                    "options": [
+                                        {
+                                            "label": "Text",
+                                            "value": "text",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "text",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Number",
+                                            "value": "number",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "number",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Boolean",
+                                            "value": "boolean",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "boolean",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "date",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "date",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Any",
+                                            "value": "any",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "any",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Input Parameter",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "uinteger",
+                        "label": "Max Completion Tokens"
+                    },
+                    {
+                        "name": "messages",
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true,
+                        "spec": {
+                            "label": "Message",
+                            "type": "collection",
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "required": true,
+                                    "options": {
+                                        "store": [
+                                            {
+                                                "label": "User",
+                                                "value": "user",
+                                                "nested": [
+                                                    {
+                                                        "help": "Text content of the message on behalf of the selected __Role__.",
+                                                        "name": "content",
+                                                        "type": "text",
+                                                        "label": "Text Content"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "Assistant",
+                                                "value": "assistant",
+                                                "nested": [
+                                                    {
+                                                        "help": "Text content of the message on behalf of the selected __Role__.",
+                                                        "name": "content",
+                                                        "type": "text",
+                                                        "label": "Text Content"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "Developer / System",
+                                                "value": "system",
+                                                "nested": [
+                                                    {
+                                                        "help": "Text content of the message on behalf of the selected __Role__.",
+                                                        "name": "content",
+                                                        "type": "text",
+                                                        "label": "Text Content"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "response_format",
+                        "type": "select",
+                        "label": "Response Format",
+                        "validate": {
+                            "enum": [
+                                "text",
+                                "json_object"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "reasoning_effort",
+                        "type": "select",
+                        "label": "Reasoning Effort",
+                        "validate": {
+                            "enum": [
+                                "low",
+                                "medium",
+                                "high"
+                            ]
+                        }
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "result",
+                        "type": "any",
+                        "label": "Result"
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "object",
+                        "type": "text",
+                        "label": "Object"
+                    },
+                    {
+                        "name": "created",
+                        "type": "date",
+                        "label": "Created"
+                    },
+                    {
+                        "name": "model",
+                        "type": "text",
+                        "label": "Model"
+                    },
+                    {
+                        "name": "choices",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "text",
+                                    "type": "text",
+                                    "label": "Text"
+                                },
+                                {
+                                    "name": "index",
+                                    "type": "number",
+                                    "label": "Index"
+                                },
+                                {
+                                    "name": "logprobs",
+                                    "type": "text",
+                                    "label": "Log Probs"
+                                },
+                                {
+                                    "name": "finish_reason",
+                                    "type": "text",
+                                    "label": "Finish Reason"
+                                },
+                                {
+                                    "name": "message",
+                                    "spec": [
+                                        {
+                                            "name": "role",
+                                            "type": "text",
+                                            "label": "Role"
+                                        },
+                                        {
+                                            "name": "content",
+                                            "type": "text",
+                                            "label": "Content"
+                                        },
+                                        {
+                                            "name": "refusal",
+                                            "type": "text",
+                                            "label": "Refusal"
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Message"
+                                }
+                            ],
+                            "type": "collection"
+                        },
+                        "type": "array",
+                        "label": "Choices"
+                    },
+                    {
+                        "name": "usage",
+                        "spec": [
+                            {
+                                "name": "prompt_tokens",
+                                "type": "number",
+                                "label": "Prompt Tokens"
+                            },
+                            {
+                                "name": "completion_tokens",
+                                "type": "text",
+                                "label": "Completion Tokens"
+                            },
+                            {
+                                "name": "total_tokens",
+                                "type": "number",
+                                "label": "Total Tokens"
+                            },
+                            {
+                                "name": "prompt_tokens_details",
+                                "spec": [
+                                    {
+                                        "name": "cached_tokens",
+                                        "type": "uinteger",
+                                        "label": "Cached Tokens"
+                                    },
+                                    {
+                                        "name": "text_tokens",
+                                        "type": "uinteger",
+                                        "label": "Text Tokens"
+                                    },
+                                    {
+                                        "name": "image_tokens",
+                                        "type": "uinteger",
+                                        "label": "Image Tokens"
+                                    },
+                                    {
+                                        "name": "audio_tokens",
+                                        "type": "uinteger",
+                                        "label": "Audio Tokens"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Prompt Tokens Details"
+                            },
+                            {
+                                "name": "completion_tokens_details",
+                                "spec": [
+                                    {
+                                        "name": "reasoning_tokens",
+                                        "type": "uinteger",
+                                        "label": "Reasoning Tokens"
+                                    },
+                                    {
+                                        "name": "text_tokens",
+                                        "type": "uinteger",
+                                        "label": "Text Tokens"
+                                    },
+                                    {
+                                        "name": "audio_tokens",
+                                        "type": "uinteger",
+                                        "label": "Audio Tokens"
+                                    },
+                                    {
+                                        "name": "accepted_prediction_tokens",
+                                        "type": "uinteger",
+                                        "label": "Accepted Prediction Tokens"
+                                    },
+                                    {
+                                        "name": "rejected_prediction_tokens",
+                                        "type": "uinteger",
+                                        "label": "Rejected Prediction Tokens"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Completion Tokens Details"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Usage"
+                    },
+                    {
+                        "name": "service_tier",
+                        "type": "text",
+                        "label": "Service Tier"
+                    },
+                    {
+                        "name": "system_fingerprint",
+                        "type": "text",
+                        "label": "System Fingerprint"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 13,
+            "module": "pdf-co:HTMLtoPDF",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 3014965
+            },
+            "mapper": {
+                "convert": {
+                    "convertType": "fromHtml",
+                    "html": "{{14.result}}"
+                },
+                "name": "{{2.`Person or Group`}}{{2.createdTime}}",
+                "orientation": "portrait",
+                "paperSize": "letter",
+                "printBackground": true,
+                "doNotWaitFullLoad": false,
+                "async": 15000,
+                "expiration": "60",
+                "export": {
+                    "exportType": "downloadFile"
+                }
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1500,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My PDF.co connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "pdf-co"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "convert": {
+                            "nested": {
+                                "convertType": {
+                                    "label": "HTML to PDF"
+                                }
+                            }
+                        },
+                        "orientation": {
+                            "label": "Portrait"
+                        },
+                        "paperSize": {
+                            "label": "Letter"
+                        },
+                        "printBackground": {
+                            "mode": "chose"
+                        },
+                        "doNotWaitFullLoad": {
+                            "mode": "chose"
+                        },
+                        "async": {
+                            "mode": "chose",
+                            "label": "Async"
+                        },
+                        "export": {
+                            "nested": {
+                                "exportType": {
+                                    "label": "Download a File"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:pdf-co",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "convert",
+                        "type": "collection",
+                        "label": "Convert Options",
+                        "required": true,
+                        "spec": [
+                            {
+                                "name": "convertType",
+                                "type": "select",
+                                "label": "Convert Type",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        "fromHtml",
+                                        "fromHtmlTemplate",
+                                        "fromWebsite"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "html",
+                                "type": "text",
+                                "label": "Input HTML Code",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Output File Name"
+                    },
+                    {
+                        "name": "orientation",
+                        "type": "select",
+                        "label": "Orientation",
+                        "validate": {
+                            "enum": [
+                                "portrait",
+                                "landscape"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "paperSize",
+                        "type": "select",
+                        "label": "Paper Size ",
+                        "validate": {
+                            "enum": [
+                                "a0",
+                                "a1",
+                                "a2",
+                                "a3",
+                                "a4",
+                                "a5",
+                                "a6",
+                                "legal",
+                                "letter",
+                                "tabloid",
+                                "custom"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "printBackground",
+                        "type": "boolean",
+                        "label": "Render Page Background"
+                    },
+                    {
+                        "name": "doNotWaitFullLoad",
+                        "type": "boolean",
+                        "label": "Do not wait for full load"
+                    },
+                    {
+                        "name": "margins",
+                        "type": "text",
+                        "label": "Margins"
+                    },
+                    {
+                        "name": "async",
+                        "type": "select",
+                        "label": "Execution Mode",
+                        "validate": {
+                            "enum": [
+                                false,
+                                15000,
+                                "asyncCheckLater"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "profiles",
+                        "type": "text",
+                        "label": "Profiles"
+                    },
+                    {
+                        "name": "expiration",
+                        "type": "number",
+                        "label": "Output Links Expiration"
+                    },
+                    {
+                        "name": "export",
+                        "type": "collection",
+                        "label": "Export Options",
+                        "required": true,
+                        "spec": [
+                            {
+                                "name": "exportType",
+                                "type": "select",
+                                "label": "Export Type",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        "downloadFile",
+                                        "inline"
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 15,
+            "module": "google-email:ActionSendEmail",
+            "version": 2,
+            "parameters": {
+                "account": 5842202
+            },
+            "mapper": {
+                "from": "",
+                "to": [
+                    "jack@aiautomationswithjack.com"
+                ],
+                "subject": "{{2.`Person or Group`}} ({{2.createdTime}})",
+                "html": "<!DOCTYPE html>\n<html>\n<head>\n  <style>\n    body {\n      font-family: Avenir, 'Segoe UI', Roboto, sans-serif;\n      color: #333;\n      line-height: 1.6;\n      max-width: 600px;\n      margin: 0 auto;\n      padding: 25px;\n      background-color: #fafafa;\n    }\n    .container {\n      background-color: white;\n      padding: 30px;\n      border-radius: 8px;\n      box-shadow: 0 2px 10px rgba(0,0,0,0.05);\n    }\n    .header {\n      margin-bottom: 25px;\n      padding-bottom: 15px;\n      border-bottom: 1px solid #eee;\n    }\n    h1 {\n      color: #25D366;\n      font-size: 22px;\n      margin-top: 0;\n      margin-bottom: 5px;\n    }\n    .highlight {\n      font-weight: 600;\n      color: #25D366;\n    }\n    .footer {\n      margin-top: 30px;\n      padding-top: 15px;\n      border-top: 1px solid #eee;\n      font-size: 14px;\n      color: #777;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"header\">\n      <img src=\"/api/placeholder/140/35\" alt=\"WhatsApp Summary\" />\n    </div>\n\n    <h1>Your WhatsApp Summary</h1>\n    \n    <p>Hey there,</p>\n    \n    <p>Here's your attached summary for the <span class=\"highlight\">{{2.`Person or Group`}}</span>. I've organized all the important information from your recent conversation into an easy-to-read format.</p>\n    \n    <p>The summary includes key takeaways, action items, and important links that were shared. Just open the attachment to view everything.</p>\n    \n    <p>Hope you find this helpful!</p>\n    \n    <p>Best regards,<br>\n    WhatsApp Summary Service</p>\n    \n    <div class=\"footer\">\n      <p>This is an automated message. Please do not reply directly to this email.</p>\n      <p>© 2025 WhatsApp Summary Service | <a href=\"#\" style=\"color: #3a7bd5; text-decoration: none;\">Privacy Policy</a> | <a href=\"#\" style=\"color: #3a7bd5; text-decoration: none;\">Unsubscribe</a></p>\n    </div>\n  </div>\n</body>\n</html>",
+                "attachments": [],
+                "cc": [],
+                "bcc": []
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1800,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "account": {
+                            "label": "My Google Restricted connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        },
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "from",
+                        "type": "text",
+                        "label": "From"
+                    },
+                    {
+                        "name": "to",
+                        "type": "array",
+                        "label": "To",
+                        "required": true,
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "html",
+                        "type": "text",
+                        "label": "Content"
+                    },
+                    {
+                        "name": "attachments",
+                        "type": "array",
+                        "label": "Attachments",
+                        "spec": [
+                            {
+                                "name": "fileName",
+                                "label": "File name",
+                                "type": "filename",
+                                "required": true,
+                                "semantic": "file:name"
+                            },
+                            {
+                                "name": "data",
+                                "label": "Data",
+                                "type": "buffer",
+                                "required": true,
+                                "semantic": "file:data"
+                            },
+                            {
+                                "name": "cid",
+                                "label": "Content-ID",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "cc",
+                        "type": "array",
+                        "label": "Copy recipient",
+                        "spec": {
+                            "type": "email",
+                            "label": "Email address",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "bcc",
+                        "type": "array",
+                        "label": "Blind copy recipient",
+                        "spec": {
+                            "type": "email",
+                            "label": "Email address",
+                            "name": "value"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

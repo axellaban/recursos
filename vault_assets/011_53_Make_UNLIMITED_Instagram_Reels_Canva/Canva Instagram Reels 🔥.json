@@ -1,0 +1,485 @@
+{
+    "name": "Canva Instagram Reels 🔥",
+    "flow": [
+        {
+            "id": 7,
+            "module": "util:FunctionIncrement",
+            "version": 1,
+            "parameters": {
+                "reset": "scenario"
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "reset": {
+                            "label": "Never"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "reset",
+                        "type": "select",
+                        "label": "Reset a value",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "run",
+                                "execution",
+                                "scenario"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1,
+            "module": "canva:exportDesign",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 3250399
+            },
+            "mapper": {
+                "format": {
+                    "type": "mp4",
+                    "pages": "{{7.i}}",
+                    "quality": "vertical_1080p"
+                },
+                "folderId": "/",
+                "design_id": "DAGTQTzKmBU"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "format": {
+                            "nested": {
+                                "type": {
+                                    "mode": "chose",
+                                    "label": "MP4"
+                                },
+                                "quality": {
+                                    "mode": "chose",
+                                    "label": "VERTICAL_1080P"
+                                }
+                            }
+                        },
+                        "folderId": {
+                            "mode": "chose",
+                            "path": [
+                                "/"
+                            ],
+                            "nested": [
+                                {
+                                    "name": "design_id",
+                                    "type": "select",
+                                    "label": "Design ID",
+                                    "options": "rpc://canva/1/listItems?type=design",
+                                    "required": true
+                                }
+                            ]
+                        },
+                        "design_id": {
+                            "mode": "chose",
+                            "label": "poet quotes (test)"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "canva"
+                            },
+                            "label": "My Canva connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:canva",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "folderId",
+                        "type": "folder",
+                        "label": "Folder ID",
+                        "required": true
+                    },
+                    {
+                        "name": "format",
+                        "spec": [
+                            {
+                                "name": "type",
+                                "type": "select",
+                                "label": "Type",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        "pdf",
+                                        "jpg",
+                                        "png",
+                                        "pptx",
+                                        "gif",
+                                        "mp4"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "quality",
+                                "type": "select",
+                                "label": "Quality",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        "horizontal_480p",
+                                        "horizontal_720p",
+                                        "horizontal_1080p",
+                                        "horizontal_4k",
+                                        "vertical_480p",
+                                        "vertical_720p",
+                                        "vertical_1080p",
+                                        "vertical_4k"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "pages",
+                                "type": "text",
+                                "label": "Pages"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Export Format",
+                        "required": true
+                    },
+                    {
+                        "name": "design_id",
+                        "type": "select",
+                        "label": "Design ID",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "module": "airtable:ActionSearchRecords",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 1532818
+            },
+            "mapper": {
+                "base": "app12izI128wnQS5e",
+                "table": "tblr5BeD3IymBSCit",
+                "fields": [
+                    "Number",
+                    "Caption",
+                    "Assignee",
+                    "Status"
+                ],
+                "formula": "{Number} = 10",
+                "maxRecords": "1",
+                "useColumnId": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "base": {
+                            "mode": "chose",
+                            "label": "Instagram Quotes 🔥"
+                        },
+                        "sort": {
+                            "mode": "chose"
+                        },
+                        "view": {
+                            "mode": "chose"
+                        },
+                        "table": {
+                            "mode": "chose",
+                            "label": "Table 1"
+                        },
+                        "fields": {
+                            "mode": "chose",
+                            "label": [
+                                "Number",
+                                "Caption",
+                                "Assignee",
+                                "Status"
+                            ]
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            },
+                            "label": "My Airtable OAuth connection (User ID: usrWHZndszJIS5AWQ)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "formula",
+                        "type": "text",
+                        "label": "Formula"
+                    },
+                    {
+                        "name": "maxRecords",
+                        "type": "integer",
+                        "label": "Limit"
+                    },
+                    {
+                        "name": "sort",
+                        "spec": [
+                            {
+                                "name": "field",
+                                "type": "select",
+                                "label": "Field",
+                                "dynamic": true,
+                                "options": []
+                            },
+                            {
+                                "name": "direction",
+                                "type": "select",
+                                "label": "Direction",
+                                "options": [
+                                    {
+                                        "label": "Descending",
+                                        "value": "desc"
+                                    },
+                                    {
+                                        "label": "Ascending",
+                                        "value": "asc"
+                                    }
+                                ]
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Sort"
+                    },
+                    {
+                        "name": "view",
+                        "type": "select",
+                        "label": "View"
+                    },
+                    {
+                        "name": "fields",
+                        "type": "select",
+                        "label": "Output Fields",
+                        "multiple": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "__IMTLENGTH__",
+                        "type": "uinteger",
+                        "label": "Total number of bundles"
+                    },
+                    {
+                        "name": "__IMTINDEX__",
+                        "type": "uinteger",
+                        "label": "Bundle order position"
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "Number",
+                        "type": "text",
+                        "label": "Number"
+                    },
+                    {
+                        "name": "Caption",
+                        "type": "text",
+                        "label": "Caption"
+                    },
+                    {
+                        "name": "Assignee",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "email",
+                                "type": "email",
+                                "label": "Email"
+                            },
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Assignee"
+                    },
+                    {
+                        "name": "Status",
+                        "type": "text",
+                        "label": "Status"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "instagram-business:CreateAReelPost",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1454622
+            },
+            "mapper": {
+                "caption": "{{6.Caption}}",
+                "accountId": "17841464088334301",
+                "video_url": "{{1.url}}",
+                "thumb_offset": "2",
+                "share_to_feed": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "accountId": {
+                            "mode": "chose",
+                            "label": "Mmapodast1 Connected Page (@mmapodast1)"
+                        },
+                        "share_to_feed": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "facebook"
+                            },
+                            "label": "My Facebook connection (Jack Roberts)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:facebook",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "accountId",
+                        "type": "select",
+                        "label": "Page",
+                        "required": true
+                    },
+                    {
+                        "name": "video_url",
+                        "type": "url",
+                        "label": "Video URL",
+                        "required": true
+                    },
+                    {
+                        "name": "caption",
+                        "type": "text",
+                        "label": "Caption"
+                    },
+                    {
+                        "name": "thumb_offset",
+                        "type": "number",
+                        "label": "Cover Frame"
+                    },
+                    {
+                        "name": "location_id",
+                        "type": "text",
+                        "label": "Location ID"
+                    },
+                    {
+                        "name": "share_to_feed",
+                        "type": "boolean",
+                        "label": "Share to Feed",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

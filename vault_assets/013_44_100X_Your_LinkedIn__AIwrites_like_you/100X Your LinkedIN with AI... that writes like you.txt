@@ -1,0 +1,1081 @@
+[00:00:00] this AI writes LinkedIn replies in your
+[00:00:02] turn of voice this 10p part automated AI
+[00:00:04] system will take a complete clone of
+[00:00:06] your voice fed in by your own LinkedIn
+[00:00:08] history and data we'll look at things
+[00:00:10] like vocab word choice grammatical
+[00:00:12] patterns all the way up to victive
+[00:00:13] languages and idiosyncrasies and then
+[00:00:15] what it will do is it will get the data
+[00:00:17] from any LinkedIn post it will take the
+[00:00:19] post it will take the comments and then
+[00:00:21] based on that and then based on your own
+[00:00:23] specific tone of voice will actually
+[00:00:25] spit up three potential suggestions that
+[00:00:27] you can use press the button hey presto
+[00:00:29] you've got a comment and I developed
+[00:00:31] this AI co-pilot chme extension I'll put
+[00:00:33] link Down Below in the description so
+[00:00:34] you can just add it and use it as you
+[00:00:35] want to so I'd start with if I may how
+[00:00:37] this automation works then I'll show you
+[00:00:38] exactly how you build this entire thing
+[00:00:40] step by step so the first thing I want
+[00:00:42] to do guys is basically get your turn of
+[00:00:44] voice so for this example I've got Alex
+[00:00:46] Homer's turn of voice and we break it
+[00:00:48] down based on 10 to 11 different
+[00:00:50] components that basically identify how
+[00:00:52] you speak so that's things like vocab
+[00:00:55] and word choice so for Alex he'll use
+[00:00:56] simple words like stuff make best neat
+[00:00:59] uh um specializ terms like commoditize
+[00:01:01] it goes on to explain things like
+[00:01:03] occasionally use clo lims from slang for
+[00:01:05] a casual to examples going to suck at it
+[00:01:08] and the went out give me more give me my
+[00:01:10] money Etc and we break this down in lots
+[00:01:12] of detail look at gratical panss we look
+[00:01:14] at things like punctuation we look at
+[00:01:16] sentence structure and length rhetorical
+[00:01:19] devices um paragraph structure and all
+[00:01:21] this by the way guys is basically from a
+[00:01:24] PDF it's like from a book that Alex
+[00:01:26] wrote that's how I got the data but for
+[00:01:28] you what we're going to do is download
+[00:01:29] all of your comment history on LinkedIn
+[00:01:31] and from that we're going to feed it to
+[00:01:33] this really cool system here okay and
+[00:01:36] then that will basically create a turn
+[00:01:39] of voice document for you and so to
+[00:01:41] start off we're going to run this
+[00:01:42] scenario I've set it up in such a way
+[00:01:44] that you can use it for as many
+[00:01:45] different people as you want to so if
+[00:01:46] you want to turn this into a business or
+[00:01:48] monetize it we're able to do that so
+[00:01:50] look how does this work basically I say
+[00:01:52] who is it well it is Jack then we come
+[00:01:54] with the text box we're going to double
+[00:01:55] click and post in LinkedIn information
+[00:01:57] like so awesome and then what will
+[00:01:58] happen is this will kick in so we hit
+[00:02:00] run once and what this will do guys is
+[00:02:02] work its way through everything so we're
+[00:02:03] going to do V word choice then
+[00:02:05] grammatical patterns then punctuation
+[00:02:07] then sentence structureal devices
+[00:02:09] paragraph structure T of mood coherence
+[00:02:11] cohesion idiosyn and quirks figurative
+[00:02:13] languages and then you try to say that
+[00:02:15] before You' had a coffee craziness and
+[00:02:18] then what this will do is create a
+[00:02:19] document and that document will be the
+[00:02:21] living breathing embodiment of your tone
+[00:02:23] of voice now if you're doing an
+[00:02:25] automation with AI to get it to sound
+[00:02:27] like you what I would recommend that you
+[00:02:29] do is feed it in the modality in which
+[00:02:32] you want to communicate in other words
+[00:02:34] if it's for LinkedIn Instagram Facebook
+[00:02:36] Twitter train it on your written text
+[00:02:38] don't train it on your spoken text and
+[00:02:40] there I have a full document breaking
+[00:02:42] down all the stuff that makes Jack's
+[00:02:44] beautiful written language the thing it
+[00:02:46] is let's zoom in and have a quick look
+[00:02:47] shall we use dashes to emphasize points
+[00:02:50] or add dramatic Paws that's true I am a
+[00:02:52] prolific Dasher use informal and
+[00:02:54] conversational languages dude there one
+[00:02:56] thing j is known for it is informal and
+[00:02:58] colloquial language I mean check got
+[00:03:00] this jumper gas I mean come on what's
+[00:03:01] going on so it this go through don't
+[00:03:03] worry about the fact to got these
+[00:03:04] asterisks on mainly we're just going to
+[00:03:05] the language one anyway it doesn't
+[00:03:06] really matter but we could change the
+[00:03:08] prompt to clean it up then after we've
+[00:03:09] added our copile Chrome which I'll show
+[00:03:10] you how to do in a second all we have to
+[00:03:12] do when everyone linked in now we see
+[00:03:13] this beautiful add comments button at
+[00:03:15] the top right whatever post them on I
+[00:03:16] said you know I like this post I like
+[00:03:18] this guy let me out a comment and this
+[00:03:20] scenario guys what it does is
+[00:03:22] essentially when we hit the button on
+[00:03:23] LinkedIn page it brings over all the
+[00:03:25] comments and the post to this web hook
+[00:03:27] here we throw it into our comments
+[00:03:29] generator the comment generator is
+[00:03:31] basically going to look at all this
+[00:03:32] information it's going to look at your
+[00:03:33] turn of voice and it's going to spit out
+[00:03:35] basically as many comments as you want
+[00:03:37] to I've programmed it for three I've
+[00:03:39] said make it valuable ask questions make
+[00:03:41] it engaging but you can make it 5 1015
+[00:03:43] you could make it value based you can
+[00:03:45] configure it to your own personal
+[00:03:46] preferences which means that every
+[00:03:48] single person watching this video is
+[00:03:50] going to get a completely different
+[00:03:52] output and that's always been the
+[00:03:54] biggest challenge with AI and we solved
+[00:03:56] it by giving it a turn of voice it stops
+[00:03:58] sounding like chat gbt and start signing
+[00:04:00] like you in the way that you want to be
+[00:04:02] heard on the platform so the comment
+[00:04:04] generator will generate that and then it
+[00:04:05] fires it straight back by web hook
+[00:04:07] straight over to LinkedIn if you just
+[00:04:08] simply press the button and have it work
+[00:04:10] so look if we come back over to LinkedIn
+[00:04:11] to this page let's just refresh it just
+[00:04:13] to make sure one the latest and greatest
+[00:04:14] at this page and what's going on so here
+[00:04:17] we are I click on ADD comment LinkedIn
+[00:04:19] Genie is now sending all this
+[00:04:20] information to we straight away boom how
+[00:04:22] quick is that I love your approach to
+[00:04:24] addressing demand curves and profit
+[00:04:25] margins it's all about balance and
+[00:04:27] urgency and value have you found any
+[00:04:29] particular strategies that consistently
+[00:04:30] increase conversion rates what a great
+[00:04:32] question it's informative I'm engaging
+[00:04:34] I'm like I'm speaking to people right
+[00:04:36] what a great comment I just ask you to
+[00:04:38] give one short to long so you can pick
+[00:04:40] but again configure it as you want to
+[00:04:41] let's say I like this one here I say I
+[00:04:44] boom that we get the converti because
+[00:04:46] you know I love confered guys it's so
+[00:04:47] easy to please me I feel these days on
+[00:04:49] LinkedIn and then I can post and then I
+[00:04:51] get rid of it and I'm done and you can
+[00:04:53] have your 20 top influencers because one
+[00:04:55] of the strategies of how people growing
+[00:04:56] on LinkedIn at the moment is you get the
+[00:04:58] top 20 individual in your Niche and
+[00:05:00] essentially what you do is you go into
+[00:05:02] their posts they viral post cuz all the
+[00:05:04] customers that you want are on that
+[00:05:06] individual's post so the idea is that we
+[00:05:09] go to an individual post we drop value
+[00:05:11] we add as much value as humanly possible
+[00:05:13] and then essentially other customers see
+[00:05:15] you adding value that builds up your
+[00:05:17] reputation your brand and your LinkedIn
+[00:05:18] growth I'm Jack by the way my YouTube
+[00:05:20] channel and my school Community are all
+[00:05:22] about three things we're about the
+[00:05:23] latest dayi we are about incredible
+[00:05:26] automations but most importantly we are
+[00:05:29] about stuff that works and yes that does
+[00:05:31] include automations but when it comes to
+[00:05:33] Growing sometimes we want the depth and
+[00:05:34] AI automation but we also want breadth
+[00:05:37] we want to know how things like LinkedIn
+[00:05:38] works and YouTube automation all this
+[00:05:40] cool stuff so we've got master classes
+[00:05:42] in the community on things like LinkedIn
+[00:05:44] that I encourage you to check out if you
+[00:05:45] are part of the group they're really
+[00:05:47] really cool we got a few in there I
+[00:05:48] think You' find it of Great Value but
+[00:05:50] with that in mind if you haven't already
+[00:05:53] grab that coffee and let's dive straight
+[00:05:55] in okay guys so to start off I need to
+[00:05:57] do one thing and the first thing I need
+[00:05:58] to do is create a web hug now the first
+[00:06:00] step I'm going to get you through now is
+[00:06:01] developing the AI co-pilot the chme
+[00:06:03] extensions I've got a video on screen
+[00:06:05] here I'd encage you check out if you
+[00:06:06] haven't seen any of these beautiful AI
+[00:06:08] cils before your world's about to change
+[00:06:11] now check this out I click on web hook
+[00:06:13] response status 200 body excuse me not
+[00:06:15] web hook response let me get rid of this
+[00:06:17] oh my goodness how many cars have I had
+[00:06:19] today we on web hooks we go on custom
+[00:06:22] web hook awesome we choose a hook we'll
+[00:06:24] call this one let's call this one
+[00:06:26] LinkedIn takeover I'm feeling like
+[00:06:28] taking over LinkedIn today
+[00:06:30] LinkedIn take over and just a BT it
+[00:06:33] stand both together and of course our
+[00:06:35] patent pendant eyes emoji awesome click
+[00:06:37] that click okay click save what this has
+[00:06:39] now done is generated a custom web hook
+[00:06:43] this essentially is how we send the
+[00:06:45] information from a part of the internet
+[00:06:46] to another so we're going to get the
+[00:06:48] data we're going to throw it and this
+[00:06:49] web Hook is going to catch it and then
+[00:06:51] that allow and once we get it into M
+[00:06:53] guys we can do anything we can do
+[00:06:55] anything we possibly want once we get it
+[00:06:57] into the scenario and we're getting
+[00:06:58] great at doing that so we copi that link
+[00:07:01] awesome so what do we do now now I want
+[00:07:03] you to go down the description if you
+[00:07:05] want to use the web hook the the co-art
+[00:07:07] that I built specifically for you for
+[00:07:08] the scenario and you're going to change
+[00:07:10] one piece of data you're going to right
+[00:07:11] click on content script.js and you're
+[00:07:14] going to click on open with now if
+[00:07:15] you're on Mac I want you to use text
+[00:07:17] edit if you're on Windows I'll put the
+[00:07:20] link of the thing you should be using on
+[00:07:21] the screen somewhere so you can check it
+[00:07:22] but essentially we're using text edit
+[00:07:25] instead of word because we need it to be
+[00:07:27] plain text because word will add little
+[00:07:29] bit of formatting this crazy stuff then
+[00:07:31] guys what I want you to do isrl F okay
+[00:07:34] type in
+[00:07:35] eu2 like so and you'll see it right at
+[00:07:37] the top there okay this is your web hook
+[00:07:40] now so you're going to come you're going
+[00:07:41] to basically highlight everything before
+[00:07:44] the asterisk before the little um
+[00:07:46] apostrophe excuse me you're going to
+[00:07:47] delete that and then just put this one
+[00:07:49] in here that's all that's literally all
+[00:07:51] you got to do that's your job done for
+[00:07:53] the day what a great days of work that
+[00:07:54] is guys all jobs already finished then
+[00:07:56] we click save how cool is that and then
+[00:07:58] we click X and then guys you also need
+[00:07:59] to come to this pop up the JS do the
+[00:08:01] exact same thing right click open with
+[00:08:03] text edit and then do the same thing to
+[00:08:06] get that hook changed here now I want
+[00:08:08] you then to head over to Crown we're
+[00:08:10] going to get over to extensions you can
+[00:08:11] do that by top right uh and then come
+[00:08:14] down hover over extensions and then
+[00:08:16] manage extensions like so I am going to
+[00:08:18] remove my LinkedIn quotation sender like
+[00:08:20] so now guys you need to if you don't
+[00:08:22] mind come over to developer mode make
+[00:08:24] sure that is enabled that basically lets
+[00:08:25] you be like Neo in The Matrix in this
+[00:08:27] chrome environment and we love it so
+[00:08:29] what do we do here you're going to come
+[00:08:31] on to load unpacked like so click this
+[00:08:33] button you should see a folder I want
+[00:08:35] you to upload the folder so you click on
+[00:08:37] the folder you upload it you need to
+[00:08:38] unzip it when you download it you just
+[00:08:40] double click it and it's fine and then
+[00:08:41] we've got this LinkedIn comments
+[00:08:42] quotation sender as a matter of course
+[00:08:44] when I download these things I quite
+[00:08:46] like to just make sure that they're
+[00:08:47] pinned in the toolbar so I can see it so
+[00:08:49] it's visible it's just handy it's a good
+[00:08:51] best practice when you're getting
+[00:08:52] started with it I come off this now so
+[00:08:54] we need to check and validate that this
+[00:08:56] works so the first thing we need to do
+[00:08:58] is to make sure
+[00:09:00] that the information okay from LinkedIn
+[00:09:03] is getting over to make on no code
+[00:09:06] software okay now how cool is this we
+[00:09:08] see this ad comment thing at the top
+[00:09:09] that looks pretty promising to me so if
+[00:09:11] I come back over to our scenario like so
+[00:09:13] you'll see uh let's R red determine the
+[00:09:16] data structure so this is basically
+[00:09:18] telling the web hog how the data is
+[00:09:20] going to arrive so look I come over I
+[00:09:22] click on ADD comment error fetching
+[00:09:24] comment that's no problem we don't worry
+[00:09:26] about that we come over successfully
+[00:09:28] determined we click okay and essentially
+[00:09:30] next guys we want to run the whole thing
+[00:09:31] again so run the scenario once wait for
+[00:09:33] new data come back over to LinkedIn
+[00:09:35] let's refresh the page as a for instance
+[00:09:38] and then let's click on this add comment
+[00:09:40] section right here what do we have the
+[00:09:42] post text and comments phenomenal cool
+[00:09:46] what that's done guys is pulled through
+[00:09:48] all the text from that post and every
+[00:09:50] single comment that we've got which is
+[00:09:51] nothing short of Epic and now we've got
+[00:09:53] the dat toake we can effectively do
+[00:09:55] whatever we want and yes by the way the
+[00:09:57] club my cap has changed that's just how
+[00:09:59] transformative this automation is I
+[00:10:01] don't know what else to tell you so look
+[00:10:03] let's have a quick look then and it
+[00:10:04] matches up perfectly so we've got the
+[00:10:05] comments awesome awesome awesome so the
+[00:10:08] next thing that we need to do then is
+[00:10:10] create your own particular turn of voice
+[00:10:12] now as I mentioned earlier if we're
+[00:10:15] looking at create an a for text we want
+[00:10:16] to use a text version of your voice so
+[00:10:18] for that on LinkedIn what you can
+[00:10:20] actually do if you go over to your
+[00:10:21] setting section and you can see here
+[00:10:23] what I want you to do is come down and
+[00:10:24] click on data privacy on the left hand
+[00:10:26] side and then you can actually click
+[00:10:28] this one here get a copy of your data
+[00:10:31] that will allow you to export all the
+[00:10:34] data for all the posts that you've done
+[00:10:35] you can come and check for example check
+[00:10:37] the rich media and that will just show
+[00:10:38] you actual physical things that you've
+[00:10:40] said so you can just copy that if you
+[00:10:41] want to or request a download that
+[00:10:43] usually takes like 10 or so minutes and
+[00:10:45] then you can use that to train the model
+[00:10:48] now so let's take a second to create a
+[00:10:49] complete clone of your own t of voice
+[00:10:52] and the system that we do that with is
+[00:10:53] pretty comprehensive it covers a lot of
+[00:10:55] aspects and if I show you the system
+[00:10:57] we've got here we've got the air table
+[00:10:59] which essentially is going to be the
+[00:11:00] thing where we feed it your document and
+[00:11:02] that triggers the entire Automation and
+[00:11:04] essentially guys what we do is have all
+[00:11:06] these
+[00:11:07] individual GPT modules these GPT
+[00:11:10] employees and essentially what's
+[00:11:12] happening is each one of them is
+[00:11:13] responsible for a different aspect of
+[00:11:16] your communication style so for example
+[00:11:19] this guy here is just responsible for
+[00:11:21] your vocab and word choice if I click on
+[00:11:23] him for example we ask it to analyze the
+[00:11:26] text to create a turn of voice
+[00:11:27] guidelines for vocab and word choice
+[00:11:30] please provide detailed guidelines for
+[00:11:32] each element including relevant examples
+[00:11:34] from the given text it is imperative
+[00:11:36] that use guidelines read instruction to
+[00:11:38] a language model to emulate the style
+[00:11:39] exactly so we're asking it to write the
+[00:11:42] instructions in a way that we're
+[00:11:44] instructing a language models for
+[00:11:46] example when speaking you must blah blah
+[00:11:48] blah blah blah so that the model will
+[00:11:49] know that it's instructions it's not
+[00:11:51] just descriptive feel free to include
+[00:11:53] examples from the written text I always
+[00:11:55] find it really helpful to say you know
+[00:11:56] he prefers simple language like the word
+[00:11:58] CZ or that's just simple and then give
+[00:12:00] it examples and then sometimes give the
+[00:12:02] opposite example so it's really good to
+[00:12:04] and what this will do guys is lace in
+[00:12:06] multiple examples like for example can
+[00:12:08] you see here how it says things like
+[00:12:10] make some distinctive word choices to
+[00:12:12] grab attention examples egregious
+[00:12:14] amounts of money great on your belief
+[00:12:16] system Niche slap you know it just gives
+[00:12:19] you those wonderful examples then it
+[00:12:21] goes on to do good and bad like I would
+[00:12:22] see with you under bridge if it came to
+[00:12:24] that bad of using slanger quism to the
+[00:12:26] point of reducing Clarity it was a total
+[00:12:29] Shyer show bro incredible right so we
+[00:12:33] have that analyze the given text for the
+[00:12:34] following and then we just give it the
+[00:12:36] specific so theing word choice analyze
+[00:12:38] writer's use of unique Specialized or
+[00:12:39] repetitive words and phrases identify
+[00:12:41] the frequency and diversity of the
+[00:12:43] writer's vocabulary uh examine use of
+[00:12:45] jargon slang or colloquialisms determine
+[00:12:47] the right's performance for you know
+[00:12:49] simple or complex words look for any
+[00:12:51] distinctive or unusual word choices and
+[00:12:53] assess the reading age level required to
+[00:12:55] understand the vocabulary used and then
+[00:12:58] so on and so forth and if I just whip
+[00:12:59] over very quickly to my school community
+[00:13:01] so all these automations the blueprints
+[00:13:02] the agents all that stuff is all
+[00:13:03] available inside the school Community if
+[00:13:06] I come over to classroom I come over to
+[00:13:08] every AI Automation and if I just type
+[00:13:10] in turn of voice which I've got right
+[00:13:11] here I can see here the segmentation
+[00:13:13] prompt and this basically is the
+[00:13:16] blueprint that we're using for this so
+[00:13:17] for example VAB and word choice
+[00:13:19] grammatical patterns and now we've got
+[00:13:20] all the different bits and pieces so to
+[00:13:22] create this guys what we now need to do
+[00:13:24] is open up a new scenario and the first
+[00:13:26] thing I want you to do is create an air
+[00:13:27] table now one of cool reasons why I
+[00:13:31] would like you to make an air table and
+[00:13:32] if you're not familiar with air table
+[00:13:33] air tables like Google cheets on
+[00:13:35] steroids it's just a really cool simple
+[00:13:37] way bottom left to create by the way
+[00:13:39] start from scratch really cool simple
+[00:13:41] way for us to actually feed up multiple
+[00:13:43] ton of voices to say you've got a client
+[00:13:45] and you want to generate Revenue with
+[00:13:47] this you could say great business a
+[00:13:48] business B business C you can download
+[00:13:50] their data you could even scrp their
+[00:13:52] LinkedIn data if you want to or get the
+[00:13:53] data from anywhere else and start to
+[00:13:55] create these custom turn of voice agents
+[00:13:57] for those clients to do LinkedIn for
+[00:13:59] them or any other feature that you would
+[00:14:01] like so we'll call this base
+[00:14:05] Build Together LinkedIn voice with a
+[00:14:09] beautiful Emoji what do we fancy today
+[00:14:11] Emoji Wise Guys should we go for
+[00:14:12] something
+[00:14:14] like let's give for a green tick
+[00:14:15] something nice and simple and crisp for
+[00:14:18] a beautiful Saturday and if you're
+[00:14:19] watching some Monday remember Saturday
+[00:14:20] is a state of mind Saturday is a
+[00:14:22] mentality so we going green cool now I
+[00:14:24] want to give two different field names
+[00:14:26] for this one is going to be who cuz I'm
+[00:14:28] assuming I'm just going to write this in
+[00:14:29] a way that you can do it for many people
+[00:14:31] if you like one is who we like that
+[00:14:34] obviously we need to add a little Emoji
+[00:14:36] because I know the Emojis is like it's
+[00:14:39] like oh is it worth of two seconds in
+[00:14:41] short yes it is worth two seconds
+[00:14:43] because when you come back to look at
+[00:14:44] the stuff like it makes a huge
+[00:14:45] difference and then turn off voice and
+[00:14:48] then we'll have a little blue heart for
+[00:14:50] that because we love it cool sign I want
+[00:14:53] to right click click on edit field
+[00:14:55] instead of user I just want to
+[00:14:57] put um created time and just CLP in
+[00:15:02] create create time at top click next and
+[00:15:05] then right click on status edit field uh
+[00:15:07] and you're going to type in last modify
+[00:15:09] time and then you can type that in the
+[00:15:11] top as well the reason why we're writing
+[00:15:12] it is because we can add Emoji if we do
+[00:15:14] write it in there incredible guys that's
+[00:15:17] it that's the entirety of air table air
+[00:15:19] table you get like 10,000 free records
+[00:15:20] so if you used it before um I'll put a
+[00:15:22] link Down Below in the description so
+[00:15:23] you can pess the buttons and have a rock
+[00:15:25] and roll a good time incredible now look
+[00:15:28] let's come back over to toal automation
+[00:15:30] now what we're saying here is wait until
+[00:15:32] you see something cool that appears I'm
+[00:15:34] going to refresh this one so it loads up
+[00:15:36] okay and if I type
+[00:15:38] in let's have a look what do we call
+[00:15:41] this
+[00:15:42] guy Build Together LinkedIn voice
+[00:15:44] incredible and it's found it table is
+[00:15:46] table one and I'm going to scroll down a
+[00:15:48] tiny bit trigger field is going to be
+[00:15:50] last modified time so in other words
+[00:15:52] only grab the field that was modified
+[00:15:54] last label field we want uh turn of
+[00:15:58] voice limit is 10 that's fine formula
+[00:16:00] blah blah blah that's completely okay
+[00:16:02] and do that from now on as then guys all
+[00:16:04] we do okay is come down uh we have open
+[00:16:07] AI so we're going to click
+[00:16:09] on uh create a completion like
+[00:16:13] so max tokens is going to be zero zero
+[00:16:17] defaults to the maximum it's nice and
+[00:16:18] easy it's definitely set a standard for
+[00:16:20] for Simplicity add a message then we've
+[00:16:23] got the role role is going to be user
+[00:16:25] and the message content so the message
+[00:16:27] content guys is basically the prompt
+[00:16:28] that I just just covered here for
+[00:16:29] example and it is the same prompt all
+[00:16:32] the way through except for the uh aspect
+[00:16:36] of your grammar and your T of voice that
+[00:16:37] we change in each of the modules so um
+[00:16:40] basically copy The Prompt come over
+[00:16:42] message content paste that in and at the
+[00:16:44] bottom we say look again we reiterate
+[00:16:46] write these instructions as text and
+[00:16:48] then you can see how here at the bottom
+[00:16:51] if I just click this once more one more
+[00:16:52] time the text it has here right turn of
+[00:16:55] voice like that boom now you may be
+[00:16:57] asking Jack why are we taking 10
+[00:16:59] individual modules instead of doing one
+[00:17:01] well the reality is that if we do 10 the
+[00:17:03] quality output is going to be better
+[00:17:05] because there's a lot of different
+[00:17:06] reasons for that but if you ask track
+[00:17:07] gbt to write 3,000 words covering all
+[00:17:10] these things you know the quality we get
+[00:17:12] isn't going to be excellent so we want
+[00:17:14] each of these agents each of these
+[00:17:15] excuse me these models to have a
+[00:17:17] specific Mission and your mission is
+[00:17:18] look dude you're only looking at vocab
+[00:17:21] and word choice that's the only thing I
+[00:17:22] care about that's why we're doing it
+[00:17:24] this way and the quality will be
+[00:17:25] significantly better and then what do we
+[00:17:27] do we just rename this one for example
+[00:17:30] one uh we call this one in fact what was
+[00:17:33] this one oh my goodness let's just
+[00:17:34] double check that we that we named this
+[00:17:36] one correctly come back over vocab and
+[00:17:38] word choice okay awesome sweet so rename
+[00:17:40] this one come back over here to our
+[00:17:42] beautiful scenario vocab and word choice
+[00:17:46] excellent guys and it's as simple as
+[00:17:48] that and then you just repeat the
+[00:17:49] process and you'll know like we have
+[00:17:51] what do we have we have vup so basically
+[00:17:53] you come you copy this information or if
+[00:17:55] you'd like to create your own framework
+[00:17:56] that's fairly simple to do and you can
+[00:17:58] do this this just just a stuff that I
+[00:17:59] find works really well grammatical
+[00:18:01] patterns so for example in this one
+[00:18:02] identify the writer use of specific
+[00:18:05] grammatical structures such as passive
+[00:18:06] voice complex tenses or particular parts
+[00:18:08] of speech analyze writers use of verb
+[00:18:10] tenses and consistency intense usage
+[00:18:13] examine the writers use of singular and
+[00:18:15] plural nouns as well as pronouns blah
+[00:18:16] blah blah punctuation sentence structure
+[00:18:19] and length and a paragraph structure
+[00:18:20] tone and mood overall coherence and
+[00:18:22] cohesion analyze how well the writer's
+[00:18:24] ideas flow and connect throughout the
+[00:18:26] piece so for example the next one we
+[00:18:28] would do which simp come here we would
+[00:18:30] clone it we would come down connect that
+[00:18:33] rename this one to the second one that
+[00:18:35] we have which in this case is
+[00:18:37] grammatical patterns awesome if I can
+[00:18:40] copy it can I copy it what is going on
+[00:18:42] today oh my goodness how many coffees
+[00:18:44] how many coffees down am I today what is
+[00:18:46] going on then look two come here
+[00:18:49] two grammatical
+[00:18:52] patterns
+[00:18:55] beautiful love fire Emoji we love it
+[00:18:57] cool click okay and then guys all you do
+[00:19:00] okay is you bring open it up you scroll
+[00:19:02] down you wait for this bit analyze the
+[00:19:04] following you just copy that bit or
+[00:19:08] whatever you want to change remove and
+[00:19:11] then enter well I need to actually copy
+[00:19:13] the thing don't I that would be pretty
+[00:19:14] handy let's grab this here okay come
+[00:19:16] back over to our automation wow looks
+[00:19:18] like it's it's deleted that's pretty
+[00:19:20] funny okay come back over to user okay
+[00:19:23] we click okay we come back we come here
+[00:19:25] I guys perfectly normal this stuff
+[00:19:27] happens come here could come down to the
+[00:19:29] content paste that whole thing in let's
+[00:19:31] just click okay let's come back to our
+[00:19:33] turn of voice we copy this we come back
+[00:19:35] over obviously guys if you're just
+[00:19:37] uploading this from the scenario it will
+[00:19:38] all be pre-populated for you so you
+[00:19:40] don't need to do any of this it will
+[00:19:41] just all appear for you automatically so
+[00:19:43] I come here and I paste it in like that
+[00:19:45] and basically that's the same thing once
+[00:19:47] over again and if you're in the
+[00:19:48] community to actually ever download this
+[00:19:50] stuff all you do is you find the
+[00:19:51] aimation the left like you come down you
+[00:19:53] download for Json and then when you come
+[00:19:54] to this scenario all you do ever do guys
+[00:19:57] come down to more import blueprint you
+[00:19:59] select the file you click save and then
+[00:20:01] the entire thing will populate for you
+[00:20:02] automatically and it'll do it for both
+[00:20:03] this scenario and also uh this scenar
+[00:20:06] here so you don't have to double tap and
+[00:20:08] it's just like boom it appears it'll
+[00:20:09] save you some beautiful time now now
+[00:20:11] we've completed that let me just get rid
+[00:20:13] of this one here for instance you just
+[00:20:15] keep on rinsing repeating the entire
+[00:20:16] thing until you get to all tan and just
+[00:20:18] out of respect your time I'm just going
+[00:20:19] to copy these here cuz it's the same
+[00:20:21] process for all of them like so we copy
+[00:20:23] we contrl + C we come back over we zoom
+[00:20:26] out a tiny bit and then we're just going
+[00:20:27] to paste those in into this Automation
+[00:20:30] and it will not let me paste this always
+[00:20:32] allow access now we paste again and
+[00:20:34] voila by the way you may not see on the
+[00:20:36] screen but it justs in in the task bar
+[00:20:38] at the top if it comes up with a little
+[00:20:39] X that's why that's happened that's cool
+[00:20:41] and then we connect it and the only
+[00:20:43] thing we need to do with these cuz I've
+[00:20:44] copy and pasted them is just to change
+[00:20:46] the text to be the text from the ad
+[00:20:49] table but in your case if you just
+[00:20:50] uploaded this you'll be absolutely fine
+[00:20:52] with that so I'm going to quickly come
+[00:20:53] and update these ones and guys one of
+[00:20:54] the one of the beautiful things about
+[00:20:56] the group is the number of LinkedIn
+[00:20:58] experts we got so we' got a guy called
+[00:20:59] Jo alab bomb he's done loads of really
+[00:21:01] cool like LinkedIn automations for us
+[00:21:03] and he got he's got his own LinkedIn AI
+[00:21:05] business it's called evai I encourage
+[00:21:07] you to check that out people like
+[00:21:08] absolutely love it that use that and
+[00:21:10] that has some of the different
+[00:21:11] interesting features that you might find
+[00:21:12] in quite handy so I'll put a link down
+[00:21:15] below if you to check that out if you're
+[00:21:16] looking to upgrade your LinkedIn game
+[00:21:17] he's a cool source of knowledge and you
+[00:21:18] know a wonderful person so I'd encourage
+[00:21:20] you to check that out and the thing
+[00:21:22] about the LinkedIn stuff guys is it like
+[00:21:24] you it's like a platform you can make
+[00:21:26] any of these platforms work but you
+[00:21:29] can't be an expert in all of them at the
+[00:21:30] same time so you've kind of got to pick
+[00:21:32] the one that you want so if you're doing
+[00:21:33] YouTube One Week LinkedIn the other week
+[00:21:35] it's awesome but really it's like the
+[00:21:36] focus that will help you get to the next
+[00:21:38] level this sort of stuff so we've on
+[00:21:40] puted all this incredible stuff we're
+[00:21:42] going to align it a little bit just so I
+[00:21:44] think it looks nice and pretty and the
+[00:21:45] last thing I want to do guys is
+[00:21:47] basically just create a document then
+[00:21:50] that will take this information put it
+[00:21:52] into a single file we can to use it
+[00:21:53] ourselves and feed into language model
+[00:21:55] and create this incredible automation so
+[00:21:57] the last part of this is to add in uh
+[00:22:00] Google doc like
+[00:22:03] so Google Docs oh my goodness Google
+[00:22:06] Docs what is going on here we go uh and
+[00:22:08] I want to show more and let's have a
+[00:22:10] look great document cool we are going to
+[00:22:12] call this one let's give it the name of
+[00:22:15] and this is why I put who at the bottom
+[00:22:17] you see because then if you're doing it
+[00:22:19] for business a business B business C we
+[00:22:21] can kind of change that a little bit
+[00:22:23] ourselves so we click on who the content
+[00:22:26] itself is basically going to be
+[00:22:28] everything we've got right so we start
+[00:22:30] off with again number one
+[00:22:34] is vocab and word choice and then we
+[00:22:38] just put the result like so and then
+[00:22:40] number two we just keep on repeating the
+[00:22:43] process grammatical
+[00:22:46] patterns and we can put this all the way
+[00:22:48] down and the thing is guys like if you
+[00:22:50] are thinking about doing this for
+[00:22:51] business one of the cool things that you
+[00:22:52] could do to this as well is get a card
+[00:22:54] website I'll put a link uh on the uh
+[00:22:56] screen so you can check out some
+[00:22:57] automations I've done with that and what
+[00:22:59] we could do essentially is get an
+[00:23:01] individual says look what is your
+[00:23:03] LinkedIn page you know they give you the
+[00:23:05] LinkedIn page and then what we could do
+[00:23:07] for them is actually scrape their
+[00:23:10] LinkedIn profile uh and build this ton
+[00:23:12] of voice and build this entire
+[00:23:14] automation for them so they don't even
+[00:23:17] need to do anything you don't even need
+[00:23:18] to touch anything you they've got a
+[00:23:19] they've got a paper form or they've got
+[00:23:21] like a a t or something incredible like
+[00:23:24] that and essentially all they ever do is
+[00:23:26] just enter the information and their
+[00:23:27] entire turn of voice is created and this
+[00:23:30] incredible Outreach LinkedIn think is
+[00:23:32] created for them bespoke based on all of
+[00:23:34] their posting history and they don't
+[00:23:36] even need to do a single thing how
+[00:23:37] ridiculous would that be you just got to
+[00:23:39] think about like how easy it can be for
+[00:23:41] them and it's like well how do we know
+[00:23:42] because one of the biggest problems with
+[00:23:44] AI when it comes to use cases which is
+[00:23:46] why like no code Automation and what we
+[00:23:49] do in terms of AI is really cool is
+[00:23:52] because there are some limitations and
+[00:23:54] what's really sick is how we overcome
+[00:23:56] those limitations and make them epic so
+[00:23:57] for instance
+[00:23:59] like what's one of the problems with
+[00:24:00] with some LinkedIn automations well it
+[00:24:02] just doesn't sound like you and you're
+[00:24:04] like dude why does this guy sound like a
+[00:24:05] robot well that's why we use this cool
+[00:24:07] turn of voice 10p part system so it
+[00:24:09] doesn't it does sound like you and it's
+[00:24:11] like oh but it's got like all the
+[00:24:12] idiosyncrasies and structures and you
+[00:24:14] know it's it's just as coherent as
+[00:24:16] individual that wrote it and cohesion
+[00:24:19] and so we had that London Meetup guys
+[00:24:20] and it was very very cool people the
+[00:24:22] channel it are so gez they are the best
+[00:24:24] people I know they're so so cool it was
+[00:24:27] wonderful to catch people up we little
+[00:24:28] competition we ched AI we cheed deals we
+[00:24:31] ched all sorts of stuff it was
+[00:24:32] incredible we click okay all right sweet
+[00:24:35] and then that's going to happen which
+[00:24:36] need to basically pick a new document
+[00:24:38] location that's cool come down to the
+[00:24:39] bottom let that load up we're going to
+[00:24:41] do Germany in two or three weeks if
+[00:24:42] you're in Germany or you fany coming out
+[00:24:44] there for some AI Good Times we'd love
+[00:24:47] to meet you and I'd love to meet you and
+[00:24:48] say hey what's going on and and chat and
+[00:24:50] shake your hand in person and yeah do
+[00:24:52] all the cool stuff so look we got Google
+[00:24:54] Docs that's created we're now going to
+[00:24:55] save this scenario because we built
+[00:24:57] quite a lot together and now comes a
+[00:24:58] moment of truth of how we build this
+[00:25:00] look can click on run once that's
+[00:25:02] checking air table nothing's come
+[00:25:04] through okay cool so look now what do we
+[00:25:07] do we go to our air table and what we
+[00:25:08] need to do now D is is upload our turn
+[00:25:11] of voice so you should have had the
+[00:25:12] email from LinkedIn by now or we could
+[00:25:14] just use a random turn of voice as a for
+[00:25:16] instance so this is my writing style
+[00:25:17] based on some posts that I've made so
+[00:25:19] I'm going to copy all of this beautiful
+[00:25:20] stuff here this is how I speak this is
+[00:25:22] how I write I like it what do I do I
+[00:25:24] come over then to our scenario and now
+[00:25:27] obviously this would be linked it up and
+[00:25:28] automatically if you're trying to do
+[00:25:29] this for clients so look who it is Jack
+[00:25:32] and turn of voice is right there boom
+[00:25:35] this by the way must be um long text for
+[00:25:39] this to work just FYI just in case it
+[00:25:41] doesn't work if you just want to make
+[00:25:41] sure you have that little bit of
+[00:25:42] knowledge there okay cool now the last
+[00:25:45] thing I just want to make sure is
+[00:25:46] happening here is that we've got the
+[00:25:47] name we've got the location and that's
+[00:25:49] all fine cool then all we do guys quite
+[00:25:51] simply we run once air table grabs it
+[00:25:54] vocab and word choice working in the
+[00:25:56] background creating something
+[00:25:57] interesting for us and then that same
+[00:25:59] piece of text that same yeah just
+[00:26:01] everything I wrote is now getting all
+[00:26:03] these different aspects created to it so
+[00:26:05] like even if you've got like an autod DM
+[00:26:07] bot that's like selling to people in the
+[00:26:08] DMS wouldn't it be cool if it sounded
+[00:26:11] just like you and not just some generic
+[00:26:13] hey go and do this please this is the
+[00:26:14] next Jour of text Ai and I can even look
+[00:26:17] and dig into this a little bit further
+[00:26:18] like let's have a look at what the
+[00:26:19] result is okay come down to choices come
+[00:26:20] down to usage message just check it out
+[00:26:24] let's see active voice I favor the
+[00:26:26] active voice I tried this yesterday I
+[00:26:28] couldn't believe it to be honest that
+[00:26:30] that's exactly right this was Tried by
+[00:26:31] me yesterday so it said like look here's
+[00:26:33] Jack Jack uses the active voice versus
+[00:26:35] the passive voice here's what he said in
+[00:26:37] the active here's what's not okay in
+[00:26:39] passive and we know that by giving these
+[00:26:41] like models good examples and bad
+[00:26:43] examples the quality goes up the quality
+[00:26:45] just keeps going it's that up emoji I
+[00:26:47] love it and then we can see all this
+[00:26:48] stuff is done and complete and it's
+[00:26:50] created a document for us and then when
+[00:26:51] I look that up guys I've got all of this
+[00:26:53] information here talking about
+[00:26:54] punctuation talking about uh use of
+[00:26:56] ellipses now if this was something that
+[00:26:58] you wanted to give to your clients all
+[00:27:00] we would do in this scenario guys is we
+[00:27:02] would come back and we would just add
+[00:27:03] some formatting steps and we would just
+[00:27:05] tidy it up and tighten up a little bit
+[00:27:07] in terms of the outputs we want from
+[00:27:08] these models etc etc but because we're
+[00:27:11] just feeding it to as an explainer of
+[00:27:13] how we want turn of voice to be it's
+[00:27:14] okay but it's got asterisks and the font
+[00:27:17] as an aerial which is a feature of the
+[00:27:18] document created we need to change the
+[00:27:19] standard font so that's something that
+[00:27:20] I'm pretty big on doing actually the
+[00:27:22] moment cool so what do we need to do
+[00:27:24] next well we need to make one more smart
+[00:27:26] scenario now so let's take a step back
+[00:27:27] about what we've done so far you have if
+[00:27:29] I come over to LinkedIn you have created
+[00:27:33] a AI co-pilot okay that has link that
+[00:27:36] basically is linked to your new scenario
+[00:27:37] which means that it will extract for you
+[00:27:39] any comment all the comments and all the
+[00:27:41] posts back to your make scenario then in
+[00:27:43] your make scenario itself what you've
+[00:27:44] got okay is you're grabbing all that
+[00:27:46] data and you've now created your own
+[00:27:49] unique tone of voice based on
+[00:27:51] specifically how you write and Linkedin
+[00:27:53] not even just your novels your high
+[00:27:55] school stuff how you write and Linkedin
+[00:27:56] so the next thing we need to do is
+[00:27:58] combine those together to then create
+[00:28:00] the responses send it back to LinkedIn
+[00:28:02] so you can push a few buttons and then
+[00:28:04] you're going to be ready to rock and
+[00:28:05] roll so the question is how do we do
+[00:28:07] that and what does that look like so
+[00:28:09] look I want you to come back now over to
+[00:28:10] the first scenario that we did click on
+[00:28:12] this plus now what I want you to use is
+[00:28:14] chat GPT now this is going to be
+[00:28:15] controversial okay but I will be honest
+[00:28:18] over the past week or so anecdotally
+[00:28:21] I've started using chat GPT more than
+[00:28:24] Claude for it's a weird one like the
+[00:28:27] language just seems to it's like they've
+[00:28:29] done some upgrades to it and like the
+[00:28:30] language seems to be a little bit better
+[00:28:32] the
+[00:28:32] reliability some weird reason this is
+[00:28:35] correct completion by the way for some
+[00:28:36] real weird reason claude's getting a lot
+[00:28:38] more guard rails on it I'm finding like
+[00:28:40] I'm asking to do things and it's not
+[00:28:41] liking it um but chat GT has been super
+[00:28:44] impressive incredible retain memory and
+[00:28:46] at the moment I'm preferring GPT 40 and
+[00:28:48] I'll always be honest about the stuff
+[00:28:49] that I'm using and when why I'm using it
+[00:28:51] that's just my experience I'd love to
+[00:28:53] down below if you're finding something
+[00:28:54] similar but that's why we're using gbt
+[00:28:56] 4r not CLA clae I want I want to be on
+[00:28:59] team cl bring me back over to team CL
+[00:29:01] I'm I'm here to be sold I just need you
+[00:29:03] to work man I just need you to work with
+[00:29:04] me a little bit so look we come down
+[00:29:06] going to click on user and then we got
+[00:29:08] message content so let's have a look at
+[00:29:10] what the prompt is for this and one
+[00:29:12] thing I'll call out guys is I built the
+[00:29:14] automation like this because this is the
+[00:29:15] way that people are scaling by leaving
+[00:29:17] those comments so I wrote this in a
+[00:29:19] particular way so that we get three
+[00:29:21] responses but I'll touch on that in a
+[00:29:22] second now look you are an AI agent you
+[00:29:24] are you are an AI excuse me you are an
+[00:29:27] AI task with three LinkedIn comment
+[00:29:29] responses in the attached tone of voice
+[00:29:31] now I've said three in reality that
+[00:29:34] could be as many or as few as you like
+[00:29:36] like it doesn't have to be three it
+[00:29:38] could be 50 could be 500 whatever you
+[00:29:40] want maybe 500 is too crazy but you get
+[00:29:42] the idea I've just said three you can
+[00:29:44] specify this as you wish your primary
+[00:29:46] goal is to create engaging authentic
+[00:29:48] comments that align with the provider T
+[00:29:49] of voice and contribute meaningfully to
+[00:29:52] the conversation you are only capable of
+[00:29:54] responding in the tone of voice
+[00:29:56] guidelines provided you'll be given tax
+[00:29:58] and comments from the LinkedIn post so
+[00:29:59] important instructions before generating
+[00:30:02] any responses carefully read and
+[00:30:03] internalize the separate turn of voice
+[00:30:05] document provided it is crucial that all
+[00:30:07] generated content adheres to this
+[00:30:09] specified term generate exactly through
+[00:30:11] responsive for the Post now just to give
+[00:30:13] you something to get started I've said
+[00:30:15] look I want one short response three to
+[00:30:17] eight words cuz sometimes you just want
+[00:30:18] to be a little bit Snappy and it just
+[00:30:20] give me two mid-length responses like
+[00:30:21] two to four sentences and then I just
+[00:30:23] specify things that look when generating
+[00:30:25] responses you must add value to the post
+[00:30:27] that is Essen very turn in perspective
+[00:30:29] like value question on humor you have
+[00:30:31] some variety occasionally refer to
+[00:30:33] specific points in the post include
+[00:30:35] follow up questions ensure responses are
+[00:30:37] diverse and then say look tell your
+[00:30:39] responses to the context like analyze
+[00:30:41] the contents the themes the sentiments
+[00:30:43] the points of discussion and the reason
+[00:30:45] why this is so sick guys is like
+[00:30:47] sometimes and J for I had a chat about
+[00:30:49] this as well is that like if your AI is
+[00:30:51] just reading the post so for example if
+[00:30:53] I come back over let's say we've got
+[00:30:55] this what if this was a photo what if
+[00:30:57] this was a video
+[00:30:58] and you're you're also commenting like
+[00:31:00] great job man but it's about like maybe
+[00:31:02] somebody's family memb passed away you
+[00:31:04] lose all of it but by reading the
+[00:31:05] comments we get like 20 30 40 50
+[00:31:08] different data touch points that we can
+[00:31:11] say oh okay obviously this is about
+[00:31:13] something severe and we can adjust it
+[00:31:14] accordingly so it's just the more data
+[00:31:16] points the better the comments are in an
+[00:31:18] excellent way and I think one of the
+[00:31:19] most underutilized aspects actually when
+[00:31:21] it comes to automations so look address
+[00:31:23] any unanswered questions or explore
+[00:31:25] angles related to the P topic that's
+[00:31:26] cool so that basically means we're
+[00:31:28] bringing something new to the discussion
+[00:31:29] something fresh for longer responses
+[00:31:32] consider using emojis or formatting or
+[00:31:33] bullet points output your response like
+[00:31:35] this generate three things we have some
+[00:31:37] code don't worry about this from time
+[00:31:38] being and then we have all the turn of
+[00:31:40] voice at the bottom here so we can all
+[00:31:42] this kind of crazy turn of voice then
+[00:31:44] guys what you're going to do is you're
+[00:31:45] going to copy this or write the prompt
+[00:31:47] exactly as you would like to uh and then
+[00:31:49] we're going to come over to automation
+[00:31:50] then so user message content and
+[00:31:54] basically paste all of that in all right
+[00:31:56] now look so you've basically have that
+[00:31:58] in there now don't worry about this let
+[00:32:00] me explain what's going on with this cuz
+[00:32:02] this could look a little bit a little
+[00:32:04] bit confusing all right sweet so you
+[00:32:07] going to have post and you going have
+[00:32:09] comments so what is the post well the
+[00:32:12] post text is simply this awesome and
+[00:32:16] then we have the comments now for the
+[00:32:17] comments guys I want you to come up here
+[00:32:19] let's get rid of
+[00:32:22] these now this comes through as what we
+[00:32:24] call an array so each comment is like a
+[00:32:27] new new aspect on here okay so we're
+[00:32:29] just going to basically repeat this
+[00:32:31] process come down loads of
+[00:32:34] times cool then all we do guys we come
+[00:32:37] down go two three comment four comment
+[00:32:39] five comment six comment seven and do
+[00:32:41] this for as many comments as you want I
+[00:32:42] mean you may as well kind of just go up
+[00:32:44] to 100 to be fair it doesn't really make
+[00:32:46] a difference um so I mean like because
+[00:32:49] some of them may have but I guess the my
+[00:32:51] point would be after 100 are you really
+[00:32:53] going to get any new information from it
+[00:32:54] so I think you just somewhere between
+[00:32:56] you know 20 and 50 something like that
+[00:32:58] maybe 100 if you're fancying it if
+[00:33:00] they're particularly large posts come
+[00:33:02] down to 18 uh 19 cool
+[00:33:07] 20 and we just simply do this little
+[00:33:09] thing obviously if you put this in this
+[00:33:10] will all be ready to rock and roll for
+[00:33:12] you so you can just get
+[00:33:13] started okay Ace and then once we've
+[00:33:15] done this the magic kind of begins all
+[00:33:18] right oh so what's happened there now
+[00:33:19] it's got It's got the actual prompt that
+[00:33:21] we want we come down and it's got our
+[00:33:23] turn of voice and all of the data that
+[00:33:25] we need and then I want to come down to
+[00:33:26] show advanced
+[00:33:28] settings
+[00:33:30] okay tokens is going to be zero and then
+[00:33:32] guys scroll all the way down don't worry
+[00:33:34] about any of this stuff the response
+[00:33:35] format is going to be Json object and
+[00:33:38] then we say look I want you to pass the
+[00:33:40] Json response we love it then we click
+[00:33:43] okay now would you no we give us a name
+[00:33:44] we have to give us a name so we'll call
+[00:33:45] this
+[00:33:47] one let's call this one poster
+[00:33:50] meoo poster Magoo what seems appropriate
+[00:33:53] maybe a little bit of a guy that's
+[00:33:54] having a laughing rolling good time we
+[00:33:55] got post to meu and so if we add the web
+[00:33:57] hook my draw back in we come here for
+[00:33:59] instance create web response and all
+[00:34:01] you're going to do guys is look one two
+[00:34:05] 3 that's it and you're completely set so
+[00:34:08] all we do then is hit run once on the
+[00:34:10] scenario come back over to LinkedIn
+[00:34:12] let's just refresh the page for good
+[00:34:13] measure and we've got this a post by
+[00:34:15] Faron great LinkedIn guy doing very well
+[00:34:18] with this industry in terms of helping
+[00:34:19] people get jobs and then I'm like dude
+[00:34:21] let's just add a comment that's what it
+[00:34:22] does LinkedIn Jun does its work in the
+[00:34:23] background consistency is key love that
+[00:34:26] and guys we get we get the confetti
+[00:34:28] coming down W what an inspiring story
+[00:34:30] her perseverance dedication are truly
+[00:34:31] admirable it's a reminder that
+[00:34:33] International students often possess an
+[00:34:34] exceptional work ethic love it or this
+[00:34:36] really resonates with me International
+[00:34:38] students face immense challenges but
+[00:34:39] being on Parallel dedication to their
+[00:34:41] roles what steps can UK employers take
+[00:34:42] to recognize the leverage Talent
+[00:34:44] question mark guys that is literally
+[00:34:46] insane so why did I build this
+[00:34:48] automation cuz it's awesome and I think
+[00:34:50] it's sick and you can literally
+[00:34:51] configure this in any single way that
+[00:34:53] you'd like to and with that a mind guys
+[00:34:55] go crush it

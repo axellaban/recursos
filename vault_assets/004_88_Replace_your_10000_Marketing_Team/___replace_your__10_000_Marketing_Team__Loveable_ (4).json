@@ -1,0 +1,2119 @@
+{
+  "name": "🤩 replace your $10,000 Marketing Team (Loveable)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "4da72753-ab1b-4973-917f-23e6bdc97d23",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -60,
+        -60
+      ],
+      "id": "c260e493-146c-4f8c-a3dc-6dd0383d59d0",
+      "name": "Webhook",
+      "webhookId": "4da72753-ab1b-4973-917f-23e6bdc97d23"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ad5d6c05-07ea-407f-98be-2d9186c917a0",
+              "name": "Tone of voice",
+              "value": "=Professional.",
+              "type": "string"
+            },
+            {
+              "id": "96cb65b9-cae4-47d2-b908-214e8a337a53",
+              "name": "Topic",
+              "value": "=What does the science say about how many men it would take to defeat a gorilla?",
+              "type": "string"
+            },
+            {
+              "id": "ed7ad228-835c-4ab7-ab7e-848f329c3977",
+              "name": "Platform",
+              "value": "=LinkedIn",
+              "type": "string"
+            },
+            {
+              "id": "f9ac6a8b-a027-4b52-b363-2c820ab39cc6",
+              "name": "Avatar",
+              "value": "=Dental practice owners.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        160,
+        -60
+      ],
+      "id": "2a6b6e5b-2411-4cd3-9ee6-96a993d65b9d",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json['Tone of voice'] }}\n{{ $json.Topic }}\n{{ $json.Platform }}\n{{ $json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are a helpful assistant\n\nRole: You are a specialized Research Analyst. Your sole purpose is to identify and researcXh recent news topics relevant to a specific professional audience and compile the findings into a structured JSON output. You do not create the final content, only provide the research material.\n\nContext: You will receive details about the target audience (Avatar), the service provided to them (Problem We Solve), their location (Country), and the current timestamp. You will use the Tavily tool to search for recent news.\n\nInputs Provided:\nTarget Avatar: {{ $json.Avatar }} \nProblem We Solve: {{ $json['problem you solve'] }}\nTarget Country: UK \nCurrent Timestamp: {{ $now }}\n\nYour Task:\n1.  Determine Date Range: Use the provided Current Timestamp: {{$now}} to identify the date range covering the immediately preceding 7 days. \n2.  Identify & Research Relevant News Topics: Use the Tavily tool to scan reputable online news sources for articles/updates published within the calculated 7-day date range. Identify exactly three (3) distinct news topics that are highly relevant to the Target Avatar ({{ $json.Avatar }}) operating in the Target Country (UK). Focus on topics impacting their industry, business operations, challenges, or opportunities, particularly relating to how {{ $json['problem you solve'] }}.\n\n\n3.  Extract Key Information: For each topic, determine a concise summary, a potential angle, key details, and its relevance to the target audience based on your research.\n\nCritically, ensure these three topics offer different perspectives or focus areas related to the subject to provide genuine variety for the user.\n\nRequired Output Format:\nYour response MUST be ONLY a single, valid JSON object following this exact structure. Do NOT include any text, explanations, markdown formatting, or conversational filler before or after the JSON object. Ensure all string values within the JSON are properly escaped.\n\n{\n  \"idea_1\": {\n    \"concise_summary\": \"A brief (1-2 sentence) overview identifying the core news topic or idea found.\",\n    \"angle_approach\": \"Suggest a specific angle or hook (1-2 sentences) for framing this topic in a LinkedIn post for the Target Avatar ({{ $json.Avatar }}). Consider how it relates to {{ $json['problem you solve'] }}.\",\n    \"details\": \"List key details extracted from the research (2-4 bullet points or sentences). Include specific statistics, names, key findings, data points, source names, or update summaries mentioned in the source articles.\",\n    \"relevance\": \"Explain clearly (2-3 sentences) WHY this topic and its details are relevant and insightful for the Target Avatar ({{ $json.Avatar }}), considering their business challenges, patient acquisition, or market opportunities in the UK.\"\n  },\n  \"idea_2\": {\n    \"concise_summary\": \"A brief (1-2 sentence) overview identifying the core news topic or idea found.\",\n    \"angle_approach\": \"Suggest a specific angle or hook (1-2 sentences) for framing this topic in a LinkedIn post for the Target Avatar ({{ $json.Avatar }}). Consider how it relates to {{ $json['problem you solve'] }}.\",\n    \"details\": \"List key details extracted from the research (2-4 bullet points or sentences). Include specific statistics, names, key findings, data points, source names, or update summaries mentioned in the source articles.\",\n    \"relevance\": \"Explain clearly (2-3 sentences) WHY this topic and its details are relevant and insightful for the Target Avatar ({{ $json.Avatar }}), considering their business challenges, patient acquisition, or market opportunities in the UK.\"\n  },\n  \"idea_3\": {\n    \"concise_summary\": \"A brief (1-2 sentence) overview identifying the core news topic or idea found.\",\n    \"angle_approach\": \"Suggest a specific angle or hook (1-2 sentences) for framing this topic in a LinkedIn post for the Target Avatar ({{ $json.Avatar }}). Consider how it relates to {{ $json['problem you solve'] }}.\",\n    \"details\": \"List key details extracted from the research (2-4 bullet points or sentences). Include specific statistics, names, key findings, data points, source names, or update summaries mentioned in the source articles.\",\n    \"relevance\": \"Explain clearly (2-3 sentences) WHY this topic and its details are relevant and insightful for the Target Avatar ({{ $json.Avatar }}), considering their business challenges, patient acquisition, or market opportunities in the UK.\"\n  }\n}\n\nConstraint Checklist & Final Check:\n- Output is ONLY valid JSON.\n- Output matches the required structure with \"idea_1\", \"idea_2\", \"idea_3\" and the four fields within each: concise_summary, angle_approach, details, relevance.\n- Content is based SOLELY on the research performed using the tool within the 7-day date range.\n- No extra conversational text included."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        380,
+        -80
+      ],
+      "id": "40c63b4f-10c8-4813-a799-f61ce63d271f",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        280,
+        180
+      ],
+      "id": "3e380a39-ec55-49ff-8dff-878e10a84a3a",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this to search the internet for research",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization",
+              "valueProvider": "fieldValue",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            {
+              "name": "query"
+            },
+            {
+              "name": "max_results",
+              "valueProvider": "fieldValue",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        500,
+        180
+      ],
+      "id": "5a0e044d-0815-452b-882c-f2b363f0ad11",
+      "name": "Tavily"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"idea_1\": {\n    \"concise_summary\": \"Brief overview of the first topic (e.g., New NHS practice openings announced in Somerset).\",\n    \"angle_approach\": \"Angle suggestion (e.g., Highlight growing demand, opportunity for private practices to fill gaps or differentiate).\",\n    \"details\": \"Key facts found (e.g., Practices in Chard/Crewkerne. Part of national access improvement effort. Source: BBC News, April 28).\",\n    \"relevance\": \"Why it matters (e.g., Confirms high demand. Practices can leverage this news to promote their availability or specialized services).\"\n  },\n  \"idea_2\": {\n    \"concise_summary\": \"Brief overview of the second topic.\",\n    \"angle_approach\": \"Angle suggestion for topic 2.\",\n    \"details\": \"Key facts found for topic 2 (e.g., Specific stat mentioned, expert quoted from Dentistry.co.uk).\",\n    \"relevance\": \"Why topic 2 matters to UK dental practices seeking customers.\"\n  },\n  \"idea_3\": {\n    \"concise_summary\": \"Brief overview of the third topic.\",\n    \"angle_approach\": \"Angle suggestion for topic 3.\",\n    \"details\": \"Key facts found for topic 3.\",\n    \"relevance\": \"Why topic 3 matters for practice growth or patient communication.\"\n  }\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        680,
+        180
+      ],
+      "id": "0f870afb-1d6a-4949-988f-bfa39e4489b3",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the AI Agent's output data (current item for the Code node)\nconst aiAgentOutputItem = items[0];\n// Assuming the AI output {idea_1:...} is directly in the json property\nconst ideasObject = aiAgentOutputItem.json;\n\n// *** Get context data from the 'Edit Fields' node using the new expressions ***\n// We assume the node is named 'Edit Fields'. If not, update the name within the $() calls.\n// We also use .first() to ensure we get the item from the first run if the node ran multiple times.\n// Using try-catch block for better error handling around accessing node data.\nlet contextDataJson;\ntry {\n    // Attempt to get the JSON data from the 'Edit Fields' node's first item\n    contextDataJson = $('Edit Fields').first().json;\n\n    // Check if context data JSON exists after retrieval\n    if (!contextDataJson) {\n        throw new Error(\"JSON data is missing from the 'Edit Fields' node's first item.\");\n    }\n} catch (error) {\n    console.error(`Error accessing data from node 'Edit Fields': ${error.message}`);\n    // Depending on requirements, you might want to throw the error again\n    // or return an empty array if context is absolutely required.\n    throw new Error(`Could not retrieve valid JSON data from node 'Edit Fields'. Please check the node name and ensure it ran successfully and produced JSON output. Original error: ${error.message}`);\n}\n\n\nconst newItems = []; // Array to hold the new items\n\n// Check if ideasObject exists and is an object\nif (!ideasObject || typeof ideasObject !== 'object' || Object.keys(ideasObject).length === 0) {\n    console.warn(\"Input 'ideasObject' is missing, not an object, or empty:\", JSON.stringify(aiAgentOutputItem.json));\n    // Return empty array if there are no ideas to process\n    return [];\n}\n\n// Loop through each idea provided by the AI Agent\nfor (const ideaKey in ideasObject) {\n    // Ensure we are iterating over own properties, not inherited ones\n    if (ideasObject.hasOwnProperty(ideaKey)) {\n        const ideaData = ideasObject[ideaKey]; // The specific idea's data (summary, angle, etc.)\n\n        // Ensure ideaData is valid (e.g., an object) before processing\n        if (ideaData && typeof ideaData === 'object') {\n\n            // Combine the specific idea data and the context data using the new expressions\n            const combinedData = {\n                ...ideaData, // Spread the idea data (summary, angle, details, relevance)\n\n                // Add context fields using the new expressions.\n                // Using nullish coalescing (??) provides a default empty string if a field is missing.\n                'Tone of voice': contextDataJson['Tone of voice'] ?? '', // Accessing with brackets for space\n                'Topic': contextDataJson.Topic ?? '',                     // Added Topic\n                'Platform': contextDataJson.Platform ?? '',               // Added Platform\n                'Avatar': contextDataJson.Avatar ?? '',\n                'problem you solve': contextDataJson['problem you solve'] ?? '', // Keep existing ones if needed\n                'CTA': contextDataJson.CTA ?? '',\n                'Make Content on': contextDataJson['Make Content on'] ?? '' // Keep existing ones if needed\n            };\n\n            // Create the new item structure expected by the workflow\n            newItems.push({ json: combinedData });\n\n        } else {\n            // Log a warning if data for a specific idea key isn't valid\n            console.warn(`Data for idea key \"${ideaKey}\" is not a valid object, skipping item creation. Data received:`, JSON.stringify(ideaData));\n        }\n    }\n}\n\n// Check if any items were actually created before returning\nif (newItems.length === 0) {\n    console.warn(\"No valid idea items were created from the input ideasObject. Check the AI output and the loop logic.\");\n}\n\n// Return the array of newly structured items\nreturn newItems;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        800,
+        -60
+      ],
+      "id": "50955432-6b7e-4453-a6a3-970918c85ad9",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "content": "# 🤖 AI Agent",
+        "height": 600,
+        "width": 1160
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -120,
+        -200
+      ],
+      "typeVersion": 1,
+      "id": "e61340bb-b9a8-460b-8fb7-016a93f7b84a",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "# 🔥 LinkedIN 1",
+        "height": 380,
+        "width": 440,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1300,
+        -860
+      ],
+      "typeVersion": 1,
+      "id": "b43ba03f-e0b9-49c0-b20c-7cb083fe5303",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=\"post_1\": \"{{ $json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_2\": \"{{ $('AI Agent2').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_3\": \"{{ $('AI Agent1').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}",
+              "role": "assistant"
+            },
+            {
+              "content": "=Role: You are an expert AI that transforms impactful article insights into vivid Ghibli-style image prompts for generative AI.\n\nContext: You will be given the full text of an article relevant to a professional audience (e.g., UK Dental Practices). Your task is to extract the single most compelling statistic, number, or key insight—and use it to create a natural-language image prompt in the style of Studio Ghibli.\n\nInput:\n\n[The full text of the article will be provided here by the system calling you.]\n\nYour Task:\n\nRead the article thoroughly.\n\nIdentify the most striking statistic or central idea, preferably a number or action (e.g., “17 doctors left,” “45% drop in funding,” etc.).\n\nGenerate a Studio Ghibli-style image prompt describing a soft, whimsical, emotionally resonant scene featuring a human character that embodies or reacts to the insight, with a symbolic or literal environment in the background.\n\nWrite the prompt as a single sentence, in the format suitable for a text-to-image model (e.g., “Create a Ghibli-style illustration of...”).\n\nOutput Format:\n\nReturn ONLY the resulting Ghibli-style image prompt as plain text. Do not include any explanation, summary, or extra formatting—just the prompt."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        3260,
+        -740
+      ],
+      "id": "e54eb420-4f23-46a4-afb1-c02bae8cc2ea",
+      "name": "Image Prompter",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gpt-image-1\",\n  \"prompt\": \"{{ $json.message.content }}\",\n  \"n\": 1,\n  \"size\": \"1024x1024\",\n  \"quality\": \"high\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3640,
+        -740
+      ],
+      "id": "8d1c8001-85d7-432e-aded-a0d981086df5",
+      "name": "💎 Generate Images",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dbda83f8-5ec1-4f86-ba96-7da9385bd058",
+              "name": "B64",
+              "value": "={{ $json.data[0].b64_json }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3860,
+        -740
+      ],
+      "id": "809e81c1-4d1e-4109-ac7b-b14c282273e7",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const base64String = $json.B64;\n\nconst binaryData = Buffer.from(base64String, 'base64');\n\nreturn {\n  binary: {\n    data: {\n      data: binaryData,\n      mimeType: 'image/png',\n      fileName: 'generated-image.png'\n    }\n  }\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4080,
+        -740
+      ],
+      "id": "49d36f86-2495-4d10-a11d-ebd2ff54ef81",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "=data",
+        "name": "={{$binary.data.fileName}}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1C_XDP-G0rh7WRAnWMxhYM14giPFHQJlO",
+          "mode": "list",
+          "cachedResultName": "lOVEABLE images",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1C_XDP-G0rh7WRAnWMxhYM14giPFHQJlO"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        4280,
+        -740
+      ],
+      "id": "f68e4c01-c1dd-4aca-86b3-6c487cdf6897",
+      "name": "Google Drive",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "Your image is ready",
+        "message": "=Hey, here's the link: {{ $json.webContentLink }}",
+        "options": {
+          "sendTo": "INSERT EMAIL"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        4500,
+        -740
+      ],
+      "id": "54aca12a-37dd-4c4f-821a-77f3edb40bb8",
+      "name": "Gmail",
+      "webhookId": "c4580122-d2a0-44ac-8580-3789016494eb",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🔥 LinkedIN 3",
+        "height": 380,
+        "width": 440,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2360,
+        -860
+      ],
+      "typeVersion": 1,
+      "id": "ed659f53-d050-42a1-aee3-905d2ca476ad",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "# 🔥 LinkedIN 2",
+        "height": 380,
+        "width": 440,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1840,
+        -860
+      ],
+      "typeVersion": 1,
+      "id": "ea096f87-cabc-4a35-b433-82bdf26708a8",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_1.concise_summary }}\n{{ $json.idea_1.angle_approach }}\n{{ $json.idea_1.details }}\n{{ $json.idea_1.relevance }}\n\n{{ $json.Topic }}\n{{ $json['Tone of voice'] }}\n{{ $json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed LinkedIn expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized LinkedIn post based on the Input Topic Data above, incorporating LinkedIn posting best practices and using the structure outlined below:\n\n1.  **Provide the Context or Main Idea:** Start with a brief summary or main point based on the `Concise Summary` and `Relevance` provided. This includes the key message or argument. Use the `Suggested Angle / Hook` to make the opening engaging.\n2.  **Add Personal or Relatable Anecdotes:** If appropriate for the tone and topic, include any relatable anecdotes that connect the context or main idea to real-life scenarios for the `Target Audience`.\n3.  **Incorporate Engaging Elements:** Make the post engaging by using:\n    * Questions to the audience (`Target Audience`) to provoke thought or responses related to the topic.\n    * Compelling statistics or data points from the `Key Details` to support the argument.\n    * Calls to action (subtly leading towards `{{ $json.CTA }}`) encouraging readers to think, act, or share their own experiences.\n    * Relevant emojis or symbols (if fitting the tone) for emphasis and to draw attention to key points.\n4.  **Specify Hashtags and Keywords:** At the very end of the post, provide a list of 3-5 relevant hashtags/keywords to enhance visibility. Generate these based on the topic details and relevance (e.g., #UKDentistry #DentalPractice #PatientAcquisition #[RelevantTopicKeyword]).\n5.  **Optional Additional Details:** Consider if a specific layout (like a list based on `Key Details`, or a comparison) would enhance the post, referencing the examples below for inspiration.\n6.  **No URL:** Do not include the original URL from the research. The post must stand alone.\n7.  **No Prompt Text:** Do not include any part of this prompt or these guidelines in your final output. You must include only what is needed to create an excellent LinkedIn post according to these instructions.\n8.  **Subtle CTA Implementation:** Ensure you naturally weave in a subtle Call to Action related to the `Subtle CTA Goal` (`{{ $json.CTA }}`) towards the end of the post.\n\n**Here are a few examples of excellent LinkedIN posts for inspiration on structure, engagement, and tone (adapt content to the specific topic data provided):**\n\n\n\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nYou will create an optimized LinkedIn post based on that article, incorporating LinkedIn posting best practices and using the structure outlined below:\n \n1. Provide the Context or Main Idea: Start with a brief summary or main point of the article you want to transform into a LinkedIn post. This includes the key message or argument the article presents.\n2. Add Personal or Relatable Anecdotes: If appropriate, include any personal experiences or relatable anecdotes that can connect the context or main idea to real-life scenarios. This could be your own experiences or generalized scenarios that readers might find relatable.\n3. Incorporate Engaging Elements: Mention any specific elements you want included to make the post engaging, such as:\n   1. Questions to the audience to provoke thought or responses.\n   2. Compelling statistics or data points to support the argument.\n   3. Calls to action, encouraging readers to think, act, or share their own experiences.\n   4. Relevant emojis or symbols for emphasis and to draw attention to key points.\n4. Specify Hashtags and Keywords: Provide a list of hashtags or important keywords that should be included to enhance the visibility and relevance of the post on LinkedIn. These should be relevant to the main theme and helpful for reaching the right audience.\n5. Optional Additional Details: If there are any other specific details you want included, such as references to significant life events (as seen in your examples), or if there’s a specific layout or structure (like a list format or a direct comparison), mention these as well.\n6. Do not include the original URL at the bottom of the article. It should read as a complete LinkedIN post on its own merits, like the below examples.\n7. Do not include any any of this prompt or guidelines provided in your post. You must include only what is in your instructions to create an excellent linkedIN post\n \nHere are a few examples of excellent LinkedIN posts\n \nExample 1\nIs anyone still actually debating work from home options?\n \nAt previous companies, I used to put on a pressed shirt and slacks and drive 35 minutes to an office that smelled of cleaning product and coffee.\n \nI wasn’t comfortable for the entire day. If I felt tired and needed a break - too bad, look busy.\n \nIf I wanted to just get up and leave for 20 mins to collect my thoughts or be outside - too bad, look busy.\n \nNow I’ll have breakfast with my wife and kids and start work relatively early. I go outside and hit golf balls against a net when I need to think. I listen to podcasts at full volume. I sing.\n \nI take a gosh darn peloton break if I feel like it. I have never been more productive, because this is how humans thrive.\n \nAnd when I miss my work friends and general contact, which I do from time to time, I’ll head up to HQ and see them.\n \nAny employer dictating in-office work doesn’t trust you to be an adult and do your job. The option should be there - but it must actually be optional.\n \n#work #workfromhome #mentalhealth #peloton\n \nExample 2\n \nI recently discovered a hyper-effective LinkedIn post strategy.\n \nAnd today, I'm gonna let you steal it.\n \nHere it is:\n \nCombine significant life events with useful content.\n \n\"I turn 32 today. Here are 32 things I wish I knew 10 years ago:\"\n \n\"My business hit $1 million ARR today. Here's how I built it:\"\n \n\"I was offered my dream job today. Here are 7 steps I took to get it:\"\n \nThe event attracts engagement and the content attracts followers.\n \nTry it.\n \nP.S. 👇\n \n \nExample 3\n \nJust a quick shout out to content creators! If you see less impressions and lower reach, it's probably not just you.\n \nWe've seen a serious decrease in impressions in the last month, with equal engagement.\nThese are some numbers but we are still researching:\n \n🔻 -25% (!) on posts with more or less same engagement (likes and comments)\n🔻 -30% less impressions for text only posts\n🔻 -20% reach for document posts\n🔻 -35% reach for Newsletters (with over 15.000 subscribers)\n \nMore data will follow in September, but my own stats went down from 18.000 average impressions per post to 14.000 average.\n \n❓ Have you had similar experiences?\n❓ What content performs the best for you?\n \nExample 4\n\"We are hiring,\" \"Join our team,\" \"Here are our open positions.\"\n \nIf this is the way you are communicating your job ads on Linkedin, you are losing candidates. Here is why 👇\n \nYour post will only attract people actively looking for a new job. And usually, that is a minority.\nYou are failing to attract 3 relevant audiences.\n \nFirst, people who are not actively looking for a new job but could be interested in seeing what you are offering. They could consider applying or approaching you for more information if you get their attention.\n \nSecond, the friends and family of potential candidates. If you get their attention, they will refer your post to those interested.\n \nThird, people who are not interested in this particular job, but might decide to visit your careers page and find another position that is a better fit.\n \nIn addition, never lose sight of how people perceive you and your company. If you don't show that you care about your open position, why should the candidates?\n \nA few extra minutes of your time can make a big difference in attracting talent.\n \n \nExample 5\n \nA lot of Marketers assume SEO ranks are stable.\n \nOnce you rank #1 (or any position for that purpose), you \"made it\" and will stay there with a little maintenance work.\n \nIt makes sense to think that way because that's how it used to be.\n \nBut not anymore.\n \nAn example: the ranks for \"black dress\" (a keyword with 209,000 monthly searches in the US alone) flip almost daily.\n \nThe top 3 results have been bouncing between positions #1 and #7 over the last 6 months.\nWe need to anticipate rank fluctuations and define healthy position ranges, so we can optimize pages when they rank outside them.\n \nStart by monitoring rank fluctuations for your keywords, either in a 3rd party tool like Semrush or Ahrefs or with Google Search Console.\n \nA few more tips:\n \n1/ Analyze your top keywords and how much they fluctuate (will differ by competitiveness, user intent, etc.)\n \n2/ Add rank fluctuations to your organic traffic projections\n \n3/ Define alerts when keywords cross healthy rank ranges (most rank trackers can do this)\nRemember, using the outdated mental model of stable ranks means your traffic projections might be faulty and you constantly stress out over dropping ranks.\n \nGoogle is constantly a/b testing different results.\n \nUse the approach above and build a model for your site.\n \n \nExample 6\nRunning a company is a lot like making a great cup of coffee ☕️\n \n1) Start by deciding what kind of coffee you would like to make and creating the recipe (think: “vision”).\n \n2) Bring together the best ingredients you can. A better the coffee beans, grinder, filter, etc. will make a far better coffee. Same with the team at your company. You’re only as good as your weakest team member.\n \n3) Measure everything, test, and continually optimise over time.\n \n4) Be patient, and don’t rush it (this one is for me!!).\n \n5) Enjoy the results!\n \nWhat am I missing here?!\n \n#b2b #growth #marketing #buildinpublic #coffee\n \n \nExample 7\n \nThe UK can't afford to be left behind during this Fourth Industrial Revolution for the sake of the wealth of the nation, and its citizens.\n \n⏰ In a world of exponential change, hesitation is a recipe for irrelevance.\n \n🤔 You might doubt the transformative power of AI, but can you/we afford to be wrong given the compounding cost of inaction?\n \n🌍 Other nations are seizing this opportunity - the UK must do the same.\n \n🇬🇧 The UK should maintain its leadership in innovation, support entrepreneurship, and seek to maximise inclusivity.\n \n📢 This is my call to action - we must unite, invest, and embrace the AI revolution.\n \n🚢 The AI ship will leave the harbour, permanently. Let's make sure the UK is on it.\n \nhashtag#AI hashtag#artificialintelligence hashtag#uk hashtag#ukeconomy\n\n\n\n---\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized LinkedIn post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1400,
+        -740
+      ],
+      "id": "24eb58ff-12b6-4477-a5e0-c846da741693",
+      "name": "AI Agent1"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1560,
+        -440
+      ],
+      "id": "89d16db9-e6cc-4f50-9993-0b891a7296aa",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1360,
+        -540
+      ],
+      "id": "033a4a84-4639-4a23-8aa6-eedec4cc6fbf",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_2.concise_summary }}\n{{ $json.idea_2.angle_approach }}\n{{ $json.idea_2.details }}\n{{ $json.idea_2.relevance }}\n\n\n{{ $('Code').item.json['Tone of voice'] }}\n{{ $('Code').item.json.Topic }}\n{{ $('Code').item.json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed LinkedIn expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized LinkedIn post based on the Input Topic Data above, incorporating LinkedIn posting best practices and using the structure outlined below:\n\n1.  **Provide the Context or Main Idea:** Start with a brief summary or main point based on the `Concise Summary` and `Relevance` provided. This includes the key message or argument. Use the `Suggested Angle / Hook` to make the opening engaging.\n2.  **Add Personal or Relatable Anecdotes:** If appropriate for the tone and topic, include any relatable anecdotes that connect the context or main idea to real-life scenarios for the `Target Audience`.\n3.  **Incorporate Engaging Elements:** Make the post engaging by using:\n    * Questions to the audience (`Target Audience`) to provoke thought or responses related to the topic.\n    * Compelling statistics or data points from the `Key Details` to support the argument.\n    * Calls to action (subtly leading towards `{{ $json.CTA }}`) encouraging readers to think, act, or share their own experiences.\n    * Relevant emojis or symbols (if fitting the tone) for emphasis and to draw attention to key points.\n4.  **Specify Hashtags and Keywords:** At the very end of the post, provide a list of 3-5 relevant hashtags/keywords to enhance visibility. Generate these based on the topic details and relevance (e.g., #UKDentistry #DentalPractice #PatientAcquisition #[RelevantTopicKeyword]).\n5.  **Optional Additional Details:** Consider if a specific layout (like a list based on `Key Details`, or a comparison) would enhance the post, referencing the examples below for inspiration.\n6.  **No URL:** Do not include the original URL from the research. The post must stand alone.\n7.  **No Prompt Text:** Do not include any part of this prompt or these guidelines in your final output. You must include only what is needed to create an excellent LinkedIn post according to these instructions.\n8.  **Subtle CTA Implementation:** Ensure you naturally weave in a subtle Call to Action related to the `Subtle CTA Goal` (`{{ $json.CTA }}`) towards the end of the post.\n\n**Here are a few examples of excellent LinkedIN posts for inspiration on structure, engagement, and tone (adapt content to the specific topic data provided):**\n\n\n\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nYou will create an optimized LinkedIn post based on that article, incorporating LinkedIn posting best practices and using the structure outlined below:\n \n1. Provide the Context or Main Idea: Start with a brief summary or main point of the article you want to transform into a LinkedIn post. This includes the key message or argument the article presents.\n2. Add Personal or Relatable Anecdotes: If appropriate, include any personal experiences or relatable anecdotes that can connect the context or main idea to real-life scenarios. This could be your own experiences or generalized scenarios that readers might find relatable.\n3. Incorporate Engaging Elements: Mention any specific elements you want included to make the post engaging, such as:\n   1. Questions to the audience to provoke thought or responses.\n   2. Compelling statistics or data points to support the argument.\n   3. Calls to action, encouraging readers to think, act, or share their own experiences.\n   4. Relevant emojis or symbols for emphasis and to draw attention to key points.\n4. Specify Hashtags and Keywords: Provide a list of hashtags or important keywords that should be included to enhance the visibility and relevance of the post on LinkedIn. These should be relevant to the main theme and helpful for reaching the right audience.\n5. Optional Additional Details: If there are any other specific details you want included, such as references to significant life events (as seen in your examples), or if there’s a specific layout or structure (like a list format or a direct comparison), mention these as well.\n6. Do not include the original URL at the bottom of the article. It should read as a complete LinkedIN post on its own merits, like the below examples.\n7. Do not include any any of this prompt or guidelines provided in your post. You must include only what is in your instructions to create an excellent linkedIN post\n \nHere are a few examples of excellent LinkedIN posts\n \nExample 1\nIs anyone still actually debating work from home options?\n \nAt previous companies, I used to put on a pressed shirt and slacks and drive 35 minutes to an office that smelled of cleaning product and coffee.\n \nI wasn’t comfortable for the entire day. If I felt tired and needed a break - too bad, look busy.\n \nIf I wanted to just get up and leave for 20 mins to collect my thoughts or be outside - too bad, look busy.\n \nNow I’ll have breakfast with my wife and kids and start work relatively early. I go outside and hit golf balls against a net when I need to think. I listen to podcasts at full volume. I sing.\n \nI take a gosh darn peloton break if I feel like it. I have never been more productive, because this is how humans thrive.\n \nAnd when I miss my work friends and general contact, which I do from time to time, I’ll head up to HQ and see them.\n \nAny employer dictating in-office work doesn’t trust you to be an adult and do your job. The option should be there - but it must actually be optional.\n \n#work #workfromhome #mentalhealth #peloton\n \nExample 2\n \nI recently discovered a hyper-effective LinkedIn post strategy.\n \nAnd today, I'm gonna let you steal it.\n \nHere it is:\n \nCombine significant life events with useful content.\n \n\"I turn 32 today. Here are 32 things I wish I knew 10 years ago:\"\n \n\"My business hit $1 million ARR today. Here's how I built it:\"\n \n\"I was offered my dream job today. Here are 7 steps I took to get it:\"\n \nThe event attracts engagement and the content attracts followers.\n \nTry it.\n \nP.S. 👇\n \n \nExample 3\n \nJust a quick shout out to content creators! If you see less impressions and lower reach, it's probably not just you.\n \nWe've seen a serious decrease in impressions in the last month, with equal engagement.\nThese are some numbers but we are still researching:\n \n🔻 -25% (!) on posts with more or less same engagement (likes and comments)\n🔻 -30% less impressions for text only posts\n🔻 -20% reach for document posts\n🔻 -35% reach for Newsletters (with over 15.000 subscribers)\n \nMore data will follow in September, but my own stats went down from 18.000 average impressions per post to 14.000 average.\n \n❓ Have you had similar experiences?\n❓ What content performs the best for you?\n \nExample 4\n\"We are hiring,\" \"Join our team,\" \"Here are our open positions.\"\n \nIf this is the way you are communicating your job ads on Linkedin, you are losing candidates. Here is why 👇\n \nYour post will only attract people actively looking for a new job. And usually, that is a minority.\nYou are failing to attract 3 relevant audiences.\n \nFirst, people who are not actively looking for a new job but could be interested in seeing what you are offering. They could consider applying or approaching you for more information if you get their attention.\n \nSecond, the friends and family of potential candidates. If you get their attention, they will refer your post to those interested.\n \nThird, people who are not interested in this particular job, but might decide to visit your careers page and find another position that is a better fit.\n \nIn addition, never lose sight of how people perceive you and your company. If you don't show that you care about your open position, why should the candidates?\n \nA few extra minutes of your time can make a big difference in attracting talent.\n \n \nExample 5\n \nA lot of Marketers assume SEO ranks are stable.\n \nOnce you rank #1 (or any position for that purpose), you \"made it\" and will stay there with a little maintenance work.\n \nIt makes sense to think that way because that's how it used to be.\n \nBut not anymore.\n \nAn example: the ranks for \"black dress\" (a keyword with 209,000 monthly searches in the US alone) flip almost daily.\n \nThe top 3 results have been bouncing between positions #1 and #7 over the last 6 months.\nWe need to anticipate rank fluctuations and define healthy position ranges, so we can optimize pages when they rank outside them.\n \nStart by monitoring rank fluctuations for your keywords, either in a 3rd party tool like Semrush or Ahrefs or with Google Search Console.\n \nA few more tips:\n \n1/ Analyze your top keywords and how much they fluctuate (will differ by competitiveness, user intent, etc.)\n \n2/ Add rank fluctuations to your organic traffic projections\n \n3/ Define alerts when keywords cross healthy rank ranges (most rank trackers can do this)\nRemember, using the outdated mental model of stable ranks means your traffic projections might be faulty and you constantly stress out over dropping ranks.\n \nGoogle is constantly a/b testing different results.\n \nUse the approach above and build a model for your site.\n \n \nExample 6\nRunning a company is a lot like making a great cup of coffee ☕️\n \n1) Start by deciding what kind of coffee you would like to make and creating the recipe (think: “vision”).\n \n2) Bring together the best ingredients you can. A better the coffee beans, grinder, filter, etc. will make a far better coffee. Same with the team at your company. You’re only as good as your weakest team member.\n \n3) Measure everything, test, and continually optimise over time.\n \n4) Be patient, and don’t rush it (this one is for me!!).\n \n5) Enjoy the results!\n \nWhat am I missing here?!\n \n#b2b #growth #marketing #buildinpublic #coffee\n \n \nExample 7\n \nThe UK can't afford to be left behind during this Fourth Industrial Revolution for the sake of the wealth of the nation, and its citizens.\n \n⏰ In a world of exponential change, hesitation is a recipe for irrelevance.\n \n🤔 You might doubt the transformative power of AI, but can you/we afford to be wrong given the compounding cost of inaction?\n \n🌍 Other nations are seizing this opportunity - the UK must do the same.\n \n🇬🇧 The UK should maintain its leadership in innovation, support entrepreneurship, and seek to maximise inclusivity.\n \n📢 This is my call to action - we must unite, invest, and embrace the AI revolution.\n \n🚢 The AI ship will leave the harbour, permanently. Let's make sure the UK is on it.\n \nhashtag#AI hashtag#artificialintelligence hashtag#uk hashtag#ukeconomy\n\n\n\n---\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized LinkedIn post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1920,
+        -740
+      ],
+      "id": "4a75c0a0-d531-4eea-ad93-6eea15bc1bdf",
+      "name": "AI Agent2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_3.concise_summary }}\n{{ $json.idea_3.angle_approach }}\n{{ $json.idea_3.details }}\n{{ $json.idea_3.relevance }}\n\n\n{{ $('Code').item.json.Topic }}\n{{ $('Code').item.json.Avatar }}\n{{ $('Code').item.json['Tone of voice'] }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed LinkedIn expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized LinkedIn post based on the Input Topic Data above, incorporating LinkedIn posting best practices and using the structure outlined below:\n\n1.  **Provide the Context or Main Idea:** Start with a brief summary or main point based on the `Concise Summary` and `Relevance` provided. This includes the key message or argument. Use the `Suggested Angle / Hook` to make the opening engaging.\n2.  **Add Personal or Relatable Anecdotes:** If appropriate for the tone and topic, include any relatable anecdotes that connect the context or main idea to real-life scenarios for the `Target Audience`.\n3.  **Incorporate Engaging Elements:** Make the post engaging by using:\n    * Questions to the audience (`Target Audience`) to provoke thought or responses related to the topic.\n    * Compelling statistics or data points from the `Key Details` to support the argument.\n    * Calls to action (subtly leading towards `{{ $json.CTA }}`) encouraging readers to think, act, or share their own experiences.\n    * Relevant emojis or symbols (if fitting the tone) for emphasis and to draw attention to key points.\n4.  **Specify Hashtags and Keywords:** At the very end of the post, provide a list of 3-5 relevant hashtags/keywords to enhance visibility. Generate these based on the topic details and relevance (e.g., #UKDentistry #DentalPractice #PatientAcquisition #[RelevantTopicKeyword]).\n5.  **Optional Additional Details:** Consider if a specific layout (like a list based on `Key Details`, or a comparison) would enhance the post, referencing the examples below for inspiration.\n6.  **No URL:** Do not include the original URL from the research. The post must stand alone.\n7.  **No Prompt Text:** Do not include any part of this prompt or these guidelines in your final output. You must include only what is needed to create an excellent LinkedIn post according to these instructions.\n8.  **Subtle CTA Implementation:** Ensure you naturally weave in a subtle Call to Action related to the `Subtle CTA Goal` (`{{ $json.CTA }}`) towards the end of the post.\n\n**Here are a few examples of excellent LinkedIN posts for inspiration on structure, engagement, and tone (adapt content to the specific topic data provided):**\n\n\n\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nYou will create an optimized LinkedIn post based on that article, incorporating LinkedIn posting best practices and using the structure outlined below:\n \n1. Provide the Context or Main Idea: Start with a brief summary or main point of the article you want to transform into a LinkedIn post. This includes the key message or argument the article presents.\n2. Add Personal or Relatable Anecdotes: If appropriate, include any personal experiences or relatable anecdotes that can connect the context or main idea to real-life scenarios. This could be your own experiences or generalized scenarios that readers might find relatable.\n3. Incorporate Engaging Elements: Mention any specific elements you want included to make the post engaging, such as:\n   1. Questions to the audience to provoke thought or responses.\n   2. Compelling statistics or data points to support the argument.\n   3. Calls to action, encouraging readers to think, act, or share their own experiences.\n   4. Relevant emojis or symbols for emphasis and to draw attention to key points.\n4. Specify Hashtags and Keywords: Provide a list of hashtags or important keywords that should be included to enhance the visibility and relevance of the post on LinkedIn. These should be relevant to the main theme and helpful for reaching the right audience.\n5. Optional Additional Details: If there are any other specific details you want included, such as references to significant life events (as seen in your examples), or if there’s a specific layout or structure (like a list format or a direct comparison), mention these as well.\n6. Do not include the original URL at the bottom of the article. It should read as a complete LinkedIN post on its own merits, like the below examples.\n7. Do not include any any of this prompt or guidelines provided in your post. You must include only what is in your instructions to create an excellent linkedIN post\n \nHere are a few examples of excellent LinkedIN posts\n \nExample 1\nIs anyone still actually debating work from home options?\n \nAt previous companies, I used to put on a pressed shirt and slacks and drive 35 minutes to an office that smelled of cleaning product and coffee.\n \nI wasn’t comfortable for the entire day. If I felt tired and needed a break - too bad, look busy.\n \nIf I wanted to just get up and leave for 20 mins to collect my thoughts or be outside - too bad, look busy.\n \nNow I’ll have breakfast with my wife and kids and start work relatively early. I go outside and hit golf balls against a net when I need to think. I listen to podcasts at full volume. I sing.\n \nI take a gosh darn peloton break if I feel like it. I have never been more productive, because this is how humans thrive.\n \nAnd when I miss my work friends and general contact, which I do from time to time, I’ll head up to HQ and see them.\n \nAny employer dictating in-office work doesn’t trust you to be an adult and do your job. The option should be there - but it must actually be optional.\n \n#work #workfromhome #mentalhealth #peloton\n \nExample 2\n \nI recently discovered a hyper-effective LinkedIn post strategy.\n \nAnd today, I'm gonna let you steal it.\n \nHere it is:\n \nCombine significant life events with useful content.\n \n\"I turn 32 today. Here are 32 things I wish I knew 10 years ago:\"\n \n\"My business hit $1 million ARR today. Here's how I built it:\"\n \n\"I was offered my dream job today. Here are 7 steps I took to get it:\"\n \nThe event attracts engagement and the content attracts followers.\n \nTry it.\n \nP.S. 👇\n \n \nExample 3\n \nJust a quick shout out to content creators! If you see less impressions and lower reach, it's probably not just you.\n \nWe've seen a serious decrease in impressions in the last month, with equal engagement.\nThese are some numbers but we are still researching:\n \n🔻 -25% (!) on posts with more or less same engagement (likes and comments)\n🔻 -30% less impressions for text only posts\n🔻 -20% reach for document posts\n🔻 -35% reach for Newsletters (with over 15.000 subscribers)\n \nMore data will follow in September, but my own stats went down from 18.000 average impressions per post to 14.000 average.\n \n❓ Have you had similar experiences?\n❓ What content performs the best for you?\n \nExample 4\n\"We are hiring,\" \"Join our team,\" \"Here are our open positions.\"\n \nIf this is the way you are communicating your job ads on Linkedin, you are losing candidates. Here is why 👇\n \nYour post will only attract people actively looking for a new job. And usually, that is a minority.\nYou are failing to attract 3 relevant audiences.\n \nFirst, people who are not actively looking for a new job but could be interested in seeing what you are offering. They could consider applying or approaching you for more information if you get their attention.\n \nSecond, the friends and family of potential candidates. If you get their attention, they will refer your post to those interested.\n \nThird, people who are not interested in this particular job, but might decide to visit your careers page and find another position that is a better fit.\n \nIn addition, never lose sight of how people perceive you and your company. If you don't show that you care about your open position, why should the candidates?\n \nA few extra minutes of your time can make a big difference in attracting talent.\n \n \nExample 5\n \nA lot of Marketers assume SEO ranks are stable.\n \nOnce you rank #1 (or any position for that purpose), you \"made it\" and will stay there with a little maintenance work.\n \nIt makes sense to think that way because that's how it used to be.\n \nBut not anymore.\n \nAn example: the ranks for \"black dress\" (a keyword with 209,000 monthly searches in the US alone) flip almost daily.\n \nThe top 3 results have been bouncing between positions #1 and #7 over the last 6 months.\nWe need to anticipate rank fluctuations and define healthy position ranges, so we can optimize pages when they rank outside them.\n \nStart by monitoring rank fluctuations for your keywords, either in a 3rd party tool like Semrush or Ahrefs or with Google Search Console.\n \nA few more tips:\n \n1/ Analyze your top keywords and how much they fluctuate (will differ by competitiveness, user intent, etc.)\n \n2/ Add rank fluctuations to your organic traffic projections\n \n3/ Define alerts when keywords cross healthy rank ranges (most rank trackers can do this)\nRemember, using the outdated mental model of stable ranks means your traffic projections might be faulty and you constantly stress out over dropping ranks.\n \nGoogle is constantly a/b testing different results.\n \nUse the approach above and build a model for your site.\n \n \nExample 6\nRunning a company is a lot like making a great cup of coffee ☕️\n \n1) Start by deciding what kind of coffee you would like to make and creating the recipe (think: “vision”).\n \n2) Bring together the best ingredients you can. A better the coffee beans, grinder, filter, etc. will make a far better coffee. Same with the team at your company. You’re only as good as your weakest team member.\n \n3) Measure everything, test, and continually optimise over time.\n \n4) Be patient, and don’t rush it (this one is for me!!).\n \n5) Enjoy the results!\n \nWhat am I missing here?!\n \n#b2b #growth #marketing #buildinpublic #coffee\n \n \nExample 7\n \nThe UK can't afford to be left behind during this Fourth Industrial Revolution for the sake of the wealth of the nation, and its citizens.\n \n⏰ In a world of exponential change, hesitation is a recipe for irrelevance.\n \n🤔 You might doubt the transformative power of AI, but can you/we afford to be wrong given the compounding cost of inaction?\n \n🌍 Other nations are seizing this opportunity - the UK must do the same.\n \n🇬🇧 The UK should maintain its leadership in innovation, support entrepreneurship, and seek to maximise inclusivity.\n \n📢 This is my call to action - we must unite, invest, and embrace the AI revolution.\n \n🚢 The AI ship will leave the harbour, permanently. Let's make sure the UK is on it.\n \nhashtag#AI hashtag#artificialintelligence hashtag#uk hashtag#ukeconomy\n\n\n\n---\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized LinkedIn post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        2460,
+        -740
+      ],
+      "id": "1bfb06e2-de82-4c8f-8dce-bb406e042389",
+      "name": "AI Agent3"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1880,
+        -480
+      ],
+      "id": "dec831b6-89e6-45e7-accd-96607e2a796f",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2480,
+        -520
+      ],
+      "id": "45f11bdd-7acc-44e7-976f-9bad9ec52080",
+      "name": "OpenAI Chat Model3",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2100,
+        -520
+      ],
+      "id": "920624dd-6808-4028-bed4-53b38e497908",
+      "name": "Structured Output Parser2"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2640,
+        -520
+      ],
+      "id": "79107ee9-8cf0-4776-911f-b2742ec192ba",
+      "name": "Structured Output Parser3"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"post_1\": \"{{ $json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_2\": \"{{ $('AI Agent2').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_3\": \"{{ $('AI Agent1').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        3000,
+        -740
+      ],
+      "id": "75842859-cc94-42bc-9090-20cbe3ffa34f",
+      "name": "Respond to Webhook2"
+    },
+    {
+      "parameters": {
+        "content": "# 🔮 Instagram",
+        "height": 380,
+        "width": 440,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1280,
+        -160
+      ],
+      "typeVersion": 1,
+      "id": "924f0e4e-b4e9-4470-82a7-1fbb1457d5f3",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=\"post_1\": \"{{ $json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_2\": \"{{ $('AI Agent5').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_3\": \"{{ $('AI Agent4').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}",
+              "role": "assistant"
+            },
+            {
+              "content": "=Role: You are an expert AI that transforms impactful article insights into vivid Ghibli-style image prompts for generative AI.\n\nContext: You will be given the full text of an article relevant to a professional audience (e.g., UK Dental Practices). Your task is to extract the single most compelling statistic, number, or key insight—and use it to create a natural-language image prompt in the style of Studio Ghibli.\n\nInput:\n\n[The full text of the article will be provided here by the system calling you.]\n\nYour Task:\n\nRead the article thoroughly.\n\nIdentify the most striking statistic or central idea, preferably a number or action (e.g., “17 doctors left,” “45% drop in funding,” etc.).\n\nGenerate a Studio Ghibli-style image prompt describing a soft, whimsical, emotionally resonant scene featuring a human character that embodies or reacts to the insight, with a symbolic or literal environment in the background.\n\nWrite the prompt as a single sentence, in the format suitable for a text-to-image model (e.g., “Create a Ghibli-style illustration of...”).\n\nOutput Format:\n\nReturn ONLY the resulting Ghibli-style image prompt as plain text. Do not include any explanation, summary, or extra formatting—just the prompt."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        3240,
+        -20
+      ],
+      "id": "ffc2a76a-6155-4d6c-b7be-a0e057451adf",
+      "name": "Image Prompter1",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gpt-image-1\",\n  \"prompt\": \"{{ $json.message.content }}\",\n  \"n\": 1,\n  \"size\": \"1024x1024\",\n  \"quality\": \"high\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3620,
+        -20
+      ],
+      "id": "c2e1ab00-1ac4-4bfe-85d1-a101b6893ff7",
+      "name": "💎 Generate Images1",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dbda83f8-5ec1-4f86-ba96-7da9385bd058",
+              "name": "B64",
+              "value": "={{ $json.data[0].b64_json }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3840,
+        -20
+      ],
+      "id": "54698128-4e10-44c0-969c-5c1756b5a74e",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const base64String = $json.B64;\n\nconst binaryData = Buffer.from(base64String, 'base64');\n\nreturn {\n  binary: {\n    data: {\n      data: binaryData,\n      mimeType: 'image/png',\n      fileName: 'generated-image.png'\n    }\n  }\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4060,
+        -20
+      ],
+      "id": "23d3582c-53c0-48ca-bbe3-3a193be379a1",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "=data",
+        "name": "={{$binary.data.fileName}}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1C_XDP-G0rh7WRAnWMxhYM14giPFHQJlO",
+          "mode": "list",
+          "cachedResultName": "lOVEABLE images",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1C_XDP-G0rh7WRAnWMxhYM14giPFHQJlO"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        4260,
+        -20
+      ],
+      "id": "7060ffcc-9058-49ae-9937-ce9c643a704c",
+      "name": "Google Drive1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "Your image is ready",
+        "message": "=Hey, here's the link: {{ $json.webContentLink }}",
+        "options": {
+          "sendTo": "INSERT EMAIL"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        4480,
+        -20
+      ],
+      "id": "2f74e5fb-013a-4065-aed0-9cd6b65497a1",
+      "name": "Gmail1",
+      "webhookId": "c4580122-d2a0-44ac-8580-3789016494eb",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🔮 Instagram 3",
+        "height": 380,
+        "width": 440,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2340,
+        -160
+      ],
+      "typeVersion": 1,
+      "id": "7f81a70f-509e-453d-92fe-8cc02cc00588",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "content": "# 🔮 Instagram 2",
+        "height": 380,
+        "width": 440,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1820,
+        -160
+      ],
+      "typeVersion": 1,
+      "id": "6d992e91-42e2-4d8e-ae5d-e722988ca9df",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "content": "# 🎁 Image ",
+        "height": 400,
+        "width": 1880,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2900,
+        -860
+      ],
+      "typeVersion": 1,
+      "id": "3c357504-e9b1-4ead-bc82-89680ab8fda9",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_1.concise_summary }}\n{{ $json.idea_1.angle_approach }}\n{{ $json.idea_1.details }}\n{{ $json.idea_1.relevance }}\n\n{{ $json.Topic }}\n{{ $json['Tone of voice'] }}\n{{ $json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Act as an informed Instagram expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized iNSTAGRAM post based on the Input Topic Data above, incorporating Instagram posting best practices and using the structure outlined below:\n\n\n\n\n\n\nYou are an Instagram caption expert with 10 years of experience crafting engaging, high-performing post copy for top brands. Use your expertise to generate on an optimised caption to accompany the following:\n\n\nYou must consult the tone of voice guidelines in all of the responses you create. You must write by those guidelines. Before you write any text, thoroughly read through and understand the tone of voice file.\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nInstructions\n\n\nYour captions should follow these guidelines:\n- Grab attention in the first sentence with curiosity, emotion, questions, or a bold statement \n- Use this caption formula: Hook, Context, Details/Story, Lesson/Insight, CTA, Hashtags\n- Make the caption a punchy one-liner\n- Naturally integrate 1-2 keywords the audience might use to find the post\n- If you are given an article, do not write about it in first person. Use they, them and their names\n- Otherwise, use first person pronouns, where appropriate\n- Include a mix of 1-4 branded, community, niche and popular hashtags. Put key hashtags early so visible in caption preview \n- Never place two emojis next to eachother. \n- Make the short caption intriguing and relevant\n- Where appropriate, include a CTA encouraging likes, comments, saves, or click-throughs. Craft it as an engaging question to boost response. Tap into FOMO, incentives, value or urgency\n- Maintain a distinctive brand voice and personality throughout that's consistent with\n- Before finalizing, fact-check any claims and proofread each caption for spelling, grammar and brand style consistency.\n- Do not make it cringe\n- You must only every use emoji’s at the End of sentences. Here is a good example of the kind of one liner you must generate: Pioneering a safer AI future at the #AISeoulSummit with UK & South Korea 🤖 #Innovation #GlobalProgress\n\n\nWhen creating a response you must include a short 1-2 sentence caption here, with 1-2 relevant emojis and 2-3 key hashtags only. Make the opening line attention-grabbing.\n\n\nAdditional GUIDELINES:\n0. Do not include anything other than the desired output\n2. Clear and concise, using everyday words instead of jargon. Aim for <20 words per sentence\n2. Inclusive, transparent and positive. Use active voice and choose words thoughtfully \n3. Explanatory, providing context for technical concepts in plain language\n4. Sparing but strategic with emojis to add personality and clarity \n5. Focused on what matters most to readers, prioritizing key information upfront\n6. Positive and ambitious, celebrating successes without putting down others\n7. Transparent about who is responsible for actions using active voice  \n8. Inclusive by avoiding colloquialisms or idioms that may not translate across cultures\n9. Varied in sentence length for natural rhythm, but mostly concise and scannable\n10. Broken up with subheadings and bullets for longer passages\n11. Please provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. \n\n\nDo not use * or # in your response. Use plain text, emoji’s and line breaks.\n\n\n\n\nExample output:\nParliament in action: a defining vote on the Rwanda migration policy awaits. Wind of change or political storm? #RwandaBill #UKPolitics 🌬️🏛️\n—\nDecisions at the crossroads: as Parliament votes on the contentious Rwanda migrant relocation bill, the nation watches with bated breath. Reports reveal potential replicas with countries like Armenia hanging in the balance, resting on Rwanda's outcome.\nWith 534 Channel crossings in a single day, this bill navigates the tricky waters between UK policy and the call for human dignity.\nAmendments from the House of Lords have been met with government pushback, all under the scrutiny of a critical public eye.\nCan the UK's policies align with international laws and provide true safety for asylum seekers? Will Labour's alternative targeting criminal gangs prove more effective?\nWatch this space. What are your thoughts on this pivotal moment in migration policy? ⚖️🗳️\n#RwandaPolicy #AsylumSeekers #MigrationDebate #UKParliament #HumanDignity #InternationalLaw #ModernSlavery #GlobalMigration #ChannelCrossings #UKGovernment #PoliticalEditorial #EthicalPolicy #PublicAccountability #LegislativeChallenge #LawAndOrder #NationalSecurity #SafeHarbours #VoteOutcome\n\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized Instagram post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1360,
+        -40
+      ],
+      "id": "0ddcd0e6-49d1-4578-a615-d643924e47f9",
+      "name": "AI Agent4"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1580,
+        220
+      ],
+      "id": "626871dc-1627-432d-8bf1-90e27dfe0e31",
+      "name": "Structured Output Parser4"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1380,
+        200
+      ],
+      "id": "ea9af680-1506-4937-996b-9eb9c74b293c",
+      "name": "OpenAI Chat Model4",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_2.concise_summary }}\n{{ $json.idea_2.angle_approach }}\n{{ $json.idea_2.details }}\n{{ $json.idea_2.relevance }}\n\n\n{{ $('Code').item.json['Tone of voice'] }}\n{{ $('Code').item.json.Topic }}\n{{ $('Code').item.json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed Instagram expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized iNSTAGRAM post based on the Input Topic Data above, incorporating Instagram posting best practices and using the structure outlined below:\n\n\n\n\n\n\nYou are an Instagram caption expert with 10 years of experience crafting engaging, high-performing post copy for top brands. Use your expertise to generate on an optimised caption to accompany the following:\n\n\nYou must consult the tone of voice guidelines in all of the responses you create. You must write by those guidelines. Before you write any text, thoroughly read through and understand the tone of voice file.\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nInstructions\n\n\nYour captions should follow these guidelines:\n- Grab attention in the first sentence with curiosity, emotion, questions, or a bold statement \n- Use this caption formula: Hook, Context, Details/Story, Lesson/Insight, CTA, Hashtags\n- Make the caption a punchy one-liner\n- Naturally integrate 1-2 keywords the audience might use to find the post\n- If you are given an article, do not write about it in first person. Use they, them and their names\n- Otherwise, use first person pronouns, where appropriate\n- Include a mix of 1-4 branded, community, niche and popular hashtags. Put key hashtags early so visible in caption preview \n- Never place two emojis next to eachother. \n- Make the short caption intriguing and relevant\n- Where appropriate, include a CTA encouraging likes, comments, saves, or click-throughs. Craft it as an engaging question to boost response. Tap into FOMO, incentives, value or urgency\n- Maintain a distinctive brand voice and personality throughout that's consistent with\n- Before finalizing, fact-check any claims and proofread each caption for spelling, grammar and brand style consistency.\n- Do not make it cringe\n- You must only every use emoji’s at the End of sentences. Here is a good example of the kind of one liner you must generate: Pioneering a safer AI future at the #AISeoulSummit with UK & South Korea 🤖 #Innovation #GlobalProgress\n\n\nWhen creating a response you must include a short 1-2 sentence caption here, with 1-2 relevant emojis and 2-3 key hashtags only. Make the opening line attention-grabbing.\n\n\nAdditional GUIDELINES:\n0. Do not include anything other than the desired output\n2. Clear and concise, using everyday words instead of jargon. Aim for <20 words per sentence\n2. Inclusive, transparent and positive. Use active voice and choose words thoughtfully \n3. Explanatory, providing context for technical concepts in plain language\n4. Sparing but strategic with emojis to add personality and clarity \n5. Focused on what matters most to readers, prioritizing key information upfront\n6. Positive and ambitious, celebrating successes without putting down others\n7. Transparent about who is responsible for actions using active voice  \n8. Inclusive by avoiding colloquialisms or idioms that may not translate across cultures\n9. Varied in sentence length for natural rhythm, but mostly concise and scannable\n10. Broken up with subheadings and bullets for longer passages\n11. Please provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. \n\n\nDo not use * or # in your response. Use plain text, emoji’s and line breaks.\n\n\n\n\nExample output:\nParliament in action: a defining vote on the Rwanda migration policy awaits. Wind of change or political storm? #RwandaBill #UKPolitics 🌬️🏛️\n—\nDecisions at the crossroads: as Parliament votes on the contentious Rwanda migrant relocation bill, the nation watches with bated breath. Reports reveal potential replicas with countries like Armenia hanging in the balance, resting on Rwanda's outcome.\nWith 534 Channel crossings in a single day, this bill navigates the tricky waters between UK policy and the call for human dignity.\nAmendments from the House of Lords have been met with government pushback, all under the scrutiny of a critical public eye.\nCan the UK's policies align with international laws and provide true safety for asylum seekers? Will Labour's alternative targeting criminal gangs prove more effective?\nWatch this space. What are your thoughts on this pivotal moment in migration policy? ⚖️🗳️\n#RwandaPolicy #AsylumSeekers #MigrationDebate #UKParliament #HumanDignity #InternationalLaw #ModernSlavery #GlobalMigration #ChannelCrossings #UKGovernment #PoliticalEditorial #EthicalPolicy #PublicAccountability #LegislativeChallenge #LawAndOrder #NationalSecurity #SafeHarbours #VoteOutcome\n\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized Instagram post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1920,
+        -40
+      ],
+      "id": "50410326-1db4-4f41-acb8-77cdada760fc",
+      "name": "AI Agent5"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_3.concise_summary }}\n{{ $json.idea_3.angle_approach }}\n{{ $json.idea_3.details }}\n{{ $json.idea_3.relevance }}\n\n\n{{ $('Code').item.json.Topic }}\n{{ $('Code').item.json.Avatar }}\n{{ $('Code').item.json['Tone of voice'] }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed Instagram expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized iNSTAGRAM post based on the Input Topic Data above, incorporating Instagram posting best practices and using the structure outlined below:\n\n\n\n\n\n\nYou are an Instagram caption expert with 10 years of experience crafting engaging, high-performing post copy for top brands. Use your expertise to generate on an optimised caption to accompany the following:\n\n\nYou must consult the tone of voice guidelines in all of the responses you create. You must write by those guidelines. Before you write any text, thoroughly read through and understand the tone of voice file.\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nInstructions\n\n\nYour captions should follow these guidelines:\n- Grab attention in the first sentence with curiosity, emotion, questions, or a bold statement \n- Use this caption formula: Hook, Context, Details/Story, Lesson/Insight, CTA, Hashtags\n- Make the caption a punchy one-liner\n- Naturally integrate 1-2 keywords the audience might use to find the post\n- If you are given an article, do not write about it in first person. Use they, them and their names\n- Otherwise, use first person pronouns, where appropriate\n- Include a mix of 1-4 branded, community, niche and popular hashtags. Put key hashtags early so visible in caption preview \n- Never place two emojis next to eachother. \n- Make the short caption intriguing and relevant\n- Where appropriate, include a CTA encouraging likes, comments, saves, or click-throughs. Craft it as an engaging question to boost response. Tap into FOMO, incentives, value or urgency\n- Maintain a distinctive brand voice and personality throughout that's consistent with\n- Before finalizing, fact-check any claims and proofread each caption for spelling, grammar and brand style consistency.\n- Do not make it cringe\n- You must only every use emoji’s at the End of sentences. Here is a good example of the kind of one liner you must generate: Pioneering a safer AI future at the #AISeoulSummit with UK & South Korea 🤖 #Innovation #GlobalProgress\n\n\nWhen creating a response you must include a short 1-2 sentence caption here, with 1-2 relevant emojis and 2-3 key hashtags only. Make the opening line attention-grabbing.\n\n\nAdditional GUIDELINES:\n0. Do not include anything other than the desired output\n2. Clear and concise, using everyday words instead of jargon. Aim for <20 words per sentence\n2. Inclusive, transparent and positive. Use active voice and choose words thoughtfully \n3. Explanatory, providing context for technical concepts in plain language\n4. Sparing but strategic with emojis to add personality and clarity \n5. Focused on what matters most to readers, prioritizing key information upfront\n6. Positive and ambitious, celebrating successes without putting down others\n7. Transparent about who is responsible for actions using active voice  \n8. Inclusive by avoiding colloquialisms or idioms that may not translate across cultures\n9. Varied in sentence length for natural rhythm, but mostly concise and scannable\n10. Broken up with subheadings and bullets for longer passages\n11. Please provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. \n\n\nDo not use * or # in your response. Use plain text, emoji’s and line breaks.\n\n\n\n\nExample output:\nParliament in action: a defining vote on the Rwanda migration policy awaits. Wind of change or political storm? #RwandaBill #UKPolitics 🌬️🏛️\n—\nDecisions at the crossroads: as Parliament votes on the contentious Rwanda migrant relocation bill, the nation watches with bated breath. Reports reveal potential replicas with countries like Armenia hanging in the balance, resting on Rwanda's outcome.\nWith 534 Channel crossings in a single day, this bill navigates the tricky waters between UK policy and the call for human dignity.\nAmendments from the House of Lords have been met with government pushback, all under the scrutiny of a critical public eye.\nCan the UK's policies align with international laws and provide true safety for asylum seekers? Will Labour's alternative targeting criminal gangs prove more effective?\nWatch this space. What are your thoughts on this pivotal moment in migration policy? ⚖️🗳️\n#RwandaPolicy #AsylumSeekers #MigrationDebate #UKParliament #HumanDignity #InternationalLaw #ModernSlavery #GlobalMigration #ChannelCrossings #UKGovernment #PoliticalEditorial #EthicalPolicy #PublicAccountability #LegislativeChallenge #LawAndOrder #NationalSecurity #SafeHarbours #VoteOutcome\n\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized Instagram post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        2400,
+        -40
+      ],
+      "id": "c633d65a-5d37-4145-8a8b-11330ba5e86d",
+      "name": "AI Agent6"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1940,
+        220
+      ],
+      "id": "d7a88acd-9e1f-4b82-b9ce-52e6f0704f9c",
+      "name": "OpenAI Chat Model5",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2440,
+        200
+      ],
+      "id": "58dca331-323a-4037-ac5c-4d058ca3ef78",
+      "name": "OpenAI Chat Model6",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2100,
+        200
+      ],
+      "id": "07cc8e26-8598-4f7a-8fd8-0fd9528bf240",
+      "name": "Structured Output Parser5"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2600,
+        200
+      ],
+      "id": "1906be45-791c-43c1-9c31-a2d3c92b25b3",
+      "name": "Structured Output Parser6"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"post_1\": \"{{ $json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_2\": \"{{ $('AI Agent5').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_3\": \"{{ $('AI Agent4').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        3060,
+        -20
+      ],
+      "id": "222a23c5-1155-4a7f-b420-8a76f08df271",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "content": "# 🐥 X 1 ",
+        "height": 380,
+        "width": 440,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1260,
+        580
+      ],
+      "typeVersion": 1,
+      "id": "c3ed7ef6-55de-4327-be68-31acca1b3680",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=\"post_1\": \"{{ $json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_2\": \"{{ $('AI Agent8').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_3\": \"{{ $('AI Agent7').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}",
+              "role": "assistant"
+            },
+            {
+              "content": "=Role: You are an expert AI that transforms impactful article insights into vivid Ghibli-style image prompts for generative AI.\n\nContext: You will be given the full text of an article relevant to a professional audience (e.g., UK Dental Practices). Your task is to extract the single most compelling statistic, number, or key insight—and use it to create a natural-language image prompt in the style of Studio Ghibli.\n\nInput:\n\n[The full text of the article will be provided here by the system calling you.]\n\nYour Task:\n\nRead the article thoroughly.\n\nIdentify the most striking statistic or central idea, preferably a number or action (e.g., “17 doctors left,” “45% drop in funding,” etc.).\n\nGenerate a Studio Ghibli-style image prompt describing a soft, whimsical, emotionally resonant scene featuring a human character that embodies or reacts to the insight, with a symbolic or literal environment in the background.\n\nWrite the prompt as a single sentence, in the format suitable for a text-to-image model (e.g., “Create a Ghibli-style illustration of...”).\n\nOutput Format:\n\nReturn ONLY the resulting Ghibli-style image prompt as plain text. Do not include any explanation, summary, or extra formatting—just the prompt."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        3200,
+        720
+      ],
+      "id": "c7a9dea4-2899-4677-96e7-37b9b4c5c024",
+      "name": "Image Prompter2",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gpt-image-1\",\n  \"prompt\": \"{{ $json.message.content }}\",\n  \"n\": 1,\n  \"size\": \"1024x1024\",\n  \"quality\": \"high\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3560,
+        720
+      ],
+      "id": "54348f6a-1d33-400e-a838-3f1b2904d14b",
+      "name": "💎 Generate Images2",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dbda83f8-5ec1-4f86-ba96-7da9385bd058",
+              "name": "B64",
+              "value": "={{ $json.data[0].b64_json }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3780,
+        720
+      ],
+      "id": "775de6e0-ee26-402b-b183-9bb96f06b597",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const base64String = $json.B64;\n\nconst binaryData = Buffer.from(base64String, 'base64');\n\nreturn {\n  binary: {\n    data: {\n      data: binaryData,\n      mimeType: 'image/png',\n      fileName: 'generated-image.png'\n    }\n  }\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4000,
+        720
+      ],
+      "id": "e2a41685-ec36-46fd-a960-c79505162ad9",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "=data",
+        "name": "={{$binary.data.fileName}}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1C_XDP-G0rh7WRAnWMxhYM14giPFHQJlO",
+          "mode": "list",
+          "cachedResultName": "lOVEABLE images",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1C_XDP-G0rh7WRAnWMxhYM14giPFHQJlO"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        4200,
+        720
+      ],
+      "id": "b36b6793-c83b-492c-9e9a-b7930ba2f4a6",
+      "name": "Google Drive2",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "Your image is ready",
+        "message": "=Hey, here's the link: {{ $json.webContentLink }}",
+        "options": {
+          "sendTo": "INSERT EMAIL"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        4420,
+        720
+      ],
+      "id": "6770941c-87d8-4828-97ce-87af824a68a2",
+      "name": "Gmail2",
+      "webhookId": "c4580122-d2a0-44ac-8580-3789016494eb",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🐥 X 3",
+        "height": 380,
+        "width": 440,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2320,
+        580
+      ],
+      "typeVersion": 1,
+      "id": "86923190-3572-47f9-b4a6-6fe648be4de7",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "content": "# 🐥 X 2",
+        "height": 380,
+        "width": 440,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1800,
+        580
+      ],
+      "typeVersion": 1,
+      "id": "ef7f9266-4424-423c-8d3b-17607d02db00",
+      "name": "Sticky Note11"
+    },
+    {
+      "parameters": {
+        "content": "# 🎁 Image ",
+        "height": 400,
+        "width": 1880,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2880,
+        580
+      ],
+      "typeVersion": 1,
+      "id": "4404f2b7-01e2-48e0-819d-200b640db655",
+      "name": "Sticky Note12"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_1.concise_summary }}\n{{ $json.idea_1.angle_approach }}\n{{ $json.idea_1.details }}\n{{ $json.idea_1.relevance }}\n\n{{ $json.Topic }}\n{{ $json['Tone of voice'] }}\n{{ $json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Act as an informed x expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized x post based on the Input Topic Data above, incorporating x posting best practices and using the structure outlined below:\n\n\nAct as an informed twitter expert in the finance industry. You will be provided with a piece of content (this could be an article, a summary, a linked post etc..). You will create an optimized Twitter post based on that content, incorporating Twitter posting best practices and using the structure outlined below:\n \nPrompt: Please read the following content and create an engaging tweet based on its main points, using the tweet best practices provided:\n \n1. Keep the tweet concise, focusing on one clear message.\n2. Use the format Hook-Explain-Question-Hashtags\n3. Add a space after the hook after explain and before the hashtags\n4. Your output must be a maximum 240 characters maximum (including emojis)\n5. Keep it factual and clear to understand.\n6. Do not start a sentence with an emoji\n7. Incorporate a thought-provoking question at the end of the tweet\n8. Use 1-2 relevant hashtags to increase visibility but avoid overusing them.\n9. Do not include any links or recommend the original content\n10. Never start a sentence with an emoji\n11. Where there are statistics or data, you must reference that in the tweet\n12. Do not add any additional information\n13. For the avoidance of doubt, the message shall not exceed 220 characters\n14. You must not say ‘here is the suggested tweet’, you must only provide the tweet itself with no other supporting text\n \nThink step-by-step.\n \nFor example,\n \nExample text 1:\nAccording to the article, house sales in the UK are expected to increase in the coming months. The Royal Institution of Chartered Surveyors (Rics) reported a steady improvement in housing market sentiment in March, with rising demand from home buyers and an increase in the supply of available properties for the fourth consecutive month. 1 A net balance of 8% of property professionals saw an increase in inquiries from new buyers in March, the most positive result since February 2022. Additionally, a net balance of 13% reported a rise in new property listings for sale. 1 Over the next three months, a net balance of 13% of professionals expect house sales to increase, while over the next year, a balance of 46% are anticipating a jump in sales. 1 However, elevated mortgage rates are likely to limit the acceleration of housing market activity. The article notes that house prices appear to be stabilizing, with a net balance of 4% of professionals finding that prices fell in March. 1 The senior economist at Rics commented that the gradual recovery in demand, coupled with the prospect of interest rate cuts later in the year, should continue to support the housing market to some degree. 1\n \nExample Tweet 1:\nBreaking: UK House prices expected to rise this quarter, according to RICS 📈 There has been a13% rise in property listings.\n \nWhat are you seeing in your market? 🤔\n \nExample text 2:\nThe industry needs to provide more properties to second-time buyers and downsizers, rather than overwhelmingly focusing on first-time buyers, estate agency platform eXp UK has claimed.\nThe company said there are 9.4 million 29 to 40 year olds across the nation, accounting for just 25% of the total population aged 29 and above – the lowest proportion of all homebuyer demographics.\n \nDespite this, homes suitable for first-time buyers accounts for the largest proportion of housing market stock, with an estimated 5.4 million flats making up 23% of total housing stock, while some 6.6 million terraced homes make up 28% of all available housing.\nAdam Day, head of eXp UK, said: “There’s no denying that first-time buyers are at a severe disadvantage when it comes to climbing the property ladder but it’s clear that the government’s insistence on fuelling demand while neglecting supply is only making the issue worse.\n \n“At the same time, our research shows that when it comes to the issue of supply, the market is seriously out of kilter, with an oversupply of first-time buyer suitable homes to serve the smallest proportion of the homebuying population.\n \n“Yes, more must be done to incentivise downsizers in particular, as it will help unclog the higher rungs of the housing market, however, we need to deliver homes suitable to do so if we have a chance of rebalancing the market.”\n \nSecond home buyers aged 41 to 64 form the most significant chunk of the nation’s homebuyers, accounting for 47% of the homebuying population aged 29 and above.\nAt 28%, downsizers also account for a larger proportion of the homebuying population compared to first-time buyers.\n \nExample Tweet 2:\nThe UK housing industry needs change 🤷\n \nAccording to the estate agency platform eXp, Despite the 29-40 age group being the smallest homebuyer demographic at just 25%, the majority of the available housing stock consists of flats and terraced homes suitable for first-time buyers.\n \nIs it too difficult for first-time buyers at the moment? 🤔\n\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized x post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1320,
+        720
+      ],
+      "id": "35575f81-3891-4c8d-ba77-92c111d1f362",
+      "name": "AI Agent7"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1480,
+        1020
+      ],
+      "id": "4d7807c3-3557-462a-ab46-58466821e675",
+      "name": "Structured Output Parser7"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1280,
+        920
+      ],
+      "id": "ea5c727e-0931-4303-8192-cde50712fff6",
+      "name": "OpenAI Chat Model7",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_2.concise_summary }}\n{{ $json.idea_2.angle_approach }}\n{{ $json.idea_2.details }}\n{{ $json.idea_2.relevance }}\n\n\n{{ $('Code').item.json['Tone of voice'] }}\n{{ $('Code').item.json.Topic }}\n{{ $('Code').item.json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed x expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized x post based on the Input Topic Data above, incorporating x posting best practices and using the structure outlined below:\n\n\nAct as an informed twitter expert in the finance industry. You will be provided with a piece of content (this could be an article, a summary, a linked post etc..). You will create an optimized Twitter post based on that content, incorporating Twitter posting best practices and using the structure outlined below:\n \nPrompt: Please read the following content and create an engaging tweet based on its main points, using the tweet best practices provided:\n \n1. Keep the tweet concise, focusing on one clear message.\n2. Use the format Hook-Explain-Question-Hashtags\n3. Add a space after the hook after explain and before the hashtags\n4. Your output must be a maximum 240 characters maximum (including emojis)\n5. Keep it factual and clear to understand.\n6. Do not start a sentence with an emoji\n7. Incorporate a thought-provoking question at the end of the tweet\n8. Use 1-2 relevant hashtags to increase visibility but avoid overusing them.\n9. Do not include any links or recommend the original content\n10. Never start a sentence with an emoji\n11. Where there are statistics or data, you must reference that in the tweet\n12. Do not add any additional information\n13. For the avoidance of doubt, the message shall not exceed 220 characters\n14. You must not say ‘here is the suggested tweet’, you must only provide the tweet itself with no other supporting text\n \nThink step-by-step.\n \nFor example,\n \nExample text 1:\nAccording to the article, house sales in the UK are expected to increase in the coming months. The Royal Institution of Chartered Surveyors (Rics) reported a steady improvement in housing market sentiment in March, with rising demand from home buyers and an increase in the supply of available properties for the fourth consecutive month. 1 A net balance of 8% of property professionals saw an increase in inquiries from new buyers in March, the most positive result since February 2022. Additionally, a net balance of 13% reported a rise in new property listings for sale. 1 Over the next three months, a net balance of 13% of professionals expect house sales to increase, while over the next year, a balance of 46% are anticipating a jump in sales. 1 However, elevated mortgage rates are likely to limit the acceleration of housing market activity. The article notes that house prices appear to be stabilizing, with a net balance of 4% of professionals finding that prices fell in March. 1 The senior economist at Rics commented that the gradual recovery in demand, coupled with the prospect of interest rate cuts later in the year, should continue to support the housing market to some degree. 1\n \nExample Tweet 1:\nBreaking: UK House prices expected to rise this quarter, according to RICS 📈 There has been a13% rise in property listings.\n \nWhat are you seeing in your market? 🤔\n \nExample text 2:\nThe industry needs to provide more properties to second-time buyers and downsizers, rather than overwhelmingly focusing on first-time buyers, estate agency platform eXp UK has claimed.\nThe company said there are 9.4 million 29 to 40 year olds across the nation, accounting for just 25% of the total population aged 29 and above – the lowest proportion of all homebuyer demographics.\n \nDespite this, homes suitable for first-time buyers accounts for the largest proportion of housing market stock, with an estimated 5.4 million flats making up 23% of total housing stock, while some 6.6 million terraced homes make up 28% of all available housing.\nAdam Day, head of eXp UK, said: “There’s no denying that first-time buyers are at a severe disadvantage when it comes to climbing the property ladder but it’s clear that the government’s insistence on fuelling demand while neglecting supply is only making the issue worse.\n \n“At the same time, our research shows that when it comes to the issue of supply, the market is seriously out of kilter, with an oversupply of first-time buyer suitable homes to serve the smallest proportion of the homebuying population.\n \n“Yes, more must be done to incentivise downsizers in particular, as it will help unclog the higher rungs of the housing market, however, we need to deliver homes suitable to do so if we have a chance of rebalancing the market.”\n \nSecond home buyers aged 41 to 64 form the most significant chunk of the nation’s homebuyers, accounting for 47% of the homebuying population aged 29 and above.\nAt 28%, downsizers also account for a larger proportion of the homebuying population compared to first-time buyers.\n \nExample Tweet 2:\nThe UK housing industry needs change 🤷\n \nAccording to the estate agency platform eXp, Despite the 29-40 age group being the smallest homebuyer demographic at just 25%, the majority of the available housing stock consists of flats and terraced homes suitable for first-time buyers.\n \nIs it too difficult for first-time buyers at the moment? 🤔\n\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized x post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1900,
+        720
+      ],
+      "id": "d5e29280-6f1a-45c4-9b0a-ab7df0c05b0b",
+      "name": "AI Agent8"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_3.concise_summary }}\n{{ $json.idea_3.angle_approach }}\n{{ $json.idea_3.details }}\n{{ $json.idea_3.relevance }}\n\n\n{{ $('Code').item.json.Topic }}\n{{ $('Code').item.json.Avatar }}\n{{ $('Code').item.json['Tone of voice'] }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed x expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized x post based on the Input Topic Data above, incorporating x posting best practices and using the structure outlined below:\n\n\nAct as an informed twitter expert in the finance industry. You will be provided with a piece of content (this could be an article, a summary, a linked post etc..). You will create an optimized Twitter post based on that content, incorporating Twitter posting best practices and using the structure outlined below:\n \nPrompt: Please read the following content and create an engaging tweet based on its main points, using the tweet best practices provided:\n \n1. Keep the tweet concise, focusing on one clear message.\n2. Use the format Hook-Explain-Question-Hashtags\n3. Add a space after the hook after explain and before the hashtags\n4. Your output must be a maximum 240 characters maximum (including emojis)\n5. Keep it factual and clear to understand.\n6. Do not start a sentence with an emoji\n7. Incorporate a thought-provoking question at the end of the tweet\n8. Use 1-2 relevant hashtags to increase visibility but avoid overusing them.\n9. Do not include any links or recommend the original content\n10. Never start a sentence with an emoji\n11. Where there are statistics or data, you must reference that in the tweet\n12. Do not add any additional information\n13. For the avoidance of doubt, the message shall not exceed 220 characters\n14. You must not say ‘here is the suggested tweet’, you must only provide the tweet itself with no other supporting text\n \nThink step-by-step.\n \nFor example,\n \nExample text 1:\nAccording to the article, house sales in the UK are expected to increase in the coming months. The Royal Institution of Chartered Surveyors (Rics) reported a steady improvement in housing market sentiment in March, with rising demand from home buyers and an increase in the supply of available properties for the fourth consecutive month. 1 A net balance of 8% of property professionals saw an increase in inquiries from new buyers in March, the most positive result since February 2022. Additionally, a net balance of 13% reported a rise in new property listings for sale. 1 Over the next three months, a net balance of 13% of professionals expect house sales to increase, while over the next year, a balance of 46% are anticipating a jump in sales. 1 However, elevated mortgage rates are likely to limit the acceleration of housing market activity. The article notes that house prices appear to be stabilizing, with a net balance of 4% of professionals finding that prices fell in March. 1 The senior economist at Rics commented that the gradual recovery in demand, coupled with the prospect of interest rate cuts later in the year, should continue to support the housing market to some degree. 1\n \nExample Tweet 1:\nBreaking: UK House prices expected to rise this quarter, according to RICS 📈 There has been a13% rise in property listings.\n \nWhat are you seeing in your market? 🤔\n \nExample text 2:\nThe industry needs to provide more properties to second-time buyers and downsizers, rather than overwhelmingly focusing on first-time buyers, estate agency platform eXp UK has claimed.\nThe company said there are 9.4 million 29 to 40 year olds across the nation, accounting for just 25% of the total population aged 29 and above – the lowest proportion of all homebuyer demographics.\n \nDespite this, homes suitable for first-time buyers accounts for the largest proportion of housing market stock, with an estimated 5.4 million flats making up 23% of total housing stock, while some 6.6 million terraced homes make up 28% of all available housing.\nAdam Day, head of eXp UK, said: “There’s no denying that first-time buyers are at a severe disadvantage when it comes to climbing the property ladder but it’s clear that the government’s insistence on fuelling demand while neglecting supply is only making the issue worse.\n \n“At the same time, our research shows that when it comes to the issue of supply, the market is seriously out of kilter, with an oversupply of first-time buyer suitable homes to serve the smallest proportion of the homebuying population.\n \n“Yes, more must be done to incentivise downsizers in particular, as it will help unclog the higher rungs of the housing market, however, we need to deliver homes suitable to do so if we have a chance of rebalancing the market.”\n \nSecond home buyers aged 41 to 64 form the most significant chunk of the nation’s homebuyers, accounting for 47% of the homebuying population aged 29 and above.\nAt 28%, downsizers also account for a larger proportion of the homebuying population compared to first-time buyers.\n \nExample Tweet 2:\nThe UK housing industry needs change 🤷\n \nAccording to the estate agency platform eXp, Despite the 29-40 age group being the smallest homebuyer demographic at just 25%, the majority of the available housing stock consists of flats and terraced homes suitable for first-time buyers.\n \nIs it too difficult for first-time buyers at the moment? 🤔\n\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized x post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        2380,
+        720
+      ],
+      "id": "bd28fda6-2713-47b8-aba2-3e8db89bd562",
+      "name": "AI Agent9"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1800,
+        980
+      ],
+      "id": "642a99af-31d4-466b-b3aa-df4ed06e9a0a",
+      "name": "OpenAI Chat Model8",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2400,
+        940
+      ],
+      "id": "3e4007fe-342d-4f40-9b10-eccaf0e30607",
+      "name": "OpenAI Chat Model9",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2020,
+        980
+      ],
+      "id": "d7176ab1-3608-4147-a201-68dbccedccb6",
+      "name": "Structured Output Parser8"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2560,
+        940
+      ],
+      "id": "b3345403-1844-4b48-83b9-698533910fb9",
+      "name": "Structured Output Parser9"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"post_1\": \"{{ $json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_2\": \"{{ $('AI Agent8').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_3\": \"{{ $('AI Agent7').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        3000,
+        720
+      ],
+      "id": "51212682-b39d-46cb-bee5-577d5699490a",
+      "name": "Respond to Webhook3"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.Platform }}",
+                    "rightValue": "LinkedIn",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "803dae21-7d76-4111-ad4d-c259e15236bd"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "linkedIN"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "25226eb0-a9d2-4b7e-873b-9df411238cb7",
+                    "leftValue": "={{ $json.Platform }}",
+                    "rightValue": "Instagram",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Instagram"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "fa160b14-1af9-4fa2-a866-b734632d4295",
+                    "leftValue": "={{ $json.Platform }}",
+                    "rightValue": "X",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "X"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1040,
+        -60
+      ],
+      "id": "16bc5f4d-f8da-4759-a668-6dc8bd06d03e",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "content": "# 🎁 Image ",
+        "height": 400,
+        "width": 1880,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2880,
+        -160
+      ],
+      "typeVersion": 1,
+      "id": "bba4003f-ba88-490e-9f76-d239b14f47bc",
+      "name": "Sticky Note13"
+    }
+  ],
+  "pinData": {
+    "Code": [
+      {
+        "json": {
+          "idea_1": {
+            "concise_summary": "Recent discussions on whether a group of average men could defeat a gorilla have reignited interest in animal vs. human strength dynamics.",
+            "angle_approach": "Looking at the recent viral debate about men versus gorillas, it's intriguing to reflect on how misconceptions of strength can influence business decisions and perceptions in the dental field.",
+            "details": "- Wildlife experts assert that approximately 30-50 unarmed men may be required to potentially overwhelm a gorilla due to their immense strength and size.\n- Gorillas possess bone-crushing power, which is significantly greater than that of an average human.\n- A viral tweet by MrBeast on social media has drawn millions into the debate regarding how many men it would take to defeat a gorilla, with varied expert opinions shared across platforms.",
+            "relevance": "Understanding the strength dynamics can translate to better strategies for dentists in their marketing and patient interactions. Addressing misconceptions can be crucial when positioning services to patients, especially when it comes to competitive marketing."
+          },
+          "idea_2": {
+            "concise_summary": "The '100 men vs. gorilla' debate serves as a pop-culture phenomenon that challenges our understanding of physical capabilities among species.",
+            "angle_approach": "In a world where strength is often misrepresented, reflecting on the '100 men versus gorilla' discussion can lead to meaningful insights on how dental professionals market their services. Are we sometimes neglecting the power of community when positioning ourselves against larger competitors?",
+            "details": "- Recent articles highlight that while an overwhelming number of humans could, in theory, take down a gorilla, the practical implications would be fraught with difficulty and ethical considerations.\n- The debate has attracted views from notable public figures and gone viral, suggesting a strong public interest in animal behavior and strength comparisons.\n- Experts reiterate the gorilla's innate advantages in any confrontational scenario, underlining the absurdity of the original question.",
+            "relevance": "This debate can parallel the competitive landscape in dentistry where practices need to effectively communicate their unique strengths to attract patients, rather than simply relying on numbers."
+          },
+          "idea_3": {
+            "concise_summary": "Discussions surrounding human versus gorilla fighting power have uncovered insights into human aggression and societal perceptions.",
+            "angle_approach": "Applying the insights from the gorilla debate encourages dental practice owners to rethink their approaches to handling patients and competitors alike. What lessons can we derive from redefining strength and aggression?",
+            "details": "- Research indicates that humans exhibit complexities in aggression when compared to primates, often driven by societal and environmental factors.\n- The gorilla's response to threats is often correlated with its instinctive nature of self-preservation and territory defense, which could lead to reflections on how humans protect their interests in business.\n- Comparisons have been made not only between human capabilities and those of gorillas but also within the context of how societal structures influence perceptions of strength and vulnerability.",
+            "relevance": "These insights can help dental practice owners develop more empathetic communication strategies with patients and navigate competitive challenges more effectively."
+          },
+          "Tone of voice": "Professional.",
+          "Topic": "What does the science say about how many men it would take to defeat a gorilla?",
+          "Platform": "LinkedIn",
+          "Avatar": "Dental practice owners.",
+          "problem you solve": "",
+          "CTA": "",
+          "Make Content on": ""
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tavily": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompter": {
+      "main": [
+        [
+          {
+            "node": "💎 Generate Images",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "💎 Generate Images": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent2": {
+      "main": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent3": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Webhook2": {
+      "main": [
+        [
+          {
+            "node": "Image Prompter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompter1": {
+      "main": [
+        [
+          {
+            "node": "💎 Generate Images1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "💎 Generate Images1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "Google Drive1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive1": {
+      "main": [
+        [
+          {
+            "node": "Gmail1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent4": {
+      "main": [
+        [
+          {
+            "node": "AI Agent5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser4": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent4",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent4",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent5": {
+      "main": [
+        [
+          {
+            "node": "AI Agent6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent6": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent5",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model6": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent6",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser5": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent5",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser6": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent6",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Webhook": {
+      "main": [
+        [
+          {
+            "node": "Image Prompter1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompter2": {
+      "main": [
+        [
+          {
+            "node": "💎 Generate Images2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "💎 Generate Images2": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "Google Drive2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive2": {
+      "main": [
+        [
+          {
+            "node": "Gmail2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent7": {
+      "main": [
+        [
+          {
+            "node": "AI Agent8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser7": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent7",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model7": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent7",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent8": {
+      "main": [
+        [
+          {
+            "node": "AI Agent9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent9": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model8": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent8",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model9": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent9",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser8": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent8",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser9": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent9",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Webhook3": {
+      "main": [
+        [
+          {
+            "node": "Image Prompter2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Agent4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Agent7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ef32d76c-66ad-4c82-8eec-88ac908322da",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "Azeeb7RNomvBMAlu",
+  "tags": []
+}

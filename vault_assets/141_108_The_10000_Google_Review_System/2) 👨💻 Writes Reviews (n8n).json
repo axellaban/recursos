@@ -1,0 +1,646 @@
+{
+  "name": "2) 👨‍💻 Writes Reviews (n8n)",
+  "nodes": [
+    {
+      "parameters": {
+        "mode": "insert",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "coffee",
+          "mode": "list",
+          "cachedResultName": "coffee"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        1408,
+        96
+      ],
+      "id": "eb24cc61-909c-4877-bbfe-62b52b454d00",
+      "name": "Pinecone Vector Store",
+      "credentials": {
+        "pineconeApi": {
+          "id": "VEq1yjSHKtJL9zuJ",
+          "name": "PineconeApi account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "intfloat/multilingual-e5-large-instruct",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference",
+      "typeVersion": 1,
+      "position": [
+        1264,
+        304
+      ],
+      "id": "409e4fe5-bbe2-4425-8076-181442483ec6",
+      "name": "Embeddings HuggingFace Inference",
+      "credentials": {
+        "huggingFaceApi": {
+          "id": "u8o3mJ2vBQZYequj",
+          "name": "HuggingFaceApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataType": "binary",
+        "textSplittingMode": "custom",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1,
+      "position": [
+        1520,
+        240
+      ],
+      "id": "cb009393-58df-4965-9893-6584de32400b",
+      "name": "Default Data Loader1"
+    },
+    {
+      "parameters": {
+        "chunkOverlap": 200,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        1536,
+        400
+      ],
+      "id": "5767ff16-62e3-41e8-bb64-7b484be1158a",
+      "name": "Recursive Character Text Splitter1"
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "hormozi knowledgebase",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "coffee",
+          "mode": "list",
+          "cachedResultName": "coffee"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        704,
+        624
+      ],
+      "id": "324a5b62-7ba5-4fba-b106-bc96dd757171",
+      "name": "Vector",
+      "credentials": {
+        "pineconeApi": {
+          "id": "VEq1yjSHKtJL9zuJ",
+          "name": "PineconeApi account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "formTitle": "🧠 BenchPress Nation Knowledge",
+        "formDescription": "Insert knowledge below",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Insert Documents",
+              "fieldType": "file"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        1184,
+        128
+      ],
+      "id": "4ded9958-8cd2-4cd0-aa93-ab9e0dd591b6",
+      "name": "On form submission",
+      "webhookId": "495e683d-10db-485e-b8aa-f5bf4000090b"
+    },
+    {
+      "parameters": {
+        "modelName": "intfloat/multilingual-e5-large-instruct",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference",
+      "typeVersion": 1,
+      "position": [
+        688,
+        768
+      ],
+      "id": "c9aff4e7-482d-41f9-987d-3376ad3de05a",
+      "name": "Embeddings HuggingFace Inference1",
+      "credentials": {
+        "huggingFaceApi": {
+          "id": "u8o3mJ2vBQZYequj",
+          "name": "HuggingFaceApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Query re-ranker",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "=# Query Re-Ranker Prompt for RAG Search Optimization\n\n## System Prompt\n\nYou are a query optimization specialist designed to transform user messages into highly effective search queries for RAG (Retrieval Augmented Generation) systems. Your role is to analyze incoming chat messages and rewrite them to maximize retrieval accuracy and relevance.\n\n## Instructions\n\nTransform the user's input message following these guidelines:\n\n### 1. Extract Core Intent\n- Identify the primary question or information need\n- Remove conversational fluff, greetings, and politeness markers\n- Focus on the substantive content that requires knowledge retrieval\n\n### 2. Optimize for Search\n- Convert questions into declarative keyword-rich statements when beneficial\n- Expand abbreviations and acronyms to full terms\n- Add relevant synonyms and alternative phrasings\n- Include domain-specific terminology that might appear in target documents\n\n### 3. Structure Enhancement\n- Break down complex multi-part questions into focused components\n- Prioritize the most important aspect if multiple topics are present\n- Ensure queries are specific enough to avoid overly broad results\n\n### 4. Context Preservation\n- Maintain essential context that affects meaning\n- Preserve technical specifications, dates, or constraints\n- Keep domain indicators (e.g., \"in machine learning\", \"for Python development\")\n\n### 5. Output Format\nReturn your optimized query as a clean, search-ready string without explanations or meta-commentary.\n\n## Examples\n\n**Input:** \"Hey there! I was wondering if you could help me understand how neural networks work in deep learning? I'm pretty new to this stuff.\"\n\n**Output:** \"neural networks deep learning fundamentals architecture backpropagation training process beginner explanation\"\n\n**Input:** \"What's the best way to handle authentication in my React app?\"\n\n**Output:** \"React authentication implementation best practices JWT OAuth login security patterns\"\n\n**Input:** \"I'm getting an error when I try to connect to my PostgreSQL database from Node.js. The connection keeps timing out.\"\n\n**Output:** \"PostgreSQL Node.js connection timeout error troubleshooting database connectivity issues solutions\"\n\n**Input:** \"Can you explain the differences between microservices and monolithic architecture?\"\n\n**Output:** \"microservices vs monolithic architecture comparison advantages disadvantages design patterns scalability\"\n\n## Your Task\n\nTransform the following user message into an optimized search query:\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        160,
+        640
+      ],
+      "id": "1f77694c-dd2b-4222-a0b3-ad962193c819",
+      "name": "Re-Ranker"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        112,
+        784
+      ],
+      "id": "382bdb32-a1b5-46c5-b49d-80b4edd5c6db",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🤖 Agent",
+        "height": 464,
+        "width": 1008
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 1,
+      "id": "c3cab86a-0260-4bc5-9ef2-d3e996a6d8db",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "# 🧠 Company Knowledge",
+        "height": 560,
+        "width": 880,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1072,
+        0
+      ],
+      "typeVersion": 1,
+      "id": "18d7fdd5-b67e-4544-9de0-e1dc018c7738",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "# 📊 Re-ranker",
+        "height": 368,
+        "width": 480,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        528
+      ],
+      "typeVersion": 1,
+      "id": "f3c8ea20-1db9-4613-8f39-349cc9c1d815",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "content": "# 🧠 RAG Memory",
+        "height": 368,
+        "width": 480,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        544,
+        528
+      ],
+      "typeVersion": 1,
+      "id": "6116bc4f-bae9-4c4a-9a11-66a76df43417",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "limit": 5,
+        "filters": {
+          "sender": "={{ $('Gmail Trigger').item.json.headers.from }}"
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        848,
+        160
+      ],
+      "id": "b65fb705-9a03-4466-bce6-6b19ee49ab82",
+      "name": "Get Messages",
+      "webhookId": "9cf29f47-0e37-42c9-9538-42961a003bf1",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "7dtvcrq0jtwBOlX3",
+          "name": "Gmail account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "account": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "location": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleBusinessProfileTrigger",
+      "typeVersion": 1,
+      "position": [
+        96,
+        96
+      ],
+      "id": "31948c74-7a06-4d1a-ac8f-2ad6716fd500",
+      "name": "New Review"
+    },
+    {
+      "parameters": {
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "=You are INSERT COMPANY International’s review response agent. Your job is to craft warm, professional, and knowledge-based replies to Google & Trustpilot reviews.\n\nSources of Truth\n\nKnowledge base (services, staff, treatments, policies).\n\nEmail database (reviewer name, booking confirmation, contact details).\n\n🎯 Core Objectives\n\nAcknowledge + Thank every reviewer, regardless of sentiment.\n\nPersonalize using staff names, treatments, or details when available.\n\nReassure readers (the reviewer + future customers) by showing standards, values, and expertise.\n\nStay compliant — no personal/medical details publicly; move sensitive matters to private channels.\n\n✨ Tone & Style\n\nShort, natural, and human.\n\nWarm professionalism: helpful but never scripted.\n\nEmoji discipline: 0–2 max, only if they genuinely add warmth (😊🙏✨).\n\nMatch tone: excited if they’re excited, calm if they’re neutral.\n\n⭐ Handling Review Types\nPositive (5★)\n\nCelebrate the win.\n\nHighlight a specific detail (treatment, staff, outcome).\n\nInvite them back.\n\nExample response styles:\n\nEnthusiastic: “Wow! Thank you so much for your kind words and for awarding us five stars! 🌟 We’re thrilled you had a fantastic experience. Your feedback truly brightens our day!”\n\nPersonal Acknowledgment: “Thank you for your gracious words! We’re delighted to hear you enjoyed [STAFF NAME]’s care. Providing exceptional experiences is our top priority. 🙏”\n\nSimple & Warm: “Hi [Reviewer], thank you for your review! We’re so glad you had a great experience and look forward to seeing you again.”\n\nStaff Recognition: “We appreciate you mentioning [STAFF NAME]! They’ll be delighted to know their efforts made your visit special. 💫”\n\nBrand Alignment: “Our team works hard to deliver exceptional experiences — it’s wonderful to see that reflected in your review.”\n\nNeutral / Mixed (3–4★)\n\nAcknowledge positives.\n\nShow openness to feedback.\n\nInvite them to share how you can improve.\n\nExample response styles:\n\nHonest Feedback: “Hi [Name], thank you for your honest review. We’re glad parts of your experience went well and would love the chance to make your next visit exceptional. If you have suggestions, we’d love to hear them.”\n\nImprovement-Oriented: “Thank you for your 4-star review, [Name]. We’re glad you enjoyed [DETAIL]. We’re always looking for ways to improve — if you have ideas on how we could make it a 5-star, we’d love your feedback.”\n\nNegative (1–2★)\n\nEmpathize once (never over-apologize).\n\nAddress the specific concern directly.\n\nShow remedy/protocol.\n\nInvite private resolution.\n\nNever defensive.\n\nExample response styles:\n\nEmpathy + Resolution: “Hi [Name], I’m sorry to hear about your experience. You mentioned [ISSUE] — here’s how we normally handle this: [BRIEF PROTOCOL]. Please contact us at [EMAIL/PHONE] so we can resolve this quickly. 🙏”\n\nCalm & Professional: “Hi [Reviewer], thank you for sharing this feedback. We take matters like this seriously. Please reach us at [CONTACT] so our senior team can personally review and follow up.”\n\n🧩 Key Patterns to Use in Every Reply\n\nGenuine Thanks → “Thank you for taking the time to share your experience…”\n\nStaff Mention → “We’re delighted you enjoyed Sarah’s care.”\n\nTreatment Detail → “You mentioned the lava facial — we’re so glad it stood out.”\n\nWarm Closing → “We’d love to welcome you back soon.”\n\nProfessional Invitation → “If you’d like to discuss further, please reach out at [CONTACT].”\n\n🔄 Workflow\n\nIdentify sentiment (positive, neutral, negative).\n\nCheck knowledge base for relevant details (staff, treatments, policies).\n\nIf needed check email database for reviewer contact/booking details.\n\nSelect style from response library (enthusiastic, acknowledgment, calm, etc.).\n\nPersonalize with one factual detail.\n\nDraft + close warmly (invite back, or offer follow-up)."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        368,
+        96
+      ],
+      "id": "3b527e92-f180-4a00-a4b7-3573b8a2c5a5",
+      "name": "Review Agent"
+    },
+    {
+      "parameters": {
+        "query": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Query', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "@tavily/n8n-nodes-tavily.tavilyTool",
+      "typeVersion": 1,
+      "position": [
+        752,
+        320
+      ],
+      "id": "177099e7-2396-4970-b327-e03f61bf9c0d",
+      "name": "Your Website",
+      "credentials": {
+        "tavilyApi": {
+          "id": "yQh0CdFCSbGJCEvz",
+          "name": "Tavily account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1cqCO6ARhZrmyo6Da0vYskjt6RS1PkQONEO7fUol5JiQ",
+          "mode": "list",
+          "cachedResultName": "⭐️ Google Review ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cqCO6ARhZrmyo6Da0vYskjt6RS1PkQONEO7fUol5JiQ/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1cqCO6ARhZrmyo6Da0vYskjt6RS1PkQONEO7fUol5JiQ/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Star": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Star', ``, 'string') }}",
+            "Response": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Response', ``, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Review",
+              "displayName": "Review",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Star",
+              "displayName": "Star",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Response",
+              "displayName": "Response",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Replied",
+              "displayName": "Replied",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        512,
+        320
+      ],
+      "id": "53f64558-79cf-42e4-b09f-9557ec35a6e4",
+      "name": "Write",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YwVdpEHJQpAEY722",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        80,
+        320
+      ],
+      "id": "87105b73-7609-4576-b9d1-202540eddbcb",
+      "name": "ChatGPT2",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-4-20250514",
+          "cachedResultName": "Claude 4 Sonnet"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        224,
+        320
+      ],
+      "id": "ab483861-a158-4c9b-bc03-16f0a40ef530",
+      "name": "Claude2",
+      "credentials": {
+        "anthropicApi": {
+          "id": "fGKXx4d2Qv5CUq9Y",
+          "name": "Anthropic account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Embeddings HuggingFace Inference": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader1": {
+      "ai_document": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter1": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader1",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector": {
+      "ai_tool": [
+        [
+          {
+            "node": "Review Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings HuggingFace Inference1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Vector",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Re-Ranker": {
+      "ai_tool": [
+        [
+          {
+            "node": "Review Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Re-Ranker",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Messages": {
+      "ai_tool": [
+        [
+          {
+            "node": "Review Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "New Review": {
+      "main": [
+        [
+          {
+            "node": "Review Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Your Website": {
+      "ai_tool": [
+        [
+          {
+            "node": "Review Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write": {
+      "ai_tool": [
+        [
+          {
+            "node": "Review Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ChatGPT2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Review Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Review Agent",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "de68bef8-5591-4066-bb5a-72e0965ac493",
+  "meta": {
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "3prHVE6gO3sNqIXj",
+  "tags": []
+}

@@ -1,0 +1,189 @@
+{
+  "name": "👾 Reddit Scraper",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "search",
+        "subreddit": "={{ $json.Subreddit }}",
+        "keyword": "=n8n",
+        "limit": 15,
+        "additionalFields": {
+          "sort": "hot"
+        }
+      },
+      "type": "n8n-nodes-base.reddit",
+      "typeVersion": 1,
+      "position": [
+        20,
+        -120
+      ],
+      "id": "efab9981-ed11-4ae8-bc50-ad166c8af271",
+      "name": "1",
+      "credentials": {
+        "redditOAuth2Api": {
+          "id": "DhEzrVDikRifZA6Z",
+          "name": "Reddit account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bcff4470-8383-499e-b5d3-2a09932fbb47",
+              "name": "Subreddit",
+              "value": "={{ $json.body.subreddit }}",
+              "type": "string"
+            },
+            {
+              "id": "971e27ae-2663-43da-9b2a-15452fb730ad",
+              "name": "Keyword",
+              "value": "=n8n {{ $json.body.keyword }}",
+              "type": "string"
+            },
+            {
+              "id": "96fce7e3-c7c5-4022-888a-c04e531d92a6",
+              "name": "Sort",
+              "value": "=hot {{ $json.body.sort }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -220,
+        -120
+      ],
+      "id": "2bafdbff-61d8-4dc0-b625-cbb68f9cefec",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "7d8cb1c8-12ff-404f-a9f4-5a630edb24fb",
+              "leftValue": "={{ $json.ups }}",
+              "rightValue": 3,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": false
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        240,
+        -120
+      ],
+      "id": "402b3f44-d125-4c51-b103-ecdcf78bd474",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ddd0e504-59cb-46fd-8cac-69fde956a4ae",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -460,
+        -120
+      ],
+      "id": "1f2eb7e0-3992-4300-bf85-d274e757040e",
+      "name": "Webhook",
+      "webhookId": "ddd0e504-59cb-46fd-8cac-69fde956a4ae"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        500,
+        -140
+      ],
+      "id": "d5c12feb-0952-4895-90a7-4a41a02d02e1",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f4042523-1669-498d-baed-70fbeb00821e",
+  "meta": {
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "CBGQ8Rvx5PrUnBjT",
+  "tags": []
+}

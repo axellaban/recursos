@@ -1,0 +1,1832 @@
+[00:00:00] what's up guys in this video we're going
+[00:00:01] to build a social media insights
+[00:00:03] dashboard using liable and social medias
+[00:00:05] we' got lots of really cool tools that
+[00:00:06] we're going to check out in this video
+[00:00:08] now you might be thinking dude Jack
+[00:00:09] building a social media dashboard is
+[00:00:12] difficult and you may be right but with
+[00:00:14] loveable with a little bit of elbow
+[00:00:15] grease with some AI tools we're going to
+[00:00:17] make this a reality this design I quite
+[00:00:19] like I also quite like the look of this
+[00:00:21] design so what I want to do this video
+[00:00:22] you guys is from scratch basically show
+[00:00:24] you the tools I'm going to use we're
+[00:00:25] going to build a game plan together
+[00:00:27] we're going to scrap stuff we're going
+[00:00:28] to build it and at the end of it I want
+[00:00:29] to have here's my vision we're going to
+[00:00:31] build this dashboard together that I'm
+[00:00:33] going to connect to Instagram LinkedIn
+[00:00:35] and YouTube it's going to have all my
+[00:00:36] data and essentially it's going to to
+[00:00:38] give me AI analysis that my team can
+[00:00:40] then use to make better decisions
+[00:00:42] because the T of this guys is that data
+[00:00:45] is power and the more that you know the
+[00:00:47] more that you can grow so with that in
+[00:00:48] mind let's actually start with a game
+[00:00:50] plan oh and by the way if you don't know
+[00:00:51] me my name is Jack i r the largest paid
+[00:00:53] AI automations community on the planet I
+[00:00:56] help business owners crush it I've
+[00:00:57] helped thousand do that now so if you
+[00:00:59] haven't already grab that coffee left
+[00:01:00] live straighten I don't have a coffee
+[00:01:02] today guys and that's because it's like
+[00:01:04] 7:20 p.m. and somebody say that's a bit
+[00:01:06] controversial but we'll see so what's
+[00:01:08] the game plan I guess the first thing I
+[00:01:09] want to do ultimately is set up a system
+[00:01:13] to scrap my social medias I'm going to
+[00:01:15] do three because those are the three
+[00:01:16] that I'm focused on the moment so step
+[00:01:17] one is going to be to
+[00:01:19] scrape uh social media and to do that of
+[00:01:22] course we are going to grab these guys
+[00:01:24] in cuz they're going to be key part of
+[00:01:25] the scraping and then the keepy B as
+[00:01:27] well the tools we're going to use and
+[00:01:28] also in terms of cost by the way guys
+[00:01:30] this isn't prohibitive in fact most of
+[00:01:32] the tools we're using in this video are
+[00:01:33] actually free to use or just a couple of
+[00:01:35] dollars and I'll Point those out to you
+[00:01:37] as we go along so we've got these three
+[00:01:39] we're going to scrape from which is cool
+[00:01:40] we're going to use na10 and or make
+[00:01:42] which are going to be on no code
+[00:01:43] automation platforms which is really
+[00:01:45] sweet I'm going to run out of space in
+[00:01:46] this one guys how crazy is that we're
+[00:01:48] going to use uh and then to do the
+[00:01:50] actual scraping we're going to use these
+[00:01:51] two tools here which is Phantom Buster
+[00:01:52] and appify both of which by the way you
+[00:01:54] can use for free which is really cool up
+[00:01:57] to a certain amount of course um and I
+[00:01:59] think that'll do well actually so what's
+[00:02:00] the second I want to do the second thing
+[00:02:02] I want to do actually is to build the
+[00:02:07] dashboard all right now I'm going to
+[00:02:08] build the dashboard in lovable but what
+[00:02:11] I'm also going to do guys is get the
+[00:02:13] database so I want all this information
+[00:02:15] set on a database and that database is
+[00:02:17] going to be in a table AKA Google Sheets
+[00:02:20] that put on Ma maxan supplements and
+[00:02:22] then the third one is going to be we've
+[00:02:23] got data right but it's like you know
+[00:02:26] data and service of what we want to kind
+[00:02:27] actually Lo to IC so I'm going to put
+[00:02:29] some we're then going to connect it to
+[00:02:31] chat
+[00:02:32] gb2 or your AI of choice for amazing
+[00:02:36] results cool with the few houres to
+[00:02:38] emphasize just how flipping amazing
+[00:02:39] these results are actually going to
+[00:02:41] freaking be cool so let's start with the
+[00:02:44] key one let's start with LinkedIn uh and
+[00:02:46] what I want to do is be able to spread
+[00:02:48] the data and then I'm going to add it to
+[00:02:50] a table and then we're going to do the
+[00:02:52] same for YouTube and then we're going to
+[00:02:53] do the same for Instagram okay so I'm
+[00:02:55] going to start with the mysterious the
+[00:02:57] wonderful LinkedIn so let's open up
+[00:02:59] LinkedIn to get started cool so the
+[00:03:01] website I want to head over to guys is
+[00:03:03] going to be none other than
+[00:03:04] phantombuster tocom kind of looks like a
+[00:03:06] ghost why is it a phantom I have no idea
+[00:03:09] course you're going to sign up and you
+[00:03:10] should able to get create an account for
+[00:03:12] free which is pretty awesome and
+[00:03:14] basically the way that Phantom Buster
+[00:03:15] works it's like a scribe platform it has
+[00:03:17] some really interesting particular use
+[00:03:18] cases so let's go over to our dashboard
+[00:03:21] at the top left and you want to go and
+[00:03:23] add a phantom okay you click on browse
+[00:03:25] Phantoms real quick and the Phantom I
+[00:03:27] want you to add is this unlimited un
+[00:03:29] targ called LinkedIn activity extractor
+[00:03:32] okay so I come down here I type in
+[00:03:35] LinkedIn activity extractor you're going
+[00:03:38] to click on use
+[00:03:39] now we do really like you maybe later my
+[00:03:42] guy maybe later but basically a fact let
+[00:03:44] me just delete the other one um so that
+[00:03:46] you can actually see what this is about
+[00:03:47] let me delete that cool it's cool it
+[00:03:50] gives you one for free but for our
+[00:03:51] purposes guys we only really need one
+[00:03:53] which is cool so we click on use one
+[00:03:55] here use now excuse me all right cool so
+[00:03:57] let's test this one out beautiful now
+[00:04:01] what it will ask you to do guys is it
+[00:04:03] will give you URL so in this case you
+[00:04:05] can do multiple people I'm just
+[00:04:06] interested in mine so if I come over to
+[00:04:08] my profile and I copy this and then I
+[00:04:11] come back over to LinkedIn and I just
+[00:04:13] select in a URL this could be a Google
+[00:04:15] doc by the way if you got lots of
+[00:04:17] different accounts you want to subscribe
+[00:04:18] but that's like for a different video
+[00:04:20] and then we click on Save cool and it's
+[00:04:22] actually managed to pull my thing now
+[00:04:24] one of the things that's going to happen
+[00:04:25] here guys is you're going to need to
+[00:04:27] install the Chrome extension and you
+[00:04:29] won't see this yet it'll pop up on
+[00:04:31] screen add that in you see this little
+[00:04:32] go you won't to see it on your screen
+[00:04:34] but there's a little ghost from the top
+[00:04:35] right and basically what that does is
+[00:04:37] grabs your cookie for LinkedIn which
+[00:04:39] means it's then able to go and script
+[00:04:41] the
+[00:04:41] post you want to be careful if you're
+[00:04:43] doing a lot of script on LinkedIn
+[00:04:45] because they will pick up on that
+[00:04:46] activity and it can have like a facts in
+[00:04:48] your account uh but the POS of this I've
+[00:04:50] had absolutely zero issues whatsoever so
+[00:04:52] I click on I click on Save which is cool
+[00:04:54] now number of profiles to process per
+[00:04:56] launch again this is important if you um
+[00:04:59] you know if you're doing multiple at the
+[00:05:00] same time I'm really only interested in
+[00:05:02] the posts number of items try back to
+[00:05:04] the type um I'm going to say 40 cuz
+[00:05:06] that's just the way that I rock and I
+[00:05:08] roll advanced
+[00:05:09] settings you can if you want to be
+[00:05:11] specific about like a date you want to
+[00:05:13] do that on which is really cool but I
+[00:05:15] wouldn't worry about that too much um
+[00:05:16] name for result that's cool feels to
+[00:05:18] keep that's fine and we click on save so
+[00:05:20] we've got this one here I'm just going
+[00:05:21] to click run this one once we can
+[00:05:22] actually launch this in the scenario
+[00:05:24] periodically uh when we would like to in
+[00:05:26] make.com which is absolutely fine and
+[00:05:28] then click on Save which is cool and
+[00:05:30] then let's click this lunch right here
+[00:05:31] and what they should do then is
+[00:05:33] basically grab all the stuff that I've
+[00:05:35] been yapping about and talking about um
+[00:05:37] like success stories random stuff
+[00:05:38] happening blah blah blah blah you get
+[00:05:40] the beautiful idea um look at me getting
+[00:05:43] on blast these on red DMS oh my goodness
+[00:05:45] but basically what's going to happen
+[00:05:46] guys is this is going to complete once
+[00:05:49] that's actually finished we're going to
+[00:05:51] grab that data and we're going to pull
+[00:05:52] it through and make so whilst that's
+[00:05:54] kind of working beautifully in the
+[00:05:55] background what I want to do then is
+[00:05:57] head over to in fact not make I'm going
+[00:05:58] to head over to n8n
+[00:06:00] uh so let's go to NM real quick okay so
+[00:06:01] I've landed over into NM so let's just
+[00:06:03] create this one here uh linked in
+[00:06:07] Phantom
+[00:06:08] Buster beautiful obviously guys if
+[00:06:11] you're not using LinkedIn feel free to
+[00:06:12] skip all these parts and just go to the
+[00:06:13] bits that are most relevant to you so
+[00:06:16] click on add a first step we are going
+[00:06:17] to go for Phantom Buster which is this
+[00:06:19] guy right here I think they've got that
+[00:06:20] old logo actually which is cool and the
+[00:06:22] one I want to look at here guys is going
+[00:06:24] to be to get the output of an agent like
+[00:06:26] so right and it's going to ask for an
+[00:06:29] agent name or ID you'll need to connect
+[00:06:31] it to Phantom Buster to connect it just
+[00:06:33] come over to your dashboard click on
+[00:06:35] your name come down to API Keys here and
+[00:06:38] when that's loaded up you can actually
+[00:06:40] copy you know add an API key copy that
+[00:06:42] code come back over then to the
+[00:06:44] beautiful anytime and then pop it in
+[00:06:47] once you click here add new crel you see
+[00:06:49] enter it in there and then you're going
+[00:06:50] to be ready to rock and roll and that
+[00:06:51] will connect it for you okay so if I
+[00:06:53] come back over then to our beautiful uh
+[00:06:55] scenario that has actually completed and
+[00:06:57] we got 26 results and would you look at
+[00:06:58] this guys we've got all information so
+[00:07:00] here's post content here's how many
+[00:07:01] likes I had how many comments I had and
+[00:07:03] so personally guys what I want to be
+[00:07:04] able to do my team is to kind of build
+[00:07:06] this badass dashboard right uh with all
+[00:07:09] this information but like what post did
+[00:07:10] really well like what did people
+[00:07:11] resonate with and then use that
+[00:07:13] information to make better content but
+[00:07:14] next week just kind of happening on
+[00:07:16] autopilot in the background uh people
+[00:07:18] joining the school community in the
+[00:07:19] background hey it's all it's all
+[00:07:20] happening at the same time this is
+[00:07:21] awesome cool so we've got all this
+[00:07:23] individual data which is awesome so what
+[00:07:25] do we want to do we go back over then to
+[00:07:27] NM and we want to select an agent on
+[00:07:29] name then this will just pull through
+[00:07:30] that one then look if you click on test
+[00:07:33] step this should load and then you see
+[00:07:35] it's got 26 items guys so that's
+[00:07:37] basically pulled through all this key
+[00:07:38] information how many likes how many
+[00:07:40] comments when it was posted how many
+[00:07:41] views it's got all this information then
+[00:07:43] what we want to do is add this into ad
+[00:07:46] table so let's now go ahead and create
+[00:07:48] our beautiful ad table account okay I'm
+[00:07:50] in ad table I come to the bottom line I
+[00:07:52] click on Create and start from scratch
+[00:07:54] which is really cool so come over here
+[00:07:56] and we'll call this one social in fact
+[00:07:57] I've got this Loom Lego let me get this
+[00:07:59] guy added oh my goodness get this guy
+[00:08:01] out of here okay we're back so table one
+[00:08:03] we're going to call
+[00:08:05] LinkedIn okay and let's just add some
+[00:08:08] new tables in fact I I'll do that later
+[00:08:10] so let's look at the data that we've
+[00:08:11] gotten guys just to decide what we want
+[00:08:13] to do um and let me know down below if
+[00:08:16] you like these kind of like build and
+[00:08:17] chill who needs Netflix and chill when
+[00:08:19] you can build and chill these days do
+[00:08:20] you know what I'm saying all right cool
+[00:08:22] so what we got we've got image y let's
+[00:08:24] just find out what the image Y is that
+[00:08:25] something that I
+[00:08:27] posted okay that was just an image
+[00:08:28] uploaded that's cool um that could be
+[00:08:31] handy right post your okay post your is
+[00:08:33] definitely something we want to add in
+[00:08:34] that right so let's go to here first one
+[00:08:37] is going to be okay URL for the Post
+[00:08:41] cool
+[00:08:43] decent actually I'm going to be really P
+[00:08:46] finicky here guys and I'm basically
+[00:08:47] going to put post URL yeah okay cool and
+[00:08:50] I'm just going to delete all these guys
+[00:08:52] and you'll see why in a second just beit
+[00:08:53] easier delete delete
+[00:08:56] delete cool add new one up and what else
+[00:08:58] we got what else we kind of want to know
+[00:09:01] uh post content would be cool
+[00:09:05] sweet yeah post content uh long L long
+[00:09:07] tax is cool let's add another one in and
+[00:09:09] what else would be relevant comment
+[00:09:11] count
+[00:09:16] repost actually you know what
+[00:09:18] guys I'm going to go crazy here I'm just
+[00:09:20] going to have
+[00:09:23] speech cool there a number of comments
+[00:09:25] that's cool
+[00:09:29] and then we want repost
+[00:09:32] right and maybe repeat or something yeah
+[00:09:37] okay
+[00:09:39] reposts that's decent and then what else
+[00:09:41] have we got do we want uh
+[00:09:45] likes and Views cool add those one's in
+[00:09:48] okay guys let's add in
+[00:09:51] likes and Views obviously these could be
+[00:09:53] numbers I'm just putting long Texs cuz
+[00:09:55] I'm made a little bit lazy um and it
+[00:09:56] will add some eyeballs in beautiful okay
+[00:09:58] great and basically at this stage you
+[00:10:00] just go through and sect what data you
+[00:10:01] think is flipping relevant um anything
+[00:10:04] else IR relevant time
+[00:10:05] stamp yeah I think that's absolutely
+[00:10:07] fine uh yeah we'll just put when it was
+[00:10:10] posted that that seems like that'd be
+[00:10:11] quite reasonable right and then we'll
+[00:10:13] just do when posted and then that's cool
+[00:10:17] beautiful all right cool so next thing
+[00:10:18] to do is actually social media
+[00:10:23] domination and you know guys the reason
+[00:10:25] why I'm building this automation is
+[00:10:26] something that I was like I need to
+[00:10:27] build this and I was like oh I'll just
+[00:10:28] freaking jump on on the channel and just
+[00:10:30] show you guys what I'm actually building
+[00:10:32] in my business um beautiful okay cool
+[00:10:35] this is decent all right so let's go
+[00:10:37] over to LinkedIn let's pin this data in
+[00:10:40] other words n8n will like hold it hold
+[00:10:43] it tight in there like a like a
+[00:10:44] treasured love one for is and then I
+[00:10:46] come over here and I go to air
+[00:10:48] table all right beautiful what do I want
+[00:10:50] to do well I kind of want to like create
+[00:10:53] a record uh let's have a look uh and
+[00:10:55] let's now pick the base that we've got
+[00:10:57] here guys it says go social media
+[00:10:58] domination
+[00:11:00] um let's have a look authorization
+[00:11:02] failed oh my goodness we've been we've
+[00:11:04] been kicked out let's see if this one
+[00:11:06] works no okay okay guys I'm being kicked
+[00:11:09] out of AD table so let me just create a
+[00:11:11] new credential real quick and it's
+[00:11:12] asking for an access token so let's go
+[00:11:14] over to ad table and just create that
+[00:11:15] real quick okay so come over here I
+[00:11:16] think it's in the developer Hub that we
+[00:11:18] need could be the Builder Hub oh cool
+[00:11:20] great new
+[00:11:21] token uh name this one be beast and
+[00:11:24] let's give some Scopes I'm going to give
+[00:11:26] it all the Scopes in the world of course
+[00:11:27] I've added bases excuse me I've added
+[00:11:29] scop hes I come down to access and let's
+[00:11:31] just give it to all in future current
+[00:11:33] basically workspaces and create a token
+[00:11:34] cool and then you've created the token
+[00:11:36] uh I just copy it basically uh and then
+[00:11:38] we're going to come over to our
+[00:11:40] beautiful scenario come down to access
+[00:11:41] token post it in click save and we
+[00:11:44] should be connected we're connected Okay
+[00:11:45] cool so then we don't need to save that
+[00:11:47] password thank you my man click on base
+[00:11:49] and we should start to see all my stuff
+[00:11:51] cool so we're looking for social media
+[00:11:55] domination okay beautiful and then
+[00:11:57] mapping um no col colum found an air
+[00:11:59] table you sure about that we're going to
+[00:12:00] map it automatically actually we're
+[00:12:02] going to map each column manually uh ah
+[00:12:05] okay we need to pick the table which is
+[00:12:07] LinkedIn cool it is cool it will map
+[00:12:10] automatically sometimes um if they're
+[00:12:12] all named the same which I didn't name
+[00:12:13] them the same because I like to live
+[00:12:15] dangerously and uh make things more
+[00:12:17] difficult than I need to be sometimes
+[00:12:18] cool and that's come down green means
+[00:12:20] it's good post content beautiful comment
+[00:12:23] count uh where's comment
+[00:12:26] count beautiful linkedin's a funny
+[00:12:28] platform right guys guys um let's
+[00:12:30] where's it reposts I repost count that's
+[00:12:32] why and then likes this is when I when I
+[00:12:34] go bit Rogue when I start naming it
+[00:12:35] things with Emojis guys this is the
+[00:12:37] price I pay this is the price I pay for
+[00:12:39] trying to make it look really cool and
+[00:12:41] want views obviously that won't be on
+[00:12:42] every single thing that we have which is
+[00:12:45] view count and then when post it it's
+[00:12:47] just simply post time stamp beautiful
+[00:12:50] okay decent and then I think if we just
+[00:12:52] go for something know as test step this
+[00:12:54] should add it up your request is invalid
+[00:12:57] or could not be processed by the item
+[00:12:59] cannot pass value six for field comment
+[00:13:02] count okay that sounds controversial
+[00:13:04] let's go over and see what's going on
+[00:13:05] with field
+[00:13:07] six is that because that's text not
+[00:13:12] number okay let's come back and try that
+[00:13:14] one more time let's see what's going on
+[00:13:15] with that and test this one more time
+[00:13:17] cannot pass value zero for field reposts
+[00:13:20] so I wonder if it's just because these
+[00:13:22] are numbers and it's saying hey I know
+[00:13:25] you lazily put text but we will not
+[00:13:26] allow that so let's just quickly change
+[00:13:28] his little the numbers
+[00:13:32] uh what else have we got yeah
+[00:13:36] repost okay we've got numbers uh let's
+[00:13:39] go for yeah that's fine what else have
+[00:13:41] we got comment count yeah that's
+[00:13:45] numbers yeah I think that's fine
+[00:13:46] actually just views in really isn't
+[00:13:50] it yeah beautiful all right sweet let's
+[00:13:52] go check that out and test this one more
+[00:13:54] time and it looks a little bit more
+[00:13:55] promising which is code for good
+[00:13:57] news columns out ated how dare how dare
+[00:14:00] you refer to my columns as outdated I
+[00:14:02] think that's highly offensive but guys
+[00:14:04] look we got it we got the beautiful all
+[00:14:06] these post I did guys look how much hard
+[00:14:08] work I'm putting into LinkedIn can you
+[00:14:09] believe it all right so this is called
+[00:14:11] these all deleted uh and this is code
+[00:14:13] for good news um 0 point there's
+[00:14:16] something harsh about 0.0 let me just
+[00:14:18] change this for the Aesthetics right
+[00:14:20] click and I think we just want to go
+[00:14:21] for um normally it lets you change this
+[00:14:25] I wonder if it's because I've got a
+[00:14:26] different thing here if I come down
+[00:14:27] instead of
+[00:14:29] um edit field I there good decimal
+[00:14:32] places is zero and that should tie tidy
+[00:14:34] up a little bit okay that's cool I'm
+[00:14:36] just going to do the same for these real
+[00:14:37] quick all right guys we done it we have
+[00:14:39] successfully scraped this stuff and if
+[00:14:41] we wanted to do some repeat we would
+[00:14:43] just basically add a module into na10 to
+[00:14:45] run this every single week and then that
+[00:14:47] would just add it constantly to the add
+[00:14:49] table blah blah blah and we're done so
+[00:14:50] this is LinkedIn beautiful so next thing
+[00:14:52] I'm to do is to do the
+[00:14:54] wonderful Instagram so to do that let's
+[00:14:57] head over to appify like so and let's
+[00:15:00] log in I'll put a link down below for
+[00:15:01] appify guys if you check out you do get
+[00:15:03] five bucks completely free every single
+[00:15:06] month and what you look at this guys
+[00:15:07] we've got Instagram scraper already
+[00:15:09] working for us in the background so
+[00:15:10] let's go to the appify store the Willy
+[00:15:12] wers and porum and almost by Magic guys
+[00:15:14] one of the top ones out there is this
+[00:15:15] Instagram scraper sech click on him
+[00:15:18] beautiful all right what do you want to
+[00:15:20] do this is homos is an example let me
+[00:15:22] just grab my your RA in fact I'll just
+[00:15:24] have his data in here it just be easy
+[00:15:26] just for just for actually I need my own
+[00:15:27] data actually cuz I need this to be all
+[00:15:29] right so this is my beautiful profile we
+[00:15:32] got some school game stuff happening on
+[00:15:33] here guys homoi roast my uh my channel
+[00:15:36] don't ask me too many questions about
+[00:15:37] that no Ser that was really cool I
+[00:15:39] really appreciate that got a lot of
+[00:15:41] valuable beautiful Insight from that um
+[00:15:43] great post yeah that's cool and let's
+[00:15:45] have a look at one of do Max results
+[00:15:47] let's have a look actually now we're not
+[00:15:49] really interested in search queries
+[00:15:50] actually to be fair
+[00:15:52] guys yeah I think that's absolutely fine
+[00:15:54] so we come down absolute yeah Newland so
+[00:15:57] what we can do actually when run this in
+[00:15:59] the automations is we can say hey only
+[00:16:02] do this for the last like s days the
+[00:16:04] reason why that's really freaking cool
+[00:16:06] is because then it'll just always only
+[00:16:07] go back for 7 days so let's just test
+[00:16:09] this actually work so click save and
+[00:16:11] start and this should start to run
+[00:16:12] beautifully in the background and then
+[00:16:14] what I'm going to do is then build this
+[00:16:16] in na10 now if I head over to na10 I
+[00:16:19] should be also be able to do it in this
+[00:16:20] one here now if I add a new item um if I
+[00:16:24] come down here appify might already be
+[00:16:26] in here but I think what we want to do
+[00:16:28] so like basically guys make has a module
+[00:16:32] for it but you can use it in n 10 if you
+[00:16:35] want to you just have to use this HTTP
+[00:16:37] request thing instead um so let's have a
+[00:16:40] little let's have a little play around
+[00:16:42] with that actually and to do that I'm
+[00:16:43] just going to head over to Quin and log
+[00:16:45] in and if you're wondering what is Quan
+[00:16:47] uh let me just tell you guys quen is
+[00:16:48] like deep seek but is actually
+[00:16:50] accessible and the reason I'm using qu I
+[00:16:52] use quen and Claude is because Quan can
+[00:16:54] just access the internet and also think
+[00:16:56] uh so basically what I'm going to do to
+[00:16:57] it if it's like any apri I say hey I
+[00:17:00] want to integrate appify into
+[00:17:04] n10 I would
+[00:17:06] like to do the
+[00:17:11] asynchronous uh
+[00:17:14] call meaning it runs the
+[00:17:19] actor and
+[00:17:23] retrieves the
+[00:17:25] data in the
+[00:17:27] same uh request I guess you would say
+[00:17:32] um here is the info you might
+[00:17:37] need and then here's CHR gu say please
+[00:17:39] create for me a curl request curl is
+[00:17:43] just something where you can like copy
+[00:17:44] it and then actually what happens guys
+[00:17:47] in our phenomenal ENT scenario import
+[00:17:50] curl is you just paste it and then it
+[00:17:52] does all the freaking nonsense of just
+[00:17:53] filling out headers and query parameters
+[00:17:55] and all that sort of stuff so we just
+[00:17:58] always could to to State your intention
+[00:17:59] when we talking his models like look
+[00:18:00] this is actually what I'm trying to do
+[00:18:02] because it'll just sometimes it takes
+[00:18:03] what you say too literally and you go
+[00:18:05] down beautiful rabbit holes which could
+[00:18:06] be fun but you know time is a beautiful
+[00:18:08] thing all right cool so this is pulled
+[00:18:11] three Post St that's not quite what I
+[00:18:13] wanted though because what I wanted
+[00:18:15] really was reals not so much the posts
+[00:18:18] so this is leading me to believe that I
+[00:18:19] might actually be on the wrong thing so
+[00:18:21] scrip
+[00:18:23] posts script comment script profile
+[00:18:25] reals yeah that's kind of what I wanted
+[00:18:27] let me just redo this again
+[00:18:29] okay cool I mean posts are cool but like
+[00:18:31] if it's for growth all growth usually is
+[00:18:34] reals isn't it so if I come down to Json
+[00:18:36] that's absolutely fine I'm just going to
+[00:18:38] duplicate this page just so I can do
+[00:18:40] some stuff and you always know that
+[00:18:41] appify is working guys when you see this
+[00:18:43] memory you see the bottom left hand side
+[00:18:44] doing some stuff would you believe it it
+[00:18:46] has pulled through loads of cool data we
+[00:18:48] like this um I thought it said one of my
+[00:18:50] things were sponsored isn't that really
+[00:18:51] funny all right cool so what do we do if
+[00:18:53] I come back over to the Instagram
+[00:18:55] scraper this is it click on Json and
+[00:18:58] then this is the Json for the profile
+[00:19:00] right so what you're going to do is
+[00:19:01] basically copy all this Json like so and
+[00:19:02] come back over to quen say hey the Json
+[00:19:05] for the
+[00:19:07] scraper and I think it also
+[00:19:11] needs on top of that um I believe that
+[00:19:15] it needs to know what the name of the
+[00:19:18] thing is which is the actor yeah so if I
+[00:19:21] come here and I just say hey actor name
+[00:19:28] and also I wonder if this code is
+[00:19:30] relevant I don't believe it is but
+[00:19:31] sometimes I just throw this information
+[00:19:33] just for the sake of it which is in the
+[00:19:35] description and then I also want to say
+[00:19:38] uh if you
+[00:19:39] need any other info like API let me know
+[00:19:45] although to be fair with you I'm not
+[00:19:46] really going to put my API into quen I'm
+[00:19:48] just going to get it and I'll just leave
+[00:19:49] the API blank and then we can add that
+[00:19:51] in separately once it's done so quen is
+[00:19:52] thinking which is good we want it to
+[00:19:54] quite and quite think as much as
+[00:19:56] possible by the way while we learning
+[00:19:58] guys have you seen like the image gen
+[00:19:59] stuff I have to show you the stuff right
+[00:20:02] it is freaking unbelievable um like chat
+[00:20:06] the level chat G's got to is on in
+[00:20:08] freaking sane I think I did a post on
+[00:20:10] this didn't I where is it um yeah so
+[00:20:13] dude some guy in my community no he
+[00:20:16] freaking made this look how freaking
+[00:20:17] badass this is D this is yeah CU you
+[00:20:19] know ai's been stealing my Gams I did
+[00:20:21] like an a gener image and it made my
+[00:20:22] arms like drain pipes we got Adam man we
+[00:20:24] got this cool this represents our levels
+[00:20:26] so like one of the things I'm going to
+[00:20:27] do is create like certain levels in the
+[00:20:29] group you get like stickers and we just
+[00:20:30] like s cool stuff out but it's getting
+[00:20:32] insane like there's also another tool I
+[00:20:34] covered which is how you can get text in
+[00:20:36] images now it's UNF freaking believe
+[00:20:40] it's actually a genuine genuine step
+[00:20:42] change that has really really impressed
+[00:20:44] me so it's quite done yet okay this is
+[00:20:46] cool right let's go check if it works
+[00:20:47] and if I come over to um a beautiful
+[00:20:50] thing here click on import curl insert
+[00:20:53] and import this is decent nice now we
+[00:20:55] just need to give authentication which
+[00:20:57] is API token so let's just grab that
+[00:20:59] from appify where would that be let's
+[00:21:01] see if we can find it it's always a
+[00:21:03] little squirly journey to find your API
+[00:21:06] key to these places right in
+[00:21:09] settings um let's have a quick look ah
+[00:21:11] right there API Integrations cool click
+[00:21:13] on this and then let's just copy or
+[00:21:15] create API key come back over to your
+[00:21:17] beautiful scenario and guys API token
+[00:21:19] just enter it here cool now let's click
+[00:21:21] on test app I'm assum this won't work
+[00:21:24] yeah there we go we have bad news there
+[00:21:25] is no AP impo at this URL did you
+[00:21:28] specify correctly cool so I'm going to
+[00:21:30] copy this error real quick I could think
+[00:21:32] about it but it's going to be quick to
+[00:21:33] do this let's just Ender that back in
+[00:21:34] there and come back and get a little bit
+[00:21:36] of a troubleshoot I suspect what it's
+[00:21:38] done has not checked uh the key bits for
+[00:21:41] appify scraping yeah okay so it's given
+[00:21:44] as a correct your all command let's copy
+[00:21:46] this and try this one more time come
+[00:21:47] back over to N8 and cool import Cur
+[00:21:50] let's delete this guy into this one and
+[00:21:52] imports cool and then we just do the
+[00:21:53] same thing with the API tokens guys guys
+[00:21:55] so quen's going to be a bit of Mischief
+[00:21:56] so I'm just going to run this one into
+[00:21:58] um clae I'm going to say hey here is
+[00:22:02] some API docs and then just give it the
+[00:22:05] information from this quite normally
+[00:22:08] doesn't let me down but today it's been
+[00:22:10] a little bit naughty and I'm keeping
+[00:22:11] this stuff in the video just so you can
+[00:22:13] kind of see the process of how much
+[00:22:14] straightforward it is as you can
+[00:22:16] actually do it and it looks like it's
+[00:22:18] done it immediately so let's just see if
+[00:22:19] we can do this click on copy and head
+[00:22:21] back over to the beautiful and
+[00:22:25] scenario inut the co and do this one in
+[00:22:28] click import beautiful and then I think
+[00:22:31] we just need to give it our API token so
+[00:22:32] let's just enter that one in then we
+[00:22:33] click on test app it seems to be
+[00:22:35] executing properly what do we learn from
+[00:22:37] this we learned that Claude is freaking
+[00:22:39] much better when it comes to coding than
+[00:22:41] anything else cool so this is working in
+[00:22:43] the background once it's done that we
+[00:22:44] should get all the information then that
+[00:22:46] we had to applify should we see if it's
+[00:22:47] running and guys that memory being 1
+[00:22:50] Gigabyte is basically amazing to see cuz
+[00:22:53] it means it's working for us beautifully
+[00:22:55] in the background that means that it
+[00:22:56] will land in na 10 for us phenomenally
+[00:22:58] let come over to this it has completed
+[00:23:01] and what do we have we have some
+[00:23:03] information which is cool but it hasn't
+[00:23:05] doesn't seem to have pulled through the
+[00:23:08] data so guys I've just rerun this one
+[00:23:09] again basically what Claude asked me to
+[00:23:11] do cuz it wasn't pulling down the data
+[00:23:13] was to actually increased some of the
+[00:23:15] items in the uh URL that was going
+[00:23:18] through the basic told to wait for 300
+[00:23:21] seconds I'll just show you that really
+[00:23:22] quickly you see that like it's copy this
+[00:23:24] it says hey wait for finish equals 300
+[00:23:27] so come back over has that gone through
+[00:23:29] an appify it looks like it's completed
+[00:23:31] so let's good to any 10 click on it and
+[00:23:32] see what we've got cool and it's just
+[00:23:34] pulled through one for data so let's
+[00:23:36] just find out what's happened cool guys
+[00:23:38] so I think what we're going to do next
+[00:23:39] is get a different module to pull it
+[00:23:40] down with the data set so what I'm going
+[00:23:43] to do is deactivate Phantom as hard as
+[00:23:45] it is to say for a moment grab this and
+[00:23:48] we could probably just connect these
+[00:23:49] together to be honest with you actually
+[00:23:50] when we're done so it runs as one
+[00:23:52] sequence because hasht why not right uh
+[00:23:55] let's come down here so let's link these
+[00:23:57] guys together we are going to want to do
+[00:23:58] another request to grab it so let's come
+[00:24:01] down here HTP request and then in the
+[00:24:03] URL guys you just going to enter this
+[00:24:05] thing that I grabb from Claude which is
+[00:24:06] this which is going to grab the node and
+[00:24:09] what's really cool is Claude can really
+[00:24:11] help you problem solve this sort of
+[00:24:12] stuff and then here we're just going to
+[00:24:13] replace this with our API key down below
+[00:24:15] but if you want to upload this I will
+[00:24:16] put this in community just so you can
+[00:24:17] grab them so you don't have to F around
+[00:24:18] with this stuff so let me grab the API
+[00:24:20] key and when that's done guys just make
+[00:24:21] sure this is pinned so it can run and
+[00:24:23] then if I click on test workflow this
+[00:24:25] should request a data and voila we have
+[00:24:27] all the data on on the right hand side
+[00:24:29] which is very flipping cool which is
+[00:24:31] decent so what we're going to do is come
+[00:24:32] to this guy we are going to duplicate
+[00:24:34] him bring him over and connect and let's
+[00:24:37] just reanimate and reactivate this guy
+[00:24:39] and then just pick the data we want to
+[00:24:40] go again so in this case we have
+[00:24:42] got uh the input URL which is cool let
+[00:24:44] head back up with the beautiful a table
+[00:24:45] I'm going to right click I'm going to
+[00:24:47] click on duplicate table because some
+[00:24:49] will be similar phenomenal and let's
+[00:24:51] just pick out all the stuff that we need
+[00:24:52] then so first one we're going to want is
+[00:24:56] okay let's have a look URL it's fine
+[00:24:59] caption all right sweet so let's start
+[00:25:00] with this one we'll go
+[00:25:05] for caption all right I'm sold on that
+[00:25:09] what else do we
+[00:25:10] want hashtags is cool that's
+[00:25:13] fine um URL will be good I think
+[00:25:15] actually wouldn't it is this the right
+[00:25:16] URL let me just double
+[00:25:21] check yeah that's cool all right sweet
+[00:25:23] we got the right URL so post URL that's
+[00:25:25] decent captioned come back over here
+[00:25:27] what else have we
+[00:25:29] got um yeah replies and likes be good
+[00:25:32] you got comment count repost likes you
+[00:25:34] don't really track that on Instagram do
+[00:25:35] so delete that likes views when posted
+[00:25:38] comment count that's fine any other
+[00:25:40] useful data we want no I think that's
+[00:25:42] fine actually any we got some
+[00:25:44] comments which is cool these are people
+[00:25:47] who have just said hey this is really
+[00:25:48] fing cool I'd like to know more about
+[00:25:49] this this is decent latest
+[00:25:52] comments images we don't really need to
+[00:25:54] mess around with so much uh video play
+[00:25:57] count yeah that's probably going to get
+[00:25:59] video view count and video video plays
+[00:26:00] and video views so just call this one
+[00:26:03] here video
+[00:26:08] views and then let's just duplicate that
+[00:26:10] one and call that one video
+[00:26:15] plays and then have a I think the
+[00:26:17] difference by the way between those two
+[00:26:19] things is like unique viewer watching it
+[00:26:21] 20 times type of situation so like one
+[00:26:23] unique view but like 20 20 play so to
+[00:26:26] speak so to speak um so BAS what's the
+[00:26:29] is grab all the things that you want we
+[00:26:30] have got likes that's really cool and
+[00:26:31] really important yeah cool and then when
+[00:26:34] posted so let's then add this to the a
+[00:26:37] table so click on this guy map each um
+[00:26:41] no we don't want to map it each one so
+[00:26:43] instead of LinkedIn we want to click on
+[00:26:44] Instagram now which is cool give us a
+[00:26:46] second and then we just are going to
+[00:26:49] bring them all over so starting with a
+[00:26:51] caption beautiful that's decent uh and
+[00:26:54] then common Camp obviously you can make
+[00:26:56] this even more complex like you know if
+[00:26:58] I I was spending more time in this I
+[00:26:59] would add in the transcript but I think
+[00:27:01] this would be good for now because we
+[00:27:02] want to kind of double click on the ones
+[00:27:04] and listen to it and then grab that and
+[00:27:05] then improve that a little bit so
+[00:27:07] comment count I think it's weird isn't
+[00:27:09] it because it's saying the comment count
+[00:27:10] is zero yet there are obviously comments
+[00:27:14] there um that is enigmatic to say the
+[00:27:17] least okay I I'll look into that one
+[00:27:19] okay cool uh then we got likes let's
+[00:27:21] just add that one in here L count which
+[00:27:23] is cool video view count will go here
+[00:27:26] and then video play count will go there
+[00:27:28] and I think that's all of them actually
+[00:27:30] and then when posted ah video duration
+[00:27:34] that is actually a really good one let's
+[00:27:35] add that one in cuz I wonder if like
+[00:27:37] video length could be an interesting
+[00:27:39] fact to track one of my theories at the
+[00:27:41] moment is you know 20 20 to 30 seconds
+[00:27:45] is really good it all depends on the
+[00:27:47] literally I'm trying to like Focus my
+[00:27:49] content to help entrepreneurs crush it
+[00:27:51] with really helpful stuff um so they
+[00:27:53] tend to have a longer attention span um
+[00:27:55] but nonetheless it's you know it's good
+[00:27:58] to be mindful and check those numbers to
+[00:27:59] see what's going on there so we want
+[00:28:01] number on that one right okay beautiful
+[00:28:04] all right let's go back over then cool
+[00:28:06] and then I and actually what you can do
+[00:28:08] guys is refresh this and it should pop
+[00:28:10] in at the bottom there let magic so
+[00:28:13] would say that's let magic I quite like
+[00:28:14] that video duration that's cool yeah
+[00:28:18] okay that's sweet actually I know when
+[00:28:19] posted let's just grab what that one
+[00:28:21] looks
+[00:28:23] like it should say uh time stamp yeah
+[00:28:26] time stamp will be fine and then we've
+[00:28:27] got video you URL so grab this one here
+[00:28:30] cool sweet
+[00:28:32] so I believe now we can just test up and
+[00:28:35] it should it has said hey we're not
+[00:28:38] happy with that Jack what is going on
+[00:28:40] authorization please check your
+[00:28:42] credentials in HTTP note all right let's
+[00:28:44] just check out what's going on ah cuz I
+[00:28:45] removed them to check it let me just add
+[00:28:47] this back in real quick cool so me grab
+[00:28:48] the API key and then come back over to
+[00:28:50] the sario beautiful and just add that in
+[00:28:52] which is going to
+[00:28:53] be there you go token equals here let's
+[00:28:56] get rid of this and add in so come down
+[00:28:57] here get ready app five bit Yeah and
+[00:28:59] then we'll add it in here cool then we
+[00:29:00] should be able to play that one for us
+[00:29:02] say it's execute the workflow that's
+[00:29:04] making some Cog turning sounds which is
+[00:29:06] code for good news and then if we head
+[00:29:08] over to our database bada bing bada bam
+[00:29:10] we' got all the stuff popping in which
+[00:29:11] is cool so now we got Instagram we got
+[00:29:14] LinkedIn let's also then show we guys
+[00:29:16] check out beautiful YouTube now so I'm
+[00:29:18] going to come here I'm going to
+[00:29:19] duplicate this to one more time and
+[00:29:21] obviously guys the tell you all of this
+[00:29:22] is just keep repeating it until you got
+[00:29:25] everything that you need now the YouTube
+[00:29:26] one's really cool we can get really
+[00:29:28] spicy with the YouTube one so for this
+[00:29:29] one we're going to a little bit of left
+[00:29:31] left field and we're going to head over
+[00:29:32] to me.com so actually what I've got if I
+[00:29:34] head over to my community let me just
+[00:29:37] come over to the homepage real
+[00:29:39] quick um we can just grab this one to
+[00:29:42] save a little bit of time so if I come
+[00:29:43] over to
+[00:29:45] classroom it should be in this one our
+[00:29:47] vault and on the YouTube section Here
+[00:29:49] YouTube data scraper to go ahead and
+[00:29:52] download this just right here yeah
+[00:29:54] download and if you're wondering what it
+[00:29:56] is but it's like on the left you've got
+[00:29:57] like the things social media voice make
+[00:29:58] money but actually if you come down to
+[00:30:01] um assets on Youtube it'll be there and
+[00:30:03] then this video is going to be in social
+[00:30:05] media at the top it'll be number 81 and
+[00:30:07] you can actually just get all the stuff
+[00:30:08] here and download it and all your text
+[00:30:10] ort and stuff there so you're ready to
+[00:30:11] rock and run then let's head over to
+[00:30:13] make.com cool and let's come down to
+[00:30:15] these three beautiful dots and import
+[00:30:16] the blueprint and choose the file select
+[00:30:18] the file and voila it has appeared so
+[00:30:21] let me kind of give you the TA what's
+[00:30:22] going on here what I'm doing is first of
+[00:30:24] all I'm using called RSS feeds and what
+[00:30:26] I'm going to kind of do is grab gra the
+[00:30:28] last 7 days with the videos that I've
+[00:30:31] done that's basically how I want this to
+[00:30:33] run so I'm just quickly shoot over to
+[00:30:35] rssa as well I'll put a link down below
+[00:30:37] uh you can get started this one for free
+[00:30:39] as well so come on get started and
+[00:30:40] what's cool guys is if I come and grab
+[00:30:42] my um YouTube URL and we come over let's
+[00:30:46] just grab that real quick it's getting a
+[00:30:48] little bit dark here isn't it let's go
+[00:30:49] for Jack
+[00:30:50] Roberts there we go oh my gosh I've
+[00:30:53] searched myself before this is cool
+[00:30:54] right click on my profile by the way if
+[00:30:56] you haven't seen this video not a
+[00:30:59] billion people watch that but I actually
+[00:31:01] think it's one of the best videos I've
+[00:31:02] done I would highly recommend you check
+[00:31:03] it out um so look I grabbed this you're
+[00:31:07] I come over to where we at right now
+[00:31:10] yeah this is the problem gazillion tabs
+[00:31:12] is you can never R can find anything
+[00:31:14] come URL enter this one in and then hit
+[00:31:16] generate what this will do is create an
+[00:31:18] R feed which stands for really simple
+[00:31:20] syndication basically uh it will just
+[00:31:23] find everything I've done so you can see
+[00:31:24] this this is this looks really freaking
+[00:31:26] familiar this is everything I've done
+[00:31:27] the other the video I did on L ball and
+[00:31:30] SAS and blah blah blah blah all this
+[00:31:31] cool stuff right so what you would
+[00:31:34] basically do is come into filters and
+[00:31:36] this is just for me because I mean like
+[00:31:38] I just want to know what's happened the
+[00:31:39] last seven days cuz I want to do this
+[00:31:41] but look you can actually goodby say
+[00:31:43] feed Co I can click on this which is to
+[00:31:46] hide anything older than seven days so
+[00:31:49] when I do this scr you can see how this
+[00:31:50] is already blocked out the automations I
+[00:31:53] Sol for 10K and the five profitable
+[00:31:55] skills will only pull through these four
+[00:31:57] videos because in our database we don't
+[00:31:59] need to keep reading the same stuff
+[00:32:00] right which is really cool so then if I
+[00:32:02] come over to overview I can copy this
+[00:32:05] this is the key thing that you want
+[00:32:06] right then if I come over to meg.com
+[00:32:09] which is here I click on RSS I'm going
+[00:32:12] to get rid of this guy whatever that
+[00:32:13] card was and enter this right now when I
+[00:32:17] run this this is all going to basically
+[00:32:19] what's going to happen here we're going
+[00:32:20] to iterate it which means it's going to
+[00:32:22] f through all the different things like
+[00:32:23] for example check this out I unlink and
+[00:32:25] then run this module only you'll see I
+[00:32:28] one bundle two right how to get clients
+[00:32:30] with no budget with no budget that's a
+[00:32:32] good podcast how to build a$ million web
+[00:32:34] app these are all videos I posted in the
+[00:32:35] last seven days I've done four which
+[00:32:37] means I'm on track and I'm a Target and
+[00:32:39] I get a gold sticker for that which is
+[00:32:40] cool get iterate it means we're going to
+[00:32:42] iterate through that stuff this one here
+[00:32:45] the scrape transcript you can do this
+[00:32:47] with some [ __ ] poker with the API if
+[00:32:49] you want to uh we actually built this in
+[00:32:50] the community because we wanted to kind
+[00:32:52] of simplify the process you unlock that
+[00:32:54] level four on the group it just
+[00:32:55] basically put a URL in it grabs a
+[00:32:57] transcript simple as that the ID
+[00:32:59] extractor guys what this does is
+[00:33:01] basically takes the ID of the video so
+[00:33:02] every video that exists on YouTube has
+[00:33:04] like a unique alpha numeric code and you
+[00:33:07] need that to get information then this
+[00:33:09] HTTP request will scrape and we're doing
+[00:33:12] this directly with the Google API uh
+[00:33:14] we'll scrip comments we'll script the
+[00:33:15] thumbnail uh scrip the stats which is
+[00:33:17] cool um and then we'll par some stuff
+[00:33:20] out summarize the transcript and go to
+[00:33:22] ad table the one thing you'll need to do
+[00:33:23] to get this to run properly is go over
+[00:33:25] to this link let me just pull up right
+[00:33:26] now for you and that's console.
+[00:33:28] cloud.google.com and basically what you
+[00:33:30] do is create a project and then you're
+[00:33:33] going to search for Here YouTube API and
+[00:33:37] click on this guy you're going to create
+[00:33:39] credential you're going to enable it
+[00:33:41] I'll put a link Down Below in
+[00:33:42] description so you can follow that
+[00:33:43] process if you're not set up yet but
+[00:33:44] basically what I'll to do then is just
+[00:33:46] kind of freaking grab and access the
+[00:33:48] data as well which is really really cool
+[00:33:50] and so we want to simplify then I come
+[00:33:52] down and then we're going to do a
+[00:33:53] transcript summarizer which means that
+[00:33:55] maybe we don't want every every word
+[00:33:57] that said special long video we just
+[00:33:58] going to summary and then add it to air
+[00:34:00] table but in this case we're going to
+[00:34:02] pick a different air table so let's
+[00:34:04] click on a different base so this one's
+[00:34:06] going to be
+[00:34:07] social uh domination right oops oh my
+[00:34:10] goodness gracious let's go up
+[00:34:13] here social media domination hang on has
+[00:34:16] it got like a it has got a flame on it
+[00:34:18] cool cool then table is going to be
+[00:34:20] let's refresh that and we're looking for
+[00:34:21] YouTube Sweet so then let's just pick up
+[00:34:24] the things that we need right
+[00:34:26] so one thing is going to be video URL so
+[00:34:29] let's just add these in real quick so
+[00:34:31] YouTube
+[00:34:35] video we are going to want uh
+[00:34:42] comments we are going to want to know um
+[00:34:45] something like the
+[00:34:46] likes of course give that a beautiful
+[00:34:48] Emoji like
+[00:34:50] so um we'll want to know I guess what
+[00:34:53] other factors are we actually going to
+[00:34:54] get from the automation by check
+[00:34:55] comments likes uh thumbnail could be
+[00:34:57] cool as well to be fair if you want uh
+[00:34:59] so I could say like I don't know
+[00:35:02] thumbnail cuz maybe you yourself want to
+[00:35:04] come in and check this out right I come
+[00:35:05] down to
+[00:35:07] attachments okay beautiful that's good I
+[00:35:10] had like video comments likes thumbnails
+[00:35:13] um and this one if I just had something
+[00:35:15] like when posted so why just get rid of
+[00:35:18] this we don't need this one and do we
+[00:35:20] have views yeah okay this is really cool
+[00:35:23] all right sweet so let's just come then
+[00:35:24] over to make and let's just add in those
+[00:35:27] different things I've got a sneaking
+[00:35:29] feeling that it's not oh it doesn't
+[00:35:32] quite let us do that yet so let me just
+[00:35:33] unlink these and run it once just to
+[00:35:35] show what it looks like like run once it
+[00:35:37] grabs it iterates YouTube's transcript
+[00:35:39] is doing it so what's say grabbed if a
+[00:35:41] look look at this guys ready look at the
+[00:35:43] magic okay it's not right there it is
+[00:35:45] here hey guys it's Jack today we're talk
+[00:35:47] about how to get a to Clans in ban so
+[00:35:49] you more like this guy cool and then
+[00:35:52] just starts to go all the way through we
+[00:35:54] can put a beautiful stop to that real
+[00:35:56] quick CL this guy link this guy in and
+[00:35:59] then we can start to add in all the
+[00:36:01] information okay table is not this one
+[00:36:03] let's just grab the right
+[00:36:05] one oh the base that's why okay there we
+[00:36:08] go that kind of makes more sense right
+[00:36:10] guys and then we want to you refresh
+[00:36:12] that we on YouTube cool and then we
+[00:36:14] should be able to enter all the data
+[00:36:15] YouTube video so let's go down it is
+[00:36:18] this one beautiful comments let's get
+[00:36:21] the summary of the comments which is
+[00:36:22] what we want which is this guy very very
+[00:36:25] important by the way then we look at
+[00:36:27] likes so we look at statistics there you
+[00:36:28] you can see that guys there's the likes
+[00:36:31] there is the views and then we've got
+[00:36:33] number of comments do you know what I
+[00:36:35] think that'd be a nice one actually I'm
+[00:36:36] actually going to forget the thumbnail
+[00:36:38] I'm just going to change this one
+[00:36:40] to number of comments and let's just
+[00:36:44] make that like I don't
+[00:36:47] know a number um there we go
+[00:36:52] cool cool all right sweet we come back
+[00:36:54] then to make right here uh let's just
+[00:36:57] refresh these just so it updates
+[00:37:00] properly we should be good to rock and
+[00:37:02] roll you know I got a stand for my
+[00:37:03] laptop recently I'm really conscious you
+[00:37:05] want to keep that good crisp beautiful
+[00:37:07] postes come down numbers let's go to
+[00:37:09] statistics oh right there comment count
+[00:37:11] 13 cool and then when was it posted do
+[00:37:14] we know that data do we know any of that
+[00:37:17] data when was it when was it posted oh
+[00:37:19] dat updated cool all right sweet I think
+[00:37:22] that's good click save and then let's
+[00:37:24] run this one more time for great luck
+[00:37:26] hit this B Bing B bam cool now this
+[00:37:29] works properly we should start to get
+[00:37:31] the Jack Roberts YouTube videos popping
+[00:37:34] up basically here with all our data and
+[00:37:37] then we will actually guys at that stage
+[00:37:39] be complete with step one scoping social
+[00:37:42] media we should get like a big pen to
+[00:37:43] like crush them out but dude we freaking
+[00:37:45] crushed that all right and there we go
+[00:37:47] guys look comments likes comments views
+[00:37:51] blah blah blah and when it was posted
+[00:37:52] cool so now every week this is going to
+[00:37:54] run on autopilot all I would need to do
+[00:37:57] is basically set something at the
+[00:37:58] beginning which says hey this is how
+[00:37:59] often I want it to run so just click
+[00:38:00] here to every 50 minutes I would just
+[00:38:02] say hey I want this to run days of the
+[00:38:04] week and I just say hey run on Monday
+[00:38:06] add this time then save it and then boom
+[00:38:09] it will just do this every single week
+[00:38:10] for us say activate the scenario that's
+[00:38:13] fine and of course what we want to do is
+[00:38:16] save it so cool guys that's awesome
+[00:38:17] that's all it would be um this API is
+[00:38:19] Free by the way there's no cost in that
+[00:38:21] and it's ready to rock and roll so let's
+[00:38:23] zoom out then very quickly so we have
+[00:38:24] scoped social media should I get a big
+[00:38:26] like actually let's not get too crazy
+[00:38:28] now we're going to build the dashboard
+[00:38:30] okay now how we going to do that well
+[00:38:32] obviously we need to inh lovable and
+[00:38:35] then essentially the key thing I needed
+[00:38:36] to do one is going to be the design of
+[00:38:38] what I want it to look like and second
+[00:38:40] of all it needs to be able to pull the
+[00:38:41] data and then once it's done that we're
+[00:38:43] going to add in this additional feature
+[00:38:44] for chat GPT so let's head over to the
+[00:38:47] beautiful lovable. Dev and make some
+[00:38:51] magic happen Okay so all right let's
+[00:38:54] think about this I'm going to say hey I
+[00:38:56] would like
+[00:38:59] a beautiful data
+[00:39:01] analytics
+[00:39:03] dashboard that
+[00:39:06] provides stats for my I'm going to say
+[00:39:10] Here
+[00:39:12] YouTube LinkedIn and also
+[00:39:18] Instagram I'm going to say um
+[00:39:23] crucially you will receive this data
+[00:39:27] from ad table you will make a
+[00:39:30] call to the ad table
+[00:39:34] database whenever the page
+[00:39:38] loads and share that
+[00:39:41] data let me know what
+[00:39:45] information you require for
+[00:39:49] this like uh Keys
+[00:39:52] etc for
+[00:39:55] design use this as
+[00:39:59] inspiration cool and obviously guys I'm
+[00:40:01] going to head over to code pan code pan
+[00:40:03] being a
+[00:40:05] badas really cool uh website I did this
+[00:40:07] before on a previous one but basically
+[00:40:09] the way that it sort of works guys a
+[00:40:10] code pen you can kind of just like brass
+[00:40:13] through bazillion different things and
+[00:40:15] see what you like and then like say I
+[00:40:17] like look at this
+[00:40:19] well you can get the code for it this
+[00:40:21] actually is really cool let's make him
+[00:40:23] punch let's make him
+[00:40:25] jump okay this is funny but BAS
+[00:40:27] basically the idea is you can kind of
+[00:40:28] copy the code for anything you want to
+[00:40:30] and then just enter in I'm going to
+[00:40:31] refresh this cuz I think I destroyed the
+[00:40:32] HTML no I didn't Okay cool so look I
+[00:40:34] come over to Bow I'm just going to throw
+[00:40:36] some code in okay that's cool
+[00:40:39] oops um and come down the bottom and
+[00:40:42] then let's just do one more over here
+[00:40:44] which is going to be not the guy that
+[00:40:46] keeps dying for us the JavaScript bam
+[00:40:50] and then we hit enter beautiful now I'm
+[00:40:52] expecting a little bit
+[00:40:54] of should we say a little bit of some
+[00:40:56] bant a little bit back and forth now
+[00:40:58] with lovable as we go through this
+[00:41:00] beautiful Journey because the key
+[00:41:02] integration Point here now the thing is
+[00:41:04] guys I when you're trying to do
+[00:41:06] something really unique and epic you're
+[00:41:07] trying to integrate these things
+[00:41:09] together it's only ever going to get
+[00:41:10] easier over time right but this is like
+[00:41:13] this is one of the reasons why it's so
+[00:41:14] freaking cool because no one's really
+[00:41:16] prepared to do the steps it takes and
+[00:41:17] like you know say you work for your
+[00:41:19] company or you've got clients like to be
+[00:41:21] able to pull together these crisp
+[00:41:23] dashboards nobody's doing that nobody's
+[00:41:25] got this like sick amazing beautiful
+[00:41:28] interactive engaging Graphics like and
+[00:41:31] that's always been the curse of like the
+[00:41:32] data guy right the data guy can show the
+[00:41:34] data but it's like not about the data
+[00:41:36] it's about presenting the data in the
+[00:41:38] way that we can actually make decisions
+[00:41:40] about it right and the way you make
+[00:41:42] enable people to make decisions is you
+[00:41:43] reduce the cognitive requirements to
+[00:41:46] understand what this actually means
+[00:41:48] which is why I always hop on about
+[00:41:51] design and I think it's the biggest most
+[00:41:53] underutilized hack ever because it's
+[00:41:56] this great book called don't make make
+[00:41:57] me think it's like the design should
+[00:41:58] just Glide over you it should just kind
+[00:42:00] of like ah well obviously these are
+[00:42:02] things that we need to double click into
+[00:42:04] so I said to say I think that's really
+[00:42:06] important now I'm going to preempt some
+[00:42:08] problems here uh and what I'm going to
+[00:42:10] do in my preemption is head over to
+[00:42:12] Claude and essentially what I'm going to
+[00:42:14] do is open a new window over here and
+[00:42:17] I'm going to say hey I am
+[00:42:20] integrating a table with um a table a
+[00:42:24] table with lovable
+[00:42:27] daab I would like it
+[00:42:30] to pull down data from three
+[00:42:35] tabs um how what will be
+[00:42:40] required information wise for loable to
+[00:42:45] do this please provide
+[00:42:48] instructions bam so I'm just going to
+[00:42:51] find out just From claude's perspective
+[00:42:54] um what it thinks that we're going to
+[00:42:55] need so Claude thinks we're going to
+[00:42:56] need a basite base ID and an air table
+[00:42:58] API key okay and view
+[00:43:01] IDs M okay that's interesting so we know
+[00:43:04] that's what we going to need so we've
+[00:43:05] got the API key which is cool and then
+[00:43:06] we're going to need the URL and we can
+[00:43:08] find that there so if I come over to
+[00:43:09] liable let's pre this for example and
+[00:43:11] say hey the base ID is and then we're
+[00:43:14] going to give it the URL of our
+[00:43:16] beautiful page here I'm just going to
+[00:43:18] copy it for example come here and Bam
+[00:43:21] and I'm going to say let me
+[00:43:23] know when you're ready for the API key
+[00:43:28] key so you can
+[00:43:31] grab the
+[00:43:34] data also yeah actually that's fine
+[00:43:38] decent love we do its magic in the
+[00:43:39] background and then we can give it this
+[00:43:41] request and guys would you look at this
+[00:43:43] it preempted me so air table base ID
+[00:43:46] let's enter that and then we need the
+[00:43:48] air table API key so let's just grab
+[00:43:50] that real quick from Air table come down
+[00:43:52] to build a hub come over here and I
+[00:43:54] believe the API keys are here so guys
+[00:43:56] you create a new token going to use one
+[00:43:57] used previously come over to loable and
+[00:44:00] then enter in your air table API key
+[00:44:02] right here and then guys basically the
+[00:44:03] air table base ID is the first string of
+[00:44:06] numbers after airtable.com so by click
+[00:44:09] on connect to air table let's just see
+[00:44:11] if this works for us in the background
+[00:44:12] I'll be honest with you guys this is
+[00:44:14] pretty flipping impressive all right app
+[00:44:17] has encountered an error which is cool
+[00:44:19] actually guys I had a thought I wonder
+[00:44:20] if we could just share this and it could
+[00:44:24] scrape it right like that's another idea
+[00:44:25] actually we just give it a link to view
+[00:44:27] it because you could do this already
+[00:44:29] with other people like just give them a
+[00:44:30] link they can check the data and pull it
+[00:44:32] down if they want to so let's see if we
+[00:44:33] can do that for example cool copy link
+[00:44:37] uh and then we can try that with lovable
+[00:44:39] cuz the entering in didn't work
+[00:44:41] obviously we expected that to a little
+[00:44:42] bit of finessing but let's see if this
+[00:44:43] works cool so small error let's just
+[00:44:45] clarify that and get that sorted
+[00:44:46] beautiful guys and look at this gorgeous
+[00:44:49] Design This is freaking crazy this is
+[00:44:52] really impressive YouTube analytics
+[00:44:53] subscribers total views has great
+[00:44:55] Channel okay so this is dummy data now
+[00:44:57] we're going to give it the real data so
+[00:44:59] I wonder if I could say hey here
+[00:45:04] is the sharable
+[00:45:07] link to uh my air
+[00:45:10] table can you scrp that and enter in the
+[00:45:17] info with the
+[00:45:20] corresponding um I guess you'd say like
+[00:45:23] column
+[00:45:24] titles for the data
+[00:45:29] and also hey I would like
+[00:45:31] to connect chat GPT to interact with the
+[00:45:36] data so again this is another Milestone
+[00:45:38] now now we've got the design beautiful
+[00:45:40] so we've scrap the data we've got the
+[00:45:41] design but last bit now it's just
+[00:45:43] getting the data into the ad table and
+[00:45:45] then be able to use chat gbt to have
+[00:45:47] some conversations with it which would
+[00:45:48] be really flipping cool um and then we
+[00:45:50] can start ring roll and having a good
+[00:45:51] time with it which I think is flipping
+[00:45:53] Ace so we'll see if this is possible
+[00:45:55] this kind of data guys is going to be
+[00:45:57] freaking awesome and obviously you can
+[00:45:59] share this per client put credentials
+[00:46:00] behind it put signing credentials behind
+[00:46:02] it connect accounts to Super based like
+[00:46:04] we did so we just add a login section to
+[00:46:06] this like we did in the last video If
+[00:46:07] you haven't seen that put link on screen
+[00:46:09] so you can do it um and yeah they
+[00:46:12] basically you're only ever going able to
+[00:46:13] accesses with like secure loging
+[00:46:15] credentials which is super super
+[00:46:17] important and the other thing to bear in
+[00:46:18] mind here guys is that this isn't
+[00:46:19] sensitive data so it's I don't really
+[00:46:22] you know what I mean but it's like if
+[00:46:23] you actually having very sensitive data
+[00:46:25] you'd want to go deep and on the sort of
+[00:46:29] you know security stuff I might do a
+[00:46:30] full uh video on that if you want that
+[00:46:32] it down below actually we can go into
+[00:46:33] more detail about how You' actually
+[00:46:34] physically do that what that would look
+[00:46:35] like a table AI assistant that's cool
+[00:46:38] let's have a look and has it pulled
+[00:46:40] through a data yet let's just see what's
+[00:46:41] going on so you'll need my open AI API
+[00:46:44] key and then we're going to say here I
+[00:46:46] do not see my a table
+[00:46:50] data so now I trying to do two things
+[00:46:52] one is show your API key down here which
+[00:46:54] is fine but I wanted to do first of all
+[00:46:56] is sort of the ad table thing so look
+[00:46:58] let's focus on
+[00:47:01] getting the ad table
+[00:47:09] data how do you propose we add that
+[00:47:15] in can you use the sharable
+[00:47:19] link or do you want the
+[00:47:23] credentials boom and I set one over it
+[00:47:26] there we go beautiful so what it's
+[00:47:27] suggesting is we're going to hardcode
+[00:47:29] the ID for the table and then when I
+[00:47:31] give it the API key that can work what I
+[00:47:33] suggest you do guys if you're doing this
+[00:47:35] with multiple clients is you can
+[00:47:36] basically give them a unique code for
+[00:47:38] their a ID and unique API key and build
+[00:47:41] this once and then you can actually kind
+[00:47:43] of do this across multiple different
+[00:47:44] clients at the same time basically so
+[00:47:46] that's good I'm going to grab my API key
+[00:47:48] and then we're to rock and roll cool so
+[00:47:50] it's done I have one where should I
+[00:47:53] enter it question mark
+[00:47:57] give that a beautiful second get this
+[00:47:58] updated and already the UI for this guys
+[00:48:00] I think is freaking really impressive so
+[00:48:02] this is saying air table AI system but
+[00:48:03] it says open AI key there let's just
+[00:48:05] clarify
+[00:48:13] that cool so it says open a key not air
+[00:48:16] table let's just see why what's going on
+[00:48:17] with that all right cool now this is
+[00:48:18] looking a bit nicer let's look at the
+[00:48:20] air table API key can we enter in oh my
+[00:48:24] goodness okay so I've entered it in save
+[00:48:27] the air table API key cool all right
+[00:48:29] sweet data loaded success loaded five
+[00:48:31] records from API T your air table let's
+[00:48:34] see where that is well actually guys it
+[00:48:35] says I was about to say it's not working
+[00:48:36] but if I CLI on refresh data allegedly
+[00:48:39] that's supposed to work so if I click on
+[00:48:40] refresh
+[00:48:42] data let's see has that worked this is
+[00:48:44] really nice though I really like this
+[00:48:46] this is actually really freaking nice so
+[00:48:48] I say hey
+[00:48:50] um refresh data didn't work okay so
+[00:48:54] allegedly guys we were using the wrong
+[00:48:56] table reference what that is is the
+[00:48:58] thing uh that is the actual air table ID
+[00:49:01] in the URL so I just pasted it and I was
+[00:49:02] like dude like could this be the wrong
+[00:49:04] thing apparently said that it is so
+[00:49:06] let's click off this and see if this can
+[00:49:08] load up now we click off here and come
+[00:49:09] down so the good news here guys is it's
+[00:49:11] now working and it's successfully
+[00:49:13] connected to air table the next bit is
+[00:49:15] actually just getting the data and
+[00:49:16] displaying it in the UI so we'll figure
+[00:49:19] that bit out and then hopefully we'll
+[00:49:20] get the full beautiful data in our
+[00:49:21] dashboard cool so it's still not working
+[00:49:23] let's just get it to re attack the code
+[00:49:25] I think it's making good progress it's
+[00:49:27] definitely connected but it's not quite
+[00:49:29] displaying yet so let's do this try this
+[00:49:30] slightly alternate strategy and guys one
+[00:49:33] final prompt and we're here look at this
+[00:49:35] how to get AI automation clients five
+[00:49:38] proven steps number of likes is 77 and
+[00:49:41] we got how like and it's also pull
+[00:49:43] through top performing content for
+[00:49:44] YouTube that is freaking
+[00:49:46] unbelievable okay that's insane so if I
+[00:49:49] just say valid is correct guys if I said
+[00:49:51] like let's have a look how to get a to
+[00:49:52] much clients okay this one here right
+[00:49:54] how to build a$1 million love app that
+[00:49:56] as 8,27 R viws let's check that that is
+[00:49:59] correct on
+[00:50:02] YouTube God it's right that this is
+[00:50:06] freaking beautiful oh my goodness this
+[00:50:08] is this was worth a little bit of
+[00:50:09] investment all right guys so I've taken
+[00:50:11] a step back cuz this dashboard is great
+[00:50:13] and it's pulling through YouTube data
+[00:50:15] but what I'm finding is happening here
+[00:50:17] is it's not pulling through Linkedin
+[00:50:19] data properly or Instagram and my theory
+[00:50:22] for this was twofold so I've gone
+[00:50:23] offline I've done some research and
+[00:50:25] understanding why this might work and I
+[00:50:27] think this is a good learning so what
+[00:50:29] I've done is rebuilt this app and I
+[00:50:31] tried again on this one here because I
+[00:50:34] worked like a thousand times basically
+[00:50:36] so I'm trying to get the data and it
+[00:50:37] wasn't working and I think what we need
+[00:50:39] to do ideal ideally is to get the data
+[00:50:42] connection in first and then add the
+[00:50:45] design in afterwards so what I'm finding
+[00:50:47] with loveable freaking amazing platform
+[00:50:49] but you've got to get it in the right
+[00:50:50] sequence and this is also the case if
+[00:50:52] you're trying to do logins and passwords
+[00:50:53] and loads of data security stuff it's
+[00:50:55] good to front load that is what I'm
+[00:50:57] finding so all I did guys I basically
+[00:50:59] went over to Claude And I basically said
+[00:51:02] look this is what I'm trying to do
+[00:51:03] here's my objective and I gave you this
+[00:51:05] prompt and I'll put it down below so you
+[00:51:06] can just grab it and use it but
+[00:51:09] essentially what I've said to it is like
+[00:51:10] look I just want you to build the data
+[00:51:13] connections let's actually make sure we
+[00:51:14] get all the data that is completely
+[00:51:17] accurate not partially accurate 100%
+[00:51:19] accurate and my theory here is once we
+[00:51:21] get the actual Lynch pin of the
+[00:51:23] automation done the Lynch pin of the
+[00:51:24] connectivity then we can work on all
+[00:51:27] cosmetic stuff my theory at the moment
+[00:51:28] with this stuff is that when you do too
+[00:51:31] much Cosmetics it kind of starts to
+[00:51:33] complicate the code a little bit so
+[00:51:34] let's log in I'll show you actually what
+[00:51:36] I've man managed to do with this simple
+[00:51:37] prompt so let me come over to the
+[00:51:38] database all right so look at this guys
+[00:51:40] I come in enter the API key hit set key
+[00:51:42] now check this out and this doesn't look
+[00:51:43] as flashy guys but look it's got all of
+[00:51:46] the data for LinkedIn done it's got all
+[00:51:50] of the data for YouTube see look at this
+[00:51:51] right I come down 71 likes 1877 views 13
+[00:51:54] comments counts blah blah blah all the
+[00:51:56] same stuff comments 2650 101 let's just
+[00:51:59] validate that's correct come over to
+[00:52:01] YouTube and do we see 2650 101 we should
+[00:52:04] do let's just double check and just like
+[00:52:05] that guys 2650 101 awesome so what's
+[00:52:08] happening now is we have all of the
+[00:52:10] beautiful data and the data is
+[00:52:12] completely connected it's given a status
+[00:52:13] which is really flipping cool so what
+[00:52:15] we've been able to do guys is do it the
+[00:52:16] other thing that I'd encourage you to do
+[00:52:18] as well on the social is on each of the
+[00:52:20] airtable sets is make the naming
+[00:52:22] conventions consistent so I basically
+[00:52:24] change these to be URL caption comment
+[00:52:26] account repost likes blah blah blah to
+[00:52:28] be the same on all three of them so
+[00:52:32] basically no matter what it is some will
+[00:52:33] just have empty fields which is fine but
+[00:52:35] I've made it consistent uh and again
+[00:52:37] this will be available with the
+[00:52:38] blueprints in the community but
+[00:52:39] essentially building itself just make
+[00:52:41] sure that you have them consistent and
+[00:52:43] if that didn't work my next step was
+[00:52:45] going to be to have a unique ad table
+[00:52:47] base for each one of them um which is
+[00:52:49] cool and we've done it so the next two
+[00:52:51] things we want to do one is we need to
+[00:52:52] make this look awesome and we need to do
+[00:52:54] the so what which is okay that's Gray
+[00:52:56] but now how do I actually ask questions
+[00:52:59] about that so what I'm going to do first
+[00:53:00] of all is integrate the AI using our
+[00:53:03] principles that we just discovered about
+[00:53:04] functionality first and and like
+[00:53:07] presentation second I don't know what
+[00:53:08] that says about the way that we do
+[00:53:09] things but he who cares it needs to look
+[00:53:10] good right so I'm basic going give it a
+[00:53:12] prompt now that says like hey uh add a
+[00:53:16] chat
+[00:53:17] GPT um window or portal should we say at
+[00:53:22] the top of each Tab and a bracket
+[00:53:27] LinkedIn YouTube and uh
+[00:53:31] Instagram I will provide an API key when
+[00:53:38] prompted I would like the chat GPT
+[00:53:41] module to have access to all of the data
+[00:53:46] on that tab simple as that bam now guys
+[00:53:50] what I'm going to get this to do is
+[00:53:51] integrate the chat gbt so we can ask it
+[00:53:54] questions about hey how do we do this
+[00:53:55] and how do we do that then I may give it
+[00:53:57] some pre-built questions um and then
+[00:53:59] what I'm probably going to do then is
+[00:54:00] get this information on a graph
+[00:54:02] potentially if you fancy it if we want
+[00:54:03] to make it really fancy uh then we can
+[00:54:05] start to do other things like we did
+[00:54:06] here and again obviously you can take
+[00:54:07] this any way you want to like we can get
+[00:54:09] live API plugins for subscribers for
+[00:54:11] followers Instagram LinkedIn habit on
+[00:54:13] grafts and all this sort of really cool
+[00:54:15] stuff like we can start to add this in
+[00:54:16] but we the point is we've got to get the
+[00:54:17] core functionality then we can add all
+[00:54:19] these beautiful bells and whistles
+[00:54:21] afterwards all course this says it it's
+[00:54:22] done let me just sign in here for
+[00:54:23] example and then I'm going to go and
+[00:54:25] grab the API key and it should be asking
+[00:54:28] us for the open API key let's just find
+[00:54:30] out where that is there you go enter
+[00:54:32] your open AI key ask about your Linkin
+[00:54:34] data so we're going to make this look a
+[00:54:35] lot better obviously so first thing you
+[00:54:37] want to do is head over to the beautiful
+[00:54:39] platform. open.com we it come down or we
+[00:54:42] need to log in I'll just log in real
+[00:54:43] quick beautiful so come down here and
+[00:54:44] going to create a Brand New Key let's
+[00:54:46] call this one lovable with a few e and
+[00:54:49] then create new secret key then guys
+[00:54:50] just copy that key and then we'll come
+[00:54:52] back over to our beautiful thing here
+[00:54:54] and then let's just enter our API key
+[00:54:55] once we've signed here okay guys I've
+[00:54:57] entered in my things I've ask it a
+[00:54:59] question like hey uh What uh type of
+[00:55:04] content are working
+[00:55:09] best for
+[00:55:12] LinkedIn boom hit enter and we'll see
+[00:55:14] what it comes back with hopefully now F
+[00:55:16] comes back it means we've integrated
+[00:55:18] chat gbt which is flipping awesome so I
+[00:55:20] will look in success stories and case
+[00:55:22] studies so post that share more success
+[00:55:24] stories such as individuals scal their
+[00:55:25] business or achieving significant M
+[00:55:26] turns tend to receive high engagement
+[00:55:29] this is freaking cool so guys we have
+[00:55:30] now just integrated chat gb2 we've got
+[00:55:33] the data for YouTube Linked In and
+[00:55:34] Instagram one of the things that we
+[00:55:35] could do here guys cuz look at this
+[00:55:37] example 13 comments blah blah blah is we
+[00:55:40] could if we wish to now um have things
+[00:55:43] like the second it loads autogenerate
+[00:55:45] insights button so we're going to do
+[00:55:46] that but what I want to do first of all
+[00:55:47] is now make it look pretty so to do that
+[00:55:50] let's in fact you know what maybe I'll
+[00:55:53] see let's add let's
+[00:55:54] add some
+[00:55:58] buts uh they autog generate prompts
+[00:56:01] that's Auto
+[00:56:03] generate prompts and one should be
+[00:56:06] something like um I don't know like uh
+[00:56:09] give me
+[00:56:10] Insight something like uh what do top
+[00:56:15] performers have in
+[00:56:17] common or maybe like top top performing
+[00:56:20] Insight maybe that's a better way to
+[00:56:21] describe it
+[00:56:22] actually actually am I zoomed out I
+[00:56:24] might be zoomed out a little bit okay
+[00:56:26] this is better isn't actually okay now
+[00:56:27] we're back on that top performing
+[00:56:33] insights and then the other one would be
+[00:56:35] poor
+[00:56:36] performing insights so we'll get these
+[00:56:40] buttons um let's have these as
+[00:56:46] buttons beautiful add this in and then
+[00:56:49] once that's done guys what I propos to
+[00:56:50] do next then is just add the Aesthetics
+[00:56:53] and then once that's done I mean we
+[00:56:54] could pretty much sit here together
+[00:56:55] drinking our
+[00:56:56] beautiful coffees our beautiful flat
+[00:56:58] whites actually beautiful flat whites
+[00:57:00] and just add new things and so what I
+[00:57:01] would want to do next with this is add
+[00:57:03] in my subscribe account for LinkedIn
+[00:57:06] Instagram and or follow account whatever
+[00:57:07] for instam Instagram LinkedIn and
+[00:57:09] YouTube uh and basically tie that to
+[00:57:11] different apis and you can start to
+[00:57:13] build this incrementally and guys if you
+[00:57:14] are somebody who's trying to sell this
+[00:57:16] different businesses you you build it
+[00:57:17] once you build the application once you
+[00:57:19] get unique credential logins for those
+[00:57:21] individual things like unique codes in
+[00:57:23] other words you cannot access it unless
+[00:57:25] you have the code connected to different
+[00:57:27] databases um and then you're ready to
+[00:57:29] rock and roll right so because it'll
+[00:57:31] just be different versions of that thing
+[00:57:32] which is really cool presuming that you
+[00:57:34] keep it consistent with your air table
+[00:57:36] which I think is fing amazing and for me
+[00:57:38] this is just going to help our team save
+[00:57:40] so many hours now because my team don't
+[00:57:43] need to go and scrp the Instagram and
+[00:57:44] like what this you obviously always want
+[00:57:46] a case of like what feels like it's
+[00:57:48] working but to get actual insights here
+[00:57:50] like if I just hey give let's go on
+[00:57:52] YouTube for example and I just hey give
+[00:57:53] me insights and let's see what it comes
+[00:57:55] back with I'm very curious to to find
+[00:57:56] this out actually and obviously I've
+[00:57:57] done chat gbt guys you can connect this
+[00:57:59] to deep seek you can connect this to
+[00:58:00] clae anything you want to video titles
+[00:58:03] and topics so the videos that focus on
+[00:58:04] AI automation client acquisition
+[00:58:06] building web applications and creating
+[00:58:08] AI agents which are training topics in
+[00:58:10] the technology and Entrepreneurship
+[00:58:11] space blah blah blah the video called
+[00:58:13] how build a $1 million web app has the
+[00:58:14] highest views 8K views and almost 300
+[00:58:17] likes indicating strong interest in the
+[00:58:19] topic so what we would do is refine
+[00:58:21] these tools but fundamentally guys how
+[00:58:24] freaking ridiculous is this the other
+[00:58:26] thing I might do is add in images so I
+[00:58:28] can start to do thumbnail analysis on
+[00:58:30] top of this and build up all the data I
+[00:58:31] mean think about this as an app that
+[00:58:33] pulls through every piece of data for
+[00:58:34] your entire YouTube channel that could
+[00:58:36] if you just did that for YouTube you
+[00:58:37] would freaking crush with that now I
+[00:58:39] actually now want to improve the
+[00:58:40] visibility of this dashboard which I
+[00:58:42] think is really cool does it look as
+[00:58:43] good as our last one not yet but it
+[00:58:46] works and I think that's really
+[00:58:47] important to bear in mind that like as
+[00:58:49] an interesting learning for Liverpool
+[00:58:50] and the other key thing I would say guys
+[00:58:52] is like with builds it's like if you get
+[00:58:56] deep into a build and isn't working
+[00:58:57] sometimes it's easy to set a k up we
+[00:58:59] need to hit the reset button so when
+[00:59:00] you're building this stuff guys like if
+[00:59:02] it does feel that you
+[00:59:04] know it's not working it's fine to
+[00:59:06] restart the build with a slightly
+[00:59:07] different approach cuz it seems to once
+[00:59:10] it's built the architecture kind of
+[00:59:11] slidify around that so I'm going to head
+[00:59:12] up to Cod pan I'm going to get uh let's
+[00:59:15] just look for dashboard okay cool and
+[00:59:17] then I'm going to grab all the CSS and
+[00:59:19] then I'm going to come back over to the
+[00:59:21] beautiful um place here say
+[00:59:24] cool now we're going to make it look
+[00:59:29] epic in caps do not
+[00:59:32] lose any
+[00:59:36] functionality and
+[00:59:39] upgrading the
+[00:59:41] design and I'm going to say here
+[00:59:44] is design inspo code
+[00:59:50] oops I accidentally hit enter I wonder
+[00:59:52] if it will let kick off now by I'm going
+[00:59:53] to put the CSS and then let's come back
+[00:59:55] and grab the second part which is going
+[00:59:56] to be all the JS Babble come back over
+[00:59:59] tap this one in here and then what I'm
+[01:00:01] going to do is just reenter that prompt
+[01:00:03] real quick the other cool thing is if
+[01:00:05] this goes a bit sideways um what you can
+[01:00:07] do is just hit stop and do it uh there
+[01:00:10] you go hit enter hit the col on
+[01:00:12] beautiful now guys one of the things
+[01:00:14] that I did when I was building this with
+[01:00:15] this previous version here is I went
+[01:00:17] back and forth a lot and I was like okay
+[01:00:18] try this and do weedo this and if you
+[01:00:20] find yourself getting stuck in a loop
+[01:00:22] when you're trying to get it to do
+[01:00:23] certain particular actions completely
+[01:00:25] normal there is a point of it's valy of
+[01:00:28] death uh after you cross which point you
+[01:00:30] may want to restart it on on uh on this
+[01:00:33] thing so AI is not at the point now
+[01:00:35] where it will just you know inch for
+[01:00:37] inch just understand everything that
+[01:00:39] you're doing or what you want to get to
+[01:00:40] it requires a little bit of finesse
+[01:00:42] there's the best practice to doing this
+[01:00:45] and that includes really thinking about
+[01:00:46] it so one of the things that I've taken
+[01:00:48] away from this build with you here is to
+[01:00:50] actually chat with Claude and have a
+[01:00:52] conversation that says look this is my
+[01:00:54] desired outcome if we to build this
+[01:00:57] systematically what would be the very
+[01:00:59] first base case prototype like
+[01:01:01] functional thing build that like for
+[01:01:03] example if you're integrating with
+[01:01:04] something different let's say let's just
+[01:01:06] get the hardest most fragile part of it
+[01:01:08] built like the foundations and then
+[01:01:10] we'll add all the Finesse things after
+[01:01:11] that so this is loading when it's done
+[01:01:13] hopefully we'll have something sexy and
+[01:01:14] our build will be complete and then I
+[01:01:16] will continue to building this over time
+[01:01:18] and absolutely crush it okay so
+[01:01:19] allegedly it's done we obviously need to
+[01:01:21] improve the this key let's just see what
+[01:01:24] happens all right cool so have a look
+[01:01:26] we've got BL LinkedIn data it's decent
+[01:01:27] it's not quite exactly what I want so
+[01:01:29] for example I'd say
+[01:01:31] hey this is a step in the right
+[01:01:37] direction but let's make it look less
+[01:01:41] like the
+[01:01:42] image a and more like the image
+[01:01:49] B why am I doing this guys I'm doing it
+[01:01:51] because I'm a stickler for design I'm a
+[01:01:53] stickler for the feel and I think if it
+[01:01:55] looks good it makes sense I mean I I was
+[01:01:56] listening to all in podcast recently and
+[01:01:59] what was really interesting is I forgot
+[01:02:00] my name of the
+[01:02:01] software but basically um they had this
+[01:02:04] thing where every coder in the company
+[01:02:06] wanted to use their software and they'
+[01:02:08] created like billions of dollars worth
+[01:02:10] of value on it and one of the reason for
+[01:02:12] that is they had it was a quite
+[01:02:13] saturated Market anyway but they just
+[01:02:16] really really really got into the UI to
+[01:02:19] the point where all the developers like
+[01:02:21] dude it's just so intuitive and like you
+[01:02:24] want to be that for yourself you want to
+[01:02:26] be that for your clients like it's so
+[01:02:28] underrated that ability to do that this
+[01:02:30] build come back as successful let me
+[01:02:32] just do this bit we'll fix the build and
+[01:02:33] then that should be decent what is cool
+[01:02:35] about liable head successful we can just
+[01:02:36] get it to rebuild which is fine all
+[01:02:38] right guys so it's come back up it's
+[01:02:39] ready to rock and roll we had a little
+[01:02:40] bit of a UI change which is cool and
+[01:02:42] then we've got it and now it's kind of
+[01:02:43] it will incrementally keep on improving
+[01:02:45] stuff like this which is decent so we
+[01:02:47] can come down here and if I say hey what
+[01:02:48] do I want to do here well we give it the
+[01:02:50] open ey key of course let's just go grab
+[01:02:52] that from platform. open ey real quick
+[01:02:53] all right guys I also just asked it to
+[01:02:55] add in some graphs and colorful Graphics
+[01:02:57] so let's just enter our API key in real
+[01:02:59] quick and then set the key and check out
+[01:03:01] what it's done AI chat assistant all
+[01:03:04] right this is cool and do we have any
+[01:03:05] beautiful Graphics yet not by the looks
+[01:03:07] of it oh cuz the Bild was unsuccessful
+[01:03:09] let's just double check where that is
+[01:03:11] and see if we can fix that real quick
+[01:03:12] all right try to fix so guys now we've
+[01:03:14] added some graphs you can basically have
+[01:03:15] fun and do whatever you like to if I for
+[01:03:17] example come down and I want to have a
+[01:03:19] look at top foring insights give me
+[01:03:21] insights again we've connect this to
+[01:03:22] chat gbt meaning we can build and do
+[01:03:23] whatever we want to we can play around
+[01:03:25] with it and get these incredible
+[01:03:26] features guys I hope you found this one
+[01:03:28] interesting if you haven't seen how to
+[01:03:29] connect now lovable to PayPal I really
+[01:03:32] encourage you to check that one out that
+[01:03:33] will really increase the things that you
+[01:03:35] can do in this application I'll put the
+[01:03:36] video somewhere on screen but in any
+[01:03:37] case have a beautiful week and I'll see
+[01:03:39] you in my next video

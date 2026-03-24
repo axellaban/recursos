@@ -1,0 +1,396 @@
+{
+  "name": "🔥 Instagram Video Scraper",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        120,
+        0
+      ],
+      "id": "753ec6b8-aa20-46ef-9d6c-2e206e373dd2",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "app0CtS2nymPov5xZ",
+          "mode": "list",
+          "cachedResultName": "Instagram Scraper",
+          "cachedResultUrl": "https://airtable.com/app0CtS2nymPov5xZ"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblmLoLXqeXVXPlL7",
+          "mode": "list",
+          "cachedResultName": "Accounts",
+          "cachedResultUrl": "https://airtable.com/app0CtS2nymPov5xZ/tblmLoLXqeXVXPlL7"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        340,
+        0
+      ],
+      "id": "13ba1db1-ec1a-4aec-b834-e0f52bbfea08",
+      "name": "Airtable",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "Xqd3dnjmT0zrv06m",
+          "name": "Airtable Personal Access Token account 6"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-scraper/runs?token=INSERT_API_KEY&waitForFinish=300&output=json",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "INSERT_API_KEY"
+            },
+            {
+              "name": "waitForFinish",
+              "value": "300"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"addParentData\": false,\n  \"directUrls\": [\n    \"{{ $json.Accounts }}\"\n  ],\n  \"enhanceUserSearchWithFacebookPage\": false,\n  \"isUserReelFeedURL\": false,\n  \"isUserTaggedFeedURL\": false,\n  \"onlyPostsNewerThan\": \"7 days\",\n  \"resultsType\": \"stories\",\n  \"searchLimit\": 15\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        580,
+        0
+      ],
+      "id": "b8619322-1d69-40eb-bda6-63d3898359ea",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.apify.com/v2/actor-runs/{{$node[\"HTTP Request\"].json[\"data\"][\"id\"]}}/dataset/items?token=INSERT_API_KEY",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        840,
+        0
+      ],
+      "id": "87270215-5664-4198-8846-48b2ff540cd3",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "transcribe",
+        "options": {
+          "language": "",
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1540,
+        0
+      ],
+      "id": "c2d799bc-806c-4cb3-a7b5-79669065c9f2",
+      "name": "OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "pNc2eIQVjGeIQwsm",
+          "name": "OpenAi account 10"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Process all items that are coming in\nconst items = [];\n\n// Loop through each input item\nfor (const item of $input.all()) {\n  // Clone the item to avoid reference issues\n  const newItem = {...item.json};\n  \n  // Make sure binary data exists\n  if (item.binary && item.binary.data) {\n    // Create new binary objects to avoid reference issues\n    newItem.binary = newItem.binary || {};\n    newItem.binary.data = {...item.binary.data};\n    \n    // Ensure consistent naming with .mp4 extension\n    const index = items.length + 1;\n    const fileName = `video_${index}.mp4`;\n    \n    console.log(`Processing item ${index}`);\n    console.log(`Original filename: ${item.binary.data.fileName}`);\n    \n    // Set the filename and MIME type\n    newItem.binary.data.fileName = fileName;\n    newItem.binary.data.mimeType = 'audio/mp4';  // Try audio/mp4 instead of video/mp4\n    \n    console.log(`New filename: ${fileName}`);\n    console.log(`New MIME type: audio/mp4`);\n  }\n  \n  // Add to our items array\n  items.push({json: newItem, binary: newItem.binary});\n}\n\n// Return all processed items\nreturn items;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1320,
+        0
+      ],
+      "id": "fa56fc09-15d7-49ac-8fe5-000958b5900a",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('HTTP Request1').item.json.videoUrl }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          },
+          "timeout": 100000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1080,
+        0
+      ],
+      "id": "d220c019-d2be-4b3a-8c41-33d5eccb296f",
+      "name": "Download Video"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "app0CtS2nymPov5xZ",
+          "mode": "list",
+          "cachedResultName": "Instagram Scraper",
+          "cachedResultUrl": "https://airtable.com/app0CtS2nymPov5xZ"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblNAWJamE3JOPNQL",
+          "mode": "list",
+          "cachedResultName": "Scraped Videos",
+          "cachedResultUrl": "https://airtable.com/app0CtS2nymPov5xZ/tblNAWJamE3JOPNQL"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Account": "={{ $('HTTP Request1').item.json.inputUrl }}",
+            "🧠 Captions": "={{ $('HTTP Request1').item.json.caption }}",
+            "#️⃣ Hashtags": "={{ $('HTTP Request1').item.json.hashtags[0] }}{{ $('HTTP Request1').item.json.hashtags[1] }}{{ $('HTTP Request1').item.json.hashtags[2] }}{{ $('HTTP Request1').item.json.hashtags[3] }}{{ $('HTTP Request1').item.json.hashtags[4] }}{{ $('HTTP Request1').item.json.hashtags[5] }}{{ $('HTTP Request1').item.json.hashtags[6] }}{{ $('HTTP Request1').item.json.hashtags[7] }}{{ $('HTTP Request1').item.json.hashtags[8] }} ",
+            "👀 Watch video ": "={{ $('HTTP Request1').item.json.url }}",
+            "💙 Likes": "={{ $('HTTP Request1').item.json.likesCount }}",
+            "📈 Views": "={{ $('HTTP Request1').item.json.videoViewCount }}",
+            "📆 Created Date": "={{ $('HTTP Request1').item.json.timestamp }}",
+            "💬 Comments": "={{ $('HTTP Request1').item.json.commentsCount }}",
+            "🧑‍💻 Transcript": "={{ $json.text }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Account",
+              "displayName": "Account",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "👀 Watch video ",
+              "displayName": "👀 Watch video ",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "🧑‍💻 Transcript",
+              "displayName": "🧑‍💻 Transcript",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "💙 Likes",
+              "displayName": "💙 Likes",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "📈 Views",
+              "displayName": "📈 Views",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "💬 Comments",
+              "displayName": "💬 Comments",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "🧠 Captions",
+              "displayName": "🧠 Captions",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "#️⃣ Hashtags",
+              "displayName": "#️⃣ Hashtags",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "📆 Created Date",
+              "displayName": "📆 Created Date",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        1740,
+        0
+      ],
+      "id": "3e3baaad-3bbe-4e11-bc2c-84cdc0364f18",
+      "name": "Airtable1",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "Xqd3dnjmT0zrv06m",
+          "name": "Airtable Personal Access Token account 6"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Video": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Download Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e28f8f21-3699-4520-b737-bfd7ab281a08",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "m9SrUzu2x0qcCqXo",
+  "tags": []
+}

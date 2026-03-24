@@ -1,0 +1,420 @@
+[00:00:00] clae Vision in your browser is insane I
+[00:00:02] developed a browser that will basically
+[00:00:03] on any web page you at take a screenshot
+[00:00:05] of that website and all the copying
+[00:00:07] content on it and allow you to chat
+[00:00:09] about what you physically see on the
+[00:00:11] website with clae for example what is
+[00:00:15] this about question mark now the reason
+[00:00:17] I'm making this video is because a
+[00:00:18] little while ago open AI released
+[00:00:20] something that basically said that we
+[00:00:22] have this GPT that lets you chat with
+[00:00:24] anything on your screen look at this
+[00:00:25] this post is about a challenging
+[00:00:27] situation in UK housing market I get a
+[00:00:28] summary okay let's say go down and I've
+[00:00:30] got this guy here called Old Guna hey
+[00:00:32] what did old Guna say now they released
+[00:00:36] this thing and I thought man that's such
+[00:00:38] a cool piece of technology the fact that
+[00:00:40] you could just have an AI follow you
+[00:00:42] around the internet and basically ask it
+[00:00:44] any questions about what you're doing if
+[00:00:46] you're struggling with signing up or how
+[00:00:47] do I make this make connection better or
+[00:00:49] how do I find out what was going on in
+[00:00:50] this page we can now use AI that has
+[00:00:52] both a screenshot of the of the actual
+[00:00:54] thing you're looking at plus all the
+[00:00:56] content so check this out allner made
+[00:00:58] two comments in the thread they made
+[00:01:00] this they made that blah blah blah then
+[00:01:01] let's say I'm struggling to sign up hey
+[00:01:03] how do I sign up to this website and
+[00:01:08] where do I click so you can imagine use
+[00:01:11] case this guys it's insane so the reason
+[00:01:13] I made it is because a open a promised
+[00:01:14] it it's not here yet so I thought hey
+[00:01:16] let's make it together to sign his
+[00:01:17] website Reddit and join the Housing
+[00:01:18] Community follow these steps look at the
+[00:01:20] join button in the top right corner of
+[00:01:21] the Housing section click the join
+[00:01:23] button if you're not already logged in
+[00:01:24] blah blah blah and it gives you all the
+[00:01:25] instructions because it can see what
+[00:01:26] you're doing now in this video I'm show
+[00:01:28] you exactly how you build this this CH
+[00:01:30] extension I built as part of our AI
+[00:01:31] co-pilot series and all the agents the
+[00:01:33] guides the blueprints all the scenarios
+[00:01:35] are available down below my scho
+[00:01:36] community which basically means all you
+[00:01:38] ever have to do is come down here to
+[00:01:39] more click import blueprint choose the
+[00:01:41] file select the file you upload it and
+[00:01:42] it appears as well as all the code
+[00:01:44] available to use this actual uh Claude
+[00:01:46] Vision co- pilot you can just upload and
+[00:01:48] change for yourself now to begin this
+[00:01:50] video we're just going to create a brand
+[00:01:51] new scenario okay and the first thing I
+[00:01:52] want you to do is come over here to the
+[00:01:54] plus button and I'm going to look for
+[00:01:55] web hook like so going to click on this
+[00:01:58] web hook at the top and I'm going to go
+[00:01:59] for custom web hug cool we're going to
+[00:02:01] add a new one in we're going to call
+[00:02:03] this one Vision now the cool I think the
+[00:02:05] applications of this are insane now I
+[00:02:08] could have spent I meant I meant this to
+[00:02:09] be a really quick video I wanted this to
+[00:02:10] be a really short Snappy Beautiful video
+[00:02:11] for you but I'll be honest when I
+[00:02:13] started making it I was like I actually
+[00:02:15] want to take this to a level time I'll
+[00:02:16] explain what I mean in the moment now
+[00:02:18] look what we do we're going to copy the
+[00:02:19] address to clipboard I should also say
+[00:02:22] guys in this video I'm going to touch on
+[00:02:23] the new GPT 4 with canvas and how we can
+[00:02:25] use that to make incredible co-pilots so
+[00:02:28] you'll see these files when you
+[00:02:29] basically download the folder now in
+[00:02:31] this guys all you're going to do is open
+[00:02:33] the file you're going to contrl f and
+[00:02:34] you're going to search for eu2 like so
+[00:02:36] and you're going to see this really cool
+[00:02:38] web Hub like so and all you do is you
+[00:02:40] highlight this web hook like that and
+[00:02:42] then you paste in your brand new U your
+[00:02:44] brand new web hook to get that to work
+[00:02:46] and once you've done that you basic come
+[00:02:47] top you click five you click save if
+[00:02:49] you're doing this on Mac I recommend
+[00:02:51] that you use text edit and if you're
+[00:02:52] doing this on Windows there's loads of
+[00:02:54] basically applications that let you save
+[00:02:56] in plain text now once we've done that
+[00:02:58] guys we come back over to our beautiful
+[00:03:00] scenario and then we need to head over
+[00:03:02] to the wonderful phenomenal Google
+[00:03:04] Chrome okay and then you're going to
+[00:03:06] come over to extensions okay now make
+[00:03:09] sure this thing in the top right is
+[00:03:10] enabled which is developer mode now I'm
+[00:03:12] going to delete this just so you can
+[00:03:14] actually get a good sense of it all we
+[00:03:15] do guys is going to click on load unpack
+[00:03:17] and you're going to select the folder
+[00:03:18] and just upload that to Google Chrome so
+[00:03:20] now you've added your unique web hook
+[00:03:22] within the Chrome application you can
+[00:03:23] upload it straight to your browser like
+[00:03:25] so and then what I would like to do is
+[00:03:27] basically it's all set up and running so
+[00:03:28] if I come over there to anywh web page
+[00:03:30] for example Reddit like so it magically
+[00:03:33] and wonderfully appears enables to start
+[00:03:35] having a conversation now what do we
+[00:03:36] need to do next if I head back over then
+[00:03:38] to our wonderful scenario let's head
+[00:03:40] straight over what do we need to do now
+[00:03:43] there's a reason I'm using Claude here
+[00:03:44] instead of GPT GPT 40 preview which is
+[00:03:47] the most powerful in terms of its
+[00:03:49] reasoning is not available to you unless
+[00:03:51] you reach a level five tier with an open
+[00:03:53] ai's um sort of credit usage so for this
+[00:03:56] video what I'm going to do is use Claude
+[00:03:58] because actually guys
+[00:04:00] clae is really really good and it
+[00:04:02] basically means you don't need to
+[00:04:03] download the file you can actually give
+[00:04:05] it both a PNG and a text file without
+[00:04:07] needing to add extra steps so it
+[00:04:09] actually just makes it quite simple so
+[00:04:11] the first thing we to do guys is just
+[00:04:12] simply run the scenario and then we
+[00:04:14] going to come back over and I'm going to
+[00:04:15] say something like test and we should
+[00:04:17] get a accepted that comes back what does
+[00:04:19] that mean it means that it's actually
+[00:04:22] picked up the data so you can see it's
+[00:04:23] pulled through all this stuff and I've
+[00:04:24] configured the chem extension if I run
+[00:04:26] this again using something like a
+[00:04:27] different website like make for example
+[00:04:29] I come over here here and I just put the
+[00:04:30] word test in actually getting accepted I
+[00:04:33] come back and you can see guys it's
+[00:04:34] given us URL it's given us the
+[00:04:36] conversation history so everything
+[00:04:37] that's been said we've got the
+[00:04:38] screenshot so in other words what what
+[00:04:41] are you physically looking at and then
+[00:04:42] we've got the page HTML which is all of
+[00:04:44] the data that exists on the page so the
+[00:04:47] first thing we want to do is take that
+[00:04:48] page HTML so for that we're going to
+[00:04:50] type in HTML to
+[00:04:52] text beautiful and the HTML is very
+[00:04:55] simply going to be this page HTML like
+[00:04:58] so phenomenal and then we're going to
+[00:05:00] add in beautiful phenomenal clo now I'll
+[00:05:03] show you how you do this cuz basically
+[00:05:04] in one input we're going to give it the
+[00:05:06] image in another input we're going to
+[00:05:08] give it a text and then we're going to
+[00:05:09] give it a third input so let me show you
+[00:05:10] exactly how that works so the first
+[00:05:12] thing I'm going to do here guys is Max
+[00:05:13] tokens we're going to put
+[00:05:15] 4,000 okay so first thing I want to do
+[00:05:17] is roll is going to be user and then the
+[00:05:19] content is going to be type is going to
+[00:05:21] be image we scroll down and then we're
+[00:05:23] going to map this across so let's have a
+[00:05:25] look at what we've got we've got the
+[00:05:26] screenshot phenomenal and then we got
+[00:05:28] the files so the name is is going to be
+[00:05:30] screenshot and the data is going to be
+[00:05:32] this here download at the bottom cool
+[00:05:34] now that's done you're going to add
+[00:05:35] another message this one is going to be
+[00:05:37] the role of assistant and in the
+[00:05:39] assistant category we're going to give
+[00:05:40] it the instructions so I want you to
+[00:05:42] enter this F in prompt you are an AI
+[00:05:44] assistant designed to help users
+[00:05:45] navigate their current cat tasks you
+[00:05:47] will receive a screenshot the user's
+[00:05:49] page all the text from that page the
+[00:05:51] entire conversation history with the
+[00:05:52] user your task is to analyze the
+[00:05:54] provided information to understand
+[00:05:56] user's current situation and any
+[00:05:57] challenges they may be facing provide
+[00:05:59] clear concise and helpful instructions
+[00:06:01] on what the user should do next offer
+[00:06:03] step-by-step guidance if necessary
+[00:06:05] ensuring the instructions are easy to
+[00:06:07] follow maintain a friendly and
+[00:06:08] professional turn throughout the
+[00:06:09] response please remember do not mention
+[00:06:11] or refer to screenshot text or
+[00:06:13] compensation history in your response
+[00:06:14] follow focus on delivering actionable
+[00:06:17] advice to the user now you can change
+[00:06:19] this prpt as much as you want to to give
+[00:06:20] you the kind of feel and dynamic that
+[00:06:22] you'd like when speaking to the agent
+[00:06:24] now this this is set up in a way that
+[00:06:26] needs to go user roll user roll
+[00:06:28] assistant roll user so finally guys in
+[00:06:30] the role user what we're going to do is
+[00:06:31] come down for user we've got content the
+[00:06:33] type is going to be text and essentially
+[00:06:35] we're going to give it them all the
+[00:06:36] information that we need it so for
+[00:06:38] example we're going to have
+[00:06:40] conversation history like so and all
+[00:06:43] you're going to do guys is just put the
+[00:06:45] conversation uh history in here which is
+[00:06:49] content beautiful and then we're going
+[00:06:51] to have um
+[00:06:54] website text and then we're going to add
+[00:06:56] the text from the text passer once we've
+[00:06:58] complete that guys we just going to come
+[00:06:59] by and select okay we're going to rename
+[00:07:02] this one we're going to call this one
+[00:07:03] clae Vision with some beautiful googly
+[00:07:06] eyes I love that okay sweet and then
+[00:07:09] finally guys we're going to give it the
+[00:07:10] web hook response so just type in web
+[00:07:11] hook and it'll be the one at the top and
+[00:07:13] all we do guys is come and give it the
+[00:07:15] text response from Claud Vision like so
+[00:07:17] then we click okay the cool thing about
+[00:07:18] this guys is now we can actually feed
+[00:07:20] images and text in one single string to
+[00:07:22] Claude which is phenominal now guys what
+[00:07:24] I'm going to do is we're going to click
+[00:07:25] on this run once module here like so
+[00:07:27] we're going to go back over then to
+[00:07:29] let's say this one and let's just simply
+[00:07:31] refresh it uh GPT Vision let's open this
+[00:07:34] bad boy up and then let's ask it a
+[00:07:35] question like I don't know how do I
+[00:07:38] create an account here be explicit on
+[00:07:43] the location um
+[00:07:45] please and then hit enter scanning the
+[00:07:48] web page what else is it doing it's
+[00:07:50] taking a second to go through and load
+[00:07:51] if I come back actually now over to our
+[00:07:53] scenario you can see that CLA just crect
+[00:07:54] the prompt send it straight back to the
+[00:07:56] web hook to cr.com follow these steps
+[00:07:58] look at the top right corner of the web
+[00:07:59] page you'll see a pink button that says
+[00:08:01] get started free now guys this is so
+[00:08:03] flipping epic because it isn't just like
+[00:08:06] perplexity that's like taking the HTML
+[00:08:09] it isn't just about like what does it
+[00:08:10] say it can actually now we can give it
+[00:08:13] screenshots and I just think this opens
+[00:08:15] up so many incredible like possibilities
+[00:08:18] to like me basically there's no reason
+[00:08:20] you wouldn't have this what we've added
+[00:08:21] here guys is kind of what open eyes said
+[00:08:23] they wanted to do which is have chat gbt
+[00:08:25] follow you on the internet you can ask
+[00:08:26] questions about anything you want to
+[00:08:28] using image and using Tex
+[00:08:30] which I think is pretty flipping cool
+[00:08:31] now the last thing I'm going to show
+[00:08:32] this video very quickly is how do let's
+[00:08:35] say we want to improve that okay so
+[00:08:36] let's say I go over to this now this
+[00:08:40] here is essentially all the code we've
+[00:08:42] done for our copal right now you'll know
+[00:08:45] and I'll put a link in the video if
+[00:08:46] you've not made these C Parts before
+[00:08:47] exactly how to make them but look I'm
+[00:08:49] going to come over here and I type in
+[00:08:50] all the code we've got I hit enter now
+[00:08:52] to select GPT for with canvas you come
+[00:08:55] here and you can select it like this now
+[00:08:57] I did a video on this my community but
+[00:08:58] essentially What would we're looking at
+[00:09:00] here is the ability to get one long
+[00:09:02] piece of text and instead of a back and
+[00:09:04] forth conversation where I say A you say
+[00:09:06] B but and we go back and forth to the AI
+[00:09:09] we can actually fully edit the entire
+[00:09:11] thing within within clo itself so me
+[00:09:14] within chat GT itself so look this has
+[00:09:17] now B all the code down now if you check
+[00:09:19] this out let's come down here and have a
+[00:09:21] look what it says this is the initial
+[00:09:22] version of your chat interface with
+[00:09:23] Javas C for GPT guys check out what you
+[00:09:25] can do here you can come down you can
+[00:09:27] port to a different language I can go to
+[00:09:28] C+ plus PHP python JavaScript typescript
+[00:09:31] now everything we can do with these UI
+[00:09:33] updates you could have done previously
+[00:09:35] this is just simply a ease of use change
+[00:09:37] but do you see just by changing like how
+[00:09:39] something looks and feels you actually
+[00:09:41] make a substantive difference and that's
+[00:09:43] always worth bear in mind whatever
+[00:09:44] you're doing so you add logs add
+[00:09:45] comments fix bugs port to language code
+[00:09:47] review so for example I could say
+[00:09:49] something like hey um improve the
+[00:09:52] loading
+[00:09:54] animation when we are
+[00:09:57] waiting for a response
+[00:10:00] from the web hog bom this is exactly how
+[00:10:03] it works okay now this is phenomenal for
+[00:10:05] building your co-pilots because then it
+[00:10:07] isn't act because what will happen
+[00:10:09] sometimes is you'll have like 300 lines
+[00:10:10] of code and it will make a change but
+[00:10:12] it'll only give you 26 lines or it will
+[00:10:14] start to cut things out here it seems
+[00:10:16] and from my experience using it it is
+[00:10:18] just editing the document which means
+[00:10:20] that the output is more robust which
+[00:10:21] means that you can be more consistent
+[00:10:23] with the AI C palet that you're making
+[00:10:25] and you can see it's going down here
+[00:10:26] making all the changes as we go which is
+[00:10:28] pretty flipping Co let's have a look
+[00:10:30] it's all going through and it's added an
+[00:10:32] extra 20 lines of code awesome so what
+[00:10:34] do we do top right copy this let's go
+[00:10:36] over to our uh our document here we copy
+[00:10:39] all we paste and let's just file save as
+[00:10:43] and then we're going to head over to
+[00:10:44] beautiful Google Chrome we come over to
+[00:10:46] extensions and we just hit this refresh
+[00:10:48] button and that will report everything
+[00:10:49] back in then if I come over to Reddit
+[00:10:51] and I refresh the page let's try it one
+[00:10:53] more time show we come over here and
+[00:10:55] let's see if it's added something cool
+[00:10:56] all right cool so there's a loading
+[00:10:58] animation hey what I say hey who wrote
+[00:11:03] this post and give me the top five
+[00:11:07] summaries from this page boom now did I
+[00:11:11] actually put it into I need to activate
+[00:11:13] the scenario so let's come back and do
+[00:11:15] that uh where are we we're right here
+[00:11:17] let activate that scenario wait for new
+[00:11:19] data and let's give it the exact same
+[00:11:21] thing again come over here enter
+[00:11:22] scanning web page and it's added in a
+[00:11:24] complete loaring Emoji now guys this is
+[00:11:26] level one this video could have taken me
+[00:11:28] like I don't know a week to do if I
+[00:11:29] wanted to level two so there's this
+[00:11:31] thing that we can do where like imagine
+[00:11:33] if actually what we could do on top of
+[00:11:35] that is we Link in perplexity so we make
+[00:11:38] one of these modules more agentic so we
+[00:11:40] ask it to say hey based on the image
+[00:11:42] based on the text can you answer this
+[00:11:44] question correctly if it feels it cannot
+[00:11:47] we can actually split this in check this
+[00:11:49] out
+[00:11:51] okay uh let me unlink this do you know
+[00:11:53] it would be cool if it just did it
+[00:11:54] immediately for dramatic effect that'd
+[00:11:55] be pretty cool right we can then split
+[00:11:57] this into two categories this one here
+[00:11:59] could be knows the answer send it back
+[00:12:02] but then let's just say it doesn't know
+[00:12:03] the answer and actually what we need to
+[00:12:04] do is search online for perplexity and
+[00:12:07] then actually now we add an internet
+[00:12:08] search aspect to it okay so then we have
+[00:12:11] this route so now we enrich Text Plus
+[00:12:15] image plus Internet now I didn't want to
+[00:12:16] include it in this video cuz I want to
+[00:12:17] make this quite short and snappy for you
+[00:12:19] so you can kind of get used to how we're
+[00:12:20] transferring image and text and how epic
+[00:12:22] this whole technology and then the final
+[00:12:24] level of this the final boss of this and
+[00:12:25] if you want this video let me know down
+[00:12:28] below cuz I think this is really cool
+[00:12:30] is where we actually enable GPT to push
+[00:12:33] buttons on our behalf so what we then
+[00:12:35] say is look highlight for me the bit of
+[00:12:37] this page that says X or create the
+[00:12:39] account section for me and we enable it
+[00:12:41] to take controls for us on the browser
+[00:12:43] so that sounds interesting you want to
+[00:12:44] hear about that let me know down the
+[00:12:46] description but as you can see here guys
+[00:12:48] the information we've got back is pretty
+[00:12:50] phenomenal right it's given us a summary
+[00:12:52] this is like a just a really really cool
+[00:12:54] thing we could add on top of that as
+[00:12:56] well you've seen videos we've done on
+[00:12:57] YouTube I could add a YouTube analyze on
+[00:12:59] that so I could have an earlier model
+[00:13:01] that determines what web page am I on if
+[00:13:03] on YouTube grab transcript bring the
+[00:13:06] transcript back in and then go through
+[00:13:07] so this is like this is Lego guys you
+[00:13:10] can build anything you want to this I
+[00:13:12] thought this was so epic I'm also really
+[00:13:14] impressed with the GPT 40 not just for
+[00:13:16] code but for text but any case guys I
+[00:13:18] hope you see how cool this one is have a
+[00:13:19] great weekend and I look forward to
+[00:13:21] catching you in my next video

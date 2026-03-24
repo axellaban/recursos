@@ -1,0 +1,289 @@
+{
+    "name": "Truth Pilot",
+    "flow": [
+        {
+            "id": 1,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 826203,
+                "maxResults": 1
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -335,
+                    "y": -11
+                },
+                "restore": {
+                    "parameters": {
+                        "hook": {
+                            "data": {
+                                "editable": "true"
+                            },
+                            "label": "Truth Pilot"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "hook",
+                        "type": "hook:gateway-webhook",
+                        "label": "Webhook",
+                        "required": true
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of results"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "text",
+                        "type": "text"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "perplexity-ai:createAChatCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425898
+            },
+            "mapper": {
+                "model": "llama-3.1-sonar-large-128k-online",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "\"I found a statement on {{1.url}} that claims '{{1.text}}.' I need a detailed fact-check report on this claim, and I would like you to source up to three additional examples that either support or refute this information. The report should include:\n\n1. **Claim:**  \n   Restate the specific fact or statement being checked.\n\n2. **Verdict:**  \n   Provide one of the following verdicts based on your findings: 🟢 True, 🔴 False, ⚫️ Misleading, or 🟣 Unverifiable.\n\n3. **Confidence Score:**  \n   Assign a confidence score between 1-10, where 10 indicates high confidence in the verdict and 1 indicates low confidence. include a brief explainatiof on why in brackets next to the number (no more than 12 words).\n\n4. **Findings:**  \n   Offer further context or information about the claim, including its origin, any reasons it might be misunderstood, and how experts view it. Limit this section to a maximum of 200 words.\n\n5. **Source Summary:**  \n   Identify up to three new credible sources that verify the claim. Provide a brief summary of the findings from each source, ensuring that they are distinct from the original link provided. Include:\n   - The name of each source (e.g., a scientific journal, reputable news outlet, expert organization). This cannot be reddit\n- You must not use the same website you are provided here: {{1.url}}\n- You must search the claim on the internet and find reputatable sources to assess the veracity of the claim.\n   - A brief description of what the source says about the claim.\n   - A direct, clickable hyperlink to the full article.\n\nPlease ensure the output follows this format:\n- **Numbered headers** are bold, like '1. **Claim:**'\n- **Links** are provided as **clickable hyperlinks**.\"\n"
+                    }
+                ],
+                "max_tokens": "4000"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -24,
+                    "y": -18
+                },
+                "restore": {
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "llama-3.1-sonar-large-128k-online"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "perplexity-ai"
+                            },
+                            "label": "My Perplexity connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:perplexity-ai",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "spec": [
+                            {
+                                "name": "content",
+                                "type": "text",
+                                "label": "Content",
+                                "required": true
+                            },
+                            {
+                                "name": "role",
+                                "type": "select",
+                                "label": "Role",
+                                "options": [
+                                    {
+                                        "label": "User",
+                                        "value": "user"
+                                    },
+                                    {
+                                        "label": "Assistant",
+                                        "value": "assistant"
+                                    },
+                                    {
+                                        "label": "System",
+                                        "value": "system"
+                                    }
+                                ],
+                                "required": true
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1.999,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "number",
+                        "label": "Top K",
+                        "validate": {
+                            "max": 2048,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "gateway:WebhookRespond",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "body": "{{2.choices[].message.content}}",
+                "status": "200",
+                "headers": []
+            },
+            "metadata": {
+                "designer": {
+                    "x": 274,
+                    "y": -18
+                },
+                "restore": {
+                    "expect": {
+                        "headers": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "status",
+                        "type": "uinteger",
+                        "label": "Status",
+                        "required": true,
+                        "validate": {
+                            "min": 100
+                        }
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key",
+                                "required": true,
+                                "validate": {
+                                    "max": 256
+                                }
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value",
+                                "required": true,
+                                "validate": {
+                                    "max": 4096
+                                }
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Custom headers",
+                        "validate": {
+                            "maxItems": 16
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

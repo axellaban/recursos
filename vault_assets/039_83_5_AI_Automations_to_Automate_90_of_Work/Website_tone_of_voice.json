@@ -1,0 +1,147 @@
+{
+  "name": "Website tone of voice",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        -200
+      ],
+      "id": "5da086fb-496a-4cab-a02d-b7eb0a04862f",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~website-content-crawler/runs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token"
+            },
+            {
+              "name": "waitForFinish",
+              "value": "300"
+            },
+            {
+              "name": "output",
+              "value": "json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"aggressivePrune\": false,\n  \"clickElementsCssSelector\": \"[aria-expanded=\\\"false\\\"]\",\n  \"clientSideMinChangePercentage\": 15,\n  \"crawlerType\": \"playwright:adaptive\",\n  \"debugLog\": false,\n  \"debugMode\": false,\n  \"expandIframes\": true,\n  \"ignoreCanonicalUrl\": false,\n  \"keepUrlFragments\": false,\n  \"maxCrawlDepth\": 100,\n  \"proxyConfiguration\": {\n    \"useApifyProxy\": true\n  },\n  \"readableTextCharThreshold\": 100,\n  \"removeCookieWarnings\": true,\n  \"removeElementsCssSelector\": \"nav, footer, script, style, noscript, svg, [role=\\\"alert\\\"], [role=\\\"banner\\\"], [role=\\\"dialog\\\"], [role=\\\"alertdialog\\\"], [role=\\\"region\\\"][aria-label*=\\\"skip\\\" i], [aria-modal=\\\"true\\\"]\",\n  \"renderingTypeDetectionPercentage\": 10,\n  \"saveFiles\": false,\n  \"saveHtml\": false,\n  \"saveHtmlAsFile\": false,\n  \"saveMarkdown\": true,\n  \"saveScreenshots\": false,\n  \"startUrls\": [\n    {\n      \"url\": \"https://www.theaccountingcompanyleeds.co.uk/\",\n      \"method\": \"GET\"\n    }\n  ],\n  \"useSitemaps\": true\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        160,
+        -200
+      ],
+      "id": "be53c5d0-e8c5-46e1-b87e-96b3c4b8a302",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.apify.com/v2/actor-runs/{{$node[\"HTTP Request2\"].json[\"data\"][\"id\"]}}/dataset/items",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        400,
+        -180
+      ],
+      "id": "f02427fa-283f-4e19-854e-947c46cb004e",
+      "name": "HTTP Request3"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "1pfkfIiZFiQHtHeOfUYLpiyTbocBhNlld2cUINoGyG0Y",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "insert",
+              "text": "={{ $json.text }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        620,
+        -180
+      ],
+      "id": "86ef7bed-c2b9-42f7-9b58-fb716ac7c4d0",
+      "name": "Google Docs1",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "1tDXMRYFi4lLvvJ6",
+          "name": "Google Docs account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Google Docs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e3b88e78-d360-43d7-86a8-607b1336c2bf",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "g4P2JbtdCSxRq5WS",
+  "tags": []
+}

@@ -1,0 +1,992 @@
+[00:00:00] Most people spend hours generating
+[00:00:01] scenarios in make or anytime. But what
+[00:00:04] if there was a way to self-generate
+[00:00:06] scenarios that could save you the time,
+[00:00:08] the headache, and the money? Like this,
+[00:00:10] for example. This right here is
+[00:00:11] something in a browser that follows you
+[00:00:13] around. Now, check this out. I can come
+[00:00:14] down here and I could say something
+[00:00:15] like, "Hey, my guy, could you create me
+[00:00:17] an AI agent that has access to Air Table
+[00:00:20] to Gmail?" Um, yeah, that'll be all.
+[00:00:22] Thank you very much. Bam. Check this
+[00:00:24] out. Right, I come over here. I'm going
+[00:00:25] to run this scenario test to workflow.
+[00:00:26] Check this out. I come down. I click
+[00:00:28] send. What this is going to do now as an
+[00:00:30] agent, by the way, is come down here.
+[00:00:31] It's calling his subworkflow agent here.
+[00:00:33] And by the way, guys, this AI co-pilot
+[00:00:36] that I created, uh, this beautiful guy
+[00:00:38] down here in the bottom right hand
+[00:00:39] corner, as you can see, it's been
+[00:00:40] trained on pretty much um, you know, 43
+[00:00:43] pages of stuff at NHM. The co-pilot also
+[00:00:46] works in make.com. I've got a guide
+[00:00:47] there that's like uh, 55 pages. It's
+[00:00:50] been trained on like literally hundreds
+[00:00:52] of records of JSON. And the scenario
+[00:00:54] itself is very, very interesting. So,
+[00:00:56] what this will do is call the sub agent.
+[00:00:59] And once that's done, it'll come back
+[00:01:00] here and pop out some code. And just
+[00:01:02] like that, we get it popping up. So,
+[00:01:03] let's remove this and show you how it
+[00:01:05] works. Now, we'll say this isn't perfect
+[00:01:06] and it doesn't work 100% of the time,
+[00:01:08] but it's a really good first generation
+[00:01:11] that we can build on and make epic. So,
+[00:01:12] all we do, we click down here, we copy
+[00:01:13] the code, we paste it, and voila. There
+[00:01:15] we go. There's our agent, there's its
+[00:01:17] memory, there's its air table, and there
+[00:01:19] is Gmail. So, we've got the enter user
+[00:01:21] request module right here. And just like
+[00:01:22] that, guys, we've just created this JSON
+[00:01:24] just from a single text prompt. This um
+[00:01:26] module here, by the way, this co-pilot
+[00:01:28] will do screenshots, it will do YouTube
+[00:01:30] scans transcripts, or you can just talk
+[00:01:32] into it or do whatever you want to. So,
+[00:01:34] in this video, what I'm going to do, I'm
+[00:01:35] going to show you briefly how this thing
+[00:01:37] works. And then I'm going to show you
+[00:01:38] how you can create really cool AI
+[00:01:40] co-pilots just like this for any of your
+[00:01:42] scenarios. And then after that, we're
+[00:01:43] going to go through and we're going to
+[00:01:44] build this entire scenario together in
+[00:01:46] any so you can replicate this for
+[00:01:48] whatever you like. So, if you haven't
+[00:01:50] already, grab that coffee. Let's dive
+[00:01:52] straight in. By the way, I'm Jack. I've
+[00:01:53] generated a seven figureure AI
+[00:01:55] automation business. And all I do is
+[00:01:57] help business owners crush it with AI to
+[00:01:59] do cool stuff just like this to save you
+[00:02:01] time. So, scenario one, what have we
+[00:02:02] got? Basically, the way this works,
+[00:02:04] okay, we have a uh scenario here, a web
+[00:02:07] hook that comes from our Chrome
+[00:02:08] extension. This scenario grabs it. It
+[00:02:11] does some really cool, clever, simple
+[00:02:12] stuff to say, hey, is it text or is it
+[00:02:14] an image? And then it calls a sub agent.
+[00:02:17] Now, we go into the sub aent. The way
+[00:02:19] this works very quickly is it grabs
+[00:02:21] this. It defines the name. It's going to
+[00:02:23] get data from our beautiful air table.
+[00:02:26] So what it does is pulls down all these
+[00:02:28] records right straight down into the
+[00:02:30] workflow. And then what this will do is
+[00:02:32] only grab of all those records and JSONs
+[00:02:35] that we gave it. It's basically only
+[00:02:37] going to grab down an ID and a very very
+[00:02:39] very short description. So for example
+[00:02:42] like this one here which is hey it's a
+[00:02:43] tone of voice does blah blah blah or
+[00:02:44] this one here does whatever the specific
+[00:02:46] things are. Right? Once it's done that,
+[00:02:49] uh, it then goes to the golden selector.
+[00:02:51] Now, the golden selector basically will
+[00:02:52] take what your request was. And it will
+[00:02:55] say, "Look, you've got like a 100, a
+[00:02:57] thousand, 5,000 different JSON
+[00:02:59] scenarios. Of all the ones that you've
+[00:03:01] seen, tell me which three do you think
+[00:03:03] are most relevant to the users's query."
+[00:03:07] Okay, we split it out. We do some code.
+[00:03:09] And then what this guy will do, now
+[00:03:10] remember, this guy is trained on all of
+[00:03:12] the beautiful stuff in here as well. So,
+[00:03:13] I basically did loads of deep research
+[00:03:15] on how do you build end scenarios? what
+[00:03:16] does that look like? What are the
+[00:03:17] typical kind of requests? What it will
+[00:03:19] do is take that core data and it will
+[00:03:21] take also um the specifics from a
+[00:03:24] descriptions um like actually we have
+[00:03:26] all the code here as well, right? So you
+[00:03:27] come in, you can see all the code that
+[00:03:28] it's got all that kind of beautiful
+[00:03:30] stuff, right? It will take all that
+[00:03:31] information and then e build on that to
+[00:03:34] create something helpful for the user
+[00:03:35] user and at the end we have this editor
+[00:03:37] module which is kind of like you know
+[00:03:40] he's a final stop check uh that comes
+[00:03:42] through and does this and actually so
+[00:03:43] he'll take the JSON from the creator
+[00:03:45] module and just make sure that it works
+[00:03:46] and that it's correct and then of course
+[00:03:48] that sends it back over here to the web
+[00:03:50] hook and then it comes back into our
+[00:03:51] scenario and then we can just simply
+[00:03:52] copy the code and paste it into our
+[00:03:54] scenario. And I have to call out Mark.
+[00:03:56] Mark did an incredible video on manners
+[00:03:58] about how to do this. Mark, dude, you're
+[00:04:00] a freaking superstar. And I've seen
+[00:04:01] loads of different energy in the
+[00:04:02] community doing this. In fact, a lot of
+[00:04:04] the JSONs and stuff we grabbed from a a
+[00:04:06] GitHub repository online. So, I'll put a
+[00:04:08] link down below in the comments so you
+[00:04:09] can go check that out as well if you
+[00:04:10] want to rebuild some of this stuff. And
+[00:04:11] I'll also put the code down below uh for
+[00:04:13] the Copilot. So, you can just literally
+[00:04:14] download Chrome, download the Chrome
+[00:04:16] extension, use it yourself and kind of
+[00:04:18] own your data and have fun with it.
+[00:04:20] Cool. So, that's basically how it works.
+[00:04:22] And as I said, this can also work in
+[00:04:24] meg.com. For this video, I've just built
+[00:04:26] out the data, but it's exactly the same.
+[00:04:28] So, if you go to make.com, which I'll do
+[00:04:30] very quickly, you will see on the right
+[00:04:31] hand side there, automation magic make,
+[00:04:33] and I've come back over to NA10, I have,
+[00:04:35] as you can see here, automation magic
+[00:04:38] NA10, and it knows that. And actually,
+[00:04:39] guys, when you send over information,
+[00:04:41] one of the things that the web hook will
+[00:04:42] do is give you some data on specifically
+[00:04:45] which agent it is in. So, I come down
+[00:04:47] here, I'll show you real quick. There
+[00:04:48] you go. Down there, platform is NA10.
+[00:04:50] And basically, you want to build this
+[00:04:51] out for make and you just basically
+[00:04:53] split it out. So, one scenario does the
+[00:04:55] make, one scenario does the anytime.
+[00:04:56] I've just done any 10 to make it easy
+[00:04:58] for you. Cool. So, what we're going to
+[00:05:00] do is start off with developing the
+[00:05:02] beautiful AI co-pilot. I think I think
+[00:05:03] Chrome extension is an old way of
+[00:05:04] describing it. I much prefer AI copilot.
+[00:05:07] So, what we're going to use for this
+[00:05:08] one. I'm going to pull up very very
+[00:05:10] quickly. Actually, what was funny is I
+[00:05:11] recently shared this in my community,
+[00:05:13] which is this Chrome extension
+[00:05:14] generator, and I've loaded it with loads
+[00:05:16] of really cool epic UI. So, you can
+[00:05:18] basically just use this and it gives you
+[00:05:19] the core critical files that you need.
+[00:05:21] So we'll check out with this one, but
+[00:05:22] you can also do this with any module.
+[00:05:24] It's just kind of easy to do it that
+[00:05:25] way. And one of the little hacks we're
+[00:05:27] going to do, by the way, is we're also
+[00:05:28] going to provide it with some beautiful
+[00:05:30] data. So we can use a website like
+[00:05:32] codepen.io. And this is like an open
+[00:05:34] repository for code. So if I come here
+[00:05:35] and I say, hey, uh, give me something on
+[00:05:37] chat, right? You can do this and you can
+[00:05:40] pull together and see all the amazing
+[00:05:42] um, things people done. Like let's say
+[00:05:44] you like look at this one, right? What
+[00:05:45] you can actually do is share this code
+[00:05:47] with AI as inspiration to do it because
+[00:05:49] AI doesn't always do a great job of
+[00:05:51] understanding what great code looks
+[00:05:53] like. So, how does it flip and work?
+[00:05:54] Well, let's build this Chrome extension
+[00:05:56] together. So, I'm going to come down
+[00:05:57] here. Hey there, bro. I would like to
+[00:05:59] build a Chrome extension. I would like
+[00:06:01] it to do the following. The first thing
+[00:06:03] I would like it to do is a beautiful
+[00:06:06] chat interface that works on N8N and it
+[00:06:10] will take a user request. I will also be
+[00:06:13] able to um take images that I can paste
+[00:06:16] into the chat and it will send it to a
+[00:06:18] web hook. The web hook address is and
+[00:06:20] I'll paste this down below in a second.
+[00:06:23] Yeah. Okay. I think that's pretty much
+[00:06:24] all we really need to do. Functionally,
+[00:06:25] anything else that I had this one do?
+[00:06:27] Obviously, you can just download it.
+[00:06:28] This is just more for your kind of
+[00:06:29] benefit and your knowledge. Yeah, I got
+[00:06:31] this really cool image. Um one of the
+[00:06:33] things that you can do, well, we'll see
+[00:06:34] when it develops it in a sec, but you
+[00:06:35] can add lots of cool stuff, right? So,
+[00:06:37] what we want to do then is head over to
+[00:06:38] NAM. Now, obviously, if you are
+[00:06:40] uploading the scenarios, uh, and want to
+[00:06:42] know where to get those in the
+[00:06:43] community, again, I'll put them down
+[00:06:44] below so you can use it, but just FYI.
+[00:06:46] Uh, if I come down, I'll just grab this
+[00:06:48] real quick. Okay, it's under special
+[00:06:50] AIS. You basically, this is how you
+[00:06:52] upload a snorer to NAN. Again, I'll put
+[00:06:54] these down in the description for you,
+[00:06:55] too. But if you come down here to, let's
+[00:06:57] say, agent, uh, and then you can
+[00:06:58] actually download this. Beautiful. Okay.
+[00:07:01] Then you come over to the workflow, you
+[00:07:03] come here, and you can just import from
+[00:07:05] file. You select it and then the whole
+[00:07:06] thing will populate for you
+[00:07:07] automatically, making it really flipping
+[00:07:09] cool and easy. So, how does this work?
+[00:07:11] Well, the first thing I want to show you
+[00:07:13] very quickly if you are just downloading
+[00:07:14] the Chrome extension is when you load
+[00:07:16] that up, you're going to have a document
+[00:07:17] with three things in it. What you need
+[00:07:18] to do is you need to right click on
+[00:07:21] content.js, open with and open with text
+[00:07:24] edit. Text edit is an application that
+[00:07:27] enables us to edit text plainly without
+[00:07:30] it adding loads of different bells and
+[00:07:31] whistles. If you are on Word, I'll put
+[00:07:33] like a kind of alternative you can use
+[00:07:34] down below, but it's really important.
+[00:07:36] You click on open with text edit. What
+[00:07:37] I'd like you to do guys is Crl+ F and
+[00:07:39] just type in insert. And now you can
+[00:07:41] see, let me just find it right here for
+[00:07:42] you. It says here, insert web hook URL.
+[00:07:45] What you're going to do is you're going
+[00:07:46] to highlight this right here. You're
+[00:07:47] going to come back over to your NA10
+[00:07:48] scenario. You're going to click on add
+[00:07:50] first step. And let's just go for web
+[00:07:52] hook. Like so. Start a workflow with a
+[00:07:54] web hook. And guys, you are going to go
+[00:07:56] to post and you're just going to click
+[00:07:58] copy. And then come back over. And then
+[00:08:01] you are just going to paste it in like
+[00:08:03] that. Beautiful. And then that is the
+[00:08:05] entire thing, right? And you come up
+[00:08:07] here, click five file, then click save.
+[00:08:09] Uh, and then to upload this, uh, what
+[00:08:11] you basically do is you're going to come
+[00:08:12] over to update in the top right. You're
+[00:08:14] going to come down here to extensions,
+[00:08:16] manage extensions, which is cool. I'm
+[00:08:19] going to delete this guy and remove him
+[00:08:20] real quick so we can pull it all
+[00:08:21] together. Yes, he's gone. Automation
+[00:08:23] magic is out of here. Uh, what you want
+[00:08:25] to do is make sure developer mode is
+[00:08:26] toggled in the top rightand corner.
+[00:08:28] Going to come down to load unpacked. uh
+[00:08:30] and then you come through to your
+[00:08:31] desktop. You basically select the file
+[00:08:33] uh and then once you do that it will
+[00:08:34] load for you automatically in the
+[00:08:36] browser. And then when I come onto any
+[00:08:38] scenario, for example, if I just
+[00:08:39] duplicate this, you'll see that
+[00:08:40] automation magic appears with our
+[00:08:43] specific web hook. Now, how do we know
+[00:08:45] that that works? Well, let's freaking
+[00:08:47] try that out, right? So, if I come over
+[00:08:48] here, I've got this guy. Let's just call
+[00:08:50] this one uh agent build. Okay,
+[00:08:53] beautiful. Save this one real quick. Uh
+[00:08:55] refresh it. And then automation magic
+[00:08:57] will be there in a good time. Now, if I
+[00:08:58] click on this and I click on play or
+[00:09:01] test workflow uh which would be more
+[00:09:02] appropriate. Open this guy up. Uh what
+[00:09:04] we can say is something like uh test
+[00:09:07] test.
+[00:09:09] Whoops. Test test test. Hit enter. And
+[00:09:11] let's have a look. And do we have the
+[00:09:13] screen that's come through? We should
+[00:09:14] certainly do if I just quickly find
+[00:09:17] test. There you go. Command test
+[00:09:19] platform is an intent. And I've also
+[00:09:20] included a session ID. So if you want to
+[00:09:22] add memory to it to remember chat, you
+[00:09:24] are able to do that. and we've got a
+[00:09:25] response from it which is code for
+[00:09:27] pretty good freaking news. So, we've
+[00:09:29] done that. So, how do you actually
+[00:09:30] create the co-pilots? Let's come back
+[00:09:32] over to our beautiful uh Chrome
+[00:09:33] extension. We hit on enter. Uh and then
+[00:09:35] it'll ask some clarificatory questions
+[00:09:37] which is cool. I found I'm building
+[00:09:38] quite a few of these cuz in a community
+[00:09:40] we did a competition on creating Chrome
+[00:09:42] extensions for really cool stuff. Like
+[00:09:43] one guy did a funny one which is like it
+[00:09:45] just puts everything into a poor font or
+[00:09:46] adds images Nicholas Cage but there's a
+[00:09:48] billion really cool ones for businesses.
+[00:09:50] So, this is cool. It basically clarify
+[00:09:52] all the stuff that we need. We need to
+[00:09:53] give it the web hook URL. So again,
+[00:09:55] let's come here and just grab this. And
+[00:09:57] obviously, if this is just old news for
+[00:09:58] you, you know how to do this, feel free
+[00:09:59] to skip that to the next section. I I'll
+[00:10:01] have timestamps everything for you down
+[00:10:02] below. Uh, and we come here. So this is
+[00:10:04] the web hook. And then we come down
+[00:10:07] here. Let's go for uh post to this
+[00:10:10] location. Beautiful. And then what it'll
+[00:10:12] start to do, guys, is generate files for
+[00:10:14] us, which is cool. It's got
+[00:10:15] manifest.json, pop-up. HTML, pop-up.js,
+[00:10:19] and pop-up. CSS. And all you do, guys,
+[00:10:21] it will give you all of the code for
+[00:10:23] each of those things. And all you do is
+[00:10:25] you come down here to text edit,
+[00:10:27] rightclick, and then click on new
+[00:10:29] document. And then you're going to enter
+[00:10:31] loads of code. Okay? You're going to
+[00:10:34] click on here, which is edit, and you I
+[00:10:36] think it's edit. Where is it? Format is
+[00:10:38] to make plain text. That's really
+[00:10:40] important. And you click on file, and
+[00:10:43] click on save. And basically, you want
+[00:10:45] to call it whatever it says. So if it's
+[00:10:47] like manifest.json, JSON. Save it as
+[00:10:49] manif manifest.json to your desktop. And
+[00:10:52] then you're going to have and just say
+[00:10:54] yet use.json. And then guys, what's
+[00:10:56] going to happen is you're going to have
+[00:10:56] like two three or four files. Put them
+[00:10:59] into a folder and then follow those
+[00:11:01] exact same process as before to upload
+[00:11:03] it to Chrome extension and then you have
+[00:11:04] something epic. Uh look, just two very
+[00:11:06] quick best practice things with this is
+[00:11:08] it expect one or two different uh spars
+[00:11:11] with it. So um it won't always do it
+[00:11:13] perfectly. I've actually given it load
+[00:11:14] of custom instructions and loads of
+[00:11:16] really cool sexy like code for UI like
+[00:11:18] the chat thing which is why I was able
+[00:11:20] to get really crisp, beautiful um things
+[00:11:24] like this with gradients and just nice
+[00:11:25] design because I gave it like example
+[00:11:27] code of what looks really really cool.
+[00:11:28] So you can have some really cool fun
+[00:11:29] with that. And basically that's how you
+[00:11:31] create all of your Chrome extension. So
+[00:11:33] now we've got a Chrome extension locked
+[00:11:34] and loaded. You've downloaded it from
+[00:11:35] below. We're now in the scenario. Let's
+[00:11:38] start off by building out exactly what
+[00:11:40] we want to do. Well, the first thing
+[00:11:41] that we want to do realistically is we
+[00:11:44] kind of want to split between, I don't
+[00:11:46] know, let's just say an image and text.
+[00:11:49] So, I should also show you, by the way,
+[00:11:50] this does work cool with images. So, let
+[00:11:52] me just show you an example of that. So,
+[00:11:53] I've got this one here, right? If I come
+[00:11:54] up and I just take a quick screenshot of
+[00:11:56] this, come down to options, click on
+[00:11:58] clipboard, uh, and I come back over here
+[00:12:00] and let's just test the workflow. I come
+[00:12:02] here and then paste this one in, hit
+[00:12:05] enter, and now it's sent the image,
+[00:12:06] which is cool, right? So basically what
+[00:12:08] this will do is go down the analyze
+[00:12:09] image route which is code for very very
+[00:12:11] cool freaking good news. Uh and this
+[00:12:13] will just transcribe what's happening
+[00:12:14] with the image and then it will execute
+[00:12:16] the sub workflow that we've got. And
+[00:12:18] again this doesn't work 100% of the
+[00:12:20] time. I I kind of wanted this to be like
+[00:12:21] an open project for the broader
+[00:12:22] community in terms of like take the
+[00:12:24] extension take the basic way that I've
+[00:12:26] done and this might not be the best way
+[00:12:27] to do it. This is just kind of what
+[00:12:28] occurred to me um and build on it and
+[00:12:30] add loads of cool stuff. And at the end
+[00:12:32] of the video, by the way, I'm als going
+[00:12:33] to show you some stuff for how you can
+[00:12:34] take this to the next level, which I
+[00:12:36] think you'll find really interesting.
+[00:12:37] So, we'll get this back and we'll see
+[00:12:38] what it does. And even if it doesn't
+[00:12:40] have 100% hit rate, sometimes it's just
+[00:12:42] handy and helpful just to get the code
+[00:12:43] to get started. All right, beautifully.
+[00:12:45] So, it's got a bit of an instruction
+[00:12:46] here, which is this anytime workflow
+[00:12:48] begins with a manual trigger and
+[00:12:49] orchestrates an AI agent capable of
+[00:12:51] accessing air table records, sending
+[00:12:53] some emails, blah blah blah blah. All
+[00:12:55] right, cool. So, let's just see is that
+[00:12:57] true and how does that work? Well, we'll
+[00:12:59] come down here. We'll just simply click
+[00:13:00] on copy code, come over, hit paste, and
+[00:13:02] see what we get. Well, we come over here
+[00:13:04] and it has successfully managed to
+[00:13:06] replicate the entire thing from an
+[00:13:08] image. Hey, guys. And let's just test
+[00:13:09] this with an automation. So, if I'm on
+[00:13:11] our good friend David's video, I come
+[00:13:13] over to let's get a YouTube transcript
+[00:13:14] real quick. Uh, pop this one in and
+[00:13:16] general transcript. I just want to show
+[00:13:18] you the limitations of this as well,
+[00:13:19] like where it falls and where it goes
+[00:13:20] down. This why I think opportunities up
+[00:13:22] here, we can like build on this tech
+[00:13:24] together. I come over, let me copy this,
+[00:13:25] go back over to our flipping really cool
+[00:13:27] scenario. Hey broki, could you do me a
+[00:13:29] favor? Just um yeah, give me the code
+[00:13:30] based off the below transcript, please.
+[00:13:32] And let me come over and just uh run
+[00:13:34] this sonar test workflow real quick.
+[00:13:36] Cool. So tested workflow. Pasted it in.
+[00:13:38] Bam. Cool. Beautiful. We've got all the
+[00:13:39] information from David. So let's see how
+[00:13:40] it gets on. All right. Cool. This
+[00:13:41] workflow is executed, guys. Let's just
+[00:13:43] go and test this one out. We've copied
+[00:13:44] it. Let's see how it gets on. We paste
+[00:13:46] it in. And what has it done? So you can
+[00:13:48] see it's kind of picked up a couple of
+[00:13:49] stuff, but it hasn't really properly
+[00:13:51] fully understood everything from a
+[00:13:53] transcript. So, I think probably the one
+[00:13:54] of the ways to improve this is
+[00:13:55] transcript plus screenshot would
+[00:13:57] probably help it quite a lot, but I just
+[00:13:58] want to show you some of the uh
+[00:14:00] limitations of this thing and where it's
+[00:14:01] at in the lab. So, cool technology,
+[00:14:03] really helpful, but doesn't work
+[00:14:04] perfectly 100% of the time. All right,
+[00:14:06] cool. So, let's go build out this thing
+[00:14:08] and see how we can level it up a
+[00:14:09] bazillion%. So, we've got the web hook.
+[00:14:12] What we first of all want to do is
+[00:14:13] segment out the difference between image
+[00:14:15] and the text. So, let's start off here
+[00:14:16] with a switch module. Beautiful. So,
+[00:14:19] based on the information that we get, we
+[00:14:20] can decide. So the value we're going to
+[00:14:22] add in is this one here which is JSON
+[00:14:24] body command. And then we come down here
+[00:14:25] to uh boolean which is very simple is
+[00:14:28] not empty. Beautiful. And then we do the
+[00:14:29] second one which is going to be add
+[00:14:30] another writing rule and it's the exact
+[00:14:32] same thing. So this one here not text
+[00:14:34] here is JSON body
+[00:14:36] command beautiful is empty. Obviously if
+[00:14:40] you want to do image plus text we can
+[00:14:41] accommodate for that but this is a
+[00:14:42] really easy simple way to get rocking
+[00:14:43] and rolling with it. Uh beautiful. And
+[00:14:46] then we'll call this one uh rename
+[00:14:47] output which is going to be image.
+[00:14:49] Phenomenal. like that. We can test a
+[00:14:51] step. Okay, cool. Let's come off.
+[00:14:54] Phenomenal. All right. Fantastic. Cool.
+[00:14:56] And then what we want to do is come down
+[00:14:57] here and we want to do a set module. So
+[00:14:59] we come down on set edified modify
+[00:15:01] fields manual mapping. So it is going to
+[00:15:03] be the value is the thing we get from
+[00:15:05] our first web hook which should be web
+[00:15:07] hook zero I believe. Yep. Perfect. And
+[00:15:09] then we'll call this one what user
+[00:15:11] wants. Beautiful. Then the next thing to
+[00:15:13] do is actually read the image itself and
+[00:15:15] then get chat GBT to kind of transcribe
+[00:15:16] what that looks like. So again we click
+[00:15:18] on this guy here. Cool. And if I just
+[00:15:19] type in transcribe, I think we'll just
+[00:15:21] go for chat GPT open AI and let's just
+[00:15:23] do analyze an image. Beautiful text
+[00:15:26] input is simply going to be describe the
+[00:15:27] steps involved in the workflow. We
+[00:15:28] choose a correct credential. Obviously,
+[00:15:30] if you don't know how to do that, guys,
+[00:15:31] platform openai.com API keys on the
+[00:15:34] left. Grab that and then you can insert
+[00:15:36] it to correct your credential, which is
+[00:15:37] cool. Uh model, I just go for 40 or
+[00:15:39] something. Yeah, I think that's
+[00:15:40] absolutely fine. The input type is going
+[00:15:41] to be binary. Cool. Beautiful. And then
+[00:15:43] let's just uh duplicate this guy real
+[00:15:45] quick and bring him over. But of course,
+[00:15:47] we're just going to want the string to
+[00:15:49] be the output that we get from chat GBT,
+[00:15:51] which is flipping cool. And now we've
+[00:15:53] got the split off, which is decent. And
+[00:15:55] that is text and image. Yeah. Okay,
+[00:15:56] that's really cool. Then what we're
+[00:15:58] going to want to do is execute a
+[00:15:59] workflow. So let's just type in execute
+[00:16:02] a subworkflow. Beautiful. Okay, we don't
+[00:16:04] need to enter that one just yet, but
+[00:16:06] bring that here. Bring these ones up.
+[00:16:08] And then at the end, let's just add our
+[00:16:10] final web hook in there. Returns data
+[00:16:12] for a web hook. Beautiful. Okay, sweet.
+[00:16:14] So what we want to do on the first web
+[00:16:15] hook down here guys is respond not
+[00:16:17] immediately using the respond to web
+[00:16:19] hook node. Okay, sweet. So let's just
+[00:16:21] see if this works in practice. So if I
+[00:16:23] click on test workflow. Okay, one
+[00:16:25] second. It needs to choose. Okay, let's
+[00:16:26] create a sub workflow first and then we
+[00:16:28] can do it. So this is agent build. And
+[00:16:30] then we can come down here and call this
+[00:16:31] one sub agent uh build. Beautiful. And
+[00:16:36] we come down here to advert step. And
+[00:16:37] then the trigger will be if I just come
+[00:16:39] over here for example, we're just going
+[00:16:41] to look for when executed by another
+[00:16:43] workflow, which is this guy right here.
+[00:16:44] Cool. And then we'll test this in a sec,
+[00:16:46] but I just want to call this one sub
+[00:16:47] agent build. And we'll save this one.
+[00:16:48] Okay. And we should put an emoji at the
+[00:16:50] beginning of it just so we know exactly
+[00:16:51] which one it is. And we'll put the eyes
+[00:16:53] there. Okay, that's really cool. So
+[00:16:55] let's then select what this one is. Uh,
+[00:16:57] and then we'll do sub agent. Sub aent
+[00:17:00] build. Beautiful. Run once with all
+[00:17:02] items is fine. But what we want to do in
+[00:17:03] the sub aent, guys, is just specify the
+[00:17:05] things that it wants. So we're going to
+[00:17:07] say here what user wants which is going
+[00:17:08] to be this guy here in terms of string
+[00:17:10] and then down here let's just call this
+[00:17:12] one something like we'll call this one
+[00:17:13] workflow ID. So this is so that we can
+[00:17:15] have a unique uh identifier for every
+[00:17:18] time we have the conversation so that
+[00:17:19] what we can do is basically have a
+[00:17:21] memory with our agent if we want to add
+[00:17:23] that like replicable memory in there as
+[00:17:24] well which is cool and then I think we
+[00:17:26] are good to rock and roll with that. So
+[00:17:28] save come back over to this guy and if I
+[00:17:31] refresh it'll then actually ask for
+[00:17:33] those two things. So whatever user wants
+[00:17:34] and blah blah. So if I execute previous
+[00:17:36] nodes real quick. Okay, no input there.
+[00:17:38] So let's run this one real quick.
+[00:17:40] Actually guys, no, we don't want boolean
+[00:17:42] on this. What we need to do is string uh
+[00:17:44] and this one is uh is not empty, right?
+[00:17:46] Let's come down to string cuz that's the
+[00:17:48] input that we're going to get. Uh string
+[00:17:50] is not empty. Beautiful. And then this
+[00:17:51] one here is going to be string is empty.
+[00:17:54] Uh okay, cool. Beautiful. Right, and
+[00:17:56] we'll save this one. Cool. All right,
+[00:17:57] sweet. So reset the window. Let's just
+[00:17:58] go. Hey, test test one two three. Could
+[00:18:00] you build this really cool scenario?
+[00:18:02] Thank you. All right, cool. We've asked
+[00:18:03] the question, it's come through, gone on
+[00:18:06] to the web hook, and there you go. It's
+[00:18:08] got all the stuff, which is decent. So,
+[00:18:09] this one went down the edit fields
+[00:18:10] route, which is successful. So, what we
+[00:18:12] should do now is test it again, but this
+[00:18:14] time, let's add in an image. So, let's
+[00:18:16] just take a random image of something.
+[00:18:17] So, if I take an image of this, I'll
+[00:18:19] come down here, clipboard, and just
+[00:18:21] paste it in. Bam. Hit send. And give
+[00:18:24] this one f. Let's just check out why.
+[00:18:26] Cool. I think the input data field name
+[00:18:28] uh needs to be image file rather than
+[00:18:30] data. Cool. So, this should now work,
+[00:18:31] right? Let's just try this one more
+[00:18:32] time. Come up here. Let's copy the
+[00:18:34] beautiful scenario real quick. All
+[00:18:37] right. Test workflow. Come down. Paste
+[00:18:38] the image in. And it should go through
+[00:18:40] properly. And it seems to be doing that
+[00:18:41] perfectly. Describes a scenario. Let's
+[00:18:43] just see what it does. One way we could
+[00:18:45] do by probably to improve this scenario
+[00:18:46] is to give this guy more context on what
+[00:18:49] it's looking at. So probably feed this
+[00:18:50] guy loads of cool stuff. So the workflow
+[00:18:53] receives blah blah blah blah. This is
+[00:18:54] exactly what it does. So, what we could
+[00:18:56] do potentially is come over to the
+[00:18:58] ultimate uh and it's end guide, which is
+[00:19:00] this beautiful guy right here. Let's
+[00:19:02] come back over to our scenario to
+[00:19:03] improve it. And the thing is, guys, I
+[00:19:04] could I felt like I could have spent
+[00:19:06] like months building this out, but I
+[00:19:08] wanted to share something that freaking
+[00:19:09] has the has the kind of beautiful the
+[00:19:11] the start links of what is going to be
+[00:19:13] epic. So, text input uh and just put FYI
+[00:19:17] here is more information about N8N to
+[00:19:20] support you in understanding what it is
+[00:19:22] that you're looking at. And then, bam,
+[00:19:24] there you go. Sweet. Beautiful. We
+[00:19:25] freaking love it. Now we've done that.
+[00:19:27] We're going to save. Now let's go ahead
+[00:19:28] and develop out this sub agent workflow.
+[00:19:30] And obviously there's so many crazy back
+[00:19:32] and forths with this sort of stuff and
+[00:19:33] explain why I built it the way that I
+[00:19:34] did. Now first thing I want to do is set
+[00:19:36] two things up. And actually what I'm
+[00:19:38] going to do is come down to set modify
+[00:19:41] field. And there's two things, right?
+[00:19:42] One is going to be let's just say here
+[00:19:44] what do you want to build? And then we
+[00:19:46] need to give it the value from before
+[00:19:47] which will be JSON whatever user wants.
+[00:19:49] And then we want the second one here
+[00:19:50] which is going to be workflow ID. Let's
+[00:19:52] see.
+[00:19:53] Workflow ID and then uh come down here
+[00:19:57] with this guy. Cool. But what I'm going
+[00:20:00] to do, guys, just for the purposes of
+[00:20:01] testing this is I'm going to come out
+[00:20:03] here. I'm going to um duplicate this
+[00:20:06] guy. Bring him out here. And I'm
+[00:20:09] actually going to remove this cuz when
+[00:20:10] you're doing a sub agent workflow,
+[00:20:12] sometimes it's like you don't want to
+[00:20:14] have to keep running master scenario. So
+[00:20:16] if I come down to add another trigger,
+[00:20:18] let's do trigger manually. Bring this
+[00:20:19] up. And just for the purposes of running
+[00:20:21] this, let's just give it some dummy
+[00:20:22] data. So let's just say what do you want
+[00:20:24] to build? We'll just say um I would like
+[00:20:27] to build an AI agent u triggered by a
+[00:20:29] web hook feed to a web hook connects to
+[00:20:32] air
+[00:20:33] table. Okay, beautiful. And workflow ID,
+[00:20:36] I'll give it some random numbers. Okay,
+[00:20:38] cool. So now we've got some test example
+[00:20:40] stuff that we can run with, right? Cool.
+[00:20:41] Now we've got these fields. Beautiful.
+[00:20:43] So what we want to do now is get the air
+[00:20:45] tables. Come down here and click on air
+[00:20:47] table. Come on this beautiful guy. and
+[00:20:49] we'll say get
+[00:20:51] data. In fact, if I just come down, I
+[00:20:54] believe it's just going to be search
+[00:20:55] records, which is beautiful from list.
+[00:20:57] Now, the air table database I've got,
+[00:20:59] let me bring it out. Where are we with
+[00:21:01] the beautiful Air Table database? We are
+[00:21:03] here. Cool. So, oops. We have record ID.
+[00:21:06] We have again, I'll put all the access
+[00:21:08] to where you can get this data from down
+[00:21:09] below so you can have a good time with
+[00:21:10] it. Uh, we have the ID, short
+[00:21:12] description, status, longer description,
+[00:21:13] notes, and when it was created. So
+[00:21:15] basically you do this you have this and
+[00:21:17] effectively the first module guys is
+[00:21:19] pulling down everything and then we can
+[00:21:20] use these ids as identifiers. So let's
+[00:21:22] say it identifiers that number 42 11 and
+[00:21:25] six are the most important most relevant
+[00:21:27] scenarios. What it will do then is we
+[00:21:29] can then use that specifically to pull
+[00:21:31] down all the code because if you give it
+[00:21:33] the JSON files for thousands of your
+[00:21:35] automations it breaks. It's too much to
+[00:21:38] handle and control intelligently which
+[00:21:40] is why we do this throttling mechanism
+[00:21:42] of all the data using just a two
+[00:21:46] sentence description which just which
+[00:21:47] three feel the most relevant then when
+[00:21:49] we've identified those then we can reach
+[00:21:51] over and then we can grab the big
+[00:21:52] beautiful JSON so this one is called uh
+[00:21:55] automation magic so let's just grab that
+[00:21:58] okay automation magic phenomenal from
+[00:22:00] list it's just going to be simply table
+[00:22:02] one fantastic and then filter by formula
+[00:22:04] I don't believe we need anything for
+[00:22:05] that but if I click on return all and I
+[00:22:06] click test step. We should see on the
+[00:22:08] right hand side every single one of the
+[00:22:10] records. Beautiful. Okay. Fantastic.
+[00:22:12] That's great. And of course, we'll just
+[00:22:13] name this one. Cool. And we'll call this
+[00:22:14] one get data. Beautiful. And just to
+[00:22:17] save you the time, what you're going to
+[00:22:18] do next is add a code module here, which
+[00:22:20] I call WD40 of the NA10 world.
+[00:22:23] Effectively, what I'm asking if you're
+[00:22:24] ever unsure what to do in NA10, add this
+[00:22:26] code module. Same for make with like
+[00:22:28] zero code kit, right? You can run Python
+[00:22:30] script, all that sort of cool stuff. I
+[00:22:31] this has pulled down everything, right?
+[00:22:33] Check this out. I got a table here. I've
+[00:22:34] got the ID, the create time, the short
+[00:22:36] description. It's way too much data. The
+[00:22:37] only things I care about is what's the
+[00:22:40] uh number, what's the ID it's got,
+[00:22:42] right? Look at these different pages,
+[00:22:43] which could be one, could be 29. And
+[00:22:45] what is the short description? So,
+[00:22:47] that's something that you can give to a
+[00:22:49] language model. Makes sense. How do we
+[00:22:50] get that? Well, we give it what is known
+[00:22:52] as code. Type this in, hit this in, and
+[00:22:55] hit test step. Okay? And what this will
+[00:22:58] do is basically create combined text.
+[00:23:00] So, it'll go, hey, number one, short
+[00:23:01] description. Number two, short
+[00:23:02] description. Number three, short
+[00:23:03] description. blah blah blah blah blah
+[00:23:04] all that cool stuff. Beautiful. So then
+[00:23:06] we come down. Let's give this one a
+[00:23:07] quick name. We will call this one the go
+[00:23:09] data overview. Cool. Now the next thing
+[00:23:11] I'm going to do is what I call the
+[00:23:12] golden selector. So of all all the
+[00:23:15] different JSONs that we've got. What are
+[00:23:16] the three that we think are most
+[00:23:17] relevant for what the user wants to do.
+[00:23:19] And remember this is only as good as the
+[00:23:21] data we put in. Like this is an MVP. So
+[00:23:22] the more data we can put in the better.
+[00:23:24] I found it to be a lot more effective at
+[00:23:26] building agents than any other type of
+[00:23:27] scenario. Interestingly, but if I come
+[00:23:29] down here and type in let's just do forg
+[00:23:32] AI. Beautiful. We want to message a
+[00:23:34] model. Fantastic. Now, this is our
+[00:23:36] golden selector. Again, I'll put the
+[00:23:38] code down below so you can just grab
+[00:23:39] that from the list. Let's just go for 40
+[00:23:41] Mini. Ah, we need to just authorize.
+[00:23:43] Let's just go to one of my bazillion
+[00:23:44] different things we've got. Could choose
+[00:23:46] a model for I've always just works a
+[00:23:48] little bit more effectively. Uh, come
+[00:23:50] down here. Okay, sweet. Give that a hot
+[00:23:52] second. Okay, cool. Fine. Come down here
+[00:23:54] and then prompt is going to be this. In
+[00:23:55] fact, let's just go for mini. I think
+[00:23:57] mini is going to be a good one. Okay,
+[00:23:58] GPT4 and mini. Beautiful. Now, the
+[00:24:00] prompt is what, you may ask, Jack? Well,
+[00:24:02] it's very simple. Prompt is just, hey,
+[00:24:03] select three workflows that best fit
+[00:24:06] building an automation the user
+[00:24:07] describes below. Output only the numbers
+[00:24:10] in pure JSON array. No explanations, no
+[00:24:12] attach, no fluff. Just use a blow format
+[00:24:14] which is known as JSON format. Cool.
+[00:24:16] That is going to be the system prompt.
+[00:24:18] And then we want to give it what is
+[00:24:19] known as the user message, right? Which
+[00:24:21] is what the user wants. So what is that?
+[00:24:23] Well, guys, we come down to expression.
+[00:24:25] Let's just pop this one up and paste it
+[00:24:27] in. Basically, what the user wants to
+[00:24:30] do. Now, here's the interesting thing
+[00:24:32] here, guys. Okay. Um, this code's really
+[00:24:35] important because what happens is once
+[00:24:39] you add a code node into an NA10
+[00:24:41] scenario, it cannot grab everything
+[00:24:44] before that. Right? So, if I click on
+[00:24:45] this edit field and let's just see the
+[00:24:47] output we've got here. Right? If I come
+[00:24:49] down to add no data overview just as a
+[00:24:50] quick for instance, I come over and I
+[00:24:52] grab edit fields, which is this. Okay?
+[00:24:56] You can see that is the code that we
+[00:24:58] need cuz it's got first in it. Really,
+[00:25:00] really, really important. Um, okay,
+[00:25:03] beautiful. And if I come back, it's it's
+[00:25:06] not finding cuz it's not ready just yet.
+[00:25:07] And got JSON combined text. So, let's
+[00:25:09] give this horse and test and see how
+[00:25:10] this one runs through. Beautiful. We're
+[00:25:13] grabbing the data, pulling down 250
+[00:25:15] records. It's combining it to overview.
+[00:25:17] And then golden selector failed. And
+[00:25:18] let's just see why the code names does
+[00:25:20] not exist. Okay, beautiful. Let's test
+[00:25:22] the workflow. come down to golden
+[00:25:23] selector once we've now given it the
+[00:25:25] proper information it needs to do which
+[00:25:27] includes what the user wants to build
+[00:25:28] and it should collect a couple number of
+[00:25:30] things. Let's find out what happened
+[00:25:31] there. Beautiful. And it said 1 59 and
+[00:25:33] 11. So now we've got three different
+[00:25:34] things to choose from which is flipping
+[00:25:36] cool. Next thing you want to do is just
+[00:25:37] to split out those individual numbers
+[00:25:39] real quick. So let's just go down to
+[00:25:40] split out. And then we're just going to
+[00:25:42] type in this one here which is message
+[00:25:43] the content of numbers and just test
+[00:25:45] this step real quick. Give this a hot
+[00:25:47] second and it split it out. In fact I'm
+[00:25:49] just going to pin this data just so it's
+[00:25:51] easy for us. Next thing I'm going to do
+[00:25:52] guys is to add some beautiful code.
+[00:25:54] Purpose of this code is to then go back
+[00:25:55] to all the data we script from air table
+[00:25:58] and only pull back the ones that this
+[00:25:59] guy has outputed which is 1 67 and 211.
+[00:26:03] And just to save you of time, I'm just
+[00:26:04] going to paste it all in but again I'll
+[00:26:05] put it down below so you can grab it.
+[00:26:07] Click on test step and this should then
+[00:26:09] pass out all the beautiful information
+[00:26:10] we got which is loads of crazy code
+[00:26:12] which is freaking awesome. And then our
+[00:26:14] last two thing guys is going to be a
+[00:26:15] creator module. also something to create
+[00:26:17] the content and then finally something
+[00:26:19] to edit it to make sure that we're happy
+[00:26:21] with it. So if I just going to paste
+[00:26:22] these guys in just out of respect for
+[00:26:24] your time because it's exactly the same
+[00:26:25] process. I copy this together. Now check
+[00:26:27] this out. I come down to the creator
+[00:26:29] module. Now let's have a look at the
+[00:26:30] prompt. I could turn it to expression
+[00:26:32] real quick just so you can see. All
+[00:26:33] right. AI expert assistant specializ in
+[00:26:36] creating JSON core knowledge base. Loads
+[00:26:38] of really cool stuff. Again, when you
+[00:26:39] download the scenario, all this prompt
+[00:26:40] will be in there, but basically explains
+[00:26:42] the cool stuff like an example of what
+[00:26:43] agents look like. What's really key
+[00:26:45] though is that this one here is not in
+[00:26:47] expression but in fixed. And then we've
+[00:26:49] got the prompt down here which is
+[00:26:51] expression which is hey the user wants
+[00:26:52] to build this use this information as a
+[00:26:55] resource to ensure that you build a
+[00:26:57] valid workflow. So that's basically guys
+[00:26:59] just giving it the information from uh
+[00:27:01] the code and air table. Right? Then once
+[00:27:03] that's done it goes over to the editor
+[00:27:05] module and this guy's pretty cool pretty
+[00:27:07] cool trick. What he does is again you're
+[00:27:09] an expert we give it loads of
+[00:27:11] information information. One interesting
+[00:27:12] things we did with this is when we're
+[00:27:13] running it and again this is a process I
+[00:27:14] think we can do more to improve on is
+[00:27:16] find out where it fails and then give
+[00:27:18] that to the editor. So this guy needs to
+[00:27:21] train on it needs to go through a
+[00:27:23] learning process of hey this didn't
+[00:27:24] work. Uh therefore this is common like
+[00:27:26] the 10 reasons why your scenario fails
+[00:27:28] and then build it out. I did a couple of
+[00:27:29] iterations but you could really stretch
+[00:27:31] this out to make it like less and less
+[00:27:32] and less valable. So we've done that.
+[00:27:34] We've given loads of reasons of like
+[00:27:35] common failure mistakes. Again we could
+[00:27:37] we could bridge that out. Um, and then
+[00:27:39] we've got the prompt, which is basically
+[00:27:40] going to be the input from the last guy.
+[00:27:42] And with that in mind, guys, that's the
+[00:27:44] entire scenario. So, let's just again
+[00:27:45] just get rid of this guy and bring this
+[00:27:48] in, delete it, and bring this guy down
+[00:27:49] here. And of course, again, just JSON
+[00:27:51] what the user wants. And then change
+[00:27:52] this one down here, too. This one's JSON
+[00:27:54] workflow ID. And I believe that is
+[00:27:56] expression and not There you go. Cool.
+[00:27:58] Beautiful. Okay, with that in mind,
+[00:27:59] guys, we are ready to rock and roll.
+[00:28:01] Cool thing, by the way, I would say
+[00:28:03] about this whole thing. In fact, if I
+[00:28:05] just come down and save it, is that when
+[00:28:07] your sub agent finishes, you don't need
+[00:28:08] to do anything. It'll just pop back off.
+[00:28:10] So, let's give this one a quick uh run
+[00:28:12] through. Okay, guys. So, I've just a new
+[00:28:13] scenario. So, let's give this guy a
+[00:28:14] little bit of a whirl. Hey there,
+[00:28:15] Briski. I'd like you to create me a
+[00:28:17] scenario with a Gmail links to an AI
+[00:28:19] agent. That AI agent has a air table
+[00:28:23] module and then I'd like you to send it
+[00:28:25] back out to Gmail. Thank you very much.
+[00:28:28] Beautiful. and we send off and let it
+[00:28:30] work in the background. And I love the
+[00:28:31] fact that we've got an AI co-pilot now
+[00:28:33] that can folds around and have a rock
+[00:28:34] and roll good time and create these
+[00:28:36] really cool scenarios. So, I'm really
+[00:28:37] excited to see how we can build this
+[00:28:39] off. Couple of things that we can do to
+[00:28:40] develop on this. I've been thinking
+[00:28:41] about uh number one is memory. So, add
+[00:28:43] an AI agent instead of just a simple
+[00:28:46] scenario that we can plug in memory. So,
+[00:28:48] you can converse with it. So, if it
+[00:28:49] gives you code that doesn't work, we can
+[00:28:50] be like, "Hey, this didn't work. Change
+[00:28:52] it." The second thing I would look at
+[00:28:53] adding is scenario imports, which
+[00:28:55] basically is to split out the scenario.
+[00:28:57] uh in the main thing that says like okay
+[00:29:00] does the user just want to import
+[00:29:01] something rather than create something
+[00:29:03] so if you have all your JSON saved what
+[00:29:05] that can do then is just bring that one
+[00:29:06] in rather than having to create from
+[00:29:08] scratch that could save us time and then
+[00:29:10] thirdly obviously make have it identify
+[00:29:12] whether it's anything or make and then
+[00:29:13] split down into two scenarios so there's
+[00:29:15] so many different ways we could build
+[00:29:16] and improve on this uh just call it a
+[00:29:17] mini road map for you to have fun and
+[00:29:19] get running with so I think we'll look
+[00:29:20] at developing this over time in the
+[00:29:21] community to kind of develop at gen one
+[00:29:23] and let's see what we get to when we're
+[00:29:24] at like gen 10 or something cool and
+[00:29:26] then we've got this one back. So, let's
+[00:29:28] see how we get on with this. We copy it
+[00:29:29] and then we paste in and what do we
+[00:29:31] have? Cool. So, it's kind of like it's
+[00:29:34] made a couple of mistakes, right? So,
+[00:29:35] we've got the Gmail tool, we've got the
+[00:29:37] Air Table tool, send message tool,
+[00:29:39] didn't quite get the Gmail trigger
+[00:29:41] right, so that's something we need to
+[00:29:42] improve. Um, but fundamentally, this is
+[00:29:44] a whole automation. So, guys, I hope you
+[00:29:45] find this video helpful. If you haven't
+[00:29:47] seen this video on screen, YouTube
+[00:29:48] really thinks that you're going to love
+[00:29:50] it. So, check that one out. But in any
+[00:29:51] case, have a beautiful week and I'll see
+[00:29:53] you in my next

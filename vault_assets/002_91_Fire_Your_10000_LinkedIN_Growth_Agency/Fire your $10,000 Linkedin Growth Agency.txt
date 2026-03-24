@@ -1,0 +1,1076 @@
+[00:00:00] What if you could replace your entire
+[00:00:02] LinkedIn agency? Now look, I get it.
+[00:00:04] Creating viral, decent LinkedIn posts
+[00:00:06] and lead magnets that clients actually
+[00:00:08] want to use can be timeconuming and it
+[00:00:10] can be difficult. Well, that was of
+[00:00:12] course until we combine two beautiful
+[00:00:14] technologies, lovable.dev and the
+[00:00:16] phenomenal NA10. And this system guys is
+[00:00:18] crazy. It will take your avatar. So say
+[00:00:21] for example, we are targeting doctors.
+[00:00:23] We could do a topic. I don't know what
+[00:00:24] could be relevant. I don't know how
+[00:00:25] about how many patients aren't turning
+[00:00:27] up to their appointments and how much
+[00:00:28] that costs doctors in missed
+[00:00:31] leads something like that right tone of
+[00:00:34] voice we can select conversational
+[00:00:35] enthusiastic whatever you want to and we
+[00:00:37] can even include a lead magnet right URL
+[00:00:39] so we we talk to these guys we create
+[00:00:41] compelling LinkedIn post then they get a
+[00:00:43] link to a really cool lead magnet so you
+[00:00:45] can even say like what do you want to
+[00:00:46] point them towards we'll say nothing for
+[00:00:48] a second we can hit generate this thing
+[00:00:50] and like that we will get these
+[00:00:51] beautiful high quality LinkedIn posts
+[00:00:53] that we can just literally guys come
+[00:00:54] down here, copy and post directly. But
+[00:00:56] on top of that, what is really cool is
+[00:00:59] we get this phenomenal uh lead magnet
+[00:01:01] that we can then send out to people. So
+[00:01:03] look at that. This is literally insane.
+[00:01:04] I pulled this one up as an example. We
+[00:01:06] get this market intelligent snapshot,
+[00:01:07] different data points, beautifully
+[00:01:10] generated stuff. But how does it work?
+[00:01:12] Well, what we're doing is when we submit
+[00:01:14] this form, okay, if I come down here to
+[00:01:16] create the new content, this is your
+[00:01:17] dashboard. Give this to your teams, give
+[00:01:19] it to anybody. You fill out the
+[00:01:20] information. It comes through to this
+[00:01:21] system here, okay? We grab it via a web
+[00:01:23] hook, which I'll show in a second. And
+[00:01:24] this agent here will go forth and
+[00:01:27] ruthlessly research that topic to enrich
+[00:01:29] it with the most market leading
+[00:01:31] interesting insights for that. Then it
+[00:01:33] goes to not one but two, but three
+[00:01:35] LinkedIn agents that have been trained
+[00:01:37] on loads of really cool stuff. They know
+[00:01:38] what goes viral on LinkedIn and they'll
+[00:01:40] generate for you three posts. But then
+[00:01:42] this is where the magic happens. We go
+[00:01:43] to a lead magnet agent whose sole job is
+[00:01:47] to go forth and create that beautiful
+[00:01:49] PDF that you just saw. And then we
+[00:01:51] convert that text, that HTML into a
+[00:01:53] gorgeous PDF along these kinds of design
+[00:01:56] criteria so we can then send that to
+[00:01:57] people. And the way that we use this
+[00:01:59] guys very simply is we create an awesome
+[00:02:00] post. We say, "Hey, type the word
+[00:02:02] dentist or doctor down below and I'll DM
+[00:02:05] DM you over a full helpful guide. They
+[00:02:07] download the guide and then they're into
+[00:02:08] our funnel." And the whole beautiful
+[00:02:10] upside of this guys is we have a button
+[00:02:12] here to upgrade or do cool stuff. So,
+[00:02:14] we're going to cover through in this
+[00:02:15] video exactly how you build this entire
+[00:02:17] system on Livable, how you build this
+[00:02:19] entire thing on NAN. And the great news
+[00:02:21] is even if you've never coded a day in
+[00:02:23] your life before, it will make sense.
+[00:02:24] So, if you haven't already, grab that
+[00:02:27] coffee and let's dive straight in. And
+[00:02:29] by the way, guys, this is a working
+[00:02:30] strategy. It's the same thing that I do
+[00:02:31] to get over 150 emails every single day
+[00:02:35] with my content. And so, I'm super
+[00:02:36] stoked to dive in. All right, cool. So,
+[00:02:37] we're going to do this into two parts of
+[00:02:39] the video. Part one is creating this
+[00:02:40] amazing dashboard on lovable which
+[00:02:42] effectively functions as our front end.
+[00:02:44] And part B is going to be just
+[00:02:46] developing out this whole system in NHM.
+[00:02:49] So what I'm going to do very quickly is
+[00:02:50] reach over to the community. I'm going
+[00:02:51] to grab the blueprints to upload this.
+[00:02:54] And there's one really important detail
+[00:02:55] that I want you to double click into.
+[00:02:56] Okay. So come on here. Let me just
+[00:02:58] download this. And that's that these
+[00:03:00] systems are exceptional. Now, if you're
+[00:03:02] focusing on growing on a social media
+[00:03:04] platform, then the best advice is to
+[00:03:06] pick one and really double click and
+[00:03:08] grow into that because for example, we
+[00:03:11] have these different like prompting
+[00:03:12] systems for different like social media
+[00:03:14] platforms, right? And they all work and
+[00:03:15] create good content, but it's better you
+[00:03:17] focus in on one and extremely value out.
+[00:03:19] So, if I come down here, let me just
+[00:03:20] import this thing. We come down here and
+[00:03:22] click on import from file. You select
+[00:03:24] the file and the whole thing will
+[00:03:25] populate automatically. What we can also
+[00:03:27] do if we wish is to integrate image
+[00:03:29] asset generation. I covered that in my
+[00:03:31] last video, but I'll include it in the
+[00:03:33] blueprint here, uh, so you can have some
+[00:03:34] good fun with it if you choose to. All
+[00:03:36] right, cool. So, I suggest we do this in
+[00:03:38] two parts. Part one is creating a thing
+[00:03:39] of Lovable. Then part two is then
+[00:03:41] building this system out together. So,
+[00:03:42] for that, let's go over to Lovable and
+[00:03:44] start from scratch. What I'll also show
+[00:03:46] you in Lovable, if you want to, guys, as
+[00:03:48] well, is how you can actually name this
+[00:03:49] to anything you want to. So, this is
+[00:03:51] Lovable.dev. Loads of crazy things. I'm
+[00:03:53] going to show you how you can actually
+[00:03:54] name it anything you want to. For
+[00:03:55] example, if you check this one out, this
+[00:03:58] one here, which is where, you know, in
+[00:03:59] Accelerate I do to help people like, you
+[00:04:01] know, scale their agencies and stuff.
+[00:04:02] Um, I actually save this entire thing to
+[00:04:06] growithjack.com, which is really
+[00:04:08] flipping cool, right? And it's so
+[00:04:09] unbelievably easy to do. Like, it's
+[00:04:11] outrageous. So, what we're going to do
+[00:04:12] is we come into this box here. I'm going
+[00:04:13] to give it a prompt. Okay. Hey there, I
+[00:04:15] would like you to create me a sleek uh
+[00:04:18] crisp form for a LinkedIn lead magnet
+[00:04:21] generator. You're going to ask four
+[00:04:23] questions. Question number one is going
+[00:04:24] to be desired topic. Question two is
+[00:04:27] going to be avatar. Question three is
+[00:04:29] going to be would you like to include a
+[00:04:31] lead magnet URL? And then I'm just going
+[00:04:33] to check what else ah tone of voice.
+[00:04:34] Okay. Then I would like you to ask
+[00:04:37] whether or not um actually yeah question
+[00:04:40] four should be provide a tone of voice
+[00:04:42] and then provide multiple selections for
+[00:04:43] that. Underneath that once that's been
+[00:04:45] submitted uh I'd like you to display
+[00:04:47] confetti and display a loading
+[00:04:48] animation. Send all of that information
+[00:04:50] to the following web hook. Beautiful.
+[00:04:52] Now the web hook is how we connect
+[00:04:55] lovable bolt new all these incredible
+[00:04:57] features to NA10. Remember if you can
+[00:04:59] get it into NA10 you can do anything you
+[00:05:01] want to. So for purpose of this guys I'm
+[00:05:02] going to come over and I'm going to
+[00:05:03] quash bam it's gone. It's gone out of
+[00:05:05] here so we can build it together. Come
+[00:05:06] down to first step. Let's go for web
+[00:05:08] hook real
+[00:05:10] quick. Uh let's have a look. Okay. So
+[00:05:12] flood web hook is called excellent. Uh
+[00:05:14] turn this production URL uh method is
+[00:05:16] post. Okay. And you just click it once
+[00:05:19] and it copies it. Let me come back over
+[00:05:20] to this guy here.
+[00:05:23] Phenomenal. You'll be returned three
+[00:05:26] different articles. I'd like you to
+[00:05:28] display those as three columns. Provide
+[00:05:30] the ability for someone to oneclick copy
+[00:05:32] it. Uh show confetti once they hit
+[00:05:34] submit. And I think that should be
+[00:05:36] fantastic. Oh, one other thing. I'd like
+[00:05:37] to have the LinkedIn logo at the top and
+[00:05:39] try to use some nice futuristic engaging
+[00:05:41] design. Beautiful. Now, this will go
+[00:05:43] forth and do exactly that for us, which
+[00:05:45] is excellent. And what I always
+[00:05:47] recommend you do when you're vibe coding
+[00:05:48] or vibe building these things is to twin
+[00:05:50] track it. So build the automation
+[00:05:52] alongside this because you got to take
+[00:05:53] like 20 seconds as it's actually
+[00:05:55] developing out to do this sort of stuff.
+[00:05:57] Cool. So with that in mind, let's go
+[00:05:58] back to our automation and build out the
+[00:06:00] fundamental bits. Now for testing
+[00:06:02] purposes, I'm just going to leave this
+[00:06:03] guy over here. I'm going to deactivate
+[00:06:05] him because we want the automation to
+[00:06:07] run perfectly and then we'll bring in
+[00:06:09] the web hooks to make sure that it makes
+[00:06:11] sense. So if I come down here and I'm
+[00:06:12] looking for add another trigger. Let's
+[00:06:14] go for trigger manually. Now the first
+[00:06:15] thing I want to do is a set module. So
+[00:06:17] come down here and type in edit set. So
+[00:06:20] what this will enable us to do is grab
+[00:06:21] the information from our hook and assign
+[00:06:24] a name. And then we can just use that
+[00:06:25] name throughout the rest of the scenario
+[00:06:27] which makes it super easy. Cool. So
+[00:06:28] let's go in. First one here is going to
+[00:06:29] be tone
+[00:06:31] of voice. Beautiful. And the value I'm
+[00:06:34] just going to give a fake value like
+[00:06:36] professional. The next one is going to
+[00:06:37] be the topic.
+[00:06:38] Um, why are patients not able to get
+[00:06:43] appointments at their GP? Okay,
+[00:06:45] something a little bit controversial for
+[00:06:46] a beautiful phenomenal uh what date?
+[00:06:48] Tuesday afternoon. Okay, and then we go
+[00:06:50] for the next one. This one I'm going to
+[00:06:51] go for platform. I'm going to put
+[00:06:52] LinkedIn. Now, I've got a multi-step
+[00:06:54] system where you can actually use like
+[00:06:56] LinkedIn, Twitter, Facebook and stuff.
+[00:06:58] So, we'll bring that data over just for
+[00:07:00] the sake of it. Uh, but it just means if
+[00:07:01] we've got a multi-stage system, we're
+[00:07:03] able to do that. And then finally come
+[00:07:04] down here and this guy will be avatar
+[00:07:06] and we'll say um medical practice
+[00:07:08] owners. What's really cool about the
+[00:07:10] LinkedIn thing guys is with these lead
+[00:07:12] magnets if we wish to and again this is
+[00:07:14] just think of this as like a core
+[00:07:15] concept upon which you can build them.
+[00:07:17] So we could say for example in our lead
+[00:07:19] magnets the whole purpose is add value.
+[00:07:20] The strategy is get the email blow them
+[00:07:23] away with value value uh and then at
+[00:07:25] some point they'll just naturally want
+[00:07:26] to do things. You can to wish to have a
+[00:07:29] next step CTA which could be a link and
+[00:07:31] we could actually bake that into the
+[00:07:32] design itself which I think is really
+[00:07:34] cool. Beautiful. So now we've done the
+[00:07:36] set module. Uh let me delete this one
+[00:07:38] out the way. Okay, that beep means that
+[00:07:40] something's good. All right. Okay, it's
+[00:07:41] encountered an error. Let's just try to
+[00:07:43] fix that and then we'll come back whilst
+[00:07:44] that's developing for us. All right,
+[00:07:46] cool. Beautiful. So we've done that. The
+[00:07:47] next step is to actually add in the AI
+[00:07:49] agent. So I'm going to come down this
+[00:07:50] button, click on AI agent, click on this
+[00:07:52] beautiful guy here. Beautiful. But
+[00:07:54] before we do that guys, we're going to
+[00:07:56] come down here and we're going to run
+[00:07:57] this module only. And as you can see,
+[00:07:59] we've got all the data which is ACE. And
+[00:08:00] then we pin it avatar, which is
+[00:08:02] fantastic. Come down to the AI agent.
+[00:08:04] And then we want to define below where
+[00:08:06] the inputs are. And then we'll say how
+[00:08:08] you want to turn the voice. Very cool.
+[00:08:10] We want the topic. Very cool. The
+[00:08:13] platform and then the avatar.
+[00:08:16] Exceptional. Cool. And then we want to
+[00:08:17] give it a system message, which is like
+[00:08:19] it's kind of hardwiring instructions.
+[00:08:20] Come to add options. System message. I'm
+[00:08:23] going expression so I can pop it out and
+[00:08:24] then put in this prompt here. And this
+[00:08:27] prompt basically just says look you're
+[00:08:29] going to receive information your target
+[00:08:30] audience the avatar blah blah blah here
+[00:08:32] the inputs. Your task is to determine
+[00:08:34] loads of interesting stuff. Uh extract
+[00:08:36] the key information and freaking go
+[00:08:38] absolutely ham on delivering stuff and
+[00:08:41] it's going to give us outputs in a few
+[00:08:42] things. It's going to give us three
+[00:08:44] different ideas and it's going to
+[00:08:45] research it ruthlessly with the tool
+[00:08:47] that we give it access to. So each idea
+[00:08:50] is going to have a concise summary. Each
+[00:08:51] idea is going to have an angle and
+[00:08:52] approach. Each idea is going to have
+[00:08:54] something that basically explains why
+[00:08:56] it's relevant. And this just specifies
+[00:08:58] how it's going to come out. And then
+[00:09:00] we've got a constraint checklist which
+[00:09:01] basically says I want it as valid JSON.
+[00:09:03] So we basically said, look, I want you
+[00:09:05] to go out and research this stuff. I
+[00:09:07] want you to tell me why it's important.
+[00:09:08] Give me a unique angle and give me all
+[00:09:10] the interesting data on it. And then I
+[00:09:12] want you to put out in a JSON format.
+[00:09:14] And I want to put out as a JSON format.
+[00:09:16] I'm being specific about the output so
+[00:09:18] that I can then use that and manipulate
+[00:09:19] that to then send to our multi3art
+[00:09:21] agents. Now the first thing we want to
+[00:09:22] do here is come down. We need to make
+[00:09:25] sure this is not as expression says
+[00:09:28] fixed. Fixed means that it won't try and
+[00:09:29] pull everything back. Expression means
+[00:09:31] you'll be able to use stuff like this as
+[00:09:33] an expression which links to whatever
+[00:09:34] this is. So it says whatever that thing
+[00:09:36] is from before I'll I'll use it here. It
+[00:09:39] doesn't matter because all the dynamic
+[00:09:40] information is provided here. Cool. The
+[00:09:43] only thing we may want to come down and
+[00:09:44] do is come down and say today's date is
+[00:09:47] and then I believe it's expression is
+[00:09:49] now. Cool. So now it knows exactly what
+[00:09:51] it is. Cool. So let's give it a model
+[00:09:52] and I'm going to giving it the beautiful
+[00:09:54] GBT40 mini. So just go for open AI
+[00:09:57] beautiful uh test credentials is going
+[00:09:59] to be uh over here 14. If you don't have
+[00:10:01] credentials by the way very easily all
+[00:10:03] you ever do is come over to I'll just
+[00:10:05] duplicate this so I can show you
+[00:10:07] platform.openi.com
+[00:10:08] uh not assistance. Well, basically you
+[00:10:10] log into that and on the left hand side
+[00:10:11] you'll see API key. Push that button and
+[00:10:13] then you can copy it and add it in as
+[00:10:15] your credential. It's really really
+[00:10:16] straightforward. Beautiful. And then we
+[00:10:18] got the model. Fantastic. Now guys, what
+[00:10:20] we want to add into this is its ability
+[00:10:21] to research. To do this, I'm going to
+[00:10:22] bring in boom Tavali. If you don't know
+[00:10:24] how to do this, you click on tool. You
+[00:10:26] click on HTTP request tool like so. And
+[00:10:29] then this will appear. Now what you're
+[00:10:31] going to do is enter in this
+[00:10:32] information. So let me just connect this
+[00:10:33] guy real quick so you can use it. Okay,
+[00:10:36] beautiful. And if you don't have a Tavly
+[00:10:38] API, just come over to
+[00:10:40] app.tavly.com and you'll see this. And
+[00:10:42] all you do guys is you come down and you
+[00:10:44] just kind of copy this and come back
+[00:10:45] over. Okay, beautiful. And when you land
+[00:10:47] on the thing, you're going to enter
+[00:10:48] this. So this is to search internet for
+[00:10:50] research post URL is this authentication
+[00:10:53] non send headers authorization value
+[00:10:57] field below bearer space and then enter
+[00:11:00] in the API key that you just got. Oops.
+[00:11:02] Come down here. Beautiful. And then
+[00:11:05] everything else is your fields below.
+[00:11:06] Query by model and is required max
+[00:11:09] results five. And guys, that is
+[00:11:12] literally all you're doing because the
+[00:11:13] query section guys is very simply. We're
+[00:11:15] saying we want the agent to infer the
+[00:11:17] information. We come out and we're good.
+[00:11:19] And the next thing we want to do is just
+[00:11:20] specify the outputs real quick. So
+[00:11:21] require a specific output format and
+[00:11:23] then we can connect an output parser. We
+[00:11:26] come down here to structured output
+[00:11:27] parser. Bring this guy over and then
+[00:11:28] we'll enter some code into here. And I'm
+[00:11:30] going to put this code in here. I'll put
+[00:11:31] a link. I'll put it all down below in
+[00:11:32] description so you can just grab that
+[00:11:33] and make it super easy. And then we are
+[00:11:35] good to go. And with this information,
+[00:11:36] guys, I think we can give this a little
+[00:11:37] test. Let's come down here and test the
+[00:11:39] workflow and see if our AI agent does as
+[00:11:41] it is told and behaves. Cool. Anytime
+[00:11:43] you're sitting circles, that's code for
+[00:11:45] good news. Means it's ruthlessly
+[00:11:46] researching stuff. And then once it's
+[00:11:48] done, we should get the outputs. Then we
+[00:11:50] can just add in the agents and get
+[00:11:51] rocking rolling. While this guy's
+[00:11:52] working, let's go over to check our
+[00:11:54] beautiful thing here. So, this has kind
+[00:11:56] of done it, but I'm not a big fan of the
+[00:11:58] uh design here. Hey dude, thanks for
+[00:12:00] doing that. design's a little bit basic.
+[00:12:01] Could you maybe put the um form into
+[00:12:04] like a container with, you know, rounded
+[00:12:06] edges, maybe give a darker background at
+[00:12:08] the back, put the LinkedIn, give it a
+[00:12:10] nice title, add some gradient design,
+[00:12:12] and just make it a little bit better.
+[00:12:14] Maybe um text wise, we could use
+[00:12:16] Poppins. Thanks. But people say, Jack,
+[00:12:18] do you need to really go down to these
+[00:12:20] the extents you do on the design for
+[00:12:22] just demos? And my answer question is
+[00:12:25] 100%. I just cannot help myself. Right,
+[00:12:27] we come out now, guys. Look at this.
+[00:12:29] This is really freaking cool. Idea one
+[00:12:31] concise summary angle approach details.
+[00:12:33] Now the reason I wanted to specify the
+[00:12:35] output is because now I can just grab
+[00:12:37] the bits that I want and it just makes
+[00:12:39] it a lot easier just by spec you know
+[00:12:41] this is why these output passes are
+[00:12:42] really freaking badass guys cuz I just
+[00:12:44] say look this is how I want to give it
+[00:12:45] me out and then always just reinforce
+[00:12:47] that with the AI agent. Now we've done
+[00:12:49] that we are going to add a bit of a
+[00:12:50] container to it so we know what it looks
+[00:12:53] like. Okay, beautiful. And by the way,
+[00:12:55] you know, if you're somebody who wants
+[00:12:56] to sell this to a business, it's a
+[00:12:59] really cool one to do that because um
+[00:13:01] the reason why I'd say that if I can
+[00:13:03] just There we go. I call this content uh
+[00:13:06] researcher. The reason why these are
+[00:13:08] really cool, guys, uh is because it's a
+[00:13:10] really visual thing like I showed you,
+[00:13:11] right? Be able to see push a button and
+[00:13:13] the post appear. Such a beautiful visual
+[00:13:15] to share with people that just makes
+[00:13:17] really good sense. So, we've got this
+[00:13:19] guy knocked down and ready to rock and
+[00:13:20] roll. The next thing I want to do is
+[00:13:22] bring this guy down. Is I want to
+[00:13:23] actually have now the content research
+[00:13:25] agent. So to do that, we click on plus.
+[00:13:27] We go for AI agent once again. And then
+[00:13:29] we're going to bring this guy over here.
+[00:13:31] Okay. Beautiful. So we're going to come
+[00:13:32] down here. We're going to name this guy
+[00:13:34] LinkedIn one. And should we give him a
+[00:13:36] little emoji? No. These guys are craving
+[00:13:39] the emojis. All right. Okay. Sweet.
+[00:13:41] Cool. Beautiful. All right. So click on
+[00:13:42] this guy. What's the input? The input is
+[00:13:44] defined below. We want the concise
+[00:13:46] summary. Bam. We want the angle and
+[00:13:48] approach. Bam. We want details of
+[00:13:52] course and then we want relevance.
+[00:13:55] Fantastic. Okay. Beautiful. And then of
+[00:13:57] course guys, we need to give it the
+[00:13:58] message. So we've given it the
+[00:13:59] information, but how does this know what
+[00:14:01] to create content wise? So what I'm
+[00:14:03] going to do is go over to the beautiful
+[00:14:04] school and we'll go to LinkedIn as an
+[00:14:07] example. Come down and let's look at the
+[00:14:09] LinkedIn agent prompt. Uh and then this
+[00:14:11] when you're basically thinking of
+[00:14:12] LinkedIn when you create any prompt for
+[00:14:14] any social media content the golden rule
+[00:14:16] okay is yes you need to specify
+[00:14:18] explicitly you're going to do you need
+[00:14:19] to give it examples give it examples in
+[00:14:21] the positive and also the negative like
+[00:14:23] AI models just get it when you can say
+[00:14:25] this is good this is good this is good
+[00:14:27] this is bad which is why what's really
+[00:14:29] cool about this is we just basically
+[00:14:31] flood it with beautiful examples what
+[00:14:33] that looks like we want the hashtags at
+[00:14:34] the end the CTAs all that beautiful
+[00:14:36] stuff so so once you've copied that you
+[00:14:38] can come back over to scenario and I'm
+[00:14:39] going to give you a full system message
+[00:14:40] shirts. Let me just come down. And
+[00:14:41] actually guys, what I'm going to do, I'm
+[00:14:42] I've added some extra bells and whistles
+[00:14:44] to this so it knows. So look at this.
+[00:14:46] Act as an informed LinkedIn expert
+[00:14:48] specializing in context for the avatar.
+[00:14:50] You'll be provided with specific
+[00:14:51] audience details, manage tone of voice,
+[00:14:53] blah blah blah. This is the input that
+[00:14:55] you're going to get the task and
+[00:14:56] guidelines. You know, provide context
+[00:14:57] main idea. You've got all the different
+[00:14:58] things. I'm basically explaining all the
+[00:15:00] stuff that I wanted to do. Here are a
+[00:15:02] few examples of excellent LinkedIn
+[00:15:03] posts. And then we just share all of
+[00:15:04] that information that we got um from the
+[00:15:06] agent prompt like that. Come down to
+[00:15:08] fixed, which is decent.
+[00:15:10] Once you done that guys, we are pretty
+[00:15:12] much good to go. The only thing we need
+[00:15:13] to do now is give it a chat model. And
+[00:15:15] once again, we will go for uh the
+[00:15:18] phenomenal um come down here. Let's go
+[00:15:20] for a mini. Let's get my right
+[00:15:21] credentials. Some say I've got too many
+[00:15:22] credentials, but uh I I deny such
+[00:15:24] delegations. Bring this over here. And
+[00:15:26] again, we want a structured output
+[00:15:27] parser. Actually, I think we should be
+[00:15:29] okay without a structured output par to
+[00:15:30] be fair. I'm going to come down. Let me
+[00:15:32] pin this. And then let me run this
+[00:15:33] LinkedIn agent number one to see what he
+[00:15:35] gets up to. Okay, beautiful. He doesn't
+[00:15:37] need any researching tools because he's
+[00:15:39] already got the research. Although you
+[00:15:40] could add that in arguably. We come down
+[00:15:42] and then look at this guys. Beautiful.
+[00:15:43] We've got everything. GPA access, health
+[00:15:45] innovation, patient care, medical
+[00:15:46] practice, # NHS reform. That is flipping
+[00:15:49] cool. Now what we do, guys, we come over
+[00:15:50] here. We hit the old duplication. Bring
+[00:15:53] them over. And then we duplicate one
+[00:15:54] final time. And guys, you know, I my
+[00:15:56] favorite part of scenario is when I can
+[00:15:57] just duplicate them cuz it looks like
+[00:15:59] you've done a lot of crazy data. So come
+[00:16:01] in. Let's connect these together. Uh,
+[00:16:03] and then of course we need to rename
+[00:16:04] them LinkedIn one, LinkedIn 2, LinkedIn
+[00:16:06] 3. Why are we doing that? Well, because
+[00:16:07] we may forget, right? Even though it's
+[00:16:09] our classic ABCs. And then I'm just
+[00:16:11] going to duplicate these as well. Now
+[00:16:12] we've got that bit done. And let's just
+[00:16:13] connect the model. Beautiful. And then
+[00:16:16] duplicate this
+[00:16:19] guy. And once again, connect the model.
+[00:16:21] Fantastic. Cool. And then crucially, we
+[00:16:24] need to get rid of all this stuff. Uh,
+[00:16:26] go down to this AI agent. And again, the
+[00:16:28] information we're giving is not from
+[00:16:29] idea one. This one is going to be from
+[00:16:32] idea 2. So concise summary, beautiful
+[00:16:35] angle and
+[00:16:36] approach. Excellent details. Phenomenal.
+[00:16:40] And then finally, relevance. Fantastic.
+[00:16:43] We come off this guy. And then this guy
+[00:16:45] once again just link it up with all the
+[00:16:47] information. What I'm going to do very
+[00:16:49] quickly is just copy and paste it over
+[00:16:51] because I think that's just going to be
+[00:16:52] easier. Okay. Number one, angland
+[00:16:54] approach. It's number two. Come down.
+[00:16:57] Details is Oops. Right there. And then
+[00:16:59] finally, we just want to bring over the
+[00:17:02] relevance. And I'm just going to full
+[00:17:04] screen this so I can copy easily. All
+[00:17:05] right. This stuff is for number three.
+[00:17:07] So that's Crl X out of there. Come down
+[00:17:11] here. Come to the prompt expression.
+[00:17:13] Beautiful. Done. I'm going to pin this
+[00:17:16] data. If I hit test workflow, LinkedIn 2
+[00:17:18] should fire off LinkedIn 3. And then
+[00:17:21] guys, we've got the lead bank to build.
+[00:17:22] We're ready to rock and roll. Let's head
+[00:17:23] back over to Liverpool. See how we're
+[00:17:24] getting on. And oh my goodness, guys,
+[00:17:26] look at this. He's bopping up and down.
+[00:17:28] He's having a good time. I think it's
+[00:17:30] really cool. I think it's really
+[00:17:32] freaking cool. I'm very impressed with
+[00:17:33] it. Obviously, we can finesse it out and
+[00:17:35] bring it in stuff, but just as a minimal
+[00:17:37] viable product. It's very, very cool.
+[00:17:39] All the design stuff happens towards the
+[00:17:40] end of the flow. We come back here and
+[00:17:42] again, all this stuff is done. We got a
+[00:17:44] beautiful LinkedIn post. The NHS is
+[00:17:45] making significant investment GP
+[00:17:47] surgeries. LinkedIn 3 short GPS is just
+[00:17:50] a statistic. So, let's pin this data.
+[00:17:52] Pinning it by the way just means we
+[00:17:54] don't have to rerun it. And then we can
+[00:17:55] completely lead magnet and absolutely
+[00:17:57] crush this. Okay, guys. So, let's do
+[00:17:59] this. I've now got I've been roofled. I
+[00:18:01] got my second coffee. The fourth coffee
+[00:18:03] of the day is always decaf. We love
+[00:18:05] this. All right, so we're going to
+[00:18:06] connect this at the end. But let's
+[00:18:08] actually now build the third and final
+[00:18:10] part. But of course, guys, of all the
+[00:18:12] things we are, savages is not one of
+[00:18:14] them. So, we need to just create this
+[00:18:15] little stick note here. We'll come down
+[00:18:17] here. We're going to zoom in. And we're
+[00:18:18] going to call this guy something of the
+[00:18:20] lines of Let me zoom out so we can
+[00:18:21] actually see this. Oh my goodness. What
+[00:18:23] is going on right here? We'll call this
+[00:18:24] one LinkedIn agent.
+[00:18:28] Okay, beautiful. So, we know exactly
+[00:18:30] what's going on. And we can just bring
+[00:18:32] this guy over. Cool. By the way, guys,
+[00:18:35] little tip. If you're presenting this to
+[00:18:36] clients, like, don't like underestimate
+[00:18:40] how valuable it is just to have
+[00:18:42] something visually looks good. Even for
+[00:18:44] your own sanity, by the way, in your own
+[00:18:46] workflows, like actually having stuff
+[00:18:47] organized is like so freaking important.
+[00:18:50] Okay, cool. There we go. And boom. All
+[00:18:51] right. Okay. Script. So now let's do the
+[00:18:53] lead magnet. And to do this by we're
+[00:18:55] going to use a agent and then we're
+[00:18:57] going to use a really cool API called
+[00:18:59] PDF code. So let's come down. I'm going
+[00:19:01] to add a new module. This one's going to
+[00:19:02] be AI agent. Now when I was building
+[00:19:05] this um by far the most and by the way
+[00:19:07] you can make this better. This is by no
+[00:19:09] means the finished product. But what I
+[00:19:11] would say is the time the thing that was
+[00:19:13] the most timeconuming is giving it the
+[00:19:15] prompt to actually output the stuff that
+[00:19:17] you want. So I've just got this thing
+[00:19:19] here. Okay. Lead magnet. So let's click
+[00:19:20] into this guy. First of all, we're going
+[00:19:21] to call this one research agent. You
+[00:19:22] hear my dogs barking in the background.
+[00:19:24] They obviously agree with how powerful
+[00:19:26] this agent is. Okay, cool. Uh I should
+[00:19:29] call this one lead magnet agent.
+[00:19:31] Beautiful. Okay, sweet. So, first of
+[00:19:33] all, chat model once again, we'll go for
+[00:19:35] uh chat GPT. By the way, when I was
+[00:19:37] building this, one of the things I was
+[00:19:38] experimenting with is using deep
+[00:19:40] research with perplexity, which you can
+[00:19:42] do. Um, and I might leave the module in
+[00:19:44] the blueprint as well, but basically um,
+[00:19:47] what I was finding with deep research is
+[00:19:49] that it didn't really give you better,
+[00:19:52] more lengthy results than the typical
+[00:19:53] models. Um, interestingly, which I
+[00:19:55] thought was quite this is why I actually
+[00:19:56] pivoted away from it to do this instead.
+[00:19:58] Okay, that's cool. GB4 mini. Um, I think
+[00:20:01] the level 10 version of this, by the
+[00:20:03] way, is a really predefined HTML block,
+[00:20:07] like five or 10 of these, which can
+[00:20:09] really give you a 2,000word thing. And
+[00:20:11] then we feed it to convert it. So we'd
+[00:20:12] have like uh lead magnet agent like one
+[00:20:15] to five. All of them do like a certain
+[00:20:17] part of the article. So we'd have one
+[00:20:18] agent that creates like a structure of
+[00:20:19] like five things and then five sub
+[00:20:21] agents that do part 1 2 3 4 5 all of
+[00:20:24] which give us HTML input and then we
+[00:20:26] amalgamate one gabbit synthesiz that
+[00:20:28] together and then that creates a PDF.
+[00:20:30] That's how you would get something
+[00:20:31] that's like 5,000 words. This is like a
+[00:20:34] really good V1. Lead magnets by the way
+[00:20:36] um the whole purpose and why we do them
+[00:20:38] is because it's an idea of giving them
+[00:20:40] value. It's a reason to give an email to
+[00:20:42] engage with you and the value is the
+[00:20:44] email and they get the vibe for free and
+[00:20:45] then you can obviously build a
+[00:20:46] relationship and blow their mind which
+[00:20:47] is why I'm building up my email list to
+[00:20:49] just basically value value. All right,
+[00:20:52] cool. So what we do next now we got that
+[00:20:54] we need to give it a prompt. So the
+[00:20:56] prompt here I'm going to say define
+[00:20:58] below uh and essentially what we want to
+[00:21:00] say is I'm going to go expression so I
+[00:21:01] can full screen this. Um okay, make this
+[00:21:04] article especially valuable for and we
+[00:21:06] come on to edit fields a medical
+[00:21:08] practice owner. Beautiful. Tone of voice
+[00:21:11] is we're kind of
+[00:21:13] here. Beautiful. Obviously, in reality,
+[00:21:16] guys, add your own tone of voice. Upload
+[00:21:17] that, download that, make that way more
+[00:21:19] sophisticated. If you haven't seen this
+[00:21:20] one already, I'd really just double
+[00:21:22] click into showing you this. So, I load
+[00:21:24] this one up as an example to show you.
+[00:21:25] Basically, it gives you nine different
+[00:21:27] steps and it can analyze lots of
+[00:21:28] different things like vocab word choice,
+[00:21:30] grammatical patterns, punctuation,
+[00:21:32] devices, creates a kind of DNA of how
+[00:21:33] you communicate on LinkedIn. Uh and then
+[00:21:35] basically all the posts will sound
+[00:21:37] exactly like you. So in our actual
+[00:21:39] workflow here, one of the things I would
+[00:21:40] suggest you do is have a feature to say,
+[00:21:43] "Hey, give me the ability to bank inside
+[00:21:45] my tone of voice." And then it will just
+[00:21:47] every single post will just run off for
+[00:21:49] you on autopilot. I've just said casual
+[00:21:51] authorative. This is just quick easy way
+[00:21:52] to do that. We could even do that. I may
+[00:21:54] do that right now, for example. Hey, on
+[00:21:56] the tone of voice, give me the ability
+[00:21:57] to write text and enable me to be able
+[00:21:59] to pin and save that text so I don't
+[00:22:01] need to reenter it into the future for
+[00:22:03] every submission that I do.
+[00:22:06] Okay, beautiful. We'll let we'll do it
+[00:22:07] and fix it and then we can add that in.
+[00:22:09] So, I'd encourage you to spend a time
+[00:22:10] doing that. I've got automations videos
+[00:22:11] on that. I'll put them down below so you
+[00:22:13] can click and have a good time. And then
+[00:22:14] I'm going to say, hey, create the lead
+[00:22:16] magnet based on the below information.
+[00:22:18] All right, here we go. So, what we're
+[00:22:20] going to do now beautifully guys is just
+[00:22:22] bring in the outputs, right? Output one
+[00:22:24] and these are the articles, right? Um,
+[00:22:27] LinkedIn and we got this guy here. This
+[00:22:29] is second output. Cool. And I'm going to
+[00:22:30] come down to the first LinkedIn agent.
+[00:22:31] Let's bring that one in over here.
+[00:22:33] Fantastic. Cool. And then we can also if
+[00:22:34] we want to give it all the output that
+[00:22:36] we got from the first AI agent, right?
+[00:22:39] If we really want to like do you know
+[00:22:41] what I mean? The details the relevance
+[00:22:42] like I think that that could be a tasty
+[00:22:44] one. So we just give all these details
+[00:22:45] in. I mean why not right? It's
+[00:22:47] absolutely fine. This will be completely
+[00:22:48] cool with the context window and then
+[00:22:50] details. Excellent. And then guys now
+[00:22:53] this is the quote easy bit. The biggest
+[00:22:54] bit that I found what it so what I did
+[00:22:56] is I kind of was flirting with Claude. I
+[00:22:58] you know I'm n monogous when it comes to
+[00:23:00] my language models. I'll be honest. I
+[00:23:01] was flirting with Claude to create a
+[00:23:03] design that I liked and then I wanted to
+[00:23:06] create a prompt that would then output
+[00:23:08] that and let me just come here and show
+[00:23:09] you. If I come down here to add option
+[00:23:12] system message and then expression and
+[00:23:13] me full screen this. Okay, cool. Come
+[00:23:15] expression and then bam. So you can see
+[00:23:17] this is very long. Basically what are we
+[00:23:19] doing? You're advanced content creating
+[00:23:21] in creating beautiful visually stunning
+[00:23:22] HTML documents and lead magnets. I
+[00:23:25] should say HTML lead magnets actually.
+[00:23:28] That's really key to include important
+[00:23:30] function. must output complete value
+[00:23:31] HTML, critical design requirements,
+[00:23:33] critical HL output requirements, depth
+[00:23:34] and relevance requirements, blah blah
+[00:23:36] blah. It gives you all the CSS. So this
+[00:23:37] is all the kind of designs that I want.
+[00:23:39] Um, loads of really, really key critical
+[00:23:41] information, styling guidelines, and
+[00:23:42] again, I'd encourage you to play around
+[00:23:44] with Claude into the style that you
+[00:23:45] want. Then you can input that back over
+[00:23:47] to the structure. Uh, and then you got
+[00:23:49] the preservable styling, visual
+[00:23:50] elements, never add copyright notes,
+[00:23:52] page numbers, or footers, blah blah
+[00:23:53] blah. All that kind of great beautiful
+[00:23:55] stuff. Okay guys, so now we've got that,
+[00:23:57] we can come off it. We can actually then
+[00:23:58] run this guy. So, let's just give it I
+[00:24:00] don't believe we need a tool for this
+[00:24:02] one. I think we'll be okay without the
+[00:24:03] tool actually. And what we're going to
+[00:24:04] need to do tool-wise is give it taby.
+[00:24:06] So, let's come back and we can do the
+[00:24:08] classic control and C situation. Um,
+[00:24:11] beautiful. If you're building this uh
+[00:24:13] prompt yourself, one of the things I
+[00:24:14] just encourage you to do is just make
+[00:24:17] sure that you really specify the HTML
+[00:24:19] output. It's really, really key. All
+[00:24:21] right, cool. So, we've linked this one.
+[00:24:22] So, let's give this guy a little play.
+[00:24:24] Uh, let our lead magnet agent go and do
+[00:24:26] its dirty work. And you can see he's
+[00:24:28] then also researching it. Research it
+[00:24:30] because you want more data, more
+[00:24:31] information. It's done three different
+[00:24:32] researches now. And I've configured
+[00:24:34] Tableau to do five different results. So
+[00:24:35] it's three different search terms. This
+[00:24:37] is the beauty of AI agents, guys. These
+[00:24:40] an AI agent can research and do
+[00:24:42] incredible things and pull this
+[00:24:43] information back. It's really, really
+[00:24:45] cool to see it. Okay, beautiful. Now,
+[00:24:47] once that's done, what I'd encourage you
+[00:24:48] to do now is head over to this website
+[00:24:50] here. Okay, so we're going to get over
+[00:24:51] to pdf.co. One of the best websites
+[00:24:55] ever. Okay, maybe you think I'm lame for
+[00:24:57] saying that, but I think it's really
+[00:24:58] cool. All right, you're going to get
+[00:24:59] started for free or sign in. Come to
+[00:25:01] pdf.co. These guys get it, right? If I
+[00:25:03] come over, I should be able to see my
+[00:25:05] dashboard. Okay, where's my dashboard?
+[00:25:08] Where are my API keys on this? Oh my
+[00:25:10] gosh. API docs maybe. Okay, you actually
+[00:25:12] go to
+[00:25:13] app.pdf.co. This is free to use, by the
+[00:25:15] way, for like a load of credit. Um,
+[00:25:18] which is ridiculous. You come down,
+[00:25:20] you're just going to copy this key. It's
+[00:25:21] that freaking straightforward. It's
+[00:25:23] unbelievable. Then we come back over to
+[00:25:25] our scenario here. This guy's finished.
+[00:25:27] Let's have a look. And look at this
+[00:25:29] guys. This is the kind of thing we want
+[00:25:30] to see. Lots of information. We're going
+[00:25:31] to pin it. Cool. Then you can click on
+[00:25:34] add button. And you're going to do HTTP
+[00:25:37] HTTP request. And you're going to click
+[00:25:38] on import a curl. Okay. So curl request
+[00:25:41] is this little bad boy. Again, I'll put
+[00:25:43] it down below in the description so you
+[00:25:45] can have a little play around with it,
+[00:25:46] which is cool. All right. Cool. So body
+[00:25:48] parameters. This is the HTML that we're
+[00:25:49] taking, right? So come down to
+[00:25:51] expression. Grab it. Bring it in. really
+[00:25:53] important. This is going to be the name
+[00:25:55] of the lead magnet. So, for example, we
+[00:25:57] could come down to edit fields and call
+[00:26:00] it something
+[00:26:01] like, I don't know, um maybe topic as a
+[00:26:05] name. That's going to be variable input
+[00:26:06] for instance. We specified the margins,
+[00:26:08] paper size. Obviously, you can change
+[00:26:09] all this stuff based on your dream
+[00:26:11] output, which is very, very, very cool.
+[00:26:13] Um let's just see what we've got for
+[00:26:15] this. Yeah. Okay. Fantastic. Cool. So,
+[00:26:18] now that's done, we can actually check
+[00:26:20] it out. But what we need to do is add in
+[00:26:22] our authentication. Okay, which I don't
+[00:26:24] see on this one because I asked the
+[00:26:26] model to remove it. Just two sex. Ah,
+[00:26:28] okay. Come on to headers. You're going
+[00:26:29] to type in name is going to be this. And
+[00:26:31] then you're going to type in your API
+[00:26:32] key down here that you grab from pf.com.
+[00:26:34] And once you've done that, guys, you are
+[00:26:35] officially ready to go. So, if I click
+[00:26:36] play on this, it should then turn what
+[00:26:38] we just had from a lead magnet agent
+[00:26:40] into a PDF, which we'll see in just a
+[00:26:41] hot second. So, give that a moment and
+[00:26:43] it's converted. Then we double click
+[00:26:44] into it. What we do is we come down
+[00:26:46] here, we copy this URL, um, and then we
+[00:26:49] can paste that in, and we should see a
+[00:26:50] beautiful PDF for exactly what we've
+[00:26:52] done. And there you go. Just like that.
+[00:26:54] Look at this. Look at this lead magnet,
+[00:26:57] guys. Optimize support staffing,
+[00:26:59] leverage technologies, provide flexible
+[00:27:01] working options. I mean, you just
+[00:27:02] created a freaking awesome badass lead
+[00:27:04] magnet. And then we've got all the
+[00:27:06] different information at the bottom.
+[00:27:08] Completely autopilot. How insane is
+[00:27:09] that? Then the only thing we want to do
+[00:27:11] now after that is basically get that to
+[00:27:13] where you can use it. So, for example,
+[00:27:15] what you could do is just send that on
+[00:27:16] Gmail uh to send to yourself. I could
+[00:27:18] say send a message um and it could be
+[00:27:21] Gmail account send to let's just say
+[00:27:22] it's my my email address. So, Jackai
+[00:27:26] Automations with jack.com. Beautiful
+[00:27:29] subject is hey lead magnet is
+[00:27:34] ready. And then of course a little lead
+[00:27:36] magnet merge at the top. And then we
+[00:27:39] then going to do the final part of this
+[00:27:40] automation which is to connect it to I'm
+[00:27:43] typing lead magnet. That's hilarious.
+[00:27:46] Uh beautiful email type HTML. It's fine.
+[00:27:49] Yo yo yo it's ready bro. Cool. And then
+[00:27:52] what I'd want to do in the message is
+[00:27:54] just bring in this
+[00:27:56] URL. Excellent. Um one thing I would say
+[00:27:59] is they are valid for a certain period
+[00:28:00] of time. So if you if you're going to be
+[00:28:02] taking ages with it, just download it to
+[00:28:05] Gmail. Dead simple. will add a module in
+[00:28:07] here which is kind of like uh go for
+[00:28:09] drive Google drive upload a file like
+[00:28:12] download it upload the file just get it
+[00:28:13] uploaded updated because this won't last
+[00:28:15] for weeks they store it for a certain
+[00:28:17] period of time um so that's really
+[00:28:18] important to bear in mind okay beautiful
+[00:28:20] guys so let's just validate that it
+[00:28:21] works so to do that what I'm going to do
+[00:28:23] is come over I'm going to deactivate the
+[00:28:24] click test I'm going to re reactivate
+[00:28:26] the web hook I'm going to add another
+[00:28:28] web hook here right which is web hook
+[00:28:30] response and this one is going to be
+[00:28:33] oops that's not the right one come down
+[00:28:35] we on web hook respond to web hook.
+[00:28:38] Beautiful. Come on to the first one,
+[00:28:40] guys. And I want you to do use the
+[00:28:41] respond to web hook node. Now, I'm just
+[00:28:43] going to send back some sample data to
+[00:28:45] validate that it works. Respond with
+[00:28:48] JSON. Okay, really important. And then
+[00:28:49] I'm going to enter in some fake JSON
+[00:28:51] real quick. Cool. So, come here and then
+[00:28:53] bam. There we go. Done. Got some fake
+[00:28:55] silly data. And let's just Why is this
+[00:28:57] connected? This is crazy. Okay, let's
+[00:29:00] delete. Okay, decent. Cool. And then
+[00:29:02] let's save a scenario. My workflow 22.
+[00:29:04] Not a great name. We activate it.
+[00:29:06] Beautiful. Now, if we go over to our
+[00:29:08] beautiful thing here, uh, and add custom
+[00:29:11] turn, we can enter loads of information.
+[00:29:12] And I'm guessing this, let's just save
+[00:29:14] it. Okay, that's cool. Uh, that's really
+[00:29:16] nice, actually. All right, cool. So,
+[00:29:17] let's get rid of
+[00:29:18] this. I would like to talk about
+[00:29:22] sausages, random information, blah blah
+[00:29:24] blah blah blah. Oops. Oh my gosh, I'm
+[00:29:26] pressing all the buttons. Doesn't really
+[00:29:27] matter because we're not doing anything
+[00:29:28] with this. No need for lead. Create
+[00:29:31] LinkedIn content. Fail to generate
+[00:29:33] content. Please try again. All right.
+[00:29:34] So, let's come through to executions and
+[00:29:36] see what happened. Did we get anything?
+[00:29:37] Yeah, we did. We got something that came
+[00:29:39] through. But what was going on with this
+[00:29:41] web hook node not correctly configured?
+[00:29:42] Set the respond parameter. Okay, that's
+[00:29:44] an error of my making. Um, ah, respond
+[00:29:49] using this node. Okay, I thought we
+[00:29:50] activated that. My gosh, how many copies
+[00:29:53] have I had today? Oh my goodness. Okay,
+[00:29:54] try this one again. Generate
+[00:29:56] successfully. And is this correct?
+[00:29:58] Building a strong personal network is
+[00:30:00] essential to today's business landscape.
+[00:30:01] Is that what we said? No, we did not say
+[00:30:03] that. Cool. So, we need to give Lable a
+[00:30:04] little bit of a kick up the very back
+[00:30:06] side. All right. So, we come back here.
+[00:30:09] Hey, my man. The data is being sent
+[00:30:11] over. However, we are not receiving it.
+[00:30:13] Please make sure that there is enough
+[00:30:15] contrast. Can you just decrease the
+[00:30:17] width of the form? Uh, make the base
+[00:30:19] text a different color because it's
+[00:30:20] difficult to see what's going on. Also,
+[00:30:22] when I hit generate content, I would
+[00:30:24] like it to be confetti. put the tick to
+[00:30:25] the right hand side of the generate
+[00:30:27] LinkedIn content and just make sure that
+[00:30:28] I can see visibly the content when it
+[00:30:30] comes back and there's enough contrast
+[00:30:32] between the elements and the color
+[00:30:33] scheme. Okay, boom. Send that one off
+[00:30:35] and then we give it a second to update
+[00:30:36] and then we're going to be ready to rock
+[00:30:38] and roll. Interestingly, guys, so I
+[00:30:40] built a website on um Lovable. I built
+[00:30:44] websites on card. And while that's
+[00:30:46] loading, I want to give you a little bit
+[00:30:47] of value. So, let me show you something.
+[00:30:49] Okay. Uh, if you come to my links,
+[00:30:51] right, this website here, I built on
+[00:30:54] card.com, right? And there's a reason
+[00:30:56] why I did this. I built this on card.
+[00:30:58] You can see it's fairly straightforward.
+[00:31:00] You can do this cool stuff. I built that
+[00:31:03] on card, by the way, because lovable is
+[00:31:05] perfect when you want to integrate it
+[00:31:07] with new technologies, right? Like if I
+[00:31:09] want to integrate it with nine, with
+[00:31:10] make.com, I want to do cool crazy do
+[00:31:14] this amazing animation, it is incredible
+[00:31:16] at that. Um, it is easier to edit on a
+[00:31:19] website like card.co. And you can see
+[00:31:20] I've even got like a custom domain.
+[00:31:22] Again, I'll show you how to do that in a
+[00:31:23] second. Un lovable. It was easier to
+[00:31:25] edit. Like if it's a simple onepage
+[00:31:27] website that's just, you know, it's it's
+[00:31:29] doesn't need to integrate with nan or
+[00:31:31] make.com or anything. I would recommend
+[00:31:33] card.co. It's like
+[00:31:34] $47 for like over 20 websites for the
+[00:31:37] year. It's unbelievably cheap. It's
+[00:31:39] really, really cool. Uh, and so for use
+[00:31:41] cases like that, use card.co. I mean, my
+[00:31:44] last biz, my last tech startup, right, I
+[00:31:47] got to 50,000 customers a month. Uh,
+[00:31:48] sorry, 50,000 uh pounds per month uh in
+[00:31:51] recurring revenue and like we had
+[00:31:52] thousands and thousands of customers
+[00:31:53] every single month. And I built that in
+[00:31:55] WordPress, right? I did. I wouldn't
+[00:31:57] build it in WordPress anymore. I genu
+[00:31:59] I'd use either car.co or Lovable for
+[00:32:01] stuff like that. So, TLDDR, if it's
+[00:32:03] creative, integrations, dynamic, use
+[00:32:05] Lovable. If not, use card.co. It's like
+[00:32:07] by far the best way to get your things
+[00:32:09] running. All right, guys. So, this has
+[00:32:11] now completed Legally. So, let's just
+[00:32:12] enter in some random information. Bam,
+[00:32:14] bam, bam. Create linked content. Bam.
+[00:32:17] There you go. This looks more like it.
+[00:32:18] Excited to announce a partnership. Bam,
+[00:32:20] bam, bam. Guys, just like that, we have
+[00:32:22] absolutely crushed it. Excited to
+[00:32:24] announce. And where are we right now?
+[00:32:26] Come back here. Excited to announce.
+[00:32:27] Incredible. So, thing we do now is we
+[00:32:29] just connect these things together. So,
+[00:32:31] we would delete this guy, bring this web
+[00:32:33] hook down, pop him in there. Uh, and
+[00:32:37] then we can come over to this guy over
+[00:32:40] here and we will put it in between lead
+[00:32:42] magnet and LinkedIn agent. Why? Well,
+[00:32:44] because we don't really need to wait for
+[00:32:46] that to come through. Okay. Now, we
+[00:32:47] double click into respond to web hook.
+[00:32:49] Now, we've got this post one
+[00:32:50] information. What you're going to do is
+[00:32:52] you're going to come down. You're going
+[00:32:53] to get rid of this. Okay. And X on that.
+[00:32:58] Come over and you want to grab the
+[00:33:00] LinkedIn output here. Pop that in
+[00:33:03] there. Uh, oops. It should come in
+[00:33:06] actually. Okay. Where is he? Right
+[00:33:07] there. Beautiful. And then we come down
+[00:33:10] to post two. Just get rid of that
+[00:33:11] information again by the things. Come
+[00:33:14] here. I want to grab the output and
+[00:33:16] throw this guy in here. Cool. So,
+[00:33:17] basically, we're going to come over
+[00:33:18] here. We're going to paste this in. And
+[00:33:20] I've added like this stringify, I think.
+[00:33:21] So, that will strip out all the special
+[00:33:23] characters, which means that when it
+[00:33:24] arrives, it should work perfectly fine.
+[00:33:26] We come back off. And guys, that is the
+[00:33:28] actual entire sonora. We save that. And
+[00:33:30] now you are ready to rock and roll. If
+[00:33:32] you haven't seen this video on screen,
+[00:33:33] which is a $10,000 AI agency content
+[00:33:36] generation system that includes things
+[00:33:38] like Instagram and Facebook and all that
+[00:33:40] beautiful stuff, I'd encourage you to
+[00:33:41] check that one out. But in any case,
+[00:33:42] have a beautiful week and I'll see you
+[00:33:45] inside the next

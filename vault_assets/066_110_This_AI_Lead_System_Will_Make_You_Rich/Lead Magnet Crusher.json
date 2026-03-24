@@ -1,0 +1,163 @@
+{
+  "name": "Lead Magnet Crusher",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "paperform-webhook",
+        "options": {}
+      },
+      "id": "63228968-0b09-46c2-86c7-377df5cbf0df",
+      "name": "Paperform Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "524aeca2-27e0-407e-891a-188f8fb5e3dc"
+    },
+    {
+      "parameters": {},
+      "id": "1289663c-12c8-4ec6-89de-e1258b27b08a",
+      "name": "Process Form Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.recipientEmail }}",
+        "subject": "={{ $json.emailSubject }}",
+        "message": "={{ $json.htmlContent }}",
+        "options": {
+          "senderName": "={{ $json.senderName }}"
+        }
+      },
+      "id": "9cb802b5-72f0-46f9-9376-683e1ceb0b6b",
+      "name": "Send HTML Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        448,
+        0
+      ],
+      "webhookId": "c89333e9-e1aa-4855-9c90-a005ac870072",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "EEOefGalPHDXpz39",
+          "name": "Connected account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "03a4b708-80ac-4d1e-8337-e2acaf1d8161",
+      "name": "Prepare Sheet Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        672,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_GOOGLE_SHEET_ID"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Sheet1"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": null,
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": []
+        },
+        "options": {}
+      },
+      "id": "5cee9339-dea5-4c0d-93d9-dc23df82e7a7",
+      "name": "Update Google Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        896,
+        0
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YwVdpEHJQpAEY722",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Paperform Webhook": {
+      "main": [
+        [
+          {
+            "node": "Process Form Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Form Data": {
+      "main": [
+        [
+          {
+            "node": "Send HTML Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send HTML Email": {
+      "main": [
+        [
+          {
+            "node": "Prepare Sheet Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Sheet Data": {
+      "main": [
+        [
+          {
+            "node": "Update Google Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f3c00ea3-29b8-491b-a7d9-190865a405d1",
+  "meta": {
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "WYFquQzWRYcstE1F",
+  "tags": []
+}

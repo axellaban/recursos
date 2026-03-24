@@ -1,0 +1,690 @@
+[00:00:00] Plug code is the most powerful AI coding
+[00:00:02] tool on the planet and using it in
+[00:00:04] anti-gravity will give you an unfair
+[00:00:07] advantage. Anthropic just released a
+[00:00:09] powerful new feature that lets you build
+[00:00:11] better quality at three times the speed
+[00:00:14] and have more scalable workflows. And so
+[00:00:16] in this video, I'm going to show you
+[00:00:17] exactly how to build Claude's agent
+[00:00:19] teams feature. I'm going to show you how
+[00:00:21] to unlock the full capabilities of
+[00:00:23] Claude with an anti-gravity so you can
+[00:00:25] build faster and to a better quality
+[00:00:27] than your competitors. And if you don't
+[00:00:29] know who I am, my name is Jack Roberts.
+[00:00:31] I built and sold my last tech startup
+[00:00:33] with over 60,000 customers. And now I
+[00:00:35] run a 7figure AI automation business. So
+[00:00:38] if you haven't already, grab that coffee
+[00:00:41] and let's dive straight in. So Claude
+[00:00:42] Code and anti-gravity are unstoppable.
+[00:00:45] And the words of Johnny Bravo. And we've
+[00:00:47] just had the brand new Claude Opus 4.6,
+[00:00:50] which we're also going to include in
+[00:00:51] this video today. Now, we're going to
+[00:00:52] cover exactly how to unleash Claude
+[00:00:54] within anti-gravity. There's been a
+[00:00:57] brand new update. It is experimental and
+[00:00:59] I'll touch on what that means in a short
+[00:01:00] while and it's going to be using several
+[00:01:02] different agent features that exist
+[00:01:04] within cloud code that basically lets
+[00:01:06] you develop and some circumstances three
+[00:01:08] times faster with better quality code
+[00:01:10] with more specialized focus and can even
+[00:01:13] result in more scalable workflows if
+[00:01:15] though you know exactly how to use it
+[00:01:16] cuz if you use this the wrong way it can
+[00:01:18] actually have the adverse effect which
+[00:01:20] is why I'm going to cover all that in
+[00:01:21] today's video and I'm going to show you
+[00:01:22] exactly why it works that way. But
+[00:01:24] first, Claude I the way I want to think
+[00:01:25] about Claude in relationship with
+[00:01:27] anti-gravity if you're not familiar is
+[00:01:29] Claude is like this super powerful
+[00:01:31] engine and anti-gravity is the Ferrari.
+[00:01:34] So the idea here is that one powers the
+[00:01:37] other. So to say it's Claude versus
+[00:01:39] anti-gravity would be a bit of a
+[00:01:41] misnome. It's more anti-gravity is the
+[00:01:43] vehicle and the engine we're using is
+[00:01:45] Claude or it could be any other model
+[00:01:47] like Gemini. Claude is the brain and
+[00:01:49] anti-gravity is the environment in which
+[00:01:51] we use Claude. So, all Clude
+[00:01:53] improvements make anti-gravity more
+[00:01:55] powerful. They're not in competition in
+[00:01:56] that sense. So, in this video, I'm going
+[00:01:58] to show you how to access any Claude
+[00:02:00] skill within anti-gravity. I'm going to
+[00:02:01] show you the powerful Oprah skills that
+[00:02:04] drastically improves Claude code, which
+[00:02:06] basically takes Claude from a brilliant
+[00:02:08] but undisiplined junior developer to
+[00:02:10] someone with coding superpowers. We're
+[00:02:12] going to use Opus 4.6 anti-gravity. I'm
+[00:02:15] also going to show you when to use
+[00:02:16] Claude and importantly Claude's brand
+[00:02:18] new scum, which is, by the way,
+[00:02:19] something called Agent Teams. So agent
+[00:02:21] teams, the best way to think about it is
+[00:02:23] imagine a classic marketing team, but
+[00:02:25] instead of people, they are claude
+[00:02:27] agents and each one of those agents
+[00:02:29] works on a different task at the same
+[00:02:31] time. So you'll give Claude an
+[00:02:33] instruction like, "Hey, I want you to
+[00:02:34] build me a full stack website." And
+[00:02:37] Claude will spin up four different
+[00:02:39] digital employees or four different
+[00:02:41] agents. This is kind of the the concept
+[00:02:43] this works. And these agents it spins up
+[00:02:44] can actually talk to each other
+[00:02:45] directly. And this is the new feature,
+[00:02:47] the new wow, this is crazy type of
+[00:02:49] moment. And they can all share one to-do
+[00:02:51] list, which is really cool. And each one
+[00:02:52] of those agents themselves also has a
+[00:02:55] context window of like up to a million
+[00:02:56] if you're using the latest model. And
+[00:02:58] they can even check their own work
+[00:02:59] before they're finished. Now, the way
+[00:03:00] this works is you we use anti-gravity.
+[00:03:03] And within anti-gravity, we decide to
+[00:03:05] use the Claude model. And effectively,
+[00:03:06] we create a project and let's say it's a
+[00:03:09] building a full stack website. Claude
+[00:03:10] will spin up a project manager agent and
+[00:03:13] he'll basically create a number of
+[00:03:14] employees. Could be two, could be 22.
+[00:03:17] you know there's like a limit to quality
+[00:03:18] but you get the idea and each one of
+[00:03:20] these sub agents has a specific task. So
+[00:03:23] this might be the front- end developer,
+[00:03:24] this might be the back end, this
+[00:03:25] person's looking at quality control,
+[00:03:27] this person's testing, etc., etc., and
+[00:03:29] they can all talk to each other. So the
+[00:03:32] idea is like if it's something where
+[00:03:33] let's say you build like an AI
+[00:03:35] dashboard, right, and it gets pretty
+[00:03:36] complex, like there's a lot of
+[00:03:38] interdependencies, we can actually have
+[00:03:40] these agents now communicating with one
+[00:03:42] another within their own context window
+[00:03:45] and reporting back to this kind of
+[00:03:46] orchestration agent. They use some kind
+[00:03:48] of very funky specific terminology. So
+[00:03:51] sub aents which I'm going to go on to is
+[00:03:52] very cool can be three times faster
+[00:03:54] again better quality of code more focus
+[00:03:56] more scalable workflows but they can be
+[00:03:58] very token hungry is one of my watch I
+[00:04:00] want to show cuz I'm going to show you
+[00:04:01] it's a very powerful tool for specific
+[00:04:03] circumstance but it can also be token
+[00:04:05] hungry if you're not using it correctly
+[00:04:06] but I'll cover that in this video. So
+[00:04:07] let's unlock claw superpowers with an
+[00:04:09] anti-gravity. Now to master claude and
+[00:04:11] unlock its full capabilities
+[00:04:12] anti-gravity there's actually three
+[00:04:14] levels of difficulty that we're going to
+[00:04:16] go through in this video. The first of
+[00:04:18] which is what I call the clawed code
+[00:04:20] hacks that sit with an anti-gravity. And
+[00:04:22] if you've never heard of anti-gravity,
+[00:04:23] you come over to this website and simply
+[00:04:25] install it for your computer. And then
+[00:04:26] you go over to this website here. And
+[00:04:28] all you're going to do is copy the page
+[00:04:30] if you've not installed code. Then we
+[00:04:31] head over to anti-gravity, which is
+[00:04:33] right over here. And anti-gravity. Then
+[00:04:36] we're going to upload and basically
+[00:04:37] create a brand new folder. And if this
+[00:04:38] sounds like I'm speaking French, go and
+[00:04:40] watch this video on screen somewhere
+[00:04:42] that'll teach you the basics of
+[00:04:44] anti-gravity. and I'll be waiting for
+[00:04:45] you right here when you come back.
+[00:04:47] Welcome back. Now, let's dive straight
+[00:04:48] in. So, what are we going to do? Well,
+[00:04:50] if you've never installed CL before, you
+[00:04:51] can be like come to the right and say,
+[00:04:52] "Hey, install this." And you can do this
+[00:04:54] with anything really. When you basically
+[00:04:56] copy a page, throw it in. You're ready
+[00:04:57] to rock and roll. Now, there are three
+[00:04:59] ways that you can use Claude code with
+[00:05:01] an anti-gravity. Way number one is here.
+[00:05:03] We can select the model and as you can
+[00:05:04] see, we can do Claude Opus 4.6. Awesome.
+[00:05:07] The second way, which is cool, and this
+[00:05:09] is great if anti-gravity ever
+[00:05:12] misbehaves, so to speak. come down here
+[00:05:14] on the left hand side. Come over to
+[00:05:15] extensions and I want you to type in
+[00:05:17] claude. Think of these extensions kind
+[00:05:19] of like Chrome extensions in a sense.
+[00:05:22] You come on, you can select it and then
+[00:05:23] once you do that, anytime you hit click
+[00:05:25] on a window, once you've installed it
+[00:05:27] here, you can see you just double click
+[00:05:28] and then you'll see the magical Claude
+[00:05:30] logo. You click on that and then I can
+[00:05:32] say, "Hey, how's it going?" Right? And
+[00:05:33] now I'm talking to Claude, which is
+[00:05:35] great. So this is like chatting with
+[00:05:37] Claude in the terminal, but it's like a
+[00:05:39] way better interface basically. And we
+[00:05:40] can again create as many of these as we
+[00:05:42] want to. just keep spinning them up to
+[00:05:43] have many multiple different charts. And
+[00:05:45] then the other way is at the top. If you
+[00:05:47] just hover over the top, you can see
+[00:05:48] you're going to have terminal. So you
+[00:05:49] just click on terminal, click on new
+[00:05:51] terminal, and then it appears at the
+[00:05:52] bottom. And here you can say Claude and
+[00:05:54] when you say Claude's name, he appears.
+[00:05:56] We don't need to say it in the mirror
+[00:05:57] three times either. And then what you
+[00:05:58] can do with this to make it better is
+[00:05:59] right click panel position and align
+[00:06:01] that to the right like that. And then
+[00:06:02] you have Claude chilling out having a
+[00:06:04] great time on the left hand side of the
+[00:06:06] screen. And what is really cool here is
+[00:06:08] you can duplicate as many as you want to
+[00:06:09] by hitting this arrow like this. You
+[00:06:11] see, just keep on doing that. Basically,
+[00:06:13] adding an item and you've got all of
+[00:06:15] these different basically claw terminal
+[00:06:16] browsers running in anti-gravity.
+[00:06:18] Another little hack for you, by the way,
+[00:06:19] is that you can actually use certain
+[00:06:21] models within anti-gravity for free by
+[00:06:23] using something called Open Code. I'll
+[00:06:25] put a link for it somewhere on screen so
+[00:06:27] you can check that out. But effectively,
+[00:06:28] all you would do is literally come over
+[00:06:30] to the terminal here and say install
+[00:06:32] Open Code like so. This will then go
+[00:06:33] ahead and grab it, install it, and then
+[00:06:35] when you run that code, you can access
+[00:06:36] over 100 Frontier models. You can even
+[00:06:39] use your chat GBT plus subscription if
+[00:06:41] you ever find out that you're running
+[00:06:43] out of tokens within anti-gravity. The
+[00:06:44] other thing to call out as I mentioned
+[00:06:46] is that the token usage for Claude Opus
+[00:06:49] 4.6 with an anti-gravity is free.
+[00:06:52] However, it is more limited than the
+[00:06:54] Gemini 3 Pro high because that's a
+[00:06:57] native model to Google. So, you kind of
+[00:06:58] get more leeway that way. One little
+[00:07:00] hack that some people do, by the way, is
+[00:07:01] they will actually come over and switch
+[00:07:03] their account so they get like more
+[00:07:05] free. I personally am more on the
+[00:07:07] advanced plan. I find that it's really
+[00:07:08] worth it because I get lots of usage and
+[00:07:10] it kind of kicks bum. Instead of just
+[00:07:11] googling it, you can also just grab the
+[00:07:13] open code install which you can do
+[00:07:15] directly from this page. Literally
+[00:07:16] coming over, copying this, heading back
+[00:07:18] over to anti-gravity, you can just
+[00:07:20] literally enter it in right there. I
+[00:07:22] mean, it's already found it, but if you
+[00:07:23] wanted to be really specific, you could
+[00:07:24] physically do that. Sweet. And now
+[00:07:26] that's done. Let's open up the terminal
+[00:07:27] window just to check this. So, new
+[00:07:29] terminal. And all we say is quite simply
+[00:07:31] open code. And then you should see the
+[00:07:33] open code appear for us instantaneously
+[00:07:35] once that loads up. And it's over there.
+[00:07:36] And then if you've done that, it'll pop
+[00:07:37] up. You can then do things like check
+[00:07:39] the models, make various different
+[00:07:40] decisions. You kind of pretty much name
+[00:07:42] it. But I'll link a full video so you
+[00:07:43] can check that one out in a bit more
+[00:07:44] detail. But this is one thing. But the
+[00:07:45] question is, how do we really leverage
+[00:07:47] the full powers of Claude with an
+[00:07:48] anti-gravity? Cuz most people don't even
+[00:07:50] really scratch the surface. And the
+[00:07:52] first way that we do that is using
+[00:07:53] something called skills. Now, Claude
+[00:07:55] skills can effectively be anti-gravity
+[00:07:57] skills. They're basically packets of
+[00:07:59] information, instructions that we've
+[00:08:01] worked out and specified that give
+[00:08:03] guardrails and enhancements. and think
+[00:08:04] of them as like a mech suit for your
+[00:08:06] model. So, for example, so I've got
+[00:08:08] these Oraclaw superpowers which are
+[00:08:10] insane. I've got this full guide here on
+[00:08:12] Claude agent teams. I'm going to put all
+[00:08:13] these resources down below so you can
+[00:08:15] just copy and paste and get rocking and
+[00:08:17] rolling. But what we're going to look at
+[00:08:18] here is a specific library that is
+[00:08:20] really profoundly powerful. And this one
+[00:08:22] here is the superpowers plugin by almost
+[00:08:25] 50,000 stars which is code for really
+[00:08:28] freaking cool. What this will enable us
+[00:08:29] to do very simply and the key difference
+[00:08:31] I want you to understand with skills to
+[00:08:33] leverage the best out of claude and
+[00:08:34] anti-gravity is that without superpowers
+[00:08:36] without skills your coding agents
+[00:08:38] basically like a junior dev really smart
+[00:08:40] not very well directed the idea is that
+[00:08:41] when we give them these codified skills
+[00:08:43] through things like brainstorming and
+[00:08:44] thinking it's efficiency goes through
+[00:08:46] the roof so the benefit stops claude
+[00:08:48] from wing it stops bugs from compounding
+[00:08:50] and it stops claude from lying to you
+[00:08:52] and hallucinating based on his specific
+[00:08:54] so just think about someone's built
+[00:08:55] excellence they've codified it and then
+[00:08:57] we get Claude to use that. So there's
+[00:08:59] loads of really incredible use cases.
+[00:09:00] You can see review skills, meta skills,
+[00:09:02] lots of great stuff. So any skills that
+[00:09:04] you want to learn. Another great
+[00:09:06] example, by the way, is this one here,
+[00:09:07] which is awesome. Cloud skills. Again,
+[00:09:09] I'll put the links below for you. That
+[00:09:10] basically gives it the ability to
+[00:09:12] programmatically edit things like word
+[00:09:14] documents, Microsoft, Excel sheets, you
+[00:09:15] name it, it can physically do it. So
+[00:09:17] when you find a skill package that you
+[00:09:19] like, all you're going to do is come
+[00:09:20] down here, click on the code, click on
+[00:09:22] copy. Then we're going to head over to
+[00:09:24] anti-gravity and say, "Hey, install
+[00:09:26] these skills here for me." Right? And
+[00:09:28] then all you're going to do is literally
+[00:09:30] paste in a link. That'd be pretty handy,
+[00:09:31] right? We can do that. And they'll add
+[00:09:32] it for you directly into your
+[00:09:34] environment. And now that's complete.
+[00:09:36] You can see on the left hand side we've
+[00:09:37] got all the skills. You can add macro
+[00:09:39] skills to set across everything as well,
+[00:09:40] of course. So I'm going to get a prompt
+[00:09:42] here, which is if I building a test
+[00:09:44] product, how would you approach this?
+[00:09:45] Use skills if you have relevant ones.
+[00:09:47] Now, typically speaking, you should
+[00:09:49] never really need to do this. So if I
+[00:09:50] click into brainstorming for example,
+[00:09:52] check out the brainstorming skill. You
+[00:09:53] can see it's got a description. Use this
+[00:09:55] before any creative work. So normally
+[00:09:57] speaking, the context within this
+[00:09:59] claopus 4.6 knows that I'm doing
+[00:10:01] something creative. Therefore, I must
+[00:10:03] use the brainstorm skill and it will do
+[00:10:05] that most of the time, but these models
+[00:10:06] are probabilistic and there's very rare
+[00:10:08] occasions where sometimes they don't. So
+[00:10:11] if you wanted to be a bazillion% sure,
+[00:10:13] you can just prompt it to use the skill.
+[00:10:15] But most of the time, you shouldn't
+[00:10:16] really have to do that. It depends how
+[00:10:18] comfortable you are with the situation.
+[00:10:20] But normally these will actually pull
+[00:10:21] them for you dynamically without
+[00:10:22] thinking about them. And we can see now
+[00:10:24] it's analyzed various different skills
+[00:10:26] to see exactly how it should behave when
+[00:10:28] thinking about this. And then we have
+[00:10:29] this brainstorming prompt which is
+[00:10:31] understand the product context one
+[00:10:32] question at a time proposed two to three
+[00:10:34] approaches. It's built a full phase plan
+[00:10:36] for us now using these codified skills
+[00:10:38] which is fantastic. So it's literally
+[00:10:40] thought about this in detail
+[00:10:42] programmatically and I've given us steps
+[00:10:43] to do that. And you can give them steps
+[00:10:45] that include code like the ones that
+[00:10:47] will edit documents in HTML. Think of
+[00:10:49] them as like incredible upgrades to
+[00:10:51] leverage with claude code with an
+[00:10:52] anti-gravity. So now you've learned some
+[00:10:54] of the hacks of using claw code with an
+[00:10:56] anti-gravity. The next step is to use a
+[00:10:58] feature that will literally let you code
+[00:11:00] and do things three times faster than
+[00:11:02] actually using it traditional way. And
+[00:11:04] the crazy part is that most people don't
+[00:11:06] even know that this thing exists. So
+[00:11:08] we're going to come to our workflow and
+[00:11:09] let's just refresh and get rid of
+[00:11:11] everything. Now to do this, what we're
+[00:11:13] going to use up here is going to be the
+[00:11:14] terminal. So click on terminal, click on
+[00:11:16] new terminal, and we want to activate
+[00:11:18] Claude. If your terminal isn't on the
+[00:11:20] right and you'd like it there, remember
+[00:11:21] you can always right click and decide
+[00:11:22] the panel position, top, right, bottom,
+[00:11:24] it doesn't really matter. It's a
+[00:11:26] preference. Personally speaking, I like
+[00:11:27] to go from left to right, which is why I
+[00:11:29] have it there. Now, here's what you're
+[00:11:30] going to do to demonstrate the power of
+[00:11:31] this. Right click over here, or you can
+[00:11:33] just add a folder up here, and we'll
+[00:11:34] call this one research. Okay, so for
+[00:11:37] example, let's give it the below prompt,
+[00:11:38] which is three sub agents running in
+[00:11:40] parallel. One production, five
+[00:11:42] production use cases for Python, five
+[00:11:44] for Rust, five for Go. Save each as its
+[00:11:46] own output markdown file in the research
+[00:11:50] folder. Bam. I'm going to send this one
+[00:11:51] off. So what is happening here, really
+[00:11:53] important to understand, is that Claude
+[00:11:55] has its own context window. This one, I
+[00:11:56] believe, a million tokens. When it
+[00:11:58] spawns these sub agents, they exist
+[00:12:01] temporarily during this conversation.
+[00:12:03] Each of these sub agents has its own
+[00:12:05] context window, right? And what we're
+[00:12:07] saying here is we have what we call
+[00:12:08] these parallel agents. In other words,
+[00:12:11] they can work on the thing at the same
+[00:12:13] time as the other one. So, one could be
+[00:12:14] doing API calls while the other one can
+[00:12:17] crack on with something else. It's like
+[00:12:18] us three being in a house trying to sell
+[00:12:20] it, right? And I've got to paint and
+[00:12:22] maybe you got to clean the kitchen and
+[00:12:24] someone else has got to install the
+[00:12:26] radiators, but we're all saying, "Well,
+[00:12:27] we're going to wait till Jack's finished
+[00:12:28] before I can start." Well, if we all
+[00:12:30] separated and did three different things
+[00:12:32] simultaneously, we'd get the job done so
+[00:12:34] much quicker and we'd sell it, right?
+[00:12:36] And that's kind of like the idea with
+[00:12:37] this. And as you can see right now once
+[00:12:38] I come back over here, it's launching
+[00:12:40] these different sub aents. That's a
+[00:12:42] different part of anti-gravity kicking
+[00:12:43] off if you're wondering. But look at
+[00:12:44] this, right? We've got Python again.
+[00:12:46] Five tools used, five tools used, five
+[00:12:48] tools used. All this research is
+[00:12:50] happening independently. Now, these
+[00:12:52] agents aren't talking to each other, but
+[00:12:54] what they are doing is doing deep
+[00:12:55] research. And if this was being used by
+[00:12:56] Claude itself, this would take
+[00:12:58] significantly longer to do. And just
+[00:13:00] like that, we've got all three saved in
+[00:13:02] a research folder. And look at how
+[00:13:03] comprehensive. I mean, this is literally
+[00:13:05] how many lines of code? Like over 745.
+[00:13:08] This feature is crazy. And it's so much
+[00:13:10] faster than having Claude do it itself.
+[00:13:12] Spinning up these sub agents and having
+[00:13:14] them work in parallel. Now, sub agents
+[00:13:16] are phenomenal. But the biggest
+[00:13:18] drawback, so to speak, is the fact that
+[00:13:20] they cannot communicate with each other.
+[00:13:22] Agent A has no idea or context what
+[00:13:25] agent B is doing or vice versa. But what
+[00:13:27] if there was a way to actually have
+[00:13:28] these agents communicate with each
+[00:13:30] other? And this brings us to Claude's
+[00:13:32] latest experimental feature which is
+[00:13:34] called Claude agent team. So what are
+[00:13:36] agent teams? Well, in simple language,
+[00:13:38] they are Claude Code's multi- aent
+[00:13:40] orchestration system. And that sounds
+[00:13:41] pretty complex. The TLDDR is allow
+[00:13:43] multiple AI agents to work together in
+[00:13:45] parallel, communicate directly, and then
+[00:13:48] coordinate what we call complex tasks.
+[00:13:50] So basically instead of one developer
+[00:13:51] working alone, you now have a team of
+[00:13:53] specialists working simultaneously with
+[00:13:55] their own focus. Keep being the fact
+[00:13:57] that they can communicate with each
+[00:13:59] other. So how do you install it? Well,
+[00:14:01] basically you just open this up here and
+[00:14:02] what you can do literally is on this
+[00:14:04] page just copy the page then head over
+[00:14:06] to anti-gravity and then with
+[00:14:08] anti-gravity just say hey install this
+[00:14:11] and then you can paste the entire page
+[00:14:12] and it will literally install that for
+[00:14:14] you with an anti-gravity. And whilst
+[00:14:15] that's doing that, I want to kind of
+[00:14:16] draw a bit of a differentiate between
+[00:14:18] agent teams and sub agents that we just
+[00:14:20] used. Again, sub agents super cool,
+[00:14:22] super powerful. The biggest difference
+[00:14:23] is earning context window fully
+[00:14:26] independent. Whereas with sub agents, it
+[00:14:28] reports back to the main agent, right?
+[00:14:30] But what's really interesting here is
+[00:14:31] that the token cost for agent teams is a
+[00:14:34] lot higher. And if you think about that,
+[00:14:35] it's because they have to communicate
+[00:14:37] with one another. There's an additional
+[00:14:39] dimension of communication, which is why
+[00:14:41] this can burn tokens. It's a very
+[00:14:44] specific tool with a lot of potential,
+[00:14:46] but just be aware that it can actually
+[00:14:47] be quite token intensive, but there are
+[00:14:48] some strategies that you can use and
+[00:14:50] I've detailed a lot of them here. So,
+[00:14:51] for example, what we can do is have the
+[00:14:53] most powerful model as the brain and
+[00:14:55] then we can actually come down here and
+[00:14:57] then deploy different models for lesser
+[00:15:00] tasks that don't require that. For
+[00:15:01] example, we can deploy Sonet 4.5 or
+[00:15:03] Haiku. And here's a cost tokens just to
+[00:15:05] give you an overview. So, you can
+[00:15:07] leverage this feature without
+[00:15:08] necessarily like rinsing your API
+[00:15:10] credits. Super duper interesting. And
+[00:15:12] you can see some of the other things
+[00:15:13] there. This is best for focused tasks
+[00:15:15] where the result only matters. Whereas
+[00:15:17] agent teams are good for complex work
+[00:15:19] requiring discussion and collaboration.
+[00:15:21] And I'm going to go into a bit more
+[00:15:22] detail about the stuff that I found. I'm
+[00:15:24] always going to share with you the stuff
+[00:15:25] that works. If it's new, we're going to
+[00:15:26] test it. And if it's great, I'll let you
+[00:15:28] know. And if it isn't, I'll also let you
+[00:15:30] know. So, we're very very independent on
+[00:15:32] how we do things to think about this.
+[00:15:33] And there are some use case I want to
+[00:15:34] really throw by you here. So, once we
+[00:15:35] come back over to anti-gravity, we're
+[00:15:37] going to allow it in this conversation
+[00:15:38] to download it. So according to this, it
+[00:15:40] is fully running and rocking and
+[00:15:41] rolling. So let's come over and test
+[00:15:42] this for example in the terminal and
+[00:15:44] click on new terminal and we're going to
+[00:15:45] remove this over here to test it. So
+[00:15:47] we're going to come down here and
+[00:15:48] activate claude. One little small
+[00:15:50] feature by the way that I want you to
+[00:15:51] think about when you're building agents
+[00:15:52] is the actual feature in anti-gravity.
+[00:15:54] So we've just shown you how you can spin
+[00:15:56] up these sub aents. But within
+[00:15:57] anti-gravity, right, you have this agent
+[00:15:59] manager feature right here. And this is
+[00:16:01] really cool because we could in theory
+[00:16:03] have these mini agents by saying, "Hey,
+[00:16:05] for example, I could click on use
+[00:16:06] playground," which is like a blank
+[00:16:07] canvas. And I could be like, "Hey, do
+[00:16:09] X." Then I could spin up another one and
+[00:16:11] be like, "Hey, do Y." Right? And I could
+[00:16:14] spin up as many as I want to. The
+[00:16:15] advantage of the sub agent is the fact
+[00:16:17] that it's all managed by Claude. But one
+[00:16:19] interesting differentiator here, by the
+[00:16:20] way, I just want to throw you away, is
+[00:16:22] the fact that if you look at any of
+[00:16:24] these things, like let's say you've got
+[00:16:25] an invoice generator like I do. What I
+[00:16:27] can do with mine now is I can go into
+[00:16:29] this folder at any time I want by
+[00:16:31] literally clicking into it for instance
+[00:16:33] and then saying hey write me an invoice
+[00:16:35] for XYZ and it already has all that
+[00:16:37] project context which is a complete game
+[00:16:39] changer with anti-gravity and we're
+[00:16:40] still using the best code model to do
+[00:16:42] that. So to test this, we're just going
+[00:16:43] to ask it, do you have the ability to
+[00:16:45] create agent teams and what commands do
+[00:16:47] you have? And we know this because I've
+[00:16:49] actually detailed everything it can do
+[00:16:50] in this document for you. Task create,
+[00:16:52] task list, task get, task update. So
+[00:16:54] again, all this is going to be available
+[00:16:55] for you down below in the description
+[00:16:56] completely for free. So you can have a
+[00:16:57] rock on a good time. And does it look
+[00:16:59] normal to you? We got brainstorm,
+[00:17:00] dispatch, and parallel agents, executing
+[00:17:02] plans. And as you can see, it says yes,
+[00:17:03] I have access to these tools, team
+[00:17:05] coordination tools, task correct, task
+[00:17:07] get. Awesome. So now we're going to
+[00:17:08] ahead and give it a prompt. And I want
+[00:17:09] to drill down to something important
+[00:17:10] here. So, this is the prompt that we're
+[00:17:11] going to give it to build a to-do app.
+[00:17:13] Okay, an agent team prompt. We're going
+[00:17:15] to have one guy who does the copy, one
+[00:17:16] guy that does the designer UI, and one
+[00:17:18] person does the features. If you start
+[00:17:19] to bloat the team, just like in
+[00:17:21] business, right? Like if you and I were
+[00:17:22] doing a business together, and we had a
+[00:17:23] QA guy and a safety guy, the every
+[00:17:26] dimension you add and require
+[00:17:27] intercommunication, it gets bureaucracy.
+[00:17:30] So, agents apparently are not immune to
+[00:17:31] bureaucracy. And one of the things I
+[00:17:33] found is that, you know, every team
+[00:17:34] member must earn their spot on your
+[00:17:37] agent team. Otherwise, not only will
+[00:17:38] they be more expensive, it will be a lot
+[00:17:40] slower and not efficient. So, think
+[00:17:42] about how they could be specific. Now,
+[00:17:44] the only time you're going to use agent
+[00:17:45] teams is if they need to talk to each
+[00:17:47] other and intercommunicate. So, these
+[00:17:49] are really cool ones. One guy just
+[00:17:50] focused on the copy, one's on design and
+[00:17:52] UI, and one's on the features. So, what
+[00:17:53] we're going to do is literally come down
+[00:17:54] here. We're going to copy all of this,
+[00:17:56] and we're going to compare this with
+[00:17:57] building one just directly by itself
+[00:18:00] using Claude. So, so we're going to come
+[00:18:01] down, come down here, paste it, and see
+[00:18:03] exactly what they build for us.
+[00:18:04] Beautiful. So, now we have two apps. We
+[00:18:06] have app A and then we have app B. I'll
+[00:18:09] let you make a decision on which one
+[00:18:10] that you prefer. But if we check out
+[00:18:11] this one as for instance, I can say,
+[00:18:13] "Hey, I need to buy apples." I add that
+[00:18:15] in. It's there. I can take it. Pretty
+[00:18:18] sweet. It's crossed off the list. Now
+[00:18:19] it's the done section. If I untick it,
+[00:18:21] it's now in the active. Pretty cool. We
+[00:18:23] can go ahead and sign out as well and
+[00:18:24] give us cool login page. Overall, pretty
+[00:18:26] decent. Then we got the second one here,
+[00:18:27] which is, "Hey, demo." I can add a task
+[00:18:29] up here. Already I've got more things I
+[00:18:31] can do here, like hey, hey, what's up?
+[00:18:33] Description priority high. And then we
+[00:18:35] can set the due date. Again, it's it's
+[00:18:36] lacking a little bit of polish to be
+[00:18:37] fair. It's not quite as visually
+[00:18:39] brilliant, but it does hit more
+[00:18:41] specifics. Add the task. And then we can
+[00:18:43] see it's all down here. We can select
+[00:18:44] this. We can delete it. Yes, delete it.
+[00:18:46] So, you can see now the interesting
+[00:18:48] levels of detail we're getting in this
+[00:18:49] one. Got active and got complete. I
+[00:18:50] wouldn't love these design. These are
+[00:18:52] one shot. Bear in mind, all I said is
+[00:18:54] build it, right? So, it's not exactly
+[00:18:55] like multilayer, but these are the two.
+[00:18:57] And interestingly, this is the one done
+[00:18:59] by agent teams. And this one here was
+[00:19:01] done completely by claude by itself. Now
+[00:19:04] this leads to a very interesting
+[00:19:05] conclusion with this. Now this project
+[00:19:07] had one UI layer, one data layer and one
+[00:19:10] flow. So agent teams for a project like
+[00:19:12] this is overkill. We also have when
+[00:19:15] you're using very simple projects with
+[00:19:17] agent teams a communication tax because
+[00:19:20] just like a normal business all of the
+[00:19:21] individual agents or employees have to
+[00:19:23] communicate with one another. So not
+[00:19:25] only might it not be as good quality as
+[00:19:27] a oneshot some say slightly better, some
+[00:19:29] say it's slightly lower ballpark. The
+[00:19:31] point is it will get there a lot slower
+[00:19:32] because of the communication overkill.
+[00:19:34] So the TLDDR is if you can explain the
+[00:19:37] whole task in a couple of sentences, use
+[00:19:39] an individual AI to build them. But if
+[00:19:42] it's something that requires a
+[00:19:43] multiplicity to use a very fancy word,
+[00:19:45] lots of lots of independent
+[00:19:47] interrelating things where you need the
+[00:19:49] agents to carefully coordinate with each
+[00:19:50] other, you may opt towards the agent
+[00:19:52] teams model instead. For example, if I'm
+[00:19:54] building a simple to-do list, I might
+[00:19:56] just use AI. But if I'm building a full
+[00:19:58] multi-stack dashboard with
+[00:19:59] authorizations, payments, dashboards,
+[00:20:01] the whole works, there might be
+[00:20:03] something more in the agent teams
+[00:20:04] version. We can also, as I showed you,
+[00:20:06] actually cut our cost down by having the
+[00:20:08] most powerful model up front and then
+[00:20:10] lesser expensive models underneath that
+[00:20:12] to execute on it. Now, understanding how
+[00:20:13] to leverage CL code and anti-gravity is
+[00:20:15] one thing, but if you don't know how to
+[00:20:17] connect anti-gravity to one of the most
+[00:20:19] powerful tools on the planet, you're
+[00:20:21] almost certainly leaving value on the
+[00:20:23] table. And we can learn how to do that
+[00:20:24] by watching this video right

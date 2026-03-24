@@ -1,0 +1,972 @@
+[00:00:00] in this video I'm going to show you
+[00:00:00] exactly how you can go from text to
+[00:00:02] viral videos of yourself you can get
+[00:00:04] images that look exactly like you in any
+[00:00:06] style you want that'll be animated into
+[00:00:08] videos you probably seen many examples
+[00:00:10] of celebrities or characters who have
+[00:00:12] literally got their photos that are then
+[00:00:14] turned into videos and they are crushing
+[00:00:16] it the example I've got here is
+[00:00:17] something I saw with stoic mem which is
+[00:00:19] what I'm going to show you in this video
+[00:00:20] to turn me into a stoic thing and we're
+[00:00:22] going to have Instagram captions and it
+[00:00:24] will it will be posted directly onto
+[00:00:26] Instagram or you can download the video
+[00:00:27] and do exactly what you want with it
+[00:00:29] with I might add full captions as well
+[00:00:32] both on the screen and also in the
+[00:00:33] captions on Instagram you may remember
+[00:00:35] from your videos before I showed you how
+[00:00:36] you can generate photo realistic AI
+[00:00:38] images of yourself and in this video
+[00:00:39] we're going to take it a step further by
+[00:00:41] grabbing it and then turning it into a
+[00:00:42] video that you can do literally whatever
+[00:00:44] you want to and if you're wondering I'm
+[00:00:45] in a hotel room in Los Angeles we just
+[00:00:46] did a meet up with the community and I
+[00:00:48] cannot wait to get into this video CU
+[00:00:49] this one guys is literally insane now as
+[00:00:52] you may know my name is Jack my YouTube
+[00:00:54] channel and my school Community all
+[00:00:55] about three things we're about the
+[00:00:57] latest AI we are about incredible aut
+[00:01:00] but most importantly we are about the
+[00:01:02] stuff that actually works so if you
+[00:01:03] haven't already I'm going me grab this
+[00:01:05] right now grab that coffee and let's
+[00:01:07] dive straight in and as always all the
+[00:01:08] blueprints the agents the guides for the
+[00:01:10] entire automation are available in the
+[00:01:11] community so all you have to do is come
+[00:01:13] down click on import blueprint select
+[00:01:15] the Json file upload it click save an
+[00:01:17] entire automation will B it for you
+[00:01:19] automatically but guys what I'm going to
+[00:01:21] show for you here is we're going to
+[00:01:22] build it together now step by step I'm
+[00:01:23] going to briefly explain how this works
+[00:01:25] and then we're going to build it
+[00:01:26] directly so it's basically got think of
+[00:01:29] bit is four parts okay part one is this
+[00:01:32] part here which is going to grab the
+[00:01:35] quotes now you could do this for many
+[00:01:36] things say for example you want to have
+[00:01:38] like quotes that you say in a podcast or
+[00:01:40] maybe stoic quotes which is what exactly
+[00:01:42] what I did in this so I've got 50 stoic
+[00:01:44] quotes of captions I've got 50 Instagram
+[00:01:46] Cotes we get quotes we're going to
+[00:01:47] rebuild this again together and in this
+[00:01:49] one I wanted to kind of get that stoic
+[00:01:51] quote but I didn't just want to have
+[00:01:52] some random Greek statue I wanted to
+[00:01:54] build it with me in it that had like a
+[00:01:57] photo with me in a really specific
+[00:01:58] monochromatic Style I'll show you how
+[00:02:00] you can get in any style you want any
+[00:02:02] Dimensions you want by the way it's
+[00:02:03] literally ridiculous and what I wanted
+[00:02:05] to do was have the quote on the page and
+[00:02:08] in addition to that I wanted to have a
+[00:02:09] unit capture so we start off here by
+[00:02:11] grabbing the quotes from a table and
+[00:02:13] then we create this cool prompt this
+[00:02:16] then creates a unique image of us and
+[00:02:19] we've trained this Laura on our own
+[00:02:20] images and if you haven't seen that bit
+[00:02:22] I I recommend you come over to this
+[00:02:24] video here I'll put a link in the
+[00:02:25] description and I'll put a Tim stamp and
+[00:02:27] what I'd like you to do is just go and
+[00:02:28] follow this process here I wait for you
+[00:02:30] we go ahead and do that and once you've
+[00:02:31] done that you'll be able to continue
+[00:02:33] with this video it's dead
+[00:02:34] straightforward and it'll blow your mind
+[00:02:36] but it also isn't necessary for this
+[00:02:38] video to try images on yourself maybe
+[00:02:40] you want to do a specific character
+[00:02:41] style it can do anything I'm just
+[00:02:43] showing you with using an imagy yourself
+[00:02:45] because I think it's really cool but you
+[00:02:46] can substitute it for anything and if
+[00:02:48] you don't want to do images of yourself
+[00:02:49] we can just use a random Laur so we
+[00:02:51] create the image we download it once
+[00:02:53] that's done then we go ahead and we
+[00:02:54] create the video using um this like Luma
+[00:02:57] API and then when that's finished we're
+[00:02:59] going to download it and then in Placid
+[00:03:00] we combine the video with the captions
+[00:03:02] and then we can either post it directly
+[00:03:03] to Instagram or you can download it into
+[00:03:05] an air table or get like a slack message
+[00:03:07] or whatever you want to so you can add
+[00:03:09] your own viral music so for argument
+[00:03:10] sake let's say we want to do 50 St
+[00:03:12] quotes uh just for this one I could say
+[00:03:14] hey create me 50 St
+[00:03:18] quotes with an
+[00:03:20] author and we'll just say hey maximum I
+[00:03:23] don't know maybe like 80 characters like
+[00:03:26] that and we gbt A1 Mini do that and then
+[00:03:28] once we've done that guys what we're
+[00:03:30] going to do is we're going to number
+[00:03:31] them and on top of that we're then going
+[00:03:33] to go ahead and we're going to get an
+[00:03:34] Instagram captured actually that's quite
+[00:03:36] short let's just say make it I don't
+[00:03:40] know 140
+[00:03:42] characters but awesome and then what
+[00:03:44] we're going to do guys I'm going to sh
+[00:03:45] over to the school Community I'm going
+[00:03:46] to come down to classroom I'm going to
+[00:03:47] go to Every I Automation and I'm going
+[00:03:49] to come down to Instagram agent and I'm
+[00:03:52] just going to grab this just so it can
+[00:03:54] create some really good posts so this
+[00:03:55] was train on a lot of the stuff that
+[00:03:56] goes viral on Instagram like how I do
+[00:03:58] the Hashtags with the CTA an the
+[00:04:00] engagement and what I'm going to do once
+[00:04:01] we've got these things here cool so I'm
+[00:04:03] going to copy this and I'm going to say
+[00:04:05] hey create a
+[00:04:07] table with three
+[00:04:11] columns one is number two is uh quote
+[00:04:16] and then three is going to be an
+[00:04:18] Instagram
+[00:04:19] caption a short Instagram caption or it
+[00:04:21] can be any length you want to really but
+[00:04:23] we'll say a short Instagram caption in
+[00:04:25] line with the below
+[00:04:28] prompt okay and then we say the prompt
+[00:04:32] like so we come back over and guys you
+[00:04:34] know what's really cool about this is
+[00:04:36] you can do it like you could do as a
+[00:04:38] podcast let's say you're on a podcast
+[00:04:39] for ages and you said you know I want to
+[00:04:41] give a little bit of vibe and flare
+[00:04:42] because we know that reals do perform
+[00:04:44] better than static images which is why
+[00:04:46] people like Alex Sosi we're actually
+[00:04:47] going to to The Mastermind this week to
+[00:04:49] M school games winers there they do
+[00:04:51] reals because they just get higher
+[00:04:53] engagement at watch time and it's just
+[00:04:55] ridiculous so instead of just having you
+[00:04:57] static with black background we can now
+[00:04:59] actually have you moving in any scenario
+[00:05:02] you want to like it is absolutely
+[00:05:05] ridiculous this is text a video of you
+[00:05:07] which is like insane we're now like
+[00:05:08] automating videos of you how absolutely
+[00:05:10] crazy is that so look we got these 50
+[00:05:12] that's really sweet we're going to copy
+[00:05:14] all these like so beautiful and then all
+[00:05:16] we would do guys is we' come over to air
+[00:05:18] table so I'll just create a brand new
+[00:05:19] air
+[00:05:21] table beautiful head over to
+[00:05:23] airtable.com Let's load this bad boy up
+[00:05:27] but I'm really impressed with the Wi-Fi
+[00:05:28] connection we've got actually
+[00:05:30] Bu from scratch we'll call this one
+[00:05:33] stoic build together and what should we
+[00:05:35] get emoji wise I think Stone do you know
+[00:05:38] I mean that stone Emoji which is one of
+[00:05:40] the goed Emojis actually Okay so we've
+[00:05:42] now named it beautiful now what we're
+[00:05:44] going to do guys is we're going to come
+[00:05:45] here going to control+ V basically all a
+[00:05:47] table phenomenal and we call this one
+[00:05:50] number and we'll call this one o stoic
+[00:05:56] quote and then we'll call this one
+[00:05:59] Instagram
+[00:06:01] capture like so beautiful beautiful
+[00:06:05] beautiful okay great now what do we do
+[00:06:07] guys we're going to get an incremental
+[00:06:09] function and we're going to create our
+[00:06:11] new scenario so let's go over here and
+[00:06:12] we'll call this one here we'll call this
+[00:06:14] one variable together all right guys so
+[00:06:16] now we've got the quotes in our cool
+[00:06:18] Instagram database over here okay what
+[00:06:21] we basically want to do is if you want
+[00:06:22] to post this directly to Instagram then
+[00:06:25] what we would basically want to do is
+[00:06:26] have an incremental function now what
+[00:06:28] does that look like so let's say that we
+[00:06:30] want to run this once and then in the
+[00:06:32] scenario one that we do we post this one
+[00:06:35] then in scenario two we do this one then
+[00:06:36] scenario three we do that one and so on
+[00:06:38] and so and so forth so for every quote
+[00:06:40] that we've got whether it's like we
+[00:06:41] generated it with chat GPT or we
+[00:06:43] extracted it from a podcast and we got
+[00:06:45] videos on that on the channel in the
+[00:06:47] community it will slowly post one a
+[00:06:49] Cadence of like one a day or one every
+[00:06:51] three days we know Instagram you don't
+[00:06:52] want to post more than twice a day and
+[00:06:54] then this will give you 50 days 100 days
+[00:06:56] worth of content with unique videos of
+[00:06:58] you which I think is pretty epic so what
+[00:07:00] does that look like number one we want
+[00:07:01] to do here is we come down okay we click
+[00:07:03] on tools and I'm going to go for
+[00:07:05] increment function like so and then just
+[00:07:07] res set value never now when I run this
+[00:07:09] this will be give us an output of one
+[00:07:11] and if I run it again it should give us
+[00:07:13] we know what comes after one right it's
+[00:07:14] number two cool all right so on and so
+[00:07:16] forth and that will then correspond with
+[00:07:17] our air table and then we're going to
+[00:07:19] come here come down to air table and
+[00:07:21] we're going to go for search records and
+[00:07:23] then all we do with this one guys is we
+[00:07:24] just choose the same base that we had
+[00:07:27] now if you don't see this um let's see
+[00:07:30] what we call this one called this one
+[00:07:31] stoic build together it's a simple
+[00:07:33] connection opens a new tab you connect
+[00:07:34] it and then you're going to be ready to
+[00:07:35] go all right incredible table is going
+[00:07:37] to be table one you can leave the user
+[00:07:39] this and I'm going to select all the
+[00:07:40] output fills and then for the formula
+[00:07:42] guys I want you to put this one here
+[00:07:43] which is Curly brackets number curly
+[00:07:44] brackets equals and then we just select
+[00:07:47] the thing from Tool increment okay and
+[00:07:49] the limit we're just going to put that
+[00:07:50] as one so let's run this whole scenario
+[00:07:52] together here we go and what this will
+[00:07:54] do guys is this is given us output three
+[00:07:57] then if I check this this was only only
+[00:07:59] going to pull down three so that formula
+[00:08:00] says look I only pull it down if that is
+[00:08:03] number three now look this one here says
+[00:08:04] piece comes from within your cell aticus
+[00:08:07] pretty cool I like that that's a good
+[00:08:08] thing to look at and then we got this
+[00:08:09] one here which is piece comes with SH P
+[00:08:12] so that's how we kind of make sure it
+[00:08:13] goes one by one all the way down the
+[00:08:15] chain which I think is pretty cool so
+[00:08:17] now we've got the air table now we got
+[00:08:18] the tools what do we do next well the
+[00:08:20] next thing we want to do is we want to
+[00:08:23] get could be clae could be chat GPT I'm
+[00:08:25] going to play with clae in this one I
+[00:08:26] think going crate a prompt of course it
+[00:08:28] could be anything you like like Max
+[00:08:30] token so let's do 4,000 at message roll
+[00:08:33] is going to be user like so come down
+[00:08:36] content type is going to be text
+[00:08:38] beautiful and then we've got a prompt
+[00:08:39] that we're going to give it okay now for
+[00:08:41] me now this is the bit where really
+[00:08:43] think of this as what I do is Lego okay
+[00:08:45] you build you basically build whatever
+[00:08:47] structure you want to the purpose that
+[00:08:49] I've gone with here is just to Stow it
+[00:08:50] quote so what you want to do here is you
+[00:08:52] want to create the perfect image and I'd
+[00:08:54] encourage you to play around with what
+[00:08:57] style you want for your own particular
+[00:08:58] thing which is why this is so epic
+[00:09:00] because here's the thing not many people
+[00:09:01] are going to watch this and even the
+[00:09:02] ones that do even if 20,000 people do
+[00:09:05] like you're all going to have a unique
+[00:09:06] different way of doing it so you're
+[00:09:07] going to have incredibly unique content
+[00:09:09] now if you look what I've got here right
+[00:09:11] I'm asking to generate adjacent object
+[00:09:13] based on the following stoic quote now
+[00:09:15] at this point guys if you haven't
+[00:09:17] trained your own basically your own AI
+[00:09:20] model on your images and you want to do
+[00:09:22] that head over to this video and watch
+[00:09:23] it if you don't want to do that don't
+[00:09:25] worry about it we can just Generate
+[00:09:27] random images I just think it's really
+[00:09:28] cool and unique to do that and it is
+[00:09:30] killing it at the moment and people
+[00:09:31] can't believe it you could even do this
+[00:09:33] for famous people if you wanted to right
+[00:09:34] I mean how cool would that be I mean
+[00:09:35] it's it's pretty outrageous so we come
+[00:09:37] back over to our scenario now let's
+[00:09:39] check out what our what our prompt is
+[00:09:42] okay do not include any additional
+[00:09:44] information explanations or texts
+[00:09:46] outside the Json structure that's
+[00:09:47] because we need Json to activate the
+[00:09:49] creation of our images um so you must
+[00:09:52] keep everything else the same and create
+[00:09:54] some of the prompt for prompt clothing
+[00:09:55] background so I've said we're going to
+[00:09:57] give it a stoic quote so this is what
+[00:09:58] you're going to give from a tables I've
+[00:10:00] just come over here so you can get a
+[00:10:01] good look at him okay let's get shut
+[00:10:02] this one down I'm giving it variably
+[00:10:05] what I'm asking to do is create a video
+[00:10:07] based on the quote from Air table that's
+[00:10:09] why every video is going to be
+[00:10:11] completely unique now what I recommend
+[00:10:13] that you do is have like what I'd call
+[00:10:16] your core prompt which is write out what
+[00:10:18] would get you what you want and then add
+[00:10:20] variable elements within that prompt so
+[00:10:23] for example the version here the input
+[00:10:25] the promp blah blah blah again I'll put
+[00:10:27] all this down Bel just copy and pasted
+[00:10:28] so you can just wrong with it a stoic
+[00:10:30] image of Jack facing the camera creates
+[00:10:32] a monochromatic epic stoic uh scene
+[00:10:35] featuring Jack so that is something I
+[00:10:36] want every video to look like every
+[00:10:38] image to look like then I'm going to say
+[00:10:40] look well you specify the setting you
+[00:10:42] specify the clothing you specify the
+[00:10:44] posture and you specify the background
+[00:10:46] so that we'll get unique elements for
+[00:10:48] all of those things the overall mood is
+[00:10:49] powerful get contemplated with Deep
+[00:10:51] Shadows and a strong play of light blah
+[00:10:53] blah blah and then you got this HF luras
+[00:10:55] which is this thing here now if you're
+[00:10:57] doing if you're doing your own one
+[00:11:00] basically what that will be is on your
+[00:11:01] hugging
+[00:11:02] face I come over to hugging face like so
+[00:11:05] and we have a quick look and let's go
+[00:11:07] over to our own beautiful let's have a
+[00:11:09] look where is it now I think it's on
+[00:11:11] this part here there you go Jacka mode
+[00:11:12] La so be on models be huggingface face.
+[00:11:15] your whole profile you copy that and all
+[00:11:17] you would do guys is you come over here
+[00:11:19] and you basically just substitute out
+[00:11:21] your Laura like that and it will just
+[00:11:23] then do your images instead of my images
+[00:11:25] or whatever images you want it's
+[00:11:27] beautiful like that and if you don't do
+[00:11:28] that there'll be different code which
+[00:11:29] I'll also put down below that you can
+[00:11:31] just use for creating generic high
+[00:11:33] quality flux 1.1 which by the way guys
+[00:11:36] very quick tangent but I have to show
+[00:11:38] you this okay I think it's flux Pro art
+[00:11:41] it is insane like the level we're
+[00:11:42] getting at with I mean look at this guys
+[00:11:44] imagine turning this into videos with
+[00:11:47] text on it with captions on it like this
+[00:11:50] is outrageous like this is literally
+[00:11:52] insane I'm just this just give you some
+[00:11:54] inspiration about the kind of things
+[00:11:56] that you can do like the fact we're at
+[00:11:58] text a video at the level we're at I
+[00:11:59] mean imagine you had a marel page you
+[00:12:01] doing Venom and like lore and you stack
+[00:12:02] them together and the other thing we can
+[00:12:04] do and if you want to view that let me
+[00:12:05] know we can wee all these together so
+[00:12:07] you can get 20 30 50 60 seconds we can
+[00:12:09] do gifts we can do whatever literally
+[00:12:12] you want limit it down below what you
+[00:12:13] want and I'll build it for you okay so
+[00:12:15] we go down here number of outputs aspect
+[00:12:17] ratio is 9 to 16 because we're doing uh
+[00:12:19] vertical content for Instagram uh PNG
+[00:12:21] output quality blah blah blah now here
+[00:12:23] here's the other thing guys number of
+[00:12:24] outputs you can if you wish to specify
+[00:12:27] four outputs of the image and then we
+[00:12:29] can select the images we want and then
+[00:12:31] display it I've done videos like that
+[00:12:33] before on the channel where I show you
+[00:12:34] how you create a a dice kind of system
+[00:12:37] where we can also roll it just for
+[00:12:38] Simplicity I'm just picking one here and
+[00:12:41] we're going to roll with that one but if
+[00:12:42] you want full videos on how to do that
+[00:12:44] let me know that down below but that's
+[00:12:45] something we can do and then we
+[00:12:47] summarize some key points like no
+[00:12:48] additional text the response should uh
+[00:12:50] contain only the Json object blah blah
+[00:12:52] blah and then guys crucially example
+[00:12:54] output this is an example of what I want
+[00:12:57] in full all looks like and this some
+[00:12:59] notes about be precise be blah blah blah
+[00:13:01] all that beautiful stuff so come back
+[00:13:02] over to our new scenario and I'm going
+[00:13:03] to paste in the text like so except for
+[00:13:05] this time let's just give it the stoic
+[00:13:07] caption quote that we've got here come
+[00:13:09] over here get rid of that come down and
+[00:13:11] where's our stoic quote beautiful okay
+[00:13:14] and then we're going to click okay Ace
+[00:13:16] all right so we're going to call this
+[00:13:17] one here we'll call this one
+[00:13:22] flux prompt generator which sounds
+[00:13:25] really futuristic doesn't it actually
+[00:13:27] sounds very futuristic a little fire
+[00:13:29] fire energy beautiful okay so what do we
+[00:13:31] need to do next well the next thing we
+[00:13:32] want to do is we're going to make a
+[00:13:34] request from flux now where are we doing
+[00:13:36] that of course guys we're doing this
+[00:13:37] over on replicate decom now replicate
+[00:13:39] decom is just a great place that enables
+[00:13:41] us to get API access to all these cool
+[00:13:43] things we can see on our dashboard again
+[00:13:45] if you want whether you want to do your
+[00:13:46] own you know particular thing or you
+[00:13:48] want to use this it's really
+[00:13:49] straightforward to do so you can click
+[00:13:50] on these images and have a quick look at
+[00:13:51] everything that's designed uh it only
+[00:13:53] exists for like a day or so so you have
+[00:13:55] to use it pretty quickly so what we're
+[00:13:57] doing is we're using this API so let's
+[00:13:58] head back over now and you don't need to
+[00:13:59] worry about the specifics let's just
+[00:14:01] grab the thing that we need so we've got
+[00:14:04] create an image so let's have look what
+[00:14:05] we've got beautiful okay so to do this
+[00:14:07] all we do is we come up here I'm going
+[00:14:09] to move this up so we know exactly the
+[00:14:10] difference HTTP we're going to go make a
+[00:14:13] request like so this one instead of post
+[00:14:15] it's going to be uh instead of get it's
+[00:14:17] going to be post for the URL we're going
+[00:14:18] to put in this one here which is apir
+[00:14:20] replicate decom V1 predictions let's go
+[00:14:22] down and for headers guys the only
+[00:14:24] header we need for this really is just
+[00:14:26] your API key which in my case we'll just
+[00:14:28] grab so you put in authorization header
+[00:14:30] and then the value which is the API key
+[00:14:31] and then guys come down body type is
+[00:14:33] going to be raw content type is going to
+[00:14:35] be Json application and then the request
+[00:14:37] content is just going to be the output
+[00:14:40] from the flun flux prompt generator I'm
+[00:14:42] going to never get tired of saying that
+[00:14:44] I think that's great why is it just the
+[00:14:45] output of that because this is actually
+[00:14:48] creating it for us in Json so we're
+[00:14:50] going to call this one here we'll call
+[00:14:52] this one image generator okay let's go
+[00:14:54] image generator and what would be a cool
+[00:14:57] what would be cool what would be a cool
+[00:14:59] image for that let's go for like I don't
+[00:15:01] know maybe celebratory mergy I like that
+[00:15:03] cool and then what we'll do guys let's
+[00:15:04] just run the Whole Thing Once together
+[00:15:06] so let's come over incremental function
+[00:15:08] will give us a number that's giving us
+[00:15:09] what the number four we've grabbed
+[00:15:11] number four the flux prompt generator
+[00:15:12] then is then creating a unique prompt
+[00:15:14] for us gener that image and now it's
+[00:15:16] sent it straight over so look if I come
+[00:15:18] over now to our dashboard check this out
+[00:15:19] guys if I refesh refresh replicate it's
+[00:15:22] now running and when that's complete we
+[00:15:23] should see this image that we designed
+[00:15:26] of me in that particular style which I
+[00:15:27] think is going to be pretty cool guys
+[00:15:29] just like that 11.1 seconds and we're in
+[00:15:31] so let's check out what it looks like
+[00:15:32] all right man this pretty intense image
+[00:15:34] man I'm in the Hills I'm ready for
+[00:15:36] battle and it is ready for raw so we get
+[00:15:38] this cool image in the exact same style
+[00:15:39] which is pretty sick and what do we do
+[00:15:41] guys we come back over then and the next
+[00:15:43] thing we want to do then is to download
+[00:15:44] that image and bring it back into our
+[00:15:46] scenario so we're going to click here
+[00:15:48] we're going to click on first of all
+[00:15:50] what we want to do guys is we need to
+[00:15:51] add a sleep module okay so come down for
+[00:15:53] sleep and I'm want to add like I don't
+[00:15:56] know let's just give it 45 seconds to be
+[00:15:57] safe but if you run into automatically
+[00:15:59] just make it you may as well make it
+[00:16:00] like a few minutes cuz it doesn't make a
+[00:16:02] difference for you and now that just
+[00:16:04] gives it time to create the image now if
+[00:16:05] you create four images you can look
+[00:16:07] through sometimes it will be hit and
+[00:16:08] miss sometimes you see one that's that's
+[00:16:10] amazing and others will be what's it
+[00:16:11] with four You'll Always Find a great one
+[00:16:13] but to be honest with you the quality
+[00:16:14] and consistency is getting a lot better
+[00:16:16] with this sort of stuff and it's very
+[00:16:17] cool so look we've got tools the next
+[00:16:19] thing we need to do is grab it so to
+[00:16:21] grab it guys all I want to do is come
+[00:16:22] over I want you to clone this okay I
+[00:16:24] want you to bring it over here instead
+[00:16:25] of image generator we going to call it
+[00:16:27] download image
+[00:16:29] oops oh my goodness make is misbehaving
+[00:16:32] today I don't know if it's because I'm
+[00:16:32] in LA or what's going on but makeer is
+[00:16:34] not make is not having a great time
+[00:16:36] today okay so
+[00:16:38] download you know we say is cool to be
+[00:16:40] in LA because the sunshine man we don't
+[00:16:42] get temperatures like this at the UK at
+[00:16:43] the moment I'll be honest with you it's
+[00:16:45] uh it's quite a funny one right right
+[00:16:47] come down download image cool all right
+[00:16:49] sweet so what do we do all we then do
+[00:16:51] now guys is we click on it instead of
+[00:16:53] post I want you to put get and crucially
+[00:16:55] guys on the image generator just make
+[00:16:57] sure that you click on this F response
+[00:16:59] otherwise you may SLE a little bit now
+[00:17:01] what do we do we're going to come here
+[00:17:02] we're going to copy this we're going to
+[00:17:04] clown it and I want you to bring it over
+[00:17:05] here okay we're going to clone it here
+[00:17:07] we're going to right click on it I'm
+[00:17:07] going to call this one
+[00:17:09] image
+[00:17:11] downloader like so beautiful let's give
+[00:17:13] it a nice a nice mightbe down down for
+[00:17:16] download what do you think okay I like
+[00:17:18] that click on image downloader and then
+[00:17:20] in the URL guys what I want you to put
+[00:17:21] is to come down and find image generator
+[00:17:24] we're going to look at import where is
+[00:17:26] it now I believe it's down here URLs and
+[00:17:28] we're going to put the get okay values
+[00:17:31] the same authorization same and instead
+[00:17:33] of post it is going to be get then at
+[00:17:35] the bottom guys just get rid of this
+[00:17:36] request content pass respon is okay then
+[00:17:39] click okay and beautiful so now we have
+[00:17:41] we've got the quotes we've downloaded
+[00:17:43] into Sara we've created an incredible
+[00:17:45] promt that's exactly in line with what
+[00:17:47] we want and once we've done that guys
+[00:17:49] we've generated the image uh We've
+[00:17:51] downloaded the image now the next thing
+[00:17:53] want to do is turn that image into a
+[00:17:56] really cool video so how do we actually
+[00:17:57] do that well for this you need to head
+[00:17:59] over to something called Luma Labs dream
+[00:18:01] machine and I I love this website by the
+[00:18:03] way I think it's absolutely gorgeous
+[00:18:05] what a phenomenal website this is so
+[00:18:06] what you going to do guys you're going
+[00:18:07] to come and start building the top right
+[00:18:08] hand side you going have your API Keys
+[00:18:10] now create and grab an API key this is
+[00:18:13] so simple it's literally ridiculous so
+[00:18:16] create an API key grab it and I want to
+[00:18:18] come back over to the scenario now in
+[00:18:20] the scenario here let's have a quick
+[00:18:21] look this creative video what do we need
+[00:18:24] to hi have in there so for this one guys
+[00:18:25] once again we're going to add a new
+[00:18:27] module it's going to be http as you may
+[00:18:29] remember and it's going to be make a uh
+[00:18:32] request let's have a look make request
+[00:18:34] come down now for youl guys we're going
+[00:18:36] to put this one here which is Luma laabs
+[00:18:37] AI dream machine V1
+[00:18:40] generations and the method is going to
+[00:18:42] be post we want two headers the first
+[00:18:43] one is going to be accept and this is
+[00:18:46] going to be application sljs and the
+[00:18:49] next header is going to be API key so
+[00:18:50] it's authorization and then guys it's
+[00:18:52] barer and then basically your API key so
+[00:18:55] it's beer space your API key okay that's
+[00:18:58] how that works and then we to come down
+[00:18:59] add a header this is going to be content
+[00:19:02] type and the value will be application
+[00:19:05] SL Json now for the bearer I'm just
+[00:19:08] going to quickly grab my API key over
+[00:19:09] here now body type is going to be raw
+[00:19:12] content type is going to be Json and
+[00:19:14] then for request content guys you want
+[00:19:15] to write something like this now if
+[00:19:16] you're in the community loading this
+[00:19:18] it'll all be prepopulated so you can
+[00:19:19] just substitute the bits basically we're
+[00:19:21] going to give it a prom now the the bits
+[00:19:24] that I've played along with it like I I
+[00:19:27] think the best way for this this is
+[00:19:29] since it's not well for the stoic thing
+[00:19:30] I didn't want the guy like you know
+[00:19:32] doing all this crazy stuff I wanted some
+[00:19:33] movement but I wanted really the
+[00:19:35] movement to be centered in the
+[00:19:36] background so in the prompt I said look
+[00:19:37] I want a person standing still and
+[00:19:39] centered in the foreground remaining
+[00:19:40] completely motionless whilst the
+[00:19:42] background smoothly animates your
+[00:19:44] Dynamic and varying movements so
+[00:19:46] basically play around with this have a
+[00:19:47] little fun with this see what you like
+[00:19:49] and find what works best for you uh we
+[00:19:51] specified type as image by the way if
+[00:19:52] you just want to create like a video
+[00:19:55] directly from text you can do that the
+[00:19:58] only reason we've added the image
+[00:19:59] creation image downloader is because we
+[00:20:01] want an image of us we want a video of
+[00:20:03] us right text a video of us which is so
+[00:20:05] cool that's why we've done this if you
+[00:20:06] don't want that it's a slightly sh
+[00:20:08] slightly different prompt but because
+[00:20:09] we're going to give it an image we say
+[00:20:11] hey here's the image turn it into a
+[00:20:12] video please and thank you very much now
+[00:20:15] the URL what do we do we're going to get
+[00:20:16] rid of that little guy and we're going
+[00:20:18] to put it in with the image downloader
+[00:20:20] which we haven't got yet okay so what do
+[00:20:22] we do then in that case I'm just going
+[00:20:23] to put test very quickly aspect ratio is
+[00:20:26] really key par response yes we're going
+[00:20:28] to come down going to click okay then
+[00:20:29] I'm going to unlink this real quick all
+[00:20:32] right and I'm going to run the scenario
+[00:20:33] ones the reason I'm running the scenario
+[00:20:34] ones is just so we can get the actual
+[00:20:35] text from the image downloaded that we
+[00:20:37] can then Force into the HTTP now guys
+[00:20:41] the applications is pretty s sick I mean
+[00:20:43] most people don't even on this planet
+[00:20:44] don't know the fact that you can create
+[00:20:45] an image of yourself let alone the fact
+[00:20:47] we can do videos and the ones I've seen
+[00:20:49] are absolutely crushing it and it just
+[00:20:52] helps you stand out so much more I think
+[00:20:53] having that really cool thing but you
+[00:20:55] know image Generation video generation
+[00:20:57] is one thing we can do things like gifts
+[00:20:58] we can do literally whatever we like
+[00:21:00] cool so now I've run this one here at
+[00:21:01] the end let's get down to data and see
+[00:21:03] what we've got and there should be a
+[00:21:04] beautiful output image for us so let's
+[00:21:06] have a quick look at this one let's get
+[00:21:08] rid of this guy have a quick look there
+[00:21:10] we go bro I'm out there I'm jacked I'm
+[00:21:12] having a good time and isn't it this
+[00:21:14] really cool by the way how it really
+[00:21:15] hits that stoic thing so I'm curious to
+[00:21:17] see how it's going to turn this into an
+[00:21:19] image I like the watch by the way this
+[00:21:20] is really good inspiration to get the
+[00:21:22] watch sorted out oh my goodness all
+[00:21:23] right cool then we're going to link
+[00:21:25] these guys together now I'm just going
+[00:21:26] to clone this and reason I'm doing that
+[00:21:27] is because
+[00:21:29] it's like it won't pull through the data
+[00:21:31] automatically sometimes so we're going
+[00:21:32] click on it and right click click on
+[00:21:33] rename we'll call this one
+[00:21:36] video
+[00:21:38] generation and for that there should be
+[00:21:40] maybe stars in the eyes to represent how
+[00:21:42] epic this whole thing is like so
+[00:21:44] incredible click on video generation and
+[00:21:46] video generation guys we're going to
+[00:21:47] come down we've got our URL so we get
+[00:21:49] rid of this guy we're going to come over
+[00:21:51] and it is going to be let's have a look
+[00:21:52] I think it's you no it's not it's output
+[00:21:55] I think it's just this here like that
+[00:21:57] perfect then guys weome to down and
+[00:21:59] we're going to click okay beautiful now
+[00:22:01] guys before we send over the request to
+[00:22:02] create the video sometimes the output
+[00:22:04] from this image downloader can come with
+[00:22:06] blads of crazy different characters and
+[00:22:08] things so what we want to do is to set
+[00:22:10] some variables just to keep it crisp
+[00:22:12] clear and sharp so you're going to come
+[00:22:13] down to tools I want you to come on to
+[00:22:15] set multiple variables I want you to add
+[00:22:18] it here okay I want you to click on the
+[00:22:20] set multiple variables add item and here
+[00:22:23] variable value going to come down and
+[00:22:24] we're going to enter this code I'll put
+[00:22:26] it down in the description so you can
+[00:22:27] grab it and here guys guys this data
+[00:22:29] output is literally going to come down
+[00:22:31] data and you're just clicking this here
+[00:22:33] click this output button right there and
+[00:22:34] it's done variable name we're just going
+[00:22:36] to call this one something like I don't
+[00:22:38] know image URL now the only reason we
+[00:22:40] need to do this is sometimes it gets
+[00:22:41] quirky sometimes it gets better at place
+[00:22:43] and likes to do some crazy wacky stuff
+[00:22:45] so we come down here we'll link these
+[00:22:46] together and we're just going to run
+[00:22:47] these fre of sequence cuz we bought this
+[00:22:49] all the way over which you can do by the
+[00:22:51] way you can see if you just want to
+[00:22:52] check out certain things that's good
+[00:22:53] that's locked in but of course before we
+[00:22:55] do that we need to come down to video
+[00:22:56] generation we need to come down and in
+[00:22:58] you section we just type in image URL
+[00:23:00] and then we click okay now let's run the
+[00:23:01] scenario together and just like guys the
+[00:23:03] video generation has been complete which
+[00:23:05] I think is pretty epic now this is going
+[00:23:07] to be building in the background and as
+[00:23:09] you can see we've got data and we should
+[00:23:11] have an ID perfect that ID we're now
+[00:23:13] going to go ahead and grab so what we
+[00:23:15] want to do next is we want to add it in
+[00:23:16] another sleep module let's connect these
+[00:23:18] together let's duplicate this guy bring
+[00:23:21] him in now the reason we adding in a
+[00:23:22] sleep module guys is we just need to
+[00:23:24] give it time to generate the video and
+[00:23:26] then we're going to go ahead download
+[00:23:28] and grab it so look I come back over and
+[00:23:31] we've got this downloaded video so let
+[00:23:32] me show you exactly what that looks like
+[00:23:33] and then we got two steps and then we're
+[00:23:35] basically done all right we got the URL
+[00:23:37] we basically then just substitute it out
+[00:23:39] for The Unique ID that we get from the
+[00:23:41] creative video so let me show you
+[00:23:42] exactly what that looks like let copy
+[00:23:44] this guy over and show you brilliant we
+[00:23:46] come down here we're going to on HTTP
+[00:23:48] now we're going to go make a request
+[00:23:50] which is right here beautiful method is
+[00:23:52] going to be get the URL is going to be
+[00:23:54] Luma Labs AI dream machine V1
+[00:23:56] generations and then we need to give it
+[00:23:58] a unique ID which you can see has been
+[00:24:00] generated I can sh you pulse left right
+[00:24:02] now from that and that basically said go
+[00:24:04] and grab that particular ID that we just
+[00:24:06] created like that perfect all right we
+[00:24:08] just rename this one download video and
+[00:24:09] guys just like before add exactly the
+[00:24:11] same headers in terms of application
+[00:24:13] your API key and also the content type
+[00:24:16] and name body type is raw content type
+[00:24:18] is Json pass response yes then we click
+[00:24:21] okay so we can actually see the video
+[00:24:22] now if I come here for example let me
+[00:24:24] grab where is the ID if I come down just
+[00:24:27] to check this is working going to copy
+[00:24:29] this ID come down let's set the Sleep
+[00:24:31] module just to 4 seconds all right come
+[00:24:33] down here now let me unlink these and
+[00:24:35] we'll test these together let's grab the
+[00:24:38] start button and bring that over
+[00:24:41] beautiful now check this out guys I'm
+[00:24:42] going to run this one
+[00:24:43] once that's absolutely fine in fact what
+[00:24:46] I'm going to do is going to come here
+[00:24:48] I'm just going to enter that in like so
+[00:24:51] all right sweet and then we can just
+[00:24:52] pretty much bring this over let me
+[00:24:54] unlink okay beautiful let's bring him
+[00:24:56] over we come down let's run this one one
+[00:24:59] beautiful it says that it's got it let's
+[00:25:00] have a quick look at what it's done
+[00:25:02] query string there we go let's have a
+[00:25:04] look let's it data cookie headers scroll
+[00:25:06] down I find we got assets there's the
+[00:25:08] video so let's copy this link and see
+[00:25:10] what we're dealing with I'm going to
+[00:25:10] come over here then I load it up and
+[00:25:12] here we go guys it's added motion to the
+[00:25:14] video now I've said to keep me quite
+[00:25:16] still and keep everything in background
+[00:25:17] so it's added very little animation but
+[00:25:19] we can ramp that up and change the
+[00:25:21] prompt when we go through the whole
+[00:25:22] system in the final video but this is
+[00:25:24] really cool actually I think this is
+[00:25:25] dope so we can ask you see my hand like
+[00:25:28] moving across here in the shadow guy
+[00:25:30] dude this is sick so we've actually now
+[00:25:31] gone from text to video of you which I
+[00:25:34] think is pretty cool we could have you
+[00:25:35] like drinking a beer we could have you
+[00:25:36] do anything that you want to so I'd
+[00:25:38] probably up the animation actually now
+[00:25:40] looking at this stuff but that is pretty
+[00:25:41] flipping phenomenal now what do we do
+[00:25:43] let's bring this all the way back over
+[00:25:45] so we can start the beginning of the
+[00:25:46] scenario connect the sleep I'd say we'll
+[00:25:48] give this one a delay of let's give this
+[00:25:51] one a delay of 75 seconds beautiful and
+[00:25:54] then guys finally what we want to do
+[00:25:56] next is add this to plastic okay so to
+[00:25:58] do that we're going to head over to
+[00:25:59] plaid.com let's go check that out right
+[00:26:01] now so head over to pla. apppp and click
+[00:26:03] on get started for free or create your
+[00:26:05] own account which is pretty cool and
+[00:26:07] then we're going to log in which is
+[00:26:08] going to be pretty phenomenal now what
+[00:26:10] plastic will enable us to do is create a
+[00:26:12] template okay so you can add a new
+[00:26:14] project add an existing one this is just
+[00:26:15] one that I made earlier it's very
+[00:26:17] straightforward you're going to
+[00:26:18] absolutely love this okay going to come
+[00:26:20] down here we go so on this page guys
+[00:26:22] let's create a new template together
+[00:26:23] it's going to come down here and let's
+[00:26:25] click on this one here we've got all
+[00:26:26] these different beautiful sizes and
+[00:26:27] things so so let's go down and let's get
+[00:26:30] a unique one so I'm going to come down
+[00:26:31] to story which is in the dimensions we
+[00:26:33] want which is 1080 by 1920 I'm going to
+[00:26:35] click on a random one I'm going to click
+[00:26:36] on Create and this will start loading up
+[00:26:38] something cool for us which is great
+[00:26:40] which is what we like to see now
+[00:26:42] basically this is so cool because you
+[00:26:43] can actually create text and specify
+[00:26:46] multiple elements of text so I could
+[00:26:48] have the quote at the top I could have a
+[00:26:50] secondary quote down below I could have
+[00:26:52] anything I want to okay so let's just
+[00:26:54] say for example I want to get rid of
+[00:26:56] everything like so this this will be our
+[00:26:58] quo which we can put whatever we want to
+[00:27:00] so why not have it let's centralize this
+[00:27:02] on the right hand side let's put this in
+[00:27:04] the middle let's change the and again
+[00:27:06] you can go crazy with this I'm just
+[00:27:07] showing you it for instance let's do
+[00:27:09] monster bold beautiful let's give it a
+[00:27:13] border uh let's make that border black
+[00:27:16] and then let's make the actual color of
+[00:27:18] the text white okay and upper te text
+[00:27:21] let's just have let no transformation so
+[00:27:23] just give it to me as it is and maybe
+[00:27:25] want to increase the size a little bit
+[00:27:26] let's make the size like 55
+[00:27:28] okay cool and then let's say we want it
+[00:27:30] at the top but again you play around
+[00:27:31] with this as you want to and have a
+[00:27:32] little bit of fun which is sweet so then
+[00:27:34] come down on the left hand side to add a
+[00:27:36] picture layer and again just shape this
+[00:27:38] up as you would like to let's come down
+[00:27:40] we can set the size so size is going to
+[00:27:42] be 1080 by 1920 which is perfect and
+[00:27:45] then we'll just overlay that wonderfully
+[00:27:47] put it underneath the text let's call
+[00:27:49] this one uh Build Together stoic then
+[00:27:54] click okay beautiful I think that's
+[00:27:56] great and then what do we do guys we
+[00:27:57] come down and again
+[00:27:58] you could do as many different text
+[00:28:00] elements or image elements as you want
+[00:28:01] to and you can see the possibilities of
+[00:28:03] how we customize that I then click save
+[00:28:05] okay Build Together the step great now
+[00:28:06] let's head back over then to our
+[00:28:07] scenario we're going to add a button
+[00:28:09] here come up we're going to type in the
+[00:28:10] beautiful blasted like so going to click
+[00:28:12] on create a video from a
+[00:28:14] template add a new plastic connection
+[00:28:17] you come back to the homepage on plastic
+[00:28:18] guys come down to API tokens you'll see
+[00:28:20] a private token down here at the bottom
+[00:28:21] when you go ahead and copy that and then
+[00:28:22] we enter the API token here and if I
+[00:28:24] select for example romantic for instance
+[00:28:26] I come down I've got video URL I can
+[00:28:28] come down and let's think it is this one
+[00:28:30] I believe cool and then text layer we
+[00:28:31] come down and let's have a look at the
+[00:28:33] text now the text itself is going to be
+[00:28:36] all the way from a table so I believe
+[00:28:38] that is going to be the stoic quote that
+[00:28:41] we want then we're going to click okay
+[00:28:44] beautiful and then after that guys we
+[00:28:45] can if we wish just post it to Instagram
+[00:28:46] or you can then add this back onto air
+[00:28:48] table by adding a routin it's basically
+[00:28:50] our preference but just for argument
+[00:28:52] sake let's say I want to post that onto
+[00:28:53] Instagram uh and I'll say Instagram for
+[00:28:55] business I would then say create a real
+[00:28:58] post both real and reel which is pretty
+[00:29:01] cool video orl is then simply going to
+[00:29:03] be the video output URL from plased
+[00:29:06] which I think is pretty cool we scroll
+[00:29:07] down caption is going to be all the way
+[00:29:09] down at the bottom from let's have a
+[00:29:11] look it is the Instagram caption cover
+[00:29:14] frame don't worry about location ID
+[00:29:15] don't worry about come back click here
+[00:29:16] okay now we're going to save this now
+[00:29:18] let's run this one all the way through
+[00:29:20] now plased wants one more thing from us
+[00:29:22] what is it want let's have a look I
+[00:29:24] think it's fine I think it's just
+[00:29:25] getting a little bit dramatic for no
+[00:29:26] reason at all when come back out over
+[00:29:28] let from the scenario and see the entire
+[00:29:30] output together beautiful so we've done
+[00:29:31] that flux prompt generator has done it
+[00:29:33] we've now created an image this is now
+[00:29:34] going to sleep and when it's ready we're
+[00:29:36] going to grab the image and then we're
+[00:29:37] going to be exactly ready to go now be
+[00:29:39] in mind I would set this to run let's
+[00:29:41] say you do a post today or every other
+[00:29:43] day you just set the Cadence down here
+[00:29:45] and one by one it will keep on working
+[00:29:47] its way down the list and basically just
+[00:29:49] posting it as you go it is literally
+[00:29:51] that crazy phenomenal sow the video has
+[00:29:52] been generated and it's been downloaded
+[00:29:54] pl's now adding text to it which I think
+[00:29:57] is pretty cool and then if I check out
+[00:29:58] the actual video we've got me we got the
+[00:29:59] text above my head we've got some
+[00:30:01] movement in the background and guys I
+[00:30:02] hope you can see the applications of how
+[00:30:04] crazy it is now we can move text we
+[00:30:06] could make it shorter we could make it
+[00:30:07] bigger we could put it down below we
+[00:30:09] could make me more animated this one's a
+[00:30:11] very simple one you could be doing dance
+[00:30:12] moves whatever you like but any case
+[00:30:14] guys I really hope you enjoyed the video
+[00:30:16] St a letter love and automation from LA
+[00:30:18] and I'll see you in the next one

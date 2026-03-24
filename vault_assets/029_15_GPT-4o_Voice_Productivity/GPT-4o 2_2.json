@@ -1,0 +1,610 @@
+{
+    "name": "GPT 4o (2/2)",
+    "flow": [
+        {
+            "id": 3,
+            "module": "apify:finishedActorRuns",
+            "version": 1,
+            "parameters": {
+                "__IMTHOOK__": 550047
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTHOOK__": {
+                            "label": "My Finished Actor Run webhook",
+                            "data": {
+                                "editable": "false"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTHOOK__",
+                        "type": "hook:apify",
+                        "label": "Webhook",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "apify:fetchDatasetItems",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1624764
+            },
+            "mapper": {
+                "datasetId": "{{3.defaultDatasetId}}",
+                "type": "clean",
+                "format": "json",
+                "limit": "100"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Apify connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "apify"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "type": {
+                            "mode": "chose",
+                            "label": "Clean"
+                        },
+                        "format": {
+                            "mode": "chose",
+                            "label": "JSON"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:apify",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "datasetId",
+                        "type": "text",
+                        "label": "Dataset ID",
+                        "required": true
+                    },
+                    {
+                        "name": "type",
+                        "type": "select",
+                        "label": "Data transformation",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "clean",
+                                "simplified",
+                                "none"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "format",
+                        "type": "select",
+                        "label": "Format",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "json",
+                                "csv",
+                                "html",
+                                "xml",
+                                "rss",
+                                "xlsx"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "validate": {
+                            "max": 100000,
+                            "min": 1
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "type": "uinteger",
+                        "label": "Offset",
+                        "validate": {
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "builtin:BasicFeeder",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "array": "{{2.data}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "array": {
+                            "mode": "edit"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "array",
+                        "type": "array",
+                        "label": "Array",
+                        "mode": "edit",
+                        "spec": []
+                    }
+                ]
+            }
+        },
+        {
+            "id": 10,
+            "module": "util:TextAggregator",
+            "version": 1,
+            "parameters": {
+                "rowSeparator": "\n",
+                "feeder": 8
+            },
+            "mapper": {
+                "value": "{{8.text}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "rowSeparator": {
+                            "label": "New row"
+                        }
+                    },
+                    "extra": {
+                        "feeder": {
+                            "label": "Iterator [8]"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "rowSeparator",
+                        "type": "select",
+                        "label": "Row separator",
+                        "validate": {
+                            "enum": [
+                                "\n",
+                                "\t",
+                                "other"
+                            ]
+                        }
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "value",
+                        "type": "text",
+                        "label": "Text"
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 12,
+            "module": "anthropic-claude:createAMessage",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1528134
+            },
+            "mapper": {
+                "model": "claude-3-opus-20240229",
+                "max_tokens": "4000",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": "As a language model, your role is to be a Productivity Assistant. Your purpose is to analyze conversations and transform them into clear, actionable to-do lists that help people stay organized and focused on their tasks.\n\nWhen a conversation is provided to you, follow these steps:\n\n1. Carefully read through the conversation and identify all the tasks, action items, and responsibilities mentioned.\n\n2. Create a formatted list of these to-do items, ensuring that each item is clear, concise, and actionable. Use direct language and avoid any ambiguity.\n\n3. Add a relevant emoji to each to-do item to provide visual context. Choose emojis that best represent the nature or theme of the task.\n\n4. Evaluate the importance and urgency of each to-do item based on the context of the conversation. Use the following emoji system to indicate the priority of each item:\n   - 🟢 Green emoji: Low priority or non-urgent tasks\n   - 🟠 Orange emoji: Medium priority tasks or those with approaching deadlines\n   - 🔴 Red emoji: High priority or urgent tasks that require immediate attention\n\n5. Arrange the to-do list in order of priority, with the most urgent and important items at the top. This will help the user tackle their tasks in the most efficient order. \n\n6. If any to-do item requires additional context or clarification, add a brief note in parentheses next to the item.\n\n7. Once the to-do list is complete, present it to the user in a clear and visually appealing format. Ensure that the list is easy to read and understand.\n\nRemember, as a Productivity Assistant, your goal is to simplify complex conversations into organized, prioritized lists that enable users to take action and stay on top of their responsibilities. Maintain a professional and efficient tone throughout the process.\nContent: {{10.text}}\n"
+                            }
+                        ]
+                    }
+                ],
+                "metadata": {},
+                "temperature": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Anthropic Claude connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "anthropic-claude"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "claude-3-opus-20240229"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    },
+                                    "content": {
+                                        "mode": "chose",
+                                        "items": [
+                                            {
+                                                "type": {
+                                                    "mode": "chose",
+                                                    "label": "Text"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "stop_sequences": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:anthropic-claude",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "uinteger",
+                        "label": "Max Tokens",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true,
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": [
+                                        {
+                                            "label": "User",
+                                            "value": "user",
+                                            "nested": [
+                                                {
+                                                    "name": "content",
+                                                    "spec": {
+                                                        "spec": [
+                                                            {
+                                                                "help": "You can send image content blocks starting with Claude 3 models.",
+                                                                "name": "type",
+                                                                "type": "select",
+                                                                "label": "Type",
+                                                                "options": [
+                                                                    {
+                                                                        "label": "Text",
+                                                                        "value": "text",
+                                                                        "nested": [
+                                                                            {
+                                                                                "help": "Content of the message on behalf of the selected **Role** .",
+                                                                                "name": "text",
+                                                                                "type": "text",
+                                                                                "label": "Text",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "label": "Image",
+                                                                        "value": "image",
+                                                                        "nested": [
+                                                                            {
+                                                                                "name": "source",
+                                                                                "spec": [
+                                                                                    {
+                                                                                        "help": "File name, including the extension, for example, `image.jpg`.",
+                                                                                        "name": "filename",
+                                                                                        "type": "filename",
+                                                                                        "label": "Filename",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:name",
+                                                                                        "extension": [
+                                                                                            "jpeg",
+                                                                                            "jpg",
+                                                                                            "png",
+                                                                                            "gif",
+                                                                                            "webp"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "help": "Binary data of the image. For example, you can retrieve the binary data of your image using the **HTTP: Get a file** module.",
+                                                                                        "name": "data",
+                                                                                        "type": "buffer",
+                                                                                        "label": "Data",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:data"
+                                                                                    }
+                                                                                ],
+                                                                                "type": "collection",
+                                                                                "label": "Source",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "required": true
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Content"
+                                                    },
+                                                    "type": "array",
+                                                    "label": "Content",
+                                                    "labels": {
+                                                        "add": "Add content"
+                                                    },
+                                                    "required": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Assistant",
+                                            "value": "assistant",
+                                            "nested": [
+                                                {
+                                                    "help": "If the request ends with an assistant turn, then the response content will continue directly from that last turn.",
+                                                    "name": "content",
+                                                    "type": "text",
+                                                    "label": "Content",
+                                                    "required": true
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "system",
+                        "type": "text",
+                        "label": "System Prompt"
+                    },
+                    {
+                        "name": "metadata",
+                        "type": "collection",
+                        "label": "Metadata",
+                        "spec": [
+                            {
+                                "name": "user_id",
+                                "type": "text",
+                                "label": "User ID"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "stop_sequences",
+                        "type": "array",
+                        "label": "Stop Sequences",
+                        "spec": {
+                            "type": "text",
+                            "label": "Stop Sequence",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "uinteger",
+                        "label": "Top K"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 11,
+            "module": "google-docs:appendADocument",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "choose": "dropdown",
+                "destination": "drive",
+                "document": "/1nFeluMcw6vpP8Y0NfXjot5-hSrwp3oFG8FcM9Rg7TRE",
+                "select": "document",
+                "text": "{{12.textResponse}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1500,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "Google Connection (itssssjaaaack@gmail.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "choose": {
+                            "label": "By Dropdown"
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        },
+                        "document": {
+                            "path": [
+                                "Productivity Tracker 💎"
+                            ]
+                        },
+                        "select": {
+                            "label": "By appending to the body of document"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "choose",
+                        "type": "select",
+                        "label": "Select a Document",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "mapping",
+                                "dropdown"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "document",
+                        "type": "file",
+                        "label": "Document ID",
+                        "required": true
+                    },
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Insert a Paragraph",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "location",
+                                "document",
+                                "segment"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Appended Text",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

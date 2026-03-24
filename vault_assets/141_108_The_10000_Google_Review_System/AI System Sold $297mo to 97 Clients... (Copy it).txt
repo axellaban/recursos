@@ -1,0 +1,470 @@
+[00:00:00] Imagine an AI system that would book
+[00:00:02] appointments for your business and
+[00:00:04] actually create SEO optimized five-star
+[00:00:07] Google reviews and was 100% automated.
+[00:00:10] Now, this system is so powerful that
+[00:00:11] Jonathan and my community has sold over
+[00:00:13] 90 of these to businesses over $300 a
+[00:00:16] month.
+[00:00:16] >> And within the first month, month and a
+[00:00:19] half, we had over 45 customers to this
+[00:00:22] solution at $300 a month.
+[00:00:23] >> And I'll put this entire blueprint down
+[00:00:25] below for you completely for free in the
+[00:00:27] description. And I'm also going to show
+[00:00:28] you in this video how not only do you
+[00:00:30] get SEO optimized reviews, but we're
+[00:00:31] going to touch on how do you create an
+[00:00:33] agent that can answer any review for you
+[00:00:35] automatically, okay? And create
+[00:00:38] literally bespoke reviews based on any
+[00:00:40] email you've ever gotten from that
+[00:00:41] client. So the way that this one works
+[00:00:42] essentially is we have at the front end
+[00:00:44] they need to book an appointment with
+[00:00:46] the business, right? So in this case,
+[00:00:47] let's say that we have a client link.
+[00:00:49] Little hack for you, by the way, is you
+[00:00:50] want to in this tell them what they get
+[00:00:52] out of the appointment and align that
+[00:00:54] with their top three biggest problems if
+[00:00:55] you want So, hey, complete 60 minutes.
+[00:00:57] We're certified, blah, blah, blah. If
+[00:00:58] you don't love it, here's something
+[00:00:59] cool. So, let's just say they want to
+[00:01:00] come down. They want to book in on the
+[00:01:01] 9th of October. They come down here.
+[00:01:03] Then, we capture some key information
+[00:01:05] for the system. So, we have the first
+[00:01:07] name, last name, email, the phone
+[00:01:08] number, a bit about them. This could be
+[00:01:10] you can basically customize this as much
+[00:01:11] as you want to, and I'll show in a sec.
+[00:01:13] And then where we want to send like key
+[00:01:15] information and text messages to. So,
+[00:01:16] what we do in this system, by the way,
+[00:01:18] is we're not only going to send them a
+[00:01:19] text message, we're also going to send
+[00:01:20] them a WhatsApp message as well. So,
+[00:01:22] we're going to have this agent here
+[00:01:23] that's going to talk to them on
+[00:01:24] WhatsApp. output could be SMS if you
+[00:01:26] wish. with go high level and actually
+[00:01:29] identify if they have a positive
+[00:01:31] sentiment. And if they do, and only if
+[00:01:33] they do, do we then ask them to get a
+[00:01:35] review? And if they don't, we're going
+[00:01:36] to capture that feedback in a beautiful
+[00:01:38] table here, which is really cool. And
+[00:01:39] then that can help us improve the system
+[00:01:42] over time because we get feedback from
+[00:01:43] the customers. And we also have this
+[00:01:45] beautiful do not contact field. So if
+[00:01:46] they don't want to hear from us, we also
+[00:01:48] account for that in the system as well.
+[00:01:49] So effectively what happens is they
+[00:01:51] complete this kindly appointment. All
+[00:01:53] right. We then and I'll explain node by
+[00:01:55] node what's happening here. We basically
+[00:01:56] then create a record in our air table.
+[00:01:59] Could also be Google sheets. Cool. So
+[00:02:01] then what happens is they booked an
+[00:02:02] appointment. We're thinking, cool, this
+[00:02:04] is really freaking decent. So I've got
+[00:02:05] this appointment here. It's Harry steak.
+[00:02:07] He loves steak. Bit about information.
+[00:02:08] What happened then? So I'm going to come
+[00:02:10] over here and I'm going to execute this
+[00:02:11] workflow. Beautiful. It's got Harry
+[00:02:13] Stake wants to book an appointment with
+[00:02:14] us at this time. They then click
+[00:02:15] schedule event like so. And this will
+[00:02:17] then trigger the beautiful anything
+[00:02:18] scenario for us. So that's confirmed.
+[00:02:20] You're meeting with Jack Roberts.
+[00:02:22] Awesome. And now once it's done that
+[00:02:23] guys, we can then redirect them to a
+[00:02:25] completely different page if we want to.
+[00:02:27] Mine's taking a second because my whole
+[00:02:29] internet here is like 2G's. So they've
+[00:02:31] made the event. What we then do here in
+[00:02:33] this thing is we just extract key
+[00:02:35] information. We collect their name,
+[00:02:36] their email, their number, uh a little
+[00:02:38] bit about them, and then the
+[00:02:39] appointment. And then what we do is
+[00:02:41] create a contact in our CRM, our go
+[00:02:43] highle database, which is really really
+[00:02:46] freaking cool. And then what we do is
+[00:02:47] basically create a record in air table,
+[00:02:49] which is very decent. And the cool thing
+[00:02:51] we do with Air Table here guys, I'll
+[00:02:52] just show you if I pull this up and we
+[00:02:54] can see it's dynically pulled in harist
+[00:02:55] stake. There's his number. Now look what
+[00:02:56] it did to his number. Do you see how it
+[00:02:58] removed that plus stuff? So whenever
+[00:03:00] you're sending text messages to somebody
+[00:03:02] or WhatsApp, one of the things that we
+[00:03:03] need to do in the scenario here is
+[00:03:06] cleanse it. So what you'll notice in the
+[00:03:07] create go high level contact, in fact,
+[00:03:09] if I come down here to create record,
+[00:03:10] the things that I did is I added this
+[00:03:12] additional information around the
+[00:03:13] number. And this basically is just a
+[00:03:15] fancy way of, if you can see, removing
+[00:03:17] the plus and removing any spaces because
+[00:03:19] we want that kind of number
+[00:03:21] architecture. So in the future, we can
+[00:03:23] then manipulate that number to do
+[00:03:25] things. Just you're going to run into
+[00:03:26] this sometimes if you want to send text
+[00:03:27] messages or WhatsApp. And you can do
+[00:03:29] this even if they're not a contact. How
+[00:03:31] freaking cool is that? So we've created
+[00:03:33] them over there, which is fantastic.
+[00:03:34] Now, what's really cool here in this
+[00:03:36] check-in message, guys, when they
+[00:03:38] actually have the appointment at the
+[00:03:39] medical spa in our example of a dentist,
+[00:03:41] what the individual will do at the place
+[00:03:43] is simply come over and tick this as
+[00:03:45] appointment is complete. And every time
+[00:03:46] they book a new appointment, they do
+[00:03:48] that. So, that's part of the system they
+[00:03:49] have. And what that will then do is
+[00:03:51] trigger this scenario here, which is
+[00:03:53] checking message. So, what this one
+[00:03:54] basically does is it checks for the
+[00:03:56] information. As you can see, it's here.
+[00:03:58] And then we have this beautiful if note.
+[00:03:59] And I just want to say as well NA10 with
+[00:04:01] air table triggers is that if you want
+[00:04:04] it to grab information, what you
+[00:04:06] absolutely have to have an air table is
+[00:04:09] this last modified time thing. That is
+[00:04:11] the only field that will trigger your
+[00:04:13] scenario here. So you come back over and
+[00:04:15] basically you just copy the base URL and
+[00:04:17] a table save you a lot of time cuz I
+[00:04:19] played around with this quite a bit and
+[00:04:20] then it will just trigger on last
+[00:04:21] modified time which is very very cool.
+[00:04:23] Cool. Well, then once it's done, we've
+[00:04:24] got this if and this if then basically
+[00:04:26] says, hey, has the appointment been
+[00:04:29] ticked as complete? So, we come down
+[00:04:30] here and as you can see, it's just
+[00:04:31] basically asking, has this section here
+[00:04:34] been ticked as complete? And if it has,
+[00:04:36] it will then proceed for the message.
+[00:04:38] Now, why it's really important here,
+[00:04:39] physical place is ticking, it's happened
+[00:04:41] because we need to trigger that it's
+[00:04:43] happened somehow. So, the only way that
+[00:04:44] any system can possibly know that the
+[00:04:46] thing has happened is that we trigger it
+[00:04:48] in a system either by pushing a button
+[00:04:50] or some other process. So you could do
+[00:04:52] this by an email. It could be anything
+[00:04:53] that you would like to happen. This is a
+[00:04:55] really powerful automation, guys. So you
+[00:04:57] can do one of two things. You can either
+[00:04:58] have a text message exchange or a
+[00:05:00] WhatsApp message exchange. Ideally, you
+[00:05:02] can pepper them on all channels, which
+[00:05:03] is cool. I'm going to show you both and
+[00:05:05] I'm going to show you WhatsApp in more
+[00:05:06] detail. So if we can go text,
+[00:05:08] effectively what happens here is we grab
+[00:05:10] the information. So their name and all
+[00:05:12] we would do guys is come over. So you
+[00:05:13] got full name and we just map these
+[00:05:15] things over. We grab over you can see
+[00:05:16] that's the full name. Awesome. And then
+[00:05:18] we have okay, I've got name there twice.
+[00:05:19] Basically you got the number. So, you
+[00:05:21] come over, you grab the number, you pull
+[00:05:22] that over, you bring over the date of
+[00:05:24] the appointment, and you can take in all
+[00:05:26] this data and send it straight over. And
+[00:05:27] this goes over to the beautiful go high
+[00:05:29] level. I'll put a link down below
+[00:05:30] because you get load of special bonuses
+[00:05:32] if you come via me. They said, "Jack, we
+[00:05:33] want to help you guys out, which is
+[00:05:34] cool." And all we're doing is grabbing
+[00:05:36] this trigger inbound web hook. We're
+[00:05:38] creating the contact if you haven't
+[00:05:39] already. And then what we're effectively
+[00:05:41] doing is sending them an SMS message.
+[00:05:44] So, they're going to get a text message
+[00:05:45] from us, which is really, really
+[00:05:47] freaking cool. And we can codify that.
+[00:05:49] And we can actually specify it based on
+[00:05:51] the user's name. So, hey there username,
+[00:05:52] I'm the founder. I want to reach out
+[00:05:54] personally. Did you have a great
+[00:05:55] experience today? Right? And guys, this
+[00:05:57] literally sent me a text message. You'll
+[00:05:59] see on screen exactly like that by
+[00:06:01] taking my name out and sending me the
+[00:06:03] message. So, we have this now running in
+[00:06:04] go high level. And this can do many. It
+[00:06:06] can literally do anything you want to go
+[00:06:08] high level, which is really freaking
+[00:06:09] cool. And I love it for it SMS. So, we
+[00:06:12] come back down over to the beautiful N8.
+[00:06:14] And in addition to that, we're also
+[00:06:15] sending it to WhatsApp, which is great.
+[00:06:18] And we have this great thing here in
+[00:06:19] UniL to do that. I'm going to put a link
+[00:06:21] on screen for a video where I actually
+[00:06:24] run through step by step exactly how you
+[00:06:26] get everything set up with WhatsApp if
+[00:06:27] you haven't done that already. And one
+[00:06:28] little hack for you guys is if you click
+[00:06:30] into this, if you want to send a
+[00:06:31] WhatsApp mesh to somebody who isn't in
+[00:06:33] your contacts, all you literally do, and
+[00:06:35] this will be in the blueprint down below
+[00:06:36] so you can just grab it, but you add
+[00:06:38] this amp.sap.net
+[00:06:40] plus the number. that will literally
+[00:06:42] enable you to send anybody a WhatsApp
+[00:06:44] message in your business, which I think
+[00:06:46] is really, really freaking powerful and
+[00:06:47] I found that one out. So, I'm super
+[00:06:49] stoked to share it with you. Cool. So,
+[00:06:50] let's think what's happened now. They
+[00:06:51] booked an appointment with us. Great.
+[00:06:52] They've been redirected to something
+[00:06:53] that we have like maybe that's your
+[00:06:55] upsell. So, we booked an appointment.
+[00:06:56] Great. Now, you booked in the med spot.
+[00:06:58] Now, let's get you those five key
+[00:06:59] candles that are going to make you feel
+[00:07:01] relaxed. Or you booked in a hairdressers
+[00:07:02] appointment. Now, let's get you the wax
+[00:07:04] and pade special discount because you
+[00:07:05] booked in. So, we can actually add a
+[00:07:07] redirect on Calendarly, which is really
+[00:07:09] cool because if you come down here, not
+[00:07:11] only can you collect payments and
+[00:07:12] collect information, you can configure
+[00:07:14] everything on the right hand side, which
+[00:07:16] is really cool. Like, we have a
+[00:07:18] description. Again, we talked about
+[00:07:19] hitting the top three pain points. We
+[00:07:20] can add limit buffers and times,
+[00:07:22] different rules. I recommend that you
+[00:07:24] actually specify the slug and I strongly
+[00:07:26] recommend that you add an image to your
+[00:07:28] Calendarly and that you buy if you're
+[00:07:30] going to do this a $10 a month one
+[00:07:31] because otherwise you have this big ugly
+[00:07:34] label that says powered by Calendarly
+[00:07:36] and it doesn't look professional. Then
+[00:07:37] we've got a few things you can do. Ask
+[00:07:38] some questions and then once it's done
+[00:07:40] we can actually redirect them to a
+[00:07:42] completely different page or an upsell
+[00:07:43] and you might as well if they've already
+[00:07:45] built it. That's just an easy way for
+[00:07:47] you to add what we call a profit system
+[00:07:48] into your business that's just going to
+[00:07:49] help you generate more revenue cuz
+[00:07:51] they've already booked it anyway.
+[00:07:52] Beautiful. So, they booked an
+[00:07:53] appointment. We've sent them a check
+[00:07:54] message. Hey, dude. How was your facial
+[00:07:56] today? I hope everything's okay. This is
+[00:07:58] where the five-star review agent worked.
+[00:08:00] And this is so so so freaking cool.
+[00:08:02] Okay, so I'm going to send myself a
+[00:08:03] message here. Now, what I've built in
+[00:08:05] the system for you is something really
+[00:08:06] cool. So, let's say that you have
+[00:08:08] several businesses, right? This is only
+[00:08:11] going to work if they are a client of
+[00:08:13] yours in this database. If they do not
+[00:08:16] exist in our beautiful database, they're
+[00:08:18] not going to get the message because
+[00:08:19] we're going to cross reference that. So
+[00:08:21] I I don't have my number in at the
+[00:08:22] moment, but I'm going to say hey. And
+[00:08:24] you're going to see this fire off right
+[00:08:25] now. It's going to grab all the
+[00:08:27] conversation history that we've had with
+[00:08:28] that individual. And basically what it's
+[00:08:30] going to do is pull down all the
+[00:08:32] records. So let's have a quick look at
+[00:08:33] this. Right, we've got the web hook
+[00:08:34] here, which has been the message. It's
+[00:08:36] basically got the my number, which is
+[00:08:37] awesome. Then the first thing we do is
+[00:08:39] reach over to our WhatsApp agent and
+[00:08:41] pull down our entire chat context. This
+[00:08:44] is really cool because when we have this
+[00:08:46] conversational agent who's going to
+[00:08:48] elicit the review from the customer, we
+[00:08:50] would love to have the context of the
+[00:08:51] previous conversation. And then this
+[00:08:53] edit fields tab here basically grabs
+[00:08:55] that information and pulls it all
+[00:08:57] together into one big beautiful thing.
+[00:09:00] So we have the chat ID, the last
+[00:09:01] message, the message history, and then
+[00:09:03] the number of the person who sent us the
+[00:09:05] WhatsApp. And then we can use these four
+[00:09:07] fields to do everything. Now the next
+[00:09:08] thing we do is search our air table
+[00:09:10] records. So effectively what we're doing
+[00:09:12] here is taking that phone number and
+[00:09:15] cross referencing it with this medical
+[00:09:17] spa data. So it's basically asking a
+[00:09:19] question okay we've got a WhatsApp
+[00:09:20] message to our business account which by
+[00:09:21] the way little hack for you if you do
+[00:09:23] have an existing WhatsApp you can create
+[00:09:24] a business one on the same phone. Um and
+[00:09:26] effectively what we do here then is say
+[00:09:28] look well has is the person that
+[00:09:29] messaged us a customer. If they're not
+[00:09:32] we just disregard. If they are then we
+[00:09:34] can have the conversation. This also
+[00:09:36] functions by the way as a fail safe. If
+[00:09:38] they click on do not contact, we just
+[00:09:40] remove them from it. So if I show in the
+[00:09:41] air table records, you can see across
+[00:09:43] from here we've got the air table which
+[00:09:44] is cool and we're just pulling down
+[00:09:46] everything down. So all this is
+[00:09:47] literally doing is pulling down all the
+[00:09:49] information as you can see on the right
+[00:09:50] hand side there. So then the comparison
+[00:09:52] thing here is basically look is the
+[00:09:53] number that we've gotten from our air
+[00:09:55] table records our custom database the
+[00:09:57] exact same as the number that we got
+[00:09:59] from our uni API call and if it is we're
+[00:10:02] going to send them off and actually
+[00:10:04] welcome in there which is really really
+[00:10:05] freaking cool. And if it does that, it
+[00:10:07] will then go through to the AI agent.
+[00:10:08] So, I'm going to add in my phone number
+[00:10:10] now and show you how this conversation
+[00:10:11] works out in practice. So, let me come
+[00:10:12] and update this. Okay, so I've just
+[00:10:14] triggered this web hook. So, let's send
+[00:10:16] it a message from my WhatsApp. Okay,
+[00:10:17] beautiful. So, we've had the message
+[00:10:19] already sent to us, which is, "How was
+[00:10:21] your facial today?" automatically. And
+[00:10:22] I'm going to say, "Hey, my lava facial
+[00:10:24] was great. Thank you." This is then
+[00:10:26] grabbed by the agent. It's now doing its
+[00:10:27] work. It's updating the records, and
+[00:10:29] it'll send a response straight back
+[00:10:30] over. Thanks for sharing experience with
+[00:10:32] Ace. Who took care of you during the
+[00:10:33] treatment? And what part did you enjoy
+[00:10:35] the most? So let's come back over. So
+[00:10:36] I'm going to respond and say, "Hey
+[00:10:37] Sarah, I loved how comprehensive it
+[00:10:39] was." And send this one off. And then
+[00:10:40] this will pull it in the background.
+[00:10:42] Now, one thing I want to just pull out,
+[00:10:43] guys, about the prompt for this. So
+[00:10:45] you'll know like in the community in the
+[00:10:46] classroom, we have the thing from the
+[00:10:48] beginning. But in business systems,
+[00:10:50] obviously the road map for make money,
+[00:10:51] which is really cool, but if I look at
+[00:10:53] business systems here for example, and
+[00:10:54] show you this is an example of the
+[00:10:55] Google review system, right? If you can
+[00:10:58] actually grab this, I'll put a link down
+[00:10:59] below for it in description so you can
+[00:11:00] grab this. But this review collecting
+[00:11:02] agent, I've got one over here I can show
+[00:11:03] you. Literally, all you do is you come
+[00:11:05] down and you basically change the
+[00:11:07] company and you can actually optimize
+[00:11:09] how you would like that conversation to
+[00:11:11] be. So, do you want it to be more
+[00:11:12] chatty? Do you want it to be less
+[00:11:13] chatty? Do you want to use emojis? Do
+[00:11:15] you want it to mirror the style of
+[00:11:16] person talking? I'd encourage you to go
+[00:11:18] through for your client or your own
+[00:11:19] business. Layer in your tone of voice
+[00:11:21] and layer in the next step. So, I've
+[00:11:22] kind of highlighted and yellowed the
+[00:11:23] bits that you'd want to change. And
+[00:11:24] then, as this conversation goes on, the
+[00:11:26] agent will ask if the individual would
+[00:11:28] like review. And if they do, it will
+[00:11:29] actually draft for them a review that
+[00:11:32] they can just copy and post with a URL
+[00:11:34] so they can make it happen. Meaning that
+[00:11:35] this agent sits in the background and
+[00:11:36] does everything for you. In addition to
+[00:11:38] that, it also has a human in the loop
+[00:11:40] function. So if they say something the
+[00:11:42] agent can't possibly answer, what it
+[00:11:44] will actually do is send you an email
+[00:11:45] and say, "Hey, this is the person I'm
+[00:11:47] speaking to. This is the problem they've
+[00:11:48] got. I think this need taken care of."
+[00:11:50] In addition to that, it also has a do
+[00:11:52] not contact element and it will update
+[00:11:54] that itself in the documents. So as you
+[00:11:56] can see here for example has a do not
+[00:11:58] contact and if this is ticked or
+[00:11:59] interact with in any way what it
+[00:12:01] actually does is deletes the phone
+[00:12:02] number removes them or can do whatever
+[00:12:04] you want to and it will not send them a
+[00:12:05] message and then we also have these AI
+[00:12:07] notes that explain the context the whole
+[00:12:09] conversation. So this basic scenario
+[00:12:11] guys will manage everything and then if
+[00:12:13] they need to book in more appointments
+[00:12:14] it will enable them to do that and it
+[00:12:15] just runs for you on autopilot and we
+[00:12:17] also have that escalation. So, an agent
+[00:12:19] that collects five star reviews is one
+[00:12:21] thing, but if you want to take this to
+[00:12:22] the next level, what you need to do is
+[00:12:24] get something that will automatically
+[00:12:26] respond to every single review, that
+[00:12:28] will save you literally hours. This
+[00:12:30] agent here grabs that review. It goes
+[00:12:32] through your entire emails to find out
+[00:12:35] anything about that customer that might
+[00:12:36] be relevant in creating something
+[00:12:38] personal as a response. It will then
+[00:12:40] also access your entire knowledge
+[00:12:41] database. So you can vectorize it here
+[00:12:43] using this system which is really
+[00:12:44] freaking simple and incredible and it'll
+[00:12:47] have all infinite context about your
+[00:12:48] entire business and it has this free
+[00:12:50] ranking modules which is incredible and
+[00:12:52] when it's done it will actually upload
+[00:12:53] it beautifully for you in this
+[00:12:55] spreadsheet here which will detail what
+[00:12:56] the review was, how many stars it was
+[00:12:58] and a response ready for you to cut and
+[00:13:00] paste. If you'd like this additional
+[00:13:01] bonus system, I'll put a link down below
+[00:13:03] in the community to access that. And
+[00:13:04] I'll put the full link for this system
+[00:13:06] down below so you can grab it and have a
+[00:13:07] rocking good time. And if you want
+[00:13:08] support in setting this up, we'll do
+[00:13:10] this live on a code build where we'll
+[00:13:11] get the whole thing live for you in one
+[00:13:13] particular session.

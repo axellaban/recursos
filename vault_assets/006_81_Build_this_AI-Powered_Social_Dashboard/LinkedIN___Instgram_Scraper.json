@@ -1,0 +1,960 @@
+{
+  "name": "LinkedIN + Instgram Scraper",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        280
+      ],
+      "id": "7f35997a-259d-42cc-a01b-913066227a5c",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "getOutput",
+        "agentId": "6145388950451624",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.phantombuster",
+      "typeVersion": 1,
+      "position": [
+        180,
+        0
+      ],
+      "id": "5089156d-ce19-406f-b6fe-f79ab575fcde",
+      "name": "Phantombuster",
+      "credentials": {
+        "phantombusterApi": {
+          "id": "l7RGExxoWkzSU9Hp",
+          "name": "Phantombuster account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appENPbhagMrHGXrQ",
+          "mode": "list",
+          "cachedResultName": "🔥 Social Media Domination",
+          "cachedResultUrl": "https://airtable.com/appENPbhagMrHGXrQ"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblSLOpMd4RItiPcn",
+          "mode": "list",
+          "cachedResultName": "LinkedIN",
+          "cachedResultUrl": "https://airtable.com/appENPbhagMrHGXrQ/tblSLOpMd4RItiPcn"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Post URL 🔗": "={{ $json.postUrl }}",
+            "postContent": "={{ $json.postContent }}",
+            "💬 Comment Count": "={{ $json.commentCount }}",
+            "🔁 Reposts": "={{ $json.repostCount }}",
+            "🤩 Likes": "={{ $json.likeCount }}",
+            "👀 Views": "={{ $json.viewCount }}",
+            "When posted": "={{ $json.postTimestamp }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Post URL 🔗",
+              "displayName": "Post URL 🔗",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "postContent",
+              "displayName": "postContent",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "💬 Comment Count",
+              "displayName": "💬 Comment Count",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "🔁 Reposts",
+              "displayName": "🔁 Reposts",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "🤩 Likes",
+              "displayName": "🤩 Likes",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "👀 Views",
+              "displayName": "👀 Views",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "When posted",
+              "displayName": "When posted",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        440,
+        0
+      ],
+      "id": "ff983397-e2fb-47f9-8d8a-3b67ec4ba86b",
+      "name": "Airtable",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "58fS9foN1FdXEYaW",
+          "name": "Airtable Personal Access Token account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-scraper/runs?token=INSERT_API_KEY&waitForFinish=300&output=json",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "INSERT_API_KEY"
+            },
+            {
+              "name": "waitForFinish",
+              "value": "300"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"addParentData\": false,\n  \"directUrls\": [\n    \"https://www.instagram.com/aiautomationsbyjack/\"\n  ],\n  \"enhanceUserSearchWithFacebookPage\": false,\n  \"isUserReelFeedURL\": false,\n  \"isUserTaggedFeedURL\": false,\n  \"onlyPostsNewerThan\": \"7 days\",\n  \"resultsType\": \"stories\",\n  \"searchLimit\": 15\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        60,
+        280
+      ],
+      "id": "e74fb892-ff5d-4bf9-80b1-062f1c47389e",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.apify.com/v2/actor-runs/{{$node[\"HTTP Request\"].json[\"data\"][\"id\"]}}/dataset/items?token=INSERT_API_KEY",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        280,
+        280
+      ],
+      "id": "d4395690-b624-4c68-8adb-5cdd5e820b9c",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appENPbhagMrHGXrQ",
+          "mode": "list",
+          "cachedResultName": "🔥 Social Media Domination",
+          "cachedResultUrl": "https://airtable.com/appENPbhagMrHGXrQ"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblaqTgaxERhCWg69",
+          "mode": "list",
+          "cachedResultName": "Instagram",
+          "cachedResultUrl": "https://airtable.com/appENPbhagMrHGXrQ/tblaqTgaxERhCWg69"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Caption": "={{ $json.caption }}",
+            "💬 Comment Count": "={{ $json.commentsCount }}",
+            "🤩 Likes": "={{ $json.likesCount }}",
+            "👀 Video Views": "={{ $json.videoViewCount }}",
+            "📹 Video Plays": "={{ $json.videoPlayCount }}",
+            "🔥 Video Duration": "={{ $json.videoDuration }}",
+            "When posted": "={{ $json.timestamp }}",
+            "Post URL 🔗": "={{ $json.videoUrl }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Post URL 🔗",
+              "displayName": "Post URL 🔗",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Caption",
+              "displayName": "Caption",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "💬 Comment Count",
+              "displayName": "💬 Comment Count",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "🤩 Likes",
+              "displayName": "🤩 Likes",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "👀 Video Views",
+              "displayName": "👀 Video Views",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "📹 Video Plays",
+              "displayName": "📹 Video Plays",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "🔥 Video Duration",
+              "displayName": "🔥 Video Duration",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "When posted",
+              "displayName": "When posted",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        480,
+        280
+      ],
+      "id": "818da59b-1417-465c-9e4c-c2c55ae0685c",
+      "name": "Airtable1",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "58fS9foN1FdXEYaW",
+          "name": "Airtable Personal Access Token account 5"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Phantombuster": [
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7310650074416447488",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQGKZrcXTyjdFw/image-shrink_800/B4EZXSlZ8YHcAc-/0/1742994777782?e=1743710400&v=beta&t=BB24GE7HdNqnpPx0EaaPeCH9Cpev_MbefAwBww0oPdQ",
+          "type": "Image",
+          "postContent": "I sold two automations for $10,000 (copy this)\n\nBusinesses that leverage AI + automation will win in 2025.\n\nHere's what they did: \n\n#1: AI-Powered Meeting Assistant\n✅ Joins meetings, transcribes conversations, and generates customised summaries in the user’s tone.\n✅  Helps businesses streamline client communication and eliminate manual follow-ups.\n✅  Runs on Make.com for just $25/month.\n\n#2: Social Media Competitive Intelligence Tool\n✅  Scrapes thousands of posts from TikTok, Instagram, and more.\n✅ Gets high-performing content insights—likes, shares, comments—to refine marketing strategies. \n✅  Runs on N8N + APIs for about $350/month\n\nAutomations like these sell fast because they solve real problems.\n\nWhether you want to implement them in your own business or sell them as a service, there’s a proven blueprint that works.\n\nIn the below video, I cover:\n\n💸 Pricing & cost structures—how to charge high-ticket for automation.\n📊 The AI agency blueprint—how to position and sell automations to clients.\n💎 Which platforms to use—Make, N8N, APIs, and more.\n📈 How to implement & sell automations step by step.\n\nComment AUTOMATION and I'll DM you the link to the full cideo.. \n\nLove and Automation,\nJack 💙🤖\n\nPS - I can only DM connections.",
+          "likeCount": 12,
+          "commentCount": 6,
+          "repostCount": 0,
+          "postDate": "1d",
+          "viewCount": 456,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.011Z",
+          "postTimestamp": "2025-03-26T13:13:23.051Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7310647274034941952",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQEwjypU35Id7Q/image-shrink_800/B4EZXSi2x6GYBk-/0/1742994110069?e=1743710400&v=beta&t=9mcIRqdbfyDMyFWJb_mQp3vsrRdnvl0PlV7zBiz_kVU",
+          "type": "Image",
+          "postContent": "🚀 Want to know how to get AI clients easily?\n\nLiam Evans scaled his business from $0 to $2.7M in 7 months and has now done $5M+ in online sales. 💰 \n\nIn our latest podcast episode, he breaks down:\n\n✅ The #1 strategy to land your first clients (even with zero budget)\n✅ Why most people fail at selling AI automation services\n✅ How he used YouTube to generate millions\n✅ The biggest mistakes beginners make and how to avoid them\n\n💡 This is a MUST-WATCH if you’re serious about scaling your AI agency. \n\nComment MILLIONS below, and I’ll DM you the link to the full episode! 🎧🔥 \n\nPS: Make to FOLLOW me because I am only able to DM my followers and connections.",
+          "likeCount": 8,
+          "commentCount": 0,
+          "repostCount": 0,
+          "postDate": "1d",
+          "viewCount": 300,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.012Z",
+          "postTimestamp": "2025-03-26T13:02:15.388Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7310284920411615234",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQF-ahH8XKTP9g/image-shrink_800/B4EZXNZTXsH0Ag-/0/1742907718165?e=1743710400&v=beta&t=tcPbnrpTscYEPKwE2oOGKVKr2I45a1nnb0vbNaCZIBU",
+          "type": "Image",
+          "postContent": "This is a $47,000 Trophy 🏆🔥\n\nSeven years of building, learning, and pushing boundaries culminating in this win for the largest paid AI automation community on the planet.\n\nThis isn’t just a trophy. It’s a symbol of momentum, resilience, and the power of community. \n\nFrom day one, the mission has been clear: help people leverage AI to work smarter, automate better, and unlock real freedom and this proves we’re on the right track.\n\nMassive shoutout to the Skool community, the legendary team, and every single person who’s been part of this journey. This is YOUR win too.\n\nNow, time to find a spot for it... right next to my Thanos Infinity Gauntlet 😆💪\n\n2025 is gonna be even bigger...let’s keep building together! 🚀\n\n\n\n#SkoolGames #AIautomations #Momentum #JackRoberts",
+          "likeCount": 20,
+          "commentCount": 11,
+          "repostCount": 0,
+          "postDate": "2d",
+          "viewCount": 627,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.013Z",
+          "postTimestamp": "2025-03-25T13:02:23.552Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7309922660451299328",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQGuZ3w4zG9vtQ/image-shrink_1280/B4EZXIP1NGHMAM-/0/1742821348715?e=1743710400&v=beta&t=H_8ifTi4c0GTiSnDCZMXPyg_0ilU7VtGEcZ-kKotJPs",
+          "type": "Image",
+          "postContent": "🚨 The Shift Has Already Happened—Have You Noticed?\n\nThe truth is, AI isn’t coming for your job or your business… but someone who knows how to use it is.\n\nThe biggest advantage today isn’t working harder...it’s working smarter. \n\nThe businesses and leaders who adapt aren’t the ones drowning in manual tasks or chasing shiny objects. \n\nThey’re the ones leveraging AI to automate what doesn’t require their genius and focus on what actually moves the needle.\n\n🚀 The question isn’t if AI will impact your industry...it already has. \n\n💡 The question is: Are you using it to your advantage, or waiting to be disrupted by someone who does?\n\n 💬 Drop a comment—what’s one task in your business you’d love to automate right now? I may have a solution to this.",
+          "likeCount": 8,
+          "commentCount": 4,
+          "repostCount": 0,
+          "postDate": "3d",
+          "viewCount": 235,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.014Z",
+          "postTimestamp": "2025-03-24T13:02:54.047Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7309559664432566273",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQF-7LJNyQIOSA/image-shrink_800/B4EZXDFr58GwAk-/0/1742734803748?e=1743710400&v=beta&t=7LcOXFG3gxu96iSzBRUxZYXhsqcyA5RzGk3zOumeyf8",
+          "type": "Image",
+          "postContent": "I Built an AI Voice Agent That Schedules Calls & Answers FAQs in Minutes 🚀\n\nI'll show you how 👇🏾\n\nImagine having a 24/7 AI assistant that:\n\n✅ Books calls & appointments automatically\n✅ Answers FAQs instantly\n✅ Works on any website as a voice chatbot\n\nThat’s exactly what I built using n8n + ElevenLabs, and I’ll break it down step by step:\n\n1️⃣ AI Voice Agent Setup\n- Uses ElevenLabs for natural voice conversations\n- Integrated with n8n to handle actions\n- Can check availability, schedule calls & send emails\n\n2️⃣ Embedded on Any Website\n- Users click a widget to speak with the AI\n- AI understands requests, checks calendars & books calls\n- Works without human intervention\n\n\n3️⃣ Automates Customer Interactions\n- Reads & responds with real-time info\n- Pulls data from a business knowledge base\n- Can be trained for ANY industry (gyms, agencies, coaches)\n\n📸 It’s all in a LIVE build—recorded step by step!\n\n✅ Want access to the full video tutorial?\n\nComment \"Voice AI\"\nConnect with me\n\n***I am only able to DM my linkedIn connections, so make sure to connect first! 🚀",
+          "likeCount": 35,
+          "commentCount": 26,
+          "repostCount": 1,
+          "postDate": "4d",
+          "viewCount": 1399,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.015Z",
+          "postTimestamp": "2025-03-23T13:00:29.052Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7308188402477096961",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4D10AQHdM_qFzjT6Yw/image-shrink_800/B4DZWvmh34HYAg-/0/1742407869366?e=1743710400&v=beta&t=tCLAk_MU8WZEoGV2eJBH5zZ2ZCWWjEmAJb62gUj4iDY",
+          "type": "Image",
+          "postContent": "$29K upfront. $600/month recurring. 20+ automated processes.\n\nCatherine Gairard didn’t just land a deal, she transformed a business.\n\nA 70-person company, drowning in manual work, now runs seamlessly with AI-powered automation.\n\n✅ Data analyzed automatically\n✅ Reports generated weekly\n✅ A chatbot handling support\n\nThis win wasn’t luck. \n\nIt was strategy, persistence, and automation done right.\n\nWant to hear exactly how she did it? We sat down with Catherine for a deep dive on the full story.\n\n📢 Comment PODCAST + follow me and I’ll send you the link! 🚀\n\n#Automation #AI #Success #JackRoberts #WednesdayWins",
+          "likeCount": 28,
+          "commentCount": 13,
+          "repostCount": 2,
+          "postDate": "1w",
+          "viewCount": 3023,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.017Z",
+          "postTimestamp": "2025-03-19T18:11:34.725Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7307424203656388608",
+          "sharedPostUrl": "https://www.linkedin.com/pulse/automation-ai-future-business-efficiency-n8n-hamad-odhabi-i01jf?trackingId=7Lwp7PTLecjKFM4vKiwm6A%3D%3D",
+          "type": "Article",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4D12AQHiwzE011JZyA/article-cover_image-shrink_423_752/B4DZWf5Gg4G8AU-/0/1742144302195?e=1748476800&v=beta&t=asSEwbMt-6THtBfZkeZvdVR1CaAElJqKtkoDqbkyiOU",
+          "postContent": "Yes, there’s a learning curve, but the impact? Massive. Anyone serious about leveraging AI for real business growth, N8N is worth exploring!",
+          "likeCount": 5,
+          "commentCount": 0,
+          "repostCount": 0,
+          "postDate": "1w",
+          "viewCount": 239,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.018Z",
+          "postTimestamp": "2025-03-17T15:34:55.528Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7307023074745278464",
+          "sharedPostUrl": "https://buff.ly/uzSJVy5",
+          "type": "Article",
+          "imgUrl": "",
+          "postContent": "Forget Simple AI Assistants—This AI Agent Will Run Your Life (and Business) for You 🤯\n\n“Hey, book me an appointment for next Tuesday. Call it ‘MacBook Review,’ and add an agenda about choosing between Windows or Mac. Thanks.”\n\nThat’s all I said.\n\nNo typing. \n\nNo switching between apps. \n\nNo manual scheduling. \n\nJust a quick voice note to my AI-powered virtual assistant—and within seconds, the meeting was booked, the agenda set, and the invite sent.\n\n🚀 This isn’t just another chatbot. It’s an autonomous AI agent that handles complex tasks like a human assistant—without human error, delays, or interruptions.\n\n🔗 It connects to your favourite platforms (Google Calendar, Notion, Slack, WhatsApp, Telegram, etc.).\n\n⚡ It remembers details, learns your preferences, and improves over time.\n\n🛠️ It can handle scheduling, research, note-taking, automation—and so much more.\n\nThe best part? You can build this yourself—without writing a single line of code.\n\n💡 In my latest video, I break down step-by-step how to create your own no-code AI agent that can:\n\n✅ Book meetings automatically.\n✅ Retrieve and store personalised data.\n✅ Research information on demand.\n✅ Automate tasks across multiple platforms.\n✅ Integrate infinite memory using a RAG (Retrieval-Augmented Generation) system.\n\n📹 If you’re serious about automating your workflow and taking AI productivity to the next level, you need to see this.\n\n#AI #AiAutomation #JackRoberts #AIagencies #AIagents",
+          "likeCount": 5,
+          "commentCount": 3,
+          "repostCount": 1,
+          "postDate": "1w",
+          "viewCount": 243,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.020Z",
+          "postTimestamp": "2025-03-16T13:00:58.943Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7306606957644173312",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQFuS5xugd-K9g/image-shrink_800/B4EZWZINgYH0Ac-/0/1742030824201?e=1743710400&v=beta&t=TjdH7CYhWO3AeRfagkoWqfAmAI46DtkbdJUaoexuyHc",
+          "type": "Image",
+          "postContent": "SIMPLICITY WINS.\n\nWe often get caught up in making things overly complicated—especially with AI and automation. But here's what I've learned after years of teaching thousands of people:\n\n👉 Simpler automations are more reliable.\n👉 Simple solutions scale faster and with fewer headaches.\n👉 Simple workflows lead to clearer outcomes and happier customers.\n\nLess complexity means fewer headaches, more growth, and ultimately, more happiness.\n\nReady to simplify your AI workflows?\n\nDrop a comment below—let's talk about how simplicity can level up your automation game. 🚀\n\n\n\n#Simplicity #AI #Automation #Productivity #JackRoberts #B2B #AIforB2B",
+          "likeCount": 15,
+          "commentCount": 6,
+          "repostCount": 0,
+          "postDate": "1w",
+          "viewCount": 293,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.022Z",
+          "postTimestamp": "2025-03-15T09:27:28.895Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7306298154616799232",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQH_XQp1VpSmbg/videocover-high/B4EZWUvZi9GwBE-/0/1741957215605?e=1743710400&v=beta&t=AZbGIXB4lFfgdhmCt9rPM-WQStMtuxWxFZty87UNBUo",
+          "postContent": "Is ChatGPT really the best AI chatbot out there? 🤔\n\nWhat if I told you there are FREE AI chatbots that perform better in certain areas—and most people don’t even know they exist?\n\n👀 Here are 3 underrated AI chatbots that could completely change how you get answers, automate tasks, and even have more natural conversations.\n\n#AI #AiAutomation #JackRoberts #AIagencies #AIChatbot",
+          "likeCount": 6,
+          "commentCount": 1,
+          "repostCount": 0,
+          "postDate": "1w",
+          "viewCount": 166,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.023Z",
+          "postTimestamp": "2025-03-14T13:00:24.516Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7305981340858961921",
+          "sharedPostUrl": "https://buff.ly/lUD26D9",
+          "type": "Article",
+          "imgUrl": "",
+          "postContent": "🚀 Want to build an AI SaaS business and generate subscription income?\n\nIn this step-by-step video, I’m breaking down exactly how you can launch and deploy your own AI SaaS product—without needing to be a developer.\n\n📌 What you’ll learn in the video:\n\n✅ How to build and deploy multiple AI applications\n✅ How to structure your SaaS for subscription revenue\n✅ The exact tech stack I’m using (no coding required!)\n✅ How to integrate payment systems & automate workflows\n✅ A real-world AI use case: A body fat percentage tracker\n\n🔥 The possibilities with AI SaaS are ridiculous—from fitness tracking to interior design, chatbots, and beyond.\n\n💡 If you’ve been thinking about starting an AI SaaS business but don’t know where to begin, this video will give you everything you need.\n\n🎥 Watch here 👇\nhttps://buff.ly/lUD26D9 \n\nDrop a 🚀 in the comments if you're ready to build your first AI SaaS! 🚀💡\n\n#AI #AiAutomation #JackRoberts #AIagencies #AISAAS",
+          "likeCount": 3,
+          "commentCount": 0,
+          "repostCount": 0,
+          "postDate": "2w",
+          "viewCount": 130,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.024Z",
+          "postTimestamp": "2025-03-13T16:01:30.230Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7305573791760371712",
+          "sharedPostUrl": "https://buff.ly/gTqfwqd",
+          "type": "Article",
+          "imgUrl": "",
+          "postContent": "🚀 This AI System Can Generate Weekly Competitive Intelligence Reports—Automatically!\n\nImagine offering businesses real-time insights on their competitors—without lifting a finger.\n\nThis AI system:\n✅ Tracks competitors’ website updates (product changes, new offers, etc.)\n✅ Analyzes customer reviews to spot trends, strengths & weaknesses\n✅ Automates PDF reports—delivered straight to your client’s inbox\n\nYou can sell these reports for $297+ per client, turning this into a revenue stream with minimal effort.\n\nIn my latest video, I break down exactly how to set this up, step by step. Watch here 👉 https://buff.ly/gTqfwqd \n\nWould you pay for a service like this? Let’s discuss below! 👇\n\n#AI #AiAutomation #JackRoberts #AIagencies #CompetitorIntelligence #b2b",
+          "likeCount": 6,
+          "commentCount": 0,
+          "repostCount": 0,
+          "postDate": "2w",
+          "viewCount": 211,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.026Z",
+          "postTimestamp": "2025-03-12T13:02:02.953Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7304848620783058944",
+          "sharedPostUrl": "https://buff.ly/qa4pS6h",
+          "type": "Article",
+          "imgUrl": "",
+          "postContent": "🔥 AI-Powered Personalised Emails at Scale? Yes, It’s Possible!\n\nMost outreach emails are generic. That’s why they don’t convert.\n\nBut imagine an AI system that dynamically updates every client interaction—emails, calls, community posts—and tailors outreach uniquely for each customer.\n\nThis is what I call the High Conversion Formula. It works by:\n\n✅ Collecting & storing client data in a Single Source of Truth\n✅ Using AI to generate highly personalized emails based on real-time insights\n✅ Automating client onboarding, engagement, and follow-ups—without sacrificing a human touch\n\nThe result? More conversions, less time wasted.\n\nIn my latest video, I break down exactly how to build this system, step by step. Watch here 👉 https://buff.ly/qa4pS6h \n\nWould you use AI-powered dynamic emails in your business? Let me know below! 👇\n\n#AI #AiAutomation #JackRoberts #AIClientIntelligentSystem",
+          "likeCount": 9,
+          "commentCount": 1,
+          "repostCount": 0,
+          "postDate": "2w",
+          "viewCount": 197,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.027Z",
+          "postTimestamp": "2025-03-10T13:00:28.719Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7304456034771714049",
+          "sharedPostUrl": "https://buff.ly/pihgrXr",
+          "type": "Article",
+          "imgUrl": "",
+          "postContent": "🛑 You're not making money with AI because of THIS one mistake…\n\nMost AI automation businesses don’t fail because of bad tech or bad ideas.\nThey fail because of shiny object syndrome—constantly jumping from one “new” opportunity to the next without mastering one.\n\nI’ve seen it over and over again—people dabbling in AI SaaS, agencies, automations, content, and 10 other things at once…\nBut they haven’t even made their first $1K online.\n\nAnd it’s holding them back BIG TIME.\n\n🔹 Accessibility: Anyone can apply this.\nThis isn’t about skill level. Whether you’re just getting started with AI or scaling an automation agency, this ONE shift in mindset can be the difference between struggling for years vs. making consistent, scalable income.\n\n🔹 What you’ll get from this post:\n✅ The real reason you keep jumping to new ideas.\n✅ How this mindset shift helped me build a six-figure AI business.\n✅ A framework to stay laser-focused and finally break through.\n\n🔹 Why this matters NOW:\nAI automation is EXPLODING.\nThere’s more opportunity than ever, but also more distractions.\nThose who master one offer, one audience, and one process will win. The rest will keep chasing the next big thing… and burn out.\n\n🔹 My experience:\nI run the largest paid AI automation community on the planet and have worked with countless AI entrepreneurs.\nI’ve built two businesses from $0 to $50K/month and seen firsthand what separates winners from those stuck in the cycle.\n\n🔹 The common trap:\n🔹 You start an AI agency → It gets tough → You switch to AI SaaS.\n🔹 AI SaaS feels slow → You pivot to selling automations.\n🔹 Then you hear about another “easier” way → You jump AGAIN.\n\nBut every business model has challenges.\nYou’re just swapping one set of problems for another.\n\n🔹 The fix: THE ONE THING RULE\n1️⃣ Pick ONE offer.\n2️⃣ Solve ONE problem.\n3️⃣ For ONE audience.\n4️⃣ Using ONE primary marketing channel.\n\nMaster that before adding anything else.\n\nThis is exactly how PayPal grew—they dominated one micro-market (Beanie Baby resellers on eBay) before expanding.\n\nAnd when I applied this to my own business?\nRevenue doubled.\nCommunity growth skyrocketed.\n\n🔹 Want to break free from distraction & scale faster?\nI just dropped a video walking through this in-depth + my exact framework.\n\n🎥 Watch it here: https://buff.ly/pihgrXr \n\nWould love to hear—what’s been YOUR biggest distraction lately? Drop it in the comments. 👇\n\n#AI #AiAutomation #JackRoberts #AIagencies",
+          "likeCount": 6,
+          "commentCount": 1,
+          "repostCount": 0,
+          "postDate": "2w",
+          "viewCount": 146,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.028Z",
+          "postTimestamp": "2025-03-09T11:00:28.920Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7304145649204117504",
+          "sharedPostUrl": "https://youtube.com/watch?v=yVWxewfLjac&si=CN6VVukByRnIrHx-",
+          "type": "Article",
+          "imgUrl": "",
+          "postContent": "Imagine having a friendly AI voice assistant embedded into your website, available 24/7, answering customer inquiries, scheduling appointments, and even closing deals—without human intervention. Sounds futuristic? \n\nIt’s happening right now with AI voice agents powered by 11 Labs + n8n.\n\n🔹 Low-cost, high-impact: AI voice agents are significantly cheaper than hiring customer service reps and can handle multiple conversations simultaneously.\n\n 🔹 Zero-latency conversations: No awkward delays—these voice agents respond in real time.\n\n 🔹 Easy integration: You can embed them into any AI web app or website with a simple widget, turning any landing page into an interactive sales funnel.\n\nHow It Works: \n ✅ Build an AI agent in 11 Labs 🎙️\n ✅ Connect it to n8n for automation 🤖\n ✅ Teach it to book calls, check calendars, and send emails 📅📩\n ✅ Embed it on your website for real-time customer interactions 💬\n\n🚀 Real-World Use Case 👉 In the video, I show you how to set up an AI voice assistant for a gym business, allowing potential members to ask about memberships, book inductions, and get personalised responses—all without human input. Imagine the possibilities for e-commerce, service businesses, or lead generation!\n\n📽️ Click below to watch the full step-by-step tutorial?\n\nWould you use an AI voice agent in your business? Let’s discuss in the comments!👇🔥\n\n\n#AI #Automation #VoiceAI #BusinessGrowth #11Labs #n8n #TechInnovation #JackRoberts #PersonalTrainers #PT #B2B #B2Bentrepreneurs",
+          "likeCount": 9,
+          "commentCount": 1,
+          "repostCount": 0,
+          "postDate": "2w",
+          "viewCount": 221,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.030Z",
+          "postTimestamp": "2025-03-08T14:27:07.234Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7303822243627749376",
+          "sharedPostUrl": "https://www.youtube.com/watch?v=WZ2HZfCofBs",
+          "type": "Article",
+          "imgUrl": "",
+          "postContent": "Honored to have had this conversation with you the podcast Catherine Gairard! \n\nThis case study is a perfect example of how automation isn't just about efficiency—it’s about real business transformation. 🚀 \n\n90% reduction in processing time, $300K+ in savings, and a 25% productivity boost—all with no upfront investment. That’s the power of AI and automation at work! \n\n If you're curious about how automation can create massive impact, don’t miss this episode! 👇🎙️📺 Watch Part 1 \n\n#Automation #AI #BusinessSuccess #Productivity #CaseStudy",
+          "likeCount": 7,
+          "commentCount": 1,
+          "repostCount": 0,
+          "postDate": "2w",
+          "viewCount": 207,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.031Z",
+          "postTimestamp": "2025-03-07T17:02:01.336Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7300869257343500288",
+          "sharedPostUrl": "https://youtu.be/DuYZGb5ULyw?si=KjfeKbNvqoKQ2tuR",
+          "type": "Article",
+          "imgUrl": "",
+          "postContent": "Proud to share that I got interviewed by the #1 Tech Community on Skool ran by Jack Roberts and Adam Pearce!\n\nhttps://lnkd.in/dhE2sQHT\n\nPlease show your love by liking, sharing and commenting! 🤩",
+          "likeCount": 64,
+          "commentCount": 42,
+          "repostCount": 3,
+          "postDate": "1mo",
+          "action": "Jack Roberts reposted this",
+          "author": "Max Gibson",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:26:57.032Z",
+          "postTimestamp": "2025-02-27T13:27:54.542Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7297571540693385216",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "blob:https://www.linkedin.com/beb80342-d13c-4545-8ca0-6681fc654555",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQFgt7kCZniElw/videocover-high/B4EZUYug7HGYBE-/0/1739876611152?e=1743710400&v=beta&t=mwizT1kJg2V4fVPXDoxK6-2jOHbLlxgmlW-nxIeWEO4",
+          "postContent": "🤖 RAG Chatbot Automation – Smarter AI, Better Responses!\n\nIn this video, I break down how RAG (Retrieval-Augmented Generation) can supercharge your chatbot automation, making responses more accurate, relevant, and dynamic.\n\nWhat would you automate with an AI chatbot? \n\nLet me know! 👇🔥",
+          "likeCount": 11,
+          "commentCount": 0,
+          "repostCount": 0,
+          "postDate": "1mo",
+          "viewCount": 250,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:27:00.116Z",
+          "postTimestamp": "2025-02-18T11:03:57.624Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7297547316167692289",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "blob:https://www.linkedin.com/32f395f1-3561-4f97-aee9-e4ad8f41c01e",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQE48s-wQXfHpg/videocover-high/B4EZUYYe61GwBA-/0/1739870835431?e=1743710400&v=beta&t=3Yz9ZQ_8hGTt9HPLnU2w3xRyBekr7YuJ1uWkVvIcrEI",
+          "postContent": "📧 Tired of spending hours on emails? Let AI handle it for you!\n\nImagine automating your emails—responses, follow-ups, and even scheduling—so you can focus on what really matters.\n\nIn this video, I break down how AI can streamline your email workflow, saving you time and making communication effortless.\n\nWhat’s your biggest email headache? \n\nDrop it in the comments! 👇🔥",
+          "likeCount": 3,
+          "commentCount": 0,
+          "repostCount": 0,
+          "postDate": "1mo",
+          "viewCount": 182,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:27:00.118Z",
+          "postTimestamp": "2025-02-18T09:27:42.047Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7297534078449319936",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "blob:https://www.linkedin.com/acbde809-5bf7-4e65-be6c-45a7000657e0",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQGY_xUfaaUqxw/videocover-high/B4EZUYMcfcHMBI-/0/1739867681409?e=1743710400&v=beta&t=DwGkP-9K3ZnH8eT4A7UQSr-qmLIYks3XKvlYrYGCy2o",
+          "postContent": "🚀 Automate Anything with Deepseek – The Future of AI Workflows!\n\nTired of repetitive tasks? Want to streamline your workflow with AI? Deepseek lets you automate anything, making your processes faster, smarter, and more efficient.\n\nIn this video, I break down how Deepseek can revolutionise automation, whether you're building AI-driven tools, optimising business tasks, or scaling your operations effortlessly.\n\n📌 Watch the full video on my YT channel now: https://buff.ly/41l6zmI \n\nWhat’s one task you’d love to automate? \n\nDrop it in the comments! 👇🔥",
+          "likeCount": 6,
+          "commentCount": 2,
+          "repostCount": 0,
+          "postDate": "1mo",
+          "viewCount": 162,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:27:00.119Z",
+          "postTimestamp": "2025-02-18T08:35:05.929Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7296930390059962368",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "blob:https://www.linkedin.com/4e3a87a2-3ecb-4da0-92e7-f8c92c9ee2c1",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQHkSd9Ww3Q0dA/videocover-high/B4EZUPneefHMBA-/0/1739723767432?e=1743710400&v=beta&t=EtA4bnw_UGmM3UNOUTIIIPDdx72suYULyTkU5Cs9ebE",
+          "postContent": "Text to Video Of Yourself With AI\n\n🎥 Turn Your Text Into a Video of Yourself with AI! 🤯\n\nImagine typing out a script and instantly getting a video of yourself saying it—without recording a thing! AI is making this possible, and in this video, we’ll show you exactly how to do it.\n\nWhether you're a content creator, entrepreneur, or just curious about AI, this is a game-changer for video production. \n\nWould you use this tech? \n\nLet me know in the comments! 👇🔥",
+          "likeCount": 12,
+          "commentCount": 4,
+          "repostCount": 1,
+          "postDate": "1mo",
+          "viewCount": 199,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:27:00.121Z",
+          "postTimestamp": "2025-02-16T16:36:15.401Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7296225348885639168",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "blob:https://www.linkedin.com/57272810-316f-4d35-bf0d-2dda60c63410",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQHXJjrUHYXD5g/videocover-high/B4EZUFmKNTGgBE-/0/1739555655677?e=1743710400&v=beta&t=IrmDS4IToC4jD0tpFZd9T_QKr5m6hD2X_8Z7A_UygVY",
+          "postContent": "Make UNLIMITED Instagram Reels (Canva + Make)\n\n🚀 Want to create UNLIMITED Instagram Reels without the hassle?\n\nIf you're tired of spending hours making content, this video is for you! Learn how to automate your Reels using Canva + Make and save time while keeping your content flowing. 🎥✨\n\nSay goodbye to manual edits and hello to effortless content creation! Who's ready to scale their Reels game? \n\nDrop a 🔥 in the comments if you're in! \n\n📌 Watch now 👇",
+          "likeCount": 2,
+          "commentCount": 0,
+          "repostCount": 0,
+          "postDate": "1mo",
+          "viewCount": 61,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:27:00.122Z",
+          "postTimestamp": "2025-02-14T17:54:40.486Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7296171794690965504",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "blob:https://www.linkedin.com/77cebbc4-4807-4482-ad2c-27afeb54d9dd",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQEGfFssw1mu4Q/videocover-high/B4EZUE1ajyGgBE-/0/1739542876861?e=1743710400&v=beta&t=wniBMlHm8d4HH_4Bn9bjPeZ-hZ04tq8cDC7apazF6e8",
+          "postContent": "How Deepseek R1 Automates My Work Effortlessly",
+          "likeCount": 6,
+          "commentCount": 0,
+          "repostCount": 0,
+          "postDate": "1mo",
+          "viewCount": 114,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:27:00.123Z",
+          "postTimestamp": "2025-02-14T14:21:52.171Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7295832946597314561",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "blob:https://www.linkedin.com/39e1e873-7ff2-4d97-af42-1dbeda78d23a",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D5610AQGOgDTlMTau9A/videocover-high/B56ZUABHTWHQBA-/0/1739462058621?e=1743710400&v=beta&t=T8FuWObJoiOdfFg2-iT7wmOqvmJomM9kYTwzHZQx0A4",
+          "postContent": "Build Your First AI Employee (Lindy AI)",
+          "likeCount": 14,
+          "commentCount": 1,
+          "repostCount": 0,
+          "postDate": "1mo",
+          "viewCount": 153,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:27:00.124Z",
+          "postTimestamp": "2025-02-13T15:55:24.490Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7295735413841842176",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "blob:https://www.linkedin.com/79843564-54fc-432d-a634-10e4ab24ee2e",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQEAZoLFib_x3g/videocover-high/B4EZT.oh8QGwBA-/0/1739438837143?e=1743710400&v=beta&t=HjDZ8FCfgWHrVz-UeK_Ym_TEB2383An9PBi5E7fnbPw",
+          "postContent": "Automate anything with DeepSeek V3 \n#deepseek #ai",
+          "likeCount": 6,
+          "commentCount": 1,
+          "repostCount": 0,
+          "postDate": "1mo",
+          "viewCount": 133,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:27:00.126Z",
+          "postTimestamp": "2025-02-13T09:27:50.869Z"
+        }
+      },
+      {
+        "json": {
+          "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7295586283718885376",
+          "type": "Video (LinkedIn Source)",
+          "videoUrl": "blob:https://www.linkedin.com/28f11fb1-21ee-413a-9a6e-f6ec9aedc691",
+          "imgUrl": "https://media.licdn.com/dms/image/v2/D4E10AQFL_-eBkKhuKw/videocover-high/B4EZT8hBLjG0BA-/0/1739403307169?e=1743710400&v=beta&t=vA0R68mggccR16lsjSNDFjbBKr8HoS8TjllrXGNQbqo",
+          "postContent": "I Sold this Automation for $997/mo (copy me)",
+          "likeCount": 4,
+          "commentCount": 0,
+          "repostCount": 0,
+          "postDate": "1mo",
+          "viewCount": 112,
+          "action": "Post",
+          "author": "Jack Roberts",
+          "profileUrl": "https://www.linkedin.com/in/jack-roberts-ai-automations/",
+          "timestamp": "2025-03-27T19:27:00.127Z",
+          "postTimestamp": "2025-02-12T23:35:15.477Z"
+        }
+      }
+    ],
+    "HTTP Request": [
+      {
+        "json": {
+          "data": {
+            "id": "0P8h0nEMZFGJBgXhL",
+            "actId": "shu8hvrXbJbY3Eb9W",
+            "userId": "xlcznw2nRCYkeOgdX",
+            "startedAt": "2025-03-27T19:54:34.127Z",
+            "finishedAt": "2025-03-27T19:54:50.899Z",
+            "status": "SUCCEEDED",
+            "statusMessage": "Post scraper finished",
+            "isStatusMessageTerminal": null,
+            "meta": {
+              "origin": "API",
+              "userAgent": "axios/1.7.4"
+            },
+            "stats": {
+              "inputBodyLen": 277,
+              "rebootCount": 0,
+              "restartCount": 0,
+              "durationMillis": 16671,
+              "resurrectCount": 0,
+              "runTimeSecs": 16.671,
+              "metamorph": 0,
+              "computeUnits": 0.004630833333333333,
+              "memAvgBytes": 80212457.3723027,
+              "memMaxBytes": 95313920,
+              "memCurrentBytes": 0,
+              "cpuAvgUsage": 10.334178820003025,
+              "cpuMaxUsage": 122.66572509457757,
+              "cpuCurrentUsage": 0,
+              "netRxBytes": 664628,
+              "netTxBytes": 577050
+            },
+            "options": {
+              "build": "latest",
+              "timeoutSecs": 604800,
+              "memoryMbytes": 1024,
+              "maxItems": 2142,
+              "diskMbytes": 2048
+            },
+            "buildId": "27fEOBOupBKQPsgKQ",
+            "exitCode": 0,
+            "defaultKeyValueStoreId": "HiWmxrvNwahgwUGOF",
+            "defaultDatasetId": "Pw2UAgQcyw2HxDtTL",
+            "defaultRequestQueueId": "NB6FxQi6gRVx9PQsr",
+            "pricingInfo": {
+              "pricingModel": "PRICE_PER_DATASET_ITEM",
+              "reasonForChange": null,
+              "unitName": "results",
+              "pricePerUnitUsd": 0.0023,
+              "minimalMaxTotalChargeUsd": null,
+              "createdAt": "2024-12-12T19:57:48.182Z",
+              "startedAt": "2024-12-12T19:57:48.182Z",
+              "apifyMarginPercentage": 0.2,
+              "notifiedAboutChangeAt": "2024-12-12T20:09:19.711Z"
+            },
+            "buildNumber": "0.0.367",
+            "containerUrl": "https://05eoazuox6bv.runs.apify.net"
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Phantombuster": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "12e3fe15-0d56-4cdd-8495-6effbb48b97d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "YOu0sI6HrmSzlyVF",
+  "tags": []
+}

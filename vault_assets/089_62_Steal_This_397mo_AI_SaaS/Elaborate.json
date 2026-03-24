@@ -1,0 +1,491 @@
+{
+    "name": "🧠 Elaborate",
+    "flow": [
+        {
+            "id": 1,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 1357663,
+                "maxResults": 1
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 150,
+                    "name": "New Message 👀"
+                },
+                "restore": {
+                    "parameters": {
+                        "hook": {
+                            "data": {
+                                "editable": "true"
+                            },
+                            "label": "Elaborate"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "hook",
+                        "type": "hook:gateway-webhook",
+                        "label": "Webhook",
+                        "required": true
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of results"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "elaborateKey",
+                        "type": "text"
+                    },
+                    {
+                        "name": "text",
+                        "type": "text"
+                    },
+                    {
+                        "name": "pageText",
+                        "type": "text"
+                    },
+                    {
+                        "name": "minWords",
+                        "type": "number"
+                    },
+                    {
+                        "name": "maxWords",
+                        "type": "number"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 150
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 2,
+                            "module": "gateway:WebhookRespond",
+                            "version": 1,
+                            "parameters": {},
+                            "filter": {
+                                "name": "Denied 🙅‍♀️",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{1.elaborateKey}}",
+                                            "b": "elaborate2024",
+                                            "o": "text:notcontain:ci"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "body": "Hey there,\n\nIt looks like you don't have an active Elaborate Key.\n\nPlease grab one from the community: https://www.skool.com/ai-automations-by-jack-4235/about",
+                                "status": "200",
+                                "headers": []
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 600,
+                                    "y": 0,
+                                    "name": "Needs to Subscribe ❌"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "headers": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "expect": [
+                                    {
+                                        "name": "status",
+                                        "type": "uinteger",
+                                        "label": "Status",
+                                        "required": true,
+                                        "validate": {
+                                            "min": 100
+                                        }
+                                    },
+                                    {
+                                        "name": "body",
+                                        "type": "any",
+                                        "label": "Body"
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key",
+                                                "required": true,
+                                                "validate": {
+                                                    "max": 256
+                                                }
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value",
+                                                "required": true,
+                                                "validate": {
+                                                    "max": 4096
+                                                }
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Custom headers",
+                                        "validate": {
+                                            "maxItems": 16
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 11,
+                            "module": "openai-gpt-3:messageAssistantAdvanced",
+                            "version": 1,
+                            "parameters": {
+                                "__IMTCONN__": 1425946
+                            },
+                            "mapper": {
+                                "role": "user",
+                                "message": "BusinessContext: {{1.businessContext}}\ntoneOfVoice: {{1.toneOfVoice}}\nAdditional thoughts: {{1.text}}\nContent from the page: {{1.pageText}}\nPlease keep the response limited to: {{1.maxWords}}",
+                                "assistantId": "asst_gG21K0ONH3zNAjbrgEKRjl5V"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 600,
+                                    "y": 300,
+                                    "name": "Copywriter"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "role": {
+                                            "label": "User"
+                                        },
+                                        "model": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "tools": {
+                                            "mode": "chose"
+                                        },
+                                        "image_urls": {
+                                            "mode": "chose"
+                                        },
+                                        "assistantId": {
+                                            "mode": "chose",
+                                            "label": "💎 Copywriter 2.0 (gpt-4o)",
+                                            "nested": []
+                                        },
+                                        "image_files": {
+                                            "mode": "chose"
+                                        },
+                                        "tool_choice": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "response_format": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "truncation_strategy": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "file_search_resources": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "code_interpreter_resources": {
+                                            "mode": "chose"
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "openai-gpt-3"
+                                            },
+                                            "label": "My OpenAI connection"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:openai-gpt-3",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "assistantId",
+                                        "type": "select",
+                                        "label": "Assistant",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "role",
+                                        "type": "select",
+                                        "label": "Role",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "user",
+                                                "assistant"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "threadId",
+                                        "type": "text",
+                                        "label": "Thread ID"
+                                    },
+                                    {
+                                        "name": "model",
+                                        "type": "select",
+                                        "label": "Model"
+                                    },
+                                    {
+                                        "name": "tools",
+                                        "type": "select",
+                                        "label": "Tools",
+                                        "multiple": true,
+                                        "validate": {
+                                            "enum": [
+                                                "file_search",
+                                                "code_interpreter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "file_search_resources",
+                                        "type": "select",
+                                        "label": "File Search Resources"
+                                    },
+                                    {
+                                        "name": "code_interpreter_resources",
+                                        "type": "select",
+                                        "label": "Code Interpreter Resources",
+                                        "multiple": true,
+                                        "validate": {
+                                            "maxItems": 20
+                                        }
+                                    },
+                                    {
+                                        "name": "tool_choice",
+                                        "type": "select",
+                                        "label": "Tool Choice",
+                                        "validate": {
+                                            "enum": [
+                                                "none",
+                                                "auto",
+                                                "required",
+                                                "file_search",
+                                                "code_interpreter",
+                                                "function"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "instructions",
+                                        "type": "text",
+                                        "label": "Instructions"
+                                    },
+                                    {
+                                        "name": "max_prompt_tokens",
+                                        "type": "uinteger",
+                                        "label": "Max Prompt Tokens"
+                                    },
+                                    {
+                                        "name": "max_completion_tokens",
+                                        "type": "uinteger",
+                                        "label": "Max Completion Tokens"
+                                    },
+                                    {
+                                        "name": "temperature",
+                                        "type": "number",
+                                        "label": "Temperature",
+                                        "validate": {
+                                            "max": 2,
+                                            "min": 0
+                                        }
+                                    },
+                                    {
+                                        "name": "top_p",
+                                        "type": "number",
+                                        "label": "Top P",
+                                        "validate": {
+                                            "max": 1,
+                                            "min": 0
+                                        }
+                                    },
+                                    {
+                                        "name": "response_format",
+                                        "type": "select",
+                                        "label": "Response Format",
+                                        "validate": {
+                                            "enum": [
+                                                "auto",
+                                                "json_object",
+                                                "text"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "truncation_strategy",
+                                        "type": "select",
+                                        "label": "Truncation Strategy",
+                                        "validate": {
+                                            "enum": [
+                                                "auto",
+                                                "last_messages"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "message",
+                                        "type": "text",
+                                        "label": "Message",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "image_files",
+                                        "type": "select",
+                                        "label": "Image Files",
+                                        "multiple": true
+                                    },
+                                    {
+                                        "name": "image_urls",
+                                        "spec": {
+                                            "name": "value",
+                                            "type": "url",
+                                            "label": "Image URL",
+                                            "required": true
+                                        },
+                                        "type": "array",
+                                        "label": "Image URLs"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 7,
+                            "module": "gateway:WebhookRespond",
+                            "version": 1,
+                            "parameters": {},
+                            "mapper": {
+                                "status": "200",
+                                "body": "{{11.result}}",
+                                "headers": []
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 900,
+                                    "y": 300,
+                                    "name": "Copy Completed ✅"
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "headers": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "expect": [
+                                    {
+                                        "name": "status",
+                                        "type": "uinteger",
+                                        "label": "Status",
+                                        "validate": {
+                                            "min": 100
+                                        },
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "body",
+                                        "type": "any",
+                                        "label": "Body"
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "type": "array",
+                                        "label": "Custom headers",
+                                        "validate": {
+                                            "maxItems": 16
+                                        },
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "label": "Key",
+                                                "type": "text",
+                                                "required": true,
+                                                "validate": {
+                                                    "max": 256
+                                                }
+                                            },
+                                            {
+                                                "name": "value",
+                                                "label": "Value",
+                                                "type": "text",
+                                                "required": true,
+                                                "validate": {
+                                                    "max": 4096
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

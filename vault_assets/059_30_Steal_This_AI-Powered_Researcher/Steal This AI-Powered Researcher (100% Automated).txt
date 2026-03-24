@@ -1,0 +1,1721 @@
+[00:00:00] time is a huge commodity and whether
+[00:00:01] you're doing in a automation agency
+[00:00:03] you're doing work or you want to grow
+[00:00:04] your business you want high quality fact
+[00:00:06] checked very comprehensive research and
+[00:00:09] in this video I'm going to show how you
+[00:00:10] can create an AI research GPT that
+[00:00:13] leverages three separate language models
+[00:00:15] to create an incredible output I'm going
+[00:00:17] to show you how we can get an input from
+[00:00:18] a client whether they submit a form or
+[00:00:21] even giving it a URL we're going to
+[00:00:23] analyze and scrot the entire website
+[00:00:25] we're going to find interesting facts
+[00:00:26] about that business online we're then
+[00:00:28] going to reinforce that resar search and
+[00:00:30] fact check it and get Source URLs then
+[00:00:32] I'm going to show you how to use three
+[00:00:34] separate language models Claude llama
+[00:00:36] and chat GPT to create key and critical
+[00:00:40] research points so that actually at the
+[00:00:42] end of it you can get a completely
+[00:00:43] bespoke document generated automatically
+[00:00:46] for you without touching anything
+[00:00:48] including who you're meeting with when
+[00:00:50] you're meeting them what their dream
+[00:00:51] outcome is their website and overview
+[00:00:54] and 10 facts about the business that you
+[00:00:56] may not be aware of on top of that a
+[00:00:58] then kind of dri AI gener ated and
+[00:01:00] refined response talking about their
+[00:01:02] business it's going to understand what
+[00:01:04] your business is about and based on
+[00:01:06] those two things and the client's room
+[00:01:08] outcome it's going to create this
+[00:01:09] beautiful three critical paragraphs with
+[00:01:12] questions that you can ask the client on
+[00:01:14] top of that you're going to get a view
+[00:01:15] from Claude you can get a view from chat
+[00:01:17] gbt and La an llama model as well as a
+[00:01:20] synthesized model that shows you
+[00:01:21] everything all those things together in
+[00:01:23] one single response I'm going to show
+[00:01:25] you how you do all of that in one single
+[00:01:27] Journey from start to finish so you
+[00:01:29] don't even need to touch any buttons and
+[00:01:31] the only thing I ask is if that sounds
+[00:01:33] of value to you to consider giving this
+[00:01:35] video a like down below and if you're
+[00:01:37] feeling generous a common as well and
+[00:01:39] that helps us keep Mother algorithm a
+[00:01:40] bay and I really appreciate you if you
+[00:01:42] don't know who I am my name is Jack and
+[00:01:44] my YouTube channel and my school
+[00:01:45] Community is all about the latest AI
+[00:01:48] we're about creating incredible
+[00:01:50] automations but most importantly this
+[00:01:52] channel this community is all about
+[00:01:54] finding the stuff that actually works if
+[00:01:56] you haven't yet grab that coffee and
+[00:01:59] let's jump straight I'd like to if I may
+[00:02:01] show you briefly how this entire
+[00:02:02] automation works from start to finish
+[00:02:04] then I'll show you exactly the tools
+[00:02:05] that you need and then I'll show you how
+[00:02:07] you can recreate it yourself step by
+[00:02:09] step and if I do my job properly at the
+[00:02:11] end of this video it might change the
+[00:02:13] way that you think about meeting
+[00:02:14] preparation or research so what's the
+[00:02:16] trigger so the trigger that I've done a
+[00:02:18] use case for here is for those of you
+[00:02:20] that want to get more clients or you've
+[00:02:22] got prospects or you work with
+[00:02:23] individuals but this could apply for
+[00:02:25] work or anything so we start with a form
+[00:02:28] for this example I've used something
+[00:02:30] called paper form so let's check this
+[00:02:32] out okay I've got client strategy by
+[00:02:33] Planet automation we basically have this
+[00:02:35] thing where someone gives us their email
+[00:02:37] their full name their company name they
+[00:02:39] choose which level their business is at
+[00:02:40] this by the way is for my school
+[00:02:42] Community we have like a level system
+[00:02:43] where you unlock things so I've just
+[00:02:44] left it in there it's colorful and it
+[00:02:46] just shows you the kind of thing that
+[00:02:47] you can do with these things um we get
+[00:02:49] their website and then we ask them what
+[00:02:51] their biggest challenges and their dream
+[00:02:53] outcome are this is incredibly
+[00:02:55] configurable there's lots of different
+[00:02:56] forms that you could use I'm showing
+[00:02:58] this as an example and it would say he
+[00:03:00] come on man let's book your Discovery
+[00:03:01] calls if I just quickly just show you
+[00:03:03] very Bri this looks like so let's say I
+[00:03:04] have my own name and then we'll go for
+[00:03:06] Padawan Enterprises company name let's
+[00:03:08] say we are level seven hero which is
+[00:03:10] what I am in the community let's give it
+[00:03:11] a website so I'm going to give it this
+[00:03:13] website here for instance dream outcome
+[00:03:16] I've said here I'm struggling to get
+[00:03:17] clients uh I'd like to review the ways
+[00:03:19] in which we could automate client
+[00:03:21] capture so just give it something there
+[00:03:22] and then we book at Discovery call let's
+[00:03:24] say that hey I'm free on the 4th and I
+[00:03:26] want a meeting at 9:15 to 9:30 what
+[00:03:28] happens then now check this out guys so
+[00:03:30] I'm going to come here this will run
+[00:03:32] automatically in the background for you
+[00:03:33] so you don't need to touch anything and
+[00:03:35] whatever you do whatever the top part of
+[00:03:36] your funnel is with your client whether
+[00:03:39] it is a form whether it's a calendly
+[00:03:41] link maybe they send you a DM or an
+[00:03:42] email you can automate any trigger you
+[00:03:44] want for this purpose we're going to go
+[00:03:46] with paper form so what happens they
+[00:03:49] submit they're going to book a 50-minute
+[00:03:51] discovery call the second that done they
+[00:03:52] give us all the information that we need
+[00:03:54] let's go to our Jour now look this is
+[00:03:55] what happens okay this grabs the
+[00:03:58] submission from paper form this here
+[00:04:00] website overview takes the URL and says
+[00:04:03] hey this is what the website is I want
+[00:04:05] you to look in their website look at
+[00:04:06] their about Page look inside their
+[00:04:08] website and do external research to find
+[00:04:11] us like 10 like interesting facts about
+[00:04:14] that business it could be stuff like you
+[00:04:16] know um are they have they been featured
+[00:04:18] in articles have they won awards have
+[00:04:20] they got big competitors what's their
+[00:04:22] product offering that's what research a
+[00:04:24] does Research b says awesome I'm going
+[00:04:27] to go look at what research a did and
+[00:04:28] I'm just going to fact check it so we're
+[00:04:30] using the Llama model here with
+[00:04:32] perplexity and perplexity is like Google
+[00:04:35] Plus an AI search so it's an incredible
+[00:04:38] agent that helps us research things this
+[00:04:40] website overview will give us a short
+[00:04:42] Snappy really cool really brief
+[00:04:44] perspective of what the website's about
+[00:04:46] in just a couple of sentences to give
+[00:04:48] you an example of what that looks like
+[00:04:49] in practice if I come to my school
+[00:04:51] Community I go to paraan a level two in
+[00:04:53] my group you unlock $1600 uh doll worth
+[00:04:55] of software at least so you see we look
+[00:04:57] something like this which is a quick two
+[00:04:59] sence overview followed by five bullet
+[00:05:01] points by what it can do so if you've
+[00:05:03] never heard of this business before you
+[00:05:04] can take a quick glance at it you know
+[00:05:06] exactly what they're about just
+[00:05:07] something to make your life easier at a
+[00:05:09] kind of executive level to just save you
+[00:05:11] the time so website overview short
+[00:05:15] Snappy overview research a researches
+[00:05:17] the company looks at their website looks
+[00:05:18] external researches Research b is
+[00:05:21] checking research a is saiding hey this
+[00:05:23] is what research a has said let's just
+[00:05:25] make sure it actually makes sense let's
+[00:05:26] make sure that those URLs are fact check
+[00:05:28] let's make sure it hasn't hallucinated
+[00:05:30] just to make sure you can have more
+[00:05:32] confidence in what you're going to talk
+[00:05:33] about and you'll also get the sources in
+[00:05:36] the final document so you can check that
+[00:05:38] for yourself what's happened after that
+[00:05:40] now look this is the bit in my view I
+[00:05:43] built this in a way to try and make it
+[00:05:44] as helpful as possible for you now we've
+[00:05:46] got the short Snappy overview we've got
+[00:05:48] facts about the company then what we
+[00:05:50] really need to do is like look we give
+[00:05:52] Claude we give chat GPT and we give
+[00:05:55] llama basically information about us
+[00:05:58] what is our business what do we we do
+[00:06:00] for the examples of this I've said that
+[00:06:01] we are I believe it's in this document
+[00:06:04] automation Planet which is an AI
+[00:06:06] automation agency here are Services
+[00:06:08] here's what we do all the different
+[00:06:09] things that we do so we feed it that
+[00:06:12] information and
+[00:06:13] basically what we say to it is look
+[00:06:16] here's what we do here's all the
+[00:06:18] research and facts about the company and
+[00:06:20] also here's what the client has said to
+[00:06:22] us is there like biggest concern like
+[00:06:25] they're concerned about scaling they're
+[00:06:26] concerned about this problem so it takes
+[00:06:29] those three pieces of information you
+[00:06:30] see check it out right I come down can
+[00:06:32] you see right here at the bottom look
+[00:06:35] what they've said the research and date
+[00:06:37] about the client and then all the
+[00:06:38] information about our business and it
+[00:06:40] uses those three things to create three
+[00:06:42] really intelligent power graphs and
+[00:06:44] crucially three core questions that we
+[00:06:46] can ask the client in the meeting I mean
+[00:06:48] how incredible is that that this changes
+[00:06:50] literally everything about the way you
+[00:06:51] think about meetings we do it for the
+[00:06:53] CLA Opus model we do it for chat GPT we
+[00:06:56] do it for llama and then we've got this
+[00:06:57] King module now I should also say by the
+[00:07:00] llama's got like I think it's like a 70
+[00:07:02] billion parameter model and by
+[00:07:03] leveraging different AIS together to say
+[00:07:06] hey the king's job I should lift him up
+[00:07:08] a little bit just a little bit higher
+[00:07:09] right the king's job is to look okay
+[00:07:11] this is response from clae this is
+[00:07:13] response from chat gbt and this is
+[00:07:15] response from llama look at all three of
+[00:07:17] them together okay and I want you to
+[00:07:19] take the best bits from each of those
+[00:07:21] three models responses to get what I
+[00:07:23] call the king response which is look you
+[00:07:25] can check out the Llama the chat gbt the
+[00:07:27] claw if you want to in a document no
+[00:07:28] problem right in fact he can even show
+[00:07:30] you here right look yeah there's a
+[00:07:31] Claude there's a chat GPT there's a
+[00:07:33] llama but actually what I want the king
+[00:07:35] to do is I kind of like I wanted to
+[00:07:36] learn something from every response cuz
+[00:07:38] every one of the models is going to be
+[00:07:40] slightly different in some way or
+[00:07:41] another and I want it to kind of grab
+[00:07:43] and synthesize like the best research if
+[00:07:46] I only have time to read one I can just
+[00:07:48] check the king response and I'll be
+[00:07:50] ready to go now we have this really cool
+[00:07:52] thing here tools and then these two
+[00:07:53] modules is all about how we actually
+[00:07:55] create the document and what will happen
+[00:07:57] is that template will be created for for
+[00:07:59] us automatically in a G drive so
+[00:08:02] basically you come back to whatever
+[00:08:04] folder you want to when we can automate
+[00:08:06] that to be sent to as an email and it
+[00:08:07] will create a completely bespoke
+[00:08:09] document for you like that that you can
+[00:08:11] just access or just have it directly in
+[00:08:13] your email and that is the entire
+[00:08:16] automation it is profoundly powerful it
+[00:08:18] is simple sometimes with automations you
+[00:08:21] can go big you can go complex but
+[00:08:23] actually I think if you design them
+[00:08:25] intelligently sometimes the more simple
+[00:08:27] ones can be really powerful and if you
+[00:08:30] think about how much time this saves you
+[00:08:32] this is literally the way I want you to
+[00:08:33] think about this is as an AI digital
+[00:08:36] employee in fact you've got several of
+[00:08:37] them okay you've got a research employee
+[00:08:39] you've got another research check who's
+[00:08:40] checking the research you've got one
+[00:08:42] that's pulling the website you've got
+[00:08:43] clae for you you got another one there
+[00:08:45] that's five that's yeah that's four then
+[00:08:47] you got five and then you got six all of
+[00:08:50] them working for you automatically
+[00:08:51] autonomously completely automated to get
+[00:08:54] you a document that you can then just
+[00:08:55] say cool right here's who am I meeting
+[00:08:57] with today I'm meeting with Padawan
+[00:08:58] Enterprises in incredible I go down and
+[00:09:01] then I can decide everything that goes
+[00:09:02] on so that's exactly how it shows you uh
+[00:09:05] and by the way I'll put all the
+[00:09:06] blueprints the proms the agents and also
+[00:09:08] the scenarios so for example uh if you
+[00:09:10] ever come down here you can click on
+[00:09:11] more here import blueprint uh select the
+[00:09:14] file uh you simply choose it you click
+[00:09:16] save and it will automate all the uh all
+[00:09:18] the sort of automations for you
+[00:09:19] automatically that's all available in my
+[00:09:21] school Community if you just want to
+[00:09:23] know you have come to every automation
+[00:09:24] for example you pick one like this one
+[00:09:27] scroll down you got all the tools all
+[00:09:28] the resources is you just download it
+[00:09:30] here and you upload it and you're ready
+[00:09:32] to rock and roll so look with that in
+[00:09:34] mind let's quickly touch on the tools
+[00:09:35] and then I'll show you step by step how
+[00:09:37] to build this so the first thing I want
+[00:09:40] you to think about is the trigger so
+[00:09:42] I've used paper form here you could use
+[00:09:44] tally it really depends on your own
+[00:09:46] personal circumstances so say for
+[00:09:48] example you have slack we could use
+[00:09:51] slack as a trigger maybe someone says
+[00:09:52] hey Jack could you check out meu
+[00:09:54] Enterprises we want to work them out we
+[00:09:56] can have a bot that looks over the slack
+[00:09:58] and what it is you it can trigger you
+[00:10:00] could do this in a Google sheet whatever
+[00:10:02] it is for your particular business you
+[00:10:04] know let me down below if you've got
+[00:10:05] questions on that or you want to
+[00:10:06] configure how to do for but essentially
+[00:10:08] we want to trigger in other words an
+[00:10:09] input that gives us a URL and business
+[00:10:12] information I've used paperform and I'll
+[00:10:13] show you how you set it up then we want
+[00:10:16] access to perplexity perplexity is
+[00:10:19] awesome they're always upgrading it I
+[00:10:20] love the way that perplexity works so if
+[00:10:22] I come over here to perplexity AI I've
+[00:10:24] got the paid version you actually don't
+[00:10:25] need to pay get the paid version at $20
+[00:10:27] a month you can actually get some
+[00:10:29] something for five bucks so you want to
+[00:10:31] deposit $5 API credits by coming down
+[00:10:33] here onto your name click on your
+[00:10:35] profile if it will allow me to click on
+[00:10:37] my profile oh my goodness then you come
+[00:10:39] down and you see this API you deposit
+[00:10:42] five bucks look at me I'm not even
+[00:10:43] American but I'm using bucks and all the
+[00:10:45] kind of like americanisms I love it the
+[00:10:46] idiosyncrasy then I go API I deposit $5
+[00:10:50] and then I get to link it to my make
+[00:10:52] scenario okay so look I come back here
+[00:10:54] that's when I imported right so
+[00:10:55] basically you then connect it there but
+[00:10:57] as I always describe bro like this is
+[00:10:59] like the Everlasting Gob stopper of the
+[00:11:01] API world I don't know how on Earth it's
+[00:11:03] so cheap but genuinely like I feel like
+[00:11:05] You' barely ever run out of credits with
+[00:11:07] that you will do eventually but it's
+[00:11:08] very very confident like that so we've
+[00:11:10] got perplexity now zooming out you'll
+[00:11:12] notice this is different than other
+[00:11:14] videos I've done of a channel where we
+[00:11:15] tend to lean in maybe one maybe two
+[00:11:17] language models I feel the strength of
+[00:11:20] this automation is actually the fact
+[00:11:23] that we are we're we're covering our
+[00:11:25] bases and I know a lot of the pros you
+[00:11:26] know big research AI companies whether
+[00:11:28] they're developed being you know any
+[00:11:30] kind of interesting product or the
+[00:11:32] frontier will use multiple models to
+[00:11:35] cross reference and kind of you know
+[00:11:38] synthesize them and find their best
+[00:11:40] approach so we get to leverage the
+[00:11:41] strength of all of them now there's more
+[00:11:43] complicated exciting things that we can
+[00:11:44] do and I will show you some really cool
+[00:11:46] videos and stuff like that but as an
+[00:11:47] introduction I think you're going to
+[00:11:48] find this one really powerful and really
+[00:11:50] handy so the three models we're going to
+[00:11:53] use so we' got clae chat gbt and llama
+[00:11:56] there are other things that you could
+[00:11:57] use if you want to so for example in the
+[00:11:59] community that I've got um when you're
+[00:12:02] level two you get you unlock all these
+[00:12:04] apps right so in here for example you
+[00:12:06] can use grock AI these are all plugins
+[00:12:07] that sit within make that ordinarily
+[00:12:09] like €40 each but they're free as part
+[00:12:11] of my community if you're joining there
+[00:12:12] you can pick different things within
+[00:12:14] there if you want to do like hens in
+[00:12:15] there for example so there's many
+[00:12:17] different models that we could use and
+[00:12:19] plug in I've picked these three because
+[00:12:21] I think chat gbt 4 is powerful Claude is
+[00:12:24] powerful and llama is great and it's
+[00:12:26] also simple because you're already using
+[00:12:27] it at the research stage so check this
+[00:12:29] out right you need access to chat gbt to
+[00:12:31] get access to that if you're not
+[00:12:32] currently aware I'll just show you come
+[00:12:34] over to platform.
+[00:12:36] open.com going to come down to API keys
+[00:12:38] and basically you deposit some money
+[00:12:40] into that in exactly the same way that
+[00:12:42] you did with um
+[00:12:44] perplexity the third thing that you're
+[00:12:45] going to need then if you want to do
+[00:12:46] this one is Claude uh remember Claude is
+[00:12:49] earned by anthropic so and again I what
+[00:12:52] I'll do I'll put all these links Down
+[00:12:53] Below in the description for you so that
+[00:12:55] you can just literally press buttons
+[00:12:56] sign up and then Implement them and
+[00:12:58] you'll be completely ready to go with
+[00:12:59] that Claude is my favorite for language
+[00:13:03] I feel it's like a personal thing I I
+[00:13:05] found other people some people feel the
+[00:13:06] same way and I'm always going to show
+[00:13:07] the stuff that I think works the best
+[00:13:08] and I actually use in real life it just
+[00:13:11] that's why I've had Claude as the king
+[00:13:13] just because it's good at synthesizing
+[00:13:15] those together and I just found that
+[00:13:17] with experiment the outputs and then
+[00:13:19] finally we've got llama which is what
+[00:13:21] we're using with
+[00:13:23] perplexity awesome so let's have a look
+[00:13:25] right you see llama 3 Center online and
+[00:13:27] you can pick different ones I believe
+[00:13:28] the llama 3 is actually the in fact it's
+[00:13:31] the 7 8B construct that we need Perfect
+[00:13:34] all right cool sweet I think llama is
+[00:13:36] like more powerful than mix rful from my
+[00:13:38] understanding in terms of parameters and
+[00:13:39] stuff cool and then basically once
+[00:13:41] you've done that the only other thing
+[00:13:42] that you need is a Google Document and
+[00:13:44] also the platform we're building this on
+[00:13:46] right so this is all built on meg.com
+[00:13:49] meg.com is a no code automation tool
+[00:13:51] basically enables us to parade around
+[00:13:53] like coders we get to configure things
+[00:13:56] together in a modular way and do things
+[00:13:58] that you know previously you had to pay
+[00:14:00] hundreds of thousands of dollars of
+[00:14:01] pounds to do we add modules we connect
+[00:14:04] them we link them to different resources
+[00:14:05] and it is pretty awesome uh and you know
+[00:14:07] you you'll pick it up it like knowledge
+[00:14:09] doesn't add it compounds when it comes
+[00:14:10] to make it's really exciting so now
+[00:14:13] we've covered what we need I'm going to
+[00:14:15] show you how you build this entire thing
+[00:14:17] step by step awesome so we create our
+[00:14:19] new scenario and first of all where are
+[00:14:21] we well that's our formalities so we're
+[00:14:23] going to name this one 200 IQ
+[00:14:26] research assistant
+[00:14:29] and then obviously if it's 200 IQ level
+[00:14:31] we need a big beautiful brain RI
+[00:14:35] incredible if the brain loads in it will
+[00:14:37] all right cool so look this trigger this
+[00:14:39] form I'm going to show you how to do it
+[00:14:40] using paper form okay so what do you do
+[00:14:42] you click on this big beautiful purple
+[00:14:44] button and type in paper form or tally
+[00:14:47] or whatever form you want to choose or
+[00:14:49] calendly completely your core we want it
+[00:14:52] to happen when we get a new submission
+[00:14:54] and think about the trigger best for
+[00:14:55] your business then I'm going to put a
+[00:14:57] pin in this for a second I'm going to
+[00:14:59] head over to our website our trigger of
+[00:15:01] choice and then once you head over to P
+[00:15:02] for.co you'll see you can create a form
+[00:15:04] in the top right hand corner for the
+[00:15:06] sake and benefit of your time and out of
+[00:15:07] respect for that I'm just going to edit
+[00:15:08] this and show you how it works high
+[00:15:10] level so you can see and also the cool
+[00:15:12] thing about these different forms is you
+[00:15:13] can actually duplicate it so if you you
+[00:15:15] got different ideas you want to look at
+[00:15:16] that's quite easy for you to do so I've
+[00:15:18] got a title I call it client strategy
+[00:15:20] you can basically like type all the
+[00:15:21] things you need to there very briefly
+[00:15:22] all the fonts and stuff is managed over
+[00:15:24] here in the theme section you know you
+[00:15:26] can configure that to your uh
+[00:15:28] preferences I have an image I find
+[00:15:30] images convert better to people like
+[00:15:31] text basically Chief text mini text
+[00:15:33] image it's lovely little bit text so we
+[00:15:35] just say what we want like hey let's
+[00:15:37] schedule a 15minute discovery call
+[00:15:39] doesn't sound so much like a sale as
+[00:15:41] it's described as a discovery call and
+[00:15:42] it's exactly what it is right Discovery
+[00:15:44] call now here I'd want you to add in the
+[00:15:48] questions that you think are relevant
+[00:15:49] but what's critical for the automation
+[00:15:51] of these two which is the website that
+[00:15:54] they're going to give us and
+[00:15:56] also their biggest challenges dream
+[00:15:59] outcome so for example this will be very
+[00:16:01] different based on your own particular
+[00:16:03] business what is the key information
+[00:16:04] that you need maybe it's what's your
+[00:16:05] Revenue maybe you've got certain servic
+[00:16:08] for different Revenue prices and then we
+[00:16:09] have conditional formatting that says
+[00:16:11] hey when you're building this out if
+[00:16:13] revenue is X suggest y products if
+[00:16:16] revenue is a suggest B products so we
+[00:16:18] basically can go into this form and we
+[00:16:20] can configure things and we can build it
+[00:16:23] however we want to right to add new
+[00:16:25] Fields you come down you come here add
+[00:16:27] question you can can select the type of
+[00:16:29] question here like is it a text is it
+[00:16:31] yes no is an email blah blah blah blah
+[00:16:33] blah blah whatever we want right really
+[00:16:35] straightforward stuff and we can delete
+[00:16:36] it there sweet and if you want to add an
+[00:16:38] appointment which is basically like
+[00:16:40] linking it to a calendar you can come
+[00:16:41] down to add question come here type in
+[00:16:44] appointment here okay click on the Cog
+[00:16:47] like so come down and then basically you
+[00:16:50] can go down to availability and you you
+[00:16:53] basically will prompt you to connect
+[00:16:54] your calendar so you can sign and give
+[00:16:56] it permissions through your Gmail or
+[00:16:57] your outlook there for enabling you to
+[00:16:59] do things and you can specify things
+[00:17:01] like the meeting how long is the meeting
+[00:17:04] um what are the settings who's sending
+[00:17:06] it what's the format what's the time
+[00:17:07] zone all that sort of stuff just
+[00:17:09] enabling you to kind of manage things
+[00:17:10] either in tally or paper form it's
+[00:17:12] completely your call so we've got a
+[00:17:15] questions email fullone name company
+[00:17:17] name which level is your business at
+[00:17:19] what's your website your biggest
+[00:17:20] challenges in dream outcome again you
+[00:17:22] can splint these that as many as you
+[00:17:23] like and then also booking an
+[00:17:24] appointment if you would want to and
+[00:17:26] then crucially we go over here to after
+[00:17:28] submission
+[00:17:29] so what do we want to happen once
+[00:17:31] they've completed it so you can do
+[00:17:32] success page and redirect I redirect
+[00:17:35] them to let's say my classroom but it
+[00:17:36] could be to anywhere or any location
+[00:17:38] that you want to I've got a nice little
+[00:17:40] tip for you if you go into the configure
+[00:17:42] section you can also add in a title
+[00:17:44] description and the cover image and then
+[00:17:46] at the end of it you'll have a
+[00:17:47] customized URL thing so you can
+[00:17:49] basically design that however you want
+[00:17:50] to when you've done that you'll have
+[00:17:53] your form again just out of respect for
+[00:17:54] your time I won't build it from scratch
+[00:17:55] cuz that could be like 10 15 minutes
+[00:17:57] that you could be spending on the rest
+[00:17:58] of the video just getting to like the
+[00:18:00] real super value for you so once that's
+[00:18:02] done boom put our coffee down cuz on
+[00:18:04] fire cuz we drink a lot of coffee
+[00:18:05] building this sort of stuff then we're
+[00:18:07] going to come back over now to our new
+[00:18:09] automation let me move our old
+[00:18:10] automation out the way cool now we've
+[00:18:13] got our trigger again could be calendly
+[00:18:15] could be anything we pick a hook so we
+[00:18:17] click on add all right sweet this is an
+[00:18:20] aworth which means that when you connect
+[00:18:21] it you'll just be prompted to jump in a
+[00:18:23] new window it says Hey sign in you okay
+[00:18:25] for M to earn your life and you're like
+[00:18:27] that's okay we come down to form and
+[00:18:29] then we click on business strategy or
+[00:18:32] whatever it is that you decided to call
+[00:18:34] it excellent and now we've got a paper
+[00:18:36] form I'm going to show you exactly how
+[00:18:38] we actually grab the information from
+[00:18:41] the website to get a bulleted list now
+[00:18:44] for this we could use perplexity like I
+[00:18:46] showed you in this automation here on
+[00:18:48] the website overview I'm going to show
+[00:18:50] you another way that you can do this
+[00:18:52] that I think you're going to find very
+[00:18:53] interesting and the reason for that is
+[00:18:55] because it takes any error risk very
+[00:18:58] very close to zero so instead of saying
+[00:19:00] hey go and research URL what I'm going
+[00:19:02] to say is I want you to grab all the
+[00:19:04] information from the website and then
+[00:19:06] focus and convert that text by itself
+[00:19:08] and then we'll bring perplexity back to
+[00:19:10] do the research so what does that look
+[00:19:12] like we'll look I click on this I'm
+[00:19:14] going to type in get HTTP to get a file
+[00:19:17] and then what we do is we just give this
+[00:19:19] URL from paper form now you may not see
+[00:19:22] this yet unless you run it so before you
+[00:19:24] do that what I would do is right click
+[00:19:26] run this module only go over to your p
+[00:19:28] form fill it out come back and then
+[00:19:31] you'll see the paper form will work
+[00:19:33] perfectly for you and then you'll be
+[00:19:34] able to specify and add the data in that
+[00:19:36] same time so we do get HTTP we click on
+[00:19:40] this and basically you can see guys look
+[00:19:42] at this everything's there look your
+[00:19:44] biggest struggleing challenges text Boom
+[00:19:47] come down email there we go there's
+[00:19:49] another one uh Discovery call all the
+[00:19:51] information is appeared there it's so
+[00:19:53] awesome I come down and I've got a
+[00:19:56] website so that is the particular
+[00:19:57] website then Weck C okay and then what
+[00:19:59] we do is we're going to convert it now
+[00:20:01] if I run this from the top because I'll
+[00:20:02] show you exactly what it looks like so
+[00:20:03] we run that we come then over to uh our
+[00:20:06] form or whatever form you're using let's
+[00:20:08] just go through this again company name
+[00:20:10] panan Enterprises uh again I'll go for
+[00:20:13] the level six a wizard this time we've
+[00:20:15] got the website we'll enter this fake
+[00:20:18] thing and then we'll Buck a call on the
+[00:20:19] 1st at 9:15 a.m. we click submit
+[00:20:22] incredible that works in the background
+[00:20:24] we come back over now to our automation
+[00:20:26] paper form will flash up and say cool I
+[00:20:28] got it any second now and when that
+[00:20:29] happens we'll be able to pass the URL
+[00:20:32] over to the HTTP file there we go it's
+[00:20:35] passed it awesome and then what this
+[00:20:37] file's done is just downloaded the
+[00:20:40] entire website but the problem is it's
+[00:20:43] all in that Goble theg HTTP so to fix
+[00:20:46] that all you're going to do is you're
+[00:20:47] going to come here like so you're going
+[00:20:49] to go and do
+[00:20:51] HTTP excuse me HTML to text like so come
+[00:20:55] over here as beautiful text passer and
+[00:20:58] we enter the HTML from there and then
+[00:21:00] essentially guys what that will do that
+[00:21:02] will just create that will just get the
+[00:21:04] text for us okay then once we've done
+[00:21:06] that let's add a chat GPT module here so
+[00:21:09] we come in going to create a completion
+[00:21:12] we're going to go for Max tokens now
+[00:21:14] with GPT you can just put zero that
+[00:21:16] defaults at the maximum the model we're
+[00:21:18] going to use is GPT 40 system and then
+[00:21:20] we're going to add a message we're going
+[00:21:22] to put it as a user now what's the
+[00:21:23] message now check this out and so for
+[00:21:25] the website summarize a copy we've got
+[00:21:27] the following right so you're going to
+[00:21:27] be provided with copy of a website your
+[00:21:30] task is to carefully read and comprehend
+[00:21:32] the content of the website after
+[00:21:34] analyzing the text generate a concise
+[00:21:36] summary of the key points and main ideas
+[00:21:38] discussed on the website it should be
+[00:21:40] informative helpful to the point with a
+[00:21:42] maximum length of 35 words and we ask it
+[00:21:45] to do things like identify the core
+[00:21:47] message or the core themes highlight the
+[00:21:49] most important facts and statistics blah
+[00:21:52] blah blah avoid using a necessary fluff
+[00:21:54] or Filip phrases or the stuff that we
+[00:21:55] don't want to know we want it to be
+[00:21:57] clear and efficient then we talk about
+[00:21:59] concise and precise language and at the
+[00:22:00] bottom we wanted to write five core
+[00:22:02] features in bullet with emeries and we
+[00:22:05] give it some examples so when we've got
+[00:22:07] that we're going to copy all the text
+[00:22:09] and then paste it back over to chat GPT
+[00:22:11] so let's copy all this beautiful text
+[00:22:13] and we do we type the message content in
+[00:22:15] like that and then we have the data and
+[00:22:18] just give it the data output from the
+[00:22:20] HTML to text and then click okay and
+[00:22:22] we're going to right click on this one
+[00:22:23] in fact what did we call it I think
+[00:22:25] we'll call this one here we'll call this
+[00:22:27] one oops excuse me come back off this
+[00:22:29] let's just rename it cuz it's good to
+[00:22:30] keep track isn't it actually it so
+[00:22:33] website Snappy all right sweet with a
+[00:22:37] little crocodile for good measure or
+[00:22:39] maybe it's an alligator I'm sure the um
+[00:22:42] the biologist amongst you will be able
+[00:22:44] to tell me in the comments and then
+[00:22:45] we're going to move to website Snappy
+[00:22:46] going to come down get the message
+[00:22:49] content hit paste come down and then the
+[00:22:52] website URL is basically going to be the
+[00:22:54] thing that we get excuse me website URL
+[00:22:56] it's website copy my apologies weite
+[00:22:59] copy is going to be the thing from text
+[00:23:00] pass like so then we click okay sweet so
+[00:23:04] let's give this a quick test so come
+[00:23:05] over to yoka website let's copy all of
+[00:23:08] the content let's come back over now to
+[00:23:10] our wonderful automation we're going to
+[00:23:12] right click we come on run this module
+[00:23:14] only enter the text click okay and the
+[00:23:18] website Snappy should give us a short
+[00:23:19] shot Snappy breakdown of what that
+[00:23:21] website is about so we click on this for
+[00:23:23] example and there you go look at this
+[00:23:26] experts in Instagram and social media
+[00:23:28] marketing Yola digital offers
+[00:23:30] personalized content creation reputation
+[00:23:32] management and affordable results driven
+[00:23:34] services to help boost SME boost that
+[00:23:37] social media presence to engagement
+[00:23:39] driving customer growth and sales there
+[00:23:40] social media expertise photo content
+[00:23:42] creation reputation management
+[00:23:43] affordable tailored proven success for
+[00:23:45] clients I don't know about you but
+[00:23:47] wouldn't it be awesome if they just had
+[00:23:49] that at the top of the website let us
+[00:23:51] help you hashtag better like that's just
+[00:23:53] such a beautiful succinct way of
+[00:23:55] describing what they do and for you as a
+[00:23:57] busy person who has a lot of time it
+[00:23:59] doesn't have as much time and you want
+[00:24:00] to nail it that's just super helpful and
+[00:24:02] valuable to us so let's just zoom out a
+[00:24:04] sec okay like both literally and
+[00:24:06] figuratively if this will allow us let's
+[00:24:08] align down here so look we've got
+[00:24:11] paperform we've got HTTP and we've got
+[00:24:14] the website summarizer the next thing I
+[00:24:16] want to do now is get perplexity to go
+[00:24:19] forth and just do a little bit of
+[00:24:20] research for us on that particular
+[00:24:23] website so to do that I want to first of
+[00:24:26] all show you what that looks like in
+[00:24:28] reality in terms of what we're going to
+[00:24:30] ask perplexity to do okay so the format
+[00:24:34] and the file that I'm going to show you
+[00:24:36] initially I've got research a and
+[00:24:38] Research b now research A's job is to do
+[00:24:42] the research get as 10 facts and inform
+[00:24:44] us about stuff on that website and stuff
+[00:24:46] off that website research B's job is
+[00:24:50] basically just to fact check and keep
+[00:24:51] research a in line to make sure he's
+[00:24:53] telling us the right stuff so let's
+[00:24:54] start with research a so he's is a fact
+[00:24:57] find a mission think about this digital
+[00:24:58] employee is like the chief research
+[00:25:00] officer but we got to keep them in check
+[00:25:02] so look your task is to uncover 10
+[00:25:04] fascinating facts about insert business
+[00:25:07] dive deep into the website and explore a
+[00:25:08] wide range of reliable external sources
+[00:25:12] to gather the most interesting and
+[00:25:13] relevant information for each fact make
+[00:25:15] sure it meets the following criteria and
+[00:25:17] we out list it needs to be well sourced
+[00:25:19] needs to be high quality needs to be
+[00:25:20] upto-date prioritize information that
+[00:25:22] happened more recently like in the last
+[00:25:24] 12 months versus stuff that happened in
+[00:25:27] the Stone Age for example we don't want
+[00:25:28] to ask what the Stone Edge guys think
+[00:25:29] about the wheel it's much more relevant
+[00:25:31] to think about more 2024 stuff diverse
+[00:25:34] coverage relevance matters clear
+[00:25:36] documentation we want to avoid
+[00:25:37] redundancies so stuff that's like you
+[00:25:39] know it's blue oh it's kind of like blue
+[00:25:42] you like it needs to be unique different
+[00:25:43] things that each point earns it spot on
+[00:25:45] our roster data driven insights business
+[00:25:48] relevant to focus on facts that people
+[00:25:49] find valuable and insights about the
+[00:25:51] company's operations thought-provoking
+[00:25:53] aim to include at least one or two facts
+[00:25:55] that are maybe more surprising you throw
+[00:25:57] a few curve balls in that I don't mind
+[00:25:58] lotting 20% of our information budget to
+[00:26:00] something it's a bit random keep it on
+[00:26:02] our toes and keep us guessing now look
+[00:26:05] has to presented list of a format has to
+[00:26:07] use the sources and tiations in the
+[00:26:09] footnotes let me just say here as well
+[00:26:11] include
+[00:26:12] sources as naked URLs so what we do guys
+[00:26:15] is we copy the document like so we go
+[00:26:18] back over to our make scenario over here
+[00:26:20] and then we're going to add in
+[00:26:21] perplexity like so so come over going to
+[00:26:23] find in perplexity uh the top one here
+[00:26:26] is cool create a chat completion that's
+[00:26:28] cool it's bouncing around let's go for
+[00:26:31] the largest models on there which is
+[00:26:32] larm 38 sorry 70b instruct like so click
+[00:26:36] on this one Max tokens don't worry about
+[00:26:38] that for now don't worry about any of
+[00:26:39] these things come down to add item click
+[00:26:42] in the content and then just paste it in
+[00:26:44] there okay now 10 fascinating facts
+[00:26:46] about what business so what we do excuse
+[00:26:49] me we come here we're going to replace
+[00:26:51] this value with dunununun let's go down
+[00:26:54] to our paper form submission and find
+[00:26:56] out where the URL was what is website
+[00:26:58] Yola the code of UK awesome come down
+[00:27:01] Perfect come down it's got the criteria
+[00:27:03] for us there very very nice and again
+[00:27:05] we'll just add the URL at the bottom of
+[00:27:08] it for additional reinforcement and then
+[00:27:11] we go y perfect click okay and the rooll
+[00:27:15] is going to be for user and then we're
+[00:27:16] going to click okay there now look we're
+[00:27:18] going to come back over to the first
+[00:27:19] scenario just so we named it we're going
+[00:27:21] to rename grab that come back over to
+[00:27:24] our scenario here uh and then we know
+[00:27:26] exactly what they're all doing research
+[00:27:27] a
+[00:27:28] then let's clone him over here and then
+[00:27:30] this one is going to be Research
+[00:27:33] b and then go from yellow to Green to
+[00:27:36] show the pathway that it's gone
+[00:27:39] incredible now I'm going to show you
+[00:27:40] exactly what research B's job is so we
+[00:27:42] come over to research
+[00:27:43] B which is uh this beautiful guy here
+[00:27:47] please analyze the following output from
+[00:27:49] the previous model so hey let go and
+[00:27:50] check what research a said for each
+[00:27:52] bullet point in the output please
+[00:27:54] perform the following tasks first of all
+[00:27:56] check the bullet point has a source URL
+[00:27:58] if it is missing try and find it or a
+[00:28:00] relevant alternative to support that
+[00:28:02] information if a source URL is found
+[00:28:05] include it in alongside the bullet point
+[00:28:08] you must include the naked URL for every
+[00:28:10] Source if no reliable source can be
+[00:28:12] found just remove the bullet point from
+[00:28:15] the list back check the information each
+[00:28:17] bullet point verify the accuracy of the
+[00:28:18] claims maintain the original format of
+[00:28:20] the output including the emerging bullet
+[00:28:21] point so I'm saying like check it but I
+[00:28:23] want you to keep the format consistent
+[00:28:25] for each bullet point that passes fact
+[00:28:27] check includes a source URL to V
+[00:28:28] information blah blah blah all the way
+[00:28:30] down you must include n of every Source
+[00:28:32] please provide the output with fact
+[00:28:33] check fact checked information so do
+[00:28:36] copy all this awesome and we head back
+[00:28:39] over now to our scenario we open up Res
+[00:28:41] Research b guy we come down get rid all
+[00:28:44] it push this in and then what we need to
+[00:28:46] do is basically excuse me come down here
+[00:28:50] move this guy over here so you can see
+[00:28:52] now look you want to enter in come down
+[00:28:55] to choices like so come down to message
+[00:28:58] come down to Content and then we click
+[00:29:00] okay sweet so with all that in mind now
+[00:29:03] what do we do next well let's give it a
+[00:29:04] quick run from the top so click run once
+[00:29:07] I'm going to head over now to paper form
+[00:29:08] to do another submission like so let's
+[00:29:10] open up on a new
+[00:29:13] window all righto come down here again
+[00:29:16] pick the email company name Padawan
+[00:29:19] Enterprises let's go level two Padawan
+[00:29:21] this time what is the website what is
+[00:29:22] the biggest fear I want to rule the
+[00:29:24] world maybe we do I did that one I was
+[00:29:26] like I should be more specific than one
+[00:29:28] into real world kind of Darth vaded
+[00:29:29] territory click submit Boom come back
+[00:29:31] over to our scenario now we're waiting
+[00:29:33] paper forms found it we've got the HTTP
+[00:29:35] we've got the text so snap aot's done
+[00:29:38] this thing awesome and then research a
+[00:29:39] and Research b have done so let's check
+[00:29:40] out what we've got for research a come
+[00:29:42] down to choices come down to message and
+[00:29:45] then we got the content string and look
+[00:29:46] at this guys yoka is a UK Bas Commerce
+[00:29:48] platform yoka offers 10,000 products uh
+[00:29:51] yoka has a strong focus on customer
+[00:29:52] satisfaction blam blam blam and then
+[00:29:54] we've got all the different resources
+[00:29:55] for there incredible and then check out
+[00:29:58] Research
+[00:29:59] b uh go down to the message content
+[00:30:02] string is long there we go and you can
+[00:30:05] use guys look at look at this guys look
+[00:30:06] how crazy this is It's given us the
+[00:30:09] Naked URL where it got the information
+[00:30:11] we can see it's gone to yok you see how
+[00:30:13] like this is good rather than just
+[00:30:14] giving it a single URL it's actually
+[00:30:16] gone a little bit deeper and we can see
+[00:30:18] where it's gotten all stuff for like
+[00:30:19] it's even it's even head of the trust
+[00:30:20] pilot I could say hey yo guys so you've
+[00:30:22] got 4.5 and Trust P that's pretty cool
+[00:30:24] right and how many reviews that it's
+[00:30:25] gotten um we know it's on charity is
+[00:30:28] price match guarantee uh and then lots
+[00:30:30] of other cool stuff so can you see how a
+[00:30:32] difference in quality cuz look at this
+[00:30:33] guys right I mean this is insane that
+[00:30:36] responds both visually aesthetically and
+[00:30:39] the naked URL compared to this this is
+[00:30:42] this is just taking it to the level
+[00:30:43] which I think is excellent and also like
+[00:30:45] sometimes perplexity hallucinates and
+[00:30:48] you know and cu the thing is guys like
+[00:30:50] sometimes perplexity does hallucinate
+[00:30:52] and it's good just to have that little
+[00:30:54] fact Checker to make sure that we're
+[00:30:55] keeping things in order now we've done
+[00:30:57] that we need to move on I guess to
+[00:31:00] taking the research we've got from our
+[00:31:02] Target Avatar our business then we want
+[00:31:05] to take on two things number one is what
+[00:31:07] did they say you know is their biggest
+[00:31:10] concern and their dream outcome or
+[00:31:11] whatever it is that you're looking for
+[00:31:13] and then information part three so their
+[00:31:15] website facts about their business what
+[00:31:17] they want and who we are we take all
+[00:31:20] those few things together and we turn it
+[00:31:22] into an incredible document that we can
+[00:31:23] then use to save it as an hour multiple
+[00:31:26] hours and just have a much more
+[00:31:27] intelligent conversation with them so
+[00:31:29] the first one I'm going to use is going
+[00:31:30] to be clae so I open up I type in over
+[00:31:33] here cloud like sir create a message
+[00:31:36] sweet the model is going to be beautiful
+[00:31:39] Opus Max tokens just set at 4,000 and
+[00:31:42] then click okay come down to message
+[00:31:45] excuse me come down to roll click on
+[00:31:46] user and then we get to add content now
+[00:31:49] the cool thing about this content guys
+[00:31:50] is that typically it's going to be the
+[00:31:52] exact same for all three models so we'll
+[00:31:53] save time with a copy and pasty so the
+[00:31:55] question is what is the actual thing
+[00:31:57] that we need to ask it so let me pull
+[00:31:59] that up for you so you can have a good
+[00:32:00] luck all right sweet here we go
+[00:32:01] opportunities bot by the way if you're
+[00:32:04] wondering how I've got these images to
+[00:32:05] be consistent I built out a tutorial in
+[00:32:07] school Community about how you actually
+[00:32:09] get mid journey to build out consistent
+[00:32:10] images in a phenomenally simple way like
+[00:32:13] that's why all the Styles that's why for
+[00:32:15] example you'll notice in my classroom
+[00:32:17] for instance these Styles like level two
+[00:32:20] three four that's going live today F
+[00:32:22] like it's all got like an avatar on the
+[00:32:23] right and like they look like they're
+[00:32:25] part of this like this image this Ninja
+[00:32:27] image here for example
+[00:32:28] is what I used to create
+[00:32:31] this and this and basically all of them
+[00:32:34] so if you're interested in that all
+[00:32:36] about to say we' we've got more detail
+[00:32:38] guys we've got the information now look
+[00:32:40] let's go into what we're talking about
+[00:32:41] the opportunities but as an AI powered
+[00:32:43] opportuni bot your mission is to uncover
+[00:32:46] valuable insights and identify potential
+[00:32:49] areas where our insert business name
+[00:32:52] here can best serve our prospective
+[00:32:54] clients to accomplish this you will
+[00:32:55] analyze three crucial pieces of
+[00:32:57] information I told you about details
+[00:32:59] about our Agency information about the
+[00:33:01] client the client's dreams aspirations
+[00:33:03] and pressing challenging pain points
+[00:33:07] using this information generate three
+[00:33:08] compelling paragraphs that highlight the
+[00:33:11] specific opportunities where our agency
+[00:33:14] or business can provide the most value
+[00:33:16] to the client emphasize how the servic
+[00:33:18] is going to overcome a challenges and
+[00:33:19] guys like this is the bit what I'd want
+[00:33:21] you to configure it I'd want you to
+[00:33:22] really think about your sales process
+[00:33:25] I've done this as an example but in
+[00:33:27] reality it could be anything that you
+[00:33:28] want so maybe you have a framework for
+[00:33:30] your Sal maybe you like to dig deep into
+[00:33:33] their paying points just simply
+[00:33:35] recalibrate this prompt in accordance
+[00:33:37] with your business needs and what you
+[00:33:38] think I've done it as an example to show
+[00:33:40] you what it does but realistically this
+[00:33:42] is a canvas and you're an artist in the
+[00:33:45] second paragraph explore the explore the
+[00:33:47] client's dreams and aspirations showcase
+[00:33:49] how our agency can help blah blah blah
+[00:33:51] and so I've actually given it paragraph
+[00:33:53] by paragraph instructions about how I
+[00:33:55] want to think about it in a format that
+[00:33:56] I'm comfortable with quite frankly
+[00:33:58] finally conclude your analysis with
+[00:33:59] three thought-provoking questions I like
+[00:34:01] that I like that I can just have a few
+[00:34:03] questions I can be like okay cool tell
+[00:34:04] me about this or tell me about that and
+[00:34:06] maybe you like we can download every
+[00:34:08] sales call you've ever had and we can
+[00:34:09] say look what were the questions that we
+[00:34:10] ask a lot and actually of those 20
+[00:34:13] questions which are the ones that we
+[00:34:15] want to ask this particular client or
+[00:34:16] maybe you have those already pre-built a
+[00:34:18] template millions of things we can do
+[00:34:20] I've given examples for example hey to
+[00:34:22] achieve your goal of scaling effects
+[00:34:23] using AI please share your client
+[00:34:25] acquisition cost and customer lifetime
+[00:34:27] value blah blah blah remember to tell
+[00:34:29] your language and tone to the specific
+[00:34:31] client and that industry use Clear
+[00:34:33] concise and clear concise and productive
+[00:34:37] and blah blah blah we all that cool
+[00:34:39] stuff there okay now look we come down
+[00:34:40] we come up we're going to copy all of
+[00:34:43] this now we're going to go back over now
+[00:34:44] to our
+[00:34:46] scenario we're going to come down here
+[00:34:49] the type it's going to be text not image
+[00:34:51] we come in boom we enter all in there
+[00:34:53] nice let me scroll down and now if I
+[00:34:55] show you for example what we had in our
+[00:34:57] last
+[00:34:58] so what I'm going to do just for the
+[00:34:59] sake of speed I'm going to come down
+[00:35:02] here I'm just going to copy all this
+[00:35:04] text and I'm going to come back over to
+[00:35:07] arenaria so it's the same it's the same
+[00:35:09] text but the reason I've done this is I
+[00:35:11] can show you where all of the data
+[00:35:14] points actually sit with it okay which
+[00:35:16] is completely oh there you go they're
+[00:35:18] right there cool okay so look we've got
+[00:35:21] client's dream outcome and problem where
+[00:35:23] is that
+[00:35:25] well it is if we scoll down it's the
+[00:35:28] paper form right so what was the paper
+[00:35:29] form one that we did let's book a
+[00:35:31] discovery call your challenges and
+[00:35:32] biggest dream
+[00:35:33] outcome there you go boom data and
+[00:35:36] research about the client and so for
+[00:35:38] this one guys I want you to go to
+[00:35:40] research B you're going to go down to
+[00:35:41] choices
+[00:35:43] message content like so and then
+[00:35:46] information about my business and then
+[00:35:48] just paste in all the information if
+[00:35:50] you're using an assistant again I'll
+[00:35:52] there'll be plenty of videos on my
+[00:35:53] Channel showing you how you build um you
+[00:35:55] know open assistance with open AI but
+[00:35:57] essenti you can load documents you can
+[00:35:59] load turnone of voice you can load
+[00:36:00] everything and that could just work
+[00:36:01] there
+[00:36:02] automatically alternatively write a
+[00:36:05] document like this basically says like
+[00:36:07] here are my services I do this I do this
+[00:36:09] I do this this is how I do it CRM
+[00:36:11] management automate lead assignment
+[00:36:13] follow-ups and data entry task I I do
+[00:36:15] this I uh automat assign process for
+[00:36:17] sales to reducing blah blah blah you
+[00:36:19] know be really specific the more data we
+[00:36:20] give it the more configurability and
+[00:36:23] different kind of outputs that we can
+[00:36:24] get from it when it comes at smarter
+[00:36:26] inputs smart output it's like they say
+[00:36:28] an hour and pre is worth 10 hours in
+[00:36:31] post so the more time you can front load
+[00:36:33] this the better it's going to be quite
+[00:36:35] frankly so come in now let's just re
+[00:36:37] rename these ones so going to call this
+[00:36:39] one
+[00:36:40] clae with the beautiful little tree or
+[00:36:43] plant as you will cool give that a
+[00:36:45] second to load in we click okay we're
+[00:36:46] going to click on it and it come down
+[00:36:48] I'm just going to copy control C all of
+[00:36:50] it now we've done Claude now let's do
+[00:36:52] chat GPT here we go for our second guy
+[00:36:55] we're going to go for create completion
+[00:36:57] we're going to go for um yeah that's
+[00:36:59] absolutely fine model gb4 system add
+[00:37:02] message roll again is going to be user
+[00:37:04] message content just copy and paste it
+[00:37:06] just copy and paste it that's all you
+[00:37:08] need to do literally um then come down
+[00:37:10] It'll ask for a token limit I believe
+[00:37:12] underneath Max tokens to zero goodbye
+[00:37:15] grammarly click okay sweet and then this
+[00:37:17] one I'm going to right click going to
+[00:37:18] rename this
+[00:37:20] one
+[00:37:22] chat
+[00:37:24] gbt little robot
+[00:37:28] if it wants to load in it's like takes
+[00:37:30] five business days for the emo to come
+[00:37:31] in it's funny isn't it and then finally
+[00:37:34] let's just come back here copy all the
+[00:37:35] text click okay and then let's add in
+[00:37:37] llama one as well so we're going to add
+[00:37:39] in perplexity
+[00:37:40] now perplexity we're added chat
+[00:37:43] completion thank you very much let's go
+[00:37:44] for the 70 billion uh instructed larger
+[00:37:46] parameter model um add messages content
+[00:37:49] is going to be everything we just posted
+[00:37:51] there wonderful click okay I want a bit
+[00:37:55] more data for us and the role is going
+[00:37:56] to be of user and then we you can play
+[00:37:59] with things like temperature and top PE
+[00:38:01] and just for information about
+[00:38:03] temperature basically the higher value
+[00:38:05] the more creative and variable so like
+[00:38:08] if you wanted a standup comic you'd want
+[00:38:09] a high temperature if you wanted to be a
+[00:38:11] bit more like deterministic and other
+[00:38:13] words like the more consistent reliable
+[00:38:15] inputs you would go for a lower
+[00:38:17] temperature uh one being Max and like
+[00:38:20] obviously the lower you get the more
+[00:38:21] deterministic it becomes cool and
+[00:38:23] obviously it's rename this guy now D
+[00:38:25] LL I mean how cool is it guys you've
+[00:38:28] basically got now three completely
+[00:38:30] different models all answering the same
+[00:38:33] question so then the final thing we want
+[00:38:34] to do is we're going to create the king
+[00:38:37] module who I'm going to use to
+[00:38:38] synthesize three outputs but we're still
+[00:38:40] going to grab and see what the other
+[00:38:41] models have got to say cuz it may be
+[00:38:42] that like when you do this you find it
+[00:38:44] like the chat GPT seems to always nail
+[00:38:46] it you'll have different sources and
+[00:38:48] data that available to you so basically
+[00:38:50] what I do here is I come again I'm just
+[00:38:52] going to clone this guy I'm going to
+[00:38:54] bring him over here um actually we're
+[00:38:57] going to do Claud is the king uh let me
+[00:38:58] come over clown Cloud come over here
+[00:39:02] rename him give him the appropriate
+[00:39:03] respect and homage that the king
+[00:39:05] deserves with his crown no king is a
+[00:39:07] King Without a Crown and we click okay
+[00:39:09] awesome so with King prompt let's give
+[00:39:11] it something interesting so let me show
+[00:39:14] you exactly what I'm thinking with this
+[00:39:15] so we've got the king research here now
+[00:39:17] look your mission is to analyze the
+[00:39:20] response from three AI models each
+[00:39:22] addressing opportunities from a bot
+[00:39:24] prompt follow these steps to create a
+[00:39:26] final output carefully R the few
+[00:39:28] responses focus on the insights
+[00:39:29] recommendations for questions compare
+[00:39:31] the responses to identify any
+[00:39:33] hallucinations inaccuracies in
+[00:39:35] consistencies that highlight the
+[00:39:37] strength of each response such as unique
+[00:39:39] perspectives compelling arguments and
+[00:39:42] well-crafted questions it's also
+[00:39:43] important to note by the way guys that
+[00:39:45] you could run the same PR through chat
+[00:39:47] gbt five times get six different respon
+[00:39:49] well five different responses the point
+[00:39:50] is that like even the same model will
+[00:39:53] give you different things based on the
+[00:39:55] way that these language models work in
+[00:39:56] terms of like
+[00:39:58] probability merge the best parts of each
+[00:40:00] response to create a cohesive persuasive
+[00:40:03] and insightful final output leverage the
+[00:40:05] strength of each model to enhance it
+[00:40:06] overall quality impact I I just think
+[00:40:09] this is so so cool ensure the final
+[00:40:11] output maintains a specified format and
+[00:40:13] I basically look I wanted to do the
+[00:40:14] paragraphs and the questions include a
+[00:40:16] relevant emerge each section present the
+[00:40:18] final output as a stand line response
+[00:40:20] without any additional comment or
+[00:40:21] explanations remember to maintain a
+[00:40:23] clear and concise and persuasive tone
+[00:40:25] that showcases our agency value
+[00:40:26] proposition from competitors the final
+[00:40:28] output should be a powerful tool to help
+[00:40:30] prepare a productive and impactable
+[00:40:31] meeting of the client and two bits that
+[00:40:33] I I I did on that aren't this prompt the
+[00:40:35] first one is that you
+[00:40:36] must take
+[00:40:40] something
+[00:40:43] from each of the outputs in other words
+[00:40:48] we're forcing it to take something of
+[00:40:49] value from each one and then finally um
+[00:40:53] this is an
+[00:40:55] executive document
+[00:40:58] concise helpful and
+[00:41:01] helpful factual and numbers lead cool
+[00:41:06] awesome and we copy this beautiful text
+[00:41:08] from the King research PRT we come back
+[00:41:10] over now to our wonderful automation
+[00:41:13] King and we come here and then basically
+[00:41:15] what you do is you're going to C going
+[00:41:17] to paste it in there but for the purpose
+[00:41:19] of showing you where all the different
+[00:41:20] modules are let me just come back over
+[00:41:21] to the king here for example going to
+[00:41:23] come down copy this guy come back over
+[00:41:26] now to
+[00:41:28] scenario paste it in and essentially you
+[00:41:30] can see at the bottom
+[00:41:34] here there you go in fact I can say I
+[00:41:36] added some additional information so let
+[00:41:38] me just come back over and make sure
+[00:41:39] that this is fully up to date for you
+[00:41:41] okay so look let me come back here okay
+[00:41:43] come here I'm just going to post this in
+[00:41:45] so a couple of things I added to this do
+[00:41:48] not write this as a letter keep keep
+[00:41:49] each paragraph to a maximum of 75 words
+[00:41:52] and write this in a succinct informative
+[00:41:54] executive report you must add three
+[00:41:56] questions analysis and I even specified
+[00:41:58] paragraph paragraph paragraph question
+[00:42:00] question question remember clear and
+[00:42:02] concise you must learn at least one
+[00:42:03] thing from each response do not just
+[00:42:05] copy one of the responses we don't want
+[00:42:07] the king to be lazy the king needs to be
+[00:42:09] the king because he's Gathering
+[00:42:10] everything so just two little small
+[00:42:12] builds in there just wanted to add based
+[00:42:13] on my testing and responses I got again
+[00:42:15] all this is going to be available Down
+[00:42:16] Below in the description within the
+[00:42:18] school community so we come back over
+[00:42:20] now to our scenario and then basically
+[00:42:23] guys we say here his output one output
+[00:42:26] two and output three so what's output
+[00:42:28] one output one is going to be clae
+[00:42:31] output two is going to be chat GPT and
+[00:42:34] then output three is quite simply going
+[00:42:36] to be the Llama thing come down to
+[00:42:38] choices let me just move over here so
+[00:42:40] you can see
+[00:42:43] properly choices oh my goodness
+[00:42:46] message content incredible guys how sick
+[00:42:50] is that now what's the next thing that
+[00:42:52] we need to do once we've done that as
+[00:42:54] you can see from my scenario here we
+[00:42:56] need to tools and then create a template
+[00:42:59] and this is really cool but I think
+[00:43:00] you're really going to like this I also
+[00:43:01] want to call out somebody in my
+[00:43:02] community as who actually did a full
+[00:43:03] video in our tip section showing people
+[00:43:05] exactly how you actually build a
+[00:43:07] consistent configurable aspect in Google
+[00:43:10] dogs she's incredible I appreciate you I
+[00:43:12] just want to call out because I feel
+[00:43:14] learning from others is an incredible
+[00:43:16] way to accelerate and share your tips
+[00:43:18] and knowledge is one of the best ways to
+[00:43:19] learn she also did part of our
+[00:43:21] competition she launched a new product
+[00:43:22] I'm going to put a link for it down
+[00:43:23] below because it is awesome she's
+[00:43:25] innovating the space and I really appre
+[00:43:27] appreciate you now check this out guys
+[00:43:29] what do we do we're going to come down
+[00:43:30] here and I'll show what this looks like
+[00:43:31] in this other module here okay so we've
+[00:43:33] got the set multiple variables and then
+[00:43:35] we've got this cre a template so the
+[00:43:37] setting of the multiple variables is
+[00:43:39] basically if I show you my document
+[00:43:42] here can you
+[00:43:44] see this is the variables in other words
+[00:43:47] these things in curly brackets okay and
+[00:43:50] then this is what happens so when we're
+[00:43:52] setting these variables anything we want
+[00:43:54] to change based on output is a variable
+[00:43:56] so look what does that look like in
+[00:43:58] reality now look I come here I type in
+[00:44:00] set multiple variables and I just
+[00:44:03] connect it I click on it we come on
+[00:44:06] variables and then we just add every
+[00:44:08] single variable that we want so to start
+[00:44:10] the Google Doc side of the thing head
+[00:44:12] over to docs.google.com and you'll see
+[00:44:15] these kind of templates at the top of
+[00:44:17] the page so pick one that you like I for
+[00:44:20] instance chose this geometric one is for
+[00:44:22] for example but it could be anyone that
+[00:44:24] you like so let's just say I don't know
+[00:44:26] we like
+[00:44:27] let's say we like this business letter
+[00:44:29] as a for instance okay we click on it
+[00:44:31] like so and when Google Docs decides to
+[00:44:32] land and work it's okay now this is the
+[00:44:35] bit that gets really really cool so
+[00:44:37] you'll see for example if I compare this
+[00:44:39] to one that I did earlier now you see
+[00:44:41] now look we can add in all these
+[00:44:43] specific you can if you're doing like
+[00:44:44] reports businesses you can have your own
+[00:44:46] fonts your own logos and stuff okay so
+[00:44:49] look what do we want to do the first
+[00:44:50] thing we want on ours is going to be
+[00:44:52] company name so let's just say for
+[00:44:53] example we want to have automation
+[00:44:56] planet
+[00:45:02] and then we want to have the name of the
+[00:45:04] company so we could say what we do is we
+[00:45:05] to those beautiful curly brackets and
+[00:45:07] then we just say hey company name and
+[00:45:11] curly brackets and then we can also
+[00:45:13] specify the formatting so for example I
+[00:45:14] like to use a lot of color and for the
+[00:45:17] company name I can just come here and
+[00:45:19] then change that color to like say I
+[00:45:21] want P just as an example right and then
+[00:45:23] we've got this stuff here and then
+[00:45:25] basically we can build out all the stuff
+[00:45:27] that we want so then all you do for the
+[00:45:29] whole thing is you're meeting okay then
+[00:45:33] we do the curly brackets and we say okay
+[00:45:35] cool it would be client name when are we
+[00:45:37] meeting them the date the website and
+[00:45:40] again it's just curly bracket cly
+[00:45:41] bracket the name of the thing that you
+[00:45:43] want to configure and and the curly
+[00:45:45] bracket and then we've got dream outcome
+[00:45:47] we've got website overview and then we
+[00:45:49] just insert website overview and then
+[00:45:51] what I'd want you to do is create the
+[00:45:52] opportunities King and call this one
+[00:45:55] opportunities King we've got Cloud call
+[00:45:58] that one clae and then we got chat GPT
+[00:46:01] and we got llama and you can do
+[00:46:02] different things in here like insert
+[00:46:04] images and do whatever you want and then
+[00:46:06] once we've done that we come over to
+[00:46:07] file going to come down here to find
+[00:46:09] move right here come down to move and
+[00:46:12] then we're going to say where do you
+[00:46:13] want it to move so I'm going to put it
+[00:46:14] over here to 1,00 IQ meeting prep and
+[00:46:18] then click on move like so change your
+[00:46:21] as access that's completely fine if
+[00:46:22] you're happy with that boom that's done
+[00:46:24] now we've created a template we've added
+[00:46:26] the curly brackets for all the stuff
+[00:46:28] that we want and we've moved it to a
+[00:46:29] folder that we can now access within
+[00:46:32] make so then what you do next you're
+[00:46:35] going to come down here you're going to
+[00:46:36] come down to Google Docs and you're
+[00:46:38] going to put create excuse me come down
+[00:46:40] to
+[00:46:42] Google oh my goodness Google Docs okay
+[00:46:44] create a document from a template like
+[00:46:47] so and then what do we do we need to
+[00:46:48] find the document ID so we click on this
+[00:46:50] guy here for instance give this a sec to
+[00:46:53] load up all right cool now look I come
+[00:46:55] into thousand IQ meeting prep which is
+[00:46:57] what I wanted then I click on plus to
+[00:46:59] find the document I I created automation
+[00:47:02] Planet template with a diamond does that
+[00:47:03] look
+[00:47:04] familiar well it should do because
+[00:47:07] that's exactly what we solved it as how
+[00:47:09] cool is that guys and this bit's going
+[00:47:10] to blow your mind because it's so simple
+[00:47:11] and so cool now look I come over
+[00:47:14] to the actual CP page which is this one
+[00:47:17] and then look it's automatically
+[00:47:19] populated all of the different fields
+[00:47:21] that we set in the first one so then all
+[00:47:23] you do at this stage is go through one
+[00:47:26] by one on and pick out and just align
+[00:47:29] everything together so we start with the
+[00:47:31] company name okay let's do this together
+[00:47:33] right now company name value don't click
+[00:47:36] on the title click on the value client
+[00:47:39] name same thing come down to client
+[00:47:41] name which is going to be
+[00:47:44] D your full name Jack Roberts meeting
+[00:47:49] date let's find out where the meeting
+[00:47:51] dat is come down to value on this one
+[00:47:52] and then I like to do this one which is
+[00:47:54] like dates and then and time right so I
+[00:47:58] do date and the date is the start date
+[00:48:02] and then the time is the start time and
+[00:48:04] then we got website and again you know
+[00:48:06] based on the form you're using or how
+[00:48:08] you're getting these triggers it will
+[00:48:10] look slightly different for you but you
+[00:48:12] just kind of just basically configure it
+[00:48:14] to your own purposes and it'll just be
+[00:48:17] exactly the same process just go through
+[00:48:18] and do the same thing then we've got
+[00:48:20] dream outcome which was uh this one down
+[00:48:24] here wasn't it the value awesome and
+[00:48:26] then website overview well for that we
+[00:48:28] need to go to Snappy result and then
+[00:48:32] opportunities King is opportunities King
+[00:48:34] Claude
+[00:48:35] is clae chaty BT is chaty BT it's all
+[00:48:39] fairly straightforward stuff and then
+[00:48:40] finally llama is the Llama come down to
+[00:48:43] choices come down to message come down
+[00:48:45] to Content and then we need to give it
+[00:48:47] title my suggestion for you would be to
+[00:48:49] call it the name of the business so just
+[00:48:51] come straight down to the company name
+[00:48:53] which is Padawan Enterprises now look
+[00:48:55] what this will do is will create a brand
+[00:48:57] new document called Padawan Enterprises
+[00:49:00] in the folder that we want so then
+[00:49:01] before the meeting we load it up we have
+[00:49:02] a look at it we can get we can set it up
+[00:49:04] to centers and email if want to we can
+[00:49:05] do anything that we like new Drive
+[00:49:07] location new document location which is
+[00:49:09] basically hey where do you want it to go
+[00:49:11] and I'll just throw it in th IQ meeting
+[00:49:13] prep then I click okay awesome now what
+[00:49:16] I do I'm going to line it and so for the
+[00:49:17] final example guys we want to use
+[00:49:19] something slightly different let's go a
+[00:49:20] little bit out there let's think of um
+[00:49:23] let's do a coffee company uh in fact
+[00:49:26] there's a big big one in London okay who
+[00:49:28] were like they're blowing up I used to
+[00:49:29] get coffee from directly called grind
+[00:49:32] coffee let's say they grind coffee look
+[00:49:34] at this guys beautiful websitee by the
+[00:49:36] way love the Ping love that kind of
+[00:49:37] branding let's say grind coffee and
+[00:49:38] loving life but you know what guys
+[00:49:40] they'd benefit with some AI Automation
+[00:49:42] and you know what I know just the agency
+[00:49:44] it's called automation planet and
+[00:49:46] they're pretty they're pretty cool
+[00:49:48] planet automation I didn't even get the
+[00:49:49] name right obviously not that well okay
+[00:49:51] so look emo let's add this here what's
+[00:49:54] your full name full name is going to be
+[00:49:57] James
+[00:49:59] diamond from the coffee company company
+[00:50:01] name is going to be
+[00:50:05] grind coffee house like so what's their
+[00:50:10] level level five trial Blazer come down
+[00:50:13] what is your website we enter the
+[00:50:14] website there grind and what is your
+[00:50:16] biggest challenges and dream outcome so
+[00:50:17] for example let's just say my coffee
+[00:50:20] company is
+[00:50:23] scaling but not fast enough
+[00:50:27] we want to acquire new consumers through
+[00:50:33] Ai and digital
+[00:50:39] marketing we also want to automate our
+[00:50:43] processes and simplify our operations
+[00:50:48] and be good if processes was spell right
+[00:50:50] that's cool
+[00:50:53] operations using AI automation okay
+[00:50:57] okay sweet okay when do they want to
+[00:51:00] meet us well they're busy this week they
+[00:51:01] want to catch up with us on the 4th and
+[00:51:04] it's got the time zone there it's a busy
+[00:51:05] day for Planet automation because hey we
+[00:51:08] got so many clients guys you know what
+[00:51:10] you have to book in advance with those
+[00:51:11] 9:45 to 10 cool now what do we do we
+[00:51:14] come back to automation come down here
+[00:51:16] going to click run one so that's going
+[00:51:18] to wait for paper for I come back over
+[00:51:20] now I hit submit and be in mind guys
+[00:51:22] what have you done in this scenario
+[00:51:23] you've done nothing this is just this is
+[00:51:25] just the form the client had and all
+[00:51:27] this stuff is going to start happening
+[00:51:28] in the background look at this pay for's
+[00:51:30] grabbed it HTTP has gotten the file text
+[00:51:32] pass has already done its job so snaps a
+[00:51:34] lot website Snappy's done it and he's
+[00:51:36] already gotten for us the summary and if
+[00:51:38] I look at this guys I load up website
+[00:51:39] Snappy ethically sourced premium coffee
+[00:51:42] products available for home delivery or
+[00:51:43] cafes compossible pods subscription
+[00:51:45] discounts and bundles offered
+[00:51:47] sustainably focused with various gifts
+[00:51:49] options and accessories beup satified
+[00:51:51] with the charitable Foundation monthly
+[00:51:53] coffee subscriptions 22% off ethically
+[00:51:55] sour extensive range of bean pot beob
+[00:51:58] certified boom boom boom how helpful is
+[00:52:00] that like that just gives me everything
+[00:52:01] I need to know at high level how do I
+[00:52:03] know that's true well I was a customer
+[00:52:05] so I I know for a fact that's how it
+[00:52:07] works I even tried their coffee in
+[00:52:08] London their cues were long but their
+[00:52:10] coffee was great research a done his job
+[00:52:12] research be done the fact checking and
+[00:52:15] might come down and check out what
+[00:52:16] responses we've got look at this here
+[00:52:18] are top 10 facts about grind grind is
+[00:52:20] expanded to 11 locations in London
+[00:52:22] grinds Revenue grew by 25% in 2020
+[00:52:25] grind's Coffee Source from in 20
+[00:52:26] different countries grind's partner over
+[00:52:28] 100 startups and scale UPS grind's
+[00:52:30] membership model has 90% retention rate
+[00:52:33] with members Sting the community
+[00:52:35] networking opportunities key benefits
+[00:52:37] and look at these resources guys
+[00:52:38] co-working insights in London it's got
+[00:52:40] It's got multiple examples from their
+[00:52:43] website not just their homepage so many
+[00:52:45] different things in there grind coffee
+[00:52:47] shops designed to be Instagram worthy
+[00:52:48] this is a it's good article from a
+[00:52:50] completely different website grind is a
+[00:52:52] loyalty program with 100,000 members
+[00:52:54] that's actually really impressive to be
+[00:52:55] fair and they partner with food delivery
+[00:52:57] services like deliveroo uh they've done
+[00:52:59] these different partners I mean
+[00:53:00] absolutely insane we come off this and
+[00:53:03] look going all the way to the end and
+[00:53:05] the tools module has failed D let's find
+[00:53:08] out why let's figure out what happened
+[00:53:09] here okay so guys it looked like I
+[00:53:11] didn't actually save it when I completed
+[00:53:13] this and so it terminated the end of it
+[00:53:15] which is a shamed you know what we're
+[00:53:16] going to have to do guys we're going to
+[00:53:17] have to rub this whole thing back one
+[00:53:19] more time so we come back here let me
+[00:53:21] save this and let me reun it from the
+[00:53:23] top okay me run once but I'm going to
+[00:53:24] save you the skips I'm going to fast
+[00:53:25] forward and I'm going to submit the form
+[00:53:27] and then we'll pick back up from tools
+[00:53:28] I've just rerun the form I've done the
+[00:53:30] paper form again it's now time to Rocket
+[00:53:32] it through and work through Claude chat
+[00:53:34] gbt LL it's done the research and at the
+[00:53:36] end of it it's going to create a brand
+[00:53:37] new document for us that's going to sit
+[00:53:39] in a folder and guys so right now at the
+[00:53:42] DAT of recording it is the 19th of June
+[00:53:44] in a couple weeks the Jack Roberts
+[00:53:46] YouTube channel we head out to Vegas to
+[00:53:47] meet Alex homos in some ovens because we
+[00:53:50] will fortunate enough because of you to
+[00:53:51] win the school games last month and if I
+[00:53:53] haven't expressed my gratitude ofing
+[00:53:54] already I want to say thank I want to
+[00:53:56] say say thanks from po the channel and
+[00:53:57] the journey I remember when I had like
+[00:54:00] 13 subscribers on the channel in fact it
+[00:54:02] was a joke with my ex partner it was
+[00:54:04] like I said I think AI is pretty cool
+[00:54:06] and she goes yeah well who thinks that I
+[00:54:07] said well me and my 13 subscribers
+[00:54:10] certainly thinks that we both laughed
+[00:54:11] about it and it's so wild to think of
+[00:54:13] like where we are like a year and a half
+[00:54:15] later from that moment and it's going to
+[00:54:17] be cool to go to Vegas so if any of you
+[00:54:19] guys watch the channel live in Vegas and
+[00:54:21] you want to hang out when we get out
+[00:54:22] there this month I'd love to hear from
+[00:54:23] you so let me know Down Below in the
+[00:54:24] comments so look we got the TOS that's
+[00:54:27] complete Google Docs has completed so
+[00:54:30] what does it mean it means if we head
+[00:54:31] over now to this part of the website on
+[00:54:33] our Google Docs I open up a th000 i me
+[00:54:35] prep I should see a new document
+[00:54:37] entitled ground coffee house with some
+[00:54:39] information that might help us prepare
+[00:54:41] for our
+[00:54:42] meeting and where are we oh grind coffee
+[00:54:45] house awesome let's check it out we load
+[00:54:47] it up automation planner and grind
+[00:54:50] coffee house let's check it out who am I
+[00:54:52] meeting with you Mee with Jason Diamond
+[00:54:54] when is it okay that's cool what's their
+[00:54:55] website brilliant let me come over here
+[00:54:57] so and get a better better look what's
+[00:54:59] their dream outcome okay my coffee
+[00:55:00] company is scaling but not fast enough
+[00:55:02] we want to acquire new consumers to Ai
+[00:55:04] and digital marketing we also want to
+[00:55:06] automate our processes and simplify
+[00:55:07] operations using a automation okay I
+[00:55:09] mean can you just see how Snappy this
+[00:55:11] it's so helpful website overview grind
+[00:55:14] coffee offers ethically sourced home
+[00:55:15] compostible coffee and products and pods
+[00:55:17] bum bum bum what are their core features
+[00:55:19] ethically sourced various various
+[00:55:21] subscription models and then we've got
+[00:55:23] our opportunities Ki now check this out
+[00:55:25] executive Port gr coffee's company's
+[00:55:28] primarily primary challenge is a need to
+[00:55:30] scale rapidly to capture a larger
+[00:55:32] consumer base our AI driven Solutions
+[00:55:33] can directly address the painbot by
+[00:55:35] optimizing lead generation and
+[00:55:36] qualification process by developing
+[00:55:38] custom AI power chat Bots and
+[00:55:40] integrating them seamlessly with grind's
+[00:55:42] existing CRM we can effici efficiently
+[00:55:45] generate and qualify leads reducing
+[00:55:47] response time and ensuring quicker
+[00:55:48] conversions this will enable grind to
+[00:55:50] focus on high high high quality leads we
+[00:55:54] talk about how grind aspiring consumers
+[00:55:55] through a digital marketing and
+[00:55:57] simplified operations it's picked up on
+[00:56:00] what grind wanted to do I cannot stress
+[00:56:02] enough how amazing that is like it knows
+[00:56:04] what grind wants and has basically
+[00:56:07] washed that with the research and washed
+[00:56:10] it with our own business data guys this
+[00:56:13] is this is the future this is the future
+[00:56:16] has arrived and it's right here our high
+[00:56:18] volume copy generation service can
+[00:56:19] support gr digital marketing by rapidly
+[00:56:22] producing SEO friendly blah blah blah
+[00:56:24] blah blah it's it's almost done all the
+[00:56:25] thinking for us do you know what I mean
+[00:56:27] how cool is that an opportunity for
+[00:56:29] grind is blah blah blah then what
+[00:56:30] question should we ask well let's have a
+[00:56:32] look what specific pain points do you
+[00:56:35] experience in your current lead
+[00:56:36] generation and qualification process and
+[00:56:39] how do you envisage AI pod Solutions
+[00:56:40] helping you with that how do you
+[00:56:42] currently measure the effectiveness of
+[00:56:43] your marketing campaigns what metrics do
+[00:56:46] you use at the moment to determine the
+[00:56:48] success what are the most timec
+[00:56:49] consuming labor intentive processes in
+[00:56:51] your operations that's a great question
+[00:56:53] and how do you think automation could
+[00:56:54] help then we've got CLA perspective and
+[00:56:57] close questions and we've got chat
+[00:56:59] GPT and chat GPT like chat GPT think
+[00:57:01] it's good question simp to CL quickly
+[00:57:03] which areas of your lead generation
+[00:57:04] conversion process do you find M
+[00:57:06] challenging maybe I look through that
+[00:57:07] and I think I actually chat gbt was on
+[00:57:09] to something there let me nip it and
+[00:57:10] grab but guys you know what the cool
+[00:57:11] thing is it's at your discretion it's at
+[00:57:14] your call what you want to do how you
+[00:57:15] want to go it all you care about is the
+[00:57:17] fact that they do the customer does what
+[00:57:19] they do and you get a beautiful highly
+[00:57:21] researched document created by digital
+[00:57:24] AI employees that you just take receive
+[00:57:26] and do what you want and hopefully if
+[00:57:27] I've done my job properly in this
+[00:57:29] video it makes sense how configurable
+[00:57:31] this is and how many different things
+[00:57:33] that this can help you to get started
+[00:57:35] with now if you're new to AI or you're
+[00:57:37] experienced and you want to challenge
+[00:57:38] yourself a little bit I encourage you
+[00:57:39] watch this video on screen now which is
+[00:57:41] like 10 levels of AI automation we start
+[00:57:44] with something like really basic and
+[00:57:46] really simple and build on each level to
+[00:57:48] get something at level 10 which is more
+[00:57:50] complex and really powerful it's a great
+[00:57:52] video I encourage you to check that one
+[00:57:54] out because it will really help expand
+[00:57:55] your understanding of how to use a in
+[00:57:57] automation but any case guys thank you
+[00:57:59] so much for watching have a great week
+[00:58:01] and I'll see you in the next video

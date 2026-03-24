@@ -1,0 +1,546 @@
+{
+  "name": "🤩 Custom Comic",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "={{ $('If').item.json['Website 🔗'] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -660,
+        -60
+      ],
+      "id": "243e5185-9131-4c25-9d20-ed0ea0f46453",
+      "name": "Get website code"
+    },
+    {
+      "parameters": {
+        "url": "https://api.screenshotone.com/take",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "access_key",
+              "value": "INSERT KEY"
+            },
+            {
+              "name": "url",
+              "value": "={{ $('If').item.json['Website 🔗'] }}"
+            },
+            {
+              "name": "format",
+              "value": "jpg"
+            },
+            {
+              "name": "block_ads",
+              "value": "true"
+            },
+            {
+              "name": "block_cookie_banners",
+              "value": "true"
+            },
+            {
+              "name": "block_banners_by_heuristics",
+              "value": "false"
+            },
+            {
+              "name": "block_trackers",
+              "value": "true"
+            },
+            {
+              "name": "delay",
+              "value": "0"
+            },
+            {
+              "name": "timeout",
+              "value": "60"
+            },
+            {
+              "name": "response_type",
+              "value": "by_format"
+            },
+            {
+              "name": "image_quality",
+              "value": "80"
+            }
+          ]
+        },
+        "options": {
+          "allowUnauthorizedCerts": false,
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "screenshot.jpg"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -240,
+        -60
+      ],
+      "id": "5855cca3-5688-42d8-8272-89f16206a26b",
+      "name": "Screenshot of site"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1520,
+        -140
+      ],
+      "id": "2b6c5ca1-af9d-4e7d-a2e0-2fbfbbdf6f5f",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appJB7Pj7LShxmXl9",
+          "mode": "list",
+          "cachedResultName": "🧲 Comic Lead Magnet",
+          "cachedResultUrl": "https://airtable.com/appJB7Pj7LShxmXl9"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblFMvgrZhXe4X5EP",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appJB7Pj7LShxmXl9/tblFMvgrZhXe4X5EP"
+        },
+        "filterByFormula": "=",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        -1280,
+        -140
+      ],
+      "id": "241a5c5c-4aeb-41be-8c2f-71e57ab6c272",
+      "name": "Airtable",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "Xqd3dnjmT0zrv06m",
+          "name": "Airtable Personal Access Token account 6"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4050f575-6332-4cb3-9353-a489f9aa8f4c",
+              "leftValue": "={{ $json.Status }}",
+              "rightValue": "Complete",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1060,
+        -140
+      ],
+      "id": "1eee0208-a7a4-4eba-baca-a62de7b1bea4",
+      "name": "If"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -820,
+        -260
+      ],
+      "id": "6fda4239-a2a0-4880-b91a-ce3c9ec1b0f5",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9b4e9004-1ef1-49e4-986d-a32e421b2707",
+              "name": "WebsiteURL",
+              "value": "={{ $('Airtable').item.json['Website 🔗'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -840,
+        -60
+      ],
+      "id": "8da440e6-95f4-4190-82a3-d9beba36f54a",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "GPT-4O"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=You will review the below data and complete this sentence.\n\nRespond with this sentence and no additional data.\n\n\"\"[INSERT TEXT], I like it\"\n\n- your text must be no more than three words\n- it must summarise the core of what that business website offers\n\nHere are some examples:\na) Card Payments, I like it\nb) AI Automation, I like it\nc) Cheap Phones, I like it\n\nIt should be simple and not overly complicated words where possible. Keep it to a reading age of a 12 year old.\n\nIf the creator of the website were to read it, they should think 'wow, they checked out our site'\n\nHere is the data:\n{{ $('Website Text').item.json.text }}\n\n"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        420,
+        -60
+      ],
+      "id": "37f380ca-fd9d-4e07-a5dd-366337fec286",
+      "name": "OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "zqjpqb3JveTJnNtb",
+          "name": "OpenAi account 13"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// This script runs once per input item\nconst html = $json.data || '';\n\nconst strippedText = html\n  .replace(/<script[^>]*>([\\s\\S]*?)<\\/script>/gi, '')\n  .replace(/<style[^>]*>([\\s\\S]*?)<\\/style>/gi, '')\n  .replace(/<br\\s*\\/?>/gi, '\\n')\n  .replace(/<\\/p>/gi, '\\n')\n  .replace(/<[^>]+>/g, '')\n  .replace(/&nbsp;/gi, ' ')\n  .replace(/&amp;/gi, '&')\n  .replace(/&lt;/gi, '<')\n  .replace(/&gt;/gi, '>')\n  .replace(/&quot;/gi, '\"')\n  .replace(/&#39;/gi, \"'\")\n  .trim();\n\nreturn {\n  json: {\n    text: strippedText\n  }\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -440,
+        -60
+      ],
+      "id": "da3c8aef-068a-47ee-872c-2b012bbed3a5",
+      "name": "Website Text"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Create proper binary structure for OpenAI node\nconst items = [];\n\nfor (const item of $input.all()) {\n  // Create a new item with the correct binary structure\n  const newItem = {\n    json: {},\n    // Binary data must be in a property called 'data'\n    binary: {\n      data: null\n    }\n  };\n  \n  // If input already has binary data, copy it directly\n  if (item.binary) {\n    const binaryKey = Object.keys(item.binary)[0];\n    \n    if (binaryKey && item.binary[binaryKey]) {\n      // Copy the entire binary property structure\n      newItem.binary.data = {\n        ...item.binary[binaryKey],\n        // Make sure property name is 'data'\n        propertyName: 'data'\n      };\n    }\n  }\n  \n  items.push(newItem);\n}\n\nreturn items;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        20,
+        -60
+      ],
+      "id": "e2a43d16-9c36-4da1-abf1-6dc170eea368",
+      "name": "Screenshot to Binary"
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "GPT-4O"
+        },
+        "text": "=Analyze this screenshot of my client's homepage and provide two outputs:\n\nColour Pallette:\nand provide a concise description of the color palette in no more than 20 words, starting with 'The colour palette should be:' Focus on identifying just 2-3 key colors following the 70-20-10 rule (dominant color at 70%, secondary at 20%, accent at 10%). \n\n\nWebsite Description:\nProvide a concise description of what the website looks like in 20 words or less.",
+        "inputType": "base64",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        220,
+        -60
+      ],
+      "id": "a8da4244-e876-44ae-b41f-45d0a4260c7c",
+      "name": "Website Analysis",
+      "credentials": {
+        "openAiApi": {
+          "id": "zqjpqb3JveTJnNtb",
+          "name": "OpenAi account 13"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "base": {
+          "__rl": true,
+          "value": "appJB7Pj7LShxmXl9",
+          "mode": "list",
+          "cachedResultName": "🧲 Comic Lead Magnet",
+          "cachedResultUrl": "https://airtable.com/appJB7Pj7LShxmXl9"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblFMvgrZhXe4X5EP",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appJB7Pj7LShxmXl9/tblFMvgrZhXe4X5EP"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $('If').item.json.id }}",
+            "💬 Prompt": "=🎨 Comic Prompt: Yellow-Toned Cartoon Style — AI Automation Outreach Comic (4-Panel)\n\nCreate a 4-panel comic strip in a vibrant, cartoon style reminiscent of classic animated sitcoms: bold outlines, exaggerated facial expressions, and a bright, playful color palette. The characters should have yellow skin tones, expressive eyes, and a slightly caricatured look.\nThe main character is a tech-savvy, confident professional with either a clean haircut or a scruffy beard (Character A). Character A wears a T-shirt featuring the attached logo. Character B appears in the last strip (part 4) looks different, and has a different t-shirt on with the word ‘Jack; written on it.\n\nThis comic will be used as a creative cold outreach for an AI automation consultant.\n\n✅ Visual Style Notes:\n\nYellow-toned skin, cartoonish proportions\n\n\nThick black outlines, bright colors\n\n\nExaggerated facial expressions\n\n\nClean, punchy composition\n\nEvery single panel MUST have a speech bubble as explain below.\n\n\nAccent colors and props reflecting the brand. The brand colours and description of the homepage to include are: \n{{ $('Website Analysis').item.json.content }}\n\nKeep the design visually beautiful with contrasting colours.\n\nInclude a website screenshot on the laptop screen in panel 1. \n\n✅ Text & Structure:\nMax 5 words per panel, in speech bubbles or notes only\n\n\nStyle and tone: humorous, insightful, friendly\n\n\n🟨 Panel Breakdown\nPanel 1 – Admiration\n Scene: Character A is looking at his open laptop and the attached screenshot is clearly visible.\n\nThe business website clearly visible. He looks intrigued\n\nSpeech bubble: \n{{ $json.message.content }}\"\n\nPanel 2 – Opportunity Thought\n Scene: Character A wonders longingly looking out of the window as he considers. He looks sad.\n\n Speech bubble:\n \"but we need more customers...\"\n\nPanel 3 – Insight\n Scene: A lightbulb appears above Character A's head. In the background, helpful cartoon robots tidy tabs, auto-sort messages, or serve digital forms. He looks hopeful.\n\n Speech bubble:\n \"AI Automation could help.\"\n\nPanel 4 – CTA\n Scene: A New character (Character B) in the fourth panel, visibly different then the others with a plain shirt with the word Jack on it. He smiles, writing on a sticky note or messaging box.\n\n Message:\n \"Want me to show you how?\""
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "Website 🔗",
+              "displayName": "Website 🔗",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Attachment",
+              "displayName": "Attachment",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": true
+            },
+            {
+              "id": "💬 Prompt",
+              "displayName": "💬 Prompt",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Complete",
+                  "value": "Complete"
+                },
+                {
+                  "name": "Not started",
+                  "value": "Not started"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Last Modified Time",
+              "displayName": "Last Modified Time",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        780,
+        -60
+      ],
+      "id": "35b78187-a07a-4136-943a-618b58134ea2",
+      "name": "Airtable2",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "Xqd3dnjmT0zrv06m",
+          "name": "Airtable Personal Access Token account 6"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get website code": {
+      "main": [
+        [
+          {
+            "node": "Website Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Screenshot of site": {
+      "main": [
+        [
+          {
+            "node": "Screenshot to Binary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Get website code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Website Text": {
+      "main": [
+        [
+          {
+            "node": "Screenshot of site",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Screenshot to Binary": {
+      "main": [
+        [
+          {
+            "node": "Website Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Airtable2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Website Analysis": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "077625af-cc05-4fbb-9a7d-e0b7432223ce",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "YgdJkwgttn8IxYHB",
+  "tags": []
+}

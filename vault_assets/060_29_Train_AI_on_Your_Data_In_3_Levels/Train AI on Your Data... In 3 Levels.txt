@@ -1,0 +1,1553 @@
+[00:00:00] in this video I'm going to show you how
+[00:00:01] to create a super intelligent GPT agent
+[00:00:03] trained on your own data or any data
+[00:00:06] that you like whether that's entirety of
+[00:00:07] a YouTube channel or for example the
+[00:00:09] entirety of a website and if you want
+[00:00:12] something that is going to give you
+[00:00:13] actual results based on a data that you
+[00:00:15] give it and you want something that's
+[00:00:17] just going to enhance and either make
+[00:00:18] your Journeys more epic or as part of an
+[00:00:20] air automation agency or maybe you just
+[00:00:22] want to create a business then this
+[00:00:24] video is for you now I'm going to show
+[00:00:26] you this across three levels because you
+[00:00:28] have to understand first of all how to
+[00:00:30] get the data so firstly we're going to
+[00:00:32] look at how you would actually scrape
+[00:00:34] all the information either from a
+[00:00:36] YouTube channel or from an entire
+[00:00:38] website after that I'm going to show
+[00:00:40] exactly how you would physically prompt
+[00:00:42] this uh and actually give that to the
+[00:00:43] GPT agent meaning that it can draw the
+[00:00:45] information properly and give you
+[00:00:47] responses that you like and then thirdly
+[00:00:49] I'm going to show you an example of a
+[00:00:51] product that you could create with this
+[00:00:53] GPT system for example this one here
+[00:00:56] will be that you get an email and then
+[00:00:58] what this will do is create a brand new
+[00:01:00] email response to that individual
+[00:01:02] trained on your turn of voice trained on
+[00:01:04] every single piece of information about
+[00:01:06] your company on the website or any data
+[00:01:08] that you've got formatted perfectly to
+[00:01:10] send straight back to the individual so
+[00:01:12] we're going to look at different
+[00:01:13] modalities a a chat bot that you could
+[00:01:15] talk to and also a system like an email
+[00:01:18] which most people use every day so this
+[00:01:20] video is going to be sick I'm Jack and
+[00:01:21] my YouTube channel am I now 1400 strong
+[00:01:24] School Community we're all about the
+[00:01:26] latest AI we're about incredible
+[00:01:29] automation and most importantly we're
+[00:01:31] about the stuff that actually works so
+[00:01:33] if you haven't already grab that coffee
+[00:01:35] and let's jump straight in and before we
+[00:01:37] get started I want to briefly cover the
+[00:01:38] stuff you're going to need to run this
+[00:01:39] Automation and it isn't that much
+[00:01:41] actually first of all you're going to
+[00:01:42] need this beautiful no code automation
+[00:01:45] platform called make.com and don't worry
+[00:01:47] I'll put all the links Down Below in
+[00:01:48] description so you can press the buttons
+[00:01:49] and get started this lets us prayed
+[00:01:51] around it's kind of like coders we just
+[00:01:53] modu it we get to build things and make
+[00:01:55] things epic the second thing you need is
+[00:01:57] access to platform. open.com because
+[00:02:00] we're going to be using these cool
+[00:02:01] things called assistance so you can do
+[00:02:03] that over here basically you get to
+[00:02:04] create agents you want you get to upload
+[00:02:06] files there's so many cool things that
+[00:02:08] you can do that's roughly like 20 bucks
+[00:02:10] a month if you're doing the third part
+[00:02:11] of the automation with the email so you
+[00:02:12] want gmail which is pretty
+[00:02:13] straightforward and the only other thing
+[00:02:15] that you really need to pay for if you
+[00:02:17] really want to go there is this no code
+[00:02:19] scraper called appify now appify is like
+[00:02:24] I always call it Willy woner Emporium
+[00:02:26] for no code scrapers it's like you and
+[00:02:29] you can name it you can scrap it
+[00:02:30] Instagram Facebook Twitter um any
+[00:02:33] website possible this enables us to go
+[00:02:35] out there and grab the data and bring it
+[00:02:37] back and the first thing that you might
+[00:02:39] need to do this if you want to play
+[00:02:41] along and do YouTube for example is
+[00:02:42] going to be rssa and again RSS doapp is
+[00:02:46] free to use for your first 15 feeds so
+[00:02:48] it won't even cost you anybody to use it
+[00:02:50] and applify you get $5 of free credits
+[00:02:52] every month just rocking up and having a
+[00:02:55] good time now let's start this
+[00:02:57] automation with the data so basically
+[00:03:01] there's so many different ways that we
+[00:03:03] could scrape data we could do it from
+[00:03:05] Facebook groups we could do it from
+[00:03:06] Instagram DMS if you're in a business we
+[00:03:08] could do it from a YouTube channel we
+[00:03:09] could do it from websites you can
+[00:03:11] basically do it from anywhere you want
+[00:03:12] to so I'm going to show you two
+[00:03:14] different ways that I think are the most
+[00:03:16] popular and if you want more examples
+[00:03:17] down below like Facebook just let me
+[00:03:20] know and I can add it to my wonderful
+[00:03:21] list my list is getting long but I'll
+[00:03:22] add it to my list so I can make sure
+[00:03:24] that I get the content that you need so
+[00:03:26] let's take the Jr Channel as an example
+[00:03:29] okay so let's say I want to create Jack
+[00:03:34] GPT and what I'm saying is that look to
+[00:03:37] create Jack GPT what I really need to do
+[00:03:39] is train it on every single video that
+[00:03:41] I've ever done now if I wanted to create
+[00:03:43] a model based on my own YouTube channel
+[00:03:45] or a series of YouTube channels I need
+[00:03:48] to find a way of giving it all the video
+[00:03:50] data that I've got so how would I
+[00:03:52] actually do that well believe it or not
+[00:03:55] it's relatively straightforward so the
+[00:03:57] first thing you would do is you would
+[00:03:58] copy the URL under videos okay now let's
+[00:04:01] create a new scenario and start from the
+[00:04:03] top first of all we're nothing without
+[00:04:06] our formalities right so let's call this
+[00:04:07] one
+[00:04:09] YouTube
+[00:04:11] scraper awesome and of course let's do
+[00:04:15] our patent pending video Emoji for good
+[00:04:19] measure all right I love that all right
+[00:04:21] so first thing I need to add is
+[00:04:22] something called RSS feeds and you're
+[00:04:24] going to click on retrieve RSS feed
+[00:04:26] items if you're not familiar RSS stands
+[00:04:29] for like really simple syndication and
+[00:04:31] basically what it enables us to do is
+[00:04:33] find any YouTube thread Twitter website
+[00:04:36] you literally name it and it enables us
+[00:04:38] to go and grab all the data from there
+[00:04:41] either stuff as it appears and as it's
+[00:04:43] published or stuff that already exists
+[00:04:45] so what we do here in URL on topic and
+[00:04:47] keyword once you create an account again
+[00:04:48] it's free to do you come over to your
+[00:04:50] YouTube channel you copy the title of it
+[00:04:53] you come over to RSS and you just simply
+[00:04:56] enter it in then you just love it when
+[00:04:58] it's copy and paste and you're ready to
+[00:05:00] go and if this works we should see all
+[00:05:02] of the Jr videos the gbt 4 of all
+[00:05:06] content system yeah AI brain blah blah
+[00:05:08] blah all this really cool stuff there we
+[00:05:10] go how cool is that so it's actually
+[00:05:11] managed to pull through every single
+[00:05:13] video this on my YouTube channel how how
+[00:05:16] cool is that right so all we do then is
+[00:05:17] save feed excuse me I need to S of this
+[00:05:21] Cofe myself actually awesome and all to
+[00:05:23] do that is just copy here we going to
+[00:05:26] come back over now to here and let's go
+[00:05:28] to this that we just freshly created
+[00:05:31] enter into the URL here awesome and all
+[00:05:35] you do maximum return items just put 100
+[00:05:38] unless unless you've got like 200 videos
+[00:05:40] and put 200 but 100 should be fine for
+[00:05:43] our purposes okay then we click okay and
+[00:05:45] then just run this once and this RSS F
+[00:05:48] so cool I'm going to go ahead over to J
+[00:05:49] YouTube channel because it is the
+[00:05:50] hottest YouTube channel in town this
+[00:05:52] fine weekend we go over here and here
+[00:05:55] are all the outputs so it's found 25
+[00:05:57] videos all the way going back to the
+[00:05:58] perfect Claude prompt formula awesome so
+[00:06:01] then what do we do then we do then is we
+[00:06:03] click next and what I want to do
+[00:06:04] essentially is grab that URL okay and I
+[00:06:08] kind of want to just get the transcript
+[00:06:10] from each of the videos so the question
+[00:06:12] is like well how do we physically do
+[00:06:13] that well we want to run something
+[00:06:15] called like a python script to go and
+[00:06:18] grab that and it sounds complicated and
+[00:06:19] it does a little bit but this is where
+[00:06:20] you're going to use zero code kit so you
+[00:06:22] click on this and click on run python
+[00:06:24] code now I didn't touch on zero code kit
+[00:06:26] before because it's specific to YouTube
+[00:06:28] but let me just briefly show you what
+[00:06:30] that looks like so if you go to zeroc
+[00:06:32] coit.com you'll see a page looks like
+[00:06:33] this we sign up and we sign in we click
+[00:06:36] on this button and what zeroc CIT does
+[00:06:40] by the way is it enables you to run like
+[00:06:42] python code and different types of code
+[00:06:44] within a no code atmosphere and we don't
+[00:06:46] really need to know necessarily the
+[00:06:48] specifics of how we work how it works in
+[00:06:50] detail I say like to say if you don't
+[00:06:52] know don't let it put you off we just
+[00:06:53] used a python script that we know is
+[00:06:55] working and you don't have to become a
+[00:06:57] coded to do this okay so don't be put
+[00:06:58] off by it and it's really simple so you
+[00:07:00] come here you'll sign in you'll get like
+[00:07:02] 25 free executions so if you just want
+[00:07:04] to run this like 25 times and 25 videos
+[00:07:07] it's perfectly fine you can do that and
+[00:07:10] you'll absolutely smash it and you'll be
+[00:07:11] fine you'll get an API key you copy the
+[00:07:14] API key and then when you come back to
+[00:07:16] your scenario you add zero Coca in It'll
+[00:07:17] ask you to create a connection just pop
+[00:07:19] that API key in there and then my magic
+[00:07:21] it will all connect so what we would do
+[00:07:24] here is you would create an account with
+[00:07:25] z a code kit you would connect it you
+[00:07:27] would come back now what we need need is
+[00:07:30] python code to say cool all I want you
+[00:07:32] to do is grab the URL from here and just
+[00:07:35] get R the transcript for it right
+[00:07:37] because when we're training with YouTube
+[00:07:39] data we have to first just grab the
+[00:07:43] transcript okay and bring it back over
+[00:07:45] so what I would do is I'd first of all
+[00:07:47] head over to my school Community I
+[00:07:49] should also say by the way all the
+[00:07:50] automations the blueprints you know the
+[00:07:53] agents essentially all the stuff I cover
+[00:07:54] in the videos as well as so many videos
+[00:07:56] that just are not on my YouTube channel
+[00:07:58] is all available in school community and
+[00:08:00] what it basically means is that whenever
+[00:08:01] I publish a video all you do is you come
+[00:08:03] here you click on choose file import
+[00:08:06] click save and then all the automations
+[00:08:08] will populate automatically and that's
+[00:08:10] for every single automation that I do
+[00:08:12] and it's there for you to do that so
+[00:08:13] let's say we're at my community okay we
+[00:08:15] head over now let's go check out all so
+[00:08:17] we've got literally as I'm recording
+[00:08:19] this I make fundamentals Q&A so we run
+[00:08:21] those twice a week so if you want to
+[00:08:22] learn how to be better you've got
+[00:08:24] automations you're not sure how they're
+[00:08:25] working or you want to go more depth
+[00:08:26] these lessons you can join this and get
+[00:08:28] like those questions answered in live
+[00:08:29] time so let's go through the classroom
+[00:08:31] one of these days by the way I'm going
+[00:08:32] to Ambush one one of these one of these
+[00:08:34] live on call and just see what see
+[00:08:35] what's up and we can come say hello
+[00:08:36] together so Andy this is if you're
+[00:08:38] running the session man just so you know
+[00:08:39] next time we might just dive in and come
+[00:08:41] and say hey to you okay so check this
+[00:08:43] out right so we got all these different
+[00:08:44] things here we can check out what I want
+[00:08:47] to do is grab the scriper code okay so
+[00:08:49] come down here YouTube transcript code
+[00:08:52] all right and essentially what this will
+[00:08:53] enable us to do then is we feed it this
+[00:08:55] python script here we go we just simply
+[00:08:57] come over here control C leave it contrl
+[00:09:02] B cool now you can see it specifies here
+[00:09:05] URL so what we essentially do with URLs
+[00:09:08] come here we get rid of it and then all
+[00:09:11] we do is find URL here which is this one
+[00:09:15] and then we click okay and then this guy
+[00:09:17] is going to spit out like basically
+[00:09:20] transcripts for every single one of
+[00:09:21] those videos how cool is that so then
+[00:09:23] here let's just zoom out a second okay
+[00:09:25] RSS is kindly nipped over to the Jr
+[00:09:27] YouTube channel J it's funny I can't say
+[00:09:28] Jr experience how lame is that cuz J ran
+[00:09:30] beat me to it we need to discuss this
+[00:09:32] with Joe but look we grabbed the videos
+[00:09:34] we've got zero C kit it's going to grab
+[00:09:36] the transcript you going see that in
+[00:09:37] sack then kind of what I want to do
+[00:09:39] realistically is get it into a single
+[00:09:41] document that I can then give to a GPT
+[00:09:44] as training for when I want to have a
+[00:09:46] conversation now I will say this when
+[00:09:47] you're creting a GPT you can be very
+[00:09:50] complicated with it in terms of how you
+[00:09:52] structure the data whether you wanted to
+[00:09:53] do a retrieval uh prompt or whether you
+[00:09:55] want to ask a knowledge based like a
+[00:09:57] needle and H stack and I will get into
+[00:09:59] more complex things but for the purposes
+[00:10:01] of this video is an introduction I'm
+[00:10:02] going to something that's like effective
+[00:10:04] that will get you most of the way there
+[00:10:05] and like rock your world hopefully but I
+[00:10:07] just want we can get more complicated
+[00:10:10] and as we always do we love to get into
+[00:10:11] the detail so I will be doing that in
+[00:10:12] future videos so look zero KCK it grabs
+[00:10:15] it now I want to kind of you know what
+[00:10:17] do I want to do well I basically want to
+[00:10:18] go all that information I want to add it
+[00:10:20] into a Google Document so what would I
+[00:10:23] do I come down here to Google Docs okay
+[00:10:25] come over here and let's go to add
+[00:10:27] paragraph
+[00:10:29] we insert paragraph excuse me insert
+[00:10:32] versus that I guess insert is a slightly
+[00:10:33] more formal way of doing it so let me go
+[00:10:35] create a new document first okay so I've
+[00:10:37] created this first of all it's a a
+[00:10:38] little bit format and so it's pretty to
+[00:10:39] look at whoops come over here let's just
+[00:10:41] increase the
+[00:10:43] size beautiful we'll centralize this be
+[00:10:46] put it over here and then we've got a
+[00:10:47] small text so it doesn't go crazy Okay
+[00:10:49] cool so what do we do we've got this
+[00:10:51] let's first of all save it as Jack
+[00:10:53] YouTube again we can actually automate
+[00:10:55] the coration of these documents and just
+[00:10:56] get it like added and added and added
+[00:10:58] and I'll show you how to do that a
+[00:10:59] little bit if you want to scale This and
+[00:11:01] like because here's a cool thing you can
+[00:11:02] do if you're creating custom gpts for
+[00:11:03] websites and you want to sell it as a
+[00:11:05] business you can actually prospectively
+[00:11:07] do this where we can download all of
+[00:11:09] your prospects websites create a chat
+[00:11:11] bar for it and say hey here's a chat bar
+[00:11:13] and like we can automate the entire
+[00:11:14] thing how cool is that I think that is
+[00:11:16] incredible so we've created Jack YouTube
+[00:11:18] let's come back over to our automation
+[00:11:20] now this one here and then what we're
+[00:11:23] going to do on our automation excuse me
+[00:11:25] it is this automation which Pi we pick
+[00:11:27] the file let's refresh it
+[00:11:30] loading up a little bit and then we've
+[00:11:31] got Jack YouTube that's cool appended
+[00:11:33] text is simply going to be the result
+[00:11:35] from zero CIT which is Ace okay like
+[00:11:38] that then we click okay and this is like
+[00:11:41] the entirety of this automation so look
+[00:11:42] I'm going to run it from the top to the
+[00:11:43] bottom and then if this works properly
+[00:11:45] what will happen in the Jack YouTube um
+[00:11:48] document is every single of our
+[00:11:49] transcripts will start appearing and
+[00:11:51] we'll have a full dat to Dum of my
+[00:11:54] YouTube channel in one single document
+[00:11:56] so let's run this from the top and see
+[00:11:58] hit run once RSS grabs zero C kit is
+[00:12:00] doing his work and then it's adding
+[00:12:02] paragraph to the document and you can
+[00:12:04] see the python Kit's running operation
+[00:12:07] one operation 2 operation three and as
+[00:12:09] it does that it adds it to the document
+[00:12:12] so if I actually come over after the
+[00:12:13] document can you see look look already
+[00:12:17] 190 Pages 218 Pages this 255 pages and I
+[00:12:22] can keep on going it's like I've been
+[00:12:24] going this for ages but asent it just
+[00:12:25] continues and continues and continues to
+[00:12:27] add for transcript for every video so in
+[00:12:30] one simple automation what we've done is
+[00:12:32] essentially script the entire document
+[00:12:35] okay so let's zoom out a second so what
+[00:12:37] we've done is we've created an RSS feed
+[00:12:39] with a YouTube channel we've got the
+[00:12:41] transcript we've created a Google
+[00:12:42] Document and we've downloaded it what we
+[00:12:45] would then do is build it into our GPT
+[00:12:48] to train it to then answer questions but
+[00:12:50] before we do that I want to show you the
+[00:12:52] second way we can scrap data excuse me
+[00:12:54] I'm mean hitting the mic that's how like
+[00:12:55] pumped up again about this and that's by
+[00:12:56] scraping an entire website so to do that
+[00:13:00] let's head over to ay.com and you'll see
+[00:13:02] a page that looks like this go over to
+[00:13:05] console now I described appify is a
+[00:13:07] Willy Wonka Emporium of no code scrapers
+[00:13:11] and it is and let me tell you man it has
+[00:13:13] its fair share of the Everlasting Gob
+[00:13:14] sters some of these some of these
+[00:13:16] automations they just cannot run out
+[00:13:18] it's ridiculous you have $5 of free
+[00:13:20] usage every month to crack on with now
+[00:13:23] what we want to do is scrope a website
+[00:13:25] so for example let me come over to a
+[00:13:27] random site so let's just say for
+[00:13:29] example let's go for social media
+[00:13:32] marketing okay if I type in social media
+[00:13:34] marketing I've got this company here
+[00:13:35] called giraffe social which I've just
+[00:13:37] randomly plucked out if I click on their
+[00:13:38] website let's say that we're hired by
+[00:13:41] giraffe and they want us to build a
+[00:13:44] chatbot for them based on their website
+[00:13:46] let's just say they get so many queries
+[00:13:47] like dude giraffe who do you work with
+[00:13:50] you know they've got so many things on
+[00:13:51] there have go to insights for example I
+[00:13:53] don't know if this company is by the way
+[00:13:54] but look social media guides they've got
+[00:13:57] so much content and I did what if what
+[00:13:59] if I'm like I want a social media agency
+[00:14:01] and I've got questions wouldn't it be
+[00:14:03] cool if you had like giraff AI that
+[00:14:05] could like answer all the questions or
+[00:14:07] an email responder well to do that we'd
+[00:14:09] say hey draff social we need to download
+[00:14:12] your website and create like an AI brain
+[00:14:13] of it so we know we need to scrape it so
+[00:14:15] how do we do that well we'd come over
+[00:14:17] again back to appify store and you'll
+[00:14:19] see this whole banquet of options now
+[00:14:21] I'm going to show you one that I did
+[00:14:22] earlier as if for instance so if I go
+[00:14:23] over to my run section it shows me
+[00:14:25] everything that I've done look at this
+[00:14:27] right this scrapes
+[00:14:32] 2,418 pages from that website look at
+[00:14:34] this right click on it and you can see
+[00:14:36] look it took an hour and 12 minutes
+[00:14:38] 2,418 results here's the extracted text
+[00:14:42] look at this guys everything that's on
+[00:14:43] that page every website it's gotten
+[00:14:45] absolutely everything so look I'll just
+[00:14:47] show what the results look like then
+[00:14:49] I'll show you how you do it but look I
+[00:14:50] just say okay I'll download it as CSV
+[00:14:52] that's cool man get it downloaded now
+[00:14:54] guys check this out I've just downloaded
+[00:14:55] this and this is every single page and
+[00:14:58] all of the content look at the I mean it
+[00:15:00] goes on like stop here for example look
+[00:15:02] it's got this a mind look at this for
+[00:15:04] example over here let's start from the
+[00:15:05] top one of the definition social media
+[00:15:07] is provided by blah blah blah this is
+[00:15:08] just everything in their website so
+[00:15:10] imagine if we could take all this data
+[00:15:12] and have it in like an intelligent GPT
+[00:15:13] system that could say hey what does
+[00:15:15] giraffe social think about this well
+[00:15:17] giraff social thinks this how cool is
+[00:15:19] that so that's how you download all of
+[00:15:20] it now I'm going to come back over how
+[00:15:22] would you do it yourself there's two
+[00:15:24] ways you can do this you can do this
+[00:15:25] either as a one-off so say you've got a
+[00:15:27] client or you want to do your own
+[00:15:29] website or you can do it as Pop the
+[00:15:31] system where all you ever do is enter a
+[00:15:34] URL into a sheet like air table and then
+[00:15:37] the whole automation begins
+[00:15:38] automatically that would be something
+[00:15:40] you'd want to do if for example you're
+[00:15:42] doing outreaches an agency and let's say
+[00:15:44] you have like 50 clients who are Barbers
+[00:15:47] you say look adding to Barbers is a bad
+[00:15:48] example let's say you've got 50
+[00:15:51] insurance companies or any company and
+[00:15:54] you say look I built you by the way a
+[00:15:57] chat bot completely turned off
+[00:15:58] everything in your website it's like a
+[00:15:59] brain of your it's your new digital
+[00:16:01] employee it's a new brain this will do
+[00:16:02] incredible things for you you could do
+[00:16:04] that on autopilot using the system I'm
+[00:16:05] going to show you in a second but I'm
+[00:16:07] going to show you first of all how you
+[00:16:08] would do it independently so what we
+[00:16:09] would do we would come over then to uh
+[00:16:12] we go to the store come to website
+[00:16:14] content crawler now enter the URL that
+[00:16:17] you want to hear so I've typed in draff
+[00:16:19] social media that's cool what would you
+[00:16:21] do then all you would do guys literally
+[00:16:23] is just hit start and then it would run
+[00:16:26] now how much does this cost so you pay
+[00:16:30] for usage with this so for example um
+[00:16:33] let me show you a good example of what
+[00:16:34] it cost me okay so look I scraped
+[00:16:36] everything on that website it cost
+[00:16:37] me
+[00:16:40] $220 to do
+[00:16:42] 2,418 Pages that's not a bad Roi if
+[00:16:45] you're doing prospective Outreach so
+[00:16:46] there's a little bit of a cost to it but
+[00:16:47] it's really simple like that so I come
+[00:16:49] back over now to actors come to my
+[00:16:51] website content crawler and I just said
+[00:16:53] start I'll just show you how this works
+[00:16:55] very briefly it starts to run and now
+[00:16:57] the ACT is starting to scr
+[00:16:59] the entire data behind the website you
+[00:17:01] don't really need to fiddle with the
+[00:17:02] usage or anything like that it can take
+[00:17:04] up to an hour sometimes to do the data
+[00:17:06] but you can do this for literally any
+[00:17:07] website and that's how you get the
+[00:17:08] entire content in a beautiful CSV file
+[00:17:10] based on the URL and the entire texting
+[00:17:13] data so I'm going to stop this one for a
+[00:17:15] moment but essentially what would happen
+[00:17:16] is that would run for an hour it would
+[00:17:19] download everything and then you would
+[00:17:20] just simply when you've done export it
+[00:17:22] like I just showed you and you're ready
+[00:17:24] to go but let's say that you want to
+[00:17:26] scale that up and automate the process
+[00:17:28] of scraping webs it the way that you
+[00:17:30] would do that is come over to website
+[00:17:31] content crawler now look you see this
+[00:17:34] Json okay first of all enter the URL you
+[00:17:37] can modify things here like the crawler
+[00:17:39] settings how deep you want to go the
+[00:17:41] maximum number of pages um you can look
+[00:17:43] at HTML processing output settings
+[00:17:45] there's loads of stuff that you could do
+[00:17:47] but purpose of this we're going to keep
+[00:17:48] it simple so come over to the Json come
+[00:17:51] over here copy it all then I want to
+[00:17:54] come over to a new make scenario over
+[00:17:56] here okay I'm going to call this one
+[00:17:59] automate website
+[00:18:05] scraping cool and then of course let's
+[00:18:08] go for our little scraper gamer thing
+[00:18:10] now what do we need to do here okay
+[00:18:13] there's two things I want you to add the
+[00:18:14] first one is going to be something
+[00:18:17] called air table and I always say air
+[00:18:18] table is like the Google Sheets has been
+[00:18:20] hitting it's beautiful incline bench
+[00:18:22] press and we're very proud of it it's
+[00:18:23] very very cool we're go and watch record
+[00:18:26] leave that alone for a second then I
+[00:18:27] went to head over to table.com so for
+[00:18:29] that let's just Sho over there right
+[00:18:31] now and be in mind guys air table apart
+[00:18:33] from the fact it's just bigger better
+[00:18:35] stronger than Google Sheets it's just
+[00:18:37] way more configurable and robust and
+[00:18:39] easy to use and just behaves and we like
+[00:18:42] it when our Technologies behave so look
+[00:18:45] we come over here again we're going to
+[00:18:47] call this website
+[00:18:49] scraper cool come over here have a look
+[00:18:52] and by the way when you're trying to
+[00:18:53] connect um air table to make essentially
+[00:18:56] it will ask you to create you can
+[00:18:59] basically new window log in but if
+[00:19:01] you're not sure how to do that in my
+[00:19:02] school Community for example if you come
+[00:19:05] over to the classroom like so go into
+[00:19:07] the make classroom we've got guides and
+[00:19:09] specifics about exactly how you connect
+[00:19:10] to chat gbt how you connect to tools
+[00:19:12] like air table and if you're brand new
+[00:19:14] to AI automations and this incredible
+[00:19:16] really exciting skill set and ENC to
+[00:19:18] start over here at an introduction to
+[00:19:19] make and creating your first AI
+[00:19:22] Automation and on top of that what you
+[00:19:24] can also do if you want to I recommend
+[00:19:25] checking out the video I did recently on
+[00:19:28] 10 levels of of AI automation starts a
+[00:19:30] basic concept work to more advanced
+[00:19:32] stuff so whether you're beginner you're
+[00:19:33] pipping you're popping there should be
+[00:19:35] something of great value for you there
+[00:19:36] so once that's connected we only need to
+[00:19:37] add in a couple of things the first one
+[00:19:39] here is going to be double click click
+[00:19:41] on website and for that let's have a
+[00:19:43] globe shall we cool love that incredible
+[00:19:47] then I want you to add two Fields first
+[00:19:48] one's going to be date
+[00:19:50] created okay so basically when was this
+[00:19:53] record added excuse me date created
+[00:19:58] or created date created time oh my
+[00:20:01] goodness Goodness Me created time there
+[00:20:03] you go and then click on the second one
+[00:20:05] and this one's last modified time last
+[00:20:08] modified time so essentially create time
+[00:20:10] is hey when did you add the website in
+[00:20:12] last modified time is what is the most
+[00:20:15] recent website you added in so basically
+[00:20:17] it just means that we we've set the
+[00:20:19] trigger up based on this column meaning
+[00:20:22] that if I just add a website at row 75 I
+[00:20:24] only need row 75 I don't need the other
+[00:20:26] 74 rows just makes your life so much
+[00:20:28] easier so now that's done let's shoot
+[00:20:31] back over now to our Automation and we
+[00:20:33] just find the thing that we created so
+[00:20:35] click on base what do we call it we call
+[00:20:37] it website scraper right I think so if
+[00:20:38] it's not there just hit the refresh
+[00:20:40] button
+[00:20:42] here and then we type in website scraper
+[00:20:44] incredible it will load up and by Magic
+[00:20:47] it will show us table one as one we
+[00:20:48] shows all the columns and stuff that we
+[00:20:50] added trigger field is always last
+[00:20:53] modified time label field is the website
+[00:20:57] limit is 10 that's okay view nothing
+[00:20:59] formul nothing that's cool now this is
+[00:21:03] going to be the thing that grabs the
+[00:21:05] website so I'll show you what that looks
+[00:21:06] like if I run it once we'll have nothing
+[00:21:08] back cuz nothing's changed see but let's
+[00:21:11] say for example I am on giraffe social
+[00:21:14] okay and I come back over now to our
+[00:21:16] automation I come back over to our air
+[00:21:18] table I said you know what yeah Jeff Cal
+[00:21:20] I want to look at those guys I want to
+[00:21:21] build an air chat but for that I come to
+[00:21:22] website I enter it now look you see how
+[00:21:25] last modified CH time changed perfect I
+[00:21:27] come back over to autom when I refresh
+[00:21:29] this it will tell me draft social has
+[00:21:32] appeared look you ready there you go
+[00:21:33] draft social dis appeared and that's all
+[00:21:36] we need so then what you do is you come
+[00:21:38] on plus look for appify and then you
+[00:21:41] want to run an actor okay now do you
+[00:21:43] remember we copied that Json data so
+[00:21:46] look I me head back over now to
+[00:21:48] appify which has mysteriously eluded my
+[00:21:52] vision okay look you're regular you've
+[00:21:54] entered giraff social doc I'd enter a
+[00:21:56] dummy URL just so you know where the URL
+[00:21:58] is now look come to Json come here copy
+[00:22:01] it all and again guys if you want to
+[00:22:02] reconfigure these options that will
+[00:22:04] change the Json itself but you can do
+[00:22:06] that either here or in make itself so
+[00:22:08] look I copy it all I come back over
+[00:22:12] input Json boom now look I'm trying to
+[00:22:14] find the draft social you see down here
+[00:22:16] guys look draft social media CK
+[00:22:19] highlight all of
+[00:22:21] it okay and then just put website in and
+[00:22:24] by the way the kaching is new people
+[00:22:26] joining the community so if that's you
+[00:22:27] very warm wel welcome I'm stoked to have
+[00:22:29] you now look website so basically what's
+[00:22:31] going to happen here is whenever we
+[00:22:33] enter the website Mr air table meoo will
+[00:22:36] see it he hey I found a website then he
+[00:22:38] passes to appify guide appify guide well
+[00:22:40] I guess we're scoping this website then
+[00:22:42] so just going to like whatever website
+[00:22:43] we give it it will run perfectly on
+[00:22:45] autopilot without any worries we click
+[00:22:48] okay now we need to select the actor
+[00:22:50] which is going to be the website
+[00:22:51] scraper website content crawler excuse
+[00:22:54] me uh for mischaracterizing you and then
+[00:22:57] Bill don't worry about I don't worry
+[00:22:59] about memory don't worry about then we
+[00:23:01] click okay sorry I've got like a I never
+[00:23:04] had hay fever till I moved to leads how
+[00:23:06] weird is that I don't know like the it's
+[00:23:07] like my biggest enemy in life is the
+[00:23:09] grass of leads I hope for a greater
+[00:23:11] enemy than that but that's I didn't you
+[00:23:13] don't choose your enemies so what
+[00:23:14] happens here right this is going to wait
+[00:23:16] appify will run so let's just do this
+[00:23:17] whole thing again we'll run this
+[00:23:19] there'll be nothing cuz we had a thing
+[00:23:21] now let's just give it a random I don't
+[00:23:23] know social media marketing agency let's
+[00:23:24] pick a second one just as for instance
+[00:23:27] so we got clutch cool we love clutch
+[00:23:29] let's grab clutch come over then over
+[00:23:31] here enter into the
+[00:23:33] website hit okay come back over to
+[00:23:36] automation run this once and look at
+[00:23:39] this that's an actor has run now look
+[00:23:41] guys if I head back over now to appify
+[00:23:43] look at this you see how the memory shut
+[00:23:45] up that's because it's running the task
+[00:23:46] I come over to runs and now it's
+[00:23:48] starting to scrap the entirety of
+[00:23:50] clutch how cool is that and that will
+[00:23:52] run automatically so for the purposes of
+[00:23:54] this I'm just going to abort
+[00:23:55] it uh which you can do under run so come
+[00:23:58] back over here oh the crawl is not
+[00:24:00] started yet but when it starts running
+[00:24:01] essentially we'll able to can that and
+[00:24:03] stop it from running off so let's go
+[00:24:04] over that's cool and we come where do we
+[00:24:07] stop it down here bottom left abort
+[00:24:09] abort the mission and it stopped but I
+[00:24:12] just show you to show that's how it
+[00:24:14] works now that's done what we need to do
+[00:24:17] is do a second scenario now that has an
+[00:24:19] appify module that Waits until this guy
+[00:24:22] done and grabs the data so I'm create a
+[00:24:25] new scenario for automate websit
+[00:24:26] scraping two out of two so we don't get
+[00:24:28] confused we click on the plus we click
+[00:24:30] on ampliify we wait for watch actor runs
+[00:24:33] like so and then we just click on add a
+[00:24:35] hug come over that's cool actor and
+[00:24:38] again we just type in website content
+[00:24:40] crawler click okay and then
+[00:24:42] automatically that will create a hook so
+[00:24:43] that when that's finished it will grab
+[00:24:44] it and bring it over once that's done we
+[00:24:47] need to enter a new appify module click
+[00:24:49] on appify once again and then click on
+[00:24:51] get data set items and then you just
+[00:24:55] need to add this data set
+[00:24:56] ID scroll down to the bottom
+[00:24:59] and it is default data set ID limit is
+[00:25:02] 100 let's just up that to 1,000 and that
+[00:25:04] is pretty sweet right now what I'd
+[00:25:07] encourage you to do now if you're doing
+[00:25:08] this at scale I'd add this in so i' come
+[00:25:10] down to PL come down to Google doc okay
+[00:25:15] create a document and plop it in the
+[00:25:18] middle like this and then all to align
+[00:25:20] and then for name just give it like a
+[00:25:21] random value like the start of time that
+[00:25:23] we won't see replicated again and
+[00:25:25] content that you can leave it like that
+[00:25:26] okay content okay we need just something
+[00:25:29] random in there so let's just put for
+[00:25:30] example uh any random value like a
+[00:25:33] container URL it doesn't really matter
+[00:25:34] from our perspective and then we just
+[00:25:36] choose the folder just pick a random
+[00:25:37] folder click that and click okay now
+[00:25:41] look let's run this
+[00:25:42] once come back over now to a automation
+[00:25:45] run this one again nothing will happen
+[00:25:47] because we didn't give it a data table
+[00:25:49] so we come over here we grab we paste it
+[00:25:51] we hit enter we come to automation
+[00:25:53] number one he'll find air table appify
+[00:25:56] act will kick off we come here and now
+[00:25:59] he's going to wait until that's
+[00:26:00] completed so this will just happen like
+[00:26:01] every you know every hour or so now
+[00:26:04] let's go back over to our runs now just
+[00:26:07] to show what this looks like I'm going
+[00:26:09] to wait until there's at least one
+[00:26:10] result that appears here and when that
+[00:26:12] on once that we've got one result at
+[00:26:14] least it's there I can stop the
+[00:26:16] Automation and you can see what it looks
+[00:26:17] like also it's kind of helpful that we
+[00:26:20] kind of just get to see all the data
+[00:26:22] flooded through the automation so we
+[00:26:24] know what that kind of looks like in
+[00:26:26] practice for so we give us a second it's
+[00:26:28] working in the background it's had 32
+[00:26:29] seconds 34 seconds okay so it's taking a
+[00:26:31] minute and 27 seconds what I've often
+[00:26:34] found is it doesn't give you a lot of
+[00:26:35] results initially and the cost can seem
+[00:26:37] quite High initially but actually the
+[00:26:39] total cost goes low so for example look
+[00:26:41] at this one here $220 for 2,418 so
+[00:26:45] basically that means let me gra my
+[00:26:47] calculator and sort that out right so I
+[00:26:48] did
+[00:26:49] $220 divided by$
+[00:26:53] 2,400 it's like so cheap it's
+[00:26:56] ridiculously cheap and you can add
+[00:26:57] credits and like you don't I think put
+[00:26:58] your car down and charge like a billion
+[00:27:00] pounds but keep an eye on the cost but I
+[00:27:02] don't think it's that expensive for the
+[00:27:03] value that you get while this is running
+[00:27:05] the background guys I got a question for
+[00:27:07] you what percentage do you think of
+[00:27:09] people that watch videos on Jack
+[00:27:10] robberts YouTube channel are subscribed
+[00:27:12] would you say 50% 80% 40% think about
+[00:27:16] your guess I'm going to show you cuz I
+[00:27:18] think it's a little fun game we're
+[00:27:19] waiting that I scroll over the answer is
+[00:27:22] 40.3% of you so for every 10 people four
+[00:27:25] of you subscrib so guys if you love the
+[00:27:27] channel and you're having a rock and
+[00:27:28] rolling good time consider hitting that
+[00:27:30] beautiful black bird it tells mother
+[00:27:32] algorithm that she loves his automations
+[00:27:34] and I really appreciate you and it shows
+[00:27:36] me these kind of videos and what I can
+[00:27:37] make more of for you to help you out so
+[00:27:39] we're still waiting now 2 minutes 35
+[00:27:41] seconds it's taking its beautiful time
+[00:27:44] what will happen when we've got some
+[00:27:45] results okay once we've got the results
+[00:27:48] I'm going to counter off now ordinarily
+[00:27:50] that would run for however many pages I
+[00:27:52] Happ a thousand we'll get a th Pages
+[00:27:53] whatever it is when that finishes and
+[00:27:56] completes this will kick in he'll say
+[00:28:00] hey something's happened we create a new
+[00:28:02] Google Document again we're doing that
+[00:28:03] because if you've got say 20 websites
+[00:28:05] we'll have a different document for each
+[00:28:07] of the websites how cool is that and
+[00:28:09] then Appley will actually go there and
+[00:28:11] grab all of the data and then the next
+[00:28:13] step would be great I want want you to
+[00:28:15] add the data to this Google Document and
+[00:28:17] then you have the entire website in one
+[00:28:21] document and all you ever did in the
+[00:28:23] entire automation you lazy so and so is
+[00:28:26] just that a URL that's almost not fair
+[00:28:29] and Boom at 3 minutes 58 seconds we had
+[00:28:31] our first result and now the results
+[00:28:32] coming in so let me can this guy off and
+[00:28:34] stop him I bought the thing there if you
+[00:28:36] can think it you can scrape it put that
+[00:28:38] on a plaque instead of live left love
+[00:28:40] scrape believe achieve cool look at this
+[00:28:42] great good document and we've got appify
+[00:28:44] data set items very very very cool so
+[00:28:46] we've created doc now what do we do we
+[00:28:48] click on plus excuse me we come out to
+[00:28:50] Google
+[00:28:51] Docs Google Docs over here and then I'm
+[00:28:54] just going to have to insert a paragraph
+[00:28:57] into a document come over here by drop
+[00:28:59] down by mapping so drop down will be
+[00:29:01] like I've got an existing document add
+[00:29:03] it into that drop down by contrast
+[00:29:05] basically says you've quoted a document
+[00:29:08] earlier in the flow for us it's here
+[00:29:10] just add it into that so we say by
+[00:29:12] dropdown we come down here to choose
+[00:29:14] file like so Waits up excuse me uh by
+[00:29:18] drop down by mapping excuse me click on
+[00:29:19] by mapping document ID will be the
+[00:29:22] document ID that you see oh my goodness
+[00:29:25] gracious come down here document ID cuz
+[00:29:27] every Google Docs document has a
+[00:29:31] document ID then for impended text all
+[00:29:33] we do is conf from to get data set items
+[00:29:36] and I want you to add the URL in and I
+[00:29:38] also want you to add in the text here
+[00:29:40] perfect so come over let's just check
+[00:29:42] that we've got all the stuff that we
+[00:29:43] need and that's what we not we've got
+[00:29:44] the URL cool text there you go now the
+[00:29:47] reason you're going to add in url is
+[00:29:48] because like let's say for example one
+[00:29:50] of those pages is contact information or
+[00:29:52] our social media uh links I you know
+[00:29:56] what is clutch's Instagram d it can I
+[00:29:58] well Instagram's here by the way if you
+[00:30:00] all the socials just come click over
+[00:30:01] here so by giving the URL the GPT we
+[00:30:05] create will know where the information's
+[00:30:07] from and that could be helpful for the
+[00:30:08] end user then essentially guys if we run
+[00:30:10] this automation again what will happen
+[00:30:12] is it will end just keep adding it to
+[00:30:13] the Google's docks and that doc will
+[00:30:15] just get infinitely and infinitely
+[00:30:17] longer so with that in mind I'm going to
+[00:30:20] run it one more time from the top with
+[00:30:22] one more website we're going to wait
+[00:30:23] four minutes for it to come in well
+[00:30:25] you're not going to wait four minutes
+[00:30:26] I'm going to do that for you so you
+[00:30:27] don't have to worry about it so let's go
+[00:30:28] now and find one
+[00:30:30] final let's do clutch again in fact no
+[00:30:32] I'm I'm changing my mind I'm going to
+[00:30:35] do a fourth one we're going to go for
+[00:30:37] Bobby Digital Bobble digital excuse me
+[00:30:40] oh my goodness I think Bobble is better
+[00:30:41] than Bobby Digital all right let's give
+[00:30:44] us a second come over here grab this
+[00:30:47] come over here boom push that in hit
+[00:30:49] enter that's done now let's run the
+[00:30:50] whole thing from the top Air table watch
+[00:30:53] he'll find Bubble digital run the actor
+[00:30:56] we run this guy once the module's not
+[00:30:58] set up D who's that what module's not
+[00:31:01] set up yeah that's complete isn't it
+[00:31:03] click
+[00:31:04] okay you know make like to put I swear
+[00:31:07] there's a guy behind make sometimes just
+[00:31:09] like pulling a cord and say now we just
+[00:31:11] need to test Jack a little bit on this
+[00:31:13] you can't make it too easy they're
+[00:31:14] getting a little bit too advanced
+[00:31:15] they're getting a little bit ahead of
+[00:31:16] the game so look I'm going to come over
+[00:31:17] to my drive now and we'll see the
+[00:31:20] document we just created and then we'll
+[00:31:21] see basically this new document once to
+[00:31:23] create before we do that let go to
+[00:31:25] applify again the memory shot up which
+[00:31:27] is Ace come over to runs and then we'll
+[00:31:30] start to run through and challenge
+[00:31:32] absolutely everything which is cool and
+[00:31:34] then guys you're basically creating and
+[00:31:36] getting all the webs now here's the
+[00:31:37] thing right there are so many
+[00:31:39] applications from this imagine if you
+[00:31:40] wanted to do SEO and it was a competitor
+[00:31:42] or you want to kind of do something even
+[00:31:44] higher level of that which are these
+[00:31:46] custom chat BS now look this is finished
+[00:31:48] I guess this is just one single page
+[00:31:50] that's pretty wild to me actually so I'm
+[00:31:53] going to see why that was the case let's
+[00:31:55] have a look ah you know why that's the
+[00:31:58] case cuz look the URL I gave it I'm
+[00:32:01] going to show you this okay look at
+[00:32:03] this was bubble.com
+[00:32:06] slpa social media so if you give it a
+[00:32:09] like an actual end URL you'll only get
+[00:32:11] that page but if IID have given it
+[00:32:12] bubbled digital.com I would have gotten
+[00:32:14] the whole website but actually guys for
+[00:32:16] all purposes that's pretty cool because
+[00:32:18] it means whole automation will be done
+[00:32:20] so docum been created and we should have
+[00:32:22] the whole text from that page so let's
+[00:32:23] go check it out by the way guys The
+[00:32:25] Gents over at bubble digital they're
+[00:32:27] having a good time time man they got
+[00:32:28] their drinks they got everything they
+[00:32:29] talked in socials good on you bubble now
+[00:32:32] look look at this this looks this looks
+[00:32:34] new let's click on it and does this look
+[00:32:37] familiar this is the page a clear
+[00:32:39] strategic approach to your page social
+[00:32:41] so okay if I go over to Bubble digital
+[00:32:43] right now am I going to find that there
+[00:32:45] you go look so we copied it now you can
+[00:32:48] imagine um we could we could chill out
+[00:32:50] for an hour if you want to do like a
+[00:32:52] million of them but you get the idea
+[00:32:53] that would just keep on repeating this
+[00:32:55] would go up to like 10 20 30 50 and then
+[00:32:57] we'd end up with beautiful Google do
+[00:32:58] full of everything that looks something
+[00:33:00] similar to this so we've done level one
+[00:33:02] which is scraping the data level two now
+[00:33:05] is I'm going to show you how you take
+[00:33:07] that and put it into a GPT that we can
+[00:33:10] then actually ask questions now what's
+[00:33:14] the secret here right we've got the data
+[00:33:16] this is sometimes referred to as needle
+[00:33:17] and Hy stack so for example I've got 587
+[00:33:20] Pages here let's say the answer we're
+[00:33:22] looking for is here and the answer we
+[00:33:24] want is well we click on this guy the
+[00:33:27] hash is done right now so we come over
+[00:33:29] here in reality blah blah blah let's
+[00:33:30] just say that it's here we're asking for
+[00:33:32] gbt to go and grab something okay so
+[00:33:34] look what we really want to think about
+[00:33:36] now is a prompt that we're going to give
+[00:33:38] to it so look I cre this one earlier I'm
+[00:33:40] going to walk you through the prompt
+[00:33:41] that I did and then we're going to build
+[00:33:43] one together and then we're going to put
+[00:33:44] it to the test with draft social as an
+[00:33:47] example okay now look I've got draft
+[00:33:50] social okay let's come over and check
+[00:33:52] out draft social media. UK by the way if
+[00:33:54] draft social media watching this video
+[00:33:56] hello by the way I feel like we're
+[00:33:57] giving huge plugs here giraff okay so in
+[00:34:00] a sec we're going to find a question on
+[00:34:01] the website that you wouldn't know
+[00:34:02] unless you were the website and then
+[00:34:04] we're going to actually put it to test
+[00:34:05] so let's go over now to our prompts okay
+[00:34:08] so let's start with the giraffe GPT and
+[00:34:10] I got this beautiful picture of a
+[00:34:11] giraffe to accompany us as we go through
+[00:34:14] this now remember guys we can get a lot
+[00:34:16] more sophisticated with this prompt but
+[00:34:19] for the purpose of this I want to show
+[00:34:20] you some really quick hacks that will
+[00:34:21] help it retrieve the stuff that you need
+[00:34:23] now look you are a highly capable AI
+[00:34:26] assistant named draft GPT try on all
+[00:34:28] their business content provide accurate
+[00:34:30] relevant answers to questions based on
+[00:34:32] the available information every question
+[00:34:35] you get and this is I I personally found
+[00:34:38] this super useful I've not read this
+[00:34:39] anywhere but this is just something I
+[00:34:41] found work very well let's say for
+[00:34:42] example you've got a GPT okay you're
+[00:34:44] having a chat with her and you say
+[00:34:45] something like I don't know okay let's
+[00:34:48] say draft GPT is incredible at like
+[00:34:49] social media strategies if now most
+[00:34:52] people that use these custom gpts while
+[00:34:54] they fail they'll say something like
+[00:34:55] look what's the best strategy for
+[00:34:57] Instagram and it's like the GPT cannot
+[00:35:00] help itself but sometimes go to its own
+[00:35:02] knowledge base and delives stuff that it
+[00:35:04] already knows and gives you answers what
+[00:35:07] we're really asking it is hey what does
+[00:35:09] giraffe gpt's website say about
+[00:35:12] Instagram growth cuz I don't care what
+[00:35:14] Billy meoo from 10 years ago says I want
+[00:35:16] to know what you think because this is
+[00:35:18] the giraff GPT not the general Google
+[00:35:20] GPT so what do I do how do I help it do
+[00:35:23] that the prompt I give it is this every
+[00:35:26] question you get you must the following
+[00:35:28] text before it prior to answering
+[00:35:31] according to the data set you have been
+[00:35:33] provided for example if a user asks you
+[00:35:36] what do you know about CEOs use social
+[00:35:37] media the actual prompt is according to
+[00:35:40] the data set you've been provided which
+[00:35:42] is the bit we're adding in what do you
+[00:35:44] know about CEOs who use social media so
+[00:35:46] we're actually getting the CH we're
+[00:35:47] getting the giraffe answer rather than
+[00:35:49] General Google that doesn't mean that we
+[00:35:51] don't want to bring in or wash it with
+[00:35:52] external data but it's like dude I've
+[00:35:55] I've not given you the data for the sake
+[00:35:56] of my health I've given it because I
+[00:35:58] want you to use it please use it right
+[00:36:01] so look when responding do not say
+[00:36:03] according to data that's something I
+[00:36:05] found when I was trying it out that it
+[00:36:07] loves doing that just answer the
+[00:36:08] question now look when a question is
+[00:36:10] asked analyze the provided context and
+[00:36:11] training data to formulate the most
+[00:36:13] appropriate response Ure your answer is
+[00:36:15] concise direct avoids any ambiguity if
+[00:36:18] the necessary information to answer the
+[00:36:19] question is not available within the
+[00:36:21] provided context clearly state that you
+[00:36:23] don't have enough in other words it's
+[00:36:25] completely okay to say that you can't
+[00:36:26] answer it now look we give some context
+[00:36:28] on what giraffe does your role as a
+[00:36:30] helpful GPT we give it some additional
+[00:36:32] guidelines like focus on key aspects
+[00:36:33] maintain professional town and you can
+[00:36:35] bleed in your different turn of voice
+[00:36:37] but you'll see in a second what I'm
+[00:36:38] going to show you on turn of voice okay
+[00:36:40] because we're going to give it a
+[00:36:40] separate separate document now about
+[00:36:42] your own Brands T of voice now you'll
+[00:36:45] notice my last video in fact I've got a
+[00:36:47] full breakdown video on it in my school
+[00:36:49] community on turn of voice which is one
+[00:36:52] of the most favorite videos I've done CU
+[00:36:54] I think it's so gamechanging come over
+[00:36:56] to Voice come over to to create your own
+[00:36:58] tone of voice this basically breaks down
+[00:37:01] like how you actually capture like a
+[00:37:03] tone of voice from particular business
+[00:37:05] and as an example I did it with our
+[00:37:07] wonderful Alex am Mery who meeting who
+[00:37:09] meeting later this month now look it
+[00:37:11] breaks down vocabulary Choice gratical
+[00:37:13] patterns punctuation sentence
+[00:37:14] structureal length basically all these
+[00:37:16] different things figurative language
+[00:37:18] that you could really use to make sure
+[00:37:20] that actually the responses coming out
+[00:37:23] are specific to what you want and your
+[00:37:25] business it's not cookie cutter did it
+[00:37:27] specific to you and actually if you
+[00:37:29] wanted to I can give you another level
+[00:37:31] on top of that there's like a series of
+[00:37:33] prompts that we use to get there right
+[00:37:35] so look in the prompts you have these
+[00:37:37] ton of voice prompts which essentially
+[00:37:39] is you ask it to you give it this prompt
+[00:37:42] and you give it the data and you could
+[00:37:44] say hey based on this website or based
+[00:37:45] on X what would be the vocab and word
+[00:37:49] choice what would be the grammatical
+[00:37:50] patterns what would be the punctuation
+[00:37:51] and you can automate if you wish a
+[00:37:53] Turnal voice from a website so that
+[00:37:56] actually you've already done that work
+[00:37:58] that's how incredible that is so we've
+[00:38:01] got I'm going to go back to this email
+[00:38:03] agent in a second I don't want to get
+[00:38:04] too far ahead I've got we've got some
+[00:38:05] cool stuff coming okay for level three
+[00:38:07] so we've got this we finish it off now
+[00:38:09] what do we do so guys head over down to
+[00:38:11] chat gp.com okay going to come over here
+[00:38:14] now you're going to come over top left
+[00:38:15] to excuse me on explore gpts like so and
+[00:38:19] then you're going to come on create at
+[00:38:21] the top like so all right sweet now
+[00:38:23] we're going to create giraffe GPT okay
+[00:38:26] so we come here
+[00:38:28] draer GPT again this could be for anyone
+[00:38:31] that you want to and this obviously if
+[00:38:33] you want to embed this in a website we
+[00:38:34] could do this within a website using
+[00:38:36] some slightly different software but
+[00:38:37] this is just to show the concept of
+[00:38:39] having a URL and you can just configure
+[00:38:41] the actual end point however you want to
+[00:38:43] but this is simple we've got description
+[00:38:46] and then we've got instructions what we
+[00:38:47] to do is just paste in the instructions
+[00:38:50] for draft GPT that we just created from
+[00:38:52] here then crucially we've got knowledge
+[00:38:55] so you're going to upload two files the
+[00:38:56] first file is going to be all the data
+[00:38:58] we had and the second file is the turn
+[00:39:00] of voice I've just uploaded all of the
+[00:39:02] data we got from the website plus I've
+[00:39:04] uploaded a turn of voice document I've
+[00:39:05] just used Alex's as a for instance cuz
+[00:39:07] that's why I us a test but in reality
+[00:39:09] you'd be sorted there now look we've got
+[00:39:11] conversation starter so you could say
+[00:39:13] like hey what do you want man yeah
+[00:39:16] whatever we're not going to do that for
+[00:39:17] this because you get the idea yes weo
+[00:39:19] web browsing yes weo doly image
+[00:39:21] generation that's cool so let's ask it a
+[00:39:25] question to prove how good it is now
+[00:39:26] realis that you come hit to create you
+[00:39:28] put only me or show the link whatever
+[00:39:30] you want I'll just do only me for now
+[00:39:32] click save and it'll give us a link to
+[00:39:34] access the GPT and then we can start
+[00:39:36] asking it a question once we've done
+[00:39:37] with that awesome click it let's come up
+[00:39:40] here let's duplicate this page so we can
+[00:39:42] come back if we wish awesome now let's
+[00:39:45] ask draft GPT a question okay so what
+[00:39:48] should we ask it well let's go over to
+[00:39:50] their website and maybe find something
+[00:39:53] that you wouldn't know unless you were
+[00:39:55] really draft GPT okay okay so they've
+[00:39:58] got their portfolio here um let's click
+[00:40:01] on this one I'm trying to go deep here
+[00:40:02] actually okay we got Mason Noir is a new
+[00:40:04] high and fragrance brand that with our
+[00:40:06] help is quickly making a name for itself
+[00:40:08] it's been featured in many Publications
+[00:40:10] as a residency in herods and luxury
+[00:40:11] brick and morar stores across Europe
+[00:40:14] okay let me find some interesting
+[00:40:16] data H their primary goal was to grow
+[00:40:19] their Instagram following and boost
+[00:40:21] engagement for the organic social media
+[00:40:22] content okay so let's ask it what their
+[00:40:24] goal was hey what was
+[00:40:28] was the goal of Mason Ro when they
+[00:40:32] joined your agency
+[00:40:36] again hit enter and let's see what it
+[00:40:38] does and comes back with searching the
+[00:40:42] knowledge look at this guys primary goal
+[00:40:45] when join the was to grow their
+[00:40:46] Instagram following and boost engagement
+[00:40:48] for their organic social media content
+[00:40:50] that sound
+[00:40:51] familiar yeah look gra Instagram organic
+[00:40:54] social media content how cool is that
+[00:40:56] now you can do this to retrieve
+[00:40:58] information I mean that's pretty epic
+[00:40:59] considering how absolutely gantu the
+[00:41:02] size of the file was that I downloaded
+[00:41:04] but now that is essentially the brain of
+[00:41:06] the website so I don't need to go and
+[00:41:07] find the Mason page I can just ask at
+[00:41:10] the stuff that I want right how crazy is
+[00:41:12] that I mean it's literally ridiculous
+[00:41:15] and if I said look well give me a source
+[00:41:16] for that okay provide a URL for
+[00:41:22] that so I can check it
+[00:41:25] out let's say I don't believe it I want
+[00:41:27] to double check give me a URL I want to
+[00:41:29] check it out what's going on my guy
+[00:41:31] we're waiting we're hanging out let's
+[00:41:33] see if he's going to give me the URL Al
+[00:41:34] I'm pretty sure that it will because
+[00:41:36] that's what we programmed it to do let's
+[00:41:38] have a look there we go and is this the
+[00:41:42] same page yeah cool and it's as simple
+[00:41:45] as that so you've just create guys your
+[00:41:47] own GPT you script website you automated
+[00:41:50] everything and now you're ready to rock
+[00:41:51] and roll which brings us beautifully now
+[00:41:54] onto level three now level three cuz if
+[00:41:56] you think about this when I was going to
+[00:41:57] make this video guys and girls there's
+[00:42:00] so many different ways I could build
+[00:42:02] this and show you so I wanted to first
+[00:42:04] of all help get you started with how we
+[00:42:06] scrape data from different places like
+[00:42:07] websites YouTube channels and how you
+[00:42:09] can build a simple GPT agent again it
+[00:42:11] doesn't have to be within chat GPT there
+[00:42:13] are like a million different softwares I
+[00:42:14] can do a video on that if you'd like
+[00:42:16] about my favorite what I think is cool
+[00:42:18] but I want to also end this by going to
+[00:42:19] level three which I think is actually in
+[00:42:21] my opinion the most exciting and this is
+[00:42:23] a different modality so think about this
+[00:42:26] is a URL visit okay A a different use
+[00:42:28] case I should say I have to go to and I
+[00:42:30] speak to it that's awesome or I could
+[00:42:32] have it in a website but what if we did
+[00:42:34] something else what if I hated emails
+[00:42:37] let's say I hate emails maybe I do maybe
+[00:42:39] I don't I'll tell you one day and I said
+[00:42:41] look I get these emails in what I want
+[00:42:43] you to do is email comes in check my
+[00:42:45] entire knowledge base every email I've
+[00:42:46] ever done my entire website and then I
+[00:42:48] want you to create an email response to
+[00:42:50] that individual and either send it
+[00:42:52] automatically or leave it in a draft
+[00:42:55] folder wouldn't that be pretty cool cuz
+[00:42:57] let's say for example you own a company
+[00:42:59] with 500 people and they've got
+[00:43:00] questions about HR they could go to a
+[00:43:02] GPT or imagine if they could just say
+[00:43:04] I've just had a question from Alex um
+[00:43:07] what is this about fold it over and you
+[00:43:08] fold it over to an email address and
+[00:43:10] then that email sends you an email back
+[00:43:11] say oh co well Alex is talking about
+[00:43:13] this he's talking about this boom boom
+[00:43:14] boom boom you're all ready to go so
+[00:43:16] think of this more as a concept that is
+[00:43:19] pretty epic and work cool so look I've
+[00:43:21] got this part of the automation is going
+[00:43:23] to watch R email this guy's going to run
+[00:43:25] it through GPT then going to do do an
+[00:43:27] email agent that's going to take that
+[00:43:29] and format it into a beautiful email and
+[00:43:31] then we're going to create a draft ready
+[00:43:32] for us to send to that individual so
+[00:43:34] check this out okay this is an example
+[00:43:36] of what it looks like I asked it a
+[00:43:38] question we got all the stuff so let's
+[00:43:39] say we come over out we send the email
+[00:43:41] we have a test to say help me please and
+[00:43:44] then I say something like um and I know
+[00:43:46] this is something in the website what is
+[00:43:49] the best
+[00:43:50] way for CEOs to get started with social
+[00:43:55] media any preference
+[00:43:58] on the platform what do you think boom
+[00:44:01] okay sweet now look I come to automation
+[00:44:03] this will be running automatically in
+[00:44:04] the background we come here I send it I
+[00:44:08] come back over now what's just happened
+[00:44:09] here it's not found anything yet so
+[00:44:11] let's run this one again let's see if it
+[00:44:12] picks up on our new email okay we'll
+[00:44:14] give this a sack all right it's found
+[00:44:16] something that's decent has it found our
+[00:44:17] email guys check this out help me please
+[00:44:19] what is the best way for CEOs to get
+[00:44:21] started social media any preferences on
+[00:44:23] a platform we've got our draft GPT which
+[00:44:26] by the way I'll show you how to build
+[00:44:27] it's just building it in an assistant
+[00:44:29] instead of a GPT the email agent then
+[00:44:31] takes that turns it into something
+[00:44:33] beautiful HTML and then basically this
+[00:44:35] will appear as a draft within our Gmail
+[00:44:39] or whatever your particular email of
+[00:44:41] preference is and it's correct the draft
+[00:44:43] now for us to send as an answer so
+[00:44:45] that's what I asked what's in the drafts
+[00:44:48] folder let's open it up and take a quick
+[00:44:51] look hey there Jack Roberts let's check
+[00:44:54] it out okay great you'd like some help
+[00:44:57] on how to get started in social media as
+[00:44:58] a CEO I've got you covered first things
+[00:45:00] first follow instructed approaches key
+[00:45:01] here's what you need to do Define
+[00:45:03] objectives select the right platform
+[00:45:05] content and planning engagement Monitor
+[00:45:07] and adapt here are some platform
+[00:45:10] preferences for CEOs boom boom boom by
+[00:45:12] foll these steps CEOs can leverage
+[00:45:13] effectively but I hope this helps your
+[00:45:15] friendly neighborhood draft
+[00:45:16] gb2 how crazy is that all of this
+[00:45:19] content guys is from giraffe GPT so now
+[00:45:22] they've got an email address they can
+[00:45:24] just ask their questions to and get the
+[00:45:26] actual answer like it's insane I just
+[00:45:28] this is just a random example I made
+[00:45:30] just to show you how powerful this is so
+[00:45:32] now I'm going to show you how you'd
+[00:45:32] actually build this okay so let's go to
+[00:45:35] me.com and develop this from scratch so
+[00:45:38] what I'm going to do first of all is I'm
+[00:45:40] going to save email GPT and Export him
+[00:45:42] all
+[00:45:46] right little flame cool okay Ace yes
+[00:45:50] let's replace that one awesome we head
+[00:45:52] over now to platform to open ey.com and
+[00:45:54] the whole system fairly straightforward
+[00:45:56] so you go into top right which is create
+[00:45:57] a new assistant like so we call this
+[00:46:03] guy giraffe and you remember all the
+[00:46:06] stuff that we created before guys all
+[00:46:07] those instructions it's basically
+[00:46:09] exactly the same so look I come over to
+[00:46:12] here I copy it I come back over I enter
+[00:46:15] the instructions gbt phot is fine scroll
+[00:46:17] down yes okay to file search and then
+[00:46:20] what do we do we just click on the plus
+[00:46:22] files button here like so and then we
+[00:46:24] just select the files and just like that
+[00:46:26] guys we hit attach and would you believe
+[00:46:28] it we have got the files loaded up how
+[00:46:31] cool is that it's as simple as that then
+[00:46:34] once you click off giraffe like this
+[00:46:37] it's available and it's ready to be used
+[00:46:40] and it's got all files in there but come
+[00:46:41] on let me just check out the files I've
+[00:46:42] got come on the files for example come
+[00:46:44] on to this bit here and you can see all
+[00:46:46] the files it's got and it references
+[00:46:48] pretty cool right so like if I come over
+[00:46:50] now to our me scenario let me just
+[00:46:52] delete this and start from scratch you
+[00:46:54] can see what it looks like so I come
+[00:46:55] here I go to Gmail top watch
+[00:46:58] emails uh criteria is uh let's go for
+[00:47:02] all only unready emails folder is going
+[00:47:05] to be inbox or if you want to have like
+[00:47:07] segmentations you can do stuff like hey
+[00:47:08] put the word help in the subject line or
+[00:47:10] something you can do that maximum return
+[00:47:12] results we can do 10 it doesn't really
+[00:47:14] matter too much and then we click okay
+[00:47:16] sweet and then do from now on we click
+[00:47:18] on plus and we come on over here to
+[00:47:22] message an assistant like so and then we
+[00:47:25] find our giraffe GP that we just
+[00:47:27] beautifully created now the reason I
+[00:47:29] want to show you this is cuz I can show
+[00:47:30] you now how you can get like these train
+[00:47:32] gpts in a make system rather than a URL
+[00:47:36] that's powerful because we if once we
+[00:47:38] get it into make we can get it anywhere
+[00:47:40] we've got our things that touch in paper
+[00:47:41] for metalian websites and we can spread
+[00:47:43] our tentacles in many different ways uh
+[00:47:46] now it's in the mix system and again I
+[00:47:48] can make this a lot more complicated and
+[00:47:49] advanced but for get started this is
+[00:47:52] pretty cool and pretty straightforward
+[00:47:53] so we've got it keeping on us toes
+[00:47:55] keeping us waiting go for giraffe so we
+[00:47:59] want to come here we want to rename him
+[00:48:00] actually let's call him giraffe GPT with
+[00:48:04] a little giraffa guy at the top now
+[00:48:08] let's run this one first of all so we
+[00:48:09] can FL it with data waiting waiting
+[00:48:12] waiting what's happened it's not picked
+[00:48:14] anything up so let's go to Gmail now and
+[00:48:17] uh and create an email Okay cool so
+[00:48:19] let's send this one now to that's cool
+[00:48:22] let's send it over sweet and then come
+[00:48:24] back ourour automation
+[00:48:28] which is here right and let's unlink for
+[00:48:31] the time being and run this once and it
+[00:48:32] should find the email I just
+[00:48:35] sent yay that's cool now we did that why
+[00:48:38] we did that because by you can have
+[00:48:39] attachments and read attachments to cool
+[00:48:41] stuff and it's basically just all the
+[00:48:43] text that we gave it see pretty cool
+[00:48:45] right bring this one over connect it so
+[00:48:48] then we come down here to the message
+[00:48:49] let's have a look at that so we want the
+[00:48:52] we got the subject that's cool and then
+[00:48:54] we want the text content sweet and then
+[00:48:57] we've got the email address that's fine
+[00:48:58] don't worry about that just now then we
+[00:49:01] click okay that's sweet now next we want
+[00:49:02] to do guys is add an email assistant and
+[00:49:04] the reason we're doing that is because
+[00:49:05] we basically want to yes we've got the
+[00:49:07] answer but we want to kind of like conol
+[00:49:09] it a little bit get it into HTML and
+[00:49:11] make it email ready so for that we're
+[00:49:13] going to use our wonderful email agent
+[00:49:15] you are an email GPT an email an AI
+[00:49:19] email assistant trying to convert text
+[00:49:21] responses into well formatted
+[00:49:22] professional emails your task is
+[00:49:24] transfer the given text and email for
+[00:49:25] these guidelines so what I'd encourage
+[00:49:27] you to do first of all to specify how
+[00:49:29] you'd like it to intro hey there howdy
+[00:49:31] what's up I mix it up a little bit so it
+[00:49:33] isn't too repetitive think of like five
+[00:49:34] to 10 different intros that you're happy
+[00:49:36] with so it looks fresh all the time we
+[00:49:38] need to be formatted we've specified
+[00:49:40] here line breaks for you know BR
+[00:49:42] brackets we've got the ball text we' got
+[00:49:44] talic we've got underline got all that
+[00:49:45] cool stuff if the text contains any URLs
+[00:49:47] convert them into clickable links using
+[00:49:49] this organize email content to logical
+[00:49:51] flow en short email folders blah blah
+[00:49:53] blah all this sort of stuff and then
+[00:49:54] also guys specify how you'd like it to
+[00:49:56] end so I hey it's your friendly
+[00:49:57] neighborhood draft GPT a sentence I
+[00:49:59] reckon you never thought you'd ever hear
+[00:50:01] but now you have do not make paragraphs
+[00:50:03] longer than 50 words and then crucially
+[00:50:05] guys remember your goal is to create an
+[00:50:08] engaging and informative email that
+[00:50:10] effectively communicates the message
+[00:50:12] provided in response pay attention to
+[00:50:14] detail and Clarity then guys what I did
+[00:50:17] is I I'd encourage you to create an
+[00:50:18] example output ideally what is good and
+[00:50:22] what is bad so this is great This Is Not
+[00:50:24] Great So based on the turn of voice that
+[00:50:26] I have and based on everything else like
+[00:50:27] all the things I specified like hey
+[00:50:29] start it with hey that hey end it with
+[00:50:31] your friendly neighborhood draft GPT and
+[00:50:33] an example of what a good email looks
+[00:50:35] like you would be surprised it's like in
+[00:50:36] my experience one of the single simplest
+[00:50:38] things that you could do to drastically
+[00:50:40] change the output you would then go back
+[00:50:41] over to platform open.com you would
+[00:50:43] repeat the process you would create an
+[00:50:45] agent you would upload the files then
+[00:50:47] You' come back over to make and then you
+[00:50:49] would simply come here like so and
+[00:50:51] select it right so come here and give
+[00:50:53] this a sec to load up and we type in
+[00:50:55] email like like so and then guys we want
+[00:50:57] to rename him so call this one email GPT
+[00:51:00] or just um email come down rename and
+[00:51:03] then finally guys the last step of this
+[00:51:05] is just to create a draft in Gmail click
+[00:51:06] on Gmail create a draft subject is going
+[00:51:09] to be I would um I mean do this as you
+[00:51:11] want you can create a subject line bot
+[00:51:13] if you want to um but I just sort of
+[00:51:15] like um basically what we do is we say
+[00:51:18] something like let's say hey
+[00:51:22] there and then the first name which we
+[00:51:25] got from over here Jack robits and then
+[00:51:28] a little bit of an emoji like so and
+[00:51:30] then content is just the output from the
+[00:51:31] email gbt then we click okay and the
+[00:51:34] folder we can put that to drafts again
+[00:51:35] you can just send us automatically if
+[00:51:36] you wanted to but it's like pretty sweet
+[00:51:38] put it in drafts click okay and then we
+[00:51:41] align and then guys let's run it from
+[00:51:43] the top shall we just go back over down
+[00:51:45] to Gmail and test it out one final time
+[00:51:47] let's call this
+[00:51:49] one um hey and then the question we can
+[00:51:52] ask is is
+[00:51:55] Instagram better than LinkedIn or
+[00:51:59] YouTube please
+[00:52:02] help we send it we come back over now to
+[00:52:05] automation like so and we just run the
+[00:52:07] whole automation once so Gmail's going
+[00:52:09] to look for the email when he finds it
+[00:52:11] we'll run it through gbt we'll run it
+[00:52:12] through gbt assistant and then it should
+[00:52:13] sit as a draft in our Gmail and then
+[00:52:15] this individual who desperately wants to
+[00:52:16] know whether our Instagram is superior
+[00:52:18] to LinkedIn will get an answer from us
+[00:52:21] cool so wait for this to R in the
+[00:52:22] background let's give us a couple of
+[00:52:24] seconds I think this is so cool
+[00:52:25] applications for this guys are
+[00:52:29] insane I really think what was huge
+[00:52:31] bottle by the way it's like wi top which
+[00:52:34] is great but the problem is if you drink
+[00:52:35] this when you're driving it's so easy to
+[00:52:37] end up wearing whatever's in the bottle
+[00:52:39] all the electrolytes goodness and
+[00:52:41] deliciousness now it's complete so let's
+[00:52:43] go over now and check what we've got in
+[00:52:46] Gmail drafts come
+[00:52:48] over let's check it out refresh the page
+[00:52:51] see what's happening all right let's see
+[00:52:53] what's going on there we go hey there us
+[00:52:56] is Instagram link ABS let's dive in
+[00:52:58] purpose and audience Instagram is all
+[00:53:00] about visuals and reaching out to Young
+[00:53:01] audience it's great for brands that have
+[00:53:03] strong visual content LinkedIn is to
+[00:53:04] goto platform professionals if you're
+[00:53:06] aiming blah blah blah engagement and
+[00:53:07] reach content strategy blah blah blah
+[00:53:10] hope that helps your friendly
+[00:53:11] neighborhood giraff GPT now am I saying
+[00:53:13] that draft GPT draft social is like the
+[00:53:17] Pinnacle of knowledge and these things
+[00:53:18] they may be I don't know but the point
+[00:53:20] is that this is tapped into their
+[00:53:22] resource base to answer the question but
+[00:53:24] I know it's a king's birthday today I no
+[00:53:26] idea about that okay cool well you learn
+[00:53:28] something in every video I guess right
+[00:53:29] how cool is that so guys that's the
+[00:53:32] whole video of nutshell so what I would
+[00:53:33] say guys that's very very cool if you're
+[00:53:35] starting out you want to level up and
+[00:53:37] challenge yourself and could to watch
+[00:53:38] this video on the screen which is 10
+[00:53:40] levels of a automation I had a lot of
+[00:53:41] fun making it I think it's a really cool
+[00:53:43] challenge but in any case guys I really
+[00:53:45] hope you enjoyed the video I love
+[00:53:46] hanging out with you but in any case I
+[00:53:47] have a great weekend and I'll see you in
+[00:53:49] the next video

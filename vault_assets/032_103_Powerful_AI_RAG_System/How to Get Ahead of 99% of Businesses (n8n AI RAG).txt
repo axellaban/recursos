@@ -1,0 +1,509 @@
+[00:00:00] Have you ever wished that your AI could
+[00:00:01] use your business's deep knowledge
+[00:00:04] perfectly, not just searching the
+[00:00:06] internet or guessing? After selling my
+[00:00:07] top 100 UK startup and building AI
+[00:00:10] operating systems for literally hundreds
+[00:00:13] of businesses, I'm going to show you the
+[00:00:15] game changer for retrieval augmented
+[00:00:17] generation. Today, I'm going to show you
+[00:00:18] two new powerful ways to build this in
+[00:00:21] NA10 so that by the end of the video,
+[00:00:23] your AI agents will be 10 times smarter.
+[00:00:26] And the best part is you need zero
+[00:00:28] coding experience to do this. Now, none
+[00:00:30] of this will make any sense unless you
+[00:00:31] understand what Rag is and why most
+[00:00:34] businesses, tutorials, and agencies are
+[00:00:36] using it completely incorrectly. So,
+[00:00:38] we've got this AI system here and we've
+[00:00:41] got this chatbot. So, imagine that you
+[00:00:43] and I have a secretary and whenever we
+[00:00:45] ask this individual questions about our
+[00:00:48] business, our client's business, they
+[00:00:50] use their short-term memory, right? And
+[00:00:52] they forget things and they get things
+[00:00:54] incorrectly. rag or retrieval augmented
+[00:00:56] generation is like giving that
+[00:00:58] individual a huge filing cabinet and
+[00:01:00] instead of relying on their memory
+[00:01:02] whenever we ask them a question they
+[00:01:04] just shoot over pick up the relevant
+[00:01:05] file and show it to you. So, for
+[00:01:07] example, in this case, if we were to ask
+[00:01:09] our chatbot a question, I could say
+[00:01:11] something like, "Hey, what are the $100
+[00:01:14] million money models?" Like this. We
+[00:01:16] then send this one off. And as you can
+[00:01:17] see in the scenario right here, it's
+[00:01:19] then using the whole system, it's
+[00:01:21] checking our filing cabinet to get the
+[00:01:23] correct answer and the correct data.
+[00:01:25] Instead of actually using three complete
+[00:01:28] different books worth of context, and
+[00:01:30] then we'll actually get an answer back
+[00:01:31] within the chat window. And as you can
+[00:01:33] see, we get this beautifully detailed
+[00:01:35] system that answers the question better
+[00:01:37] and it has access to all the
+[00:01:39] information. Now, understanding how it
+[00:01:41] works is one thing, but if you actually
+[00:01:42] don't know how to get the secretary to
+[00:01:45] what we call vectorize and store your
+[00:01:47] data in the filing cabinet, you're never
+[00:01:49] going to be leveraging any of this. Now,
+[00:01:51] here's a key thing that most people get
+[00:01:52] wrong is that they give a level one
+[00:01:55] secretary. The level one secretary is
+[00:01:57] bad at organizing things. This is what
+[00:01:59] we call the vectorization process. And
+[00:02:02] what I'm going to show you here is how
+[00:02:03] you can actually instead of getting a
+[00:02:05] level one, which might be an open AI
+[00:02:07] small embeddings model, I'm going to
+[00:02:09] show you how you can use a level 10
+[00:02:10] embeddings model, which is one of the
+[00:02:12] biggest influences on the quality of
+[00:02:14] answers you're getting and that most
+[00:02:16] people are missing. Now, believe this or
+[00:02:18] not, there are actually leaderboards for
+[00:02:20] this stuff. I'm not joking. Genuine
+[00:02:21] leaderboards do exist for this. And as
+[00:02:23] you can see the title of this one,
+[00:02:24] actually, one of my buddies who works
+[00:02:25] professionally AI said this. It's really
+[00:02:27] funny. These are embedding models. Now,
+[00:02:29] embedding models, just think of it as
+[00:02:31] the secretary. This is how good is a
+[00:02:33] secretary at doing their job. Now, most
+[00:02:35] people when they embed their company
+[00:02:38] data for their clients or for their
+[00:02:39] business, use a really crap secretary.
+[00:02:42] And what I'm going to show you to do
+[00:02:43] here is use one in the top 10, not a
+[00:02:45] really bad math level one secretary. And
+[00:02:48] most people don't even really touch on
+[00:02:50] how good the secretary is. So, I'm going
+[00:02:51] to show you how to use level seven in
+[00:02:53] your system. So, to do that, we're going
+[00:02:55] to head over to NHSN. that I'm going to
+[00:02:56] shoot over to the community and grab a
+[00:02:58] blueprint. So, one of the things that
+[00:03:00] I'm really big on doing here is making
+[00:03:02] the process as easy as possible. So, if
+[00:03:04] you come down here, let me just download
+[00:03:06] this rag system very quickly. Come over
+[00:03:08] here and download that. You head over to
+[00:03:09] nat.io, which if you don't know is an
+[00:03:12] platform that we're going to use today
+[00:03:13] to build this. You come over here, you
+[00:03:15] click on import from file. You select
+[00:03:16] that file and then the whole thing will
+[00:03:18] be plugandplay and upload, which means
+[00:03:20] you can use this to basically just all
+[00:03:22] the company documents, whatever you want
+[00:03:23] to. So the way this is going to work is
+[00:03:26] we want to basically get like give it
+[00:03:28] data. So there's many ways to do this.
+[00:03:29] You can do it with Google Drive. So it's
+[00:03:31] all set up automatically. We cover lots
+[00:03:33] of cool stuff like that in the
+[00:03:34] community. But what I want to do here is
+[00:03:36] add this module which is on form
+[00:03:38] submission. We just simply say I want
+[00:03:39] you to insert a document and file.
+[00:03:41] Right? Then we're going to add in this
+[00:03:43] pine cone vector store which is super
+[00:03:45] easy. So let me show you how you build
+[00:03:46] this one very quickly step by step. So
+[00:03:48] all I'm going to do is just simply
+[00:03:50] delete this very quickly so you can see
+[00:03:51] the whole process. All right. So we come
+[00:03:53] down here. We're going to have a insert.
+[00:03:55] Uh we're going to go for form which
+[00:03:57] would be N8 form which is great. You
+[00:03:59] come down to trigger on form event.
+[00:04:01] Awesome. Call this one something like
+[00:04:02] bench press nation cuz guys if we're not
+[00:04:05] working out chest what on earth are we
+[00:04:07] doing? And we just say here upload
+[00:04:08] company docs or whatever the thing is
+[00:04:11] that you'd like to do. This is a really
+[00:04:12] simple way by the way to get your files
+[00:04:14] into NHM. We can also use Google Drive.
+[00:04:16] Got loads of tutorials on how to do
+[00:04:18] that. And then literally that is all you
+[00:04:20] need. Of course, we are not savages. So,
+[00:04:22] we must add an emoji. And since this is
+[00:04:24] a cool powerful automation, I'm going to
+[00:04:25] show you strong one. And guys, the
+[00:04:26] quality I've got from this is insane
+[00:04:29] compared to the other models I've used.
+[00:04:30] So, come down to add a form element.
+[00:04:32] Call this one file like so. Element type
+[00:04:35] is literally file. And you see, you need
+[00:04:37] no coding to do any of this stuff, guys.
+[00:04:38] It's crazy. Then just click on execute
+[00:04:41] step. This opens up. Then choose a
+[00:04:43] random file. I've picked a money models
+[00:04:44] one. You click submit and then you come
+[00:04:46] back to this and then it appears in
+[00:04:48] there automatically. By the way, this
+[00:04:49] works for CSV files, Word documents,
+[00:04:51] PDFs, anything that you like. Now, the
+[00:04:53] next thing we need to do is use a kind
+[00:04:55] of like a rag system. So, to do that,
+[00:04:58] we're going to click and if this sounds
+[00:04:59] complicated, completely normal, by the
+[00:05:01] way. No one knows what any of this stuff
+[00:05:02] means when they get started. I just want
+[00:05:04] you to type in the word pine cone.
+[00:05:06] That's it. Pine cone vector store. And
+[00:05:08] the one you're looking for is add
+[00:05:09] documents for vector store. So,
+[00:05:11] essentially what's happening here is we
+[00:05:13] give it files and then pine cone is like
+[00:05:15] great, give me the files. I am your um I
+[00:05:17] am your secretary. In fact, well, Pine
+[00:05:19] Cone's not the secretary. Pine cone is
+[00:05:20] kind of the person that hands it off to
+[00:05:23] your secretary, as we'll see. So, to do
+[00:05:24] this, we're going to head over now to
+[00:05:26] pine cone to grab something. And then
+[00:05:27] once you're on pine cone.io, you just
+[00:05:29] create a brand new account. You can log
+[00:05:30] in, which is really flipping cool. And
+[00:05:32] then you'll see this page. So, I'm going
+[00:05:34] to create an index. I'm going to call
+[00:05:36] this one something like, well, I just
+[00:05:37] got back from New York City and I've
+[00:05:38] been eating the pizza. So, I'm going to
+[00:05:40] call this one pizza. Okay? So, all
+[00:05:42] lowercase. Now, most people, guys, come
+[00:05:44] and use this really small one over here.
+[00:05:46] We're actually going to go with
+[00:05:47] multilingual E5 large seventh on the
+[00:05:50] leaderboard. How cool is that? Our level
+[00:05:52] 10 secretary. She's really, really cool
+[00:05:54] and badass. And guys, I want you to
+[00:05:55] touch nothing else. Just come down and
+[00:05:57] create the index. That's it. We're good
+[00:05:59] to rock and roll. Once that's done, the
+[00:06:00] green light means that we're ready to
+[00:06:02] rock and roll. The next thing we do is
+[00:06:03] grab the API key, right? So, come down
+[00:06:05] here, create an API key, call it
+[00:06:07] something like pizza or whatever you'll
+[00:06:09] remember. I definitely won't forget
+[00:06:10] pizza, right? And then you copy the
+[00:06:12] code. You come back over to NAN. You
+[00:06:14] double click on that thing, come down
+[00:06:16] here, create a new credential, throw
+[00:06:18] that in there, click save, and then
+[00:06:20] you're good to go. And then from the
+[00:06:22] list, we should see pizza. And we do. We
+[00:06:24] just select pizza. And that's cool. And
+[00:06:25] that's all we need to do. Now, this is
+[00:06:27] where the magic comes. This is how we
+[00:06:28] find our level 10 secretary. You come
+[00:06:30] down to embedding. You're going to come
+[00:06:32] down. Instead of going for the open eye
+[00:06:34] model, guys, I just want you to click on
+[00:06:36] embeddings. Hugging face inference. Now,
+[00:06:39] the role that hugging face plays in this
+[00:06:41] is it enables us to access all of these
+[00:06:44] really cool embedding models that are
+[00:06:46] just hosted and managed all over there.
+[00:06:47] So, we don't need to do loads of crazy
+[00:06:49] wild connections. Now, all you're going
+[00:06:51] to do is, and by the way, I'll put all
+[00:06:52] these links down below for you so you
+[00:06:53] can grab it. Is you're going to head
+[00:06:54] over to hogingface.co, create an
+[00:06:57] account, takes two seconds. Then, I want
+[00:06:58] you to come over to your little profile
+[00:07:00] photo. I need to add one obviously. And
+[00:07:01] then we're going to come down here to
+[00:07:03] access tokens. Dead simple. And then
+[00:07:05] what you're going to do is create a new
+[00:07:07] token. and give it a name. Again, we'll
+[00:07:09] call this one pizza. And then I want you
+[00:07:10] to just give it access to all the stuff.
+[00:07:12] And once you've done that, you're going
+[00:07:13] to come down and then I believe it's got
+[00:07:15] everything that it physically needs,
+[00:07:16] which is fantastic. And then click on
+[00:07:18] create a token. And then just copy that
+[00:07:20] information. Then we're back over to
+[00:07:22] NAN. We double click on this guy. We're
+[00:07:24] going to create a new credential here.
+[00:07:26] Uh or I'll just update this one here
+[00:07:28] with you together. Uh and all you're
+[00:07:30] going to do, guys, once you're on this
+[00:07:31] one here, is come on to API key, hit
+[00:07:32] enter, hit save, and it should say
+[00:07:34] connection tested successfully, guys.
+[00:07:36] And that is the extent of the technical
+[00:07:38] craziness that you need to know. Uh
+[00:07:40] somebody joining the community and
+[00:07:41] having a good time. Cool. Now we've done
+[00:07:43] that. What we want to do now is add a
+[00:07:44] little bit more information. So you
+[00:07:46] click on this document thing and click
+[00:07:47] on default data loader. Type of data is
+[00:07:50] JSON or binary. So this basically is
+[00:07:52] just saying are you giving me a file or
+[00:07:54] are you giving me JSON text? We're going
+[00:07:56] to give it PDFs and documents. So we
+[00:07:58] just change it to binary. That's very
+[00:08:00] cool. Text splitting simple. We're going
+[00:08:02] to click on custom and click off this.
+[00:08:04] Now, the reason we custom is because in
+[00:08:06] our filing cabinet with our secretary,
+[00:08:08] there's loads of ways we could organize
+[00:08:09] it, right? We could put like one book
+[00:08:11] per section or we could put a couple of
+[00:08:13] pages per section. Generally speaking,
+[00:08:15] we want each kind of folder in the
+[00:08:16] filing cabinet to be large enough to get
+[00:08:19] context, which is really important. So,
+[00:08:20] we click on text splitter. I like
+[00:08:22] recursive character text splitter. What
+[00:08:24] this means, okay, is we organize every
+[00:08:28] document by 2,00. But then the the chunk
+[00:08:31] overlap is saying, well, I'll take the
+[00:08:34] last 200 words of that file and I'll
+[00:08:37] also put it in the next one. So you kind
+[00:08:39] of get this beautiful overlap and you'll
+[00:08:41] find that text is kind of overlapping
+[00:08:42] and awesome. It just kind of helps with
+[00:08:43] the retrieval side of things, guys. And
+[00:08:45] now that's done, we are ready to go. So
+[00:08:47] all we're going to do is come here.
+[00:08:48] We're going to click on this and execute
+[00:08:50] workflow. Fantastic. And then just
+[00:08:51] upload some files. And before we upload
+[00:08:52] the documents, we just need to do one
+[00:08:54] thing, which is to click on the hugging
+[00:08:55] face model. And in the model under model
+[00:08:57] name, guys, I just want you to pop in
+[00:08:59] this. I'll again I'll put it down below
+[00:09:00] so you can just improve it and just
+[00:09:02] paste it in and then you'll be ready to
+[00:09:03] rock and roll. Okay, I've uploaded
+[00:09:05] Horos's box. I'm going to click submit
+[00:09:07] like so. And as you can see guys, this
+[00:09:09] is uploading perfectly and all of this
+[00:09:10] right here is going to be added to our
+[00:09:12] beautiful pizza database. Some say it is
+[00:09:15] actually the most powerful pizza data
+[00:09:16] place on the world. I mean I'm not
+[00:09:17] saying that but people have said that
+[00:09:19] I'm beautiful. This is working perfectly
+[00:09:20] in the background. Now, uploading this
+[00:09:22] data is one thing, but if you don't know
+[00:09:24] how to prompt it in your actual agent,
+[00:09:26] you're going to leave about 100% of the
+[00:09:28] results on the table. So, we really want
+[00:09:30] to make sure that we can do that. So,
+[00:09:32] while this is fully vectorizing, I'll
+[00:09:34] show you exactly how you do that step by
+[00:09:35] step. So, we're going to come down here
+[00:09:36] and we're going to add in an AI agent by
+[00:09:38] clicking on this guy, which is flipping
+[00:09:40] awesome. I actually just got back from
+[00:09:42] New York yesterday. I was competing in
+[00:09:44] NA10's first ever AI agent competition
+[00:09:46] where Nate and I, we went down there and
+[00:09:48] we were building these kind of systems.
+[00:09:50] It was so freaking cool. But let me tell
+[00:09:52] you, uh, the diet definitely starts
+[00:09:53] today. So, we come down here and we want
+[00:09:55] a module to trigger this. There's a
+[00:09:56] million ways we can do it. We're just
+[00:09:58] going to chat trigger to show you how
+[00:09:59] corus works. So, we come off this and
+[00:10:01] what we're going to do is bring this guy
+[00:10:03] over here and just connect it. We're
+[00:10:04] going to give it a model. A little hack,
+[00:10:06] by the way, is you want a model that's
+[00:10:07] great at calling tools. Not all of them
+[00:10:10] are good at doing that. I'm going to
+[00:10:11] give this one a model from Anthropic.
+[00:10:13] GPT5 works also really well. Uh, and I
+[00:10:16] have Claw Claude for Sonnet. If you
+[00:10:17] haven't connected this, by the way, you
+[00:10:19] just come down here. You head over to
+[00:10:20] enthropic.com and just add a couple of
+[00:10:22] bucks and credits and you're ready to
+[00:10:23] rock and roll. Then no need for a
+[00:10:25] memory, but we are going to give it a
+[00:10:26] tool. This tool lets it call the system
+[00:10:29] and this is the thing that we use to
+[00:10:30] combine everything. So this has
+[00:10:32] complete. So if I head over to our pizza
+[00:10:35] pine cone console, you can see all the
+[00:10:37] data. How freaking cool is this? And you
+[00:10:39] can see here's this section right here
+[00:10:41] that has everything. So we're going to
+[00:10:42] test this one together and see how great
+[00:10:44] it actually is. So we're here. We've got
+[00:10:46] the model. The tool we're going to give
+[00:10:47] it now guys is really simply you might
+[00:10:49] have guessed it. That nice thing that
+[00:10:50] falls from trees. The pine cone. Pine
+[00:10:52] cone vector store. Very very cool. Now
+[00:10:54] previously I've used superbase. I'm
+[00:10:56] really liking pine cone after testing
+[00:10:58] extensively cuz I went down many deep
+[00:11:00] rabbit holes for you to make as helpful
+[00:11:01] as possible. We need to give an
+[00:11:03] embedding. What we can actually do is
+[00:11:04] just do the old classic copy and paste
+[00:11:06] and duplicate this guy. Beautiful. And
+[00:11:08] bring him over. And it's the same thing
+[00:11:10] because if you think about the embedding
+[00:11:12] is the secretary. What we want to say is
+[00:11:14] that secretary knows the filing cabinet.
+[00:11:16] So, we need to bring the same one back
+[00:11:17] over. So, she's working on the
+[00:11:19] installing. We need to work work on the
+[00:11:21] retrieving. If we sent a different
+[00:11:22] secretary, um, she doesn't know. By the
+[00:11:24] way, this model in particular that
+[00:11:25] you're using here, this multilingual
+[00:11:27] one, as you might have guessed, not only
+[00:11:28] is it super high performance, it's also
+[00:11:30] exceptional at multi different
+[00:11:32] languages, hence multilingual name. Then
+[00:11:34] we click on this guy a little bit more.
+[00:11:36] We're going to give it description. So,
+[00:11:37] it's important to do this. We could say
+[00:11:39] this is a rag database. It contains all
+[00:11:41] the knowledge you need for anything to
+[00:11:43] do with Alex Hormosi.
+[00:11:45] Beautiful. And but we can give multiple
+[00:11:46] different ones here. We select the index
+[00:11:48] which for us is beautiful pizza. We can
+[00:11:50] add this rerank result which by the way
+[00:11:52] is great. So and I'll explain what
+[00:11:54] rerank does in a second. That's the
+[00:11:55] second hack here. Limit's going to be
+[00:11:57] 20. So that's basically saying to the
+[00:11:59] secretary how many files do you want me
+[00:12:01] to bring back? Um four we don't need. We
+[00:12:03] want 20. Now the reason we're giving 20
+[00:12:05] here is because we're going to have this
+[00:12:07] reanker here from cohhere. If you don't
+[00:12:09] have this you just lally go over to uh
+[00:12:11] Google and type in cohhere reranker like
+[00:12:14] so. Uh you open up the page, you come
+[00:12:15] over, you sign in uh and basically you
+[00:12:18] just get a very simple code which I will
+[00:12:19] do right now. And once you're logged in,
+[00:12:20] literally all you're doing guys is API
+[00:12:22] keys, come over like so. And you can
+[00:12:24] just create a brand new key, call it
+[00:12:26] pizza if you like, generate trial key,
+[00:12:29] and then you can copy it. You come back
+[00:12:31] over to the scenario, click on coher
+[00:12:33] ranker over here, enter in the API key
+[00:12:35] like so, click save, and then that will
+[00:12:38] work for you perfectly. Now, the
+[00:12:39] re-ranker, okay, is kind of like a
+[00:12:41] secretary, a super secretary, right? So,
+[00:12:44] our secretary is bringing back 20 files.
+[00:12:46] And then the re-ranker is saying, "Look,
+[00:12:48] give me those 20 files. I'm actually
+[00:12:49] going to sit down and I'm going to look
+[00:12:51] at all 20 and I'm I'm going to decide
+[00:12:54] which of those 20 files, which four of
+[00:12:56] them are the best four to give to the
+[00:12:59] boss, to give to the person that's
+[00:13:00] asking all these questions." And guys,
+[00:13:02] that's literally all you're doing. So,
+[00:13:04] now we can ask it a question. We click
+[00:13:05] on open chat. We can say, "Oh, actually
+[00:13:07] before we do this, of course, we need to
+[00:13:08] give it a prompt so it knows what it's
+[00:13:10] doing." To do that, we click on the AI
+[00:13:11] agent. You're going to come down here to
+[00:13:13] more options and add a system message
+[00:13:15] in. And then what we're going to do is
+[00:13:16] full screen this so you can see. And you
+[00:13:18] click on this guy and you paste all this
+[00:13:20] sort of stuff, which is freaking cool.
+[00:13:21] I'll put a link down below for this so
+[00:13:23] you can just grab it and and use this
+[00:13:24] one yourself. But essentially, we give
+[00:13:26] it toolgating rules. We explain what it
+[00:13:28] must do. We explain its role, its
+[00:13:30] domains, principles, and crucially
+[00:13:33] output format. how I want it to
+[00:13:35] communicate with me. And then I've given
+[00:13:36] loads of key information on retrieval
+[00:13:38] ranking behavior, worksheets, toning
+[00:13:40] style, scoping, all that sort of stuff.
+[00:13:42] Now, what's really cool here, guys, I've
+[00:13:43] included an inbuilt reranker, which I
+[00:13:44] basically, now if you think about it
+[00:13:46] like this, the prompt we give it isn't
+[00:13:48] optimized for rack. So, you may say,
+[00:13:49] "Tell me about this." Right? Now, the
+[00:13:51] secretary may misunderstand that in any
+[00:13:54] number of ways. You could say, "Tell me
+[00:13:55] about money models." She might take that
+[00:13:57] too literally. Sometimes that happens.
+[00:13:59] Right? So, what we want to do is build
+[00:14:01] in what we call a query re-ranking
+[00:14:04] agent. So, we can do this in two ways.
+[00:14:05] We can prompt it, but even better, and I
+[00:14:07] won't do it in this video. I'll show
+[00:14:08] that in a follow-up video. I'm doing it
+[00:14:10] in my community this weekend. We can
+[00:14:11] actually full kind of class on it, the
+[00:14:12] power of these re-ranking agents. So, if
+[00:14:14] you want to check that out, uh, you can
+[00:14:15] do, but effectively the idea here is
+[00:14:16] that we have somebody that's in between
+[00:14:18] us and secretary. He'll say, I'll say,
+[00:14:21] tell me this. And what it will actually
+[00:14:23] do is turn that into several different
+[00:14:25] commands for the secretary, meaning that
+[00:14:27] she's going to be or he's going to be
+[00:14:29] way better at getting the thing that we
+[00:14:30] need. How freaking cool is that? So, you
+[00:14:31] come down here, open chat. I'll say
+[00:14:33] something like, "Tell me uh what the
+[00:14:35] money models are and how I could apply
+[00:14:37] it to my roofing company business that
+[00:14:39] does $100 million a year and we want to
+[00:14:41] scale." Something completely random like
+[00:14:43] that. We hit enter. And what's really
+[00:14:46] cool, guys, is actually you see these
+[00:14:47] things turning. You can see how it works
+[00:14:49] and you can actually see the process. So
+[00:14:51] if something's ever not perfect, you can
+[00:14:53] always find out by clicking on these and
+[00:14:55] seeing what they're doing. So you can
+[00:14:56] see the quer query reanker, how that's
+[00:14:58] all working and how it's calling it and
+[00:15:00] how that basically works. Bam. And just
+[00:15:02] like that, guys, we've had it fully
+[00:15:03] complete. So I open chat right here and
+[00:15:05] we can see there you go. I wonder if I
+[00:15:07] can just bring this out a little bit so
+[00:15:08] you can see it's given me a TLDDR, a
+[00:15:10] definition, everything that we needed.
+[00:15:12] And as you can see, it's followed it
+[00:15:13] exactly. It's pulled down all the
+[00:15:14] correct information. Now, the next thing
+[00:15:16] that we need to do is actually take this
+[00:15:17] information and present it in a front-
+[00:15:19] end web app that you could use for your
+[00:15:21] team or or basically, you know, your
+[00:15:23] clients or whoever it is. But look sexy
+[00:15:25] and amazing. You can download it. You
+[00:15:26] can do a million things. Watch this
+[00:15:27] video on screen to learn exactly how to
+[00:15:29] do

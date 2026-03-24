@@ -1,0 +1,482 @@
+[00:00:00] what's good AI automation family I've
+[00:00:01] got another great exclusive video for
+[00:00:03] you here because you're awesome and
+[00:00:05] you're part of the group I'm going to
+[00:00:06] show you how you create a unique turn of
+[00:00:07] voice for your automation so in other
+[00:00:10] words how do I get like a language model
+[00:00:12] to sound more like me well I'm going to
+[00:00:14] show exactly how so look let me start
+[00:00:17] over here okay so look this is a
+[00:00:19] segmentation problem now what I've done
+[00:00:21] here is we've asked the question first
+[00:00:23] of all let me start with the output the
+[00:00:24] idea is that we're going to end up with
+[00:00:25] like a th to 2,000 words as Jack's turn
+[00:00:29] of voice or your turn of voice you're
+[00:00:31] going to have an action which is hey I
+[00:00:32] want you to write social media post I
+[00:00:33] want you to create content for me and
+[00:00:35] then you're going to have your turn of
+[00:00:36] voice at the bottom and it's going to be
+[00:00:38] it's going to be complete breakdown of
+[00:00:40] everything that makes up your turn of
+[00:00:42] voice so that the output sounds just
+[00:00:44] like you've written it so how do we do
+[00:00:45] that well in order to do this properly
+[00:00:48] we need to break down what what makes
+[00:00:50] you who you are now language is
+[00:00:52] extremely complicated people do the gas
+[00:00:54] in it all the time but we've broken it
+[00:00:56] down I think in a really good way so
+[00:00:58] what essentially we're going to do this
+[00:00:59] is a one exercise to do but once you've
+[00:01:01] created it you can use it essentially
+[00:01:03] forever and maybe when you get an 11 Le
+[00:01:06] clone you will live on in eternity if we
+[00:01:08] haven't solved Healthcare by that
+[00:01:09] problem which to be fair with you we
+[00:01:11] might already do so look you're going to
+[00:01:13] do three questions to a language model
+[00:01:16] the first one's going to be what we call
+[00:01:17] Micro level elements okay so we're going
+[00:01:19] to look at your vocabulary and your word
+[00:01:22] choice in other words we're going look
+[00:01:23] at your unique specialized repetitive
+[00:01:24] words we're going to look at the
+[00:01:25] frequency and diversity vocabulary we're
+[00:01:28] going to look at grammatical patterns so
+[00:01:29] that's stuff like the grammatical
+[00:01:31] structures that you use um your verb
+[00:01:34] tenses and consistencies and then
+[00:01:35] finally we're going to look at
+[00:01:36] punctuation so look we're going to
+[00:01:38] analyze use of punctuation marks comma
+[00:01:40] semicolons dashes parentheses I for
+[00:01:42] example use semicolons very regularly
+[00:01:44] That's Unique Style of my writing going
+[00:01:45] look for any unusual or idios excuse me
+[00:01:48] idiosyncratic punctuation patterns an
+[00:01:50] idiosyncrasy as we'll know is just
+[00:01:52] something unique that you say that is
+[00:01:53] unique to particular language or area or
+[00:01:56] something and then at the end please
+[00:01:58] provide a detailed guideance for each
+[00:02:00] element including relevant examples from
+[00:02:02] the given text it is imperative that
+[00:02:03] your guidelines read as instructions to
+[00:02:06] a language model to emulate the style
+[00:02:08] exactly for example when writing
+[00:02:10] sentences using active voice most of the
+[00:02:12] time such as he gladly painted the house
+[00:02:14] provide examples from written text of
+[00:02:16] what good and bad looks like be as
+[00:02:18] helpful and as detailed as possible so
+[00:02:20] number one is going to be on the
+[00:02:21] vocabulary and word choice you have the
+[00:02:23] grammatical patterns you have and your
+[00:02:24] punctuation number two is going to be
+[00:02:26] measure level out elements that's going
+[00:02:27] to cover sentence structure and length
+[00:02:30] that's about complexity variety average
+[00:02:32] length of your sentences rhetorical
+[00:02:34] devices and paragraph structure and how
+[00:02:36] you actually write those things excuse
+[00:02:39] me cool and again the same thing we want
+[00:02:42] examples positive examples negative
+[00:02:43] examples and then finally we've got the
+[00:02:45] macro level elements and other
+[00:02:46] considerations that's tone and mood are
+[00:02:48] you with both positive negative overhaul
+[00:02:50] coherence and cohesion idiosyn
+[00:02:53] idiosyncrasies and quirks so any
+[00:02:55] recurring stylistic quirks mannerisms
+[00:02:57] that set you apart or make you unique
+[00:02:59] then we've we've got dialogue if
+[00:03:01] applicable and any figurative language
+[00:03:03] so what do we do well look the what I've
+[00:03:06] done for this one okay is I'm going to
+[00:03:08] copy alexo's turn of voice now before we
+[00:03:11] jump in there's two things that I want
+[00:03:13] you to think about if you're if you want
+[00:03:15] to create a turn of voice for something
+[00:03:16] that's spoken instead of something
+[00:03:19] that's written you need to give it
+[00:03:21] written data so spoken data but if it's
+[00:03:23] written you want to give it written data
+[00:03:25] if that makes sense if I translate your
+[00:03:27] spoken data which I can do and we can
+[00:03:29] conol it and we can change the prompts
+[00:03:30] and if you want that help let me it down
+[00:03:32] below cuz maybe you've only got podcast
+[00:03:33] and that's all that you've got so we can
+[00:03:35] build that structure to do that but if
+[00:03:36] it's just written data if helpful to
+[00:03:39] give it written content you've done this
+[00:03:40] could be fed through all the tweets it
+[00:03:42] could be fed through Linkedin Pur any
+[00:03:44] written content you've got I want you to
+[00:03:45] grab as much of it as possible if you've
+[00:03:47] written a book that's amazing that's
+[00:03:48] best but get all the content you've done
+[00:03:50] into one place now look I've got this
+[00:03:53] 100 million office book PDF uh what I'm
+[00:03:56] going to do is this is all written by
+[00:03:57] Alex I'm going to copy all of it like
+[00:04:00] this I'm going to go to clae okay now
+[00:04:02] I'm going to paste in the book now cla's
+[00:04:04] epic cuz it's context length window is
+[00:04:07] insanity so I've done that now I'm going
+[00:04:10] to come over to our micro level elements
+[00:04:12] and give it the following prompt right
+[00:04:14] so come down a little bit I'm going to
+[00:04:16] grab this going to go to clae and I'm
+[00:04:19] just going to hit this and I hit enter
+[00:04:22] okay now claude's going to analy the
+[00:04:24] text from Alex and it will start to spit
+[00:04:26] out some information it's going to be
+[00:04:27] helpful for us and of course guys what
+[00:04:29] we're going going to do once we've done
+[00:04:30] this for the three different sections
+[00:04:31] like this one's obviously on grammatical
+[00:04:33] patterns punctuation Vali word choice
+[00:04:36] we're then going to do it for the other
+[00:04:37] three and we'll end up with an
+[00:04:38] amalgamate of really in-depth analysis
+[00:04:41] now this will get you like 70 80% the
+[00:04:45] word if you wanted to go to 100% and
+[00:04:47] maybe this is a business idea you could
+[00:04:48] start separate these nine things out
+[00:04:51] into nine questions the more gentic you
+[00:04:54] can make them flow the more high quality
+[00:04:56] the better the quality is going to be so
+[00:04:58] for example I'd have one would be like
+[00:05:00] punctuation you are the punctuation
+[00:05:02] agent you are specifically going to do
+[00:05:04] this with this I've just tried to strike
+[00:05:05] a balance of practicality and input
+[00:05:08] attention so you don't need to spend as
+[00:05:09] much time on it but it will give you
+[00:05:10] like 80% the way there so look at this
+[00:05:12] guys vocabul word choice employ
+[00:05:14] relatively wide range of vocabulary but
+[00:05:15] repeat key words and phrases for
+[00:05:16] emphasis value dream outcome bonus
+[00:05:19] guarantee scarcity urgency occasionally
+[00:05:21] use cisms and slang for a casual relable
+[00:05:23] turn examples Gunna suck at it no bueno
+[00:05:26] give me my money mostly prefers simple
+[00:05:28] words but th multiable words I mean this
+[00:05:30] is down to a te Alex is really a big
+[00:05:32] proponent of speaking at third grade
+[00:05:34] level obviously he can speak
+[00:05:35] significantly better than that he's a
+[00:05:36] phenomenal writer but he does it for
+[00:05:38] Mass Appeal and simplicity that's why
+[00:05:40] people love his communication style look
+[00:05:43] vocab word choice grammatical patterns
+[00:05:45] heavily favor the active voice over the
+[00:05:47] passive mostly use simple and present
+[00:05:49] guys how incredible is this like to have
+[00:05:52] this level analysis on your V on your
+[00:05:53] voice like we could sell this to
+[00:05:56] businesses and say dude like I'm not
+[00:05:58] going to give you generic email output
+[00:05:59] I'm I'm going to give you something so
+[00:06:00] unique to who you are as an individual
+[00:06:02] this is your vocal DNA this is a DNA of
+[00:06:05] how you communicate and you just get all
+[00:06:07] the emails we can download them off a
+[00:06:08] server we won't check whether or not
+[00:06:10] he's flirting with a mistress somewhere
+[00:06:12] that's that you know it's part covered
+[00:06:13] in the confidentiality Clause of our
+[00:06:14] agency so don't worry about that and
+[00:06:16] look at this guys also frequently
+[00:06:17] dressed reader is you speak to him
+[00:06:18] directly this is going to change out I
+[00:06:20] might even send this maybe we send this
+[00:06:21] to Alex Alex take this man take this or
+[00:06:24] maybe one of you want to create a
+[00:06:24] business let me know and I'll I'll help
+[00:06:26] you promote it punctuation beautiful
+[00:06:29] check this out now what do we do we copy
+[00:06:31] it when it com to our second document
+[00:06:33] now look turn of voice I just enter it
+[00:06:35] in okay and then let's get rid of this
+[00:06:38] here perfect now what do we do you might
+[00:06:40] have guessed it we come back over here
+[00:06:41] prompt two for the measure level
+[00:06:43] elements and we copy this prompt when it
+[00:06:45] come down and by the way guys all these
+[00:06:47] custom videos that I do just for the
+[00:06:48] community they're basically based off
+[00:06:50] your suggestions so if you want one in
+[00:06:51] particular just create a post let me
+[00:06:53] know be sure to go out and share the
+[00:06:55] love and just make magic happen in the
+[00:06:56] group I love that so look um and then
+[00:07:00] let's ask get these ones bam we post
+[00:07:02] that one again and again it will go
+[00:07:05] through and do the same process this
+[00:07:07] time for sentence structure in length
+[00:07:09] Ral devices paragraph structure and
+[00:07:11] everything else like the thing I've
+[00:07:14] never seen anybody really crack when it
+[00:07:16] comes down to AI automation is really
+[00:07:19] the turn of voice thing and it's just
+[00:07:20] something that everybody really wants
+[00:07:22] and it's like you know you could have a
+[00:07:24] fully optimized text output that is
+[00:07:26] great but would people know that it's
+[00:07:28] you would people not know that it's you
+[00:07:29] and one thing I'm also going to point
+[00:07:30] out while this is working in the
+[00:07:32] background is this doesn't stack this
+[00:07:34] compound so look if I come over we've
+[00:07:36] got all our agents right and we come
+[00:07:37] down to our social media agents here
+[00:07:40] look you can combine it with our
+[00:07:44] generation 4 LinkedIn Creator Our
+[00:07:45] Generation 3 Twitter Creator you have
+[00:07:47] that but then you say oh by the way
+[00:07:49] here's my turn of voice so every single
+[00:07:51] person is going to have a unique turn of
+[00:07:53] voice and we're just going to like
+[00:07:55] everyone's going to put completely
+[00:07:56] different signing stuff that also
+[00:07:58] adheres to the best practi practices and
+[00:07:59] principles which is where it just takes
+[00:08:01] it from a level seven to like a level 11
+[00:08:03] you say 11 is not the charts well D this
+[00:08:05] is so good we just we need we need out
+[00:08:06] of 11 there cuz 10's just not enough to
+[00:08:08] do this right come back over to Claude
+[00:08:11] And I'd recommend using Claude for this
+[00:08:12] by the way because Claude it in my
+[00:08:14] personal experience I'm only ever going
+[00:08:16] to sh with you that I think is the best
+[00:08:17] to work I want you to win I would use
+[00:08:19] Cloe for this over chat gbt 4 sentence
+[00:08:22] structure and length various sentence
+[00:08:23] structure to maintain reader engagement
+[00:08:24] use a mix of simple sentences a c use
+[00:08:27] sentence fragments for emphasis or
+[00:08:28] conversational ter
+[00:08:30] aim for the average sentence CL around
+[00:08:31] 15 to 20 words this keeps your writing e
+[00:08:34] Punchy and easy to follow employ
+[00:08:37] metaphors occasionally use hyperbole for
+[00:08:39] impact I'm taking a heinous amount of
+[00:08:41] money how do I know that's true I read
+[00:08:43] the book I love the book I'm telling you
+[00:08:44] it's in there it's crazy look at this
+[00:08:47] include relatable anecdotes and guys
+[00:08:49] seriously like not even what the output
+[00:08:50] looks like but you tell me genuinely
+[00:08:52] Below in the comments like the comments
+[00:08:54] of the of the inside of group wouldn't
+[00:08:56] this like just reading this like you're
+[00:08:57] like yes each one of these things that's
+[00:08:59] exactly what I want include relatable
+[00:09:01] anecdotes and examples to illustrate
+[00:09:03] your arguments and make your writing
+[00:09:05] more personable example anecdote there
+[00:09:06] are many people who can solve the
+[00:09:08] problem how do I make $10,000 per month
+[00:09:10] but far fewer who can solve how do I add
+[00:09:12] 5 million million to my profit without
+[00:09:13] any extra product lines to my business
+[00:09:15] one of the things I told us to do
+[00:09:17] examples I want you to exemplify
+[00:09:19] everything why do we exemplify
+[00:09:20] everything because language models Le
+[00:09:22] better when we're like hey this is good
+[00:09:25] this is bad don't do this and do more of
+[00:09:26] this we have to specify so it loves it
+[00:09:28] and then we've got from paragraph
+[00:09:29] structure chronological order for
+[00:09:31] narrative spatial orders for
+[00:09:33] descriptions transitional words beyond
+[00:09:35] that next up now we've established that
+[00:09:37] that being said I mean it's insane it's
+[00:09:39] literally ridiculous so going to come
+[00:09:42] back over to our second document and
+[00:09:44] what do we do we paste it awesome and
+[00:09:48] did it give us there we go let's get rid
+[00:09:51] of that little bit and then finally the
+[00:09:54] astute viewers which is every one of you
+[00:09:56] cuz all Geniuses going to come down here
+[00:09:59] that and then we go back over to Claude
+[00:10:01] for a final time and give it this and as
+[00:10:03] I said guys honestly if you want to take
+[00:10:04] this to the next level you want to BU
+[00:10:06] create this as a business I would focus
+[00:10:08] on variety of inputs at the top which is
+[00:10:10] could be tweets could be emails could be
+[00:10:13] um a podcast I mean even if you wanted
+[00:10:16] to do what I talk about a lot and I talk
+[00:10:18] about the last video I made for this
+[00:10:19] community around you want to lead with
+[00:10:22] Valley you could say hey big big
+[00:10:24] podcaster a you've uploaded these things
+[00:10:26] I've created a Turner voice template
+[00:10:28] based on you ask it any question and it
+[00:10:30] will speak like you do and what have you
+[00:10:31] done you've taken all that podcast
+[00:10:33] you've kind of like trained a model on
+[00:10:34] it I mean do it ethically right but you
+[00:10:36] could say look this is going to help
+[00:10:38] save you time in terms of your purse
+[00:10:39] like I'm not using it anywhere I will
+[00:10:40] delete this if you want to I just want
+[00:10:41] to show you how it works or lead with an
+[00:10:43] example of someone else famous and you
+[00:10:45] could that's the way you could show
+[00:10:46] value I mean one thing that happened
+[00:10:48] with Le hosi is if you can't if you
+[00:10:52] can't show you've got better examples
+[00:10:53] and someone else at work them so for
+[00:10:54] example she this guy wanted to take care
+[00:10:56] of a Twitter account rather than saying
+[00:10:58] hey I'll take care of your Twitter
+[00:10:59] account I work for free work for free
+[00:11:01] before you ask this guy said look I've
+[00:11:03] listened to every single one of your
+[00:11:04] videos here's 150 tweets that I think
+[00:11:07] would fit your audience she read through
+[00:11:08] them and she's like I should get props
+[00:11:10] more often right she read through them
+[00:11:11] and she's like yes yes yes yes yes he
+[00:11:13] did it you could do this with this you
+[00:11:15] feed it a turn of voice for person and
+[00:11:17] then say look quote 50 you know tweets
+[00:11:19] based on all of this data you just made
+[00:11:22] what looks like 7 days of work happen in
+[00:11:24] 7 minutes that is ridiculous now let's
+[00:11:27] check in on this and see if this is
+[00:11:28] going on do you have to put me back I've
+[00:11:29] already had I've had a couple of these
+[00:11:30] today
+[00:11:32] so let's check it out all right look
+[00:11:35] turn and mood maintain a promly casual
+[00:11:37] conversational and motivational term
+[00:11:39] that sounds like Alex 101 use Contra
+[00:11:41] contraction simple language and personal
+[00:11:43] anecdotes to create a sense of
+[00:11:44] familiarity and relatability for example
+[00:11:47] I'm sure I'm sure right now you probably
+[00:11:48] couldn't handle a thousand clients
+[00:11:49] tomorrow right but how many could you
+[00:11:51] handle 5 10 25 well you might as well
+[00:11:54] Define the number you want to take on in
+[00:11:55] a given time period Then advertise that
+[00:11:57] adopt a serious authoritative turn quite
+[00:11:59] an overall mood of enthusiasm ensure
+[00:12:01] your ideas flow logically and slow
+[00:12:03] excuse me oh my goodness logically and
+[00:12:05] smoothly from one to the next you clear
+[00:12:07] topic sentences and transitions employ
+[00:12:09] transitional words and phrases to link
+[00:12:11] ideas both within and between paragraphs
+[00:12:14] examples beyond that on top of that next
+[00:12:16] up now we've established that that being
+[00:12:17] said use repetition idos synchros using
+[00:12:20] quirks a distinctive voice that sets you
+[00:12:22] apart from other writers this could
+[00:12:24] include catch phrases on conventional
+[00:12:25] formatting the text also features some
+[00:12:28] unique terms of phrase such as nice slap
+[00:12:29] brain burner that's a bit of a word we
+[00:12:32] to chat about that it's a bit
+[00:12:33] strange dialogue figurative language
+[00:12:36] Bing b bom we copy all of this we go
+[00:12:39] back now over here and we enter now look
+[00:12:44] I get rid of that what I'm going to do
+[00:12:46] is this is the Alex hosi turn of voice
+[00:12:48] so look now let's specify the task let's
+[00:12:51] say that I want you to write 100w um
+[00:12:55] let's call it let's do something write
+[00:12:56] 100w description on
+[00:12:59] why paid School uh paid
+[00:13:05] communities beneficial for business so I
+[00:13:08] mean it's a terrible prompt but I'm
+[00:13:10] going to do two things right look come
+[00:13:12] over to
+[00:13:12] Claude I'm going to uh let's do Claude
+[00:13:17] chat okay look right Goodness Me W even
+[00:13:21] want to do it right come to Claude AI
+[00:13:22] I'm going to give it one example is
+[00:13:25] this pay communities offer valuable
+[00:13:27] benefits for businesses by establishing
+[00:13:29] dedicated space for customers businesses
+[00:13:30] can fostter sense belonging leading to
+[00:13:33] increased Lo engagement these
+[00:13:34] communities provide a direct line of
+[00:13:35] communication align businesses to gather
+[00:13:37] valuable feedback insights and ideas
+[00:13:39] from most committed customers
+[00:13:41] additionally pay communities can as a
+[00:13:42] blah blah blah do we like that no no we
+[00:13:45] don't like that right so look we copy
+[00:13:47] this new excuse me is this the right
+[00:13:49] prompt no it's this one we copy this new
+[00:13:53] you will write is Alex I should
+[00:13:56] change cool and come down here Alex is
+[00:13:59] turn of
+[00:14:01] voice copy all of it and we come back
+[00:14:04] over and then we enter and there we go
+[00:14:07] and let's see what the difference looks
+[00:14:08] like in real
+[00:14:13] time pay communities offer a game
+[00:14:15] changing opportunity for business to
+[00:14:16] Skyrocket their success imagine having a
+[00:14:18] dedicated group of raing fans who are
+[00:14:20] eager to engage with you brand deeper
+[00:14:21] level it's like having a secret weapon
+[00:14:23] in your marketing Arsenal by creating
+[00:14:25] exclusive pce for your low customers
+[00:14:27] you'll faster sense belonging that will
+[00:14:28] make them stick around like glue they're
+[00:14:30] so pumped to get their hands on premium
+[00:14:31] content inside of perks and person life
+[00:14:33] support that they'll be shouting prais
+[00:14:34] from the rooftops and here's a real
+[00:14:36] kicker not only we build a community of
+[00:14:37] di BR brand Advocates but you'll also
+[00:14:39] gain direct line to their viable
+[00:14:41] feedback and ideas it's like having a
+[00:14:43] focus focus group on speed dial so if
+[00:14:45] you want to Boost customer lifetime
+[00:14:46] value slch rates and watch your profit s
+[00:14:48] investing in the pay Community to their
+[00:14:50] brainer trust me you're bought line with
+[00:14:51] thank you guys incredible like
+[00:14:55] ridiculous now will there be one or two
+[00:14:57] little Expressions you want to change
+[00:14:59] yeah like I would probably change the
+[00:15:00] stick around like glue it needs more
+[00:15:03] training on that so nist gets you to 80%
+[00:15:05] that's the Gap you cover with the more
+[00:15:07] like you would like start to train the
+[00:15:09] stuff out of it so you could even go as
+[00:15:10] far as say these are kind of like all
+[00:15:11] the idioms I create right so you know on
+[00:15:14] this document here I'm breaking up and
+[00:15:16] getting so emotional about it we talked
+[00:15:17] about vocab word choice you had nine
+[00:15:19] prompts each one of these would be like
+[00:15:22] as long as the three extract so we
+[00:15:23] triple the length of it we just find
+[00:15:25] every idiosyncrasy they say and then it
+[00:15:27] just chooses from one of those things
+[00:15:28] you you can codify the way someone
+[00:15:29] speaks guys but ultimately it's
+[00:15:32] phenomenal it's so so this is like this
+[00:15:34] is like one of the most exciting Auto I
+[00:15:36] found and I am so stoked to share with
+[00:15:38] you guys in community cuz I just think
+[00:15:39] it's awesome but guys let me know what
+[00:15:41] you think Down Below have a wonderful
+[00:15:42] weekend and I'll see you in my next
+[00:15:44] video

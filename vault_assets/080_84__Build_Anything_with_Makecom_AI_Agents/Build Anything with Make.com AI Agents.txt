@@ -1,0 +1,1031 @@
+[00:00:00] Here's how you build anything with the
+[00:00:01] brand new make.com AI agents. I have
+[00:00:04] spent hours going deep on these AI
+[00:00:06] agents so you don't have to. And I've
+[00:00:08] helped thousands of business owners now
+[00:00:10] absolutely crush it with AI automations.
+[00:00:13] And in this video, I'm going to show you
+[00:00:14] a no fluff sevenstep process to build
+[00:00:17] reliable, powerful make AI agents. And
+[00:00:19] then I'm going to show you how that
+[00:00:20] compares to NA10 and when you should use
+[00:00:23] which agent for which. And at the end of
+[00:00:25] the video, I'm going to show you what
+[00:00:26] Make.com team have personally told me
+[00:00:29] about these AI agents and also some of
+[00:00:31] the top performing use cases for AI
+[00:00:33] agents to transform your business or
+[00:00:35] things that you can sell to other
+[00:00:37] businesses. So, if you haven't already,
+[00:00:39] grab that coffee and let's dive straight
+[00:00:41] in. And I kind of want to just start off
+[00:00:43] with guys about the pricing. So, how
+[00:00:45] does the pricing work with make.com AI
+[00:00:47] agents versus NHM? Well, the pricing is
+[00:00:50] fairly standard that as you know and
+[00:00:51] it's self-hosted. But for make it has no
+[00:00:54] change to the actual cost that you pay.
+[00:00:56] So whatever you're currently paying for
+[00:00:58] your operations and processes will
+[00:01:00] remain the same because with make.com
+[00:01:02] agents effectively what you do is you
+[00:01:04] give it an API key to your language
+[00:01:07] model which means that you're the one
+[00:01:08] that covers the costs for when it runs
+[00:01:10] things and in that way it runs exactly
+[00:01:12] the same way as NAM. Beautiful. So,
+[00:01:15] let's start off guys, I guess, with
+[00:01:16] actually building an agent step by step
+[00:01:19] and then I'm going to cover my specific
+[00:01:21] thoughts on when you should use it. So,
+[00:01:23] to do that, let's begin with the
+[00:01:24] beautiful seven steps. And of course,
+[00:01:26] we're in Simpsons Land. We're having a
+[00:01:28] great time. Now, before we do this, I
+[00:01:30] wouldn't build and make AI agent until
+[00:01:32] you do the following. And the first
+[00:01:34] thing we need to determine here, guys,
+[00:01:35] is whether we need an agent or an
+[00:01:37] automation. It's a very important
+[00:01:39] distinction. So, a couple of questions
+[00:01:41] I've put down here, and again, this
+[00:01:42] whole PDF will be down below for you in
+[00:01:43] the description. just click a button and
+[00:01:44] you can access it immediately. Um, so
+[00:01:46] first one is does it need complex
+[00:01:48] decision- making? So when you're
+[00:01:50] thinking about okay, I want to build
+[00:01:51] something, ask yourself these questions.
+[00:01:52] So if it's workflows that require
+[00:01:54] autonomous decision trees or conditional
+[00:01:56] logic based on different inputs, you may
+[00:01:58] need an AI agent versus just something
+[00:02:00] that goes left to right. Because
+[00:02:02] remember in make.com AI a basically all
+[00:02:04] automations are linear and they go left
+[00:02:06] to right. But if you can define what
+[00:02:08] that is and it isn't complex logic, you
+[00:02:10] may be better off just building a simple
+[00:02:13] automation. Second of all, does it
+[00:02:14] coordinate multiple steps intelligently?
+[00:02:16] So your automation needs to understand
+[00:02:18] context across steps and adapt
+[00:02:19] accordingly. Does it need to have and
+[00:02:21] bundle multiple things together? You
+[00:02:23] need to think about does it need to
+[00:02:24] select and use different tools. So for
+[00:02:26] example, in this one here, I've got a
+[00:02:28] make AI agent and we're going to build
+[00:02:30] one together, of course. But let's just
+[00:02:31] say, for example, you have a Gmail
+[00:02:32] module, a calendar module, a telegram, a
+[00:02:35] research module. Does it need to make
+[00:02:37] intelligent decisions about where it
+[00:02:39] wants to go based on the input? So if I
+[00:02:41] have a personal assistant and I say hey
+[00:02:43] go forth and uh oh check my emails and
+[00:02:45] oh brokerage you do X that is multiple
+[00:02:47] different routes. Now you can hardcode
+[00:02:49] that with with basically uh logic and
+[00:02:52] and systems but actually that's the kind
+[00:02:54] of flow that would prefer an agent over
+[00:02:56] not. So if it's got multi multi steps
+[00:02:58] that's important. Fourthly, does it
+[00:02:59] maintain conversational context? Are you
+[00:03:01] having a chat with it? And does it need
+[00:03:03] to have memory? If so use agents. And
+[00:03:05] I'm also going to tell you as well guys
+[00:03:06] about me make.com memory because they've
+[00:03:08] basically solved it and massively
+[00:03:10] simplified it. If you compare it to any
+[00:03:12] for instance when you want to retrieve
+[00:03:14] information actually in fact if you
+[00:03:16] click on AI agent hero you see you got
+[00:03:18] this memory you can choose multiple
+[00:03:19] things in make it's just there
+[00:03:21] automatically it just kind of works on
+[00:03:22] autopilot and it retain information. I
+[00:03:24] did ask the make.com team about how that
+[00:03:26] works. What's the limits? What's
+[00:03:28] capacity? They haven't got back to me
+[00:03:29] but as soon as they do I'll put some
+[00:03:30] information under this video so you can
+[00:03:31] check it. But you don't need to worry
+[00:03:33] about memory. remember their direction
+[00:03:34] of travel like they told in a podcast is
+[00:03:37] basically to make it as simple as
+[00:03:38] humanly possible beautiful and finally
+[00:03:40] does it need to work across different
+[00:03:42] platforms coordinate multiple various
+[00:03:43] action systems and intelligent
+[00:03:45] evaluation so just think about first of
+[00:03:47] all is the agent is automation most of
+[00:03:49] the times it's going to be automation
+[00:03:50] but when we need an agent we proceed
+[00:03:52] down to the beautiful step two now step
+[00:03:54] two is to create the AI agent cool so
+[00:03:56] how do we actually freaking do that well
+[00:03:58] what we're going to do is we are going
+[00:03:59] to head on over to this scenario so we
+[00:04:01] click this button and open it up and it
+[00:04:03] will load for beautifully. And guys,
+[00:04:05] what I'm going to do in this video is
+[00:04:06] build a personal assistant agent. A very
+[00:04:09] simple one because I just want to
+[00:04:11] explain the technology. Now, all you do
+[00:04:13] is come over and click on create agent
+[00:04:15] like so. And we're going to call this
+[00:04:17] one here. We're going to call this
+[00:04:19] Jack virtual assistant. Beautiful. And
+[00:04:23] of course, we'll give it an emoji. A
+[00:04:25] rocket. Now, I'm going to pick the
+[00:04:26] model. So, we're going to use GPT 4.1,
+[00:04:28] which came out yesterday and is blowing
+[00:04:30] everybody's mind. So I want you to come
+[00:04:32] up here on add, click on connection type
+[00:04:34] and we are going to select openai.
+[00:04:36] Beautiful. If you haven't created a
+[00:04:38] connection yet, very simply how you do
+[00:04:40] that is the following. You're going to
+[00:04:41] head over to platform.openai. Whoops,
+[00:04:43] we're not on uh this guy.
+[00:04:45] Platform.openai.com and then you're
+[00:04:47] going to come down to the bottom left
+[00:04:48] and you're going to click on API keys
+[00:04:50] and then simply create a new key. You'll
+[00:04:52] have a load of information. Create
+[00:04:53] secret key. It'll pop up. You're going
+[00:04:55] to copy that data there and then you're
+[00:04:57] going to come back over to your make to
+[00:04:59] come scenario and add in your API key
+[00:05:00] right there which is exactly what we're
+[00:05:02] going to do. Let's copy this guy. Come
+[00:05:03] over and pop it in there. Beautiful. And
+[00:05:06] then you click on save. Don't worry
+[00:05:07] about organization ID. Now what we want
+[00:05:09] to do to use GPT 4.1. It hasn't appeared
+[00:05:11] yet as you can see. Right. So to do that
+[00:05:13] we click on map and then you just enter
+[00:05:15] in this code GPT 4.1. And then what we
+[00:05:18] need to do next let's go back to our
+[00:05:19] beautiful guide to figure out what the
+[00:05:20] next step is. So we have headed over
+[00:05:21] there. Beautiful. We have chosen a
+[00:05:22] model. We've gone for 4.1. Uh, and then
+[00:05:25] give it a system prompt. Cool. So, to do
+[00:05:27] this, guys, I just recommend that you
+[00:05:28] actually ask ChatGpt to help you with
+[00:05:29] that. So, let's head over there now.
+[00:05:31] Beautiful. Chat GPT. Okay. Sweet. So,
+[00:05:34] I'm going to say, hey, create me a uh AI
+[00:05:37] agent
+[00:05:38] prompt. A simple AI agent prompt. And
+[00:05:41] I'm going to say, hey, uh, input will be
+[00:05:45] a Slack me. We'll call it maybe a
+[00:05:47] Telegram message. Okay.
+[00:05:52] And then we say tools and then let's
+[00:05:53] just give it two tools. Let's just say
+[00:05:54] for example ability to search
+[00:05:59] uh the
+[00:06:00] internet. And then secondly uh we'll
+[00:06:02] also say its ability to do something
+[00:06:05] really interesting like I don't know uh
+[00:06:07] create a draft email as a quick for
+[00:06:10] instance.
+[00:06:11] Okay. And of course you want to say this
+[00:06:14] is a personal VA. Beautiful. Let this
+[00:06:18] rock and roll around the background. Oh,
+[00:06:19] you know, we should have just used 4.1,
+[00:06:21] right? Where's 4.1? Oh my 4.5 4. Oh my
+[00:06:24] goodness. Right, we come down. Cool. So,
+[00:06:26] we've got this personal agent prompt,
+[00:06:27] which is sick. So, what we're going to
+[00:06:29] do, guys, very simple, is copy this. You
+[00:06:30] can go really into detail with it. And
+[00:06:32] I' I've got things on that, but just to
+[00:06:33] keep this one beautifully short and
+[00:06:35] simple, I'm going to come down here. Um,
+[00:06:37] all right. Sweet. So, let's come down
+[00:06:39] here, copy this guy. Beautiful. Head
+[00:06:42] back over then to our AI agent, and we
+[00:06:44] enter in the system prompt. The system
+[00:06:46] prompt is kind of like it's hardwiring.
+[00:06:48] It's like core functions. Obviously
+[00:06:50] Meg's going to write things behind this
+[00:06:52] as well, but effectively it's what we're
+[00:06:53] doing. Okay. Then we click on save. So
+[00:06:55] you have effective we created your
+[00:06:57] agent. Now the first thing I want you to
+[00:06:58] understand about is some differences.
+[00:06:59] Okay. So look, if we look at make AI
+[00:07:01] agents, how do they actually differ than
+[00:07:03] NA10? And if I come over here to show
+[00:07:04] you these things with make agents and
+[00:07:06] how they differ the here's a cool thing
+[00:07:08] I want you to understand conceptually
+[00:07:10] about it. NAM is nonlinear. In other
+[00:07:13] words, we have an agent here, okay? and
+[00:07:15] he has access to multiple tools and we
+[00:07:18] plug in those multiple tools in a kind
+[00:07:19] of spiderweb and that agent reaches over
+[00:07:21] and does this and you can see it and you
+[00:07:23] can add things in in a nonlinear way.
+[00:07:26] Okay, but by contrast if you look at
+[00:07:28] make agents how they work effectively
+[00:07:30] you create a master scenario. So we've
+[00:07:32] just created our AI agent. Okay, that's
+[00:07:34] this guy right here. Then effectively
+[00:07:36] what you do for its tools is you create
+[00:07:39] multiple other linear scenarios in
+[00:07:43] make.com. Okay, this one could be the
+[00:07:44] ability to search internet. This one
+[00:07:46] here could be its ability to create
+[00:07:48] emails. This one could be its ability to
+[00:07:50] create calendars. So, you're kind of
+[00:07:52] think of them as weapons. Like that's
+[00:07:53] its mech suit, that's its gun, that's
+[00:07:55] its X, that's its Y. And effectively
+[00:07:57] once you build these this library,
+[00:08:00] that's a big thing about this these AI
+[00:08:01] agents. You're building a library, a
+[00:08:03] suite of tools. And then once you've
+[00:08:05] built that hard work and investment,
+[00:08:07] then any agent you build, you can just
+[00:08:10] reach over and grab the tools. So the
+[00:08:12] key difference here with make.com versus
+[00:08:13] NA10 is the fact that at make you need
+[00:08:16] to build up your repository your your
+[00:08:17] war chest of tools once you've built
+[00:08:19] those up you can unplug and play them in
+[00:08:21] any way that you want to. NA10 you build
+[00:08:23] them on the fly with the agent as you go
+[00:08:25] every time. So that's how this needs to
+[00:08:27] work. We need to first of all build the
+[00:08:29] agent scenario and then we need to build
+[00:08:31] lots of mini on demand scenarios. I
+[00:08:33] personally wouldn't have called them
+[00:08:35] scenarios. I would kind of separate them
+[00:08:37] out a little bit in tools and I would
+[00:08:38] like to be able to do that in the actual
+[00:08:40] uh automation itself. But again, I'll
+[00:08:42] explain more about that in detail, but
+[00:08:43] that's just to give you some conceptual
+[00:08:44] framework. Now look, if I come back over
+[00:08:46] to our steps, we need to give it system
+[00:08:48] prompt and we've done that. So now we're
+[00:08:49] on to step three of seven, which is to
+[00:08:51] choose a trigger. Now ultimately guys,
+[00:08:53] um this is always great practice when
+[00:08:55] you're building agents or any scenario
+[00:08:58] at all is to think about the trigger.
+[00:08:59] And I've detailed some example triggers
+[00:09:01] down here. Telegram, uh web hooks, for
+[00:09:03] example. The web hook could be something
+[00:09:05] from lovable. We could create a
+[00:09:06] beautiful, gorgeous app. Let's say we
+[00:09:08] want to chat with videos and then we
+[00:09:09] want to call an agent in make.com that
+[00:09:11] does several other beautiful things. One
+[00:09:13] I'm going to go with on this guys is
+[00:09:15] because we're going to build
+[00:09:16] a virtual assistant. I'm going to go
+[00:09:19] with a Telegram hook and we're going to
+[00:09:20] set that up together and crush it. So,
+[00:09:22] how do we flip and do that? Well, I'll
+[00:09:24] cover that in a second. We do that. So,
+[00:09:25] we're going to pick the trigger, which
+[00:09:26] in this case is going to be Telegram.
+[00:09:27] Obviously, you can do different things
+[00:09:28] like payment received. Just have a look
+[00:09:30] at these and you'll see maybe you'll get
+[00:09:31] some different ideas about the kinds of
+[00:09:33] things you can do with agents. But
+[00:09:35] fundamentally start with a trigger and
+[00:09:37] we also want a defined output. Cool. All
+[00:09:39] right. Sweet. So now what's the next
+[00:09:40] thing we need to do? We need to create a
+[00:09:42] scenario with an agent. So let's we're
+[00:09:44] going to create a scenario. We're going
+[00:09:45] to add in the trigger and the agent and
+[00:09:46] then we're going to connect the inputs.
+[00:09:48] All right. That sounds pretty cool.
+[00:09:49] Let's go over to our new scenario and we
+[00:09:51] are going to call this one here. Let's
+[00:09:53] call this one
+[00:09:55] AI agent.
+[00:09:57] In fact, Jack's AI agent VA. Okay,
+[00:10:01] because who doesn't need a Maverick,
+[00:10:03] right? Who we want this? This future of
+[00:10:05] Iron Man with something that does
+[00:10:06] everything possible for us is flipping
+[00:10:08] epic. All right, cool. So, what do we
+[00:10:10] do? We need to add in a trigger. So, for
+[00:10:11] us, we are going to go with Telegram.
+[00:10:13] Telegram bot watch updates. I'd
+[00:10:15] recommend Telegram, by the way, for
+[00:10:17] automations because it is the API is
+[00:10:20] freaking amazing. It's so configurable.
+[00:10:22] You can send images and audios and loads
+[00:10:25] of stuff. WhatsApp is very defensive.
+[00:10:27] Like I'm getting my guard up like I'm in
+[00:10:28] an MMA fight right now, but it's very
+[00:10:30] defensive. So to do that, we're going to
+[00:10:31] create we're going to head over to
+[00:10:32] Telegram. You're going to go to
+[00:10:35] Telegram.botfather. Um the botfather. I
+[00:10:38] love the kind of energy there. Click on
+[00:10:39] start bot. We can open Telegram. That's
+[00:10:42] cool. And then you're going to come down
+[00:10:43] here to start. And then you're going to
+[00:10:45] go with for slashcreate. I think it's
+[00:10:47] new bot, I think, isn't it? New bot.
+[00:10:49] Beautiful. Okay. All right. It's going
+[00:10:51] to do some magic for us in the
+[00:10:52] background. We're going to call it.
+[00:10:53] We're going to call this one Jack VA
+[00:10:55] with loads of A's. Uh bot obviously must
+[00:10:58] end in bot. Call it whatever you want
+[00:10:59] to. Um yeah, we did end it in bot,
+[00:11:03] right? Okay. It's got to be uh with a
+[00:11:05] cap.
+[00:11:06] Okay, there we go. That's already taken
+[00:11:09] un Okay, we're just going to give it a
+[00:11:10] random freaking name here. Cool. Gives
+[00:11:13] us an access token. Copy that access
+[00:11:14] token. Then come back over to your
+[00:11:16] beautiful scenario in make which is
+[00:11:18] right over here. You're going to add for
+[00:11:20] web hook. You're going to click on add
+[00:11:22] again and add in a token and we'll call
+[00:11:24] this one Jack um VA
+[00:11:29] bot. Okay, beautiful. Then click on save
+[00:11:32] and that should be phenomenal and that
+[00:11:34] will work for us beautifully. Great. So
+[00:11:36] now effectively what's going to happen
+[00:11:37] is the second that we get a message uh
+[00:11:40] this scenario is going to trigger for
+[00:11:41] us. So if I come back over to our
+[00:11:43] phenomenal Telegram here and I want to
+[00:11:45] have a chat with it, I should be able to
+[00:11:47] uh click a button here. Cool. And I say,
+[00:11:50] "Hey,
+[00:11:52] man. Hey, man." All right, we come over.
+[00:11:56] Uh, we want to uh run this one. Module's
+[00:11:58] not set up. Click on save. Run this guy
+[00:12:01] here. Okay, let's send a new message
+[00:12:03] again. Hey, cool, guys. And as you can
+[00:12:06] see, we've got this text. Hey, which is
+[00:12:07] flipping awesome. So, let's go back to
+[00:12:09] our seven steps just to make sure we're
+[00:12:10] crossing off. So, what have we done?
+[00:12:12] We've created a scenario. Beautiful. We
+[00:12:13] need to add in the trigger and the
+[00:12:15] agent. Okay, we're adding in the
+[00:12:16] trigger. Now, guys, let's add in our
+[00:12:18] cool agent. So type in AI agent and make
+[00:12:22] AI agents run an agent. Beautiful. Okay,
+[00:12:25] cool. Right, it's rocking up. Now we
+[00:12:26] need to choose our agent and we are
+[00:12:27] looking for Jack virtual assistant. Very
+[00:12:29] cool indeed. Okay, a couple things just
+[00:12:31] to understand here guys. Um thread ID is
+[00:12:34] going to be the chat that we had on the
+[00:12:37] left hand side. So effectively what this
+[00:12:39] will enable it to do, this is what I
+[00:12:40] mean by memory. So what we're saying to
+[00:12:42] this AI agent is look, I'm going to be
+[00:12:44] chatting to you for a little while. All
+[00:12:45] right, I'm going to give you a unique ID
+[00:12:48] that tells you it's this chat so you can
+[00:12:50] kind of retain it. So I ask you a what
+[00:12:52] did I just ask you? It will know and it
+[00:12:54] will retain context. This is what I mean
+[00:12:56] by solving memory. So we're going to
+[00:12:57] come down and find the thread ID for us
+[00:12:59] real quick. And I believe that is just
+[00:13:01] simply here business message chat ID.
+[00:13:04] Cool. Then additional system
+[00:13:05] instructions here guys um is basically
+[00:13:08] anything as we're running the scenario
+[00:13:09] we're thinking you know I need you to
+[00:13:10] kind of do this. Think about you've got
+[00:13:11] your basic prompt that we created in the
+[00:13:13] agent screen. If you run this, let's say
+[00:13:15] agent in multiple scenarios, you can add
+[00:13:17] a little flavors and feels to them. But
+[00:13:19] if you find that, say, hey, I want it in
+[00:13:20] HTML versus what you gave me, just add
+[00:13:22] that as additional convenient way to add
+[00:13:24] new things. Cool. And now we've got the
+[00:13:26] message, which is going to be the input.
+[00:13:27] So in other words, we need to connect it
+[00:13:28] to the input. So we click on message
+[00:13:30] one. And what are we looking for is
+[00:13:31] simply the text here. Beautiful. That's
+[00:13:34] it. So we've got the message text.
+[00:13:36] That's freaking phenomenal. We like
+[00:13:37] that. Continue to run store on agent is
+[00:13:39] working. No. Well, you'll rarely need
+[00:13:41] that, but I think for for just to keep
+[00:13:43] it simple, we're going to put on um
+[00:13:45] message text for them. Then click on
+[00:13:46] save. Phenomenal. So, we come back over
+[00:13:48] to our scenario here. We've added a
+[00:13:50] trigger and we've connected the inputs.
+[00:13:52] Beautiful. Now, on to step five of
+[00:13:54] seven. That is to create tools. Of
+[00:13:56] course, one thing that we must do as
+[00:13:58] well just before we move forward is name
+[00:14:00] this, which we have here Jax AI agent
+[00:14:02] V8. Beautiful. Now, we need to develop
+[00:14:04] scenarios for our use case. Each
+[00:14:05] scenario is a tool. So, we're going to
+[00:14:06] create two scenarios here. Okay. We are
+[00:14:08] going to create uh let's just bring in
+[00:14:10] this guy over here. One is going to be
+[00:14:12] the ability to search the internet. So
+[00:14:16] I'm call this one here
+[00:14:18] internet search. Very simple, right? And
+[00:14:21] what do we do with internet search?
+[00:14:22] Well, first of all, we're going to click
+[00:14:23] on this plus button here. We are going
+[00:14:25] to go for perplexity AI and we're going
+[00:14:27] to click on create a chat
+[00:14:30] completion. And I want to do maybe we do
+[00:14:32] deep research with this. So you got
+[00:14:34] Sonar Deep Reasoning Pro. Let's say that
+[00:14:35] I I want full beautiful information.
+[00:14:38] Okay. Now, we've got messages, max
+[00:14:40] tokens, pressure. So, one of the key
+[00:14:42] things that we need to do here, guys, is
+[00:14:44] set custom inputs and custom outputs.
+[00:14:46] So, you'll notice this down here, which
+[00:14:48] is scenario, inputs and outputs. So,
+[00:14:50] don't worry about this. Don't get too
+[00:14:53] confused. Effectively, what we're doing
+[00:14:55] here is we're able because, you know,
+[00:14:57] classically when you build a module, you
+[00:14:58] you you enter things like this is what
+[00:15:00] this module said. This is what that
+[00:15:02] module said. Here we're going to create
+[00:15:04] our own unique inputs and that is that
+[00:15:06] so we can use it with this beautiful AI
+[00:15:09] agent because he is going to reach over
+[00:15:12] into this scenario and use those inputs.
+[00:15:14] So for example input structure here is
+[00:15:16] I'm going to say uh the name which is
+[00:15:18] going to be the name of the input. We're
+[00:15:21] going to say basically just simply
+[00:15:24] research this. That's it. description uh
+[00:15:28] basically search the internet for this
+[00:15:32] information. That's basically it. So in
+[00:15:34] other words, what is what is it and what
+[00:15:36] do you want it to do? Beautiful. Uh and
+[00:15:38] then we're going to say yes, that's
+[00:15:39] required. And then we're going to do
+[00:15:40] scenario outputs, which is simply going
+[00:15:42] to be research output. Beautiful. The
+[00:15:47] results
+[00:15:48] [Music]
+[00:15:49] from the internet search. Really cool,
+[00:15:54] right? Phenomenal. And then guys, click
+[00:15:56] on save. So there's our scenar. Now when
+[00:15:58] I click on Plexi AI and I come down to
+[00:16:00] messages, what I will be able to do in
+[00:16:02] content is come over here to this
+[00:16:05] section here and let's see if we can
+[00:16:07] find it. I think it's a curly brackets
+[00:16:08] guys. Okay, we don't see it yet. That's
+[00:16:10] interesting, right? So I wonder if we
+[00:16:12] just very simply need to uh first of all
+[00:16:14] change the trigger. So right click on
+[00:16:15] this uh actually click on this guy
+[00:16:18] instead of at regular intervals come
+[00:16:20] down and click on demand. Right. That
+[00:16:22] means that this is now we need to
+[00:16:24] activate the scenario. Let me just save
+[00:16:26] this guy first. That's okay. I'm going
+[00:16:29] to uh clone the module. I'm going to
+[00:16:32] delete this guy. And the reason I'm
+[00:16:34] doing that is sometimes now we've set
+[00:16:36] the custom variables. Um maybe they
+[00:16:38] don't appear sometimes. I found that's
+[00:16:39] just a slight little quirk it has. So
+[00:16:41] come down to messages, look at content,
+[00:16:44] and then again come to the curly
+[00:16:45] brackets. And look at this guys.
+[00:16:46] Scenario inputs research. This has
+[00:16:48] appeared. So effectively this is how we
+[00:16:50] connect it to the agent. Okay. Now the
+[00:16:52] role is just going to be simple user and
+[00:16:54] guys that is literally as simple as it
+[00:16:56] is. Now we need to click on one of the
+[00:16:58] module which is going to be to
+[00:17:01] return output. In other words, hey bro,
+[00:17:04] this is what I want you to send back. So
+[00:17:06] we click on this and what we're doing
+[00:17:08] again just clicking curly brackets and
+[00:17:10] it's not just our input. In fact, we
+[00:17:11] want to come back over here. Come to
+[00:17:14] choices, come down to message, come down
+[00:17:16] to content and then click save, guys.
+[00:17:19] And that is literally it. And is this
+[00:17:20] live? needs to be live. That's
+[00:17:22] beautiful. We click this. So, it's on
+[00:17:23] demand and we click save. And we're just
+[00:17:25] going to refresh the page just to make
+[00:17:27] sure that it's all working beautifully
+[00:17:28] for us. Give that a hot second. Likes to
+[00:17:30] keep us in suspense a little bit
+[00:17:31] sometimes. Okay, cool. That's done. So,
+[00:17:33] now I've done that. Let me just check
+[00:17:35] how we got. We have developed scenario
+[00:17:37] for tools. Beautiful. We have named the
+[00:17:39] scenario something relevant. Incredible.
+[00:17:40] We've assigned inputs and outputs for
+[00:17:42] scenario. Amazing. And we've set it to
+[00:17:44] run on demand. Okay. Nice. Now, we need
+[00:17:46] to add our tools to the agent. So, I'm
+[00:17:48] going to do one other tool very quick.
+[00:17:50] So, this is our core agent. This is one
+[00:17:53] of our sub guys, one of his tools. And
+[00:17:54] let's add one more. So, for this one,
+[00:17:56] let's just do something like Gmail. Uh
+[00:17:58] maybe we could do something like um
+[00:18:01] let's have a look to see what we can do.
+[00:18:03] Maybe go down to create a draft as a
+[00:18:05] quick for instance. Now, what we want to
+[00:18:06] do again is come down here to scenario
+[00:18:08] inputs and add input structure. So let's
+[00:18:10] just say something like send uh a
+[00:18:15] recipient who we are sending the email
+[00:18:19] to. Beautiful. And then we want to Yes,
+[00:18:21] that's required. And then we want to say
+[00:18:23] something like subject, right? And say
+[00:18:26] the subject of the email. And then what
+[00:18:29] else would be cool? Probably body,
+[00:18:31] right? Uh
+[00:18:32] body. So you say, hey, the body of the
+[00:18:36] email. All right. Then click save. And
+[00:18:39] then we want to click on this and go to
+[00:18:40] scenario outputs. And then maybe in the
+[00:18:41] outputs we could probably say something
+[00:18:43] like confirmation
+[00:18:45] row that the email has been sent. Okay.
+[00:18:49] Beautiful. Come down and yes that it's
+[00:18:51] required. Then we click on save. And
+[00:18:52] that is beautiful. Cool. So click on
+[00:18:54] create a draft. Uh we need to verify
+[00:18:56] connection. I'll just do that very
+[00:18:57] quickly. Beautiful. So I've confirmed
+[00:18:58] that. Of course we don't need to click
+[00:19:00] off it and click back on. And I'm just
+[00:19:01] going to say hey dude just save this in
+[00:19:03] a draft folder for me. Beautiful. So
+[00:19:05] let's come down to drafts. Excellent.
+[00:19:07] And now again we just enter in all these
+[00:19:08] custom things. So what is the email
+[00:19:10] address? So come over here. This is
+[00:19:12] recipient. Beautiful. Subject is come
+[00:19:15] over to curly brackets. Subject. You
+[00:19:17] might have guessed it. And then content
+[00:19:18] is come over to curly brackets the body.
+[00:19:21] Okay. Awesome. And then we click on
+[00:19:22] save. And that is freaking it guys. Then
+[00:19:24] we come over here of course and click on
+[00:19:26] return output which is freaking awesome.
+[00:19:29] And this is confirmation. Confirmation
+[00:19:30] email has been sent. Maybe if we could
+[00:19:32] run this as a quick uh example. So run
+[00:19:34] this module only real quick. Okay. So
+[00:19:35] that's interesting. You can't run it as
+[00:19:37] an example. So, confirmation. I'm just
+[00:19:39] say, hey, the email uh has been sent.
+[00:19:43] Here's the message
+[00:19:46] ID. Okay, cool. It's so incredible how
+[00:19:50] the AI agent space is heating up so
+[00:19:52] much, right? Cool. And then we want to
+[00:19:54] obviously right click this guy. Now, we
+[00:19:55] want to make sure that Oops. Click on
+[00:19:56] the clock. Click on regular intervals.
+[00:19:59] Click on demand. Click on save. Click on
+[00:20:01] activate scenario. And we'll say here
+[00:20:04] create draft.
+[00:20:07] Gmail draft. And the cool thing is once
+[00:20:10] you've created these tool systems and
+[00:20:11] configured them, you can pretty much do
+[00:20:12] whatever you want to, which is nice. And
+[00:20:14] I would turn this one here. SNAR is not
+[00:20:16] saved yet. Okay, we'll save it, man.
+[00:20:17] Don't you worry about it, man. We'll
+[00:20:18] save you. And click on demand. Cool. And
+[00:20:21] guys, I'm also going to get the uh the
+[00:20:23] guy that created AI agents from make.com
+[00:20:25] on the podcast. If you got any questions
+[00:20:26] down below, let me know and I'll make
+[00:20:28] sure that we answer it and have a good
+[00:20:29] conversation. Cool. So, we've done that.
+[00:20:30] We've created our two tools now, right?
+[00:20:32] We've created internet search and we
+[00:20:33] create the build to create emails. So,
+[00:20:34] what do we do next? Now we want to add
+[00:20:36] these tools to our agent.un. Okay, cool.
+[00:20:39] So, how do we do that? Now, we go back
+[00:20:40] over to our virtual assistant. Now, we
+[00:20:42] see the system tools down here.
+[00:20:44] Actually, do you know what? You can also
+[00:20:45] do this uh in the scenario itself. I
+[00:20:48] believe I believe you can look
+[00:20:49] additional tools. Click on add tools,
+[00:20:52] select your scenario. Uh so then we can
+[00:20:54] just search for the things that we had,
+[00:20:56] right? So, this one is internet search.
+[00:20:57] So, come down here, internet search, and
+[00:21:01] it'll say active. So, you must only add
+[00:21:03] internet search. searches internet.
+[00:21:04] Beautiful. Then we add in another tool
+[00:21:06] and then we come down here and this one
+[00:21:08] of course was Gmail I think. Create
+[00:21:10] Gmail draft. Uh basically creates a
+[00:21:13] draft in
+[00:21:15] Gmail. Cool. All right, that sounds
+[00:21:18] pretty decent. And then click on save. I
+[00:21:21] think that's good. Oh, actually one
+[00:21:22] thing I will just say actually is
+[00:21:24] additional system instructions is format
+[00:21:26] your outputs
+[00:21:29] uh for Telegram messages.
+[00:21:32] Uh, use emojis because you know I'm a
+[00:21:35] sucker for emojis, guys. You know what
+[00:21:36] I'm like for design. I I spend way I
+[00:21:38] would say I spent way too long on
+[00:21:39] design, but I don't. I just think it's
+[00:21:41] really important. Use emojis and
+[00:21:43] summarize what you've
+[00:21:45] done. Call me the Night
+[00:21:48] Rider. My phone, by the way, is goes by
+[00:21:51] Night Rider, which is funny. People
+[00:21:53] always joke about, but dude, like, you
+[00:21:54] know, I used to watch the the freaking
+[00:21:56] thing in like the ' 90s and early 90s.
+[00:21:58] This is my VA. My VA is a Night Rider. I
+[00:22:00] like that. Then we click on save. Now,
+[00:22:01] what we want to finally do is something
+[00:22:02] to send us back the updates because we
+[00:22:04] need to know what's going on, right? So,
+[00:22:06] we go to
+[00:22:07] Telegram. Okay. And then we want to
+[00:22:09] click on I believe where is it now? It's
+[00:22:12] going to be edit uh where is it now?
+[00:22:14] Send a text message or reply. Then you
+[00:22:16] need to enter a chat ID, guys. Um the
+[00:22:18] way that you find that chat ID, I'll
+[00:22:20] just find that for you real quick.
+[00:22:20] You're going to go in chat, guys, new
+[00:22:22] message, raw data bot, and all you're
+[00:22:25] going to do is forward slashstart. And
+[00:22:27] then it will give you a code, which is
+[00:22:29] your chat ID. Then when you come over
+[00:22:31] guys just enter in this chat ID section
+[00:22:33] here and then for text we simply want
+[00:22:35] the output from this which is the
+[00:22:37] response and then click save and you're
+[00:22:39] ready to go. Beautiful. So let's
+[00:22:40] actually freaking test if this works.
+[00:22:42] All right. So I'm going to click run
+[00:22:43] once. Obviously what we would do is um
+[00:22:46] wait for this. So let's give it a
+[00:22:47] question. Okay where it's going to use
+[00:22:49] one of the agents. So if I come over to
+[00:22:51] our Jackbot and I'm going to say some
+[00:22:53] cool stuff to it. I'm going to say,
+[00:22:55] "Hey, uh, what are the top five coffee
+[00:22:59] shops in leads?" Bam. I'm going to hit
+[00:23:02] enter. Now, look at this. Make AI agents
+[00:23:04] running in the background. This is
+[00:23:05] pretty freaking cool. Now, what you'll
+[00:23:06] see, let's see if it's using any of our
+[00:23:08] scenarios, right? So, what we will see,
+[00:23:10] and you won't see it on this particular
+[00:23:11] screen, but if I uh come back
+[00:23:14] out, this is what we never tell you
+[00:23:17] actually. But look, if I refresh this
+[00:23:19] scenario, check this out. And refresh
+[00:23:21] this guy. Oh, hang on. I need to save
+[00:23:22] this first. you can actually see them
+[00:23:24] being used. Um, you'll see it here once
+[00:23:27] if it's active and being used. Uh, let's
+[00:23:30] combat this
+[00:23:31] guy. Okay, beautiful. So, make AI agent
+[00:23:34] is working in the background. Sometimes
+[00:23:36] you can actually see. Okay, no execution
+[00:23:38] is currently running. That's
+[00:23:39] interesting. So, I wonder if in this
+[00:23:41] instance it's just trying to figure out
+[00:23:42] itself and will send us a message back.
+[00:23:44] Guys, what I notic is I didn't set this
+[00:23:46] scenario to run on. So, I'm just going
+[00:23:48] to come back and I'm going to redo this
+[00:23:49] scenario. So, that is completely my
+[00:23:50] fault. I should ask as well just to make
+[00:23:52] sure that both scenarios are on. So let
+[00:23:54] me come back to our seven steps and let
+[00:23:56] me just say okay we've connected our
+[00:23:57] tools to the agents. All right and I'm
+[00:23:59] going to say here ensure all scenarios
+[00:24:03] are active. All right and now we've done
+[00:24:05] that. Cool. So the guys this list is
+[00:24:07] getting better every single second. And
+[00:24:08] I've got some really cool uh data to
+[00:24:09] show down here too. All right cool. So
+[00:24:11] let's come back over then to the
+[00:24:12] scenario. Let's then come back and run
+[00:24:14] the scenario once. Let's wait for new
+[00:24:16] data. Let's go over to Telegram. I'm
+[00:24:18] going to say ask it the same questions.
+[00:24:20] Um, I might say as of
+[00:24:23] 2025. Cool. Okay, we hit enter. Bam.
+[00:24:27] This kicks off. Make AI starts doing its
+[00:24:28] searches. And then we should be able to
+[00:24:30] see if an active scenario starts
+[00:24:32] working. Okay, no execution is currently
+[00:24:34] working yet. No execution is currently
+[00:24:36] on this one. Let's come back over here
+[00:24:37] and see what it's doing. And actually
+[00:24:38] guys, before I do that, I'm just going
+[00:24:39] to add in the tools again at the core AI
+[00:24:42] agent page to make sure it's got the
+[00:24:44] full access because I'm not seeing it in
+[00:24:46] the system tools here. So, let me just
+[00:24:47] add those in. Again, we'll just do uh
+[00:24:51] Gmail, which is active. Beautiful. Uh
+[00:24:54] and we'll add this guy in
+[00:24:57] uh basically create a
+[00:25:01] draft in Gmail because one of the
+[00:25:03] reasons I just want to do this before we
+[00:25:04] run the scenario is the fact that Okay,
+[00:25:06] so add that in. Okay, sweet. And then
+[00:25:08] add the other one which is going to be
+[00:25:10] uh search internet search search is
+[00:25:13] internet. Right, beautiful. Okay,
+[00:25:15] fantastic. And I'm going to click save
+[00:25:16] on this guy. So, we're all ready to rock
+[00:25:19] and roll. Beautiful. Right, let's come
+[00:25:20] back over and let's try this guy. I'm
+[00:25:21] going to hit run once and we're going to
+[00:25:22] give it the beautiful scenario
+[00:25:24] questions. Let's come down and give it
+[00:25:25] the question Telegram real quick. Uh,
+[00:25:28] oops. As of 2025, question mark. Bam.
+[00:25:32] Okay, send that off. Make a agent start
+[00:25:33] running in the background and then we
+[00:25:34] should be able to see when these active
+[00:25:36] scenarios start pipping and popping over
+[00:25:37] here. All right, guys. And just like
+[00:25:39] that, here's a top private coffee
+[00:25:40] response for Night Rider, Lane Espresso,
+[00:25:42] Lee Monise, Mrs. Athes. Mrs. Athes has
+[00:25:45] shut down recently. that it's not on the
+[00:25:47] internet yet, but that was a real
+[00:25:49] freaking shame cuz they were awesome.
+[00:25:50] Tundre coffee and coffee boy. Beautiful.
+[00:25:52] That's really sweet. And did we get the
+[00:25:54] message on Telegram? We did it because
+[00:25:55] of what? Unauthorized. Oh, I need to add
+[00:25:58] in the API connection. Let me do that
+[00:25:59] very quickly. Going to come back over to
+[00:26:00] the bot father. Get my access token and
+[00:26:02] we need to add it in. Beautiful. Okay
+[00:26:04] guys, now we're actually working and
+[00:26:06] things are making beautiful sense. So,
+[00:26:07] what do we want to do next? I guess
+[00:26:08] let's ask it now to create a draft email
+[00:26:10] for us. So, click on run once real
+[00:26:12] quick. uh wait for the data and then why
+[00:26:14] don't I click on telegram and I could
+[00:26:16] say something like hey uh create me a
+[00:26:19] draft email to
+[00:26:22] me at Magoo Enterprises
+[00:26:27] uh.com it's about uh how great the
+[00:26:32] coffee was at Mrs. Athers. Uh, ask
+[00:26:36] him if he can grab me a matcha latte.
+[00:26:42] Uh, beautiful. And he'll click on enter.
+[00:26:44] Bam. That's gone off now. Oops. I've
+[00:26:45] sent that to the bot father. He ain't
+[00:26:47] going to really understand what that's
+[00:26:48] about, right? Okay, we come back over.
+[00:26:50] Let's go over to our WhatsApp button and
+[00:26:51] ask this guy. Beautiful. We sent it
+[00:26:53] over. This is our triggers. Make AI
+[00:26:55] agents now running in the background.
+[00:26:56] Now guys, one interesting thing about
+[00:26:58] I'm finding with the make AI agency is
+[00:27:00] some people reporting that it's more
+[00:27:02] effective which is very cool. We like
+[00:27:04] that. Um and we got it back already. So
+[00:27:06] let's come back over and see what it
+[00:27:07] said. Beautiful draft email for boom is
+[00:27:09] ready. Complaint after coffee asked if
+[00:27:11] you got actual latte. Let me know if you
+[00:27:13] want to tweak it. Night rider. Okay.
+[00:27:14] Well, let's get over to Gmail and check
+[00:27:16] out the results I guess. And guys, would
+[00:27:18] you look at this? Meoo Enterprises. Hey
+[00:27:20] Magoo, just want to say the coffee is
+[00:27:21] fantastic. You're right about it. All
+[00:27:22] right, guys. So now we've got it working
+[00:27:24] across two different functions. We've
+[00:27:26] got it here who can do and essentially
+[00:27:27] what we do is just stack in all the
+[00:27:29] things and then we want to reduce the
+[00:27:30] operation maximums. So come over to this
+[00:27:33] page which is Oops. So we're going to
+[00:27:36] come over to this page and we kind of
+[00:27:37] look at this agent settings thing here.
+[00:27:39] So we've got the model GP 4.1 which is
+[00:27:41] awesome. Max output tokens. This is the
+[00:27:43] maximum amount of stuff that you would
+[00:27:44] want to output in terms of tokens.
+[00:27:46] Recursion limit and then iterations from
+[00:27:48] history count. So the recursion limit
+[00:27:50] here guys is effectively think of it as
+[00:27:52] like the number of times it can call
+[00:27:54] itself. The more complex the scenario,
+[00:27:57] the higher the limit, the simpler it is,
+[00:27:59] the lower it should be. So I'm going to
+[00:28:00] lower this way down to like 80 something
+[00:28:02] like that. And the iterations from
+[00:28:04] history count is kind of like how many
+[00:28:06] past conversations should it think about
+[00:28:09] um when it gives you the response there,
+[00:28:11] which is cool. So I think we're happy
+[00:28:12] with 10. 10 is fine. Again, if it's like
+[00:28:14] a chatbased model, you want to increase
+[00:28:16] it up uh significantly. and then come
+[00:28:18] down and of course we've reduced the
+[00:28:20] maximum number of operations. Now guys I
+[00:28:22] want to give you uh two uh two bonus
+[00:28:23] things right now. Number one is use
+[00:28:25] cases AI agents and the second one is
+[00:28:26] going to be my general thoughts on this
+[00:28:28] and when you should use each. So okay
+[00:28:31] basically this is in beta obviously it's
+[00:28:34] not perfect yet. Its memory works for me
+[00:28:36] sometimes not all the time. So when I've
+[00:28:39] run it sometimes it can remember exactly
+[00:28:41] what I said and other times it doesn't.
+[00:28:43] It's also weird in the sense that it
+[00:28:45] seems to be able to remember things that
+[00:28:47] have happened like months ago that I
+[00:28:49] haven't even used in an AI agent. Like I
+[00:28:51] asked it um what did I ask you about
+[00:28:53] this email? And one of the things it
+[00:28:55] told me was a message I sent to Adam
+[00:28:57] months ago. So I don't know if this is
+[00:28:58] just what the hell that's about, but
+[00:29:00] like if it's I don't understand the
+[00:29:01] data. So when we get them on the
+[00:29:02] podcast, I'm going to say, "Hey dude,
+[00:29:04] how's this all flowing up?" So make all
+[00:29:07] the right decisions, all the right
+[00:29:08] moves. You have to remember this is in
+[00:29:09] beta right now. Functionally, it can do
+[00:29:12] everything that N8N can do in that
+[00:29:14] sense, right? So, if you actually wanted
+[00:29:15] to build it in make.com, the question is
+[00:29:17] which one do you want to use? You can do
+[00:29:19] it's cool. Some people saying they
+[00:29:20] finding the operations a bit crisper,
+[00:29:22] which is cool. But actually, it can do
+[00:29:24] the same sorts of things. Um, I'd say
+[00:29:26] that to be honest, building NA10 is
+[00:29:29] probably easier just because I don't
+[00:29:33] need to go from like scenario to
+[00:29:35] scenario to scenario, right? I can kind
+[00:29:38] of just do it in one. So, one of the
+[00:29:40] things I would love make to do is kind
+[00:29:42] of let us build the tools in the
+[00:29:44] environment that we're in. Like, don't
+[00:29:46] make us click from one chapter to
+[00:29:48] another. I want to be able to do it all
+[00:29:49] in one place. The other thing, my other
+[00:29:51] feedback would be in NAN when you're
+[00:29:53] running an agent, you can actually see
+[00:29:55] what the agent is doing and you can see,
+[00:29:57] oh, it used Gmail. Oh, it did this. I
+[00:29:58] like that visibility. Just like an Uber,
+[00:30:00] I can see where my guy is. I can see,
+[00:30:01] dude, he's there in two minutes. He's
+[00:30:03] over there. He's gone to the wrong
+[00:30:04] location again. You can do all that sort
+[00:30:05] of stuff. and make.com that's kind of
+[00:30:07] blind at the moment. So, you're kind of
+[00:30:09] just trusting that it's doing it. I
+[00:30:11] don't get to see the inner workings of
+[00:30:13] the agent. I can't look behind the lens
+[00:30:15] and say, "What's he doing? What coffee
+[00:30:17] is he
+[00:30:18] drinking?" Flat white if you're
+[00:30:19] wondering. So, it's like I'd like to see
+[00:30:21] those additional details in there. Um,
+[00:30:23] so those are the things I want to see. I
+[00:30:25] think we're going to see how quick they
+[00:30:26] update and upgrade these agents. Do they
+[00:30:27] work? Yes. Can it do the same stuff?
+[00:30:29] Yes. But you're not going to get the
+[00:30:30] full level of transparency in terms of
+[00:30:32] what's happening behind it. when it does
+[00:30:33] complete a scenario, you can drill down
+[00:30:35] into it and click buttons to see all the
+[00:30:37] stuff that it's doing. Uh, I wonder if I
+[00:30:39] can pull up real quick. Okay, so if you
+[00:30:40] come down, you start clicking into
+[00:30:42] execution steps, you can see all the
+[00:30:44] stuff that it does, right? Instructions.
+[00:30:46] There we go. Look at this. You can see
+[00:30:48] everything it's doing, right? All these
+[00:30:50] little execution steps it's doing. I've
+[00:30:52] just got to click lots of stuff. Like
+[00:30:53] it's got my HTML tags in. I've just got
+[00:30:55] to click a lot of buttons. So, it's
+[00:30:57] there. I just have to do extra steps.
+[00:30:59] So, on that basis, I would say look,
+[00:31:01] both work. Both work. absolutely fine.
+[00:31:03] Make the other advantage you got with
+[00:31:05] make is you can start to pull this into
+[00:31:07] the grid. The grid being that beautiful
+[00:31:09] thing uh here where you can start to
+[00:31:11] stack and zoom in and see how all your
+[00:31:13] snares connect together. So ultimately
+[00:31:15] which one should you use costwise guys?
+[00:31:17] It is no difference on the cost at all
+[00:31:18] because you're just using your own API
+[00:31:20] credits. NA10 if you want more
+[00:31:21] visibility what it's working at the NA10
+[00:31:23] AI agent is more mature at the moment to
+[00:31:25] be completely fair with you. It just I
+[00:31:28] get to see what it's doing. I get to see
+[00:31:30] it's thinking. These are two things I'd
+[00:31:31] love to see make.com add to these
+[00:31:33] agents. Um, but actually if you're
+[00:31:35] someone who's got your you love building
+[00:31:36] in make, you've got all your stuff in
+[00:31:37] make, guys, you can use these today and
+[00:31:39] absolutely crush it. So based on that,
+[00:31:40] you can decide which of the two that you
+[00:31:42] would absolutely like to use. And then
+[00:31:44] one final thing I want to add in there
+[00:31:45] as well at the end this. Oh, and also I
+[00:31:48] I spoke to one of the bros at make and
+[00:31:49] he said like look, they're in the
+[00:31:51] feedback stage. They're not saying this
+[00:31:53] is the holy grail. Go forth and use
+[00:31:55] these forever. It's like, dude, we put
+[00:31:57] it into the market. We want to see what
+[00:31:58] you think. This is what I think. This is
+[00:31:59] what I want to see. I want more
+[00:32:00] transparency. I want to see the tools in
+[00:32:04] the same scenario. So, I don't want to
+[00:32:05] have to go to different scenarios to
+[00:32:08] build this stuff. I want it all in one.
+[00:32:09] I should be able to build my agent and
+[00:32:12] have it all its tools in one place. That
+[00:32:13] would be freaking sick. And I want to
+[00:32:15] see more what it's doing because make
+[00:32:17] the thing that's cool about Meg, it's
+[00:32:19] got these linear agents, right? But it's
+[00:32:21] also like that is cool. I do want to
+[00:32:23] see, you know, I I want I want I think
+[00:32:25] that's a good opportunity to like build
+[00:32:27] on it and take it from good to great. So
+[00:32:29] beautiful first product. I love it. It
+[00:32:30] works. It's functional. That's how you
+[00:32:31] build it. That's some stuff that I
+[00:32:33] personally would love to see and I'll be
+[00:32:34] asking Tim about when we uh when we chat
+[00:32:36] to them. Cool. Now some things is I did
+[00:32:38] a big survey for all the AI automation
+[00:32:40] agencies in my community. We've got
+[00:32:42] thousands of them and I basically asked
+[00:32:43] like 16 questions. I did where you
+[00:32:45] getting customers from, what uh things
+[00:32:46] we sell to people. I'm going to do a
+[00:32:47] full video on all the data I got from
+[00:32:49] that. But I'm going to add an SPF here
+[00:32:50] for you. um just databased AI agent use
+[00:32:53] cases like the actual things people are
+[00:32:55] paying for right now and businesses are
+[00:32:57] using right now are here. So stop and
+[00:32:59] customer experience operations workflows
+[00:33:01] sales marketing finance compliance
+[00:33:03] product development human resources I'll
+[00:33:04] put all that down below so you can check
+[00:33:06] that out and have a rock and rolling
+[00:33:07] good time. If you haven't seen this
+[00:33:09] video on screen about everything I
+[00:33:10] learned uh building a sevenigure AI
+[00:33:13] automation business, I'd encourage you
+[00:33:14] to go check that out. But in any case, I
+[00:33:16] hope you found this video helpful. Have
+[00:33:17] a beautiful week and I'll see you in the
+[00:33:19] next

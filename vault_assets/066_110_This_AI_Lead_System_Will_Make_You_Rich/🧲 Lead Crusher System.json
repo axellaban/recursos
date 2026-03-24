@@ -1,0 +1,873 @@
+{
+    "name": "🧲 Lead Crusher System",
+    "flow": [
+        {
+            "id": 4,
+            "module": "paperform:submission",
+            "version": 1,
+            "parameters": {
+                "__IMTHOOK__": 3377719
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -709,
+                    "y": -18
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTHOOK__": {
+                            "label": "My New Submission webhook",
+                            "data": {
+                                "editable": "false"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTHOOK__",
+                        "type": "hook:paperform",
+                        "label": "Webhook",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "google-email:sendAnEmail",
+            "version": 4,
+            "parameters": {
+                "__IMTCONN__": 12277958
+            },
+            "mapper": {
+                "to": [
+                    "{{4.data.`7h7j0`.value}}"
+                ],
+                "subject": "🧲 {{4.data.bhp6i.value}}'s Shiny Lead Magnet",
+                "bodyType": "collection",
+                "contents": [
+                    {
+                        "text": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Email</title>\n</head>\n<body style=\"font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;\">\n    <p>Hey {{4.data.bhp6i.value}} ,</p>\n    \n    <p>Here's your <a href=\"[insert URL here]\" style=\"color: #0066cc; text-decoration: none;\">lead magnet</a>.</p>\n    \n    <p>All the best,<br>\n    Jack</p>\n</body>\n</html>",
+                        "image": {}
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": -409,
+                    "y": -19
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Gmail connection (jack@aiautomationswithjack.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-email"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "bodyType": {
+                            "label": "Collection of contents (text, images, etc.)"
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        },
+                        "from": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        },
+                        "emailHeaders": {
+                            "mode": "chose"
+                        },
+                        "contents": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "signature": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google-email",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "to",
+                        "type": "array",
+                        "label": "To",
+                        "required": true,
+                        "spec": {
+                            "type": "email",
+                            "label": "Recipient email address",
+                            "required": true,
+                            "validate": false,
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "bodyType",
+                        "type": "select",
+                        "label": "Body type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "rawHtml",
+                                "collection"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "attachments",
+                        "type": "array",
+                        "label": "Attachments",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "filename",
+                                    "type": "filename",
+                                    "label": "File name",
+                                    "required": true,
+                                    "semantic": "file:name"
+                                },
+                                {
+                                    "name": "data",
+                                    "type": "buffer",
+                                    "label": "Data",
+                                    "required": true,
+                                    "semantic": "file:data"
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Attachment",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "From"
+                    },
+                    {
+                        "name": "cc",
+                        "type": "array",
+                        "label": "CC recipients",
+                        "spec": {
+                            "type": "email",
+                            "label": "Recipient email address",
+                            "required": true,
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "bcc",
+                        "type": "array",
+                        "label": "BCC recipients",
+                        "spec": {
+                            "type": "email",
+                            "label": "Recipient email address",
+                            "required": true,
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "emailHeaders",
+                        "type": "array",
+                        "label": "Additional email headers",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Key",
+                                    "required": true
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "text",
+                                    "label": "Value"
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Email header",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "contents",
+                        "type": "array",
+                        "label": "Body contents",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "text",
+                                    "type": "text",
+                                    "label": "Text"
+                                },
+                                {
+                                    "name": "image",
+                                    "spec": [
+                                        {
+                                            "name": "filename",
+                                            "type": "filename",
+                                            "label": "File name",
+                                            "semantic": "file:name"
+                                        },
+                                        {
+                                            "name": "data",
+                                            "type": "buffer",
+                                            "label": "Data",
+                                            "semantic": "file:data"
+                                        },
+                                        {
+                                            "name": "width",
+                                            "type": "uinteger",
+                                            "label": "Width"
+                                        },
+                                        {
+                                            "name": "height",
+                                            "type": "uinteger",
+                                            "label": "Height"
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Image"
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Content",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "signature",
+                        "type": "select",
+                        "label": "Signature content"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "module": "code:ExecuteCode",
+            "version": 0,
+            "parameters": {},
+            "mapper": {
+                "language": "javascript",
+                "input": [
+                    {
+                        "name": "turnover",
+                        "value": "{{4.data.b0blb.value}}"
+                    },
+                    {
+                        "name": "companySize",
+                        "value": "{{4.data.`49ui`.value}}"
+                    }
+                ],
+                "dependencies": [],
+                "inputFormat": "editor",
+                "codeEditorJavascript": "// Get inputs (case-insensitive matching)\nconst companySizeRaw = input.companySize || \"\";\nconst turnoverRaw = input.turnover || \"\";\n\n// Normalize to lowercase for matching\nconst companySize = companySizeRaw.toLowerCase();\nconst turnover = turnoverRaw.toLowerCase();\n\nlet score = 0;\nlet breakdown = [];\n\n// 1. COMPANY SIZE SCORING (0-30 points)\nconst companySizeScores = {\n  \"1-10 employees\": 6,\n  \"11-50 employees\": 12,\n  \"51-250 employees\": 18,\n  \"251-500 employees\": 24,\n  \"500+ employees\": 30\n};\n\nconst companySizeScore = companySizeScores[companySize] || 0;\nscore += companySizeScore;\nbreakdown.push(`Employees: +${companySizeScore}`);\n\n// 2. TURNOVER SCORING (0-70 points)\nconst turnoverScores = {\n  \"$100k - $500k\": 14,\n  \"$500k - $1m\": 28,\n  \"$1m - $2.5m\": 42,\n  \"$2.5m - $5m\": 56,\n  \"$5m+\": 70\n};\n\nconst turnoverScore = turnoverScores[turnover] || 0;\nscore += turnoverScore;\nbreakdown.push(`Turnover: +${turnoverScore}`);\n\n// DETERMINE TIER WITH EMOJIS\nlet tier = \"\";\nlet action = \"\";\nlet priority = \"\";\n\nif (score >= 70) {\n  tier = \"🔥 HOT\";\n  action = \"Call today - High value target\";\n  priority = \"High\";\n} else if (score >= 50) {\n  tier = \"🟡 WARM\";\n  action = \"Contact this week\";\n  priority = \"Medium\";\n} else if (score >= 30) {\n  tier = \"🔵 COLD\";\n  action = \"Nurture sequence\";\n  priority = \"Low\";\n} else {\n  tier = \"❌ DEAD\";\n  action = \"Archive - Too small\";\n  priority = \"None\";\n}\n\n// Override: $5M+ companies are never DEAD\nif (turnover.includes(\"$5m\") && tier === \"❌ DEAD\") {\n  tier = \"🟡 WARM\";\n  action = \"Contact this week - High revenue despite small team\";\n  priority = \"Medium\";\n}\n\n// Build result object\nconst result = {\n  companySize: companySizeRaw,\n  turnover: turnoverRaw,\n  totalScore: score,\n  maxScore: 100,\n  scorePercent: score,\n  tier: tier,\n  priority: priority,\n  action: action,\n  employeePoints: companySizeScore,\n  turnoverPoints: turnoverScore,\n  breakdown: breakdown.join(\" | \")\n};\n\n// Return it\nreturn result;"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -107,
+                    "y": -17
+                },
+                "restore": {
+                    "expect": {
+                        "language": {
+                            "mode": "chose",
+                            "label": "JavaScript"
+                        },
+                        "input": {
+                            "items": [
+                                null,
+                                null
+                            ]
+                        },
+                        "inputFormat": {
+                            "label": "Code editor"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "language",
+                        "type": "select",
+                        "label": "Language",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "javascript",
+                                "python"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "input",
+                        "type": "array",
+                        "label": "Input",
+                        "spec": {
+                            "type": "collection",
+                            "label": "Variable",
+                            "spec": [
+                                {
+                                    "name": "name",
+                                    "type": "text",
+                                    "required": true,
+                                    "validate": {
+                                        "pattern": "^[a-zA-Z0-9_]{1,32}$",
+                                        "min": 1,
+                                        "max": 32
+                                    },
+                                    "label": "Name"
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "any",
+                                    "required": true,
+                                    "label": "Value"
+                                }
+                            ],
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "dependencies",
+                        "type": "array",
+                        "label": "Additional dependencies (Enterprise plans only)",
+                        "spec": {
+                            "type": "text",
+                            "required": true,
+                            "label": "Dependency",
+                            "validate": {
+                                "pattern": "^[A-Za-z0-9_@\\./<>\\=\\!~\\^+\\-]{1,214}$",
+                                "min": 1,
+                                "max": 214
+                            },
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "inputFormat",
+                        "type": "select",
+                        "label": "Input format",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "editor",
+                                "string"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "codeEditorJavascript",
+                        "type": "editor",
+                        "label": "Code",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "google-sheets:addRow",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "mode": "select",
+                "insertUnformatted": false,
+                "valueInputOption": "USER_ENTERED",
+                "insertDataOption": "INSERT_ROWS",
+                "from": "drive",
+                "spreadsheetId": "/1N40p9RLoXQGNMxM1pBwAawoi3Hwy4GxhNB6rSwEi8_o",
+                "sheetId": "Sheet1",
+                "includesHeaders": true,
+                "values": {
+                    "0": "{{4.data.bhp6i.value}}",
+                    "1": "{{4.data.`7h7j0`.value}}",
+                    "2": "{{4.data.`49ui`.value}}",
+                    "3": "{{4.data.b0blb.value}}",
+                    "4": "{{9.result.totalScore}}",
+                    "5": "{{4.data.c5od2.value}}",
+                    "6": "{{9.result.tier}}",
+                    "7": "{{9.result.action}}",
+                    "8": "{{9.result.tier}}"
+                }
+            },
+            "metadata": {
+                "designer": {
+                    "x": 201,
+                    "y": -14
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "Google Connection (jack@aiautomationswithjack.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "mode": {
+                            "label": "Search by path"
+                        },
+                        "insertUnformatted": {
+                            "mode": "chose"
+                        },
+                        "valueInputOption": {
+                            "mode": "chose",
+                            "label": "User entered"
+                        },
+                        "insertDataOption": {
+                            "mode": "chose",
+                            "label": "Insert rows"
+                        },
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "🧲 Lead Qualification"
+                            ]
+                        },
+                        "sheetId": {
+                            "label": "Sheet1"
+                        },
+                        "includesHeaders": {
+                            "nested": [
+                                {
+                                    "name": "values",
+                                    "label": "Values",
+                                    "type": "collection",
+                                    "spec": [
+                                        {
+                                            "name": "0",
+                                            "label": "Name (A)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "1",
+                                            "label": "Email (B)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "2",
+                                            "label": "Employees (C)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "3",
+                                            "label": "Turnover (D)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "4",
+                                            "label": "Score (E)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "5",
+                                            "label": "Dream Outcome (F)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "6",
+                                            "label": "Tier (G)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "7",
+                                            "label": "Action (H)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "8",
+                                            "label": "Tier (I)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "9",
+                                            "label": "(J)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "10",
+                                            "label": "(K)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "11",
+                                            "label": "(L)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "12",
+                                            "label": "(M)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "13",
+                                            "label": "(N)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "14",
+                                            "label": "(O)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "15",
+                                            "label": "(P)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "16",
+                                            "label": "(Q)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "17",
+                                            "label": "(R)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "18",
+                                            "label": "(S)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "19",
+                                            "label": "(T)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "20",
+                                            "label": "(U)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "21",
+                                            "label": "(V)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "22",
+                                            "label": "(W)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "23",
+                                            "label": "(X)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "24",
+                                            "label": "(Y)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "25",
+                                            "label": "(Z)",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "26",
+                                            "label": "(AA)",
+                                            "type": "text"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "label": "Yes"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "mode",
+                        "type": "select",
+                        "label": "Search Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "select",
+                                "fromAll",
+                                "map"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "insertUnformatted",
+                        "type": "boolean",
+                        "label": "Unformatted",
+                        "required": true
+                    },
+                    {
+                        "name": "valueInputOption",
+                        "type": "select",
+                        "label": "Value input option",
+                        "validate": {
+                            "enum": [
+                                "USER_ENTERED",
+                                "RAW"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "insertDataOption",
+                        "type": "select",
+                        "label": "Insert data option",
+                        "validate": {
+                            "enum": [
+                                "INSERT_ROWS",
+                                "OVERWRITE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Spreadsheet ID",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet Name",
+                        "required": true
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "values",
+                        "type": "collection",
+                        "label": "Values",
+                        "spec": [
+                            {
+                                "name": "0",
+                                "type": "text",
+                                "label": "Name (A)"
+                            },
+                            {
+                                "name": "1",
+                                "type": "text",
+                                "label": "Email (B)"
+                            },
+                            {
+                                "name": "2",
+                                "type": "text",
+                                "label": "Employees (C)"
+                            },
+                            {
+                                "name": "3",
+                                "type": "text",
+                                "label": "Turnover (D)"
+                            },
+                            {
+                                "name": "4",
+                                "type": "text",
+                                "label": "Score (E)"
+                            },
+                            {
+                                "name": "5",
+                                "type": "text",
+                                "label": "Dream Outcome (F)"
+                            },
+                            {
+                                "name": "6",
+                                "type": "text",
+                                "label": "Tier (G)"
+                            },
+                            {
+                                "name": "7",
+                                "type": "text",
+                                "label": "Action (H)"
+                            },
+                            {
+                                "name": "8",
+                                "type": "text",
+                                "label": "Tier (I)"
+                            },
+                            {
+                                "name": "9",
+                                "type": "text",
+                                "label": "(J)"
+                            },
+                            {
+                                "name": "10",
+                                "type": "text",
+                                "label": "(K)"
+                            },
+                            {
+                                "name": "11",
+                                "type": "text",
+                                "label": "(L)"
+                            },
+                            {
+                                "name": "12",
+                                "type": "text",
+                                "label": "(M)"
+                            },
+                            {
+                                "name": "13",
+                                "type": "text",
+                                "label": "(N)"
+                            },
+                            {
+                                "name": "14",
+                                "type": "text",
+                                "label": "(O)"
+                            },
+                            {
+                                "name": "15",
+                                "type": "text",
+                                "label": "(P)"
+                            },
+                            {
+                                "name": "16",
+                                "type": "text",
+                                "label": "(Q)"
+                            },
+                            {
+                                "name": "17",
+                                "type": "text",
+                                "label": "(R)"
+                            },
+                            {
+                                "name": "18",
+                                "type": "text",
+                                "label": "(S)"
+                            },
+                            {
+                                "name": "19",
+                                "type": "text",
+                                "label": "(T)"
+                            },
+                            {
+                                "name": "20",
+                                "type": "text",
+                                "label": "(U)"
+                            },
+                            {
+                                "name": "21",
+                                "type": "text",
+                                "label": "(V)"
+                            },
+                            {
+                                "name": "22",
+                                "type": "text",
+                                "label": "(W)"
+                            },
+                            {
+                                "name": "23",
+                                "type": "text",
+                                "label": "(X)"
+                            },
+                            {
+                                "name": "24",
+                                "type": "text",
+                                "label": "(Y)"
+                            },
+                            {
+                                "name": "25",
+                                "type": "text",
+                                "label": "(Z)"
+                            },
+                            {
+                                "name": "26",
+                                "type": "text",
+                                "label": "(AA)"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

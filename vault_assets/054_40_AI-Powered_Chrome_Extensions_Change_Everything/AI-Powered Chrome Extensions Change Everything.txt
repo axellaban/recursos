@@ -1,0 +1,733 @@
+[00:00:00] you can build an AI powerc extension in
+[00:00:02] literally minutes without any coding
+[00:00:04] whatsoever for instance I built this one
+[00:00:06] in less than an hour that all you ever
+[00:00:08] have to do if you get any YouTube video
+[00:00:10] is you come down you hit the summarize
+[00:00:12] button confetti drops and we'll get a
+[00:00:14] full overview of what this video is
+[00:00:16] about so we don't even have to listen to
+[00:00:17] it right there you see this video delves
+[00:00:19] into Mr Beast hiring blah blah blah and
+[00:00:21] gives you full breakdown with Emojis and
+[00:00:23] snaps that you can just grab now this
+[00:00:25] was just one idea that I thought of but
+[00:00:27] you can literally use Guys these AI
+[00:00:29] powered
+[00:00:30] um Chrome extensions to do anything that
+[00:00:32] you want to and I'm going to show
+[00:00:33] exactly how you build that step by step
+[00:00:36] in this video I'm Jack and my YouTube
+[00:00:37] channel I'm my school Community we're
+[00:00:39] about three things we are about the
+[00:00:41] latest AI we're about incredible
+[00:00:44] automations but most importantly guys
+[00:00:46] what about the stuff that actually works
+[00:00:48] so you haven't already grab that coffee
+[00:00:50] and let's dive straight in okay so
+[00:00:52] starting with what is a chome extension
+[00:00:53] chome extension as you might have
+[00:00:54] guessed is using Chrome in some of the
+[00:00:56] browsers you click on the dots in the
+[00:00:57] top right you're going to come down look
+[00:00:59] at exensions and just click on manage
+[00:01:01] extensions now previously we thought
+[00:01:03] this was difficult to get actually super
+[00:01:05] straightforward we're going to use clae
+[00:01:07] or chat GPT to create the code for us
+[00:01:10] and then all we're going to do
+[00:01:11] essentially is to upload it to crown
+[00:01:13] save it and then enable it and then
+[00:01:15] essentially whatever use case you want
+[00:01:17] whether you want to summarize videos you
+[00:01:18] want to use AI to create tweets from
+[00:01:20] videos or whatever you want it will do
+[00:01:22] that for you automatically on autopilot
+[00:01:24] in the background and we're going to
+[00:01:26] connect this to meg.com via web hooks
+[00:01:29] which which is a really straightforward
+[00:01:30] easy thing to do and the fact that we
+[00:01:32] can get any data from your browsing
+[00:01:34] experience into make is literally insane
+[00:01:38] because once we get it in make guys we
+[00:01:39] can do anything we want we can access
+[00:01:41] the Rams we can use AI to you know
+[00:01:43] basically present any information in
+[00:01:45] live time for us on the Chrome extension
+[00:01:47] so what's really really cool about this
+[00:01:49] as well guys is that you can do
+[00:01:50] literally anything with Chrome extension
+[00:01:51] so you could replace all the words on a
+[00:01:53] page you could get things facts checked
+[00:01:55] by using perplexity millions of
+[00:01:57] different things now to get this s
+[00:01:58] running you only need three things one
+[00:01:59] is you want account at make.com you can
+[00:02:01] get up to 1,000 executions free I'll put
+[00:02:03] link down below so you can jump in and
+[00:02:04] get started it's modulate really easy to
+[00:02:06] use and it's how we're able to do this
+[00:02:08] incredible stuff the second thing that
+[00:02:09] you need is access to chat gbt or at
+[00:02:12] platform.
+[00:02:13] open.com and essentially that enables
+[00:02:15] you to use chat gbt via an API really
+[00:02:18] straightforward I'll put the link down
+[00:02:20] below so you can use that and SEL Json
+[00:02:22] file upload it and then have the whole
+[00:02:24] thing populate will be available Down
+[00:02:25] Below in the school community so you can
+[00:02:26] use this one yourself and start
+[00:02:28] summarizing videos and get all the
+[00:02:29] blueprints for the stuff that is and is
+[00:02:31] not on the channel awesome so how do we
+[00:02:34] get started then so we're going to run
+[00:02:35] through this step by step so the first
+[00:02:37] thing we really want to do when building
+[00:02:38] this is to head of IT chat GPT like so
+[00:02:41] and essentially we're going to give it a
+[00:02:42] prompt looks like this it's going to say
+[00:02:44] hey I would like you
+[00:02:46] to develop a Chrome
+[00:02:50] extension that
+[00:02:52] does the following okay and essentially
+[00:02:55] what we say is at number one we say hey
+[00:02:57] it will have a button
+[00:03:01] on YouTube that
+[00:03:04] says
+[00:03:05] summarize number two when this
+[00:03:09] button is
+[00:03:12] clicked you must send the
+[00:03:16] transcript to this web hook now what do
+[00:03:20] we do guys well we basically need to get
+[00:03:21] the web hook in make so we come back
+[00:03:23] over to make we click on this and we
+[00:03:25] just type in web hook like so and type
+[00:03:28] on custom web hook like so and then
+[00:03:30] we'll give us a new one and we'll call
+[00:03:31] this one let's call this one YouTube
+[00:03:34] summarize call this one Build Together
+[00:03:36] shall we ability and what emergy should
+[00:03:39] we use yes use for diamonds for Value
+[00:03:42] following off one of my clients said to
+[00:03:43] me Jack i' love a button that could just
+[00:03:45] summarize YouTube video and I'm like I
+[00:03:47] know just a thing for that and now here
+[00:03:49] I am sharing the wonderful Brilliance of
+[00:03:52] this cool little Chown extension online
+[00:03:54] so look now we've got this cool thing
+[00:03:55] here which is like the URL so all you do
+[00:03:58] is copy the address of clipboard and
+[00:04:00] then you can see it's going to try to
+[00:04:01] determine the data structure so we'll
+[00:04:03] come back to that in a second don't
+[00:04:05] worry it's actually quite
+[00:04:06] straightforward but there we go awesome
+[00:04:08] now what else do we want this to do we
+[00:04:10] want we want a text box to be coded on
+[00:04:16] the page so that when the um web
+[00:04:21] hug
+[00:04:23] responds with a summary it will appear
+[00:04:28] on the page for us number four is going
+[00:04:30] to be add a waiting
+[00:04:34] Emoji whilst the operation is
+[00:04:38] running and I should probably give it a
+[00:04:40] little bit of context actually first so
+[00:04:41] I just say
+[00:04:43] context uh we are creating a Chrome
+[00:04:47] extension that will
+[00:04:49] summarize any video the
+[00:04:55] specifics okay and then finally guys
+[00:04:58] what we can also do and I always
+[00:04:59] recommend when you're using AI to build
+[00:05:02] apps or web apps is to give it
+[00:05:04] screenshots of what's cool so you see
+[00:05:06] here for example what I'm going to do
+[00:05:07] literally here is I'm going to
+[00:05:08] screenshot this video summary come down
+[00:05:10] now guys you can improve the CSS you
+[00:05:12] could have the summarized button anywh
+[00:05:13] you want to you could have it to cover
+[00:05:15] the whole video you could do anything
+[00:05:17] it's literally just saying Hey I want
+[00:05:18] this I want that so we click on options
+[00:05:20] click on clipboard and then we'll come
+[00:05:22] back over now to this and just say here
+[00:05:24] is an exam here is a functional
+[00:05:27] version just copy
+[00:05:31] this and then guys what we're going to
+[00:05:33] say is
+[00:05:34] paste all of the code in full thank you
+[00:05:40] and then we hit that magical button also
+[00:05:41] known as enter now what will happen here
+[00:05:43] is we need to create a desktop folder on
+[00:05:45] the homepage so on on our sort of like
+[00:05:47] our desktop and essentially we're going
+[00:05:50] to create a couple of different files
+[00:05:52] and then we're just going to save the
+[00:05:54] text in these files like Json and
+[00:05:56] different things like that and then we
+[00:05:57] upload all of that together into Chrome
+[00:05:59] and that's probably about the most
+[00:06:02] complicated it gets so asking for codes
+[00:06:04] say hey please create the
+[00:06:06] code for the
+[00:06:09] extension and now chb will'll do this
+[00:06:11] wonderful magic in the background and
+[00:06:13] create all the code for it's done that
+[00:06:15] cool so basically these are the five
+[00:06:17] things that we're going to need uh to
+[00:06:19] crect this thing six things in fact so
+[00:06:20] look what do we do we go to the homepage
+[00:06:22] finder we go desktop now check this out
+[00:06:25] okay the first thing we do is click on
+[00:06:26] right left click on new folder and we're
+[00:06:28] going to give this one an name let's
+[00:06:30] call this one YouTube summarizer okay so
+[00:06:35] YouTube summarizer and of course we'll
+[00:06:38] leave emoji up because we'll keep this
+[00:06:39] one quite plain then we click into it
+[00:06:41] okay and essentially all these files we
+[00:06:43] create are going to pop in there so for
+[00:06:44] example the one that you saw me use is
+[00:06:46] just this stuff now it looks complicated
+[00:06:48] guys it's actually really really
+[00:06:50] straightforward so what do we do if
+[00:06:52] you're on Mac this is the application I
+[00:06:54] recommend you using is called text edit
+[00:06:56] you can find it in your applications but
+[00:06:58] look if I click on text edit I click on
+[00:07:01] open you'll see now I have this is an
+[00:07:04] example of what I made earlier in
+[00:07:06] content JavaScript so we're going to get
+[00:07:07] rid of that I'm going to create a brand
+[00:07:08] new text edit so to do that we come down
+[00:07:10] to new document on the right hand side
+[00:07:12] likeo and you'll see this and then what
+[00:07:14] do we do guys so we start off then with
+[00:07:17] manifest manifest.json we copy the code
+[00:07:20] we come over we paste the code and
+[00:07:23] crucially guys come over to format like
+[00:07:24] so text make plain text and then what
+[00:07:28] you're going to do is click on file
+[00:07:29] going to click on Save and we're going
+[00:07:31] to call this guy uh let me just double
+[00:07:34] check while we're calling this
+[00:07:35] manifest.json so come down here save
+[00:07:39] manifest do Json and we're going to save
+[00:07:42] that on desktop for the moment and then
+[00:07:45] click save like so and C on use Json
+[00:07:48] yes I should also gu if you're on window
+[00:07:50] I just wanted to check this one for you
+[00:07:51] notepad is a really good alternative you
+[00:07:53] can't build this in word because it
+[00:07:55] needs to be kind of like plain text so
+[00:07:57] if you've got Windows use notepad or
+[00:07:59] something similar and if Mike I'd use
+[00:08:01] text edit but there's other tools but I
+[00:08:02] just think they're easy and simple to
+[00:08:04] get started with so we've done
+[00:08:05] manifest.json and now we need to do is
+[00:08:08] background.js so we copy this code we do
+[00:08:10] the same thing text edit come down to
+[00:08:12] new document we paste the code we come
+[00:08:14] to format make plain text bring this
+[00:08:17] over here and we'll call this
+[00:08:19] background.js it's really important that
+[00:08:20] you get the name right because they are
+[00:08:23] referential okay background.js again
+[00:08:26] save it to the desktop click save
+[00:08:28] beautiful that's that one down and then
+[00:08:30] we've got here content.js you might have
+[00:08:32] guessed it we copy the code we come down
+[00:08:34] and click on new document paste it
+[00:08:37] format make plain text file save as
+[00:08:42] content.js like
+[00:08:45] so beautiful that's three down just a
+[00:08:47] couple more to go now then we've got
+[00:08:49] popup HTML which is quite decent again
+[00:08:52] text edit come down new documents paste
+[00:08:56] that in there once again view is going
+[00:08:58] to be M plain Tex and we'll go this one
+[00:09:00] popup HTML cool
+[00:09:03] sweet and it's funny actually cuz you
+[00:09:06] kind of think this is a lot more
+[00:09:07] complicated than it is until you know
+[00:09:09] how then you realize actually it's
+[00:09:11] really really really straightforward um
+[00:09:14] popup do JavaScript right click on this
+[00:09:16] new document okay again pop this one in
+[00:09:19] bring this one over here format make
+[00:09:22] plain text and then let's save this guy
+[00:09:25] here let's pop up the Javas
+[00:09:27] strict and I say easy I mean obviously
+[00:09:30] like if you're doing this you're not
+[00:09:32] normal I mean not normal in a great
+[00:09:34] sense in the sense that you are like the
+[00:09:36] 1% of the 1% because barely anybody
+[00:09:38] knows how to do this um so this is
+[00:09:40] pretty much Cutting Edge because
+[00:09:41] essentially what enables you to do is
+[00:09:42] stuff that and it's just stuff that you
+[00:09:43] previously couldn't do unless you really
+[00:09:45] know how to code but we can just use AI
+[00:09:46] for that now which is just phenomenal so
+[00:09:48] again view come to format make plain
+[00:09:51] text always click on the make plain text
+[00:09:52] thing and then we just get we basically
+[00:09:54] save it as the thing that's there so
+[00:09:57] styles. CSS and it's got to be to the
+[00:10:00] letter the same thing remember make sure
+[00:10:01] that you do that yes use. CSS save to
+[00:10:04] homepage beautiful excellent and then
+[00:10:07] now we need to create an icon uh which
+[00:10:09] is going to be basically visually what
+[00:10:10] we call it so we head over to canva for
+[00:10:12] that now this doesn't really matter guys
+[00:10:15] I mean like let's just say for example I
+[00:10:17] want to use this or let's just use
+[00:10:18] something I don't know let's just use
+[00:10:20] the crown and just bring this guy up
+[00:10:22] here like so beautiful I should make it
+[00:10:24] like orange something me
+[00:10:26] recognizable okay beautiful come here
+[00:10:28] and let's go good for big
+[00:10:30] beautiful
+[00:10:32] multicolored yeah that's cool it' be
+[00:10:34] it'd be easy to recognize right click on
+[00:10:36] download like so make it as small as
+[00:10:38] humanly possible and then
+[00:10:40] download which is cool excellent I'm
+[00:10:43] going to call this one icon.
+[00:10:46] PNG and so then guys your desktop should
+[00:10:48] look something like this so now what we
+[00:10:50] do is we copy these guys like so and
+[00:10:53] we're going to pull them into YouTube
+[00:10:55] summarizer and that's it now the next
+[00:10:57] thing we do guys is we're going come
+[00:10:58] over to CR
+[00:10:59] what I'm going to need to do actually is
+[00:11:01] turn mine off so I've turned mine off
+[00:11:04] I've done that because we can't couldn't
+[00:11:07] oh my goodness we can't have two um
+[00:11:09] Chrome extensions doing the same thing
+[00:11:11] so what do we do all we do guys okay is
+[00:11:13] you may not have a developer mode
+[00:11:14] enabled if you do just come to the top
+[00:11:15] right click on developer mode and you
+[00:11:17] come down here and you're going to start
+[00:11:18] put load
+[00:11:20] unpacked and then come to your desktop
+[00:11:22] and basically just click on YouTube
+[00:11:24] summarizer and then click select and
+[00:11:27] there we go fail to load extension could
+[00:11:28] not load icon 16 pop PNG so what we do
+[00:11:31] if we get any code like that just come
+[00:11:33] back over now to chat GPT and give it
+[00:11:35] the data I'm just showing you for the P
+[00:11:37] of this one how you would troubleshoot
+[00:11:38] anything so you get used to the process
+[00:11:40] so this has happened because it's it
+[00:11:41] wanted an icon 1648 128 so all we're
+[00:11:44] going to do is just basically update the
+[00:11:46] manifest. Json file one of the things
+[00:11:48] that you'll find is that like when it so
+[00:11:51] again right click on this and when it
+[00:11:52] come down to open with and text edit is
+[00:11:55] it like yeah like if if one says Zig and
+[00:11:58] you dare to zag you're done you're
+[00:12:01] basically done so you can see there
+[00:12:03] icons it lists all there but it's not
+[00:12:05] there so Boom come down simplify it
+[00:12:06] awesome click file click save come off
+[00:12:09] often times you probably referenced
+[00:12:11] something that you shouldn't have done
+[00:12:12] and that's why it's not working so we
+[00:12:14] come back to Chrome we come back and
+[00:12:16] then we click on load and packed one
+[00:12:17] more time come to desktop and click on
+[00:12:19] YouTube summarizer and load that in
+[00:12:22] extension loaded and can you see it
+[00:12:24] there look at this guys I can see that
+[00:12:26] beautiful little blue button and I want
+[00:12:27] to click on details I'm going to come
+[00:12:30] down and then what we're going to do is
+[00:12:31] just pin this to the toolbar so you can
+[00:12:33] see we got the wire there popping up
+[00:12:35] which is awesome and I'm pretty happy
+[00:12:37] with that I'm going to come off this I'm
+[00:12:39] going to go to YouTube I'm going to mute
+[00:12:41] site just so we don't have to keep
+[00:12:42] listening to the start of the video and
+[00:12:44] then we basically refresh the page like
+[00:12:46] so and let's see if it pops up so has it
+[00:12:50] popped up no it hasn't so let's go to
+[00:12:53] extensions and see what happens what is
+[00:12:54] also really cool guys is you'll get like
+[00:12:56] an error log when this sort of stuff
+[00:12:58] happens so so it's perfectly normal if
+[00:13:00] you don't see it the first time
+[00:13:01] basically what we need to do is we come
+[00:13:03] back over now to chat gb2 and we say hey
+[00:13:06] the uh app is
+[00:13:08] uploaded however I cannot
+[00:13:12] see the app on the
+[00:13:16] button on the
+[00:13:18] page please fix this I'm just going to
+[00:13:23] share with it the previous code that we
+[00:13:24] had just so it knows exactly what it
+[00:13:26] needs to do but essentially the way that
+[00:13:28] it works is you'll say hey you'll try it
+[00:13:29] it's not visible hey I'm not seeing it
+[00:13:31] try this try this and you'll
+[00:13:33] troubleshoot over two or three
+[00:13:34] iterations and once that's done you'll
+[00:13:35] get it working and visible so that will
+[00:13:37] save just out respect for time a little
+[00:13:39] bit of back and forth and then guys it
+[00:13:40] start to produce the revised content of
+[00:13:42] JavaScript for us so then we just again
+[00:13:44] simply update this and you'll know from
+[00:13:46] the last video guys essentially it's
+[00:13:47] like this when you're building any AI
+[00:13:49] web app or even Chrome extension now we
+[00:13:50] go back and forth and you can kind of
+[00:13:52] just amend it and get the CSS to a point
+[00:13:54] where you're like I'd love it to do this
+[00:13:56] I'd love it to do that but I think
+[00:13:58] fundamentally what only really limited
+[00:14:01] by our imagination when it comes to this
+[00:14:02] I mean the reason I think this is so
+[00:14:04] cool is because it adds a literal new
+[00:14:06] dimension to how you use AI I don't have
+[00:14:08] to open a new tab and post something
+[00:14:10] into chat GPT I can use it on the tab
+[00:14:12] that I'm actually using right now so it
+[00:14:14] just makes the browsing experience so
+[00:14:16] much cooler you don't like the word the
+[00:14:18] it's gone it's out of here you don't
+[00:14:19] like the word coffee we'll replace word
+[00:14:21] coffee with anything you want it's
+[00:14:22] literally that awesome now sometimes
+[00:14:24] you'll get this prompt about contining
+[00:14:26] generating because the code is a little
+[00:14:28] bit long long ER which is fine so just
+[00:14:30] be aware of that so we come to the top
+[00:14:32] we copy the code we go to our finder we
+[00:14:34] go to YouTube summarizer again we open
+[00:14:37] content.js sometimes it'll do that so
+[00:14:39] you have to come right click and let's
+[00:14:41] just bring this guy over here we're
+[00:14:43] going to right click open with text edit
+[00:14:46] awesome okay control all and then paste
+[00:14:50] and then come up the top then file then
+[00:14:52] save now also here's the other really
+[00:14:54] cool thing you can do right guys check
+[00:14:55] this up now all you need to do is
+[00:14:59] instead of deleting and uploading again
+[00:15:01] you can just hit this basically this
+[00:15:03] button here which will then just bring
+[00:15:04] everything back up to look I click on
+[00:15:05] that incredible now I come back over to
+[00:15:08] this video and we refresh it and if it
+[00:15:09] done its job properly we should see this
+[00:15:12] let's just refresh the
+[00:15:14] page oh my goodness guys does that look
+[00:15:17] familiar to you it should do I think
+[00:15:18] that's really cool that we've got that
+[00:15:20] there how epic is that cool so what do
+[00:15:22] we do now basically now we know that
+[00:15:25] we've got the summarize we need to make
+[00:15:26] sure that it's pulling the transcript
+[00:15:28] effect effectively so let's get over now
+[00:15:30] to make uh and find out what's going on
+[00:15:33] so this is our initial one okay now it's
+[00:15:34] waiting for the data so let's come back
+[00:15:36] over let's hit this
+[00:15:38] button we've got the confetti that came
+[00:15:40] down I love confetti by the way I don't
+[00:15:42] know if you notice this I'm a confetti
+[00:15:43] guy man I love the confetti so confet is
+[00:15:45] done the question will be oh my gosh
+[00:15:47] guys look at this video summary has been
+[00:15:49] accepted I love how it's like I gave it
+[00:15:52] that I give you that photo and it's like
+[00:15:54] it completely gets what it needs to look
+[00:15:56] like and dude can you see by the way
+[00:15:58] it's got this like animation here how
+[00:16:00] it's moving like left to right like how
+[00:16:03] sick is that like that is so so sick
+[00:16:06] that's like the coolest thing ever it
+[00:16:07] does not take many animations to get
+[00:16:09] Jack Roberts pumped so I come back over
+[00:16:11] now look let's see if it's G it hasn't
+[00:16:13] actually pulled that through yet which
+[00:16:15] is a little bit strange one so what we
+[00:16:17] then need to do is make sure we copy
+[00:16:18] dress the clipboard we come back over
+[00:16:20] there to chat gbt and we're going to say
+[00:16:21] something like hey looks amazing
+[00:16:25] however um
+[00:16:29] however it is not pulling through it is
+[00:16:32] not sending the information to the web
+[00:16:40] hul it should
+[00:16:46] expect a response back incredible so
+[00:16:49] chat GD has finished so what do we do
+[00:16:51] guys we're going to come up to the top
+[00:16:52] of the code like so and we're going to
+[00:16:54] copy it as always we're going to go back
+[00:16:56] over now to find it going to Conta J yes
+[00:16:59] right click open with text edit come
+[00:17:02] over here get rid of it paste this in
+[00:17:04] Click file click save and then we're
+[00:17:06] back on Chrome we just hit refresh again
+[00:17:08] which is awesome come back over and
+[00:17:10] let's refresh the page and see if it's
+[00:17:12] appeared and almost by Magic guys we see
+[00:17:14] the summarized button has appeared once
+[00:17:16] again so look what do we do let's just
+[00:17:18] make sure that in our chat GPT
+[00:17:21] module that this is loading it is so if
+[00:17:24] we go back over now and I click on
+[00:17:26] summarize excellent
+[00:17:29] so uh let's see error sending transcript
+[00:17:31] unexpected token a accepted is not valid
+[00:17:33] Json check console for details but has
+[00:17:36] this picked it up it has so let's just
+[00:17:38] run this again one more time so what's
+[00:17:41] happened to this web Hook is it said
+[00:17:42] look look we've got a code here that
+[00:17:44] says when you hit summarize it's taking
+[00:17:46] a transcript and we're sending it to
+[00:17:48] make.com and it's doing that VI a web
+[00:17:51] hook now this is the web hook that we're
+[00:17:53] catching the data with so essentially
+[00:17:56] this is the thing that's going to get
+[00:17:57] the data from the web page so if I come
+[00:18:00] back over and I say look summarize this
+[00:18:01] again awesome forget the message for a
+[00:18:04] moment I come back over the question
+[00:18:06] will be can I see the transcript here if
+[00:18:08] I click on transcript and guys look at
+[00:18:11] this the entire transcript now and make
+[00:18:15] that's insane what does that mean it
+[00:18:16] means I can do whatever I want with the
+[00:18:18] YouTube videos now if I have my own
+[00:18:20] YouTube video and I say look I want you
+[00:18:21] to make 50 tweets from this in my own
+[00:18:23] style I could be on a video and I could
+[00:18:25] say boom I grab a transcript I pull it
+[00:18:27] back I run it through a social media
+[00:18:29] engine and I create tweets purely in my
+[00:18:31] perusal I'm like yeah I'm looking here
+[00:18:33] yeah tweet ify that summarize that I can
+[00:18:35] create multiple buttons to do multiple
+[00:18:36] things with multiple web hugs like think
+[00:18:38] of the potential it's unbelievable so
+[00:18:42] the next thing we want to do and I'm
+[00:18:43] going to look at the error message in a
+[00:18:44] second but guys we want to create an
+[00:18:47] Adat gbt now to kind of summarize that
+[00:18:49] message and to put it into some like you
+[00:18:52] know some easy to digest um Tex so click
+[00:18:54] on add another module now from my
+[00:18:56] perspective this is what makes
+[00:19:00] AI web apps AI crem extensions
+[00:19:02] incredible because what it enables us to
+[00:19:04] do when we add AI to the equation is
+[00:19:06] essentially anything um it it I just
+[00:19:08] cannot explain how profoundly powerful I
+[00:19:10] think this is so look come over to model
+[00:19:13] for gbt photo and then we' got add a
+[00:19:15] message and click on use it let me show
+[00:19:17] you the prom that I used before okay so
+[00:19:19] let me just run you through what that
+[00:19:20] looks like okay so look here we go let
+[00:19:22] me scroll down a little bit here
+[00:19:25] summarize this YouTube transcript in 80
+[00:19:26] words or less after the summary create a
+[00:19:28] list of key takeaways with each item
+[00:19:30] starting with an emoji format the
+[00:19:32] summary and list with one line breaks so
+[00:19:34] that the summary is separated from the
+[00:19:35] list the summary is on his own separ
+[00:19:37] basically I give it some different
+[00:19:38] prompts about how I want the format to
+[00:19:41] Lug and then I say I give it an example
+[00:19:43] and obviously always a prompting guys
+[00:19:45] try your best to give it a positive
+[00:19:47] example and if the prompts aren't
+[00:19:48] working give it a negative example so it
+[00:19:50] knows what good looks like and what
+[00:19:51] negative looks like typically three if
+[00:19:53] you're struggling and we have a little
+[00:19:54] bit of a description a little bit more
+[00:19:56] of a description and then emoji and tag
+[00:19:59] now please use a format with the
+[00:20:00] following transcript and then we just
+[00:20:01] give it the transcript so again come
+[00:20:03] back over now to YouTube summarizer
+[00:20:05] message content uh basically paste your
+[00:20:08] promps I'm showing you how to do this
+[00:20:09] with like a YouTube summarizer thing but
+[00:20:10] in reality whatever the thing is that
+[00:20:12] you want to do just enter the pr that h
+[00:20:15] i challeng you to have fun with it let
+[00:20:16] me it down below how you get on with
+[00:20:17] that okay now I come over to transcript
+[00:20:20] I delete that and I just put this
+[00:20:22] transcript in okay awesome and I click
+[00:20:25] okay and is that going to let me click
+[00:20:27] okay for some reason guys Max tokens
+[00:20:30] just put zero so it defaults the Max and
+[00:20:32] obviously guys you know this we're
+[00:20:35] nothing without a formalities so we're
+[00:20:36] going to rename this one to
+[00:20:38] summarizer with let's just do a little
+[00:20:41] bit of diamonds incredible okay Ace and
+[00:20:44] then finally guys what I want you to do
+[00:20:46] is click on this web hooks web hook
+[00:20:49] response and in the body I just want you
+[00:20:51] to put the result from summarizer and
+[00:20:53] then click okay all right now look at
+[00:20:55] this I'm going to run this once like so
+[00:20:57] I'm going to head back over now to the
+[00:20:59] YouTube module I'm going to click on
+[00:21:00] summarize if I come back over now to my
+[00:21:02] prompt let's have a look at what the
+[00:21:03] module did look at this this video does
+[00:21:06] blah blah blah blah Mr Beast and all
+[00:21:08] this sort of stuff status 200 means
+[00:21:10] successful but we've got a problem right
+[00:21:12] the problem is that it's sending the
+[00:21:14] data but it's not bringing it back so
+[00:21:16] let's do this one more time and let's
+[00:21:18] find out what the error message is this
+[00:21:20] is cool it's falling to the ground there
+[00:21:23] we go so what we're going to do is we're
+[00:21:24] going to copy this you might guessed
+[00:21:26] what happens next we head back over now
+[00:21:28] two chat gbt everything is working
+[00:21:32] well um
+[00:21:35] however we are
+[00:21:37] getting this error
+[00:21:41] message and we are not
+[00:21:45] seeing the window with the summary when
+[00:21:49] I say this genuinely guys I I build this
+[00:21:51] stuff I absolutely love this I love
+[00:21:53] pushing the envelope with this stuff and
+[00:21:55] I have to give a shout out to a guy
+[00:21:56] called Kevin in my community Now Kevin
+[00:21:58] actually came and said dude I built a
+[00:22:00] Chrome extension with this stuff and I'm
+[00:22:01] like bro that is amazing and I was like
+[00:22:03] he so he's the inspiration for this
+[00:22:04] video so I want to shout out Kevin I
+[00:22:06] want to say thanks bro like it's just so
+[00:22:08] that's the cool thing about having a
+[00:22:09] community with this stuff because you
+[00:22:11] really just get like people just you'll
+[00:22:13] have an idea and someone else have an
+[00:22:14] idea and then everyone Builds on each
+[00:22:15] other's ideas and this is something that
+[00:22:17] I would physically use because like who
+[00:22:20] has time sometimes to listen to a 500
+[00:22:23] hour video on some random stuff do you
+[00:22:25] know what I mean sometimes like you just
+[00:22:26] want to know if it's worth reading on
+[00:22:28] that so so maybe YouTube's not going to
+[00:22:29] like this because that watch time are go
+[00:22:31] down we may literally change the face of
+[00:22:33] YouTube with this guys can you believe
+[00:22:34] that YouTube may never be the same again
+[00:22:37] after this all right as we come on here
+[00:22:39] we click on Save shut that down head
+[00:22:43] over to Chrome head over to extensions
+[00:22:45] click on the refresh come over here
+[00:22:48] let's refresh the page I'm hoping the
+[00:22:50] summarize button hasn't disappeared it
+[00:22:52] hasn't that's cool let's come over now
+[00:22:54] to chat GPT and let's click on running
+[00:22:57] this one here all right cool and then
+[00:22:59] let's just pin this one as it's out of
+[00:23:00] the way cool we come back over then and
+[00:23:03] click on summarize the confetti Falls no
+[00:23:06] error message and are we going to get
+[00:23:07] the actual thing yes we did I'm going to
+[00:23:09] give this an even step further than that
+[00:23:11] and what I'm going to do beyond that cuz
+[00:23:13] you know guys this automation isn't
+[00:23:14] enough I want to take it a step further
+[00:23:16] is I'm going to search for I'm going to
+[00:23:18] unlink these I'm going to come here I'm
+[00:23:19] going to find perplexity perplexity AI
+[00:23:22] is basically going to enable us to
+[00:23:23] search the internet so what I'm going to
+[00:23:24] do I'm going to come here I'm going to
+[00:23:26] connect these guys I'm going to click on
+[00:23:27] this guy and going to click on the
+[00:23:29] biggest online model that's there which
+[00:23:30] seems to be I believe this one should be
+[00:23:34] fine okay excellent Max tokens I'm just
+[00:23:37] going to put at
+[00:23:38] 4,000 uh temperature don't worry about
+[00:23:40] that message and I'm going to say
+[00:23:41] content I'm going to say hey find me
+[00:23:45] three
+[00:23:48] URLs for further
+[00:23:53] reading on this topic ensure that it is
+[00:23:57] the
+[00:23:59] latest
+[00:24:03] available information and
+[00:24:06] credible must be
+[00:24:10] recent include no other further
+[00:24:15] information the research
+[00:24:18] topic and then I'm just going to give it
+[00:24:20] the result and going put the role as
+[00:24:22] user and I'm going to click okay and
+[00:24:25] then all I'm going to do in the web hook
+[00:24:26] response guys is good body and I'm going
+[00:24:28] to say
+[00:24:30] further research come down and I'm just
+[00:24:34] going to give it the output from
+[00:24:37] perplexities to come down to message
+[00:24:38] come down to Content and so guys the
+[00:24:40] final test now is to see if this aiad
+[00:24:42] research bit works I'm on the all in
+[00:24:44] podcast today guys this one is an hour
+[00:24:46] and 44 minutes so say we say dude I
+[00:24:48] don't know if I want to watch that so
+[00:24:49] what happens we come over we've got our
+[00:24:51] entire thing running the backr that
+[00:24:52] again but when you do it you just have
+[00:24:54] this running permanently I come back
+[00:24:55] over and what I do guys I say hey
+[00:24:57] summarize the video the confetti falls
+[00:24:59] from the top I'm wondering what's
+[00:25:01] happening here and are we going to get
+[00:25:02] any information and we'll give it a
+[00:25:04] second we've got the actual thing
+[00:25:05] loading which is awesome and guys look
+[00:25:09] at this this transcript feature members
+[00:25:11] of all in podcast humorously discussing
+[00:25:13] personal anecdotes their reaction to
+[00:25:15] current events and economic concerns
+[00:25:16] they share opinions on covid-19 measures
+[00:25:19] Market fluctuations and geopolitical
+[00:25:21] issues a focus is on blah blah blah this
+[00:25:23] is crazy shared human stories Yen
+[00:25:26] carried out a tra Global impact go
+[00:25:27] Google monopo and search debates on VP
+[00:25:30] picks and election strategies guys this
+[00:25:32] is absolutely insane and then guys at
+[00:25:33] the bottom we've got further research so
+[00:25:35] you can build up those prompts in
+[00:25:36] perplexity to make them like
+[00:25:38] superpowered you can do like anything
+[00:25:39] you want now we can use AI research
+[00:25:42] based on that I hope you can see like
+[00:25:43] the potential for this is like way up
+[00:25:45] here it is ridiculous in case guys I
+[00:25:47] hope you enjoyed this video have a
+[00:25:48] wonderful weekend and I'll see you in my
+[00:25:51] next video

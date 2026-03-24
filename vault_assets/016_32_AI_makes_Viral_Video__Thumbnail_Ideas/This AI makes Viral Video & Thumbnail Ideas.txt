@@ -1,0 +1,1417 @@
+[00:00:00] what if you could take any channel on
+[00:00:01] YouTube and analyze every single one of
+[00:00:03] their thumbnails their titles the number
+[00:00:06] of views they got when it was posted and
+[00:00:08] also how many likes the video had and
+[00:00:10] then what if we could put all that data
+[00:00:12] into an AI system that would then give
+[00:00:15] us direct feedback on what makes the top
+[00:00:17] 10% videos the 10% and therefore what
+[00:00:20] videos you can make in this video I'm
+[00:00:22] going to show you step by step how you
+[00:00:23] can use and create this AI system on
+[00:00:26] me.com that will literally analyze any
+[00:00:28] YouTube channel your YouTube channel and
+[00:00:30] find recommendations based on your
+[00:00:32] thumbnails your views your likes your
+[00:00:33] comments let's face it when it comes to
+[00:00:35] YouTube data matters and we want to look
+[00:00:37] at what we call outliers I've gained
+[00:00:40] like 16,000 subscribers in the last
+[00:00:42] seven weeks and I'm actually in Vegas
+[00:00:44] hence the hotel room in the background
+[00:00:46] and when it comes to YouTube you want to
+[00:00:47] try and find those outlier videos and
+[00:00:49] we're going to use AI here to actually
+[00:00:50] do the heavy analysis for us to find out
+[00:00:53] what those top 10% videos are so you can
+[00:00:55] get basically get more videos in less
+[00:00:57] time of higher quality and in this video
+[00:00:59] I'm going to exactly how you build this
+[00:01:01] step by step from beginning to end if
+[00:01:03] you press the buttons I press by the end
+[00:01:04] of this video you'll be able to make an
+[00:01:06] incredible AI video system I'm Jack and
+[00:01:09] my YouTube channel my school Community
+[00:01:10] we're all about the latest AI we're
+[00:01:12] about incredible automations and most
+[00:01:15] importantly we about the stuff that
+[00:01:18] actually works if you haven't already
+[00:01:19] come and grab that coffee mine's a bit
+[00:01:21] low actually and let's jump straight in
+[00:01:23] now to show how this works we're going
+[00:01:24] to use a channel veritasium incredible
+[00:01:25] data all we have to do guys is we get
+[00:01:27] the URL of the channel we want to
+[00:01:29] analyze and get the data from you head
+[00:01:31] over to air table and all you'll ever do
+[00:01:33] in this automation is just throw it in
+[00:01:35] url section and that's it then this
+[00:01:37] happens next case so check this out this
+[00:01:39] is going to be all running automatically
+[00:01:41] in the background for us but what
+[00:01:42] happens here so I run this appify actor
+[00:01:44] and this will start the entire
+[00:01:46] automation now appify is a no code
+[00:01:48] scraper so what appify is going to do is
+[00:01:50] head over to the channel and just grab
+[00:01:52] the data we can say we want 20 videos we
+[00:01:54] want five we want three want all these
+[00:01:56] different videos Apper fire will go and
+[00:01:57] get that data for us then what happens
+[00:01:59] when that's got there and again don't
+[00:02:01] worry I'll explain exactly how this
+[00:02:03] works step by step this guy is saying
+[00:02:05] hey I'm waiting for that act to scraping
+[00:02:07] run to happen then once that's done we
+[00:02:10] grabb the data from that so we got all
+[00:02:12] the information that we need now check
+[00:02:13] this out guys look how long is a video
+[00:02:15] what's the video called uh what's the
+[00:02:17] channel you when was it posted um all
+[00:02:20] this incredible information for it they
+[00:02:22] guys this is really cool we actually get
+[00:02:23] the entire transcript from the video so
+[00:02:26] literally everything he said why is that
+[00:02:28] important well because if he's given
+[00:02:29] like a million dollars or something like
+[00:02:31] that's relevant data and the more data
+[00:02:33] we have the better you analysis and
+[00:02:35] decisions that we can actually make
+[00:02:36] about whether or not we want to use that
+[00:02:39] or not and what makes it an outlier then
+[00:02:41] we're going to summarize the video into
+[00:02:42] something crisp and clean so for
+[00:02:43] instance let's check out what the
+[00:02:44] summaries are Avalanches are dangerous
+[00:02:46] snow events triggered by various factors
+[00:02:47] blah blah blah blah blah it emphasize
+[00:02:49] the importance of prevention and quick
+[00:02:50] rescue awesome then what do we do we're
+[00:02:53] actually going to describe what the
+[00:02:55] thumbnails are and why they matter so
+[00:02:57] check this out guys like look we what
+[00:02:59] we've done here here is we've trained
+[00:03:00] this bar on let's check this out right
+[00:03:02] if I come over here look visual quality
+[00:03:04] Design Elements Tex human elements um
+[00:03:07] this is all based on like what what
+[00:03:08] actually makes a good thumbnail a good
+[00:03:10] thumbnail so for instance this may say
+[00:03:12] hey did you know that you know
+[00:03:13] thumbnails that have a really prominent
+[00:03:14] number in it or like good contrast
+[00:03:16] actually are contributing to higher
+[00:03:18] views and we can tell that based on the
+[00:03:20] views you're getting and all these other
+[00:03:21] data factors so what happens we then get
+[00:03:24] this bot here to describe the image for
+[00:03:26] us and we take all of that data the
+[00:03:28] views the the a the thumbnail
+[00:03:30] description and we throw it into a table
+[00:03:32] and guys check this out if I come over
+[00:03:33] now look we're getting all this
+[00:03:35] information check this out let's let's
+[00:03:36] check out what we've got here we've got
+[00:03:37] the URL we've got the date so 3 months
+[00:03:39] ago we've got the transcript explaining
+[00:03:40] what it does and what it's about we've
+[00:03:43] got the number of views it's got we've
+[00:03:44] got how long the video is we've even got
+[00:03:46] the thumbnail how cool is this because
+[00:03:48] we all know that like the thumbnail does
+[00:03:49] that look familiar well it should be
+[00:03:51] right because it's right there so we've
+[00:03:53] got the thumbnails we've got all this
+[00:03:54] data and then crucially guys look at
+[00:03:56] this description for the thumbnail look
+[00:03:58] at this right the attach you to
+[00:04:00] thumbnail exhibits a high level of
+[00:04:01] visual quality with clear sharp image
+[00:04:04] resolution it goes on so the backdrop
+[00:04:05] features an image of Earth from space
+[00:04:07] showcasing the curvature of the planet
+[00:04:08] and the sunriser blah blah blah I mean
+[00:04:10] the level of detail hereit in terms of
+[00:04:11] text usage the thumbnail uses minimal
+[00:04:13] text which is effective and maintaining
+[00:04:14] Simplicity whil ensuring readability the
+[00:04:17] large font size and bold style of number
+[00:04:18] 37 are attention grabbing and easily
+[00:04:21] readable even on small screens guys that
+[00:04:24] is a phenomenal point because most
+[00:04:26] YouTube thumbnails are not optimized for
+[00:04:28] mobile there literally picking apart
+[00:04:31] jabbing and throwing the shots about
+[00:04:33] what actually makes this YouTube
+[00:04:34] thumbnail good or not which is I just
+[00:04:36] think
+[00:04:37] incredible it goes down there extra
+[00:04:39] additional information we come down and
+[00:04:41] we've got the channel so with this
+[00:04:42] information guys we've got an overview
+[00:04:43] of the videos about we've got a
+[00:04:44] description of the thumbnail we can even
+[00:04:46] see the thumbnail we know how long the
+[00:04:47] video is how many views it's got and
+[00:04:49] what the title is and we've done that
+[00:04:51] for five videos now I did it for five in
+[00:04:54] reality you can do for 20 or however
+[00:04:55] many you like I'm just doing it for five
+[00:04:57] just for Simplicity say now check this
+[00:04:59] out this the process it grabs the
+[00:05:00] records we get the data and then we're
+[00:05:03] going to analyze all of the information
+[00:05:04] to create some suggestions about based
+[00:05:06] on all those individual data points What
+[00:05:09] observations can we find now let's just
+[00:05:10] take a step back while this is working
+[00:05:12] beautifully in the background for us
+[00:05:14] it's just it's just a phenomenally
+[00:05:15] really epic Automation and if we can get
+[00:05:18] clever and sophisticated with how we're
+[00:05:20] using data to create better decisions I
+[00:05:23] really think it's going to be
+[00:05:24] gamechanging because we can analyze data
+[00:05:26] at a level that I've genuinely never
+[00:05:28] seen anywhere else on the internet yet
+[00:05:30] now look at this this is where the magic
+[00:05:32] happen has been added to our editable
+[00:05:33] let's go back over now and check to see
+[00:05:35] we come over to
+[00:05:36] suggestions now look at this let's open
+[00:05:39] this up and let's see what it's got to
+[00:05:41] say for us so let's open up the full
+[00:05:42] view now let's have a look okay let's
+[00:05:45] have look recent videos on diverse
+[00:05:47] topics like Avalanches mathematics and
+[00:05:48] spiders are performing well with views
+[00:05:50] ranging between 2.3 to 11 11.2 million
+[00:05:53] longer videos seem to attract more views
+[00:05:56] thumbnails with human elements or
+[00:05:57] intriguing visual visuals perform best
+[00:06:00] isn't that F let's have a look is that
+[00:06:02] true okay so these ones are doing well
+[00:06:05] okay that's
+[00:06:07] interesting wow okay that's interesting
+[00:06:09] Insight let's have a look at what else
+[00:06:10] it's got to say there's a consistent
+[00:06:12] trend of high viewership indicating
+[00:06:13] strong audience engagement across
+[00:06:14] various subjects now I've said to it
+[00:06:16] look based on those five things now look
+[00:06:18] at this if you have like 10 20 videos
+[00:06:21] it's going to give you more analysis the
+[00:06:23] other thing you can do here is integrate
+[00:06:25] your own strategy so for instance what
+[00:06:26] would I do for a viral crator prom what
+[00:06:28] I would do is I would add strategy about
+[00:06:30] my personal Channel what my target
+[00:06:32] Avatar is what my you know idea customer
+[00:06:34] profile is what I make videos about so
+[00:06:36] then it can take the data from either
+[00:06:38] competitors or take it from channels you
+[00:06:40] admire your own channel and then wash it
+[00:06:42] against what you're trying to do so you
+[00:06:44] get way more specific advice I just want
+[00:06:46] this video to be 15 hours long but you
+[00:06:47] can get an idea of the kind of thing you
+[00:06:49] can do with that right now look at this
+[00:06:51] what else is it saying video suggestions
+[00:06:53] the hidden math behind n the hidden math
+[00:06:55] behind Nature's deadlist phenomena
+[00:06:57] decoding disaster for sence of survival
+[00:06:59] when numbers save lives surprising math
+[00:07:01] so you will get guys three video titles
+[00:07:04] you will get a suggested length range
+[00:07:06] you will get thumbnails ideas based on
+[00:07:08] what's working and you get five of them
+[00:07:11] just from analyzing the data look at
+[00:07:13] this split screen ordinary subject
+[00:07:14] versus microscopic scratcher person
+[00:07:16] looking amazed at flirting mathematical
+[00:07:17] equation everyday items range it spell I
+[00:07:20] mean it's like it's crazy and you can
+[00:07:22] look through see the ones that you like
+[00:07:23] and which is why I built this with three
+[00:07:25] different suggestions so you can
+[00:07:26] basically decide what you want now with
+[00:07:28] that in mind guys what do you actually
+[00:07:30] need to run this entire automation well
+[00:07:32] if you need for channel basically all
+[00:07:34] this is built in something called me.com
+[00:07:37] which is a no code automation platform
+[00:07:39] it basically lets us like configure
+[00:07:40] different modules together that works
+[00:07:42] well we've got something called air
+[00:07:44] table n don't be intimidated by the fact
+[00:07:46] we're using something called air table I
+[00:07:47] always describe it as you know it's the
+[00:07:49] Google Sheets on the steroids it's been
+[00:07:51] hit the gym it's been hit this incline
+[00:07:52] bench press and it's time break PRS we
+[00:07:54] love a table very configurable um very
+[00:07:57] adaptable very easy to use and again
+[00:07:59] I'll show you how that works in this
+[00:08:01] video then we've got something called
+[00:08:02] appify now appify is like the universal
+[00:08:05] no code scraper so let me just pull up
+[00:08:07] and show it that looks like you'll see
+[00:08:09] an appify now this is going to if you
+[00:08:11] not see app it'll blow your mind it's
+[00:08:12] very very very cool so basically we have
+[00:08:14] scrapers for anything you can imagine we
+[00:08:16] can scrape Google Maps we can scrape
+[00:08:18] websites we can scrape Instagram we can
+[00:08:20] scrape anything we want for the purposes
+[00:08:22] of our video we're going to scr up
+[00:08:24] YouTube now
+[00:08:25] appify you have $5 worth of free scres
+[00:08:28] every month so you can build this
+[00:08:29] automation play around with it a little
+[00:08:31] bit see if it fits your purposes which
+[00:08:33] I'm sure it will do because this one is
+[00:08:34] like one of the most epic ones I think
+[00:08:35] I've ever done uh and then you get to
+[00:08:37] run have fun with it so appify will
+[00:08:39] create an account there and bring that
+[00:08:40] into the automation um the other thing
+[00:08:43] that you're going to need obviously
+[00:08:44] apart from that is something called zero
+[00:08:46] code kit now zero code kit basically
+[00:08:49] lets us parade around as coders what it
+[00:08:50] basically means is that we can have
+[00:08:52] actual python code running in a no code
+[00:08:55] environment right so if I show you what
+[00:08:57] zero code kit looks like just so you can
+[00:08:58] see again don't be put off by the fact
+[00:09:01] that um it's called like code in it it's
+[00:09:04] actually really straightforward so you
+[00:09:05] have the zero C kit you can sign up and
+[00:09:07] sign in we need to get to change that
+[00:09:09] cuz I doesn't make any sense but hey
+[00:09:11] what yeah it's a different video
+[00:09:12] entirely you come down you can grab an
+[00:09:14] API key and just integrate that into the
+[00:09:17] video and basically all we do is we Coke
+[00:09:19] it guys and if you new to the channel
+[00:09:21] essentially we just enter the script
+[00:09:23] which says look I'll give you a URL just
+[00:09:25] download the script from the URL please
+[00:09:28] and it will do that job for us really
+[00:09:30] really really cool then we got beautiful
+[00:09:32] Cloud again you could use chat GPT you
+[00:09:35] could use Claude if you want to all the
+[00:09:37] say with this is look just summarize the
+[00:09:38] video you can get clawed by heading over
+[00:09:40] to anthropic uh console. anthropic tocom
+[00:09:44] I'll show what that looks like real
+[00:09:45] quick so you can have a quick look at it
+[00:09:46] there you go over here you basically
+[00:09:48] sign in you'll get like an API key you
+[00:09:49] deposit like $5 of credits and you can
+[00:09:51] bring it back over and then just connect
+[00:09:53] it with make using that API key uh
+[00:09:56] really simple like that Additionally you
+[00:09:57] want to use platform to open
+[00:10:00] again you just deposit a few API Keys
+[00:10:02] you can have a good time and create some
+[00:10:03] interesting things um really
+[00:10:05] straightforward to use just a couple of
+[00:10:06] dollars on the API front which is really
+[00:10:08] epic and essentially guys that is all
+[00:10:11] you ever really need to get this
+[00:10:13] automation running it's very cheap it's
+[00:10:15] like a couple of cents it's super super
+[00:10:17] easy to do now with that in mind let's
+[00:10:19] actually build this one together from
+[00:10:21] scratch so you can do the entire entire
+[00:10:23] process so we head over and of course
+[00:10:25] guys if you just want to import this cuz
+[00:10:27] you think hey I just want to get started
+[00:10:28] all you ever do is come down down to
+[00:10:29] more click on import blueprint then you
+[00:10:32] choose the file you select the file hit
+[00:10:34] save and almost by Magic it just
+[00:10:36] magically appears all the prompts the
+[00:10:38] blueprints the agents all this sort of
+[00:10:39] stuff is available over in the school
+[00:10:41] Community I'll just quickly show you
+[00:10:42] what that looks like if you're curious
+[00:10:44] you want know how to do that you just
+[00:10:45] head over here to every automation pick
+[00:10:48] the video or whatever you want to do you
+[00:10:50] scroll down and all the agents here for
+[00:10:51] us to download and get started obviously
+[00:10:53] there's lots of videos that aren't on my
+[00:10:54] YouTube channel and resources and that
+[00:10:56] sort of stuff all over in the community
+[00:10:58] but you know what guys we're also going
+[00:10:59] to build it from scratch it so let's get
+[00:11:01] this from the beginning delete this and
+[00:11:03] start from the top we need to start with
+[00:11:04] a name let's give it a really cool name
+[00:11:05] let's give it sort of like let's go with
+[00:11:09] viral
+[00:11:10] YouTube one out of three and of course
+[00:11:13] we are nothing without our formalities I
+[00:11:16] think a good little um alarm Bell merge
+[00:11:18] is going to be really great here right
+[00:11:19] cool so let's see what we need to start
+[00:11:21] off with on this video so we started
+[00:11:22] with air table it's going to watch
+[00:11:24] records and appify that's going to run
+[00:11:26] for us okay so look the first thing we
+[00:11:28] need to do then is head over to a table
+[00:11:31] okay let's check it out so we head over
+[00:11:33] to air table when you sign up you'll see
+[00:11:34] a page that looks something like this so
+[00:11:36] to create an air table come down to the
+[00:11:37] bottom left click on create click on
+[00:11:39] start from scratch cuz hey we want to be
+[00:11:40] got from the beginning now the purpose
+[00:11:42] of the first sheet its only job is to
+[00:11:45] take a URL and pass it along so I'll
+[00:11:48] want you to do is come down here and
+[00:11:50] type in
+[00:11:52] Channel yeah we know we'll just call
+[00:11:53] we'll call it Channel okay perfect like
+[00:11:56] that excellent and I want to add these
+[00:11:58] to the fields so come over let's just
+[00:11:59] double check everything that we had in
+[00:12:01] our first automation okay so look as you
+[00:12:03] can see URL create time last modifi time
+[00:12:06] that's it so look come over here double
+[00:12:09] click on it come down here and just type
+[00:12:11] in create a Time awesome then click okay
+[00:12:15] sweet uh let's just rename this one
+[00:12:17] actually make sure to we know it's
+[00:12:18] always good practice to name these cuz
+[00:12:20] they can get a little FR sometimes and
+[00:12:22] then we're going to come down here and
+[00:12:23] click on last modify time now the reason
+[00:12:26] why we do last modify time is because
+[00:12:29] essentially we needed to understand like
+[00:12:32] what was the latest thing like we have
+[00:12:34] 50 things in this we don't want to grab
+[00:12:35] all 50 right we just wanted to grab the
+[00:12:37] thing and it's done so we enter the
+[00:12:39] channel it's Crea time and then it's
+[00:12:41] last modified time awesome and we'll
+[00:12:43] call this one here uh channel
+[00:12:47] to analyze awesome okay cool and of
+[00:12:51] course we need Emoji right eyes cuz it's
+[00:12:52] analytical perfect click save sweet and
+[00:12:56] obviously we need to give it a name
+[00:12:57] right what did we call our actual
+[00:12:58] scenario we call it viral YouTube Sweet
+[00:13:00] let's go call it that viral
+[00:13:03] YouTube awesome perfect right now we go
+[00:13:06] back over to me now the first thing want
+[00:13:07] need to do is come to this beautiful
+[00:13:08] button here and type in air
+[00:13:10] table you can click on watch records
+[00:13:15] okay and then you'll see the thing that
+[00:13:17] we picked up right so what do we call it
+[00:13:18] we call it viral YouTube awesome come
+[00:13:21] down click on the base type in viral
+[00:13:23] YouTube and almost by Magic it has
+[00:13:26] appeared cool so we've got that on that
+[00:13:28] the table is going to be channeled to
+[00:13:30] analyze these tables will get more as we
+[00:13:31] go through cool trigger Fields going to
+[00:13:33] be last modify time limit time we don't
+[00:13:36] really need that many to be fair so
+[00:13:37] maybe we just limit this to one actually
+[00:13:39] cuz we're going to analyze one at a
+[00:13:41] particular time uh label filled
+[00:13:43] basically don't need to worry about that
+[00:13:44] too much but for this gu we're going to
+[00:13:46] put on channel going to come down and
+[00:13:47] then we click okay awesome and then the
+[00:13:50] next thing you want to do guys is
+[00:13:51] basically add in appify to come down
+[00:13:53] type in applify run an actor awesome
+[00:13:58] okay now we need to appify to get this
+[00:14:00] really cool actess let's do that
+[00:14:02] together okay let's head over now to
+[00:14:04] ay.com you'll see something like this
+[00:14:06] reliable web scrapers fact it is the
+[00:14:08] Willy Wonka of the scraping world we
+[00:14:10] love it we go to
+[00:14:12] console all right awesome now what we're
+[00:14:15] looking for is this one here called the
+[00:14:17] fast YouTube channel scraper okay how do
+[00:14:19] you find that well look all you do on
+[00:14:22] the left hand side you come down to
+[00:14:23] store okay and just type in fast YouTube
+[00:14:25] channel scraper here and you'll see this
+[00:14:27] one here streamers YouTube channel
+[00:14:29] scraper little aside by the way guys you
+[00:14:31] can also just get one for shorts and
+[00:14:33] again like if it can be scraped there's
+[00:14:36] probably something on appy it can do it
+[00:14:37] there are alternatives but for the
+[00:14:38] purpos of this we're just going to go
+[00:14:40] with this one so the fast YouTube
+[00:14:42] channel scraper awesome now on the
+[00:14:44] bottom left you will see $5 of credit uh
+[00:14:47] if you just create an account really
+[00:14:49] straightforward and all you do guys now
+[00:14:51] look at this you basically just enter in
+[00:14:53] the URL that you want to do it here now
+[00:14:54] if you want to just run it like inside
+[00:14:57] appify it's dead straightforward you can
+[00:15:00] pick the maximum number of videos you
+[00:15:01] can look at like things like uh there's
+[00:15:03] loads of things that you can configure
+[00:15:05] but let's just say I wanted to do I
+[00:15:07] don't know seven videos for this and why
+[00:15:09] don't we do my YouTube channel huh would
+[00:15:11] that be cool let's do my YouTube channel
+[00:15:12] all right cool let's go home let's get
+[00:15:15] the Jack Robert's YouTube channel let's
+[00:15:16] head over now to appify as a quick for
+[00:15:19] instance I type that in and then if I
+[00:15:21] just click save and start for example
+[00:15:23] like that uh it will start to run in the
+[00:15:25] background again I'm just showing you
+[00:15:26] this for your benefit so you can get a
+[00:15:27] slight sense of how appify works for you
+[00:15:29] the AC will get the data and then what
+[00:15:31] will happen is it'll then spit things
+[00:15:32] out for us in the background so look how
+[00:15:35] much did this cost us this cost us less
+[00:15:38] than a cent to run and you can check out
+[00:15:40] by preview new tab and this is all the
+[00:15:42] data from the last seven videos on my
+[00:15:44] YouTube channel how many views I got
+[00:15:45] when I posted them my channel URL number
+[00:15:47] of subscribers duration blah blah blah
+[00:15:48] blah all the sort of all the beautiful
+[00:15:50] stuff that we really uh want to know
+[00:15:52] though now guys come over here create a
+[00:15:53] task click continue I've already done it
+[00:15:55] so I'm not required to do that now what
+[00:15:57] we do crucially is click on this Jon
+[00:15:58] okay
+[00:15:59] now look you can see I've specified
+[00:16:02] seven videos all right but if I come
+[00:16:04] over to the Json I can come down here I
+[00:16:06] can copy all of that information and now
+[00:16:09] what I want you to do is come back over
+[00:16:10] now to make you your actor you need to
+[00:16:12] select the actor so let's just double
+[00:16:14] check and make sure which actor we had
+[00:16:16] it was streamers YouTube channel scraper
+[00:16:18] cool all right let's do that streamers
+[00:16:21] YouTube channel scraper and then guys
+[00:16:23] just enter that in there and then what
+[00:16:26] you would do so for instance let me just
+[00:16:27] um save this
+[00:16:29] don't worry about build don't worry
+[00:16:30] about timeout and don't worry about
+[00:16:32] memory I'm going to unlink these two for
+[00:16:33] the moment okay I'm going to click run
+[00:16:35] once on this run this module only to
+[00:16:37] make sure it's working and it's found
+[00:16:39] the record but look at this if I come
+[00:16:40] back over and I just give it say I don't
+[00:16:43] know my URL for instance and I type it
+[00:16:45] into Channel like
+[00:16:47] that I come back over to the automation
+[00:16:49] if I run this
+[00:16:50] once you see how it grabbed
+[00:16:53] that perfect right so what do we do we
+[00:16:56] connect those together like so we come
+[00:16:59] in appify and you can see now it's got
+[00:17:01] the URL all you do is you copy that and
+[00:17:05] just replace it with
+[00:17:08] URL okay and then get rid of this here
+[00:17:12] sweet awesome and then we click okay
+[00:17:15] awesome now what we do guys we head over
+[00:17:16] to the second part of the aut and
+[00:17:18] believe it or not that's actually like
+[00:17:20] the most complicated bit of it so if
+[00:17:21] you've done that like you're going to
+[00:17:22] smash out okay so we come over here to a
+[00:17:25] second automation of course we are
+[00:17:27] nothing without a formalities let's come
+[00:17:29] on name it honestly naming it becomes
+[00:17:32] like when you get like 50 of these it
+[00:17:33] gets crazy you really got to name it now
+[00:17:36] let's zoom out okay first one has
+[00:17:37] basically we've enter the URL appies
+[00:17:39] scrape the data now what we need to do
+[00:17:41] is grab that data bring it in and start
+[00:17:44] basically con jolling it and doing the
+[00:17:46] bits we need to for step three which is
+[00:17:48] down on Step One is the grab and go step
+[00:17:49] two is the data step three is the
+[00:17:52] analysis and a bit where you go crazy
+[00:17:54] viral and yeah hopefully you remember is
+[00:17:56] when you've got like a million
+[00:17:57] subscribers or something so what we're
+[00:17:59] going to do now is we're going to watch
+[00:18:00] actor runs like so so what this say is
+[00:18:03] the second that actor finishes I want
+[00:18:05] you to go and grab it and basically tell
+[00:18:07] me about it okay so look we choose a
+[00:18:09] hook we click on ADD and we'll give it a
+[00:18:11] few seconds to load and again streamers
+[00:18:14] YouTube channel scrape it awesome by the
+[00:18:16] way guys I've got videos you can check
+[00:18:17] out if you want to scrape comments
+[00:18:19] that's phenomenal that's another thing
+[00:18:21] you can add in basically how deep you
+[00:18:22] want to go and how long you want these
+[00:18:24] videos cuz I could add in all the stuff
+[00:18:25] but hopefully I'm building these a
+[00:18:26] module way to try and make it as helpful
+[00:18:28] as possible for you so you can just kill
+[00:18:29] it click save click okay the next thing
+[00:18:32] we need to do is grab the data so click
+[00:18:34] on next click on appify once again all
+[00:18:38] right cool get data set items this one's
+[00:18:40] really simple going to come over data
+[00:18:42] set ID let me come over so you can get a
+[00:18:44] good look at that I'm going to say data
+[00:18:47] set ID cool just scroll down and just
+[00:18:49] put default data set ID like so and then
+[00:18:52] click okay so shall we run this from the
+[00:18:54] top make sure that we've got this it
+[00:18:55] makes perfect sense now look I'm going
+[00:18:56] to run this now in the background this
+[00:18:58] is running in the background I'm going
+[00:18:59] to head back over what we need to do is
+[00:19:01] add a URL to the air table so let's go
+[00:19:03] do that very quickly okay come copy
+[00:19:07] this enter okay sweet come back over now
+[00:19:09] to this again when you do this be
+[00:19:11] running in the background perfectly air
+[00:19:13] table finds it aify runs it how cool is
+[00:19:16] that it's almost like by Magic except it
+[00:19:18] isn't Magic is it it's a little bit of
+[00:19:19] poke remake and some cool ideas now
+[00:19:22] appy come just going to come and grab
+[00:19:24] that and by the way guys like imag if
+[00:19:25] you are looking for clients to help with
+[00:19:27] YouTube If you're looking for clients
+[00:19:29] for Tik Tok and Instagram imagine how
+[00:19:31] much of a ball move it is to say by the
+[00:19:32] way I've analyzed the last 50 videos
+[00:19:35] you've done here's all the trends that
+[00:19:36] I'm seeing they don't know that you've
+[00:19:38] used this insane automation all they
+[00:19:39] know is you're a rockar and you're
+[00:19:41] bringing the value and life is good so
+[00:19:43] look at this get data set items what
+[00:19:44] have we got look at this guys an hour
+[00:19:47] and 6 minutes Beautiful video who's done
+[00:19:49] it the video how many views has it got
+[00:19:51] the thumbnail y does a thumbnail work
+[00:19:53] well let's check out and see yes it does
+[00:19:56] oh my gosh beautiful we love it come
+[00:19:58] back over all the data a man could ever
+[00:20:02] ever hope for perfect we've done that so
+[00:20:03] now we've got the data what is it that
+[00:20:05] we need to do next well we want to go
+[00:20:08] now and get the transcripts from that
+[00:20:10] and then we kind of want to do a
+[00:20:11] summarization and then we want to
+[00:20:13] analyze the thumbnail so let's start
+[00:20:14] with zero code kit okay so all we do for
+[00:20:17] that is click on this beautiful plus
+[00:20:18] type in zero Cod kit by the way if you
+[00:20:20] probably know I'm out in Vegas we did
+[00:20:22] the home your school Games winners thank
+[00:20:23] you everybody by the way for supporting
+[00:20:25] with that I really really appreciate you
+[00:20:27] doing that and we even had a meet up
+[00:20:28] with AI automation community that was so
+[00:20:30] so so cool honestly it was like the best
+[00:20:32] thing ever to see your beautiful faces
+[00:20:34] well look at this zero code kit all
+[00:20:36] we're going to type down guys is python
+[00:20:38] okay and just run python code like when
+[00:20:41] I tell my Cod of friends we're running
+[00:20:42] code they're like I don't believe it I'm
+[00:20:44] not well you better believe it cuz
+[00:20:45] that's exactly what we're doing we come
+[00:20:46] over we've got that code I'm going to
+[00:20:48] zip over quickly now to my school
+[00:20:49] Community to grab all the beautiful
+[00:20:51] stuff so I am on let's just check okay
+[00:20:54] for this is every automation we scroll
+[00:20:56] down a little bit now let's just look at
+[00:20:57] some of our agents uh YouTube transcript
+[00:20:59] awesome we just click on YouTube
+[00:21:01] transcript code that'll load up and
+[00:21:03] basically just copy all the way up to
+[00:21:05] here if you want to build this yourself
+[00:21:07] uh basically like Claude and uh chat GPT
+[00:21:09] you can ask them tell them your purpose
+[00:21:10] and start like controlling with it uh
+[00:21:12] this one works really well I found I've
+[00:21:14] tried and test it so many times it does
+[00:21:16] not fail me we build automations Channel
+[00:21:18] but don't fail and that work that's
+[00:21:19] really really important now look we've
+[00:21:21] got the
+[00:21:22] URL what do we do look you click on the
+[00:21:25] URL you go back one let me just come
+[00:21:26] over here so you can get a really great
+[00:21:27] look at it okay we click on that now
+[00:21:30] basically what we're saying is go and
+[00:21:31] grab the UR video URL so we come down it
+[00:21:34] is I believe this one here okay perfect
+[00:21:37] click on that excellent so basically
+[00:21:39] that's now configurable so every time
+[00:21:41] zero code kit runs it will just grab a
+[00:21:43] transcript from URL so we're going to be
+[00:21:44] Rock and rolling and having a pip and a
+[00:21:46] pop in a good time we click okay now
+[00:21:48] zero C kit will run multiple times to
+[00:21:50] come and grab that that's excellent the
+[00:21:52] next thing we want to do is summarize it
+[00:21:55] so how do we do that well we're going to
+[00:21:56] add in clae and before we include I just
+[00:21:59] very briefly say the way you connect
+[00:22:00] zero kit to make is head of zeroc
+[00:22:02] coit.com you'll see an API key you copy
+[00:22:05] that and when you add in zero code kit
+[00:22:08] into the automation you'll be prompted
+[00:22:09] to hey bro you got an API key yes you do
+[00:22:11] you grab it you post it and then you're
+[00:22:13] ready to go all right cool so let's see
+[00:22:15] what we're going to add in next then so
+[00:22:16] we're going to add in on thropic clae I
+[00:22:18] like clae you got to like play around
+[00:22:20] with which on you use clae for me always
+[00:22:22] gives you better conversational output
+[00:22:24] and I I always want to give you the
+[00:22:25] thing that I think works you know I I
+[00:22:27] just think it's better now as you know
+[00:22:29] Claude has released um 3.5 on Sonic now
+[00:22:33] you won't see it in here yet so what
+[00:22:35] we're going to do instead is click on
+[00:22:37] map you see you got model let me show
+[00:22:39] I'll put this down below in the
+[00:22:40] description to you because you can use
+[00:22:41] it basically what we're going to do is
+[00:22:42] enter this code in here and I've got to
+[00:22:44] give full credit to my beautiful
+[00:22:46] Community for honestly it's so
+[00:22:47] ridiculous like they said that within
+[00:22:48] like I think it was something like
+[00:22:49] within 20 minutes someone had already
+[00:22:51] figured out how to integrate to make it
+[00:22:53] was outrageous so thank you man I I
+[00:22:55] really appreciate you sharing that with
+[00:22:56] the group now Max tokens just put that
+[00:22:58] at
+[00:22:59] 4,000 come down uh okay cool now we need
+[00:23:02] messages okay so come down to message we
+[00:23:04] roll is going to be a user come down to
+[00:23:07] Content and then for the text guys we're
+[00:23:08] just going to say hey let's analyze the
+[00:23:10] video so let's have a quick look cool so
+[00:23:12] the prompt is very simply you will be
+[00:23:14] provided with the transcript of a
+[00:23:15] YouTube video your task is to carefully
+[00:23:18] read and comprehend the content of that
+[00:23:19] transcript after analyze a transcript
+[00:23:21] generate a concise summary of the key
+[00:23:23] points and main ideas discussed in the
+[00:23:25] video the summary should be informative
+[00:23:27] helpful and to the point with a maximum
+[00:23:29] length of 35 words when just say look
+[00:23:31] pick up the call message pick up the
+[00:23:33] stuff cut out the fluff be brief be
+[00:23:34] bright be gar use precise language and
+[00:23:37] remember your goal is to provide a
+[00:23:38] comprehensive yet succinct overview of
+[00:23:41] the video's content en R to quickly
+[00:23:43] grasp the core message and Main
+[00:23:45] takeaways uh do not repeat the title
+[00:23:47] I'll put this down there description for
+[00:23:48] you so you can describe and go and just
+[00:23:50] use this one so look the YouTube video
+[00:23:52] transcript what do we do well we just it
+[00:23:54] enter the result from the Run python
+[00:23:58] code TR transcript then we click okay
+[00:24:00] awesome now what do we do the next thing
+[00:24:02] we need to do as you can see from our
+[00:24:03] automation over here is describe the
+[00:24:06] image okay now look at this now the
+[00:24:09] reason why I'm using chat GPT here is I
+[00:24:11] just it just cuts out a step I don't
+[00:24:13] have to download the file plug the file
+[00:24:14] into anthropic clo I can just give it
+[00:24:17] URL and it does it I really like that
+[00:24:18] for chat GPT so we click on plus we come
+[00:24:21] over let's get chat GPT beautiful
+[00:24:24] beautiful beautiful and we're going to
+[00:24:26] go for the
+[00:24:27] vision not the not the Marvel characters
+[00:24:29] from around uh defending everybody this
+[00:24:31] one's a bit cooler uh and we're going to
+[00:24:33] call this one of course we've got to
+[00:24:35] name these actually I'm going a second
+[00:24:36] I'm got a second I'm getting a little
+[00:24:37] carried away here we need to get these
+[00:24:39] named I need I need to slow down I'm
+[00:24:41] getting a little bit too uh too
+[00:24:42] enthusiastic with this okay rename
+[00:24:45] describe it and honestly like you're
+[00:24:46] fine like one of the things I often find
+[00:24:48] if you don't name them like you you
+[00:24:50] could grab a coffee which I do a lot I
+[00:24:53] come back I'm like oh my goodness what
+[00:24:54] even was this automation seriously look
+[00:24:56] at this sumai video this describe image
+[00:24:58] cool so how do we describe the image now
+[00:25:01] check this out right let me come and
+[00:25:02] show you this umal problem now look this
+[00:25:04] is our you YouTube thumbnail analysis
+[00:25:06] bot and you saw how good the last one
+[00:25:07] was it really like captured the essence
+[00:25:10] of it I was really impressed with that
+[00:25:12] now look analyze the attached YouTube Su
+[00:25:14] up consider everything that you see
+[00:25:16] including nonobvious insides we are
+[00:25:18] thinking about this from the perspect
+[00:25:19] from the perspective of a viewer here
+[00:25:21] are some there a prospective viewers
+[00:25:23] perspective that's the time to write
+[00:25:24] that one down here are some additional
+[00:25:26] considerations You may wish to consider
+[00:25:28] oh my goodness which the list is
+[00:25:30] non-exhaustive I like to say that
+[00:25:32] because I don't want to just pick the
+[00:25:34] nine things like if there's other
+[00:25:36] details we haven't included grab it and
+[00:25:38] bring it back visual CL Clarity design
+[00:25:41] element the usage of text human elements
+[00:25:44] content representation composition color
+[00:25:46] psychology uniqueness you know mobile
+[00:25:49] optimization Emeral impact and
+[00:25:50] consistency and obviously we go into
+[00:25:51] different things said like Cru guys rule
+[00:25:53] of third so for this like I had an a do
+[00:25:55] research on like what actually are what
+[00:25:58] makes a great thumbnail and it is stuff
+[00:26:00] like composition it's contrast it's like
+[00:26:02] no more than three colors it's like
+[00:26:03] there's like a that's a whole separate
+[00:26:05] conversation but you get the idea so all
+[00:26:07] you would do guys is basically you copy
+[00:26:09] all of this beautiful document here and
+[00:26:11] to come over now to make click on this
+[00:26:15] awesome now we' got the prompt which is
+[00:26:17] this beautiful I'm going to come down
+[00:26:19] and then add image like so and then
+[00:26:21] it'll say image URL okay now look click
+[00:26:23] on the image URL let me just come over
+[00:26:25] here so you can get a beautiful look at
+[00:26:26] that come down image URL
+[00:26:28] awesome now look we find the image
+[00:26:31] URL the thumbnail URL is right there
+[00:26:34] beautiful perfect now the model I want
+[00:26:37] you to use is gbt 40 like that excellent
+[00:26:40] and then we click okay cool and then the
+[00:26:43] final step of this is to take all the
+[00:26:44] cool data we've got and throw it into a
+[00:26:47] table interestingly guys so I was
+[00:26:49] staying at like an Airbnb with a lot of
+[00:26:50] the other winners from the school games
+[00:26:52] and there's like honestly there the of
+[00:26:54] 19y olds who have like over a million
+[00:26:56] subscribers on YouTube I'm like oh my
+[00:26:58] gosh like every room I went in was a was
+[00:27:01] a YouTube Mastermind it was it was
+[00:27:03] absolutely ridiculous click on create a
+[00:27:05] record I'm going to get a few come
+[00:27:07] talking Ops cuz like d you have to come
+[00:27:09] and share this stuff it's absolutely
+[00:27:10] outrageous come on to viral let's add
+[00:27:13] now a new uh field so what we do is
+[00:27:15] start from scratch hit this plus click
+[00:27:17] on start from scratch this one we're
+[00:27:19] going to call uh data like
+[00:27:22] so all right sweet a little data Emoji
+[00:27:24] as
+[00:27:25] well okay now let's think of all the
+[00:27:28] that we want to add to this if I look at
+[00:27:29] my previous one for example URL date
+[00:27:32] transcript cool let start with that for
+[00:27:34] instance okay so let's go URL data
+[00:27:36] transcript so click on this one URL
+[00:27:39] perfect click on right and then just
+[00:27:41] literally duplicate the field like so
+[00:27:44] then we got date now the date's cool and
+[00:27:46] the reason I think the date is really
+[00:27:47] important is because we want to add like
+[00:27:50] a greater
+[00:27:51] emphasis to videos that are fresher so
+[00:27:55] for example I had a video like that did
+[00:27:56] really well when I started off on
+[00:27:57] YouTube like chat GPT hacks it's not so
+[00:28:00] much relevant anymore right so we don't
+[00:28:02] really need to pay as much attention to
+[00:28:04] those videos so we've got transcript
+[00:28:07] we've got
+[00:28:09] title okay
+[00:28:11] transcript
+[00:28:13] beautiful and so what we'll actually do
+[00:28:16] with this guys is we'll build in a it's
+[00:28:19] like a decaying value so like the older
+[00:28:21] it is the less yeah I want you to pay
+[00:28:24] attention to it right a title get a
+[00:28:27] little monacle on that that oh my
+[00:28:28] goodness little keyboard shortcuts
+[00:28:30] kicking off which is really
+[00:28:31] cool okay
+[00:28:33] beautiful and guys you just add in the
+[00:28:36] data points that you want that you think
+[00:28:37] are relevant I mean this will get you
+[00:28:39] like 95% the way that it's a really
+[00:28:41] really powerful start actually
+[00:28:42] transcript title The Views the duration
+[00:28:45] and the thumbnail okay so let's check
+[00:28:47] again right click on this duplicate
+[00:28:49] we're going to go
+[00:28:51] for views we're going to duplicate this
+[00:28:55] again we're going to go for
+[00:29:00] duration oh my goodness oh my
+[00:29:03] goodness for that we'll go a little time
+[00:29:09] emoji and then we want to add the
+[00:29:11] YouTube's thumbnail link now the reason
+[00:29:13] I like YouTube thumbnail link is cuz you
+[00:29:14] know sometimes you just want to kind of
+[00:29:16] do your own analysis on top of this okay
+[00:29:18] it's like it's amazing to get this thing
+[00:29:20] but imagine if you can say actually just
+[00:29:22] show me what that looks like you can
+[00:29:23] kind of just like have a look at it have
+[00:29:26] a peek and kind of get what it's saying
+[00:29:27] and that's I like to bring the data into
+[00:29:29] a table then I do what I want with it
+[00:29:30] after that point okay and then we're
+[00:29:32] going to again duplicate this and I
+[00:29:34] think we only got a couple more in there
+[00:29:36] the thumbnail description and then and
+[00:29:39] then the actual Channel itself all right
+[00:29:40] now check this
+[00:29:42] out so this is going to be thumbnail
+[00:29:48] description all right for this one let's
+[00:29:51] have some popcorn we love it's my it's
+[00:29:53] my new favorite mode actually is a
+[00:29:54] popcorn to be fair with you and I've
+[00:29:56] added the channel in because
+[00:29:59] if you're doing you know analysis across
+[00:30:00] multiple channels it's just helpful now
+[00:30:03] crucially do add these two final fills
+[00:30:05] one's going to be date excuse
+[00:30:08] me created time like so okay and as you
+[00:30:13] know guys are beautiful wonderful last
+[00:30:16] modified time okay last modified
+[00:30:20] time okay I think we're cooking now I
+[00:30:24] think we're cooking with oil awesome
+[00:30:25] let's go back over now maybe that's a
+[00:30:27] bad thing that's like a traditional
+[00:30:28] English expression but I don't think
+[00:30:29] it's a good thing actually I'll be
+[00:30:30] honest with you we click on
+[00:30:32] Bas so we come over here now guys we got
+[00:30:34] click on Bas now what do we call our
+[00:30:36] beautiful thing we called it viral
+[00:30:38] YouTube Sweet come over here bit of
+[00:30:40] viral
+[00:30:42] YouTube all right awesome then all load
+[00:30:44] they don't ask us which of the tabs do
+[00:30:45] we want and we just say look I want to
+[00:30:47] go to the data tab if you don't mind
+[00:30:49] kind sir and then we've got all this
+[00:30:51] stuff guys and look at do you see how
+[00:30:52] much of a difference the thumbnails make
+[00:30:54] dude I have a I have a penion for design
+[00:30:56] I can't I have to have the the emerges
+[00:30:58] in there so start with the URL okay
+[00:31:01] awesome so what is the YouTube video URL
+[00:31:03] well it is here sweet then when was it
+[00:31:07] made the date was that's have five four
+[00:31:11] weeks ago transcript okay that's going
+[00:31:14] to be the summarization of the video
+[00:31:16] from Claude in this case we've got the
+[00:31:18] title in other words what's the video
+[00:31:19] called Let me just bring this over and
+[00:31:21] get a really great look at it guys
+[00:31:23] um okay we got title this AI finds B
+[00:31:26] reals that Mak some blah blah blah how
+[00:31:28] many views did it get Channel Total
+[00:31:30] views no that's not what we
+[00:31:32] want oh my goodness duration an hour and
+[00:31:35] 6 minutes YouTube thumbnail link so
+[00:31:38] let's grab that in case you want to have
+[00:31:39] a quick look at
+[00:31:40] it thumbnail URL and then crucially the
+[00:31:44] thumbnail description from the describe
+[00:31:46] image and then me click okay and that's
+[00:31:49] all our data so I suggest let's um
+[00:31:51] rewind this and do it with a different
+[00:31:54] uh Channel now so what would be a really
+[00:31:55] cool channel to do why don't we do I
+[00:31:57] thought's let's do
+[00:31:58] um let's do Alex or mosy okay let's have
+[00:32:02] a look at Alex's channel so we click on
+[00:32:05] the channel we come on home and then we
+[00:32:07] copy this and let's go over now to our
+[00:32:09] beautiful air table going run this once
+[00:32:11] set it up in the background that's okay
+[00:32:13] so let's run this again don't worry
+[00:32:15] about this this will be running in the
+[00:32:16] background for you let's go over to our
+[00:32:18] data okay sweet we're going to come here
+[00:32:21] and we're going to click on enter that
+[00:32:23] thing there now what's going to happen
+[00:32:25] is it's going to identify that that's
+[00:32:27] been added
+[00:32:28] it's going to run the ACT going to do
+[00:32:30] the analysis for us and then if it's
+[00:32:31] done its job properly we should see
+[00:32:33] these little things blah blah blah blah
+[00:32:34] popping up and then finally crucially
+[00:32:36] guys we should start to get some
+[00:32:37] analysis in the data section about
+[00:32:39] Alex's stuff now it's going to be the
+[00:32:41] data not the analysis excuse me but the
+[00:32:43] data should pop in then the final step
+[00:32:45] is just going to be us doing the
+[00:32:46] analysis this is now waiting for the ACT
+[00:32:48] to run also guys the trip the trip was
+[00:32:50] crazy I'm still in Vegas right now hence
+[00:32:51] the hotel room um I bought I thought I'd
+[00:32:53] bring a mic just so I can jump on I feel
+[00:32:55] like I've done like no work in like the
+[00:32:57] past 5 days you know when you get in a
+[00:32:58] flow of like making videos and having a
+[00:33:00] good time and stuff like it's been
+[00:33:01] amazing like networking having
+[00:33:03] incredible conversations but I think
+[00:33:05] I've built like three years worth of
+[00:33:07] like friendships in about 5 days so it's
+[00:33:10] been pretty wild and I'm I'm super glad
+[00:33:11] to get back on and start making videos
+[00:33:13] to share some awesome stuff with you
+[00:33:14] guys I've got like I have like a million
+[00:33:16] ideas like there's not enough room on
+[00:33:17] notepad right now it's absolutely crazy
+[00:33:20] so we've got all this stuff working out
+[00:33:21] in the background which is good we're
+[00:33:22] getting the video summarized uh the
+[00:33:24] images are getting described which is
+[00:33:25] perfect so we should see that boom right
+[00:33:28] that perfect let's look at this we add
+[00:33:29] up two weeks ago Alex did a video
+[00:33:32] talking about the things biggest
+[00:33:33] business mistakes successes is crucial
+[00:33:35] for Learning and growth crystallizing
+[00:33:37] knowledge for documentation attributing
+[00:33:39] success and failure to correct factors
+[00:33:40] is essential your failures can make you
+[00:33:42] rich if you write them down how many
+[00:33:43] views it got YouTube thumbnail link and
+[00:33:46] then we've start to get some description
+[00:33:48] uh on the thumbnail which is awesome let
+[00:33:50] me come back over one little thing
+[00:33:51] actually I want you to add to the
+[00:33:53] description of the thumbnail um is this
+[00:33:56] very very simple line at the bottom
+[00:33:57] which I added in which is do not use
+[00:34:00] markdown use paragraphs okay uh so let
+[00:34:04] me come back over now let me show
+[00:34:05] you cck well it won't let me show until
+[00:34:08] it's finished running this it's just
+[00:34:09] adding in all the additional videos so
+[00:34:10] look we can see we should be able to see
+[00:34:11] four now let's have a like present faces
+[00:34:14] the person add to human element
+[00:34:15] potential closeup shot the person fell
+[00:34:16] close camera making the missions more
+[00:34:18] intense more engaging awesome and if
+[00:34:20] you're doing research guys on channel
+[00:34:22] I'd say survey a couple of these you
+[00:34:23] know get some data and actually the
+[00:34:25] biggest use case for is I make this vide
+[00:34:27] analyze my own for Trends so I could
+[00:34:29] actually say what is it about my channel
+[00:34:31] cuz that's one of the things I did with
+[00:34:32] some many YouTube gurus I say Guru in a
+[00:34:34] positive sense they were like what is it
+[00:34:36] about this Channel and stuff and what do
+[00:34:38] people want so guys mission accomplished
+[00:34:41] I mean this is just so cool this is so
+[00:34:43] sick even if you're giving this like
+[00:34:45] your clients like imagine able to say d
+[00:34:46] well I've got your data right here let's
+[00:34:47] just pull up and have a look and we can
+[00:34:49] get all the different aspects and things
+[00:34:51] like that so that's now weing the
+[00:34:52] background I think it's going to do
+[00:34:53] seven fors and so that'll be complete
+[00:34:56] which is awesome so the final step now
+[00:34:58] is grab the data run it through the
+[00:35:00] system and enjoy the fruits of our
+[00:35:03] beautiful labor so we come over now to
+[00:35:05] the final stage of it now what do we do
+[00:35:07] for the final step okay we've got we're
+[00:35:09] going to watch the record we use just
+[00:35:11] text aggregator we're going to create a
+[00:35:13] message and then we're going to add it
+[00:35:14] into the record now very briefly let
+[00:35:16] just quickly explain this this is going
+[00:35:17] to basically watch the data that appears
+[00:35:20] and it will just the basically download
+[00:35:22] all of it for us into one thing but
+[00:35:24] here's the problem there's like a
+[00:35:26] million different things so what we need
+[00:35:27] to use this text aggregator where we
+[00:35:29] enter stuff like this which is watch the
+[00:35:31] records add the date the title The Views
+[00:35:34] the duration the thumbnail description
+[00:35:35] and transcript into one single output
+[00:35:39] and then we take that entire output and
+[00:35:41] we throw it in to clae or your language
+[00:35:44] model of choice and then we add it into
+[00:35:46] the add table okay so let's start with
+[00:35:47] watching records and then we can add in
+[00:35:49] the text aggregator module which will
+[00:35:51] become our new best friend for this
+[00:35:52] automation okay so type in air table
+[00:35:54] like so all right watch
+[00:35:56] records that's say it's He Who Watches
+[00:35:59] this is like a Game of Thrones type of
+[00:36:00] thing okay type in YouTube we got viral
+[00:36:03] YouTube which I believe is the right one
+[00:36:04] yeah cool I just want to Triple chat cuz
+[00:36:06] I have so many YouTube variants it gets
+[00:36:07] a bit ridiculous and we wed to watch on
+[00:36:09] the data side for us
+[00:36:12] awesome sweet and we wanted to grab all
+[00:36:15] of them just like if if there's a field
+[00:36:16] you don't want like don't worry about it
+[00:36:18] you do have to add it in there limit I'm
+[00:36:20] going to put it 20 cuz maybe want to do
+[00:36:21] 20 or so uh and then we click okay sweet
+[00:36:24] and then you're going to add in a new
+[00:36:26] little button here and to come over we
+[00:36:27] type in text oh Google Sheets no way man
+[00:36:31] oh my goodness come down let's type in
+[00:36:33] text aggregate like
+[00:36:37] so you select this one here and then
+[00:36:39] basically enter in this prompt okay so
+[00:36:41] you've got let me come over so you can
+[00:36:43] see okay we got date which is going to
+[00:36:45] be the date which has loaded me
+[00:36:48] immediately we've got the title over
+[00:36:50] here we've got the views over here we
+[00:36:53] got the duration now guys the reason why
+[00:36:55] I've done this is to help Claude
+[00:36:57] understand what's what right well it's
+[00:36:58] basically Pro called labeling I'm like
+[00:37:00] this bit refers to this data point this
+[00:37:02] bit refers to that data point so we can
+[00:37:04] kind of get it then we've got the
+[00:37:05] thumbnail description and then we've got
+[00:37:07] the transcript
+[00:37:09] summary um awesome okay excellent then
+[00:37:12] we click okay then we're going to add in
+[00:37:14] clae which is our language model of
+[00:37:15] choice here so we come clae create a
+[00:37:17] message like so okay sweet again we want
+[00:37:20] the same model that we used last time so
+[00:37:22] let's go grab it and find out what we
+[00:37:23] what we mapped across as uh CL 35 Sonet
+[00:37:27] or
+[00:37:28] right we click on map enter that M Max
+[00:37:31] tokens
+[00:37:33] 4,000 add a message now I hear what
+[00:37:36] you're saying you're saying well what
+[00:37:37] message have I got to add right we'll
+[00:37:38] check this out all
+[00:37:39] right it's text oh my goodness this
+[00:37:42] added like a million things now let me
+[00:37:44] show you the the bot for this viral
+[00:37:47] Creator now look at this I'm very I I
+[00:37:49] like this one a lot look you are an AI
+[00:37:51] bot designed to analyze video metrics
+[00:37:54] and generate insights and suggestions
+[00:37:56] for future content you'll task is to
+[00:37:58] examine the provided data identify
+[00:37:59] Trends and offer recommendations for new
+[00:38:01] videos here's the data you're going to
+[00:38:03] get you're going to get the date was
+[00:38:04] posted the transcript the title The
+[00:38:06] Views the duration and the thumbnail
+[00:38:09] description and then here like we give
+[00:38:11] it then instructions for its analysis
+[00:38:12] okay time relevance consider more recent
+[00:38:14] videos as more relevant apply the K
+[00:38:17] factor to all the videos relevant for
+[00:38:19] example one video is more relevant than
+[00:38:21] it's p thought video because guess what
+[00:38:22] guys times change people change they you
+[00:38:24] know what they want like what's relevant
+[00:38:26] to like for example I don't want a video
+[00:38:27] on to make a wheel right like it's not
+[00:38:28] relevant to me view performance identify
+[00:38:31] videos from the highest view count look
+[00:38:32] at common factors amongst High
+[00:38:34] performing videos analyze the transcript
+[00:38:37] identify correlation in content themes
+[00:38:40] and view counts is it the case every
+[00:38:42] time I talk about these beautiful
+[00:38:43] electrolytes I go viral I don't know
+[00:38:46] maybe it is by the way little side note
+[00:38:47] guys I none of this is in service of
+[00:38:51] necessarily going viral like it's better
+[00:38:53] I believe to make a high degree of
+[00:38:54] impact for you know for less people than
+[00:38:57] shallow impact for many people so do
+[00:38:59] bear that in mind it isn't just about
+[00:39:01] like going viral but I feel that video
+[00:39:03] performance can be a good indicator of
+[00:39:04] what's going on content analysis analy
+[00:39:08] primescript and titles for occurring
+[00:39:09] themes keywords and topics Oh by little
+[00:39:11] tidbit by the way one of the things I
+[00:39:12] asked Alex OSI was on YouTube is there's
+[00:39:14] some advice at moment about like should
+[00:39:16] you build like personal content so for
+[00:39:18] example in my channel I might do like
+[00:39:20] eight videos on AI automations and then
+[00:39:23] like a video on like hey this is me the
+[00:39:24] MMA gym or this is me like drinking
+[00:39:26] coffee with my dogs or I'm doing this
+[00:39:28] cool thing with my buddy or whatever it
+[00:39:29] is so the idea is actually no I think
+[00:39:32] like his perspective was I don't want to
+[00:39:34] speak for him but like the what I got
+[00:39:36] from what he said was it's actually
+[00:39:38] better to weave it in so for instance if
+[00:39:40] you're doing let's say you do Financial
+[00:39:42] advice right it's actually better that
+[00:39:44] you say something like in your financial
+[00:39:45] advice video just weave in your
+[00:39:47] personality like just make it like kind
+[00:39:48] of about you like so it's like don't
+[00:39:50] just sit there and go I talk about
+[00:39:52] Finance we said like you can bring
+[00:39:54] anecdotes and stories you don't have to
+[00:39:56] do exclusive videos on hey I'm going to
+[00:39:59] the lake today although if you want the
+[00:40:00] lake video let me know but you know you
+[00:40:02] get the idea kind of blend it in and
+[00:40:04] Stitch it into the fabric of your videos
+[00:40:06] rather than making specific I off to
+[00:40:08] Spain today because they may love you
+[00:40:09] and love Spain but D they're here for
+[00:40:12] your content and you can breathe and
+[00:40:13] live in your content duration impact is
+[00:40:17] there a relationship between video
+[00:40:18] duration and view count determine if
+[00:40:20] certain length range perform better than
+[00:40:22] others thumbnail Effectiveness Trend
+[00:40:23] identification outline analysis and then
+[00:40:25] I specify the required output put right
+[00:40:28] I want like a 70w breakdown just crack
+[00:40:31] down the basics like what's it about you
+[00:40:33] know explain what's working well and why
+[00:40:34] mention any outliers for example if I
+[00:40:36] got a video that does 100x there are
+[00:40:37] some incredible tools that will say like
+[00:40:40] basically what they try to do is find
+[00:40:41] YouTube channels with like like low
+[00:40:43] subscribers like 3 to 5K that have
+[00:40:45] videos over 100k CU basically what that
+[00:40:47] means is that that's an unmet demand in
+[00:40:50] the market and if you did videos like
+[00:40:51] that your propensity for views go up but
+[00:40:54] again I it's not don't not chasing the
+[00:40:57] views this is just data for you to use
+[00:40:59] and think about okay then I want five
+[00:41:01] suggested videos oh but I should also
+[00:41:03] put this up right know if there's a
+[00:41:05] trend if declining or increasing views
+[00:41:07] over time and we want basically comments
+[00:41:09] on consistency performance we've got the
+[00:41:11] output suggestion so I want video
+[00:41:13] suggestion titles one two three a length
+[00:41:15] range uh thumbnail ideas don't take this
+[00:41:18] one too seriously but you know you need
+[00:41:19] to experiment with like how long the
+[00:41:21] videos are on what performs and what
+[00:41:22] doesn't and then repeat that for five
+[00:41:23] six videos and remember to Bas your
+[00:41:26] suggestions on the Trends and patterns
+[00:41:28] you've identified in the data your
+[00:41:30] recommendation should aim to maximize
+[00:41:32] view potential based on historical
+[00:41:35] performance of similar content so what
+[00:41:38] you would do guys you would copy all of
+[00:41:39] this so for example if I showed you
+[00:41:40] actually this is exactly what I've got
+[00:41:43] over here okay now look I come here I
+[00:41:45] copy this or just you know basically
+[00:41:47] copy it from uh what I just showed you
+[00:41:49] come over here to text we enter in and
+[00:41:52] the text we want is just literally guys
+[00:41:55] the text from the T look of I zoom out
+[00:41:57] can use you see on the left how that
+[00:41:58] pulses it just means that it's connected
+[00:42:00] to that module we click okay that's
+[00:42:02] awesome and now we're done and then
+[00:42:04] finally the only thing we need to do and
+[00:42:06] you're literally complete is just add
+[00:42:08] the data to air table so we come here
+[00:42:10] type in air table like so come down
+[00:42:13] let's have a quick look create a
+[00:42:17] record click on the base again it's
+[00:42:19] YouTube
+[00:42:20] viral uh let's have a look where viral
+[00:42:23] YouTube awesome now before we do that we
+[00:42:25] need to finally add in the uh the
+[00:42:27] additional data right so let's come over
+[00:42:29] now to this and added one further thing
+[00:42:32] start from scratch if that's cool uh and
+[00:42:34] then we'll call this one
+[00:42:36] suggestions and we'll give it a little
+[00:42:38] diamond emoji like
+[00:42:40] so awesome all right cool and basically
+[00:42:43] we want the channel so we can basically
+[00:42:44] know the analysis pertains to what
+[00:42:46] channel uh based on you you're doing
+[00:42:48] different on for example and then
+[00:42:50] finally guys this one here just call
+[00:42:52] this one analysis and the diamond to
+[00:42:54] reflect the level of data that we're
+[00:42:55] getting
+[00:42:58] okay
+[00:42:59] sweet awesome now let's come back click
+[00:43:02] on a table click on the table there not
+[00:43:05] there just hit the refresh
+[00:43:06] button and speaking of good value guys
+[00:43:09] I've just launched my Instagram where
+[00:43:10] I'm going to show some behind the scenes
+[00:43:12] stuff and some content that you may not
+[00:43:13] find on YouTube it's going to be rock
+[00:43:15] and roll in good time very casual when
+[00:43:17] I'm out and about having good times I'm
+[00:43:18] going to think about how I can kind of
+[00:43:19] make short form bite size value chunks
+[00:43:22] for you guys on the go to help like help
+[00:43:24] you level up and just rock and roll and
+[00:43:26] stuff that doesn't maybe fit long
+[00:43:27] longterm uh YouTube video so I'll put
+[00:43:28] that in the description if you want to
+[00:43:29] check that out and come and join me and
+[00:43:30] say hello over there so we got
+[00:43:32] suggestions that's awesome and then
+[00:43:34] it'll pull up the different fields that
+[00:43:35] we've got so what we need to do briefly
+[00:43:37] okay is run this module once so let me
+[00:43:40] just simply run okay hang on a sec come
+[00:43:43] down here click okay let me just on link
+[00:43:46] and run
+[00:43:48] okay excellent excellent excellent it's
+[00:43:51] searching the records and let's have a
+[00:43:53] quick look at what it's found there you
+[00:43:55] go look there we go all of stuff from
+[00:43:56] Alex which is exactly what we like to
+[00:43:57] see the text aggregator by the way
+[00:44:00] basically takes all these inputs you see
+[00:44:03] how it's in so many different bundles
+[00:44:05] cuz that's each thing you see look at
+[00:44:08] that all these different things here all
+[00:44:10] that down there and the output is just
+[00:44:12] one string so basically all of it goes
+[00:44:14] in one single message output and then we
+[00:44:16] get this to do the analysis for us and
+[00:44:19] look look at this oh my goodness
+[00:44:21] thereare I see this trend summary and
+[00:44:24] Analysis in fact before I show you that
+[00:44:27] let me just show you in the air table so
+[00:44:28] you can get the full View and picture
+[00:44:29] okay I click on the corate record cuz I
+[00:44:31] want to make sure you get the full
+[00:44:32] picture always okay Channel now look oh
+[00:44:36] my goodness can I see
+[00:44:37] that what we need to do actually is just
+[00:44:39] let me create a new air table here uh
+[00:44:42] this is going to be create a record like
+[00:44:44] so come over like this connect this in
+[00:44:46] let's just go and viral YouTube One More
+[00:44:48] Time by the way I cannot tell you how
+[00:44:50] hot Texas uh sorry Las Vegas is
+[00:44:54] unbelievable honestly I I'm not wearing
+[00:44:56] this proud about by the way although I
+[00:44:58] did do today and it was a huge huge huge
+[00:45:00] huge mistake I must admit so let's add
+[00:45:02] the analysis in it which can be text
+[00:45:03] response that's sweet click okay click
+[00:45:05] okay there perfect right let's Auto
+[00:45:07] align that for example excellent now
+[00:45:11] let's copy and paste all those over one
+[00:45:13] more time all right guys let's come here
+[00:45:14] let's copy all the data like so let's
+[00:45:16] cut it what I'm doing by cutting it is
+[00:45:17] I'm replicating step two so basically
+[00:45:19] it'll work right so let's just say the
+[00:45:21] data is pasted in like so awesome and
+[00:45:24] then what do we do guys let's run this
+[00:45:26] one more time okay from the top all
+[00:45:28] right Des grab it tool aggre has done it
+[00:45:30] anthropic is now creating and analyzing
+[00:45:32] and thinking what it's going to do and
+[00:45:33] then finally we're going to add this
+[00:45:34] into our air table and what we'll see in
+[00:45:37] the suggestion section with this
+[00:45:39] analysis it should then show us what it
+[00:45:42] thinks about Alex's videos let check
+[00:45:44] this out are you ready let's have a look
+[00:45:46] expand Trend summary analysis this is
+[00:45:48] for Alex recent videos outperform all
+[00:45:50] the ones suggesting a growing Channel
+[00:45:52] popularity High performing content
+[00:45:54] focused on practical business advice and
+[00:45:56] personal elment longer videos attract
+[00:45:58] more views indicating audience
+[00:46:00] preference for in-depth content
+[00:46:02] thumbnails with contrasting colors
+[00:46:04] concise text and human elements perform
+[00:46:07] well let's check that
+[00:46:11] out yeah yeah that's absolutely fine
+[00:46:14] yeah 100% right interesting interesting
+[00:46:17] yeah cuz if you if you check it out like
+[00:46:19] you can actually see when you look at
+[00:46:21] these like different themes of what
+[00:46:22] happens there video suggestions it gives
+[00:46:24] us some different again the context for
+[00:46:26] suggestion always gets better than more
+[00:46:28] data that you give it and thumbnail
+[00:46:29] ideas and it basically builds the
+[00:46:31] thumbnail ideas based on all the
+[00:46:33] different content that you see all the
+[00:46:35] way throughout the video and the channel
+[00:46:36] and you can go back in the more videos
+[00:46:37] you do I just did seven just to make it
+[00:46:39] easy peasy but you can add 20 as many as
+[00:46:41] you want and basically get that
+[00:46:43] incredible data so guys you just created
+[00:46:45] an incredible analysis Bots look through
+[00:46:48] everything on YouTube that about covers
+[00:46:50] everything for this video I really hope
+[00:46:52] you enjoyed it but in any case guys have
+[00:46:53] a wonderful week and I'll see you in my
+[00:46:55] next video

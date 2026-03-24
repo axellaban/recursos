@@ -1,0 +1,168 @@
+{
+  "name": "Lovable 2.0 dashboard",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.2,
+      "position": [
+        600,
+        0
+      ],
+      "id": "8e4ad566-59f3-4bea-a01b-60127d78c549",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "operation": "search",
+        "base": {
+          "__rl": true,
+          "value": "appMhqPcFFnysllda",
+          "mode": "list",
+          "cachedResultName": "🩵 Lovable database",
+          "cachedResultUrl": "https://airtable.com/appMhqPcFFnysllda"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblsBVH4c6mjuThR4",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appMhqPcFFnysllda/tblsBVH4c6mjuThR4"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtableTool",
+      "typeVersion": 2.1,
+      "position": [
+        420,
+        220
+      ],
+      "id": "13ae5e1e-2560-406b-9ac0-4b6717ab6f77",
+      "name": "Airtable",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "Xqd3dnjmT0zrv06m",
+          "name": "Airtable Personal Access Token account 6"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        160,
+        220
+      ],
+      "id": "b8d7e90d-ac3f-45df-b3a7-31dbbdad6a72",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query.Request }}",
+        "options": {
+          "systemMessage": "You are a helpful AI agent. Your responsibility is to call the Airtable tool. You're going to be asked one question and only one question regardless of how it's phrased, and that is to simply produce and share the numbers that you can access in Airtable. Send them out in a format that explains it very clearly so the agent can then relay that to the individual"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        220,
+        0
+      ],
+      "id": "0e21cf3c-2cc6-4ea2-8f50-6e45299669e7",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "00f90201-5fbb-4641-a72a-f9cfc177e725",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "170415c2-bb32-4894-91ef-40d7c74f96ff",
+      "name": "Webhook",
+      "webhookId": "00f90201-5fbb-4641-a72a-f9cfc177e725"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e59fb18e-ab67-4f66-9f00-9e5e1b5dc5e1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "hSzaHeG6r2ZhCYq5",
+  "tags": []
+}

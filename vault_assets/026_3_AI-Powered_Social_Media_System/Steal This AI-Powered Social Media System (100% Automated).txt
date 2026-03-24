@@ -1,0 +1,614 @@
+[00:00:00] in this video I'm going to show you how
+[00:00:01] to create a 100% AI automated social
+[00:00:04] media system that can take an idea or an
+[00:00:06] article or a piece of news and transpose
+[00:00:09] that into a highly optimized LinkedIn
+[00:00:12] post Tweet Facebook whatever you like
+[00:00:14] and it will also create AI generated
+[00:00:16] images specific to the dimensions of
+[00:00:18] that platform all from one single input
+[00:00:21] the Twitter GPT the LinkedIn GPT they've
+[00:00:23] all been trained on the latest best
+[00:00:25] practices about what's actually working
+[00:00:27] and so we can take the best Automation
+[00:00:29] and what's actually working to create an
+[00:00:31] incredible flow and all the guides
+[00:00:33] resources the prompts for these gpts and
+[00:00:35] lots of other cool resources are all
+[00:00:37] available in the school Community I just
+[00:00:39] created down below and if you have any
+[00:00:41] other questions about this I'll be able
+[00:00:42] to help you directly there as well and
+[00:00:44] so the objective of this video is to
+[00:00:45] create this AI powered social media
+[00:00:47] system that works but also delivers
+[00:00:49] really good quality output because we
+[00:00:51] want the sizzle and we want the
+[00:00:53] substance so we'll never cover
+[00:00:55] automations that look cool but don't
+[00:00:56] actually physically work these are
+[00:00:57] things that actually work and it's stuff
+[00:00:59] that you would use so what does
+[00:01:01] automation look like we have a trigger
+[00:01:02] at the beginning that could be slack it
+[00:01:04] could be Google doc it could be any
+[00:01:05] messaging platform that you like that
+[00:01:08] then goes through to perplexity AI which
+[00:01:10] is this incredible AI search engine if
+[00:01:12] you're not familiar with it it's like
+[00:01:13] chat GPT Maks Google and it can just
+[00:01:16] pull and understand URLs and links so
+[00:01:18] it's pretty amazing so in this in this
+[00:01:19] instance here we're going to find a
+[00:01:21] piece of news or information let's say
+[00:01:24] that we're in the finance space and
+[00:01:25] there's a new article about the S&P 500
+[00:01:28] or the funy 100 the way way this
+[00:01:30] automation is going to work is we give
+[00:01:32] the news or the update or the prompt or
+[00:01:33] the idea to slack and all we ever do is
+[00:01:36] enter a URL that then goes to perplexity
+[00:01:39] AI perplexity AI will then get that it
+[00:01:41] will then summarize the entire URL for
+[00:01:44] us immediately automatically when that
+[00:01:47] happens we go through to this router and
+[00:01:50] this is kind of where the magic comes in
+[00:01:52] here it goes to four separate custom GPT
+[00:01:55] agent we have a as you can see a
+[00:01:57] LinkedIn bot we have an xbot we have a
+[00:02:00] Facebook bot and we have an Instagram
+[00:02:02] bot and the reason why we've got four
+[00:02:03] completely different GPT assistants is
+[00:02:06] because the outputs we need for each of
+[00:02:07] these social media platforms is
+[00:02:09] completely different so this isn't going
+[00:02:11] to be generic it's going to specify it
+[00:02:13] specifically to the social media
+[00:02:14] platform that you're posting on as you
+[00:02:16] can see the xbot has a completely
+[00:02:17] different set of instructions and
+[00:02:19] parameters and examples compared to the
+[00:02:21] LinkedIn agent that we have so then
+[00:02:23] these Bots will take the summary turn it
+[00:02:25] into an amazing posst for us once that
+[00:02:27] then happens we're going to get doly 3
+[00:02:29] to create a specific image for that
+[00:02:32] article in the dimensions of the
+[00:02:34] platform that we're going to be using
+[00:02:36] and then once it's done that it will
+[00:02:38] just post automatically to any of the
+[00:02:40] platforms that we want and if you want
+[00:02:42] to add specifics or add your own turn of
+[00:02:44] voice I'll show you exactly how to do
+[00:02:45] that as well and to run this automation
+[00:02:47] you only need four things the first
+[00:02:48] thing is a make.com account I've got a
+[00:02:50] link in the description down below the
+[00:02:52] second thing that you need is perplexity
+[00:02:54] credit um as you can see down here if
+[00:02:56] you come onto my account go down to the
+[00:02:58] API and you can buy credits for like $5
+[00:03:01] and it will last you a very very long
+[00:03:03] period of time like here for example
+[00:03:04] I've only used one C and I've done so
+[00:03:06] many automations with it you also need
+[00:03:07] this perplexity AI integration from
+[00:03:09] make.com and then finally some credits
+[00:03:10] from GPT and if it sounds like a lot
+[00:03:12] don't worry I've got you I made a video
+[00:03:14] literally 4 days ago covering exactly
+[00:03:16] how to set all these things up in detail
+[00:03:17] and create autonomous AI agent and if
+[00:03:19] you haven't seen that video yet
+[00:03:20] encourage you to watch that one first
+[00:03:22] and I'll be waiting for you here for
+[00:03:23] when you come back and with that in mind
+[00:03:26] let's get started with this incredible
+[00:03:28] automation great so in the MC dashboard
+[00:03:30] we come top right to create a new
+[00:03:32] scenario so let's think of our trigger
+[00:03:34] now the trigger that I'm going to use
+[00:03:36] here is going to be slack as I did in my
+[00:03:38] last video the reason I do that is cuz
+[00:03:39] that's just the software that I use but
+[00:03:41] if you've got a better trigger feel free
+[00:03:43] to use that we're going to click on
+[00:03:44] private Channel
+[00:03:45] messages perfect and then we select the
+[00:03:48] private channel from which we want the
+[00:03:49] message to come I've selected automating
+[00:03:51] private and then we put the limit for
+[00:03:52] how many messages we want it to check it
+[00:03:54] can be as low as high as you want but it
+[00:03:55] should always be high if you're going to
+[00:03:56] put the inputs there and then we click
+[00:03:58] okay Brant now how often do I want this
+[00:04:01] automation to run since we're going to
+[00:04:02] be posting on social media what we don't
+[00:04:04] want to do is send our 50 posts at once
+[00:04:06] cuz it's spam and some some platforms
+[00:04:08] will suppress you for that so what I
+[00:04:10] propose that you do here is run it every
+[00:04:12] 15 minutes to every hour so I'm going to
+[00:04:14] put here every single hour I want this
+[00:04:16] automation to run excellent but set a
+[00:04:18] time frame that you're comfortable with
+[00:04:20] and that kind of makes sense for you so
+[00:04:21] I've just Googled here Finance news top
+[00:04:23] article is is shell trying to kill the
+[00:04:25] London Stock marker let's say we think
+[00:04:27] that article is interesting and it's
+[00:04:28] something that our followers would
+[00:04:30] appreciate and we want to share our
+[00:04:31] thoughts on what that looks like so
+[00:04:32] we've copied the URL only thing you ever
+[00:04:34] going need to do this entire automation
+[00:04:36] is paste the article like that boom it's
+[00:04:38] done so what we want to do is want to
+[00:04:39] test this has work so we right click run
+[00:04:41] this module only and let's see we click
+[00:04:44] on the one to show the output come down
+[00:04:46] and the text is there excellent I always
+[00:04:48] encourage you check the automations as
+[00:04:50] you go along so that you don't build 15
+[00:04:52] modules and realize it doesn't work and
+[00:04:54] the next thing we going to add is
+[00:04:55] perplexity AI so click add new module
+[00:04:58] we're going to search for perplexity now
+[00:04:59] before you buy this again you'll see the
+[00:05:01] community you click the community it
+[00:05:02] will open a new tab you can follow to
+[00:05:04] purchase this add-on it isn't that
+[00:05:06] expensive but the other video covers
+[00:05:07] that in detail so perplexity I we click
+[00:05:10] here okay so then we click on create
+[00:05:11] chat completion like this and one quick
+[00:05:13] point I will make on the trigger before
+[00:05:15] I explain this is that there is a way to
+[00:05:17] do this where it will scrape a web page
+[00:05:19] so let's say you got a news article page
+[00:05:21] that you like a lot and they keep
+[00:05:22] posting updates and you want to take
+[00:05:24] that and I can show you how to do that
+[00:05:25] in another video but for the purpos of
+[00:05:27] this one I want it to be something that
+[00:05:28] we select and think is cool we got 100
+[00:05:30] articles that article is the one I want
+[00:05:32] to cover or that's the news update so
+[00:05:34] this is going to be user driven but we
+[00:05:35] can completely automate that if you want
+[00:05:37] to see that just let me know down below
+[00:05:39] so we're here myal 7 be instruct is fine
+[00:05:41] click add item for the message that we
+[00:05:43] want and what we're going to say we're
+[00:05:44] just going to say I would like
+[00:05:47] you to
+[00:05:50] summarize this article and the prompt
+[00:05:53] here is very clear very obvious and then
+[00:05:56] as you can see on the right hand side
+[00:05:57] here we're just looking for the text and
+[00:05:59] then we just just have text and then we
+[00:06:00] want to assign the role the role that
+[00:06:01] we're going to use here is user because
+[00:06:03] we're instructing it as a user we don't
+[00:06:05] need the assistant functionality and
+[00:06:07] then don't worry about these other
+[00:06:09] aspects like tokens temperature and top
+[00:06:11] pnk for the moment click okay that's
+[00:06:13] cool then we're going to click run once
+[00:06:15] to run the whole automation together so
+[00:06:16] like has found the message we can see
+[00:06:18] here it's got the article that we're
+[00:06:19] looking for we come back over to
+[00:06:20] perplexity and we come down to choices
+[00:06:23] we move it over 40 so you can see cool
+[00:06:24] right with here so let's have a quick
+[00:06:26] look come here
+[00:06:28] toxity choices plus one message
+[00:06:34] content I'd be happy to help you
+[00:06:36] understand the main points of the
+[00:06:37] article blah blah blah the article
+[00:06:40] discusses Royal Dutch Shell's Potential
+[00:06:42] delisting from Lin Stock Exchange and
+[00:06:44] its implication of UK's Financial Market
+[00:06:46] blam BLM so we have gotten guys and
+[00:06:48] girls a full summary an article from URL
+[00:06:51] which is pretty cool but this is where
+[00:06:53] it gets better the next one we're going
+[00:06:54] to add is going to be a router so what
+[00:06:57] the rout basically enabl us to do is to
+[00:06:59] split lit off into separate different
+[00:07:01] channels so for the purposes of this
+[00:07:03] let's add uh chat GPT let pull them up
+[00:07:07] cool and what we're going to look for
+[00:07:08] here is to message an assistant great
+[00:07:11] we're going to message an assistant uh
+[00:07:13] you'll see this if you haven't connected
+[00:07:14] it you'll be prompted to do so um again
+[00:07:16] all covered in my last video message
+[00:07:19] great so what we wanted to give it now
+[00:07:21] is the output from perplexity so the way
+[00:07:24] that we configure this assistant it will
+[00:07:26] already know what to do it's all in the
+[00:07:28] instructions so what what we put in the
+[00:07:30] message part here is we come down to
+[00:07:31] choices we get down to message and
+[00:07:35] content and that's it that's literally
+[00:07:37] it and then we pick the assistant the
+[00:07:39] assistant that we want here is LinkedIn
+[00:07:41] bar brilliant cool okay and then a
+[00:07:44] little hack for you all we're going to
+[00:07:45] do for this is we're going to clone it
+[00:07:48] just so it saves a little bit of time
+[00:07:50] we'll delete this one here and it
+[00:07:51] automatically snaps into place and then
+[00:07:54] all we do is we come here we then
+[00:07:56] instead of a LinkedIn bar we go for the
+[00:07:58] Tweet bar
+[00:08:00] so let's have look here tweet bot
+[00:08:02] perfect now I'm going to show you the
+[00:08:03] assistant and how that works so we come
+[00:08:05] back over to playground we're going go
+[00:08:07] to
+[00:08:08] assistant and we got a LinkedIn B and
+[00:08:10] our tweet bar to create a b what you do
+[00:08:12] is you create the top right hand corner
+[00:08:14] here you give it a name you give it some
+[00:08:16] instructions the model we're going to be
+[00:08:18] using is GPT 4 Turbo it's an excellent
+[00:08:20] model and it's absolutely worth it and
+[00:08:23] hasn't been expensive anywhere near the
+[00:08:25] cost to be honest with you and at the
+[00:08:27] bottom right you can see you can add
+[00:08:28] files add files like turn of voice best
+[00:08:31] practices whatever you think is going to
+[00:08:32] be helpful to optimize the model now in
+[00:08:34] terms of what we've actually done with
+[00:08:36] these models to tweet Boton LinkedIn B
+[00:08:37] I'm going to show you what it looks like
+[00:08:39] here for example now what's really
+[00:08:40] important to me is these automations
+[00:08:42] work for you guys because I don't just
+[00:08:43] want to give you automations oh it looks
+[00:08:45] cool but they never show you the final
+[00:08:47] result I it needs to work so the
+[00:08:49] autonomous LinkedIn agent for example we
+[00:08:52] start with this prompt here act as an
+[00:08:53] informed LinkedIn expert in insert
+[00:08:56] industry so whatever industry you know
+[00:08:57] you want you can customize it in in the
+[00:08:59] school Community you'll be provided with
+[00:09:01] the summary of an article you'll create
+[00:09:03] an optimized LinkedIn post based on that
+[00:09:05] article incorporating LinkedIn posting
+[00:09:07] best practices and using the outline
+[00:09:09] structure below so we've got things here
+[00:09:11] like provide the main context to main
+[00:09:13] idea start with a brief summary on main
+[00:09:15] point of the article you want to
+[00:09:16] transform into a LinkedIn post this
+[00:09:17] includes the key message the article
+[00:09:19] that they present in the article add
+[00:09:21] personal or relatable anecdotes if it's
+[00:09:23] appropriate real life scenarios
+[00:09:24] incorporate engaging elements so
+[00:09:26] questions to the audience that's really
+[00:09:28] key compelling statistics or data which
+[00:09:30] will get from perplexity calls to action
+[00:09:33] relevant emerges for emphasis to draw
+[00:09:35] attention to key points and then we've
+[00:09:37] got style and town we've got hashtags
+[00:09:39] and keywords and then we've got
+[00:09:40] additional details for them and the real
+[00:09:42] magic here for this as you'll see is the
+[00:09:44] examples so what I've done with this
+[00:09:46] LinkedIn bot is I've trained on some of
+[00:09:48] the most viral critical examples of what
+[00:09:50] actually makes a LinkedIn post
+[00:09:52] successful so I've got all these
+[00:09:53] LinkedIn post that had phenomenal
+[00:09:55] engagement example one example two
+[00:09:58] example three example four example five
+[00:10:00] example six it goes on and on and on so
+[00:10:02] we've selected all this stuff what we're
+[00:10:04] going to do is copy all of it we're
+[00:10:05] going to go back over to our bot you
+[00:10:07] paste it in like this come to the top
+[00:10:10] get rid of this bit here cuz I just
+[00:10:11] copied that and then there you go and
+[00:10:14] then we insert the industry so the
+[00:10:15] industry that we want is going to be
+[00:10:19] Finance
+[00:10:21] industry perfect and then we've saved it
+[00:10:24] GPT 4 Turbo that's perfect and a little
+[00:10:26] hack for you guys as well if you want to
+[00:10:28] play around to see how good it is it is
+[00:10:30] what you can do is come on playground go
+[00:10:32] on assistance here on the left and then
+[00:10:34] what you can do is chat with your Bot so
+[00:10:36] this helps you optimize it and when I
+[00:10:37] was optimizing these Bots it took ages
+[00:10:39] in terms of like trial and error and
+[00:10:41] sometimes it gives you something that's
+[00:10:42] like 90% there but not quite perfect and
+[00:10:45] it's it can be a little bit of a
+[00:10:46] nightmare sometimes so what we're going
+[00:10:48] to do again now is we're going to come
+[00:10:49] back back over to slack we're going to
+[00:10:51] repost the
+[00:10:53] article uh to re-trigger the entire
+[00:10:55] automation we come back over to
+[00:10:56] perplexity and to our automations and
+[00:10:59] then we hit run once into.com SL
+[00:11:02] identifies it plexity is now beginning
+[00:11:04] to summarize it goes to the router and
+[00:11:06] there you go it's gone to open AI um to
+[00:11:10] create the LinkedIn post and this one
+[00:11:12] here is going down to create the Tweet
+[00:11:14] as well so that's the LinkedIn
+[00:11:16] automation well let's run in the
+[00:11:17] background I'm going to briefly show you
+[00:11:18] the Twitter one now this one's really
+[00:11:20] really cool so act as an informed
+[00:11:23] Twitter expert in the industry you will
+[00:11:25] be provided with an article you will
+[00:11:27] create an optimized Twitter post based
+[00:11:28] on an article incorporating Post in best
+[00:11:30] practices using the structure outlined
+[00:11:33] below read the following article and
+[00:11:34] create an engaging tweet based on its
+[00:11:37] main points using the best tweet
+[00:11:39] practices below concise clear message
+[00:11:42] use the format hul explain question
+[00:11:45] hashtags the hashtags help us reach a
+[00:11:46] broader audience the question will drive
+[00:11:48] engagement for us the hul will get them
+[00:11:50] to read it and explain will provide the
+[00:11:52] value we want to limit it to 280
+[00:11:54] characters maximum keep it factual
+[00:11:56] thought-provoking questions use a call
+[00:11:58] of hashtags never start send the mergy
+[00:12:00] etc etc and then what we've done with
+[00:12:01] this tweet box is really cool we've got
+[00:12:03] example text so this is an example of
+[00:12:05] the text that you be provided and this
+[00:12:07] is an example of the kind of tweet that
+[00:12:09] we want here's another example and what
+[00:12:10] the Tweet would like in that case and
+[00:12:12] you know we provide it with these
+[00:12:13] specific examples so it knows exactly
+[00:12:15] what we're looking for and as you can
+[00:12:16] see it's gone through the whole process
+[00:12:17] again just like identified it Plexi got
+[00:12:19] it and if we come over to our LinkedIn
+[00:12:21] bot here for example and we can scroll
+[00:12:22] down we can see here let me move across
+[00:12:24] to the right so you can see a little bit
+[00:12:26] better come down to Content plus one
+[00:12:29] text value and there we go big shift in
+[00:12:32] the financial World it explains what it
+[00:12:34] does it explains what it actually means
+[00:12:36] and then gives some commentary and then
+[00:12:38] it gives some engaging questions and it
+[00:12:40] finishes with some hashtags and look at
+[00:12:42] this let's just discuss below what are
+[00:12:44] your thoughts on how major financial
+[00:12:45] markets can have significant change that
+[00:12:47] is phenomenal I'm really happy with that
+[00:12:50] and that's our LinkedIn bar and then we
+[00:12:51] come back over to our tweet bar we need
+[00:12:53] to corate change the industry so we're
+[00:12:55] going to say in finance
+[00:12:57] industry by the way guys you would be
+[00:12:59] surprised how like changing little
+[00:13:01] features in the instructions tab
+[00:13:03] actually makes a difference in terms of
+[00:13:04] the output it is honestly honestly nuts
+[00:13:06] cool superb that's done we're very very
+[00:13:08] happy with that great and then we're
+[00:13:09] going to run this again for the exact
+[00:13:11] same thing now with the Twitter post and
+[00:13:13] we can add in any anything we can add
+[00:13:15] Instagram we can add in Facebook we can
+[00:13:17] add in any platform that you want we've
+[00:13:19] got the LinkedIn of a Twitter full guide
+[00:13:20] and Bot training the Facebook and the
+[00:13:22] Instagram one will be coming very
+[00:13:23] shortly as well they'll all be available
+[00:13:25] in the exact same place and what you'll
+[00:13:26] notice when you run these automations by
+[00:13:28] the way is that if it Forks off it will
+[00:13:30] go up and finish the entire route then
+[00:13:32] it will come down and do the second
+[00:13:33] route so don't worry that you know this
+[00:13:36] one doesn't look active yet it has to
+[00:13:38] wait until the first automation is
+[00:13:39] finished and the amount of time this is
+[00:13:40] going to save you is ridiculous like
+[00:13:43] think about the amount of time it takes
+[00:13:44] to write up your own particular thoughts
+[00:13:45] on something versus just running an
+[00:13:47] automation does this cross platforms so
+[00:13:49] this one's done let's see what the Tweet
+[00:13:50] looks like and look at this guys the
+[00:13:53] exact same prompt exact same prompt is
+[00:13:56] sha bidding farewell to the Lan Stock
+[00:13:58] Exchange question mark sh plans to merge
+[00:14:00] as entities potentially moving its
+[00:14:01] market cap from LSC to Amsterdam thus
+[00:14:03] possibly undermining London as a top
+[00:14:05] Global Financial Hub could this spell
+[00:14:07] trouble for the UK Financial Market #
+[00:14:09] Finance asst Market that's a tweet that
+[00:14:13] genuinely speaking is you know that you
+[00:14:15] would engage with TW short simple and
+[00:14:17] effective next thing we going to do is
+[00:14:19] create an image specifically to that
+[00:14:20] right so to do that we click on add new
+[00:14:22] module uh let me just zoom out of here
+[00:14:25] for you because it is a little bit all
+[00:14:26] over the place great and we come down to
+[00:14:29] we want Dary 3 cool we click on this we
+[00:14:31] show
+[00:14:32] more and we're going to click on
+[00:14:35] generate an image perfect using doly uh
+[00:14:38] the model we're going to use is doly 3
+[00:14:40] that's the most powerful one that's
+[00:14:41] available and the prompt is going to be
+[00:14:43] simply this generate an
+[00:14:46] image based on this summary and then we
+[00:14:51] hit the thing here and then we're going
+[00:14:52] to scroll down and find the perplexity
+[00:14:54] output come down to usage come down to
+[00:14:57] choices excuse me come down to message
+[00:14:59] and then content so we come here we're
+[00:15:02] just going to duplicate this thing so
+[00:15:04] clone come down copy that over and the
+[00:15:07] thing we need to add to the prompt
+[00:15:08] before we actually run the whole
+[00:15:09] automation is number of the pixel sizes
+[00:15:11] so create an image based on this
+[00:15:14] summary excellent and you see so we
+[00:15:17] LinkedIn it's 1200 X 627 is the best
+[00:15:19] practice superb and then we are going to
+[00:15:22] copy that click okay and then we come
+[00:15:23] back down here we're going to paste that
+[00:15:25] and then for Twitter we want 1,600 by
+[00:15:28] 900 excellent and then we add in
+[00:15:30] LinkedIn or X and then but before we
+[00:15:32] continue with that let's just run it one
+[00:15:33] more time so we can see how good the
+[00:15:35] images are that it's generated now you
+[00:15:37] have two options when you complete with
+[00:15:38] this one is you can just set up the text
+[00:15:41] to publish directly on LinkedIn x
+[00:15:43] Facebook Instagram if you want to but if
+[00:15:45] you want to look at it and say I just
+[00:15:47] want to get a list of 10 12 you know
+[00:15:50] however many ideas are all fully fleshed
+[00:15:51] out and I just want to edit it a little
+[00:15:53] bit and then post it myself all we do
+[00:15:55] instead is we just change this link to
+[00:15:59] this xess Facebook this Instagram to a
+[00:16:01] Google Document and we just add it to
+[00:16:02] that Google Document and all the tweets
+[00:16:04] and Linkedin po will just build up on
+[00:16:06] that page and then you can just copy
+[00:16:08] paste it download it and do all that
+[00:16:10] yourself so you can make any edits that
+[00:16:11] you want to I would recommend doing that
+[00:16:13] initially just so you get comfortable
+[00:16:15] with the inputs and the outputs and when
+[00:16:17] it's really nailing it for you then just
+[00:16:19] move it over to completely automatic so
+[00:16:21] we come here for example we come down to
+[00:16:22] data array +
+[00:16:26] one there's the prompt there's the URL
+[00:16:29] we copy all the URL and there we go is
+[00:16:33] shell trying to kill the lendon stop
+[00:16:34] market and there's the full photo that
+[00:16:36] you want and by the way guys you can
+[00:16:38] basically change that however you want
+[00:16:40] to if you want to have it in a certain
+[00:16:41] style or not we can add all those things
+[00:16:43] as well I'll be releasing a kind of
+[00:16:45] image generation best practice as well
+[00:16:46] but just for this video I just wanted to
+[00:16:48] show you the basic bounds of it I will
+[00:16:50] add that to the LinkedIn dark and to the
+[00:16:52] Twitter dark and the Facebook and insta
+[00:16:54] one that comes live so you can optimize
+[00:16:56] it and choose from all the different
+[00:16:57] styles and artworks that you'd like
+[00:16:59] with examples so if you want to do it to
+[00:17:00] a document first here's exactly what you
+[00:17:02] do we've delete the LinkedIn thing we're
+[00:17:03] going to add a router here perfect here
+[00:17:06] we're going to come and we're going to
+[00:17:07] have look for Google
+[00:17:09] doc wonderful and then we're going to
+[00:17:11] click on insert paragraph to a document
+[00:17:14] you come down and choose your file I've
+[00:17:16] chosen content ideas file which is
+[00:17:17] absolutely fine we click okay then we go
+[00:17:19] to appended text so what text do we want
+[00:17:22] all right cool so what we do is we're
+[00:17:23] looking for this one here we hover over
+[00:17:25] it and you'll notice it flashing in the
+[00:17:27] background when it's something to do
+[00:17:28] with that image so what we come down
+[00:17:30] here is we go down to
+[00:17:32] Content
+[00:17:33] text value you see that's the one that
+[00:17:36] we want value perfect so what we
+[00:17:38] basically said here is hey I want you to
+[00:17:40] put what that output is in this Google
+[00:17:42] doc we click okay cool but then we go to
+[00:17:44] Google Docs
+[00:17:46] again except for when we scroll down
+[00:17:48] this time insert an image to a document
+[00:17:51] brilliant Well Jack what is the image
+[00:17:53] well first of all let's choose the same
+[00:17:54] the same Google doc that we had so click
+[00:17:56] here to choose a file and then you'll
+[00:17:58] see this image URL so all we do for the
+[00:18:00] image URL is we're looking for this guy
+[00:18:02] here so let's have a look at it this
+[00:18:04] whisper Dolly again you can see that
+[00:18:06] it's pulsing which is really cool come
+[00:18:08] down to data and it's this URL here
+[00:18:12] perfect excellent cool now I'm going to
+[00:18:14] hit run once and it's going to R through
+[00:18:15] the whole thing and it's just phenomenal
+[00:18:17] isn't it just how much we can automate
+[00:18:18] with this to such a good quality and if
+[00:18:20] you're somebody who's really particular
+[00:18:22] on your writing style you'll get very
+[00:18:24] close with this prom that we've got and
+[00:18:25] then you can do the tweaks within a
+[00:18:27] Google doc I mean it literally be 2
+[00:18:28] minute exercise jump into Google dock
+[00:18:30] that sounds great that sounds great post
+[00:18:31] it or maybe share it on to anybody that
+[00:18:34] you like but this can be completely
+[00:18:35] fully automated as we can see it says
+[00:18:38] it's complete and it says it's complete
+[00:18:40] so the moment of truth is check the
+[00:18:41] Google Doc here we go wow and there we
+[00:18:43] there we have it guys this is the full
+[00:18:45] thing look at this big moves versus big
+[00:18:47] blue is Shell's potential exit a wakeup
+[00:18:50] call for the London Stock Market as one
+[00:18:52] of the Giants in the energy sector
+[00:18:53] Shell's recent announcement regarding it
+[00:18:55] plans to block for a LinkedIn post guys
+[00:18:57] this is phenomen that looks like it
+[00:18:59] spent a lot of time generating it but
+[00:19:01] let's check out the image I'm curious to
+[00:19:03] what this looks
+[00:19:04] like wow that is epic right like that is
+[00:19:08] absolutely insane cuz you can see the
+[00:19:11] shell thing right like it's got the
+[00:19:12] stuff it's to do with the stock market
+[00:19:14] the shell coming out of it there's
+[00:19:16] helicopters and stuff that's all
+[00:19:17] automated all we've done is give one
+[00:19:19] single prompt to slack and sent it
+[00:19:21] through the entire journey to created
+[00:19:22] that and it'll do the exact same thing
+[00:19:24] for Twitter Facebook Instagram you name
+[00:19:26] it and creting social media content is
+[00:19:28] amazing but if you haven't made your own
+[00:19:30] AI brain yet I'd really encourage you to
+[00:19:32] watch this video here because it goes
+[00:19:34] into a lot of detail about it and tell
+[00:19:36] me down below as well what you'd love to
+[00:19:37] see automations on I've got some pretty
+[00:19:39] incredible ideas about how you can
+[00:19:41] create a full process for getting a sixf
+[00:19:43] figure role in terms of scraping the
+[00:19:45] data or making the social media scraping
+[00:19:48] automatic so you don't need to include
+[00:19:49] the URL let me know your thoughts Down
+[00:19:51] Below in any case guys have a wonderful
+[00:19:53] week and I'll see you next time

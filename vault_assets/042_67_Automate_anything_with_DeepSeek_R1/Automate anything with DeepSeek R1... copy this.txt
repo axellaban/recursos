@@ -1,0 +1,678 @@
+[00:00:00] hey there my name is Jack this is how
+[00:00:01] you automate anything with deep seek R1
+[00:00:04] now first of all I have to start with
+[00:00:05] the performance and why we even talking
+[00:00:07] about it on this video it is flipping
+[00:00:10] incredible recently we talked about deep
+[00:00:12] seek V3 this takes it to a whole new
+[00:00:14] level look at these numbers for instance
+[00:00:16] right guys if if we look at just even
+[00:00:18] the first the maass 500 for instance
+[00:00:20] deeps car one is the blue with white
+[00:00:22] lines right you compare that to open AI
+[00:00:24] 01 you look at all these different
+[00:00:26] models the performance for this is crazy
+[00:00:28] and just using the model the the respon
+[00:00:30] CH that we get back are absolutely
+[00:00:31] mind-blowing it's kind of taken into
+[00:00:33] that by storm so first thing to say
+[00:00:35] performance is insane second of all it's
+[00:00:37] pretty cheap and cheap we like cheap we
+[00:00:39] like to cut our C down especially if
+[00:00:40] we're coding and doing things with it
+[00:00:41] and I've just pulled this together to
+[00:00:42] show you the difference deep seek R1
+[00:00:44] input tokens per one million uh is cents
+[00:00:48] you compare that to 01 which is $15
+[00:00:50] output $219 01 $60 and I just put llama
+[00:00:54] CLA and gp4 just as a point of reference
+[00:00:56] so not only performance is great it's
+[00:00:58] also very cheap it uses something called
+[00:01:00] the mixture of experts just very quickly
+[00:01:02] of your context what does it mean
+[00:01:03] instead of one thing doing everything it
+[00:01:05] will root those specific tasks to The
+[00:01:06] Specialist or specialist that are best
+[00:01:08] suited to perform it I'll put a link
+[00:01:10] down below to the paper so you can check
+[00:01:11] it out but it's important context now
+[00:01:13] you can play with this online kind of
+[00:01:15] like chat gbt clae right here I'll put
+[00:01:16] link Down Below in the description for
+[00:01:18] you however the question is can we
+[00:01:19] actually automate and do some incredible
+[00:01:21] stuff with this the answer is yes so in
+[00:01:24] this video I'm going to show you you can
+[00:01:25] create an agent using deep seek R1 in
+[00:01:28] n10 that can do some incredible stuff
+[00:01:31] just like this it can do things like
+[00:01:32] such the internet it has a memory it can
+[00:01:34] create calendar appointments it can
+[00:01:36] create and send uh emails and do
+[00:01:38] literally anything you could possibly
+[00:01:39] imagine and has its own memory database
+[00:01:43] I'm also going to show you you can use
+[00:01:44] this in an Automation in make deep seek
+[00:01:46] R1 uh and I'm going to show you you can
+[00:01:47] do something really cool a really cool
+[00:01:49] Nifty automation which is getting ideas
+[00:01:51] on autopilot where we can pull down the
+[00:01:53] latest 20 articles on any particular
+[00:01:55] topic you can imagine and then we're
+[00:01:57] going to use decr2 to kind of condense
+[00:01:59] that create a bolted list and then send
+[00:02:01] that to us on an email you could use
+[00:02:03] this to create a newsletters you could
+[00:02:04] use this just to get a condensed
+[00:02:06] knowledge and debrief of anything that
+[00:02:07] you physically like um very quickly
+[00:02:09] before we get started there is one small
+[00:02:11] caveat and that is there are some
+[00:02:13] censorship questions around deep seek
+[00:02:15] because it's Chinese model so just bear
+[00:02:17] that in mind when using it but we know
+[00:02:18] performance we know price very cheap but
+[00:02:20] with that in mind let's get started so
+[00:02:22] I'm going to start off with na10 the
+[00:02:23] difference very briefly we're going to
+[00:02:25] use n10 for building AI agents because
+[00:02:27] it's more powerful and it's nonlinear
+[00:02:29] and then we're going to use make for
+[00:02:30] some of the automations by the way if
+[00:02:32] you want the agents and all the
+[00:02:33] blueprints and resources so you don't
+[00:02:35] have to create this all you do in the
+[00:02:36] community is come over here head over to
+[00:02:38] classroom head over to Jack AI
+[00:02:40] automations you select this you simply
+[00:02:43] come down you can download this right
+[00:02:45] here upload it to N1 and it will
+[00:02:46] populate everything for you
+[00:02:48] automatically so you basically come here
+[00:02:49] with the free dots you click on import
+[00:02:51] from file upload it and everything will
+[00:02:52] be there for you just to Plug and Play
+[00:02:54] get started once you made the
+[00:02:55] connections now in my last video I
+[00:02:57] showed you how you build this full AI
+[00:02:59] agent syst system so if you haven't seen
+[00:03:01] that one yet go and watch that video I
+[00:03:03] show you how you integrate every single
+[00:03:05] one of the triggers with telegram or
+[00:03:06] different features I show you exactly
+[00:03:08] how you configure everything and just
+[00:03:10] very brief for your benefit right now
+[00:03:11] I'm going to show you exactly how this
+[00:03:12] works so we'll have a telegram chat and
+[00:03:14] all we do guys if I say hey come here
+[00:03:16] test workflow for instance and you love
+[00:03:17] to see this working so if I give it a I
+[00:03:19] don't know a command something like this
+[00:03:21] hey what is the best coffee shop in
+[00:03:24] leads I come off this now check how it
+[00:03:26] works it comes down it goes to AI agent
+[00:03:28] and you see the surf AP guys that it
+[00:03:30] searching the internet and it's going
+[00:03:31] back and forth to Ser an open open AI
+[00:03:34] model to find out and research things so
+[00:03:35] we built the things has internet access
+[00:03:37] and all sorts of stuff and you can see
+[00:03:39] it's come back here and it's basically
+[00:03:40] said hey the best coffee shopp in leads
+[00:03:42] is kapow coffee I can tell you kapow is
+[00:03:45] fraking delicious so that's also that's
+[00:03:47] just an example of the kind of thing it
+[00:03:48] can do it can also do things like
+[00:03:49] retrieve documents and things like that
+[00:03:51] but I'm going to show you now how you
+[00:03:53] actually insert R1 because when you're
+[00:03:55] using N1 you can see if I come down here
+[00:03:57] to the model which is the model that's
+[00:03:59] been used for this automation you click
+[00:04:01] on that you get these different options
+[00:04:02] GPT photo mini lots of different things
+[00:04:04] you know we can connect to CLA and
+[00:04:06] different things but there's no selector
+[00:04:08] for using uh deep c car one which is
+[00:04:10] we're going to cover how to do that
+[00:04:11] exactly so we're going to go over and
+[00:04:13] create a brand new scenario on an8m and
+[00:04:15] at the top we're going to call this one
+[00:04:17] deep seek R1 agents because of all the
+[00:04:22] things we are guys Savages is absolutely
+[00:04:25] not one of them and of course we need a
+[00:04:26] wh Magi for this now there's many
+[00:04:28] different triggers that you could use um
+[00:04:30] I'm going to use telegram just like we
+[00:04:31] did in my last video but if you just
+[00:04:33] want something really simple one of the
+[00:04:34] things you can do is just have this chat
+[00:04:36] message thing here um you click on chat
+[00:04:38] and basically what's cool about this
+[00:04:40] chat message guys is you can just test
+[00:04:42] it and have a conversation with it you
+[00:04:43] can also have it embed it on a website
+[00:04:45] so in fact we'll go with chat message
+[00:04:47] just to keep this simple just to show
+[00:04:49] you how it works because once you know
+[00:04:50] how to connect deep seek in your no code
+[00:04:53] automations you can pretty much do
+[00:04:55] anything that you like so what we do
+[00:04:57] we've got when a chat message is
+[00:04:59] received at as the trigger again we can
+[00:05:01] use telegram it's super straightforward
+[00:05:02] just like in the automation I showed you
+[00:05:04] in my last video you can watch that Bell
+[00:05:06] up the whole thing and then add deep
+[00:05:07] seek on top of it cool so what do you
+[00:05:09] want to do well the first thing I want
+[00:05:10] to do here is click on this beautiful
+[00:05:12] plus and we're going to type in AI agent
+[00:05:14] over here and this phenomenal thing will
+[00:05:17] then pop up for us tools agent is
+[00:05:18] absolutely fine we going to come off
+[00:05:20] this and just click off for a second now
+[00:05:21] we need to do three things right or even
+[00:05:24] two things the first one is pick a chat
+[00:05:26] model so to do that we're going to click
+[00:05:28] down here we going to come down and
+[00:05:29] select open AI like so which is
+[00:05:31] phenomenal now the first thing we want
+[00:05:33] to do is head over to a website called
+[00:05:34] open rout and I just want to give credit
+[00:05:36] to null from my community there was
+[00:05:38] laboring on this connection this morning
+[00:05:40] and he found the huling and did it so
+[00:05:42] thank you all for sharing this with the
+[00:05:43] community so what we want to do first of
+[00:05:45] all guys it head over to open routa now
+[00:05:47] open routa is kind of like an
+[00:05:49] intermediatory between basically when
+[00:05:51] we're using these no code systems right
+[00:05:53] we can have open rout in the middle and
+[00:05:54] open rout can connect to all these
+[00:05:56] different models like Claude like llama
+[00:05:59] you know a chat GPT deep seek it kind of
+[00:06:01] serves as an intermediatory and it can
+[00:06:03] do really cool things like hey if this
+[00:06:05] model isn't available use a different
+[00:06:07] model so we're going to leverage open
+[00:06:08] routa in N1 to get access to deeps and
+[00:06:11] what you need to do guys is create an
+[00:06:13] account and then come on the right hand
+[00:06:14] side over here to Keys you're going to
+[00:06:15] come over here and you're going to
+[00:06:16] create a Brand New Key we're going to
+[00:06:18] call this one n8n
+[00:06:20] build together and we'll put a limited T
+[00:06:23] it's always best practice to limit these
+[00:06:25] things CU who knows what what on Earth
+[00:06:26] happens and you'll get a key like this
+[00:06:28] I'll just deactivate it after the video
+[00:06:29] video so we're going to come back over
+[00:06:31] to our beautiful na10 over here which is
+[00:06:33] phenomenal we come down here we click on
+[00:06:34] this and we going to scroll down to
+[00:06:36] create new credential and then all
+[00:06:38] you're going to do guys is paste that
+[00:06:39] API key into that right there and then
+[00:06:41] click on Save okay beautiful don't worry
+[00:06:44] about the fact that it's not been able
+[00:06:45] to do that yet we click on X now
+[00:06:47] actually let's do the let's do the
+[00:06:48] appropriate thing and actually name this
+[00:06:49] okay so going to come over here we'll
+[00:06:50] call this deep seek and then brackets
+[00:06:55] btg which is simply means build together
+[00:06:57] and we'll call us one R1 now what we do
+[00:06:59] is some jiggery jiggery pokery here
+[00:07:01] basically to get this to work so we
+[00:07:02] going to come off this now on more
+[00:07:04] properties click on ADD option and add
+[00:07:05] base URL now we can override the facts
+[00:07:08] if we've selected open AI right we would
+[00:07:10] normally root its way down that way but
+[00:07:12] we by providing a base URL we can
+[00:07:14] basically override where it's going to
+[00:07:16] so we going to enter this URL uh right
+[00:07:19] here which is perfect and what it will
+[00:07:21] do is override the whole system and just
+[00:07:23] go through to open routa instead of open
+[00:07:25] Ai and then we also need to change the
+[00:07:26] model so to change the model fix just
+[00:07:28] means I'm giving the data expression
+[00:07:31] will enable us to type in what we'd like
+[00:07:32] to and if you come back over to open R
+[00:07:34] we should be able to define deep seek R1
+[00:07:36] you can see it's already breing pop
+[00:07:38] plate at the top and come over and just
+[00:07:40] copy this beautiful guy here and it's
+[00:07:42] really nice you get all the kind of data
+[00:07:43] and information about the models it even
+[00:07:45] shows you things on rankings on this
+[00:07:46] which I think is really flipping cool I
+[00:07:49] would imagine in programming deep seek
+[00:07:51] is going to be really high yeah like the
+[00:07:53] third um cuz it's just so cheap to
+[00:07:55] generate all the tokens and stuff it's
+[00:07:57] crazy okay cool and then we're going to
+[00:07:58] type in mod basically paste this one in
+[00:08:00] here which is beautiful phenomenal
+[00:08:02] beautiful that's perfect and I'm going
+[00:08:04] to come and click off this here and then
+[00:08:05] we'll just save the scenario very
+[00:08:07] quickly okay sweet and then for memory
+[00:08:09] we're just going to go over here and
+[00:08:10] we're going to select the window buffer
+[00:08:11] memory um it's very straightforward
+[00:08:13] context length is whatever we want now
+[00:08:17] because I'm using an inbu chat
+[00:08:19] functionality it already just pulls in
+[00:08:21] the chat ID from that chat window so it
+[00:08:23] will remember it but the context SL can
+[00:08:25] be whatever you you pretty much like
+[00:08:27] awesome now with this in mind let's
+[00:08:28] click chat and have a conversation with
+[00:08:30] this guy so I as you can see earlier I
+[00:08:32] was like asking it questions about is
+[00:08:33] this deep seek and for some reason it
+[00:08:36] does not want to confirm whether or not
+[00:08:37] it's deep sck it's very squirly about
+[00:08:40] what model it is and how funny is that
+[00:08:42] so if this is a really cool thing you
+[00:08:43] can actually chat with your scenario
+[00:08:44] bottom left and you can substitute at
+[00:08:46] the trigger for something else whenever
+[00:08:47] you like to I thought that was really
+[00:08:49] cool so I I a question like I don't know
+[00:08:51] hey um I don't know how many uh I don't
+[00:08:56] know Beanie
+[00:08:57] Babies would fill a house
+[00:09:01] question we'll see if it actually works
+[00:09:02] and just like that guys it's come back
+[00:09:04] and it has given us some information it
+[00:09:06] did take a couple of seconds and part of
+[00:09:07] the reason for that is the open rout
+[00:09:09] itself can have some slight delays in
+[00:09:11] time and I'll come on to why we how
+[00:09:12] we've crushed that in a second so key
+[00:09:14] assumption house volume Beanie Baby size
+[00:09:16] uh packing efficiency calculation oh my
+[00:09:19] it's actually gone really deep here a
+[00:09:20] rough range of 150 to 500,000 Beanie
+[00:09:23] Baby so if you have that many lying
+[00:09:24] around let's put the Ser of a test now
+[00:09:26] in this video I'm not going to go into
+[00:09:27] comparing GPT 4 one versus deep seek V3
+[00:09:31] I'll let you go and explore that but
+[00:09:33] everybody I've spoken to like
+[00:09:34] anecdotally have said it really matches
+[00:09:37] the performance standards so that is for
+[00:09:38] flip and epic so this is how we get the
+[00:09:41] Deep seek brain um into this um this
+[00:09:44] sort of agent flip this no code flow for
+[00:09:45] us and once it's done there we can do
+[00:09:47] anything we want to I would recommend
+[00:09:49] that you have fun and build the
+[00:09:50] automation I did in my last video I want
+[00:09:52] this to be short sharpen to the point at
+[00:09:53] respect for your time but you can just
+[00:09:54] follow those exact steps to evate with
+[00:09:56] that now now we've cracked and we've
+[00:09:58] solved andan I want to show you how we
+[00:10:00] can now use deep seek to do something
+[00:10:03] pretty spectacular in make.com and
+[00:10:05] make.com is a very intuitive no code
+[00:10:08] platform the ultimation I want to build
+[00:10:09] here is grabbing the latest information
+[00:10:12] we're going to power it with deep seek
+[00:10:13] and I'm going to get to send as a
+[00:10:14] summary uh to our email so we built just
+[00:10:17] to summarize we've built the phenomenal
+[00:10:19] crazy agent that can search the internet
+[00:10:21] that can create appointments book
+[00:10:22] appointments send emails check emails
+[00:10:24] answer all those incredible things and
+[00:10:26] we can power that a deep ticket if we
+[00:10:28] wish to and now in this one I'm going to
+[00:10:29] show you something really cheeky and
+[00:10:30] practical so the first thing we going to
+[00:10:31] do I'm going to delete all this and show
+[00:10:32] you how this works step by step and
+[00:10:34] again all the links are down below so
+[00:10:35] you just press the buttons and get
+[00:10:37] started and I'll also play this
+[00:10:38] blueprint as well if you'd like so first
+[00:10:40] things first and we'll call this one
+[00:10:42] deep seek summarizer uh R2 R1 excuse me
+[00:10:47] I'm already I'm already R2 how C is this
+[00:10:49] by the way um right let's have a
+[00:10:51] look beautiful I if I forgot to mention
+[00:10:54] guys if you haven't got your coffee I
+[00:10:56] hope you've got your coffee locked in
+[00:10:57] lat already cuz like you're definitely
+[00:10:58] going to need for this automation
+[00:11:01] beautiful cool so first thing we click
+[00:11:03] on RSS and you're going to click on
+[00:11:05] retrieve RSS feed item so you're
+[00:11:06] probably thinking Jack what the hell is
+[00:11:08] RSS well I'm not only going to tell you
+[00:11:10] I'm going to show you what RSS is so RSS
+[00:11:12] if you go to rssa you'll see a page to
+[00:11:14] look something like this RSS stands for
+[00:11:17] really simple syndication if I remember
+[00:11:18] correctly and all it basically does it's
+[00:11:21] a way to pull down any information from
+[00:11:23] the internet every YouTube video that
+[00:11:25] Jack Roberts has posted every YouTube
+[00:11:27] video that Alex hosi or um anytime the
+[00:11:29] word AI is mentioned in the news or
+[00:11:31] Donald Trump or Joe Biden whatever it is
+[00:11:34] it's basically enabling you to pull down
+[00:11:35] the latest articles information from the
+[00:11:38] website just to cut the cut straight to
+[00:11:40] the chase this is the best application I
+[00:11:42] found for using something like this
+[00:11:43] beautiful so now in RSS guys what we're
+[00:11:45] going to do is click on this shiny new
+[00:11:47] feed button on the left hand side and
+[00:11:48] let's say we want to get every article
+[00:11:51] on open Ai and when there's news about
+[00:11:53] open a we just want an email about it so
+[00:11:55] we could type in any keyword we wish so
+[00:11:57] we're going to type in open AI of course
+[00:11:58] you can do YouTube yoube channels
+[00:11:59] Twitter feeds literally anything you
+[00:12:01] want to so I've got this cool thing
+[00:12:03] about open AI the first article is open
+[00:12:05] a ex Elon Musk a strong competitor blah
+[00:12:07] blah blah what we do guys we click save
+[00:12:09] to feeds one of the things we can do in
+[00:12:10] RSS which is really Ace is ADD filters
+[00:12:12] in so I can white list like only show me
+[00:12:14] things that have the word 03 in it like
+[00:12:17] this okay and you'll
+[00:12:18] notice it's blocked it's blocked except
+[00:12:21] for this one which has O3 in it so we
+[00:12:22] can add white list and of course Black
+[00:12:24] List so don't show me things that have
+[00:12:27] Elon Musk or Joe Biden you can add these
+[00:12:30] specifics in there to kind of make your
+[00:12:31] feed more curated you come down to
+[00:12:32] overview now we're going to copy this
+[00:12:34] URL right here and again this is just an
+[00:12:36] example of something you could use uh as
+[00:12:38] an AI automation so first thing we do
+[00:12:40] guys we come over here we're going to go
+[00:12:41] for RSS feeds now you can either watch
+[00:12:44] feeds so for example the second a new
+[00:12:46] article comes we grab it we bring it
+[00:12:48] into the scenario or we can retrieve
+[00:12:50] which means that we look back and grab 1
+[00:12:51] 2 5 10 20 just for the purpose of this
+[00:12:54] and our respect for time we're going to
+[00:12:55] do the retrieve feeds just I can show
+[00:12:57] you automatically you paste URL at the
+[00:12:59] top in make.com and let's say we want to
+[00:13:02] do one we come down run the scenario
+[00:13:04] ones and we should see the name of the
+[00:13:06] article and we do open AI Elon Musk blah
+[00:13:08] blah blah but now we've got the URL we
+[00:13:10] need to get the text so next thing going
+[00:13:11] to add into the scenario here is going
+[00:13:13] to be HTTP it's going to be get a file
+[00:13:15] and in url section guys just simply add
+[00:13:17] in the URL from that module click save
+[00:13:20] like so now we run this one once all the
+[00:13:22] way through let's have a quick look and
+[00:13:23] we can see it's pulled down all of the
+[00:13:25] HTML but what's the problem the problem
+[00:13:27] is you and I don't speak HTML we speak
+[00:13:29] the Queen's beautiful English so to do
+[00:13:31] that we need to do html text so HTML to
+[00:13:34] text okay cool that's a really handy
+[00:13:36] module right we click in this we come
+[00:13:38] over we type in this data click save
+[00:13:41] come over here run the whole modle once
+[00:13:43] that's absolutely fine and we should
+[00:13:45] have the text from the entire article
+[00:13:48] awesome beautiful we love it now what's
+[00:13:50] the next thing want to do we want to get
+[00:13:51] deep seek R1 to summarize all that text
+[00:13:54] and send it to an email or however we
+[00:13:56] wish so to do that guys there are two
+[00:13:58] different ways we can do that number one
+[00:14:00] is using a specific module you get in my
+[00:14:02] community that is twice as fast as the
+[00:14:04] other route I'll show that one first we
+[00:14:06] can plug and play have fun with it then
+[00:14:07] I'll show you how you can also do it
+[00:14:08] with open rout so to do that guys all we
+[00:14:10] do is first of all is head over to the
+[00:14:12] beautiful School Community we're going
+[00:14:13] to head over to the classroom section we
+[00:14:15] going to come down to level four we
+[00:14:17] going lock $10,000 of software we're
+[00:14:19] going to come down to deep seek V3 and
+[00:14:21] we're going to click on this custom app
+[00:14:22] button here phenomenal the cool thing
+[00:14:24] about this one guys is this will connect
+[00:14:26] directly to deep seek outside of open
+[00:14:28] routs which means we can get the actual
+[00:14:30] API faster so if speed is important to
+[00:14:32] you you'll find this really helpful then
+[00:14:34] they come down and all we do guys is
+[00:14:35] click on the install button how cool is
+[00:14:37] that beautiful select your organization
+[00:14:39] down here then click install I've
+[00:14:41] already done that so I don't need to
+[00:14:42] reinstall it again and once you've done
+[00:14:44] that guys come over to your Automation
+[00:14:47] and then you're going to save it down
+[00:14:48] here save anyway and then just refresh
+[00:14:50] the page beautiful and add a new
+[00:14:52] scenario and then guys if we type in
+[00:14:53] ninja we will see Ninja Armory deep seek
+[00:14:55] or just type in deep seek whatever
+[00:14:57] create chat completion now we've got the
+[00:14:58] mod guys the first thing we need to do
+[00:15:00] is to get you the API key to do that
+[00:15:02] we're going to head over to deep
+[00:15:03] seek.com and you click on the API
+[00:15:05] platform in the top right hand corner
+[00:15:07] once you're in the platform guys you
+[00:15:09] could deposit a couple of dollars now
+[00:15:10] the great news is is so freaking cheap I
+[00:15:12] can deposit like two bucks and that
+[00:15:14] should last you a really long time to
+[00:15:16] get your API key just come to API keys
+[00:15:17] on the left hand side you can click on
+[00:15:19] create a new API key and I want you to
+[00:15:21] copy that API key bring it back over to
+[00:15:22] make and then insert it into the module
+[00:15:24] and once you've done that guys you will
+[00:15:26] see a page that looks a little bit
+[00:15:28] something like this so let's give it a
+[00:15:29] system prompt for that I'm going to say
+[00:15:31] Hey you receive an article summarize
+[00:15:32] distance in short par two short
+[00:15:34] paragraphs and five bullets with Emojis
+[00:15:36] be short be sharp and helpful no fluff
+[00:15:38] or cringe and then we're going to select
+[00:15:40] the user prompt and that is just going
+[00:15:41] to Simply Be the text from the text
+[00:15:43] passer the model we're going to go for
+[00:15:44] deep seek chat and Max tokens 4,000 I
+[00:15:47] believe the token limit is slightly
+[00:15:49] higher than that I'm just going to
+[00:15:50] increase it now to 8,000 just for
+[00:15:51] argument sake I'm going to click on okay
+[00:15:53] so let's run the scenario once and see
+[00:15:55] if we get our beautiful summary so we've
+[00:15:56] downloaded it download the file text
+[00:15:57] pass it and now ninja Armory is doing it
+[00:16:00] and is also really funny by the way
+[00:16:01] isn't it that I've still got the snow
+[00:16:03] caps on I probably need to change the
+[00:16:04] snow because we are technically 21st of
+[00:16:06] Jan but I'm not ready to let it go just
+[00:16:07] yet and let's see what it's come back
+[00:16:09] out with we kind have choices look at
+[00:16:11] plus one look at the message and the
+[00:16:13] content is summary open bam look at this
+[00:16:16] guys has got everything with their key
+[00:16:17] points Elon Musk has done what has he
+[00:16:19] done he's been labeled as his front
+[00:16:21] competitor and we've got the actual
+[00:16:22] freaking emojis and we've got the
+[00:16:24] summary exactly as we specified it and
+[00:16:26] again guys the strength and power of
+[00:16:27] this model is freaking crazy easy so one
+[00:16:29] thing I'll just add to this very quickly
+[00:16:31] is to say uh output into HTML beautiful
+[00:16:34] okay cool and then finally guys I'll
+[00:16:35] show you the second way that we can do
+[00:16:36] this that's Route One route two is to
+[00:16:39] add in the open router module like this
+[00:16:42] we click on open router uh create a chat
+[00:16:44] completion uh whether you use open rout
+[00:16:47] or DC directly you'll need to deposit a
+[00:16:48] little bit of money open rout let you
+[00:16:50] play around a little bit for free which
+[00:16:51] is cool now to get an open rout API you
+[00:16:53] need to head over to open.com excuse me
+[00:16:55] open. come to your thing on the top
+[00:16:57] right go down to keys and and create a
+[00:16:59] new API key and you can see here you'll
+[00:17:00] see the buttons for creating it you just
+[00:17:02] copy that code and then when you come
+[00:17:03] back over to make you simply insert that
+[00:17:05] into your open rout connection and
+[00:17:07] you'll be able to use it and then we
+[00:17:09] come down here to the model and deep
+[00:17:10] seek all one is at the top which is
+[00:17:11] awesome you can select from lots of
+[00:17:13] different models this way as well and
+[00:17:14] then we can add the message so let's add
+[00:17:16] the same message that we added
+[00:17:17] before so we'll do content assistant and
+[00:17:20] here's our assistant prompt and then we
+[00:17:22] come down add a new item and we do
+[00:17:24] content uh roll is going to be user and
+[00:17:26] then again the information is going to
+[00:17:28] be from
+[00:17:29] uh the text passer which is really cool
+[00:17:31] there and then we're going to click on
+[00:17:33] automatic fillback so basically if this
+[00:17:34] doesn't work we can use a different
+[00:17:35] model that's completely all cool that is
+[00:17:37] similar and then we can run this one
+[00:17:39] again together see what that looks like
+[00:17:42] beautiful and the authorization cringes
+[00:17:44] are failed that's cuz I need to update
+[00:17:46] the API I do that very quickly and I've
+[00:17:47] just run this one again and we've got a
+[00:17:48] message we have an error it's expecting
+[00:17:50] a user output first Okay cool so let's
+[00:17:52] just change these all the way around
+[00:17:54] then let's change this one to user let's
+[00:17:57] copy this and then and um it's really
+[00:17:59] weird how specific it is about that
+[00:18:01] right isn't that really bizarre anyway
+[00:18:02] assistant come down okay there we go
+[00:18:05] okay third time is the beautiful charm
+[00:18:07] okay this one's now running guys I had
+[00:18:09] to make a very quick adjustment to this
+[00:18:10] one I basically had to remove the
+[00:18:12] assistant and the user rle and just have
+[00:18:14] the user role and have all the
+[00:18:16] information in there that's cuz some of
+[00:18:17] the models work slightly differently so
+[00:18:18] if that happens it's always just moving
+[00:18:20] things around a little bit but I'll show
+[00:18:21] you the prompt so if I come in here for
+[00:18:23] instance and give you an example all I
+[00:18:24] said here was hey you receed an article
+[00:18:26] whoops oh my goodness let me bring this
+[00:18:28] one over okay there we go all I
+[00:18:30] basically said to it is same thing and
+[00:18:31] at the bottom here's the article boom
+[00:18:33] and then we can have a quick look at the
+[00:18:34] output that we've got here from Deep
+[00:18:35] seek which is flipping cool con choices
+[00:18:37] plus one what have we got on the message
+[00:18:39] content all the way come down and then
+[00:18:41] we've got the output we just flipping
+[00:18:42] decent and now what we're going to do
+[00:18:43] guys is add in a Gmail module to send
+[00:18:46] this one over to us again we could do
+[00:18:48] telegram we could do any flipping output
+[00:18:50] that we'd like to and so guys let's just
+[00:18:51] send this now to a Gmail uh we'll come
+[00:18:53] down to let's just say create a draft
+[00:18:54] for for instance come down you can
+[00:18:56] actually add your connection by signing
+[00:18:58] into Google again we got full guid in
+[00:18:59] the community on that so let's just add
+[00:19:01] and validate that connection real quick
+[00:19:02] by signing into Google beautiful
+[00:19:04] recipient I'll just put it to my own
+[00:19:05] email address very
+[00:19:07] quickly obviously guys there's so many
+[00:19:10] different automations you can do with
+[00:19:11] this this is just a quick for instance
+[00:19:13] example easy bze automation to get you
+[00:19:15] started I'll say open AI
+[00:19:20] news cool and then let's add in the
+[00:19:23] output from the module command content
+[00:19:25] let's go down here to choices message
+[00:19:28] and content there beautiful and
+[00:19:31] attachments we can attachments and all
+[00:19:32] sorts of wonderful and beautiful things
+[00:19:34] but we don't need to worry about that
+[00:19:35] yet click back in and create a draft
+[00:19:36] because it needs to refresh with the
+[00:19:37] connection and then we're going to save
+[00:19:39] this into the drafts folder so that
+[00:19:41] we're all ready to rock and roll and
+[00:19:43] have a good
+[00:19:44] time uh beautiful dra of the top
+[00:19:47] phenomenal and then let's just add a
+[00:19:49] little instruction
+[00:19:52] output in HTML cool beautiful I've said
+[00:19:55] this is drafts but in reality you could
+[00:19:56] just send it to yourself or however you
+[00:19:57] want to run this so just run the
+[00:19:59] scenario from the top we've got the
+[00:20:00] article got the file got it into text
+[00:20:02] open R is doing its thing with deep seek
+[00:20:05] R1 and then it's going to create a draft
+[00:20:07] and once that's done we able to see that
+[00:20:08] on our email so we could just get
+[00:20:09] pinging notifications about hey here's
+[00:20:10] some news or some rice ready rock and
+[00:20:12] roll the cool thing about deep SE it's
+[00:20:14] so flipp and cheek you can use it for so
+[00:20:16] many applications coding running
+[00:20:18] automations whatever it is if you are
+[00:20:20] using no code youd want to be sensible
+[00:20:21] about the operations that you run and we
+[00:20:24] can talk about that in different videos
+[00:20:25] and all inside the community but the
+[00:20:27] tldr of it is like we can now use a
+[00:20:29] freaking insanely powerful model in our
+[00:20:31] automation so let's check out on our
+[00:20:32] Gmail and I I load it up guys here we go
+[00:20:34] open I news here's two paragraphs
+[00:20:36] explain what it is and then we've got
+[00:20:37] five beautiful bullet points which are
+[00:20:40] almost kind of all coming in addressed
+[00:20:41] to me now guys that's a full tldr of
+[00:20:43] deeps I hope you find that one
+[00:20:44] interesting whether using Nom make.com
+[00:20:46] we can leverage this incredibly powerful
+[00:20:48] tool hope you found this video
+[00:20:50] interesting but in any case YouTube
+[00:20:51] thinks you will enjoy this video next
+[00:20:53] check that one out have a great week and
+[00:20:55] I'll will see you in the next one

@@ -1,0 +1,1170 @@
+[00:00:00] in this video I'm going to show exactly
+[00:00:01] how you can build an AI business brain
+[00:00:03] that can essentially replace lots of the
+[00:00:05] stuff that you do in your business I'll
+[00:00:07] show you exactly how you do it step by
+[00:00:08] step this entire thing works here where
+[00:00:11] you ask it a question it then sends it
+[00:00:13] through to this make automation here it
+[00:00:15] grabs information we validate your pass
+[00:00:17] key and essentially we have this really
+[00:00:19] cool classifying agent that is basically
+[00:00:21] the brains behind your operation and it
+[00:00:24] will send it down one of four Pathways
+[00:00:26] completely based on the question that
+[00:00:28] you ask it now the only purpose I had in
+[00:00:30] building this automation is it was
+[00:00:32] essentially like iron like AI Javas
+[00:00:34] could we build something that basically
+[00:00:35] functions as like an AI version of you
+[00:00:38] like an AI executive assistant and the
+[00:00:41] model I'm going to show you in this
+[00:00:42] video is something you can apply to your
+[00:00:43] business your personal life what all you
+[00:00:45] ever do is have a chat with the bar and
+[00:00:47] it then goes forward and actions
+[00:00:49] literally whatever you want so how does
+[00:00:51] it work well we ask it a question I'll
+[00:00:53] show you how it works step by step in a
+[00:00:54] second and essentially it sends it down
+[00:00:56] one of four Pathways so the one that I
+[00:00:58] built on this video will do one or four
+[00:00:59] things for you the first thing is you
+[00:01:01] can upload PDFs to it you load a PDF it
+[00:01:03] will pass the PDF and then upload it to
+[00:01:07] a table where we can see the company the
+[00:01:08] amount they charged you when they issued
+[00:01:10] it when it's du or not and actually get
+[00:01:12] an issue a kind of URL of it so we can
+[00:01:14] actually itemize all the invoices you
+[00:01:16] get the next thing you can do is ask it
+[00:01:18] any question about your business we can
+[00:01:20] train it on your data give it lots of
+[00:01:21] information you can ask it things like
+[00:01:23] hey how many employees I have and it
+[00:01:25] will tell you will also search the
+[00:01:27] internet to enrich any answers so you
+[00:01:29] could say hey I've I've got this
+[00:01:30] potential opportunity in Asia does that
+[00:01:32] make sense it will take your data plus
+[00:01:34] the internet data you know what's
+[00:01:36] relevant what's new what's fresh
+[00:01:37] internet and give you an answer so it's
+[00:01:38] literally like a kind of AI that sits
+[00:01:40] around you I mean it's really really
+[00:01:42] epic I absolutely love this and then
+[00:01:44] we've got the email on if I said up to
+[00:01:45] me like hey email Adam about this cool
+[00:01:48] meeting got on Friday just make sure to
+[00:01:49] tell him blah blah blah this will then
+[00:01:51] create an email that is drafted in your
+[00:01:55] turn of voice and I've got another video
+[00:01:56] I'll pop on screen about how you build
+[00:01:57] that turn of voice automation it will
+[00:01:59] create a unique subject line for that
+[00:02:00] email and it will sit within your drafts
+[00:02:03] and then we've also got something where
+[00:02:04] if it can't understand it it will come
+[00:02:05] back and say hey it doesn't quite make
+[00:02:07] sense could You' be more specific the
+[00:02:09] cool thing about this guys is the The
+[00:02:10] Genius of this is the classifying agent
+[00:02:13] and you can build as many Pathways as
+[00:02:15] you want to for your business AI Javas
+[00:02:17] so PDF processing image processing
+[00:02:19] creating emails um your new documents
+[00:02:22] for businesses reaching out to clients
+[00:02:24] literally you can build as many of these
+[00:02:26] branches if you want to you could have
+[00:02:27] 60 70 80 whatever you want you could
+[00:02:30] have as many of these things as possible
+[00:02:31] and it's all managed from one
+[00:02:33] conversational terminal and in this
+[00:02:34] video I'll show exactly how you build it
+[00:02:36] all step by step my name is Jack my
+[00:02:38] school community and my YouTube channel
+[00:02:40] we're all about three things we are
+[00:02:42] about the latest AI we are about
+[00:02:44] incredible automations but most
+[00:02:46] importantly we are about the stuff that
+[00:02:48] actually works so if you haven't already
+[00:02:51] grab that coffee and let's dive straight
+[00:02:53] in and as always guys all the blueprints
+[00:02:54] the agents and materials and including
+[00:02:56] the entire code for this so you can just
+[00:02:58] literally PLP on some something and use
+[00:03:00] it it's all available over in school
+[00:03:01] Community the way you find that is head
+[00:03:03] over to every AI Automation in the
+[00:03:05] classroom pick the one that you want
+[00:03:07] basically scroll down and you just
+[00:03:09] download the software there now when you
+[00:03:11] come to make to use that you just come
+[00:03:13] down here to more click import blueprint
+[00:03:15] and then choose the file you choose a
+[00:03:16] Json click save and then the entire
+[00:03:18] automation appears automatically and
+[00:03:20] that's for every automation I do on
+[00:03:21] YouTube as well as ones that I done so
+[00:03:22] if you want to save time and get all the
+[00:03:24] extra bells and whistles you can check
+[00:03:25] that out in that beautiful School
+[00:03:27] community so let me show you I guess an
+[00:03:29] example of how this actually work step
+[00:03:31] by step and then we'll go through and
+[00:03:32] we'll build it all together so I'm going
+[00:03:34] to hit wrong once on this one so the
+[00:03:35] ultimation can stop now what let what
+[00:03:37] should we ask it let's ask it a question
+[00:03:39] like I don't know how won't we say like
+[00:03:42] how
+[00:03:43] many employees do I have
+[00:03:48] okay hit enter we come back Ator to make
+[00:03:51] what happens now now that's going
+[00:03:53] through to the web the web hook it's
+[00:03:54] validated the pass key I'll show you
+[00:03:56] that in a second the classifying agent
+[00:03:57] has identified that it's a general
+[00:03:59] question therefore what we're doing is
+[00:04:01] we're now checking internet search to
+[00:04:02] see if there's something relevant for us
+[00:04:04] to uh learn or have about that and then
+[00:04:06] it's going to go through to the business
+[00:04:08] brain now the business brain is trained
+[00:04:09] on all our information our data and then
+[00:04:11] it sends a response back to the web hook
+[00:04:14] so I come back over now to a Beau
+[00:04:16] information based information coffee cor
+[00:04:18] has 1,800 employees that's pretty cool
+[00:04:21] so next let's try with a PDF okay so
+[00:04:24] we're going to come back over here I'm
+[00:04:25] going to click run Once on This one and
+[00:04:26] I'm going toload a dummy PDF data that I
+[00:04:29] had earlier so just loaded a sample
+[00:04:30] invoice which is great I come back over
+[00:04:32] now to AI Java this is running and it's
+[00:04:34] identified it needs to go down Route One
+[00:04:36] down the PDF route and we do that
+[00:04:38] basically by getting the classifying
+[00:04:40] agent to give an output on what it
+[00:04:41] classifies is correct and then we
+[00:04:43] Implement that by these cool filters
+[00:04:45] then we've got this really cool app PDF
+[00:04:47] C and it came with a suggestion from my
+[00:04:48] community who wanted to know how we
+[00:04:50] could leverage Cress and make some cool
+[00:04:52] stuff in PDFs so we've passed PDF
+[00:04:54] document we've added it to air table and
+[00:04:56] then we've thrown it back so let's just
+[00:04:58] see if we've had a response back great I
+[00:05:00] process your invoice if you could focus
+[00:05:02] more on getting sales and collecting
+[00:05:03] invoices that would be appreciated I
+[00:05:05] made the AI sassy okay I I forgot to
+[00:05:07] mention that as you can see guys the
+[00:05:09] company the amount when it was issued
+[00:05:10] when it was due and actually copy of the
+[00:05:12] actual invoice itself is all visible
+[00:05:14] with the N table and finally guys I'm
+[00:05:16] not going to ask it a question on
+[00:05:17] sending an email so say hey send an
+[00:05:19] email to James about the meeting on
+[00:05:23] Friday move it to Tuesday tell him it's
+[00:05:29] important
+[00:05:30] boom hit enter beautiful then we come
+[00:05:32] back over now to a beautiful automation
+[00:05:34] it's going to classify an agent and it
+[00:05:36] has correctly identified it's now down
+[00:05:37] the email train so we got the email
+[00:05:39] brain the subject line and Gmail an
+[00:05:40] email and if we come back over to see
+[00:05:42] what we've been told by this excellent
+[00:05:44] I've drafted you an email you requested
+[00:05:45] now go back to work you lazy lemon how
+[00:05:48] dare this AI jav is talked to in such a
+[00:05:50] way but hey because it's helping us so
+[00:05:51] much I think we don't mind so then I'll
+[00:05:53] check out my Gmail and see what it looks
+[00:05:54] like and guys I come over to my email
+[00:05:56] subject meeting move to Tuesday
+[00:05:57] important update hey James hope this see
+[00:05:59] my fans you well just go heads up about
+[00:06:00] our meeting important change we need to
+[00:06:02] move on our Friday's meeting to Tuesday
+[00:06:04] it's crucial we meet earlier so please
+[00:06:05] make it's priority let me know if you
+[00:06:06] have any conflicts thanks for being
+[00:06:08] flexible cheers Jack and guys just like
+[00:06:10] that the entire automations work from
+[00:06:12] end to end and then finally I bought
+[00:06:13] this like Catal thing so for example if
+[00:06:15] I run this mon once I come back over and
+[00:06:17] I just send it something it doesn't
+[00:06:19] understand okay like that something
+[00:06:20] crazy it should send it down the
+[00:06:23] nonsense rout I do that because we need
+[00:06:25] a way of basically identifying who it
+[00:06:28] doesn't fit so it doesn't kind of break
+[00:06:29] automation I come back hey we couldn't
+[00:06:32] quite understand what you're asking
+[00:06:33] about could you provide a little more
+[00:06:34] context I can organize your receipts
+[00:06:36] answer questions about your business
+[00:06:37] draft emails but I cannot read mind
+[00:06:39] would be more specific and just like
+[00:06:41] that guys that's how the entire
+[00:06:42] automation works and the cool thing is
+[00:06:44] you can build as many these Pathways as
+[00:06:46] you literally want in any way you want
+[00:06:48] in any T of voice you like I'm we're
+[00:06:50] going to cover how you do all that in
+[00:06:51] this video and I just think this is
+[00:06:53] really epic now in terms of what you
+[00:06:54] need to do with automation you need a
+[00:06:55] couple things make.com obviously it's a
+[00:06:57] no automation platform we're using I'll
+[00:06:59] put links in the description below so
+[00:07:00] you can click buttons and go we're going
+[00:07:02] to want access to Claude or chat GPT we
+[00:07:05] access that by anthropic do console.
+[00:07:07] anthropic again links down below uh
+[00:07:09] we're going to want perplexity if you
+[00:07:11] want internet search that's quite quite
+[00:07:12] easy to set up and quite straightforward
+[00:07:13] we got all the sort tutorials for that
+[00:07:15] we're going to be using PDF code they
+[00:07:16] give you 10,000 credits for free which I
+[00:07:19] think is pretty cool pretty flexible um
+[00:07:22] and obviously Gmail if you want to send
+[00:07:23] emails now I'm using this website here
+[00:07:25] called card now you'll know from my last
+[00:07:26] video I did a video on the Beautiful
+[00:07:28] repet when I tried to build this in
+[00:07:30] repet it just the chat interface looked
+[00:07:34] amazing now repet is like a it's like a
+[00:07:36] a agent that will these AI agents it
+[00:07:38] will build out all the software and it
+[00:07:40] would host itself and it's cool this is
+[00:07:42] cheaper to do it this way and I found
+[00:07:44] when I was building it in repet that it
+[00:07:45] just didn't quite give me what I wanted
+[00:07:47] and it kind of failed as I got more more
+[00:07:49] complex with it so for being robust I'd
+[00:07:51] recommend that you use this pathway and
+[00:07:53] use a pass key instead but of course you
+[00:07:55] can build it on repler it's just that be
+[00:07:57] in mind sometimes you'll need to reset
+[00:07:59] it and do it again a couple times and
+[00:08:00] always be honest about the Str
+[00:08:02] technologies that is going to be the
+[00:08:03] future that kind of thing a replic but
+[00:08:05] for the moment we're going to use card
+[00:08:06] and integrated code so you want access
+[00:08:09] to card guys it's like $50 for a year or
+[00:08:12] like can get these free things so let me
+[00:08:13] show you how that actually works h of
+[00:08:15] the c.co again I'll put the description
+[00:08:16] Down Below in the uh description for you
+[00:08:19] you can pick some all these really cool
+[00:08:20] templates let's just say that you like
+[00:08:22] the look at this one you select it and
+[00:08:24] then we can start to basically do
+[00:08:27] various different things that we want so
+[00:08:28] we can come down here we can add in
+[00:08:30] widgets and embeds and we add an embed
+[00:08:32] code like so right we click on the embed
+[00:08:34] code you come down on the left and you
+[00:08:36] type in code that we develop with chat
+[00:08:39] GPT or clae in this example here as you
+[00:08:42] can see I've got the code here and I've
+[00:08:44] got all this of course all those is
+[00:08:45] available Down Below in school community
+[00:08:47] so you can just plug and play and all
+[00:08:48] you would do is just change the web hook
+[00:08:51] so if you're building this yourself when
+[00:08:52] you're talking to these models just say
+[00:08:53] hey I want you to send the data to the
+[00:08:55] web hook and then it will send it back
+[00:08:57] to you so for Simplicity and just out of
+[00:08:59] respect for time I'm just going to run
+[00:09:00] through what this looks like but it's
+[00:09:01] basically a DB and drop Builder you can
+[00:09:03] add things images it's really cool
+[00:09:04] actually you know I bought my first
+[00:09:06] website my first bus since I got it to
+[00:09:08] like 50k using Wordpress I love
+[00:09:10] WordPress if I was launching again from
+[00:09:12] day one I would use card because it's
+[00:09:13] just so configurable and so cool and
+[00:09:15] stuff so we've got a beautiful AI Javis
+[00:09:17] we've added the code when we're happy
+[00:09:19] with it we publish it we save and then
+[00:09:21] we publish the changes and then
+[00:09:22] essentially just play around with it to
+[00:09:24] see what you think this already comes
+[00:09:26] mobile optimized one of the advantages
+[00:09:28] this has over something like repet all
+[00:09:30] these other things it's just usability
+[00:09:32] guys and we got to be practical the cost
+[00:09:34] is really low on this and it just the
+[00:09:36] way the dimensions are built it's got so
+[00:09:38] much information in it already that it's
+[00:09:41] just ready to go on mobile does that
+[00:09:42] mean repl is not amazing no rep's
+[00:09:44] awesome but I just wanted to make sure
+[00:09:45] you understand my differences in the
+[00:09:47] technology now cool let's get rid of
+[00:09:49] this guy for the time being so the first
+[00:09:50] thing you want to do is get the code
+[00:09:52] that will be available in school
+[00:09:52] Community or build your own however
+[00:09:54] you'd like to build Javas yourself now
+[00:09:55] if you're using this code you'll see
+[00:09:56] it's got this thing here called the pass
+[00:09:58] key the reason IED a pass key is every
+[00:10:00] time Javis sends information to our
+[00:10:03] automation it sends with a a pass key
+[00:10:06] okay and we can set this Pass Key here
+[00:10:08] which basically means if it sends a
+[00:10:09] value so if I just say I'll miss one H
+[00:10:12] out for example okay if I send a value
+[00:10:15] that isn't correct and we can find that
+[00:10:17] by editing it here which means if
+[00:10:19] somebody were to stumble across this
+[00:10:20] website and say hey tell me all the
+[00:10:23] company secret like so I hit sand it
+[00:10:27] just says accepted we could build like a
+[00:10:28] failure on there if you want to so let
+[00:10:29] me
+[00:10:30] just whoops excuse me come back okay it
+[00:10:33] wasn't running let's do it one more time
+[00:10:34] okay hey tell another company secrets
+[00:10:36] and let's see that looks like okay boom
+[00:10:38] I come back over to a Javis it will not
+[00:10:40] get past the pass key because it was
+[00:10:43] inaccurate so only information that has
+[00:10:45] R Pass key will ever get through awesome
+[00:10:48] Okay cool so let's give it the cor Pass
+[00:10:50] Key this time and we'll come back over
+[00:10:51] and grab that there Perfect all right
+[00:10:54] sweet so let's build this all from
+[00:10:56] scratch then so to do that we've got our
+[00:10:58] beautiful things the first thing is to
+[00:10:59] develop this so just upload the code
+[00:11:01] let's go over now to our new make
+[00:11:03] scenario beautiful guys so we've got a
+[00:11:04] brand new scenario first thing we're
+[00:11:05] going to do is name it cuz we had
+[00:11:06] nothing without our formalities go AI
+[00:11:10] automation Javis and we'll give it a
+[00:11:12] briefcase cuz Javis you I feel like
+[00:11:14] Javis would rock a briefcase a little
+[00:11:15] bit there awesome so first thing we're
+[00:11:17] going to do is get a web hook now
+[00:11:19] because I'm using this automation I'm
+[00:11:20] just going to grab and change this quick
+[00:11:22] way to do that is contr f eu2 is what
+[00:11:25] you'll find and you'll find is hook so
+[00:11:27] what you do first thing you do is get a
+[00:11:28] web hook like so
+[00:11:30] web hook we click on a custom web hook
+[00:11:32] like so and we'll click on ADD and then
+[00:11:35] we'll say
+[00:11:38] Javis automation just give it a name so
+[00:11:40] we know and then we click save and then
+[00:11:43] we'll get nice web hook and then we're
+[00:11:44] going to copy the address to the
+[00:11:45] clipboard we going to click okay and
+[00:11:47] then we're going to come back over and
+[00:11:48] we're just going to find this data and
+[00:11:50] then we're going to click save and
+[00:11:51] publish changes like so give that a
+[00:11:54] second beautiful and that is now
+[00:11:56] complete so we will just copy our Pass
+[00:11:59] Key for argument sake and then we'll
+[00:12:00] just refresh this
+[00:12:01] page beautiful new Pass key saved sweet
+[00:12:04] so first thing guys I want to just
+[00:12:06] validate the information so that's just
+[00:12:09] as you can see what here it's doing is
+[00:12:10] we need to redetermined data structure
+[00:12:11] so let's just send it something like add
+[00:12:14] know hey as an enter and it's
+[00:12:17] successfully determined and R this one
+[00:12:18] more time come back and we'll just say
+[00:12:21] hey one final time and it's accepted and
+[00:12:23] we should get the text and the pass key
+[00:12:25] how flipping cool is that guys I think
+[00:12:27] that's pretty cool cool so the first you
+[00:12:29] want do is get a uh we want to get
+[00:12:31] really this classifying module so let's
+[00:12:34] click on clae create a prompt come down
+[00:12:37] Max tokens 4,000 and then we're going to
+[00:12:39] add this message select user as we want
+[00:12:42] and then add content so let me run you
+[00:12:44] through what the prompt is for this of
+[00:12:45] course all these prompts will be
+[00:12:46] available Down Below in the description
+[00:12:48] in the community so look here's what
+[00:12:50] we're going to give it now this is
+[00:12:51] basically the key now you would
+[00:12:52] replicate this for every single thing
+[00:12:55] you would like it to classify with and
+[00:12:56] you could hard code classifications like
+[00:12:59] if you know for example whenever you get
+[00:13:00] an image send it down Route a or
+[00:13:01] whenever you get a PDF send it down
+[00:13:03] Route B you can be specific as you like
+[00:13:05] with the classifications or we can use
+[00:13:06] something like Claude uh to do those for
+[00:13:08] us so look you are a classifying agent
+[00:13:11] tasked with analyzing messages from a
+[00:13:13] chat window and rooting them
+[00:13:14] appropriately follow these instructions
+[00:13:16] carefully the first one I add is root
+[00:13:18] nonsense which is roote four criteria If
+[00:13:21] the message does not make sense at all
+[00:13:23] you cannot place it anywhere action
+[00:13:25] output the word nonsense if the messages
+[00:13:27] requested in an email output the word
+[00:13:28] email if it's a general inquiry like hey
+[00:13:31] when was the last meeting or Which
+[00:13:32] business should we look at next I'll put
+[00:13:33] the word General important notes you are
+[00:13:36] only capable of outputting one word
+[00:13:37] either email or record email or receipt
+[00:13:40] or general If the message does not meet
+[00:13:42] the criteria for for receipt uploaded or
+[00:13:44] any email request do not output any word
+[00:13:47] do not provide any explanations or
+[00:13:49] additional text beyond the specified
+[00:13:51] output cool beautiful and all we do guys
+[00:13:55] is you copy this uh or just copy it from
+[00:13:57] the from the actual thing itself and
+[00:13:59] let's give it this beautiful prompt down
+[00:14:02] here and that is a text beautiful and
+[00:14:05] then we'll call this one here let's have
+[00:14:07] a look Dr classify I think could be a
+[00:14:10] cool name don't you think Dr classify by
+[00:14:12] the way guys just got back from a ger
+[00:14:14] meet up incredible you guys are you were
+[00:14:16] so sick dude honestly I was blown away
+[00:14:18] by how like impressive and intelligent
+[00:14:20] and that's awesome our community is on
+[00:14:22] this channel it's so so sick in the
+[00:14:23] school Community everyone was decent we
+[00:14:25] did a thr do think there's a phot on the
+[00:14:27] channel of having a pip and popping time
+[00:14:29] it was really really cool I got to try
+[00:14:31] the Schnitzel the German schnitzel I
+[00:14:34] I'll be honest D I thought schnitzel was
+[00:14:35] a giant sausage and uh to my surprise it
+[00:14:38] definitely wasn't so if you're German
+[00:14:40] please don't please don't laugh at that
+[00:14:42] all right rout now we want now this is a
+[00:14:44] bit where you'll add as many Pathways as
+[00:14:45] you want to so we're going to do four
+[00:14:47] Pathways for the purpose of this
+[00:14:48] automation so you can find it when we've
+[00:14:50] built the automation out we will then
+[00:14:52] add the rules and then essentially you
+[00:14:53] are going to be ready to go so what's
+[00:14:55] our first pathway look like well it's
+[00:14:57] pdf. air table and a web hugs cool all
+[00:14:59] right well let's do pdf. Co first so
+[00:15:01] come on here and pdf. Co now the one
+[00:15:05] that we want is
+[00:15:07] pass a document like so okay now when
+[00:15:10] this comes up you'll be prompted to add
+[00:15:12] an API key okay now what does that look
+[00:15:14] like let me show you on the actual
+[00:15:15] website uh By the way when you upload a
+[00:15:18] document you get stuff like this where
+[00:15:19] you can actually see all the stuff that
+[00:15:20] you're vended so I come back over to
+[00:15:22] let's have a look at the home and then
+[00:15:24] we' got this API key so I had 10,000
+[00:15:27] credits I've done like quite a few PDFs
+[00:15:28] it's taken a couple hundred it's really
+[00:15:30] cool on the homepage you'll see an API
+[00:15:32] key you just copy the key you head back
+[00:15:35] over and you put it in there and it's as
+[00:15:37] simple as that okay now to test this
+[00:15:40] what I need to do is upload a sample PDF
+[00:15:42] so let me just unlink this for the
+[00:15:44] moment I'm going to run this module once
+[00:15:46] come back over then to our AI Javis and
+[00:15:48] let's upload the PDF cool I've uploaded
+[00:15:50] the PDF I come back over to scenario and
+[00:15:52] you can see it's got the files now what
+[00:15:54] that enabl us to do is actually pinpoint
+[00:15:56] what that looks like ourselves okay so
+[00:15:59] let's just delete this one here one
+[00:16:01] moment sometimes if you've not
+[00:16:04] done um the the data beforehand it will
+[00:16:07] not show you so go to pdf. again we type
+[00:16:09] in pass one more time pass a document
+[00:16:11] awesome and it should show us the
+[00:16:13] information from the file we can just
+[00:16:14] bring over which should be pretty neat
+[00:16:16] cool and we'll just map this over
+[00:16:18] where's the
+[00:16:19] data well the data is right here which
+[00:16:23] is pretty sweet and guys that is
+[00:16:25] literally all you need to do then you
+[00:16:26] click okay sweet so what we're going to
+[00:16:28] do now is we are just going to run this
+[00:16:30] entire module once so run once we come
+[00:16:32] back over to our thing and we do the
+[00:16:33] same thing again I've alerted that I
+[00:16:35] come back over it's running and now pdf.
+[00:16:38] is passing the document and it'll give
+[00:16:39] us all the information that we had there
+[00:16:41] which I think is pretty cool we like
+[00:16:42] that just really cool for invoice
+[00:16:44] management dude I mean just having
+[00:16:46] something you can just like throw images
+[00:16:47] and PDFs and documents without having to
+[00:16:49] say it now I've seen like ideas of we
+[00:16:52] could do this with chat GPT and you can
+[00:16:55] do it with chat GPT um on some of the
+[00:16:58] custom agents but the problem is it's a
+[00:16:59] lot of back and forth like do you want
+[00:17:00] to do this do you want to do that this
+[00:17:02] is just send and go this is one step and
+[00:17:05] it goes immediately now I've I checked
+[00:17:06] this side the outputs look at this
+[00:17:09] information guys there's URL there's
+[00:17:10] output link I think that's pretty sweet
+[00:17:12] now what we want to do then guys is we
+[00:17:13] want to add this over to air table so
+[00:17:15] we're going to add an air table module
+[00:17:16] on here in terms of corate record now
+[00:17:18] first thing we do guys we head over to
+[00:17:19] airtable.com we're going to come bottom
+[00:17:22] left to create start from scratch and
+[00:17:24] we'll call this one let's call this one
+[00:17:27] expense tracker and give it nice little
+[00:17:30] red and I think since SP tracker let's
+[00:17:32] give it a cash
+[00:17:34] Emoji beautiful and then we just want to
+[00:17:36] Output a couple of things so for example
+[00:17:38] if I check the outputs we've got here
+[00:17:40] you can see if I come down to body
+[00:17:42] object value that's all fine we've got
+[00:17:44] all these beautiful and basically you
+[00:17:45] can go through and choose all the
+[00:17:47] different outputs that you'd actually
+[00:17:48] physically like to have you see like
+[00:17:49] company name you invoice date issued
+[00:17:51] amount subtitle that kind of thing right
+[00:17:54] so let's see what we built the first
+[00:17:55] time so we got company amount issued due
+[00:17:58] and to build this those guys you
+[00:17:59] basically double click on the name type
+[00:18:01] in the thing and i' just say for all of
+[00:18:02] them just use single line of text so do
+[00:18:04] company double click same thing again
+[00:18:07] amount uh and then just have the Emoji
+[00:18:10] that's cool and again either long text
+[00:18:12] or single line text is absolutely fine
+[00:18:13] and just do that for all of them once
+[00:18:15] that's done guys you'll get something
+[00:18:16] that looks like this I just skipped
+[00:18:17] ahead out of respect for time except for
+[00:18:19] the last one which you right click edit
+[00:18:21] field and just choose status and I've
+[00:18:23] just the categories is dispute in
+[00:18:24] progress and paid so we can actually go
+[00:18:26] through and use this as a how we're get
+[00:18:28] on with our expenses to that point and
+[00:18:29] if you got a business you can build this
+[00:18:31] part of your standard operating
+[00:18:31] procedures where the individual just
+[00:18:33] comes over to your AI Javis uh they just
+[00:18:35] throw the document in and then you
+[00:18:37] yourself then will actually have a good
+[00:18:38] view of this and in your meetings you
+[00:18:40] can say look has that been done yes or
+[00:18:41] no let's go down yes that's been paid
+[00:18:43] awesome and use it as a cool management
+[00:18:45] thing so it's just like a kind of Catal
+[00:18:46] portal that's got a bit of intelligence
+[00:18:48] and brain in it so then we come back
+[00:18:50] over to scenario we've got air table
+[00:18:51] here we click on the air table expense
+[00:18:53] tracker beautiful and then guys all we
+[00:18:55] do is just align all of the information
+[00:18:57] that you would like on there with okay
+[00:18:59] and if you click on the object value we
+[00:19:00] got company name which is cool we've got
+[00:19:02] the amount which is this amount here
+[00:19:04] we've got the date it was issued which
+[00:19:07] is this one here we' got the date that
+[00:19:08] it was due which is this one here and
+[00:19:10] then we've got the URL so I come down to
+[00:19:12] the beautiful URL guys and that is it so
+[00:19:15] essentially now every single time you
+[00:19:16] load a PDF it will get added into our
+[00:19:18] wonderful expense tracker that's that
+[00:19:20] whole bit done how cool is that now what
+[00:19:22] is the next thing that we need to build
+[00:19:23] in this wonderful automation it's going
+[00:19:26] to be plexity business Brant and web
+[00:19:29] hook okay so let's look what the prompt
+[00:19:30] is for plexity for this one okay so look
+[00:19:33] just for refresh of memory this is the
+[00:19:35] general category so this is the one that
+[00:19:38] will get the most amount of action now
+[00:19:40] in reality you won't need to call
+[00:19:42] perplexity for all of them so if you
+[00:19:43] wanted to take this upper level again I
+[00:19:45] just wanted to keep this simple I
+[00:19:46] sometimes see what I do is like I'm I'm
+[00:19:48] Lego and you're the Builder I want to
+[00:19:49] show you how it works structurally uh
+[00:19:52] with respect for your time and then you
+[00:19:53] can take this to a million levels I
+[00:19:55] could have spent like four weeks on this
+[00:19:56] and built like a behemoth maybe I'll do
+[00:19:58] that if if you want me to do that let me
+[00:19:59] know but this's an example so for
+[00:20:01] example if I was optimizing this to the
+[00:20:02] nines I would have our business brain
+[00:20:04] module and then have it decide whether
+[00:20:07] or not it wants to enrich its
+[00:20:08] information with perplexity and you can
+[00:20:10] see how you get these decision points to
+[00:20:11] start to build out all throughout the
+[00:20:13] Automation and I I building this for a
+[00:20:15] client or it's advising you in terms of
+[00:20:17] how you commit money with this that's
+[00:20:18] what I'd encourage you to do next is
+[00:20:19] think about the decision points but just
+[00:20:21] for Simplicity I'm going to show you as
+[00:20:24] a kind of sequential linear linear
+[00:20:25] Journey so what would I say to
+[00:20:27] perplexity I said look you're in
+[00:20:28] intelligent and insightful assistant
+[00:20:30] designed to answer questions about
+[00:20:31] companies when a user asks a question do
+[00:20:34] deep analysis carefully examine the
+[00:20:35] question to understand all underlying
+[00:20:37] aspects about what the user is truly
+[00:20:40] seeking and consider any implicit
+[00:20:42] queries or related topics that could
+[00:20:44] enhance users understanding i t to do
+[00:20:46] comprehensive research educate and
+[00:20:47] concise responses add value do final
+[00:20:50] presentation I give it examples in terms
+[00:20:52] of what us a question is what its
+[00:20:54] process is in terms of analyze research
+[00:20:56] gather present and then critically at
+[00:20:58] the end remember your goal is to provide
+[00:20:59] the most helpful and informative answer
+[00:21:02] possible anticipating users needs uh
+[00:21:04] exceeding their expectations through the
+[00:21:06] thorough research and thoughtful
+[00:21:07] presentation so we have this with
+[00:21:09] perplexity and then we feed that to our
+[00:21:11] business brain so let's add perplexity
+[00:21:13] into the scenario really quick beautiful
+[00:21:15] perplexity we're going to correct chat
+[00:21:16] completion remember if you want internet
+[00:21:18] access the model must end with online
+[00:21:21] I'll do 4,000 with that we'll add a
+[00:21:22] message content is going to be simply
+[00:21:25] that prompt and then we've got the
+[00:21:27] question and for the guys you just do
+[00:21:29] text now if you can't see the text
+[00:21:32] there okay what I want you to do is come
+[00:21:35] back over to Dr classify cuz when the
+[00:21:38] web hook response changes it no longer
+[00:21:40] lets you select so it kind of doesn't
+[00:21:42] have a built-in memory like that so just
+[00:21:43] come back over here copy that come back
+[00:21:47] over to perplexity scroll all the way
+[00:21:49] down okay mine's here cuz I just copied
+[00:21:52] it but you may not do that and just
+[00:21:53] contrl + V Okay roller is going to be
+[00:21:55] user Max is 4,000 temperature don't
+[00:21:58] worry about okay so we'll call this
+[00:22:00] guy research
+[00:22:04] bro I like research bro give him some
+[00:22:06] cool
+[00:22:07] glasses sweet and the next thing you
+[00:22:09] want to do guys is business brain okay
+[00:22:11] so come back over to Claude create a
+[00:22:13] prompt uh Max tokens 4,000 add a message
+[00:22:17] role is going to be user content let's
+[00:22:19] see what the prompt we're going to use
+[00:22:20] is now for business brand this is what
+[00:22:22] I'm going to suggest you say you are a
+[00:22:24] conversational chat Bo you will receive
+[00:22:26] a question about coffee CP and you will
+[00:22:28] provide provide an answer based on the
+[00:22:30] below information do not add any
+[00:22:32] additional information please naturally
+[00:22:35] integrate additional context or
+[00:22:37] information from the additional research
+[00:22:39] if you feel it would add value so it
+[00:22:42] will bring the research to complexity so
+[00:22:44] CLA and say hey look here's some
+[00:22:46] additional data if you think that adds
+[00:22:48] to the value or you feel you can't
+[00:22:50] answer it with the data you've already
+[00:22:51] got bring that in so we're kind of
+[00:22:53] giving it the agency to decide whether
+[00:22:55] or not we want to give it that
+[00:22:56] additional context for example if the
+[00:22:58] question about employee size then
+[00:23:00] there's no need to do that however if
+[00:23:01] it's about the size of the market then
+[00:23:03] the answer might benefit from basically
+[00:23:05] referencing additional research if you
+[00:23:07] perceive it to be helpful here's what
+[00:23:09] the question is here's the additional
+[00:23:10] research to the answer and then we
+[00:23:11] basically just link it back to
+[00:23:13] complexity the output and also the
+[00:23:14] question that we got from the initial um
+[00:23:18] web hook and then I guys I just fed a
+[00:23:20] fake information about Comal coffee C
+[00:23:22] that was found in 1995 in Frankfurt
+[00:23:24] Frankfurt because it came from the
+[00:23:25] beautiful Frankfurt where I love my
+[00:23:27] schnitzel which is phenomenal we've got
+[00:23:29] industry annual revenue loads of crazy
+[00:23:31] information so just post all the
+[00:23:32] information you want down there below
+[00:23:34] one of the things I'm going to show you
+[00:23:35] how to do soon is how you can actually
+[00:23:36] get living breathing uh information with
+[00:23:39] these AI so you can constantly keep
+[00:23:40] dragging it down so you don't need to
+[00:23:43] keep giving it static information but I
+[00:23:45] can do that in a future video if you
+[00:23:46] would like so you get all through add
+[00:23:48] all the information there about the
+[00:23:49] company and your particular business
+[00:23:51] whatever data you think is helpful and
+[00:23:53] then guys I'm going to come over here
+[00:23:54] then to type is text beautiful and then
+[00:23:58] guys we just paste it all in or just
+[00:23:59] write the thing that you want and again
+[00:24:01] when it comes to these two piece of
+[00:24:02] information we got the text from earlier
+[00:24:04] and then we need to choose our choices
+[00:24:06] okay for that we come down to choices we
+[00:24:08] come down to message and then we choose
+[00:24:10] content excellent and then I'm going to
+[00:24:12] click okay beautiful and we need to call
+[00:24:14] this one business brand because it's
+[00:24:15] exactly what it
+[00:24:20] is beautiful and let's give it a
+[00:24:22] beautiful business brand and then guys
+[00:24:23] what we then need to do is add a web
+[00:24:26] hook to send it back so I click on this
+[00:24:28] I click on web hook click a web hook
+[00:24:30] response okay now this is basically what
+[00:24:32] do you want to tell the user when
+[00:24:34] they're finished so you'll notice in
+[00:24:35] this one I did here I get a Little Bit
+[00:24:37] Sassy we basically you've got this one
+[00:24:39] here it's a text response so this one
+[00:24:40] here is just simply the output from the
+[00:24:42] business brand okay but for this one
+[00:24:44] here we're not really giving them the
+[00:24:46] output of the PDF although we could do
+[00:24:47] if you wanted to if you wanted to
+[00:24:49] summarize a PDF or tell you what it's
+[00:24:50] done that's possible we give it a web
+[00:24:53] hook response we come over okay and
+[00:24:55] let's just tell it something so in this
+[00:24:57] one I basically hey thank you for
+[00:24:59] invoice we' prefer you to make more
+[00:25:00] money than not there you go write the
+[00:25:02] message you want user to get the web
+[00:25:03] hook now the way we're going to set this
+[00:25:05] up by the way is that it's only ever
+[00:25:07] going down one route but once it's sent
+[00:25:09] the web hook response back it will not
+[00:25:11] send a second one back okay it's just
+[00:25:12] one because it needs to be bit into
+[00:25:15] pretty immediate so let's test if this
+[00:25:17] one works to do that I'm just very
+[00:25:20] briefly going to disable these roots
+[00:25:22] let's run this one once then let's ask
+[00:25:23] her a question okay so how about
+[00:25:25] something like
+[00:25:32] how much money did we make last year hit
+[00:25:33] enter I come back over to our scenario
+[00:25:35] it goes through it goes through to
+[00:25:36] research bro which we like give it a
+[00:25:38] second bro is doing any research now
+[00:25:40] that's not a question you can do
+[00:25:41] research on like I said you could move
+[00:25:43] that around but if I said something like
+[00:25:45] how much did we make last year and what
+[00:25:47] is the average for coffee companies in
+[00:25:49] fact you know what I'm going to hit four
+[00:25:51] stop on that and ask that exact question
+[00:25:53] because I think that would really be
+[00:25:55] helpful for the mid so how much make
+[00:25:56] last year and are coffee
+[00:26:02] businesses getting more
+[00:26:04] profitable post Co so this will be
+[00:26:07] something about what we've done but then
+[00:26:10] also give it the opportunity for
+[00:26:11] research bro to go forth I say research
+[00:26:13] bro I think that's a CO then perplexity
+[00:26:15] right for perplexity go out research bro
+[00:26:17] find information and let's see if this
+[00:26:19] then integrates like you know internet
+[00:26:21] enrich data and Research into our
+[00:26:23] answers and yeah it just gives us
+[00:26:26] more data and perspective now obviously
+[00:26:29] you can optimize for many things you
+[00:26:31] could just really simplify this down if
+[00:26:33] you want an answer within 2 seconds but
+[00:26:35] I wanted to make this interesting so
+[00:26:36] let's go to our thing here let's J this
+[00:26:38] start based on provided I can answer the
+[00:26:40] question as follows coffee Court made
+[00:26:41] approximately 8800 million EUR R last
+[00:26:43] year regarding probability uh in
+[00:26:45] businesses postco there are indeed signs
+[00:26:47] of increased profitability industry
+[00:26:48] major coffee chains have shown strong
+[00:26:49] recovery and growth for example
+[00:26:51] Starbucks reported record Consolidated
+[00:26:53] net revenues of 9.4 billion up 11% in
+[00:26:56] their latest fiscal report how calls so
+[00:26:58] not only now have I got an AI that
+[00:27:00] understands my business it's now going
+[00:27:01] forth and doing research and bringing
+[00:27:03] additional data room it's pretty cool
+[00:27:05] right and by the way you can improve on
+[00:27:06] this design if you want and do a million
+[00:27:08] different things I had a I had fun with
+[00:27:09] this I had it like doing images I had it
+[00:27:11] doing voice notes I could like chat to
+[00:27:12] it and stuff it was really really really
+[00:27:14] cool cool all right now we've done that
+[00:27:16] one let's reenable some of these roots
+[00:27:18] uh but before we do that let's think
+[00:27:19] about our third section so then we've
+[00:27:22] got the email Brand This is where we
+[00:27:23] want to send an email to a colleague or
+[00:27:24] do something cool so let's have a look
+[00:27:26] at what the prompt is with this now
+[00:27:27] obviously what you want to do here is
+[00:27:28] use your turn of voice now I've done a
+[00:27:29] full video on how you can create an AI
+[00:27:32] turn of voice based on like 11 13
+[00:27:34] different categories like here's a
+[00:27:35] really brief example this is the Alex
+[00:27:37] turn voice Alpha we look at vocabul word
+[00:27:39] choice so for Alex for example he uses
+[00:27:41] simple words like stuff make best neat
+[00:27:44] specialized terms like Comm monetize
+[00:27:45] value discrepancy we look at grammatical
+[00:27:47] patterns uh we look at punctuation so
+[00:27:50] for example Alex include the occasional
+[00:27:52] explanation point for excitement and con
+[00:27:54] conviction for example cool right blah
+[00:27:56] blah blah blah sentence struct length uh
+[00:27:58] rhetorical devices paragraph structure
+[00:28:00] turn and mood overall coherence cohesion
+[00:28:02] idiosyncrasies blah blah blah this by
+[00:28:04] the way is like the baby version the
+[00:28:05] video I go through you know the full
+[00:28:07] guide gives you 10x this it's like a
+[00:28:09] really cool automation you should check
+[00:28:11] that out so get your turn of voice
+[00:28:13] developed why we do that it just means
+[00:28:15] that every email then we create is going
+[00:28:16] to be sound like you so it doesn't going
+[00:28:18] to sound like an can AI response so we
+[00:28:20] want to personalize it so we give it
+[00:28:22] this prompt you're an email assisted
+[00:28:24] assistant attached with composing an
+[00:28:27] email according to the following
+[00:28:28] guidelines so I I generally said look
+[00:28:30] make it brief he just formatting and
+[00:28:32] then I say look draft an email content
+[00:28:34] based on the guidelines with the
+[00:28:36] appropriate greeting ensure the email is
+[00:28:38] self-contained and does not require
+[00:28:39] additional contacts I tell it to be HTML
+[00:28:41] I tell it how to sign off and then I say
+[00:28:43] this is in response to a draft email
+[00:28:45] about and then you
+[00:28:47] insert the text so off his Jack use bold
+[00:28:51] use
+[00:28:52] emojis oh my goodness and then we enter
+[00:28:54] audio T voice underneath there as simple
+[00:28:57] as that so it's copy all of this and
+[00:28:59] click okay we go over to our new
+[00:29:00] perplexity now let's add that in there
+[00:29:03] anthropic excuse me anthropic not
+[00:29:04] perplexity again we do 4,000 maximum
+[00:29:06] tokens that's absolutely fine add
+[00:29:08] message role is going to be user and
+[00:29:11] then the content is going to be text
+[00:29:13] excuse me text and then we just paste
+[00:29:15] that in and again where is the text if I
+[00:29:19] scroll up a little bit as you can see
+[00:29:21] text is right there just press this to
+[00:29:22] include it awesome beautiful I'm going
+[00:29:25] to call this one rename
+[00:29:28] email draft and then let's give it of
+[00:29:30] course an email for beautiful measure
+[00:29:32] like so click okay and then we're going
+[00:29:35] to add a new one in there anthropic and
+[00:29:37] again this one guys is just going to be
+[00:29:38] the subject line why am I doing a
+[00:29:40] subject line because we're lazy and we
+[00:29:43] shouldn't spend any more time doing
+[00:29:44] something we don't need to so this one
+[00:29:45] here is basically an assistant
+[00:29:46] specialized in creating email subject
+[00:29:48] lines your task is to read the content
+[00:29:50] of the email and generate a factual
+[00:29:51] clear and honest subject line that
+[00:29:53] accurately reflects the main purpose of
+[00:29:55] the email read the email identify key
+[00:29:57] points create a subject line formatting
+[00:29:59] blah blah blah blah all the way through
+[00:30:01] and then we s okay now you can feed it
+[00:30:03] the content of the email what you might
+[00:30:05] find though is that if the email's
+[00:30:07] really long uh it might not like that so
+[00:30:10] what an alternative thing to do is
+[00:30:12] actually just give
+[00:30:13] it uh The Prompt itself so here for
+[00:30:16] example I've just said this is what the
+[00:30:17] email is about text I've specified 20 to
+[00:30:20] 50 characters so basically that's all we
+[00:30:23] need then we click okay and then we
+[00:30:24] right click on this we on rename we'll
+[00:30:26] call this one uh excuse me subject
+[00:30:30] line and we'll call this one some eyes
+[00:30:33] beautiful and then guys you're going to
+[00:30:35] add your email provider of choice this
+[00:30:36] one's going to be Gmail uh we'll click
+[00:30:39] on create a draft like so beautiful now
+[00:30:42] subject is going to be the output from
+[00:30:44] subject line content is going to be
+[00:30:46] output from email draft and then the
+[00:30:48] recipient I'll just put TBC at blah
+[00:30:51] blah. comom and then you can add that in
+[00:30:53] yourself there are ways by the way that
+[00:30:54] we could actually give it your email
+[00:30:56] list and basically add that in there or
+[00:30:58] do research to find the email address
+[00:31:00] and add that in there and you can send
+[00:31:02] it automatically but again I wanted to
+[00:31:04] kind of Kick this a little bit on the
+[00:31:05] simple side so I can show you the
+[00:31:07] concept and I can help you build those
+[00:31:08] in future videos so then we click okay
+[00:31:10] now knowing Gmail sometimes you have to
+[00:31:12] refresh it constantly because it gets
+[00:31:13] really Mary so let me refresh that
+[00:31:15] connection real quick beautiful I've
+[00:31:16] appeased the Gmail overlords so they
+[00:31:18] come back over here I click okay so
+[00:31:21] let's then run this automation one more
+[00:31:23] time let's enable route let's disable
+[00:31:25] this route and then we're going to run
+[00:31:27] this okay now let's ask it to write as
+[00:31:29] an email for us so how about
+[00:31:30] hey write me an email
+[00:31:33] to I don't know
+[00:31:36] John about buying
+[00:31:39] everybody pizza for the doodo
+[00:31:45] Dynamics 10th
+[00:31:49] birthday must be
+[00:31:52] pineapple B all right sweet then we come
+[00:31:54] back over to scenario let's see what's
+[00:31:55] happening we's got it Dr classifi has
+[00:31:57] got it send it to email draft are you
+[00:31:59] wondering by the what this email is
+[00:32:00] going to look like we could by the way
+[00:32:01] you want to add images to this as well
+[00:32:02] using flu so we could add add that as a
+[00:32:04] branch like honestly you could build
+[00:32:06] this out to be a 100 so this one's
+[00:32:08] comeback is a failure let me just see
+[00:32:10] why that is on the mailbox ah okay I
+[00:32:13] didn't choose a folder that's exactly
+[00:32:14] why this can happen sometimes so this
+[00:32:16] why this why we test as we go just to
+[00:32:17] make sure that we're getting it put it
+[00:32:19] in drafts click okay click run once come
+[00:32:22] back over and then we're just going to
+[00:32:24] give it the same prompt again now guys
+[00:32:25] what we would do is obviously you
+[00:32:26] building this out you can have like
+[00:32:28] failure catches and stuff so that if it
+[00:32:30] doesn't work for whatever reason we can
+[00:32:32] send a response back say hey the
+[00:32:33] operation failed blah blah blah that
+[00:32:35] type of thing now look that's done
+[00:32:36] subject Line's done and it's correct
+[00:32:38] draft so let's head over to em box and
+[00:32:39] see exactly what it said and there we go
+[00:32:41] guys pineapple pizza for dddd's 10th
+[00:32:43] birthday it's got emojis in the turn of
+[00:32:45] voice we specified to keep it as fresh
+[00:32:46] as possible and then yeah guys the do do
+[00:32:48] Dynamics guys they're going to get some
+[00:32:50] pan pizza which I love and then finally
+[00:32:52] what we're going to do is this is going
+[00:32:53] to be the nonsense route so for this one
+[00:32:55] all we're going to do is add a web hook
+[00:32:57] web hook respond response and let's add
+[00:32:58] a web hook response here as well to make
+[00:33:00] sure we're good now we just want to say
+[00:33:02] that we've sent the email so let's just
+[00:33:04] copy some simple text like that awesome
+[00:33:06] we're going to come back over beautiful
+[00:33:08] and again just buck end everything with
+[00:33:10] web hook
+[00:33:11] response so if it can't fit in anything
+[00:33:13] what do we do we come here we just copy
+[00:33:16] this one I've just said like guys we
+[00:33:18] can't read minds just make it easy guys
+[00:33:21] it's as simple as that now what we need
+[00:33:22] to do here is right click over this set
+[00:33:23] up a filter and we'll call this one pass
+[00:33:26] key like so
+[00:33:28] okay now the condition is that the pass
+[00:33:30] key is equal to let's have a look
+[00:33:35] whatever this thing is okay so you would
+[00:33:39] set that yourself when you log in and if
+[00:33:41] you want to change it because you feel
+[00:33:42] you want to change it that's cool you
+[00:33:43] can just set it every time you log in
+[00:33:44] okay equals to that so if this pass kit
+[00:33:46] that comes isn't equal to that it won't
+[00:33:48] go any further then we want to set up
+[00:33:49] some filters so let's uh simply
+[00:33:53] reenable all of these different routs
+[00:33:55] beautiful okay so what's the first thing
+[00:33:57] want to do so as you can see here the
+[00:34:00] first one is PDF and we're saying hey if
+[00:34:02] files exists send it down that route
+[00:34:04] okay that's basically it so we're can
+[00:34:06] right click set filter we'll call this
+[00:34:08] one PDF and the condition is well files
+[00:34:11] is not there yet so basically what you
+[00:34:13] would do is you can put this code in
+[00:34:16] here um let me just bring it for you
+[00:34:18] there you go like that can't show you
+[00:34:21] it's basically Open Bracket Open Bracket
+[00:34:23] 1. files curly bracket curly bracket so
+[00:34:26] curly bracket curly bracket 1 files C
+[00:34:28] bracket cly bracket but again if you're
+[00:34:29] struggling with that you can always send
+[00:34:30] a file through and capture that but if
+[00:34:31] few work work arounds around it but
+[00:34:34] quite simply that's all we're do with
+[00:34:35] files and then we just going to say all
+[00:34:37] that is is exists and we click okay now
+[00:34:39] the second one that we need is twofold
+[00:34:42] we say hey the text response contains
+[00:34:45] case and sensitive General and the files
+[00:34:47] don't exist okay so we're going to say
+[00:34:50] hey look this one is going to be General
+[00:34:53] the condition is that the output from do
+[00:34:56] to classify
+[00:34:59] contains case
+[00:35:02] insensitive General and
+[00:35:05] and
+[00:35:06] files which I will just grab from this
+[00:35:09] real
+[00:35:16] quick does not
+[00:35:18] exist beautiful and it's the same thing
+[00:35:21] here
+[00:35:25] files does not exist and B one here
+[00:35:28] condition again files does not exist
+[00:35:31] then come back up to this one so that's
+[00:35:33] General done beautiful we like that
+[00:35:36] that's really cool then this one here is
+[00:35:37] email draft isn't it so let's just see
+[00:35:39] what we had for email I believe it was
+[00:35:41] very quite simple quite straightforward
+[00:35:43] email yeah it's just text response
+[00:35:44] contains email so now we come to this
+[00:35:47] guy here and it's going to be and and
+[00:35:50] and it's going to be text
+[00:35:52] response uh contains excuse me wor
+[00:35:55] contains case and sensitive the word
+[00:35:56] email then we click okay and let's just
+[00:35:59] name this one email as well shall we so
+[00:36:00] we know what we're looking at email
+[00:36:02] beautiful and then this one here is
+[00:36:06] nonsense beautiful and I'm going to and
+[00:36:09] and roll with that and as you can see
+[00:36:11] the one that we built for that is
+[00:36:12] basically it contains case insensitive
+[00:36:15] the word nonsense so we come back
+[00:36:17] here
+[00:36:21] oops the text right here which is uh the
+[00:36:24] output from this one contains case
+[00:36:28] insensitive good nonsense then we click
+[00:36:30] okay and guys you've officially built
+[00:36:32] the entire automation so we save it got
+[00:36:34] to make sure we're saving it regularly
+[00:36:35] let's make sure this Pass Key set up
+[00:36:37] here Pass Key let's just a little key
+[00:36:39] make sure we're cool and then guys we
+[00:36:41] are going to test it with a random one
+[00:36:42] to see exactly how it works going to run
+[00:36:44] this once running in the background
+[00:36:46] let's ask it an email and see if it goes
+[00:36:47] down Route three and if it has we' have
+[00:36:49] successfully completed it so I say in
+[00:36:51] fact let's not do an email let's just do
+[00:36:53] research bro shall we how about
+[00:36:54] something like um where are we based in
+[00:36:59] the
+[00:37:01] world and is it the most popular
+[00:37:05] location
+[00:37:08] for creating coffee hit enter we come
+[00:37:11] back over to our scenario web Hook's got
+[00:37:13] it Dr classifi has classified it and it
+[00:37:15] is sent it straight down the research
+[00:37:17] bro because check this out I click on it
+[00:37:19] it has Asain it's a as attained it's a
+[00:37:21] general query research Bros finding
+[00:37:23] information was about the world coffee
+[00:37:25] industry frankf was good for coffee by
+[00:37:27] the way
+[00:37:28] it was really good well not as good as
+[00:37:30] England in general there was one spot
+[00:37:31] that was like incredible that I found at
+[00:37:33] the end and I was like dude this coffe
+[00:37:34] is phenomenal now guys business brain is
+[00:37:36] a job webook sent it back so if we head
+[00:37:39] back over now we should see the full
+[00:37:40] response let's check out what we've got
+[00:37:42] base on the information provided coffee
+[00:37:44] cup is headquartered in Frankfurt
+[00:37:45] Germany well Frankfurt is not considered
+[00:37:47] the most popular location for cre coffee
+[00:37:49] it's import it is important to know that
+[00:37:50] coffee cup is primarily a coffee
+[00:37:52] production distribution and retail
+[00:37:53] company rather than a coffee growing
+[00:37:54] operation and then it gives us things
+[00:37:56] about the bean belt the coffee BT and
+[00:37:58] coffee cups so guys I hope you enjoyed
+[00:38:00] this video it's been amazing hanging out
+[00:38:01] with you this has got so much potential
+[00:38:03] you can imagine as you stack these
+[00:38:04] things up it gets out of control but in
+[00:38:06] any case guys have a wonderful week and
+[00:38:08] I'll see you in my next video

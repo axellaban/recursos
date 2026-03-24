@@ -1,0 +1,54 @@
+﻿Puppeteer Code 👾 
+
+
+
+
+{
+  "browserLog": false,
+  "closeCookieModals": false,
+  "debugLog": false,
+  "downloadCss": true,
+  "downloadMedia": true,
+  "excludes": [
+    {
+      "glob": "/**/*.{png,jpg,jpeg,pdf}"
+    }
+  ],
+  "globs": [
+    {
+      "glob": "https://chat.openai.com/share/*"
+    }
+  ],
+  "headless": true,
+  "ignoreCorsAndCsp": false,
+  "ignoreSslErrors": false,
+  "keepUrlFragments": false,
+  "linkSelector": "a",
+  "pageFunction": "async function pageFunction(context) {\n    const { page, request, log } = context;\n    await page.waitForSelector('div.markdown.prose.w-full.break-words', { timeout: 30000 });\n    const data = await page.$$eval('div.markdown.prose.w-full.break-words', elements => {\n        return elements.map(element => ({\n            text: element.textContent.trim(),\n            role: element.getAttribute('data-message-author-role') || 'unknown'\n        }));\n    });\n    return { data };\n}",
+  "postNavigationHooks": "// We need to return array of (possibly async) functions here.\n// The functions accept a single argument: the \"crawlingContext\" object.\n[\n    async (crawlingContext) => {\n        const { page } = crawlingContext;\n        // ...\n    },\n]",
+  "preNavigationHooks": "// We need to return array of (possibly async) functions here.\n// The functions accept two arguments: the \"crawlingContext\" object\n// and \"gotoOptions\".\n[\n    async (crawlingContext, gotoOptions) => {\n        const { page } = crawlingContext;\n        // ...\n    },\n]",
+  "proxyConfiguration": {
+    "useApifyProxy": true
+  },
+  "startUrls": [
+    {
+      "url": "{{3.result}}"
+    }
+  ],
+  "useChrome": false,
+  "waitUntil": [
+    "networkidle2"
+  ],
+  "pseudoUrls": [],
+  "proxyRotation": "RECOMMENDED",
+  "initialCookies": [],
+  "maxRequestRetries": 3,
+  "maxPagesPerCrawl": 0,
+  "maxResultsPerCrawl": 0,
+  "maxCrawlingDepth": 0,
+  "maxConcurrency": 50,
+  "pageLoadTimeoutSecs": 60,
+  "pageFunctionTimeoutSecs": 60,
+  "maxScrollHeightPixels": 5000,
+  "customData": {}
+}

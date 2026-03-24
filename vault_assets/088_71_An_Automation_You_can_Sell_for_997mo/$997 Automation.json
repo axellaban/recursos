@@ -1,0 +1,507 @@
+{
+  "name": "Chatbot",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "systemMessage": "=The current date is: {{$now}}\n\n**[ROLE]**  \n- You are the **Smart Assistant Agent**.  \n- Your main responsibility is to efficiently manage online searches, appointments, knowledge retrieval, and email communications.  \n\n---\n\n**[CONTEXT]**  \n- **System environment:** Operates in a multi-agent system designed for task automation, knowledge management, and scheduling.  \n- **Known details:** Access to internet search, appointment creation and retrieval, a structured database for knowledge queries, and email composition and sending.  \n\n---\n\n**[TASK]**  \n- **Goal:**  \n  - Perform internet searches for requested information.  \n  - Create, check, and manage user appointments.  \n  - Retrieve relevant information from a structured knowledge database.  \n  - Compose and send emails as per user instructions.  \n- **Constraints:**  \n  - Ensure responses are accurate, concise, and relevant.  \n  - Maintain appointment details securely and provide access upon request.  \n  - Database search must retrieve only verified information.  \n  - Emails should follow professional formatting and etiquette.  \n\n- **Style:**  \n  - Professional and clear tone.  \n  - Formatting should be structured and easy to read.  \n  - Appointment responses should be structured with time, date, and location details.  \n  - Emails should include a proper salutation, body, and closing.  \n\n- **Output format:**  \n  - **For search results:** Summary + relevant links (if applicable).  \n  - **For appointments:** Structured format (Date, Time, Event, Location, Notes).  \n  - **For database searches:** Relevant extracted information in plain text.  \n  - **For emails:** Well-formatted email body ready for sending.  \n\n---\n\n**[COLLABORATION]**  \n- **Other agents:**  \n  - Calendar Manager for scheduling.  \n  - Database Engine for structured knowledge retrieval.  \n  - Email Service for sending communications.  \n\n- **Interaction:**  \n  - When retrieving knowledge, cross-check database before searching online.  \n  - When creating appointments, verify scheduling conflicts before confirmation.  \n  - When sending emails, confirm recipient details and content integrity.  \n\n---\n\n**[EXAMPLES]**  \n\n- **Good response example:**  \n  *User Request:* \"Find the latest AI trends for 2025.\"  \n  *Response:*  \n  _\"Here are the latest AI trends for 2025 based on my search:_  \n  - AI-powered automation in businesses.  \n  - Enhanced multimodal AI capabilities.  \n  - Real-time AI translation improvements.  \n  _Full article: [Link].\"_  \n\n- **Bad response example:**  \n  _\"AI is cool and growing fast. You can Google it.\"_  \n\n---\n\n**[FINAL REQUIREMENTS]**  \n- **QA checks:**  \n  - Ensure proper spelling, grammar, and factual accuracy.  \n  - Verify appointment details before confirmation.  \n  - Validate email formatting before sending.  \n\n- **Ethical guidelines:**  \n  - Do not retrieve or store sensitive personal data without consent.  \n  - Avoid biased or misleading information in search results.  \n  - Maintain confidentiality in emails and appointment scheduling.  \n\n- **Error handling:**  \n  - If an internet search fails, provide a fallback response and suggest alternative ways to find information.  \n  - If an appointment conflict occurs, suggest rescheduling options.  \n  - If an email fails to send, notify the user with troubleshooting steps.  \n\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        720,
+        100
+      ],
+      "id": "30b37b8e-e5a3-444f-96b1-fd5304fe4652",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        500,
+        380
+      ],
+      "id": "429bea89-f13f-4c47-8dd6-7cf943a1ff04",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "RyfN7MeoBsZCvOPq",
+          "name": "OpenAi account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('When chat message received').item.json.sessionId }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        720,
+        440
+      ],
+      "id": "07f964d1-8de0-40ef-9658-f624b5b86e27",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        440
+      ],
+      "id": "820ab68b-b2f9-4bbf-9776-aceefc2d16df",
+      "name": "SerpAPI",
+      "credentials": {
+        "serpApi": {
+          "id": "XY8fGvcyoTv8XEPd",
+          "name": "SerpAPI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "triggerOn": "specificFolder",
+        "folderToWatch": {
+          "__rl": true,
+          "value": "1cCHxvYtMFmaKy_bqF5JiFskMzk_JUeo8",
+          "mode": "list",
+          "cachedResultName": "N8N Agent",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1cCHxvYtMFmaKy_bqF5JiFskMzk_JUeo8"
+        },
+        "event": "fileCreated",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDriveTrigger",
+      "typeVersion": 1,
+      "position": [
+        80,
+        860
+      ],
+      "id": "f082f4dd-76dd-4f8d-b324-e221a26194a1",
+      "name": "Google Drive Trigger",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        300,
+        860
+      ],
+      "id": "123f5cb3-a21e-4c67-b2bb-cd9e6e7e5591",
+      "name": "Google Drive",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "n8n",
+          "mode": "list",
+          "cachedResultName": "n8n"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        520,
+        860
+      ],
+      "id": "57f75098-1ed9-4508-8e21-46b01a84d5e9",
+      "name": "Pinecone Vector Store",
+      "credentials": {
+        "pineconeApi": {
+          "id": "r7v5WglCWZEhdNFl",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.1,
+      "position": [
+        520,
+        1080
+      ],
+      "id": "f2c2e891-c372-49a0-b8a2-89253b888bf3",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "RyfN7MeoBsZCvOPq",
+          "name": "OpenAi account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataType": "binary",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        660,
+        1080
+      ],
+      "id": "b7d5785f-bd3a-480f-8278-88e655321d31",
+      "name": "Default Data Loader"
+    },
+    {
+      "parameters": {
+        "chunkOverlap": 200,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        760,
+        1300
+      ],
+      "id": "cda5011f-b2d7-42a2-a5f3-15cbe50c4103",
+      "name": "Recursive Character Text Splitter"
+    },
+    {
+      "parameters": {
+        "name": "VectorStore",
+        "description": "Vector database with information"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        160
+      ],
+      "id": "d0a917c8-12f6-49cc-992d-3c229b235cb3",
+      "name": "Vector Store Tool"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        300
+      ],
+      "id": "e0e8e51d-13ac-4355-a191-0963538bd5ff",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "RyfN7MeoBsZCvOPq",
+          "name": "OpenAi account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# AI Agent 🤖",
+        "height": 700,
+        "width": 1380
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a6819205-54a8-4b52-b4dc-d31f45b30bd4",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "# Upload Vector 💎",
+        "height": 740,
+        "width": 1320,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        760
+      ],
+      "id": "afd6d0d6-26b5-4439-b743-6a56d1fc5033",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "n8n",
+          "mode": "list",
+          "cachedResultName": "n8n"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        340
+      ],
+      "id": "28dee0e3-4ad4-4a60-8771-6cd6da2c78aa",
+      "name": "Pinecone Vector Store1",
+      "credentials": {
+        "pineconeApi": {
+          "id": "r7v5WglCWZEhdNFl",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.1,
+      "position": [
+        1660,
+        520
+      ],
+      "id": "31557703-707b-440d-829b-4c42ee1117b5",
+      "name": "Embeddings OpenAI1",
+      "credentials": {
+        "openAiApi": {
+          "id": "RyfN7MeoBsZCvOPq",
+          "name": "OpenAi account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# Retrieval 👀",
+        "height": 620,
+        "width": 720,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        60
+      ],
+      "id": "4e1cae74-9ae8-4e85-8f9d-6a4fe11ac820",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        360,
+        100
+      ],
+      "id": "f787b07e-fd86-4999-86f8-cb1b326871ac",
+      "name": "When chat message received",
+      "webhookId": "c9d8cbda-ca07-444b-a2b9-c6660da67b86"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        []
+      ]
+    },
+    "SerpAPI": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recursive Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector Store Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Vector Store Tool",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store1": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Vector Store Tool",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "6a6a7562-2627-4ef8-b8fa-6ab18eb923b3",
+  "meta": {
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "gvwrd5Qee3HPvtkR",
+  "tags": []
+}

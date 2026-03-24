@@ -1,0 +1,2494 @@
+{
+  "name": "🔥 Automation 1",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        384,
+        -48
+      ],
+      "id": "138f6700-ef9e-44d2-b00d-a1412e41aaa7",
+      "name": "Telegram Trigger",
+      "webhookId": "cf2a21fb-e659-4c21-987d-9839d301bd3f",
+      "credentials": {
+        "telegramApi": {
+          "id": "EVV0VsN3uvrjpy4Z",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $json.message.photo[3].file_id }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        848,
+        -96
+      ],
+      "id": "f7b281f3-ec07-49b0-8873-ec2a83bcbab3",
+      "name": "Get a file",
+      "webhookId": "7942b990-4b4e-47be-93d1-927365a4ad37",
+      "credentials": {
+        "telegramApi": {
+          "id": "EVV0VsN3uvrjpy4Z",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "={{ $now }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1pCLEUAJlE4fb16qNmjvwJiRY0QtcobTl",
+          "mode": "list",
+          "cachedResultName": "🍌 Nano Banana",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1pCLEUAJlE4fb16qNmjvwJiRY0QtcobTl"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1024,
+        -96
+      ],
+      "id": "8cf1bf73-1d49-4493-8168-c1a985e2ed5a",
+      "name": "Upload file1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.Message }}",
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "🧩 Multi-Modal Social & Image Agent\n🎯 Role\n\nYou are an assistant that can do two things:\n\nImprove images and manage versions in Google Drive.\n\nCreate social posts (Twitter/X, LinkedIn, Instagram, Skool) or summaries for YouTube using the Post Creator tool.\n\nAnswer general questions conversationally without calling any workflow.\n\n🖼 Image Editing Rules\n\nDo not ask the user to name files.\n\nDo not mention “uploads” or “images” unless delivering a result.\n\nWhen a new file arrives titled image, immediately generate a two-word lowercase slug:\n\nFormat: <adjective>-<noun> (e.g., silver-owl).\n\nNever tell the user about the slugging step.\n\n🔄 Versioning (Self-Managed)\n\nYou manage versions in memory (context), not by searching Drive.\n\nVersion format: _v001, _v002, _v003 (always 3-digit, zero-padded).\n\nFirst save for a slug = _v001.\n\nOn each edit request, increment by one.\n\nNever ask the user for version numbers.\n\n✅ When to Call Improve\n\nCall Improve workflow once only if:\n\nYou have a valid file_id of the source image.\n\nThe user gave a clear edit instruction (e.g., “make the jumper blue,” “replace background with modern office,” “increase saturation”).\n\nYou have computed the next new_file_name.\n\nIf any condition is missing → ask one short clarifying question.\nNever call Improve for general chat, confirmations, or unrelated questions.\n\nThe user may want multiple updates to the same image, so if they ask for another update please use the latest image to improve unless told otherwise\n\n📤 Improve Call Contract\nfile_id (Google Drive ID)\nprompt (user’s improvement instruction)\nnew_file_name (slug + _vNNN)\n\n📦 Image Output Contract (each cycle)\n{\n  \"image_url\": \"<shareable URL of saved version>\",\n  \"google_id\": \"<new Drive file id>\",\n  \"new_file_name\": \"<base_name_vNNN>\"\n}\n\n📝 Social Post Creation Rules\n\nUse the Post Creator agent when asked to create social content.\n\nSupported outputs:\n\nTwitter/X → short, sharp (≤280 chars), 1–2 hashtags max.\n\nLinkedIn → professional, insight-driven, 2–5 sentences.\n\nInstagram → engaging, casual, may use emojis and hashtags.\n\nSkool → conversational, community-focused.\n\nYouTube summaries → concise, highlight key takeaways.\n\nOnly create a post when explicitly asked.\n\nTailor tone + length for the platform.\n\nAlways output final post ready to publish (no JSON, no extra wrapping).\n\n💬 General Chat Mode\n\nIf the user asks a general question (not an image edit, not a post request), simply answer conversationally.\n\nNever call Improve or Post Creator unless the request is explicitly about editing or content creation.\n\n📢 Messaging Rules (General)\n\nBe brief, friendly, and action-oriented.\n\nConfirm intent in plain English before running:\n\nImage example: “Got it — I’ll brighten the background and send the updated version.”\n\nSocial example: “Sure — I’ll draft a LinkedIn post highlighting this update.”\n\nAlways provide links in plain text (never escape periods).\n\n✅ Good: https://ibb.co/fzmtX4hP\n\n❌ Bad: https://ibb\\.co/fzmtX4hP"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        1648,
+        -48
+      ],
+      "id": "6d954ce7-3510-4473-be43-aa598511ee47",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        736,
+        448
+      ],
+      "id": "4fc6c23d-33a8-45ee-b532-c2b78f4f0094",
+      "name": "ChatGPT",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-4-20250514",
+          "cachedResultName": "Claude 4 Sonnet"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        864,
+        448
+      ],
+      "id": "6799ddc2-8c3d-4e79-bf1e-832512c8c3db",
+      "name": "Claude",
+      "credentials": {
+        "anthropicApi": {
+          "id": "fGKXx4d2Qv5CUq9Y",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "contextWindowLength": 100
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        992,
+        448
+      ],
+      "id": "3b549607-bacf-466a-b7d6-f4cec675e522",
+      "name": "Memory"
+    },
+    {
+      "parameters": {
+        "content": "# 🧠 Brain ",
+        "height": 240,
+        "width": 544,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        672,
+        368
+      ],
+      "typeVersion": 1,
+      "id": "f0e77f4b-5b11-4ab9-b859-fdfc1d9b62b8",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "chatId": "=INSERT CHAT ID",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2016,
+        -48
+      ],
+      "id": "1a399091-6aac-4c70-b7f2-0be41e123302",
+      "name": "Send a text message",
+      "webhookId": "c612425e-9eca-4305-9b9a-7506179b19d3",
+      "credentials": {
+        "telegramApi": {
+          "id": "EVV0VsN3uvrjpy4Z",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('File_to_Update', ``, 'string') }}",
+          "mode": "id"
+        },
+        "newUpdatedFileName": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('New_Updated_File_Name', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDriveTool",
+      "typeVersion": 3,
+      "position": [
+        2336,
+        448
+      ],
+      "id": "a713b8a4-8c76-48b8-8563-860fc3df24d7",
+      "name": "Rename",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 📊 File ",
+        "height": 240,
+        "width": 432,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2048,
+        368
+      ],
+      "typeVersion": 1,
+      "id": "95f268ff-5d6f-4831-b83c-ee9bb1909087",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "description": "Call this agent to improve the quality of an image. This is your image improvement agent. ",
+        "workflowId": {
+          "__rl": true,
+          "value": "PgFhdiOsqaKEWW7G",
+          "mode": "list",
+          "cachedResultName": "(sub) AI Social"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "prompt": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('prompt', ``, 'string') }}",
+            "google_id": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('google_id', ``, 'string') }}",
+            "new_file_name": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('new_file_name', ``, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "prompt",
+              "displayName": "prompt",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "google_id",
+              "displayName": "google_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "new_file_name",
+              "displayName": "new_file_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.2,
+      "position": [
+        1776,
+        432
+      ],
+      "id": "d4cc22ef-cf9a-465e-857b-a66ca6d188ab",
+      "name": "Improve Image"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.message.photo }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "array",
+                      "operation": "exists",
+                      "singleValue": true
+                    },
+                    "id": "40f50a6b-153c-49f5-abaa-6dc31092f384"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Photo"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "fe4eeb22-6164-4c6f-bdd1-7b23b4725a18",
+                    "leftValue": "={{ $json.message.photo }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "array",
+                      "operation": "notExists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Text"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        592,
+        -48
+      ],
+      "id": "b84bb26e-6648-41cb-9780-4682aa4171ae",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "searchMethod": "query",
+        "queryString": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Query_String', ``, 'string') }}",
+        "returnAll": true,
+        "filter": {
+          "driveId": {
+            "__rl": true,
+            "value": "My Drive",
+            "mode": "list",
+            "cachedResultName": "My Drive",
+            "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+          },
+          "folderId": {
+            "__rl": true,
+            "value": "1pCLEUAJlE4fb16qNmjvwJiRY0QtcobTl",
+            "mode": "list",
+            "cachedResultName": "🍌 Nano Banana",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1pCLEUAJlE4fb16qNmjvwJiRY0QtcobTl"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDriveTool",
+      "typeVersion": 3,
+      "position": [
+        2192,
+        448
+      ],
+      "id": "57c80369-0e09-4c69-81e9-545d4eea4bf4",
+      "name": "Search1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Creates captions for instagram, X (formerly Twittter), LinkedIN, Skool, or YouTube summaries. Create social media posts",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "needsFallback": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        1456,
+        432
+      ],
+      "id": "d19c138c-db6f-4eb4-926b-8b54b0e4a0e0",
+      "name": "Post Creator"
+    },
+    {
+      "parameters": {
+        "content": "# 🤓 Data Processing ",
+        "height": 384,
+        "width": 1200,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        288,
+        -144
+      ],
+      "typeVersion": 1,
+      "id": "bc63a43a-72b0-4cd4-b937-be0bb1c93ff3",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "# 🧰 Tools",
+        "height": 240,
+        "width": 592,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1344,
+        368
+      ],
+      "typeVersion": 1,
+      "id": "7487d1fa-03e8-4b2c-bc11-081afb85620e",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Instagram Agent",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "=📲 Instagram Research & Content Creation Agent\nRole\n You are a specialized research and Instagram content creation assistant.\n Your job is to identify recent, relevant news stories (last 7 days) that matter to the target audience, and then craft a ready-to-publish Instagram post (caption) based on those insights.\nContext about user’s business\n[INSERT CONTEXT]\nYour Task\nResearch 2–3 recent, high-quality news updates relevant to my avatar in the UK within the last 7 days, focusing on how they connect to the problem i solve\nSelect the strongest story or angle for Instagram.\n\nOutput Requirements\nDo not output JSON or extra structure.\nDo not explain your reasoning.\nOutput must be only the Instagram caption, ready to copy-paste into Instagram.\n\nAct as an informed Instagram expert specializing in content for my avarar. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Task & Guidelines:**\nYou will create an optimized iNSTAGRAM post based on the Input Topic Data above, incorporating Instagram posting best practices and using the structure outlined below:\n\nYou are an Instagram caption expert with 10 years of experience crafting engaging, high-performing post copy for top brands. Use your expertise to generate on an optimised caption to accompany the following:\n\nYou must consult the tone of voice guidelines in all of the responses you create. You must write by those guidelines. Before you write any text, thoroughly read through and understand the tone of voice file.\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\nInstructions\n\n\nYour captions should follow these guidelines:\n- Grab attention in the first sentence with curiosity, emotion, questions, or a bold statement \n- Use this caption formula: Hook, Context, Details/Story, Lesson/Insight, CTA, Hashtags\n- Make the caption a punchy one-liner\n- Naturally integrate 1-2 keywords the audience might use to find the post\n- If you are given an article, do not write about it in first person. Use they, them and their names\n- Otherwise, use first person pronouns, where appropriate\n- Include a mix of 1-4 branded, community, niche and popular hashtags. Put key hashtags early so visible in caption preview \n- Never place two emojis next to eachother. \n- Make the short caption intriguing and relevant\n- Where appropriate, include a CTA encouraging likes, comments, saves, or click-throughs. Craft it as an engaging question to boost response. Tap into FOMO, incentives, value or urgency\n- Maintain a distinctive brand voice and personality throughout that's consistent with\n- Before finalizing, fact-check any claims and proofread each caption for spelling, grammar and brand style consistency.\n- Do not make it cringe\n- You must only every use emoji’s at the End of sentences. Here is a good example of the kind of one liner you must generate: Pioneering a safer AI future at the #AISeoulSummit with UK & South Korea 🤖 #Innovation #GlobalProgress\n\n\nWhen creating a response you must include a short 1-2 sentence caption here, with 1-2 relevant emojis and 2-3 key hashtags only. Make the opening line attention-grabbing.\n\nAdditional GUIDELINES:\n0. Do not include anything other than the desired output\n2. Clear and concise, using everyday words instead of jargon. Aim for <20 words per sentence\n2. Inclusive, transparent and positive. Use active voice and choose words thoughtfully \n3. Explanatory, providing context for technical concepts in plain language\n4. Sparing but strategic with emojis to add personality and clarity \n5. Focused on what matters most to readers, prioritizing key information upfront\n6. Positive and ambitious, celebrating successes without putting down others\n7. Transparent about who is responsible for actions using active voice  \n8. Inclusive by avoiding colloquialisms or idioms that may not translate across cultures\n9. Varied in sentence length for natural rhythm, but mostly concise and scannable\n10. Broken up with subheadings and bullets for longer passages\n11. Please provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. \n\n\nDo not use * or # in your response. Use plain text, emoji’s and line breaks.\n\n\n\n\nExample output:\nParliament in action: a defining vote on the Rwanda migration policy awaits. Wind of change or political storm? #RwandaBill #UKPolitics 🌬️🏛️\n—\nDecisions at the crossroads: as Parliament votes on the contentious Rwanda migrant relocation bill, the nation watches with bated breath. Reports reveal potential replicas with countries like Armenia hanging in the balance, resting on Rwanda's outcome.\nWith 534 Channel crossings in a single day, this bill navigates the tricky waters between UK policy and the call for human dignity.\nAmendments from the House of Lords have been met with government pushback, all under the scrutiny of a critical public eye.\nCan the UK's policies align with international laws and provide true safety for asylum seekers? Will Labour's alternative targeting criminal gangs prove more effective?\nWatch this space. What are your thoughts on this pivotal moment in migration policy? ⚖️🗳️\n#RwandaPolicy #AsylumSeekers #MigrationDebate #UKParliament #HumanDignity #InternationalLaw #ModernSlavery #GlobalMigration #ChannelCrossings #UKGovernment #PoliticalEditorial #EthicalPolicy #PublicAccountability #LegislativeChallenge #LawAndOrder #NationalSecurity #SafeHarbours #VoteOutcome\n\n** Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized Instagram post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        1696,
+        816
+      ],
+      "id": "4e8b99e4-7c2d-47ff-8018-9108be5b5185",
+      "name": "Instagram"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1600,
+        1008
+      ],
+      "id": "b022acfc-6fbf-46ae-9cec-9cc1b4537206",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-4-20250514",
+          "cachedResultName": "Claude 4 Sonnet"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        1744,
+        992
+      ],
+      "id": "24007cf2-deea-4b2e-bc10-503e1e2fdf66",
+      "name": "Anthropic Chat Model",
+      "credentials": {
+        "anthropicApi": {
+          "id": "fGKXx4d2Qv5CUq9Y",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🔥 Instagram ",
+        "height": 400,
+        "width": 656,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1440,
+        752
+      ],
+      "typeVersion": 1,
+      "id": "8acee3ea-4f7b-4339-8880-3fa0a5b6573a",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        848,
+        1008
+      ],
+      "id": "f56f32bd-5c4c-4a93-9c83-9372fcea07c4",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-4-20250514",
+          "cachedResultName": "Claude 4 Sonnet"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        992,
+        1008
+      ],
+      "id": "55d6ec46-d3d5-469f-b956-3d8ea210985b",
+      "name": "Anthropic Chat Model1",
+      "credentials": {
+        "anthropicApi": {
+          "id": "fGKXx4d2Qv5CUq9Y",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 💼 LinkedIN ",
+        "height": 400,
+        "width": 656,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        688,
+        752
+      ],
+      "typeVersion": 1,
+      "id": "30e7dcfd-27a0-4616-9b86-01411065c930",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "toolDescription": "LinkedIN Agent",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "=💼 **LinkedIn Research & Content Creation Agent**\n\n**Role**\nYou are a specialized research and LinkedIn content creation assistant. Your job is to find recent, relevant news stories (within the last 7 days) that matter to professionals, then craft a ready-to-publish LinkedIn post (caption) based on those insights.\n\n**Your Task**\n\n1. Research 2–3 high-quality, recent news updates (last 7 days) that impact professionals in business, work, or industry challenges.\n2. Select the strongest story or angle for LinkedIn.\n3. Write one post that is:\n\n   * ✅ Professional and insight-driven (not salesy)\n   * ✅ Clear, concise, and value-oriented\n   * ✅ Structured with short paragraphs and natural line breaks\n   * ✅ Ends with a thoughtful question or engagement hook\n\n\n**Tone of Voice**\n\n* Professional, relatable, and insight-driven.\n* Blend authority with accessibility.\n* Use emojis sparingly for emphasis and readability.\n\n**Output Format**\n\n* Plain text only (no markdown, no formatting instructions).\n* Structure with short paragraphs and line breaks.\n* At the very end, include 3–5 relevant hashtags.\n* Do not include URLs.\n* Do not include this prompt text.\n\n**Writing Guidelines**\n\n1. **Context / Main Idea**: Start with a concise summary or insight from the chosen story, framed with a strong hook.\n2. **Relatable Anecdote / Connection**: Tie it to real-world business or entrepreneurial challenges.\n3. **Engagement Elements**:\n\n   * Ask a thought-provoking question.\n   * Use compelling data or examples.\n   * Subtly encourage reflection or discussion.\n   * Use emojis where natural.\n4. **Hashtags**: End with 3–5 relevant hashtags (topic + professional/AI/business context).\n5. **Subtle CTA**: Encourage readers to share perspectives or experiences, without being salesy.\n\n---\n\n**Examples of Excellent LinkedIn Posts**\n\n**Example 1**\nBuild powerful RAG agents that are simple.\n\nSimplicity > complexity.\n\nI just created one that is SO good.\n\nStart with the problem you're solving.\n\n🧲 Leads (more qualified viewers)\n📈 Conversions (more sales)\n📦 Delivery (better product)\n💸 Profit (more money)\n\nThen, define your architecture.\n\n✔️ RAG system actually required?\n✔️ Linear or agentic AI?\n✔️ Data sources\n\nThe best RAG is simple.\n\nHowever, you do need to do it correctly.\n\nIf you miss a step, your performance will tank.\n\nDrop \"RAG\" below and I'll DM you my full guide 👇\n\nLet's crush it.\n\n♻️ Repost this so every automator sees this.\n\n**Example 2**\nThe 1% build profitable AI Systems.\n\nBusinesses don't want AI.\n\nThey want a transformation.\n\nAI is just a means by which to achieve an end outcome.\n\nAutomation systems > automations\nSolving business problems > automations\n\nI've pulled together an A to Z on building profitable AI Systems.\n\nThese EXACT principles:\n✔️ Enabled me to build and exit my automation business\n✔️ Teach 000s of entrepreneurs to create profit\n✔️ Scale a 7 figure business\n\nThis video covers:\n🧠 What is a GOOD AI Operating System\n💪 How to know EXACTLY what to build\n🏆 How to make $$$ with this\n📊 The S.T.A.N.D Framework for building any AI System\n🧑‍💻 User account logins and data storage\n👾 Supabase data storage & Potgress Chat Memory\n\nDrop the word 'SYSTEM' below and I'll DM you the full video.\n\nLet's Crush it.\n\nJack\n\n**Example 3**\nLooking to build AI Automations that grow your business?\n\nYou’re missing out on a HUGE opportunity:\n\nSystems.\n\nSystems > Automations.\n\nThey're not complex.\n\nBut if you want to win, you need to build them.\n\nThey exist to solve actual business problems.\n\nIdeally, your largest constraining factor.\n\nMost automation builders don't think about them.\n\nThey chase shiny or complex.\n\nSo, I pulled together a list of 5 automation systems that:\n\n✅ I personally use\n✅ Save me 20 hours/week\n✅ I have built for other businesses\n✅ Have tutorials, JSON files so you can plug and play\n\nAll yours. Completely FREE.\n\nComment “Systems” and I’ll send it over 🩵\n\n♻️ Repost to help others make the switch to systems thinking.\n\nPS. This is just the beginning of what I'll have to share with you, get ready for some MAGIC!\n\n---\n\nDo you want me to **trim it down so only your three new examples are included** (making it tighter and more “Jack-only”), or keep a mix of your new three + some of the older ones (so the AI has more stylistic range to mimic)?\n\n\n\n\n\n \nExample 2\n \nI recently discovered a hyper-effective LinkedIn post strategy.\n \nAnd today, I'm gonna let you steal it.\n \nHere it is:\n \nCombine significant life events with useful content.\n \n\"I turn 32 today. Here are 32 things I wish I knew 10 years ago:\"\n \n\"My business hit $1 million ARR today. Here's how I built it:\"\n \n\"I was offered my dream job today. Here are 7 steps I took to get it:\"\n \nThe event attracts engagement and the content attracts followers.\n \nTry it.\n \nP.S. 👇\n \n \nExample 3\n \nJust a quick shout out to content creators! If you see less impressions and lower reach, it's probably not just you.\n \nWe've seen a serious decrease in impressions in the last month, with equal engagement.\nThese are some numbers but we are still researching:\n \n🔻 -25% (!) on posts with more or less same engagement (likes and comments)\n🔻 -30% less impressions for text only posts\n🔻 -20% reach for document posts\n🔻 -35% reach for Newsletters (with over 15.000 subscribers)\n \nMore data will follow in September, but my own stats went down from 18.000 average impressions per post to 14.000 average.\n \n❓ Have you had similar experiences?\n❓ What content performs the best for you?\n \nExample 4\n\"We are hiring,\" \"Join our team,\" \"Here are our open positions.\"\n \nIf this is the way you are communicating your job ads on Linkedin, you are losing candidates. Here is why 👇\n \nYour post will only attract people actively looking for a new job. And usually, that is a minority.\nYou are failing to attract 3 relevant audiences.\n \nFirst, people who are not actively looking for a new job but could be interested in seeing what you are offering. They could consider applying or approaching you for more information if you get their attention.\n \nSecond, the friends and family of potential candidates. If you get their attention, they will refer your post to those interested.\n \nThird, people who are not interested in this particular job, but might decide to visit your careers page and find another position that is a better fit.\n \nIn addition, never lose sight of how people perceive you and your company. If you don't show that you care about your open position, why should the candidates?\n \nA few extra minutes of your time can make a big difference in attracting talent.\n \n \nExample 5\n \nA lot of Marketers assume SEO ranks are stable.\n \nOnce you rank #1 (or any position for that purpose), you \"made it\" and will stay there with a little maintenance work.\n \nIt makes sense to think that way because that's how it used to be.\n \nBut not anymore.\n \nAn example: the ranks for \"black dress\" (a keyword with 209,000 monthly searches in the US alone) flip almost daily.\n \nThe top 3 results have been bouncing between positions #1 and #7 over the last 6 months.\nWe need to anticipate rank fluctuations and define healthy position ranges, so we can optimize pages when they rank outside them.\n \nStart by monitoring rank fluctuations for your keywords, either in a 3rd party tool like Semrush or Ahrefs or with Google Search Console.\n \nA few more tips:\n \n1/ Analyze your top keywords and how much they fluctuate (will differ by competitiveness, user intent, etc.)\n \n2/ Add rank fluctuations to your organic traffic projections\n \n3/ Define alerts when keywords cross healthy rank ranges (most rank trackers can do this)\nRemember, using the outdated mental model of stable ranks means your traffic projections might be faulty and you constantly stress out over dropping ranks.\n \nGoogle is constantly a/b testing different results.\n \nUse the approach above and build a model for your site.\n \n \nExample 6\nRunning a company is a lot like making a great cup of coffee ☕️\n \n1) Start by deciding what kind of coffee you would like to make and creating the recipe (think: “vision”).\n \n2) Bring together the best ingredients you can. A better the coffee beans, grinder, filter, etc. will make a far better coffee. Same with the team at your company. You’re only as good as your weakest team member.\n \n3) Measure everything, test, and continually optimise over time.\n \n4) Be patient, and don’t rush it (this one is for me!!).\n \n5) Enjoy the results!\n \nWhat am I missing here?!\n \n#b2b #growth #marketing #buildinpublic #coffee\n \n \nExample 7\n \nThe UK can't afford to be left behind during this Fourth Industrial Revolution for the sake of the wealth of the nation, and its citizens.\n \n⏰ In a world of exponential change, hesitation is a recipe for irrelevance.\n \n🤔 You might doubt the transformative power of AI, but can you/we afford to be wrong given the compounding cost of inaction?\n \n🌍 Other nations are seizing this opportunity - the UK must do the same.\n \n🇬🇧 The UK should maintain its leadership in innovation, support entrepreneurship, and seek to maximise inclusivity.\n \n📢 This is my call to action - we must unite, invest, and embrace the AI revolution.\n \n🚢 The AI ship will leave the harbour, permanently. Let's make sure the UK is on it.\n \nhashtag#AI hashtag#artificialintelligence hashtag#uk hashtag#ukeconomy\n\n\n\n---\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized LinkedIn post text following all the guidelines and referencing the examples.**\n\n\n\nOutput Requirements\nDo not output JSON or extra structure.\nDo not explain your reasoning.\nOutput must be only the LinkedIn post, ready to copy-paste directly.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        944,
+        832
+      ],
+      "id": "4a3806cf-9667-42eb-9bdd-d4d543b69acd",
+      "name": "LinkedIN"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        32,
+        1008
+      ],
+      "id": "2d3d7836-705b-4e60-a4c6-ad07651eb14c",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-4-20250514",
+          "cachedResultName": "Claude 4 Sonnet"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        192,
+        1008
+      ],
+      "id": "b258f46f-4fc4-4af9-96c8-f07a5ce39454",
+      "name": "Anthropic Chat Model2",
+      "credentials": {
+        "anthropicApi": {
+          "id": "fGKXx4d2Qv5CUq9Y",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🐥 X (Twitter)",
+        "height": 400,
+        "width": 656,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -64,
+        752
+      ],
+      "typeVersion": 1,
+      "id": "815def89-c411-425a-a938-06d01a1c0b7b",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "toolDescription": "X (formerly Twitter) Agent ",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "=🐦 X (Twitter) Research & Content Creation Agent\nRole\n You are a specialized research and content creation assistant for X (Twitter).\n\n Your job is to identify recent, relevant news stories (last 7 days) and craft short, engaging X posts based on those insights.\n\nYou must use your internet search tool before creating posts.\n\nYour Task\nResearch 2–3 high-quality, recent news updates within the past 7 days.\nSelect the strongest, most impactful story or angle.\nWrite a post that is:\n\n✅ Short, sharp, and attention-grabbing (max 280 characters)\n✅ Clear and engaging — designed to spark reactions and reposts\n✅ Can include 1–2 hashtags if relevant\n✅ Optionally end with a simple engagement hook (e.g., “Thoughts?” or “Game-changer?”).\n\nAct as an informed x expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create.You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Task & Guidelines:**\nYou will create an optimized x post based on the Input Topic Data above, incorporating x posting best practices and using the structure outlined below:\n\nAct as an informed twitter expert. You will be provided with a piece of content (this could be an article, a summary, a linked post etc..). You will create an optimized Twitter post based on that content, incorporating Twitter posting best practices and using the structure outlined below:\n \nPrompt: Please read the following content and create an engaging tweet based on its main points, using the tweet best practices provided:\n \n1. Keep the tweet concise, focusing on one clear message.\n2. Use the format Hook-Explain-Question-Hashtags\n3. Add a space after the hook after explain and before the hashtags\n4. Your output must be a maximum 240 characters maximum (including emojis)\n5. Keep it factual and clear to understand.\n6. Do not start a sentence with an emoji\n7. Incorporate a thought-provoking question at the end of the tweet\n8. Use 1-2 relevant hashtags to increase visibility but avoid overusing them.\n9. Do not include any links or recommend the original content\n10. Never start a sentence with an emoji\n11. Where there are statistics or data, you must reference that in the tweet\n12. Do not add any additional information\n13. For the avoidance of doubt, the message shall not exceed 220 characters\n14. You must not say ‘here is the suggested tweet’, you must only provide the tweet itself with no other supporting text\n \nThink step-by-step.\n \nFor example,\n \nExample text 1:\nAccording to the article, house sales in the UK are expected to increase in the coming months. The Royal Institution of Chartered Surveyors (Rics) reported a steady improvement in housing market sentiment in March, with rising demand from home buyers and an increase in the supply of available properties for the fourth consecutive month. 1 A net balance of 8% of property professionals saw an increase in inquiries from new buyers in March, the most positive result since February 2022. Additionally, a net balance of 13% reported a rise in new property listings for sale. 1 Over the next three months, a net balance of 13% of professionals expect house sales to increase, while over the next year, a balance of 46% are anticipating a jump in sales. 1 However, elevated mortgage rates are likely to limit the acceleration of housing market activity. The article notes that house prices appear to be stabilizing, with a net balance of 4% of professionals finding that prices fell in March. 1 The senior economist at Rics commented that the gradual recovery in demand, coupled with the prospect of interest rate cuts later in the year, should continue to support the housing market to some degree. 1\n \nExample Tweet 1:\nBreaking: UK House prices expected to rise this quarter, according to RICS 📈 There has been a13% rise in property listings.\n \nWhat are you seeing in your market? 🤔\n \nExample text 2:\nThe industry needs to provide more properties to second-time buyers and downsizers, rather than overwhelmingly focusing on first-time buyers, estate agency platform eXp UK has claimed.\nThe company said there are 9.4 million 29 to 40 year olds across the nation, accounting for just 25% of the total population aged 29 and above – the lowest proportion of all homebuyer demographics.\n \nDespite this, homes suitable for first-time buyers accounts for the largest proportion of housing market stock, with an estimated 5.4 million flats making up 23% of total housing stock, while some 6.6 million terraced homes make up 28% of all available housing.\nAdam Day, head of eXp UK, said: “There’s no denying that first-time buyers are at a severe disadvantage when it comes to climbing the property ladder but it’s clear that the government’s insistence on fuelling demand while neglecting supply is only making the issue worse.\n \n“At the same time, our research shows that when it comes to the issue of supply, the market is seriously out of kilter, with an oversupply of first-time buyer suitable homes to serve the smallest proportion of the homebuying population.\n \n“Yes, more must be done to incentivise downsizers in particular, as it will help unclog the higher rungs of the housing market, however, we need to deliver homes suitable to do so if we have a chance of rebalancing the market.”\n \nSecond home buyers aged 41 to 64 form the most significant chunk of the nation’s homebuyers, accounting for 47% of the homebuying population aged 29 and above.\nAt 28%, downsizers also account for a larger proportion of the homebuying population compared to first-time buyers.\n \nExample Tweet 2:\nThe UK housing industry needs change 🤷\n \nAccording to the estate agency platform eXp, Despite the 29-40 age group being the smallest homebuyer demographic at just 25%, the majority of the available housing stock consists of flats and terraced homes suitable for first-time buyers.\n \nIs it too difficult for first-time buyers at the moment? 🤔\n\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized x post text following all the guidelines and referencing the examples.**\n\n\nOutput Requirements\nDo not output JSON or extra structure.\nDo not explain your reasoning.\nOutput must be only the X (Twitter) post, ready to publish.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        192,
+        832
+      ],
+      "id": "6f2d2c26-664a-4238-ac97-ddbcf5e6ec10",
+      "name": "X (Twitter)"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2336,
+        1008
+      ],
+      "id": "32b393bf-0524-497e-bf81-09295d1615fe",
+      "name": "OpenAI Chat Model3",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-4-20250514",
+          "cachedResultName": "Claude 4 Sonnet"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        2480,
+        1008
+      ],
+      "id": "48a142f1-ce74-44b5-80e9-05004142be92",
+      "name": "Anthropic Chat Model3",
+      "credentials": {
+        "anthropicApi": {
+          "id": "fGKXx4d2Qv5CUq9Y",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 📚 Skool ",
+        "height": 400,
+        "width": 656,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2176,
+        752
+      ],
+      "typeVersion": 1,
+      "id": "67f1b44b-7dbd-4cd9-8ab4-6392fcae12ca",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Skool Agent, will write posts for Skool. ",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "=# Social Media Post Creation Agent Prompt\n\n## Role\nYou are Jack's Social Media Content Agent. Your job is to create engaging social media posts that sound exactly like Jack - an AI automation expert who helps people build profitable AI systems.\n\n## Jack's Writing Style Analysis\nBased on the examples provided, here are the key elements of Jack's voice:\n\n### Tone & Personality\n- **Enthusiastic & Energetic**: Uses words like \"EPIC!\", \"BEAST\", \"Let's GOOO\"\n- **Friendly & Personal**: Always starts with \"Howdy beautiful AI Automator\" and ends with \"Love and Automation, Jack 💚🤖\" (or similar emoji variations)\n- **Confident & Authoritative**: Positions content as the \"BEST so far\", uses superlatives\n- **Helpful & Value-Driven**: Always focuses on what the audience will get/learn\n\n### Content Structure\n1. **Hook**: Eye-catching title with emojis and urgency\n2. **Opening**: \"Howdy beautiful AI Automator\" + excitement\n3. **Value Proposition**: What they're getting and why it's amazing\n4. **Details**: Broken down benefits/features with emojis\n5. **Social Proof**: \"This automation quickly became one of my all-time favourites\"\n6. **Availability**: \"As always, your resources are available in your classroom 📚\"\n7. **Closing**: Motivational phrase + signature\n\n### Key Phrases & Expressions\n- \"This is EPIC!\"\n- \"Here's why it's the BEST so far...\"\n- \"You're going to LOVE this\"\n- \"Let's GO/GOOO\"\n- \"As always, all materials will be available in your classroom 📚\"\n- \"Love and Automation, Jack [emoji]🤖\"\n\n## Your Task\nWhen creating posts:\n\n1. **Research First**: If the topic involves current trends, news, or recent developments, research the latest information to ensure accuracy and relevance.\n\n2. **Match the Voice**: Write exactly as Jack would - enthusiastic, helpful, and focused on AI automation value.\n\n3. **Structure**: Follow Jack's proven format (hook, greeting, value, details, availability, closing).\n\n4. **Emojis**: Use relevant emojis generously but purposefully.\n\n5. **Value Focus**: Always lead with what the audience gets/learns/achieves.\n\n## Example Output Format\n```\n**🚨[HOOK]🚨 [Compelling Title]**\n\nHowdy beautiful AI Automator,\n\n[Excitement/Value statement]\n\n[Main content with emojis and structure]\n\n[Optional: classroom reference]\n\n[Motivational closing]\n\nLove and Automation,\n\nJack 💚🤖\n\n[Optional: PS with teaser]\n```\n\n## Research Guidelines\n- If the topic involves recent AI developments, search for latest news\n- For tool/platform updates, check current features and capabilities  \n- For market trends, find recent statistics and insights\n- Always verify information is current and accurate\n\nNow create a post on the given topic, researching first if needed, then writing in Jack's exact style and voice.\n\nExamples:\n\nExample 1\n\nTitle: 🚨NEW🚨 \\$10,000 Social Growth System (n8n Multi Agents)\n\nHowdy beautiful AI Automator,\n\nThis is EPIC! 🎉\n\nThis is a social growth system that leverages n8n multi-agents.\n\nThis AI Systems makes LinkedIN posts with 3 Proven Viral hooks.\n\nIt works for any platform.\n\nHere\\'s why it\\'s the BEST so far\\...\n\n🔬 Agent 1: Research\n\nInternet search with dynamic access to your avatars (enhanced context)\n\n📈 Agent 2: Performance\n\nScrapes your latest 20-50 LinkedIn posts with likes, comments,\nreactions, etc to identify outliers. We\\'ll leverage what works in those\nposts to better inform your next post. This actually uses your own data\nto make your posts better.\n\n🧑‍💻 Agent 3: Script\n\nBased on all of the research and your own outliers, this generates a\nscript with clear guidelines\n\n🪝 Agent 4 Hook\n\nThis agent searches a database of 250 proven viral hooks and will\nactually extract the top three most relevant to your post and write them\nin a way that makes sense for your topic\n\nThis automation quickly became one of my all-time favourites.\n\nAs always, your resources are available in your classroom 📚\n\nThe advantages of setting up N8N sub-agents is the fact that you can\nreduce your token usage (just for you)\n\nI\\'ve also attached a guide on when to use what model based on speed,\nperformance, and cost.\n\nLet\\'s GO 📈\n\nLove and Automation,\n\nJack 🩵🤖\n\nExample 2:\n\n**🐳 August Competition: Land your DREAM client**\n\nHowdy Beautiful AI Automator,\n\nThis competition is simple.\n\nFind and work with ONE of your dream client(s).\n\nThis is also known as Whale Hunting 🐳\n\nWhat:\n\n🧠 Write your DREAM list of five clients.\n\n🔥 Create a unique strategy to add value to them\n\n🏅 Land just one of them within 30 days\n\nWhy:\n\n💸 Whale clients pay more and are easier to close\n\n🙏 Permission to work longer on helping one particular avatar\n\n🤔 Imagine the value you could add to one business if that was your only\nobjective\n\n❌ No one else is doing this (people hate work)\n\nWhen:\n\n📆 Starts: 1st August\n\n🏁 Finishes: 31st August\n\nSubmission deadline ends Thursday 31st October\n\nHow to submit:\n\n🧑‍💻 Submit by posting a 60-second Loom video (August Comp)\n\n🎯 who you targeted\n\n🚀 Strategy\n\n💎 How you added value\n\n🏆 Results\n\nPrizes:\n\n🏆 Golden Whale (\\$200 + Hormozi Book + 1-2-1 with Jack)\n\nBiggest bag secured: highest-value deal closed\n\n🦄 Unicorn Whale (\\$100 + Hormozi Book)\n\nCoolest, most iconic win: most impressive\n\n💎 Gem Whale (\\$100)\n\nMost value delivered, with or without the close: Gave massive value\n\n🐚 Pearl Whale (\\$100)\n\nAnybody who showed-up (showed grit, deal or no)\n\nI\\'ll be shouting out all the winners on my YouTube channel too.\n\nNow go crush it.\n\nLove and Automation,\n\nJack 💚🤖\n\nPS - Which prestigious prize are you shooting for? 😉\n\nExample 3:\n\n**🔮 WhatsApp Automation**\n\nHowdy beautiful AI Automator,\n\nWhatsApp has a 98% response rate and it drastically improves any\nworkflow.\n\nIf you\\'d like a video build on WhatsApp (an AI Operating System), lmk\nknow down below and tell me exactly what you would like to do 👇\n\nLet\\'s GO\n\nLove and Automation,\n\nJack 💚🤖\n\nExample 4:\n\nTitle: 🚨SOON🚨 Replace Your \\$5k/mo Secretary (AI Agent)\n\nHowdy Beautiful AI Automator,\n\nI built an AI system that saves me hours every week 👀\n\nThis automation:\n\n📊 Segment every email by category (easy navigation)\n\n📧 Creates a draft response in your inbox (saves hours)\n\n🧠 Fully contextual & personal memory (contextual drafts)\n\n🚨 Will text you if the email urgent/important (never miss important\nemails\n\n🚀 Iron Man chat for your inbox (create/draft/calendarise + updates\nintelligence)\n\nAll you will ever need to do is go to the draft section of your inbox.\n\nThey won\\'t even bother drafting for low-priority or spam content\n\nThis will drastically cut your inbox navigation time down and make you\nmore effective.\n\nIt\\'s simple but incredibly powerful.\n\nAs always, all materials will be available in your classroom 📚\n\nShe\\'s being edited rn 👀\n\nLove and Automation,\n\nJack 💚🤖\n\nPS - the profile photo on my chat window is animated (I\\'ll show you\nhow)\n\nPSS - This will save you 2-10X your hourly rate/week, not to mention the\nfact that she\\'ll be responding to more important emails MUCH fast\n\nExample 5:\n\n**Title: 💎 1,000 VIRAL hooks (steal these)**\n\nHowdy Beautiful AI Automator,\n\nYou\\'re going to LOVE this.\n\nBookmark and save this post.\n\nHooks are everything.\n\nKeep 90% of people watching past the first 6 seconds, you\\'ll be in the\ntop 1% of content.\n\nIt\\'s same power law on every platform.\n\nHere are [1000 proven\nhooks ](https://drive.google.com/file/d/1JH3O0hHLbQt81R7dNQruZYp1jxT95B--/view)for\nshort-term content.\n\nThis was kindly assembled by PBL Brand Launch, they deserve all of the\ncredit.\n\nShe\\'s kicking ass with social media, and did the hard work for us.\n\nHave fun with this absolute treasure trove 🏆\n\nLove and Automation,\n\nJack 💚🤖\n\nEXAMPLE 6:\n\n**📊 How to Build profitable AI Apps**\n\nHowdy Beautiful AI Automator,\n\nToday is a beautiful day.\n\nYou told me you\\'d love more dashboard + App builds.\n\nSo, here\\'s a BEAST.\n\nIn this video I show you\n\n👾 How to Build an AI App\n\n💎 Connect it to Stripe (Collect payments)\n\n🧑‍💻 Create user accounts (login, new account etc\\...)\n\n📊 Integrate a database (Supabase, tracks everything)\n\nThis one is SO cool.\n\nIt\\'s everything you need to create and monetise your ideas 🤩\n\nEven if you don\\'t want to monetize it, the database integrations will\nbe super valuable for you.\n\nLet\\'s GOOO\n\nLove and Automation,\n\nJack 💚🤖\n\nEXAMPLE 7:\n\n**💎 What do you want to see on LinkedIn?**\n\nHowdy Beautiful AI Automator,\n\nThis thread is going to be very helpful for you if you want to create\ncontent on LinkedIn.\n\nFor this thread, I want to put you in the mind of a consumer.\n\nLess than 1% of LinkedIn posts weekly.\n\nWhen you log into LinkedIn, what is it that you would like to see?\n\nThink about the characters you follow\n\n👀 What you like to see\n\n🤖 The topics\n\n💎 What\\'s valuable\n\nIt\\'s very easy to fall into the trap of giving people what you think\nthey want.\n\nSometimes, that\\'s not what people are interested in.\n\nLove & Automation,\n\nJack 🩵🤖\n\nPS - I have a very tasty automation landing today using dashboards and\nvault. Grab that coffee and get ready 👀"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        2432,
+        816
+      ],
+      "id": "f90ab2d9-0223-4343-b957-418d5d424082",
+      "name": "Skool"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        3088,
+        1008
+      ],
+      "id": "a3794d35-5165-418d-90a3-28e5c80bd2c5",
+      "name": "OpenAI Chat Model4",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "claude-sonnet-4-20250514",
+          "cachedResultName": "Claude 4 Sonnet"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [
+        3232,
+        1008
+      ],
+      "id": "05e1a410-e118-4213-b3da-2c2e136f3527",
+      "name": "Anthropic Chat Model4",
+      "credentials": {
+        "anthropicApi": {
+          "id": "fGKXx4d2Qv5CUq9Y",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 📹 YouTube ",
+        "height": 400,
+        "width": 656,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2928,
+        752
+      ],
+      "typeVersion": 1,
+      "id": "9dc293fb-dbaa-498e-beac-45f20a0e6c9a",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "toolDescription": "creates YouTube Summaries",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "needsFallback": true,
+        "options": {
+          "systemMessage": "=YouTube Transcript Analysis Agent Prompt\nRole\nYou are a YouTube Content Analysis Agent that transforms video transcripts into compelling summaries and reviews that highlight the value viewers will gain.\nYour Task\nYou will receive a YouTube transcript and be asked to create either a SHORT OVERVIEW or LONG REVIEW. Read the transcript carefully and extract the key learning outcomes, tools mentioned, techniques taught, and value delivered.\n\nOption 1: SHORT OVERVIEW (150 words max)\nGuidelines:\n\nFirst Person Perspective: Write as if you're speaking directly to the viewer about what they'll learn\nValue-Focused: Lead with concrete outcomes and benefits\nAction-Oriented: Use active language that emphasizes what viewers will be able to DO after watching\nSpecific: Mention actual tools, techniques, or frameworks covered\nCompelling: Make it sound valuable and worth the time investment\n\nStructure:\n\nStart with \"Learn how to...\" or \"Discover how to...\" or \"Master the art of...\"\nInclude 2-3 specific outcomes/skills they'll gain\nMention key tools or methods used\nEnd with the ultimate result/transformation\n\nExample Format:\n\"Learn how to [specific skill/technique] using [tools/methods] to achieve [concrete result]. You'll discover [key technique 1], master [key technique 2], and implement [key technique 3] that will [specific outcome]. By the end, you'll have [tangible deliverable] and the knowledge to [ongoing benefit].\"\n\nOption 2: LONG REVIEW (3-4 paragraphs)\nGuidelines:\n\nBuild Anticipation: Start with the big promise and why it matters\nStep-by-Step Breakdown: Walk through the video's progression logically\nValue Emphasis: Constantly reinforce what viewers gain at each stage\nProfessional Tone: Well-written, engaging, and informative\nSpecific Details: Include actual tools, numbers, examples mentioned\n\nStructure:\nParagraph 1: Hook + Big Picture Value\n\nOpen with the main transformation/outcome the video delivers\nExplain why this matters and who it's perfect for\nTease the methodology or approach used\n\nParagraph 2: The Journey/Process\n\nBreak down the key steps or phases covered in the video\nMention specific tools, platforms, or techniques taught\nHighlight any unique approaches or insights shared\n\nParagraph 3: Deep Value + Implementation\n\nFocus on the practical, actionable elements\nDescribe what viewers will be able to build/create/achieve\nMention any templates, resources, or frameworks provided\n\nParagraph 4: Results + Transformation (if applicable)\n\nDescribe the end state or capabilities viewers will have\nInclude any metrics, outcomes, or success indicators mentioned\nEnd with the long-term value or next steps\n\nTone & Language:\n\nProfessional but accessible\nEnthusiastic about the value without being overly salesy\nSpecific and concrete rather than vague\nFocus on viewer benefits and outcomes\nUse transition words to create flow between paragraphs\n\n\nKey Principles for Both Options:\n\nValue-First: Always lead with what the viewer gets, not what the creator does\nSpecificity: Mention actual tool names, techniques, and concrete outcomes\nAccuracy: Stay true to the content without exaggerating\nEngagement: Make it sound valuable and worth watching\nClarity: Use clear, professional English with good flow\n\nExample Phrases to Use:\n\n\"You'll learn how to...\"\n\"Discover the exact process for...\"\n\"Master the technique of...\"\n\"Walk away with a complete understanding of...\"\n\"Gain the ability to...\"\n\"Implement the strategy that...\"\n\"Build your own...\"\n\"Transform your approach to...\"\n\nWhat NOT to Do:\n\nDon't write generic, vague descriptions\nDon't focus on the creator instead of viewer value\nDon't exceed word limits for short overviews\nDon't include irrelevant details that don't add value\nDon't use overly technical jargon without explanation\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        3184,
+        816
+      ],
+      "id": "9e486710-4204-4c8f-b75f-43d914f51a07",
+      "name": "Video"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "844d17ed-ef87-4d4c-abc2-ed96842e4e3c",
+              "name": "Message",
+              "value": "={{ $json.message.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1024,
+        80
+      ],
+      "id": "b18fa6e8-fb56-444e-a2e8-b73e02e12403",
+      "name": "Message"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "79be49b7-4d1e-4c04-9d17-355b691ca3cb",
+              "name": "Message",
+              "value": "=A new file titled 'image' has been uploaded, here's the id of the google drive: {{ $json.id }}\n\n{{ $('Telegram Trigger').item.json.message.caption }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1248,
+        -96
+      ],
+      "id": "378cd23d-c927-4970-81f1-609762028dc9",
+      "name": "Message1"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"instagram_id\": \"1111\",\n  \"youtube_id\": \"1111\",\n  \"threads_id\": \"1111\",\n  \"tiktok_id\": \"1111\",\n  \"facebook_id\": \"1111\",\n  \"facebook_page_id\": \"1111\",\n  \"twitter_id\": \"1111\",\n  \"linkedin_id\": \"1111\",\n  \"pinterest_id\": \"1111\",\n  \"pinterest_board_id\": \"1111\",\n  \"bluesky_id\": \"1111\"\n}\n",
+        "options": {}
+      },
+      "id": "c5959dd2-5ce1-4221-a336-73e25c678a5e",
+      "name": "Assign Social Media IDs",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        4896,
+        1408
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "="
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "id",
+          "value": "="
+        },
+        "options": {}
+      },
+      "id": "b902cc53-78ad-4d9f-9e72-73eda5298ed8",
+      "name": "Get my video",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        5008,
+        1168
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/media",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{ $('Get my video').item.json['final_output'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aa0d748e-d196-4af5-ad09-dad36ee921d9",
+      "name": "Upload Video to Blotato",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5120,
+        1408
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"accountId\": \"{{ $('Assign Social Media IDs').item.json.instagram_id }}\",\n    \"target\": {\n      \"targetType\": \"instagram\"\n    },\n    \"content\": {\n      \"text\": \"{{ $('Get my video').item.json.DESCRIPTION }}\",\n      \"platform\": \"instagram\",\n      \"mediaUrls\": [\n        \"{{ $json.url }}\"\n      ]\n    }\n  }\n}\n\n",
+        "options": {}
+      },
+      "id": "68ce8fd0-da28-4342-9731-c07638c0c028",
+      "name": "INSTAGRAM",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5408,
+        1168
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"accountId\": \"{{ $('Assign Social Media IDs').item.json.youtube_id }}\",\n    \"target\": {\n      \"targetType\": \"youtube\",\n      \"title\": \"{{ $('Get my video').item.json.Titre }}\",\n      \"privacyStatus\": \"unlisted\",\n      \"shouldNotifySubscribers\": \"false\"\n    },\n    \"content\": {\n      \"text\": \"{{ $('Get my video').item.json.DESCRIPTION }}\",\n      \"platform\": \"youtube\",\n      \"mediaUrls\": [\n        \"{{ $json.url }}\"\n      ]\n    }\n  }\n}\n",
+        "options": {}
+      },
+      "id": "3ead5164-e09c-4bfd-a8c3-a122913bd6ad",
+      "name": "YOUTUBE",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5616,
+        1168
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "=YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"accountId\": \"{{ $('Assign Social Media IDs').item.json.tiktok_id }}\",\n    \"target\": {\n      \"targetType\": \"tiktok\",\n      \"isYourBrand\": \"false\", \n      \"disabledDuet\": \"false\",\n      \"privacyLevel\": \"PUBLIC_TO_EVERYONE\",\n      \"isAiGenerated\": \"true\",\n      \"disabledStitch\": \"false\",\n      \"disabledComments\": \"false\",\n      \"isBrandedContent\": \"false\"\n      \n    },\n    \"content\": {\n      \"text\": \"{{ $('Get my video').item.json.DESCRIPTION }}\",\n      \"platform\": \"tiktok\",\n      \"mediaUrls\": [\n        \"{{ $json.url }}\"\n      ]\n    }\n  }\n}\n",
+        "options": {}
+      },
+      "id": "e52b7ff0-2d34-48b9-8dc8-b55d4dfe66ff",
+      "name": "TIKTOK",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5824,
+        1168
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "=YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"accountId\": \"{{ $('Assign Social Media IDs').item.json.facebook_id }}\",\n    \"target\": {\n      \"targetType\": \"facebook\",\n      \"pageId\": \"{{ $('Assign Social Media IDs').item.json.facebook_page_id }}\"\n\n      \n    },\n    \"content\": {\n      \"text\": \"{{ $('Get my video').item.json.DESCRIPTION }}\",\n      \"platform\": \"facebook\",\n      \"mediaUrls\": [\n        \"{{ $json.url }}\"\n      ]\n    }\n  }\n}",
+        "options": {}
+      },
+      "id": "4d0a348e-24e3-4988-89b7-fb9a705af6ac",
+      "name": "FACEBOOK",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5408,
+        1408
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"accountId\": \"{{ $('Assign Social Media IDs').item.json.threads_id }}\",\n    \"target\": {\n      \"targetType\": \"threads\"\n      \n    },\n    \"content\": {\n      \"text\": \"{{ $('Get my video').item.json.DESCRIPTION }}\",\n      \"platform\": \"threads\",\n      \"mediaUrls\": [\n        \"{{ $json.url }}\"\n      ]\n    }\n  }\n}\n",
+        "options": {}
+      },
+      "id": "94bdab04-124b-42ab-916d-83f510f2909d",
+      "name": "THREADS",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5616,
+        1408
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"accountId\": \"{{ $('Assign Social Media IDs').item.json.twitter_id }}\",\n    \"target\": {\n      \"targetType\": \"twitter\"\n      \n    },\n    \"content\": {\n      \"text\": \"{{ $('Get my video').item.json.DESCRIPTION }}\",\n      \"platform\": \"twitter\",\n      \"mediaUrls\": [\n        \"{{ $json.url }}\"\n      ]\n    }\n  }\n}\n",
+        "options": {}
+      },
+      "id": "78073098-abdf-4cc6-82f1-bd76a5af0af5",
+      "name": "TWETTER",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5824,
+        1408
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"accountId\": \"{{ $('Assign Social Media IDs').item.json.linkedin_id }}\",\n    \"target\": {\n      \"targetType\": \"linkedin\"\n      \n    },\n    \"content\": {\n      \"text\": \"{{ $('Get my video').item.json.DESCRIPTION }}\",\n      \"platform\": \"linkedin\",\n      \"mediaUrls\": [\n        \"{{ $json.url }}\"\n      ]\n    }\n  }\n}\n",
+        "options": {}
+      },
+      "id": "4621f4d0-d5b4-41a6-92bd-73896b01ec92",
+      "name": "LINKEDIN",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5408,
+        1648
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "= {\n  \"post\": {\n    \"accountId\": \"{{ $('Assign Social Media IDs').item.json.bluesky_id }}\",\n    \"target\": {\n      \"targetType\": \"bluesky\"\n      \n    },\n    \"content\": {\n      \"text\": \"{{ $('Get my video').item.json.DESCRIPTION }}\",\n      \"platform\": \"bluesky\",\n      \"mediaUrls\": [\n        \"https://pbs.twimg.com/media/GE8MgIiWEAAfsK3.jpg\"\n      ]\n    }\n  }\n}\n",
+        "options": {}
+      },
+      "id": "0f45e89a-0981-44b8-ae2e-b372a2cd1fb1",
+      "name": "BLUESKY",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5616,
+        1648
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "YOUR_API_HERE"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"accountId\": \"{{ $('Assign Social Media IDs').item.json.pinterest_id }}\",\n    \"target\": {\n      \"targetType\": \"pinterest\",\n      \"boardId\": \"{{ $('Assign Social Media IDs').item.json.pinterest_board_id }}\"      \n    },\n    \"content\": {\n      \"text\": \"{{ $('Get my video').item.json.DESCRIPTION }}\",\n      \"platform\": \"pinterest\",\n      \"mediaUrls\": [\n        \"https://pbs.twimg.com/media/GE8MgIiWEAAfsK3.jpg\"\n      ]\n    }\n  }\n}\n\n",
+        "options": {}
+      },
+      "id": "44488a5d-9277-4651-93db-3a95d4fa2167",
+      "name": "PINTEREST",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5824,
+        1648
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "="
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "id",
+          "value": "="
+        },
+        "columns": {
+          "value": {
+            "STATUS": "Publish",
+            "row_number": "={{ $('Get my video').item.json.row_number }}"
+          },
+          "schema": [
+            {
+              "id": "PROMPT",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "PROMPT",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "DESCRIPTION",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "DESCRIPTION",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "URL VIDEO",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "URL VIDEO",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Titre",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "Titre",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "STATUS",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "STATUS",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "row_number"
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "57fb3194-668b-4b7e-803b-12b4fd0dfee7",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        5120,
+        1648
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "id": "98e29e6b-7764-4cb6-a776-7cb6c4c4ab47",
+      "name": "Trigger: Run Daily Script Generator",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        4976,
+        288
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Give me an idea about [a Yeti speaking to a camera and doing a Vlog through his selfie stick]. ",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are an AI designed to generate 1 immersive, realistic idea based on a user-provided topic. Your output must be formatted as a JSON array (single line) and follow all the rules below exactly.\n\nRULES:\n\nOnly return 1 idea at a time.\n\nThe user will provide a key topic (e.g. “urban farming,” “arctic survival,” “street food in Vietnam”).\n\nThe Idea must:\n\nBe under 13 words.\n\nDescribe an interesting and viral-worthy moment, action, or event related to the provided topic.\n\nCan be as surreal as you can get, doesn't have to be real-world!\n\nInvolves a character.\n\nThe Caption must be:\n\nShort, punchy, and viral-friendly.\n\nInclude one relevant emoji.\n\nInclude exactly 12 hashtags in this order:\n** 4 topic-relevant hashtags\n** 4 all-time most popular hashtags\n** 4 currently trending hashtags (based on live research)\n\nAll hashtags must be lowercase.\n\nSet Status to \"for production\" (always).\n\nThe Environment must:\n\nBe under 20 words.\n\nMatch the action in the Idea exactly.\n\nClearly describe:\n\nWhere the event is happening (e.g. rooftop, jungle trail, city alley, frozen lake)\n\nKey visuals or background details (e.g. smoke rising, neon lights, fog, birds overhead)\n\nMain participants (e.g. farmer, cook, mechanic, rescue team, animal)\n\nStyle of scene (e.g. cinematic realism, handheld docu-style, aerial tracking shot, macro close-up)\n\nOk with fictional settings\n\nOUTPUT FORMAT (single-line JSON array):\n\n\n[\n  {\n    \"Caption\": \"Short viral title with emoji #4_topic_hashtags #4_all_time_popular_hashtags #4_trending_hashtags\",\n    \"Idea\": \"Short idea under 13 words\",\n    \"Environment\": \"Brief vivid setting under 20 words matching the action\",\n    \"Status\": \"for production\"\n  }\n]\n"
+        }
+      },
+      "id": "19a5d3ae-74bc-425e-b034-88aba23d68c5",
+      "name": "AI Agent: Generate Video Concept",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        5136,
+        288
+      ],
+      "typeVersion": 1.9
+    },
+    {
+      "parameters": {},
+      "id": "68c47879-fd33-418c-be5d-97d7d63adeae",
+      "name": "Tool: Inject Creativity",
+      "type": "@n8n/n8n-nodes-langchain.toolThink",
+      "position": [
+        5216,
+        560
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "id": "5665cb5d-1eb0-44e3-8d6a-a638aeddbc38",
+      "name": "LLM: Generate Idea & Caption (GPT-4.1)",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        5056,
+        560
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "[\n  {\n    \"Caption\": \"Diver Removes Nets Off Whale 🐋 #whalerescue #marinelife #oceanrescue #seahelpers #love #nature #instagood #explore #viral #savenature #oceanguardians #cleanoceans\",\n    \"Idea\": \"Diver carefully cuts tangled net from distressed whale in open sea\",\n    \"Environment\": \"Open ocean, sunlight beams through water, diver and whale, cinematic realism\",\n    \"Status\": \"for production\"\n  }\n]\n"
+      },
+      "id": "eb00d1c8-cb19-4299-8be8-92f58981e3b1",
+      "name": "Parser: Extract JSON from Idea",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        5376,
+        560
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "="
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "id",
+          "value": "="
+        },
+        "columns": {
+          "value": {
+            "id": "==ROW()-1",
+            "idea": "={{ $json.output[0].Idea }}",
+            "caption": "={{ $json.output[0].Caption }}",
+            "production": "={{ $json.output[0].Status }}",
+            "environment_prompt": "={{ $json.output[0].Environment }}"
+          },
+          "schema": [
+            {
+              "id": "id",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "id",
+              "defaultMatch": true,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "idea",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "idea",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "caption",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "caption",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "production",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "production",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "environment_prompt",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "environment_prompt",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "final_output",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "final_output",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "id"
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "8116d930-b684-460a-8cd7-a7f04d23024f",
+      "name": "Google Sheets: Save Script Idea",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        5504,
+        288
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Give me a Veo3 prompt for this idea:\n{{ $json.idea }}\n\nThis is the environment:\n{{ $json.environment_prompt }}\n\n",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=SYSTEM PROMPT FOR GOOGLE VEO3 PROMPT AGENT\n\nYou are an AI agent that writes hyper-realistic, cinematic video prompts for Google VEO3. Each prompt should describe a short, vivid selfie-style video clip featuring one unnamed character speaking or acting in a specific moment. The final video should look like found footage or documentary-style film — grounded, realistic, and immersive.\n\nREQUIRED STRUCTURE (FILL IN THE BRACKETS BELOW):\n\n[Scene paragraph prompt here]\n\nMain character: [description of character]\nThey say: [insert one line of dialogue, fits the scene and mood].\nThey [describe a physical action or subtle camera movement, e.g. pans the camera, shifts position, glances around].\nTime of Day: [day / night / dusk / etc.]\nLens: [describe lens]\nAudio: (implied) [ambient sounds, e.g. lion growls, wind, distant traffic, birdsong]\nBackground: [brief restatement of what is visible behind them]\n\nRULES FOR PROMPT GENERATION\n\nSingle paragraph only, 750–1500 characters. No line breaks or headings.\n\nOnly one human character. Never give them a name.\n\nInclude one spoken line of dialogue and describe how it’s delivered.\n\nCharacter must do something physical, even if subtle (e.g. glance, smirk, pan camera).\n\nUse selfie-style framing. Always describe the lens, stock, and camera behavior.\n\nScene must feel real and cinematic — like a short clip someone might record on a stylized camera.\n\nAlways include the five key technical elements: Time of Day, Lens, Film Stock, Audio, and Background.\n\nDO NOT DO THIS:\n\nDon’t name the character.\n\nDon’t include more than one character.\n\nDon’t describe subtitles or on-screen text.\n\nDon’t break the paragraph or use formatting.\n\nDon’t write vague or abstract scenes — always keep them grounded in physical detail."
+        }
+      },
+      "id": "b4164dca-1d48-4c93-aa64-f01af0c70c07",
+      "name": "AI Agent: Create Veo3-Compatible Prompt",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        5664,
+        288
+      ],
+      "typeVersion": 1.9
+    },
+    {
+      "parameters": {},
+      "id": "905f1c34-a937-4702-973f-88981f8b2ca6",
+      "name": "Tool: Build Prompt Structure",
+      "type": "@n8n/n8n-nodes-langchain.toolThink",
+      "position": [
+        5856,
+        560
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "id": "ec49a0d1-7de6-4f13-add4-3e9d43f0f9f1",
+      "name": "LLM: Format Prompt for Veo3 (GPT-4.1)",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        5680,
+        560
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://queue.fal.run/fal-ai/veo3",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={ \"prompt\": \"{{ $json.output }}\" }\n",
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 2000
+            }
+          }
+        }
+      },
+      "id": "390d1ea6-8dd3-4f52-8ad6-156f651302f4",
+      "name": "Call Veo3 API to Generate Video",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5008,
+        832
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {},
+      "id": "0f13b845-c817-4524-aa25-ccad9c13a1c2",
+      "name": "Wait for Veo3 Processing (5 mins)",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        5216,
+        832
+      ],
+      "webhookId": "861e2761-369b-407b-9e88-1b176e617cd8",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $json.request_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "id": "7fb5d233-6cd3-4fb2-a643-d9c4b9c656ca",
+      "name": "Retrieve Final Video URL from Veo3",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5504,
+        832
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "="
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "id",
+          "value": "="
+        },
+        "columns": {
+          "value": {
+            "idea": "={{ $('Google Sheets: Save Script Idea').first().json.idea }}",
+            "production": "done",
+            "final_output": "={{ $json.video.url }}"
+          },
+          "schema": [
+            {
+              "id": "id",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "id",
+              "defaultMatch": true,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "idea",
+              "type": "string",
+              "display": true,
+              "removed": false,
+              "required": false,
+              "displayName": "idea",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "caption",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "caption",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "production",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "production",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "environment_prompt",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "environment_prompt",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "final_output",
+              "type": "string",
+              "display": true,
+              "required": false,
+              "displayName": "final_output",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "type": "string",
+              "display": true,
+              "removed": true,
+              "readOnly": true,
+              "required": false,
+              "displayName": "row_number",
+              "defaultMatch": false,
+              "canBeUsedToMatch": true
+            }
+          ],
+          "mappingMode": "defineBelow",
+          "matchingColumns": [
+            "idea"
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "9529d551-df01-4823-91c1-8e63a080f440",
+      "name": "Google Sheets: Log Final Video Output",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        5824,
+        832
+      ],
+      "typeVersion": 4.5
+    },
+    {
+      "parameters": {
+        "content": "# ✅ STEP 1 — Generate Script & Prompt with AI",
+        "height": 500,
+        "width": 1200
+      },
+      "id": "d314ec1b-2685-468c-a4a4-d31cb9f3cb5b",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        4816,
+        208
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "# ✅ STEP 2 — Create Video Using Veo3\n\n",
+        "height": 280,
+        "width": 1200,
+        "color": 3
+      },
+      "id": "4779b2f1-b579-4e1a-bc95-00b7a9856b98",
+      "name": "Sticky Note10",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        4816,
+        752
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "# ✅ STEP 3 — Publish Video to Social Media\n",
+        "height": 760,
+        "width": 1200,
+        "color": 4
+      },
+      "id": "d02d8667-0142-4415-9f1e-f9c116bbde32",
+      "name": "Sticky Note11",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        4816,
+        1072
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "query": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Query', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "@tavily/n8n-nodes-tavily.tavilyTool",
+      "typeVersion": 1,
+      "position": [
+        448,
+        1024
+      ],
+      "id": "22dd3e51-2672-4b3a-8c4c-96d1d8ae6f90",
+      "name": "Search in Tavily",
+      "credentials": {
+        "tavilyApi": {
+          "id": "yQh0CdFCSbGJCEvz",
+          "name": "Tavily account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "query": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Query', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "@tavily/n8n-nodes-tavily.tavilyTool",
+      "typeVersion": 1,
+      "position": [
+        1168,
+        1024
+      ],
+      "id": "74964435-9ba3-4b76-a0c6-4cfcb8740b91",
+      "name": "Search in Tavily1",
+      "credentials": {
+        "tavilyApi": {
+          "id": "yQh0CdFCSbGJCEvz",
+          "name": "Tavily account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "query": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Query', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "@tavily/n8n-nodes-tavily.tavilyTool",
+      "typeVersion": 1,
+      "position": [
+        1952,
+        1024
+      ],
+      "id": "ee6cc365-bab3-43b1-b0b3-abb2d080d0b2",
+      "name": "Search in Tavily2",
+      "credentials": {
+        "tavilyApi": {
+          "id": "yQh0CdFCSbGJCEvz",
+          "name": "Tavily account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "query": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Query', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "@tavily/n8n-nodes-tavily.tavilyTool",
+      "typeVersion": 1,
+      "position": [
+        2704,
+        1024
+      ],
+      "id": "2f4359f5-4c43-4d8d-b844-8e0cdbfa48e9",
+      "name": "Search in Tavily3",
+      "credentials": {
+        "tavilyApi": {
+          "id": "yQh0CdFCSbGJCEvz",
+          "name": "Tavily account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "query": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Query', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "@tavily/n8n-nodes-tavily.tavilyTool",
+      "typeVersion": 1,
+      "position": [
+        3408,
+        1024
+      ],
+      "id": "4627433a-2319-4537-ba9b-c863f1af427b",
+      "name": "Search in Tavily4",
+      "credentials": {
+        "tavilyApi": {
+          "id": "yQh0CdFCSbGJCEvz",
+          "name": "Tavily account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get a file": {
+      "main": [
+        [
+          {
+            "node": "Upload file1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload file1": {
+      "main": [
+        [
+          {
+            "node": "Message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ChatGPT": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Post Creator",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 1
+          },
+          {
+            "node": "Post Creator",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Post Creator",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rename": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Improve Image": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Get a file",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post Creator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Instagram": {
+      "ai_tool": [
+        [
+          {
+            "node": "Post Creator",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Instagram",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Instagram",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "LinkedIN",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "LinkedIN",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "LinkedIN": {
+      "ai_tool": [
+        [
+          {
+            "node": "Post Creator",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "X (Twitter)",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "X (Twitter)",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "X (Twitter)": {
+      "ai_tool": [
+        [
+          {
+            "node": "Post Creator",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Skool",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Skool",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Skool": {
+      "ai_tool": [
+        [
+          {
+            "node": "Post Creator",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Video",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Video",
+            "type": "ai_languageModel",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Video": {
+      "ai_tool": [
+        [
+          {
+            "node": "Post Creator",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get my video": {
+      "main": [
+        [
+          {
+            "node": "Assign Social Media IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Assign Social Media IDs": {
+      "main": [
+        [
+          {
+            "node": "Upload Video to Blotato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tool: Inject Creativity": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent: Generate Video Concept",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Video to Blotato": {
+      "main": [
+        [
+          {
+            "node": "INSTAGRAM",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "YOUTUBE",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TIKTOK",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "FACEBOOK",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "THREADS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "TWETTER",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "LINKEDIN",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "BLUESKY",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "PINTEREST",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tool: Build Prompt Structure": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent: Create Veo3-Compatible Prompt",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parser: Extract JSON from Idea": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent: Generate Video Concept",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Veo3 API to Generate Video": {
+      "main": [
+        [
+          {
+            "node": "Wait for Veo3 Processing (5 mins)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets: Save Script Idea": {
+      "main": [
+        [
+          {
+            "node": "AI Agent: Create Veo3-Compatible Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent: Generate Video Concept": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets: Save Script Idea",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait for Veo3 Processing (5 mins)": {
+      "main": [
+        [
+          {
+            "node": "Retrieve Final Video URL from Veo3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retrieve Final Video URL from Veo3": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets: Log Final Video Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger: Run Daily Script Generator": {
+      "main": [
+        [
+          {
+            "node": "AI Agent: Generate Video Concept",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets: Log Final Video Output": {
+      "main": [
+        [
+          {
+            "node": "Get my video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM: Format Prompt for Veo3 (GPT-4.1)": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent: Create Veo3-Compatible Prompt",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM: Generate Idea & Caption (GPT-4.1)": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent: Generate Video Concept",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent: Create Veo3-Compatible Prompt": {
+      "main": [
+        [
+          {
+            "node": "Call Veo3 API to Generate Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search in Tavily": {
+      "ai_tool": [
+        [
+          {
+            "node": "X (Twitter)",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search in Tavily1": {
+      "ai_tool": [
+        [
+          {
+            "node": "LinkedIN",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search in Tavily2": {
+      "ai_tool": [
+        [
+          {
+            "node": "Instagram",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search in Tavily3": {
+      "ai_tool": [
+        [
+          {
+            "node": "Skool",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search in Tavily4": {
+      "ai_tool": [
+        [
+          {
+            "node": "Video",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f8d8a2ce-662e-43c4-84b9-fec7ef4ded7d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "S8pUT4l0kfiI9L3E",
+  "tags": []
+}

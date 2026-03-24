@@ -1,0 +1,1087 @@
+[00:00:00] if you upload this automation you'll
+[00:00:01] never have to write another email again
+[00:00:03] specifically this automation is
+[00:00:05] ridiculous what it will do is the second
+[00:00:07] you get any email in your inbox it goes
+[00:00:10] this really cool automation here where
+[00:00:12] it looks at every it's got a knowledge
+[00:00:14] base okay that has every email you've
+[00:00:15] ever had in your inbox okay and it knows
+[00:00:18] exactly how to speak just like you in
+[00:00:20] your turn of voice it will create a
+[00:00:22] draft email response to that individual
+[00:00:24] so basically once a day you can log into
+[00:00:26] emails see if you like it or not and
+[00:00:28] then respond this system is really
+[00:00:30] interesting it's got three parts to it
+[00:00:33] where we essentially teach it so every
+[00:00:36] time you get a brand new email it gets
+[00:00:38] uploaded to this incredible database so
+[00:00:40] it's learning dynamically as it goes
+[00:00:43] this section here is how we embed it to
+[00:00:44] make sure everything works okay and then
+[00:00:46] scenario 3 is going to one that runs
+[00:00:48] automatically for you in the background
+[00:00:50] where we get your email down here and at
+[00:00:52] the end it creates draft so in this
+[00:00:54] video I'm going to show you step by step
+[00:00:55] how you build this three-part automation
+[00:00:57] system to save you potentially does of
+[00:01:00] hours a time and actually just get
+[00:01:01] emails in your turn of voice before I
+[00:01:03] show you that I want to call out why
+[00:01:04] this is really cool because it knows
+[00:01:07] everything if you've got hundreds of
+[00:01:09] thousands of emails in your inbo and you
+[00:01:10] want to train it on that it will
+[00:01:12] actually know and have access to
+[00:01:14] everything because we vectorize the
+[00:01:16] emails which means it'll have context
+[00:01:18] for conversations that you've had like
+[00:01:20] even five years ago and it can do that
+[00:01:21] and produce results dynamically
+[00:01:23] autopilot knowledge update why is that
+[00:01:25] so sick well because the second that you
+[00:01:27] get a new email and the system it gets
+[00:01:30] uploaded to as a vector to Pine con
+[00:01:33] which means that we can actually
+[00:01:35] physically have it dynamically updated
+[00:01:36] so you get any more 30 minutes ago it's
+[00:01:38] updated straight away thirdly there's
+[00:01:40] really no limit to how many emails we
+[00:01:42] can use with this which means that it's
+[00:01:43] we're using a system called retrieval
+[00:01:45] orent generation so if you're not
+[00:01:47] familiar with rag I encourage you watch
+[00:01:49] my last video on that I explain it all
+[00:01:51] in really good detail in the first
+[00:01:53] automation importantly it sounds like
+[00:01:55] you we're going to use this really cool
+[00:01:56] email turn meta prompt to basically give
+[00:01:58] it some of your emails and Cor a create
+[00:02:01] a stylized guideline essentially of how
+[00:02:03] you sound so that when it is responding
+[00:02:05] it sounds just like you and then finally
+[00:02:07] it's going to save you a ton of time all
+[00:02:09] right like I'm going to be using this
+[00:02:11] constantly my emails because it's a
+[00:02:12] hassle responded to so if you haven't
+[00:02:14] already grab that coffee and let's dive
+[00:02:17] straight in my name's Jack my school
+[00:02:18] community and my YouTube channel are
+[00:02:20] about three things we are about the
+[00:02:21] latest AI we are about incredible
+[00:02:23] automations and of course we are about
+[00:02:26] the stuff that actually works the moment
+[00:02:28] in school Community you can get access
+[00:02:30] to all of the blueprints on my channel
+[00:02:31] as well as ones that aren't even on
+[00:02:33] YouTube so all you ever have to do is
+[00:02:35] come down here click more click import
+[00:02:37] blueprint you choose a Json file once
+[00:02:39] you've selected it you click save and
+[00:02:41] all the automations will populate for
+[00:02:42] you automatically sa me a lot of time
+[00:02:45] and guess what guys it's just a lot easy
+[00:02:47] to do it that way so how does it all
+[00:02:48] work well it's available for free down
+[00:02:50] below so you can check out for seven
+[00:02:51] days see what the community is like see
+[00:02:53] if you like it or not you going to do
+[00:02:55] automations here you can download it
+[00:02:56] really easily say you want this one for
+[00:02:57] instance you select the one that you
+[00:02:59] want you you come down here you download
+[00:03:01] it you upload it to make and you're
+[00:03:02] ready to go so it's fresh free try for 7
+[00:03:04] Days see if you like it we'd love to see
+[00:03:06] you in there I've got a feel that you
+[00:03:08] really enjoy it uh and have a good time
+[00:03:09] in the community and all the stuff we
+[00:03:10] have there so the way we're going to do
+[00:03:12] this video we're going to build this all
+[00:03:14] the way through step by step um and then
+[00:03:17] I'm going to show you exactly the tools
+[00:03:18] that you need as you go it's actually
+[00:03:20] quite simple quite straightforward once
+[00:03:22] you know someone specific it I'm going
+[00:03:24] to run you through so first of all let's
+[00:03:25] create our first scenario now what is
+[00:03:28] the purpose of the first scenario well
+[00:03:30] the purpose of the first scenario I'm
+[00:03:32] going to show you here just to give you
+[00:03:33] a good visual I thought it'd be helpful
+[00:03:34] to see okay is basically to learn in
+[00:03:39] other words this is going to be the
+[00:03:40] scenario that the second you get an
+[00:03:41] email here okay it's going to cleanse it
+[00:03:45] with CLA so we're going to strip out all
+[00:03:46] the basically unnecessary information
+[00:03:49] like H1 tags H2 tags loads of stuff that
+[00:03:52] we don't really need and what we're
+[00:03:53] going to do is we're going to create a
+[00:03:55] document with that information on it and
+[00:03:58] basically that document will then get
+[00:03:59] into another process in scenario 2 where
+[00:04:01] we store it in this Vector database
+[00:04:04] which our AI can then access and grab
+[00:04:06] what it physically wants this part of
+[00:04:08] the process exists so that every email
+[00:04:10] you get we basically store that and it
+[00:04:12] dynamically upgrades the knowledge base
+[00:04:14] that we have okay it's about learning
+[00:04:17] and it's about cleansing the data we've
+[00:04:18] got and then we're going to embed and
+[00:04:20] store it in the second scenario so what
+[00:04:23] does that look like in reality well
+[00:04:24] first of all because we're not Savages
+[00:04:26] we name it so we'll call this one email
+[00:04:28] and Clans and we don't need email twice
+[00:04:31] we'll get rid of that one cool so what
+[00:04:32] are we going to add well I'm going to
+[00:04:33] add a Gmail since that's the one that I
+[00:04:34] use so let's come down here I'm going to
+[00:04:36] click on watch emails like so simple
+[00:04:38] filter is absolutely fine you'll need to
+[00:04:41] validate your connection Gmail is very
+[00:04:42] touchable that for some reason so I'll
+[00:04:44] do that briefly Now Incredible now
+[00:04:45] that's all validated we come back we
+[00:04:47] want to go for you can go for all emails
+[00:04:49] only red emails only unread emails
+[00:04:51] that'll basically be based on you know
+[00:04:53] how you want to essentially do it for
+[00:04:54] this one I'm just going to S only unread
+[00:04:56] emails Mark emails as rule when they
+[00:04:58] fetch that's your personal prefer I'm
+[00:05:00] going to say now maximum number of
+[00:05:01] results I'm going to set this at 10 so
+[00:05:04] we can depends on how quickly you want
+[00:05:05] to update the email address so if you're
+[00:05:07] using it very very regularly you may go
+[00:05:09] for half a day twice a
+[00:05:11] day I'm going to put once a day really
+[00:05:13] and for that reason I'm going to assume
+[00:05:14] I may get as much as 50 emails in a day
+[00:05:16] which is pretty cool then I'm going to
+[00:05:18] click okay now we can set this from now
+[00:05:21] on emails after a specific day or all
+[00:05:23] emails I'm going to say from now on but
+[00:05:25] look once you've created this J once
+[00:05:27] you've created this entire automation I
+[00:05:29] want I want you to redo this step and I
+[00:05:31] want you to do all emails the reason
+[00:05:33] we'll do that is because it will then
+[00:05:34] upload every email you've got on your
+[00:05:36] inbox to our call system which will form
+[00:05:39] part of its training data and then when
+[00:05:41] you go forward from that you're just
+[00:05:43] going to select all subsequent emails
+[00:05:45] it's very you're ready to go and then
+[00:05:46] you're going to be rocking and rolling
+[00:05:47] for a good time awesome now we pick the
+[00:05:49] folder folder here is going to be the
+[00:05:50] inbox sometimes you have to come off and
+[00:05:52] come back in to make sure this works
+[00:05:54] properly and then we'll go for inbox
+[00:05:56] beautiful then we click okay now the
+[00:05:58] next step we want to do here guys is for
+[00:06:00] retrieval augmented generation as part
+[00:06:02] of the upload process is to cleanse it
+[00:06:04] so for that we're going to use a prompt
+[00:06:05] we're going to use the beautiful Corde
+[00:06:06] which is called cleanse with a big
+[00:06:07] scrubbing brush which is what we like so
+[00:06:09] Che what this prompt is okay you are an
+[00:06:12] AI assistant tasked with cleaning up raw
+[00:06:14] email data all these prompts by the way
+[00:06:16] are down below in the community please
+[00:06:18] process the following email and provide
+[00:06:20] a clean version by performing The
+[00:06:21] Following
+[00:06:22] actions okay let's see what we got if it
+[00:06:26] would even let me scroll down which
+[00:06:27] doesn't want to sometimes all right we
+[00:06:29] want to eliminate signatures and
+[00:06:30] disclaimers you know about like long
+[00:06:32] text at the bot want to get rid of that
+[00:06:33] strip out the HTML tags exclude
+[00:06:36] irrelevant links preserve the main
+[00:06:38] content you must include who it's from
+[00:06:40] with a date and who when it was sent
+[00:06:42] this is critically important do not add
+[00:06:44] any additional text just provide the
+[00:06:45] output as specified your output must be
+[00:06:48] in HTML and then we just give it the
+[00:06:49] output from Gmail so let's copy this we
+[00:06:51] come to our scenario we're going to
+[00:06:52] create a new clo modual right here let's
+[00:06:55] go create a promt guys I absolutely love
+[00:06:59] this one I'm going to be super honest
+[00:07:00] with you okay Max token is going to be
+[00:07:02] 4,000 come down to message roll is going
+[00:07:04] to be user content is going to be type
+[00:07:07] it's going to be text we scroll down and
+[00:07:09] then we enter our prom that we like and
+[00:07:11] then raw email content we just get rid
+[00:07:12] of this and we're just going to find we
+[00:07:14] got all the data that we need right here
+[00:07:15] so I'll bring this over so you can see a
+[00:07:17] good idea of it and all we're looking
+[00:07:18] for guys is text content right there you
+[00:07:22] see boom perfect so that's going to give
+[00:07:25] it a text and then after that it can do
+[00:07:26] whatever it wants to then we're going to
+[00:07:28] click okay then next thing I want you to
+[00:07:30] do is add a increment function what this
+[00:07:33] will basically do is every time it runs
+[00:07:35] it spits out a number then one then two
+[00:07:36] then three and you know the rest of the
+[00:07:38] alphabet cool and then we're going to go
+[00:07:40] and add a Google Document let's have a
+[00:07:43] look create a document really cool the
+[00:07:46] name is just going to be email and then
+[00:07:49] we're just going to add the incurrent
+[00:07:51] function so email 1 email 2 email 3
+[00:07:52] email 4 etc etc then the content is
+[00:07:55] going to be the text response and then
+[00:07:57] what you need to do is go over to drive.
+[00:07:59] gooogle
+[00:07:59] and just simply create a drive that you
+[00:08:01] can use to store this information and
+[00:08:03] then we're going to use that on the next
+[00:08:04] scenario to bring it back down so here
+[00:08:06] pick the document location that you like
+[00:08:08] to pick a folder that you've created
+[00:08:09] I've got one here called email magic
+[00:08:11] which is Ace and all you're going to do
+[00:08:13] guys is Select okay and that is the
+[00:08:16] entire scenario so what I'm going to do
+[00:08:18] I'm going to run this scenario once and
+[00:08:20] then we should see in that folder the
+[00:08:22] email that we had created there all
+[00:08:24] right guys so what we're going to do
+[00:08:24] we're going to run the scenario once
+[00:08:26] I've got this fictitious email here from
+[00:08:28] somebody who wants us sponsor a AI
+[00:08:30] YouTube channel so let's send this one
+[00:08:31] now we come back over that there was
+[00:08:33] nothing then we run it so let's run this
+[00:08:34] one more time and we should see the
+[00:08:36] email come through so let's see if we've
+[00:08:37] got it Gmail's grabbed it amazing let's
+[00:08:39] check out the send it the send it was me
+[00:08:41] of course and it's got no attachments on
+[00:08:43] which is really cool recipient we've got
+[00:08:45] all this really cool information we can
+[00:08:47] even check the text content which is
+[00:08:49] here hey it's Jack mayor from nech blah
+[00:08:51] blah blah and thrit create the prompt it
+[00:08:53] simplified it many great I did an
+[00:08:55] incremental function and it's been
+[00:08:56] uploaded to our Google doc which is
+[00:08:58] awesome so if I go over now to email
+[00:09:00] magic we can see we have email one I
+[00:09:02] open email one for instance and then
+[00:09:04] we've got it for May Thompson blah blah
+[00:09:06] blah hey jacket meire blah blah blah all
+[00:09:08] the information automatically so what
+[00:09:11] the hell does that mean that means guys
+[00:09:13] every time an email comes in now
+[00:09:14] automatically you can run this hourly
+[00:09:16] you know fortnightly daily whatever you
+[00:09:18] want it's going to added to this
+[00:09:20] document and it's going to be cleansed
+[00:09:21] which is pretty cool so now we've got
+[00:09:24] part one done and if I come back just to
+[00:09:26] show you an overview what happens now
+[00:09:28] part one is complete we have that
+[00:09:30] uploaded it's excellent the next stage
+[00:09:32] in scenario 2 is basically to vectorize
+[00:09:35] that information check this out it's
+[00:09:37] going to come in this is going to watch
+[00:09:39] for when changes happen to that Google
+[00:09:41] Drive we're going to download the file
+[00:09:43] get the text we're going to create an
+[00:09:46] embedding if you haven't watched my last
+[00:09:48] video encourage you to watch that
+[00:09:49] explain what embeddings are basically
+[00:09:51] think of a million a massive mystical
+[00:09:53] bookshelf with a million books in it an
+[00:09:55] embedding is like a number that we give
+[00:09:58] to the information of the document to
+[00:10:01] identify what it is and then when we ask
+[00:10:03] a question we also create an embeding we
+[00:10:05] turn that question into numbers and it
+[00:10:07] finds out which numbers think of the
+[00:10:09] numbers as keys are most similar and
+[00:10:12] then instead of you know like a like an
+[00:10:14] assistant would do go through a million
+[00:10:15] boxes to find the answer we only pull
+[00:10:17] the ones that we actually want and all
+[00:10:19] we do then guys is basically upload this
+[00:10:22] to pineco which is where we store all
+[00:10:24] this information in that Vector database
+[00:10:26] sounds a little bit complicated it's
+[00:10:28] actually really really straightforward
+[00:10:29] so let's start by creating the next
+[00:10:31] scenario then cool so we need number two
+[00:10:33] number two is going to be
+[00:10:36] vectorization which sounds really cool
+[00:10:38] that could be like I don't know like the
+[00:10:40] next the next big block Bluster hereit
+[00:10:41] that we're not ready for all right cool
+[00:10:44] beautiful all right let's start over
+[00:10:46] here so first I'm going to do is going
+[00:10:47] to be G Drive which is cool let's show
+[00:10:49] more for example I'm going to for watch
+[00:10:52] files in folder like so and then all we
+[00:10:54] do here is just simply select the one we
+[00:10:56] want but of course not before validating
+[00:10:58] our connection we're Say Hey I want you
+[00:11:00] to do that from now on in this case
+[00:11:02] awesome and the next thing you want to
+[00:11:03] do guys is just to Simply download from
+[00:11:05] a folder so let's download a file let's
+[00:11:07] come down here what back little a second
+[00:11:09] enter file manually or select from the
+[00:11:11] list we're going to go manually you can
+[00:11:12] click on file ID and just enter the file
+[00:11:15] ID from Google Drive just like that then
+[00:11:17] I want to get the text into a scenario
+[00:11:19] and to do that I'm going to use
+[00:11:20] something called dumpling AI if you
+[00:11:22] haven't got an account with them it's
+[00:11:23] super easy to set up and they give you
+[00:11:25] like lots of credits for free for you to
+[00:11:26] get trial and after that it's not very
+[00:11:28] expensive as all so go to D Ai and all
+[00:11:30] we're going to go for here guys is
+[00:11:32] convert a document to text oops I think
+[00:11:35] that's PF actually let me just make sure
+[00:11:37] I get the correct one in here let's go D
+[00:11:40] AI um
+[00:11:43] convert I believe it is this one
+[00:11:45] actually no we had it right the first
+[00:11:46] time we should have we should have
+[00:11:47] backed our instincts right we should
+[00:11:49] have backed our instincts so to file
+[00:11:51] method going to go for base 64 and then
+[00:11:53] what you're going to do guys is enter
+[00:11:55] this code here which is base 64 if you
+[00:11:57] don't have Bas 64 by the way you can
+[00:12:00] actually find it over here on one of
+[00:12:02] these uh sections which is there Bas 64
+[00:12:04] you just click on that okay cool so
+[00:12:06] let's enter this one base 64 and in
+[00:12:08] between the brackets is where you put
+[00:12:09] want to put the data and how do we find
+[00:12:11] the data it's just quite simply the top
+[00:12:14] bit here okay look at this base 64 data
+[00:12:17] and in Pages you can get really specific
+[00:12:18] about do I want to add like which pages
+[00:12:20] I want to add blah blah blah if you want
+[00:12:22] to get really romantic un complicated
+[00:12:24] about it then I'm going to click okay
+[00:12:26] I'm going to save the scenario I'm going
+[00:12:28] to run this one want and I'm going to
+[00:12:30] duplicate okay so this one hasn't worked
+[00:12:32] let's just check out why that's happened
+[00:12:34] real
+[00:12:35] quick ah we didn't suck the folder oh my
+[00:12:38] goodness that sounds like a pretty
+[00:12:40] interesting one that we should do
+[00:12:40] doesn't it let's come down and let's go
+[00:12:42] for email magic let's just set the limit
+[00:12:44] at 10 for argument sake click okay and
+[00:12:46] then we'll run this one again beautiful
+[00:12:49] nothing's happened so let me go through
+[00:12:50] the first part of the process and
+[00:12:51] trigger a new document in the folder and
+[00:12:53] guys for this one what I'm going to do
+[00:12:55] is respond to that email to my about
+[00:12:57] YouTube sponsorship so we can start
+[00:12:59] build a bit of a conversation in the
+[00:13:00] database so I come down here and I click
+[00:13:02] Send I'm going to come down here and
+[00:13:03] going to hit run the scenario one and
+[00:13:05] guys crucially one of the things I want
+[00:13:06] you to do with mail is instead of saying
+[00:13:08] just watching incoming mail for in red I
+[00:13:10] want you to watch all mail the reason we
+[00:13:13] need to do that is because that will
+[00:13:14] then actually track our responses as
+[00:13:16] well at the same time and I'll show you
+[00:13:17] that just very briefly check this out so
+[00:13:19] instead of then the criteria not only on
+[00:13:21] red mailes select all emails so when you
+[00:13:23] make a response that will also be added
+[00:13:25] to our database and never come over now
+[00:13:26] we've got email too I've got hey mayor
+[00:13:28] thanks for watching out I'm I'm excited
+[00:13:29] about blah blah blah and I tell hey
+[00:13:31] we're going to charge you like $3,000
+[00:13:33] for 60 to 90 things now the AI will know
+[00:13:36] this is from us so when it's responding
+[00:13:38] to Future emails you'll know hey Jack
+[00:13:39] has responded in this way before
+[00:13:41] therefore it can grab that relevant data
+[00:13:42] when it creates all responses so we come
+[00:13:44] back over to the second scenario for
+[00:13:46] instance we run this scenario once
+[00:13:48] Google Drive has picked up has it picked
+[00:13:49] up the right one let's have a look bada
+[00:13:52] bing bada bom web view link this is
+[00:13:53] really cool come down dumpl excuse me
+[00:13:56] dumpl link has turned it into TX so
+[00:13:57] let's just check that out real quick to
+[00:13:59] make sure we've got the right data could
+[00:14:00] have to text hi May thank you for
+[00:14:02] reaching out blah blah blah this is
+[00:14:04] pretty flipping awesome so the next
+[00:14:05] thing I want to do guys is to set
+[00:14:06] multiple variables the reason we're
+[00:14:08] doing that is we've got this output now
+[00:14:10] from dumpling but to vectorize it we
+[00:14:12] just need to make sure it kind of fits
+[00:14:13] with all the stuff that as expected
+[00:14:15] sometimes random characters and emojis
+[00:14:17] and loads of crazy stuff can mean that
+[00:14:19] it doesn't go there so you're going to
+[00:14:20] have to set multiple variables add item
+[00:14:22] this is going to be the we'll just call
+[00:14:24] this one text and the variable value
+[00:14:26] guys just type in everything down below
+[00:14:28] and if you have this code I'll put in
+[00:14:30] the description so you can just grab
+[00:14:31] that and you're just going to enter the
+[00:14:32] text from dumpling AI which is pretty
+[00:14:35] flipping cool now what's the next thing
+[00:14:37] that we need to do well we want to
+[00:14:38] create an embeddings right so we come
+[00:14:39] here going to go to uh open Ai and we're
+[00:14:43] going to go for the really cheeky uh API
+[00:14:46] core like so let's give this a second
+[00:14:49] beautiful now the URL is going to be for
+[00:14:51] slv1 for/ embeddings the method is going
+[00:14:54] to be post the content type application
+[00:14:56] Joon that's absolutely fine and you're
+[00:14:58] going to come down here you see you got
+[00:15:00] query string and then you've got body
+[00:15:01] ignore the query string guys I just want
+[00:15:03] you to put something in body which is
+[00:15:05] going to be this which is import Json
+[00:15:07] string and that but in our case it's
+[00:15:09] just going to be the text from the
+[00:15:11] multiple tools variables okay and then
+[00:15:13] I'm going to click okay beautiful and
+[00:15:16] you can see we've got this Json string
+[00:15:17] down here at the bottom guys and if we
+[00:15:19] have weird little you know double
+[00:15:22] brackets and it can just cause us lots
+[00:15:23] of problems in creating that uh
+[00:15:25] embedding awesome so we click this and
+[00:15:27] then we come over here but of course we
+[00:15:28] need to this one so let's call this one
+[00:15:31] embeddings now if you haven't created a
+[00:15:32] pine cone account now is the time where
+[00:15:34] we do the beautiful wonderful pine cone
+[00:15:36] the pine con obviously a to database
+[00:15:38] there's loads of options this is a great
+[00:15:39] one to get started so let's head over to
+[00:15:41] Pine con you'll see a page like this
+[00:15:42] guys you just log in or if you haven't
+[00:15:44] yet sign up and then you come to your
+[00:15:46] homepage right here now what do we do
+[00:15:49] you're going to come over and create an
+[00:15:51] index give it any name you want to be
+[00:15:53] creative call it white shirt or whatever
+[00:15:56] you want you're going to set up by model
+[00:15:58] the model I want you to choose here it's
+[00:15:59] going to be text edding three small we
+[00:16:00] don't really need the large one for this
+[00:16:02] purpose unless you're going gigantic
+[00:16:04] we're going to be fine with three small
+[00:16:05] set configuration C is fine AWS is fine
+[00:16:09] Virginia Us East is also fine and then
+[00:16:11] we just click on create index and it is
+[00:16:14] as simple as that if it would load for
+[00:16:15] us will it load for us I think it does
+[00:16:18] doesn't it give that a beautiful moment
+[00:16:20] to pop up for us now couple things
+[00:16:23] better mind now we need to create a new
+[00:16:24] connection in our scenario okay so we
+[00:16:27] come over we're going to look for Pine C
+[00:16:29] like here and we're going to go for
+[00:16:30] upsert a vector there is other stuff
+[00:16:32] that we can do like for example double
+[00:16:34] checking emails haven't been added
+[00:16:36] before if you want to and just make sure
+[00:16:37] every email has unique hash which is a
+[00:16:39] really cool thing to keep this one
+[00:16:40] simple for our purposes we're just going
+[00:16:42] to upload it because it's only triggered
+[00:16:44] by new and fresh emails on new dates and
+[00:16:46] the context of knowing if the same
+[00:16:47] emails comes in twice can be pretty
+[00:16:49] handy and in which case it would be
+[00:16:51] uploaded anyway so we're going to add a
+[00:16:53] new connection and I'm going to do that
+[00:16:54] because it's a little froy this to be
+[00:16:56] honest guys index now check this out
+[00:16:59] okay not that one let me come back over
+[00:17:01] to the beautiful pan code guys you copy
+[00:17:03] this okay you come back over uh to this
+[00:17:06] one you enter in and you do two things
+[00:17:08] you get rid of https colon Das Dash uh G
+[00:17:13] see you later pal we come over and then
+[00:17:15] get rid of pine cone doio vas it's done
+[00:17:19] then we need to get the API key so head
+[00:17:21] back over then to Pine Cone and you'll
+[00:17:23] see the left hand side API keys and here
+[00:17:25] you'll see the value you might have
+[00:17:26] guessed it we just copy that value we
+[00:17:29] come back over and then you enter it
+[00:17:31] into the API section give it a second to
+[00:17:32] load once you've entered the API key and
+[00:17:34] there we go it's all complete now for
+[00:17:36] the V to ID I kind of give it the file
+[00:17:38] ID from Google Drive and then we're
+[00:17:40] going to come down to add values and
+[00:17:42] we're going to add in this one from
+[00:17:44] embeddings which we won't have yet so
+[00:17:45] let me just change that code and you'll
+[00:17:47] be able to see it coming down if I look
+[00:17:49] over this is number six so the reason
+[00:17:52] why you wouldn't see this one yet guys
+[00:17:53] is just because you haven't run it but
+[00:17:55] if you want to can you see here it says
+[00:17:56] six body data blah blah blah and
+[00:17:58] embedding you just copy that going to
+[00:18:00] come down and I'm going to paste it
+[00:18:02] there like so and once that one runs
+[00:18:04] you'll see it there just by entering in
+[00:18:05] that code and changing it awesome and if
+[00:18:08] not you can undo this one run it grab it
+[00:18:09] and then just enter in that manually so
+[00:18:12] in metadata we're going to add this
+[00:18:13] we're going to add a Content uh type is
+[00:18:16] going to be string and then the value is
+[00:18:18] basically going to be okay the text from
+[00:18:20] dumpling Ai and then we can come down
+[00:18:22] here we're going to do the same thing
+[00:18:23] we're going to put title uh we're going
+[00:18:25] go string and this is going to be what
+[00:18:26] we title as and we'll call that one the
+[00:18:29] name of it so email one email 2 email 3
+[00:18:31] so we can actually kind of like map that
+[00:18:33] to the emails that we got as well when
+[00:18:34] we're checking it and once we've done
+[00:18:35] that guys we're going to click okay cool
+[00:18:38] so come down save it and you're almost
+[00:18:39] done you just got one final bit to do
+[00:18:41] now so let's come back up let's Auto
+[00:18:43] align these things together let's run
+[00:18:44] this module see if anything pops up
+[00:18:46] listen popped up so hang on the whole
+[00:18:48] system again get any folder in there and
+[00:18:49] then we can see it upsert it into pinec
+[00:18:51] so I've just duplicate the files and the
+[00:18:53] folders so we can run this one more time
+[00:18:54] the other thing to be in mind guys with
+[00:18:55] pinec con is make sure that you click
+[00:18:57] the map next to the values with this to
+[00:19:00] make sure that it works properly just
+[00:19:02] want to make sure I remember to mention
+[00:19:03] that so run this one once Google Drive
+[00:19:05] pick up on the new folder we've
+[00:19:06] downloaded it we've got the text now
+[00:19:08] tools have set embeddings have set and
+[00:19:10] it's been uploaded to Pine count
+[00:19:11] successfully what does that mean well it
+[00:19:13] means that if we go check out Pine con
+[00:19:15] now we should actually see these emails
+[00:19:17] so let's go over to our database we've
+[00:19:20] got the white shirt is what we called it
+[00:19:22] because I'm white sh up right now we
+[00:19:23] scroll down and guys would you believe
+[00:19:25] it we've got copy of email one copy of
+[00:19:27] email 2 this one is from Jack Roberts my
+[00:19:30] response and this one is from my asking
+[00:19:32] what it is and we can check out the
+[00:19:33] whole values of that and then we got all
+[00:19:34] these beautiful values down here which
+[00:19:36] is it kind of the the vectors awesome
+[00:19:38] incredible now guys what you've just
+[00:19:40] created okay it's pretty flipping
+[00:19:42] amazing any email comes in automatically
+[00:19:45] it gets sent to as Google doc then we
+[00:19:47] download it and then we add it to um we
+[00:19:49] actually add it to Pine which means that
+[00:19:51] now you've created an
+[00:19:52] automatic an automatically growing
+[00:19:54] knowledge base they will just go
+[00:19:56] infinitely for any email that you send
+[00:19:58] all that you get back in it will just
+[00:19:59] keep on growing so it context becomes
+[00:20:01] like infinite and relevant then we go on
+[00:20:04] to the third part of this Automation and
+[00:20:05] the third part of this automation really
+[00:20:07] is what you might ask well the final bit
+[00:20:10] where we actually then get a response
+[00:20:12] from somebody or we get an email we want
+[00:20:14] to create a draft respon so all we
+[00:20:16] everever do is we come to inbox and we
+[00:20:17] just click Send or edit or whatever we
+[00:20:19] find are doing okay so for scenario
+[00:20:20] three we're going to call this one email
+[00:20:23] brain cuz let's be honest guys this
+[00:20:25] exactly what it is and that's a kind of
+[00:20:27] funny direction of the automation
+[00:20:28] especially these kind of exotic ones
+[00:20:29] that I'm doing with you here is
+[00:20:31] companies charge thousands for this and
+[00:20:32] the fact that it trains and will give
+[00:20:34] you response of what it thinks the
+[00:20:35] answer is is insanely valuable this
+[00:20:38] could be I think the most epic one that
+[00:20:39] I've done so far on the channel until
+[00:20:42] the next one of course so come down
+[00:20:44] Gmail we're going to watch emails here
+[00:20:47] the difference here though is I'm only
+[00:20:49] interested number on R emails so you
+[00:20:52] have to kind of not mess with the emails
+[00:20:53] if you can um and maximum results you
+[00:20:57] know this is going to be we'll just put
+[00:20:58] this one the 50 depends how often we
+[00:20:59] check it it doesn't really matter I need
+[00:21:01] to verify my connection for the 17th
+[00:21:03] time today which is uh pretty decent
+[00:21:05] cool so we're going to select from now
+[00:21:07] on to make sure we've got it we click on
+[00:21:08] this one again just to add the folder
+[00:21:10] in we come down here and this one is
+[00:21:12] going to be inbox which is pretty sweet
+[00:21:15] because obviously that's where we're
+[00:21:16] going to get our emails Ace obviously
+[00:21:19] guys one of things you could do if you
+[00:21:20] wanted to is you could set unique rules
+[00:21:22] up in your inbox like if it has keyword
+[00:21:24] X move into folder and Trigger here the
+[00:21:27] other key thing I want to call out here
+[00:21:29] is that what we can do is add a rout
+[00:21:30] into this part here and we can say hey
+[00:21:33] for example if you want only information
+[00:21:37] that you know let's just say you may get
+[00:21:39] some no replies right let's say for
+[00:21:41] example what we could do is add a filter
+[00:21:43] here right and we say no reply and what
+[00:21:46] we could say is if let's
+[00:21:50] say who's it from where's from here from
+[00:21:53] the sender okay email address there it's
+[00:21:55] a no reply if that
+[00:21:57] contains case insensitive no reply go
+[00:22:01] down that route here and then we do the
+[00:22:04] same thing which is if it doesn't
+[00:22:05] contain no reply go up there and we add
+[00:22:07] another filter here which means that no
+[00:22:09] emails that contain any emails that
+[00:22:11] contain their reply will not get added
+[00:22:12] to our database and you can add out
+[00:22:14] specific filters like that if you think
+[00:22:16] it's not going to be relevant or if
+[00:22:17] there's certain emails you just don't
+[00:22:19] want it to go in there we can add these
+[00:22:21] filters at this stage to make sure it
+[00:22:22] doesn't happen that's probably going to
+[00:22:23] be the easiest way for you to create
+[00:22:25] that Dynamic uh logic so me Auto on that
+[00:22:28] and come back brilliant I think that's
+[00:22:30] cool then we're going to click beautiful
+[00:22:32] okay and we'll do that from now on
+[00:22:33] that's absolutely fine now next thing we
+[00:22:35] need to do is going to do what I call
+[00:22:37] Captain search who is Captain search you
+[00:22:39] say well Captain search is this guy and
+[00:22:41] he has a very unique job all right so
+[00:22:44] we're going to come down here let's
+[00:22:45] check him out for example all right so
+[00:22:47] you are an AI assistant tasked with
+[00:22:49] generating an effective search term
+[00:22:51] based on the content of a newly received
+[00:22:53] email you'll be provided with both the
+[00:22:55] email subject line and body text your
+[00:22:57] goal is to create a concise and specific
+[00:22:59] search term that accurately reflects the
+[00:23:02] topics discussed in email now actually
+[00:23:04] basically about here and explain what's
+[00:23:05] going on so when we search this database
+[00:23:09] which for argument sake we'll say has
+[00:23:11] hundreds and thousands of emails we want
+[00:23:13] to kind of identify what is the Core
+[00:23:15] Essence of what that email is about so
+[00:23:18] for example if it's about a sponsorship
+[00:23:20] inquiry it might only be like nine Words
+[00:23:22] which is sponsorship technology Jack
+[00:23:25] Roberts uh their company this company CU
+[00:23:28] basic we're going to use that as a
+[00:23:30] vector to search everything so we don't
+[00:23:32] want to S it's like how do we get a
+[00:23:34] really crisp Dynamic search temp which
+[00:23:36] we can then vectorize and then find the
+[00:23:38] right things so it's about making the
+[00:23:40] process as efficient as humanly
+[00:23:42] possible that's why we have this prompt
+[00:23:44] and that's why Captain search is here to
+[00:23:46] help us to uh make life a lot easier so
+[00:23:49] we got instructions we analyze the email
+[00:23:51] content we generate a search term we
+[00:23:53] format the response we basically this
+[00:23:55] how we want it to be and we give an
+[00:23:56] example like hey the search term is
+[00:23:58] sponsorship opportunity Tech inovat
+[00:24:00] conference 2025 AI automations Jack
+[00:24:02] sponsorship benefits exposure networking
+[00:24:05] that was just an example I did before
+[00:24:07] and then we give it Dynamic content
+[00:24:08] which is the email subject and the text
+[00:24:11] content okay so let's go over and let's
+[00:24:14] go and check out exactly what that is so
+[00:24:16] we come down here and click okay so we
+[00:24:18] come over here we click on chat
+[00:24:21] GPT oh my goodness this is the one we
+[00:24:23] want credit completion which is pretty
+[00:24:26] sweet let's come up
+[00:24:28] yeah Salon Alman said there's going to
+[00:24:29] be updates coming up which I think is
+[00:24:31] pretty sweet this year I'm really
+[00:24:32] looking forward to that so we'll go for
+[00:24:33] 01 mini it's absolutely fine awesome so
+[00:24:35] we come down here we've got the text
+[00:24:37] content we've got the email subject line
+[00:24:39] text content basically as you can see
+[00:24:41] it's all on the right hand side we found
+[00:24:42] that perfectly come down Jason object
+[00:24:44] critical pass Json 100% and we'll put
+[00:24:47] zero down here and then we're going to
+[00:24:48] come down and click okay beautiful so
+[00:24:51] what do we need to do after that well
+[00:24:53] the next thing to do is make an
+[00:24:54] embeddings which is exactly the same
+[00:24:56] process as you did in the last one we
+[00:24:58] come down here we're going to grab this
+[00:25:00] guy we going to come over we're going to
+[00:25:01] paste him beautiful think isn't just
+[00:25:03] great when you can just copy and paste
+[00:25:05] some run like that we going clicking
+[00:25:07] except for the difference this time is
+[00:25:09] going to be this where we come down and
+[00:25:11] input is going to be the result from
+[00:25:13] Captain search phenomenal then we come
+[00:25:15] over and guys we want to add in Pine
+[00:25:17] Cone like so query a vector vector click
+[00:25:21] on map and then quite simply enter in
+[00:25:24] this here which is body data embedding
+[00:25:27] again I'll put it in the tab tab so you
+[00:25:28] can have a quick look at it whoops and
+[00:25:30] this one is number three so we just
+[00:25:31] change that to three sweet copy that
+[00:25:34] come down and then we just paste it
+[00:25:36] right there which is pretty flipping
+[00:25:38] cool so say n for values yes let's do
+[00:25:40] metadata and then the limit guys is
+[00:25:42] based on how big it is so this is how
+[00:25:43] many emails should I pull to get my data
+[00:25:46] set if you've got only a couple hundred
+[00:25:48] you may want to limit it to lower if
+[00:25:49] you've got lot and you think lots of
+[00:25:51] content will be helpful get more I'm
+[00:25:53] just going to putp for example three
+[00:25:54] down here for the sake of it then we
+[00:25:56] click okay then we want to create an AR
+[00:25:58] aggregated to get all the information
+[00:26:00] from this so we can get one simple text
+[00:26:02] output for our GPT email brand to create
+[00:26:04] something interesting so let's add in an
+[00:26:06] array aggregator like so cool and what
+[00:26:09] do we want we want the vector ID and I
+[00:26:11] think we also want the values actually
+[00:26:13] it's the metadata isn't it yeah the
+[00:26:15] vector ID and the metadata The Source
+[00:26:16] module is simply the pine cone there
+[00:26:18] which is pretty sweet then when it come
+[00:26:20] down I'm going to click okay which is
+[00:26:22] pretty sweet then guys we want to add in
+[00:26:24] an iterator like so to combine all that
+[00:26:26] together beautiful and then we want to
+[00:26:29] add in an array so check this out it's
+[00:26:31] going to have an array Vector the
+[00:26:32] metadata so look we're going to have
+[00:26:35] email
+[00:26:36] one so let's come over here and just say
+[00:26:39] email
+[00:26:41] one come down and we'll just keep on
+[00:26:43] putting a few of these in again if
+[00:26:45] you've only done a few you don't need to
+[00:26:47] do all these I'm just doing this for the
+[00:26:48] sake of it in fact do you know what I
+[00:26:50] think might be useful is probably
+[00:26:51] getting more than three to be fair that
+[00:26:54] might be more beneficial especially with
+[00:26:56] emails if we want context right it just
+[00:26:57] depends depends really how many you've
+[00:26:59] got so I'm going to update this to six
+[00:27:01] for the argument sake um but obviously
+[00:27:04] you can experiment with it I think if
+[00:27:05] you got big data set I think 10 could be
+[00:27:07] pretty healthy
+[00:27:08] actually and we come down and then we
+[00:27:10] can go for obviously the more that you
+[00:27:12] have uh the better so we'll do six in
+[00:27:14] fact we'll do seven beautiful emails
+[00:27:17] seven phenomenal all done perfect we
+[00:27:19] click okay phenomenal now what do we do
+[00:27:22] we're going to come over and just update
+[00:27:23] Pine con down here to say look I want to
+[00:27:24] bring back seven really sweet then we're
+[00:27:27] going to click okay and we're going to
+[00:27:29] save the scenario that's okay don't
+[00:27:31] worry about that just yet what that
+[00:27:32] means guys is panc Con is going to split
+[00:27:34] out loads of options these two modules
+[00:27:36] here just condense it bring it into one
+[00:27:38] so have one outpt for our incredible GPT
+[00:27:41] brand now let's see what else go after
+[00:27:42] that now we've got to emo brand now the
+[00:27:44] email brain prompt is something that
+[00:27:45] takes a little bit of time to finesse
+[00:27:46] but it's really cool so check this out
+[00:27:49] going to come over beautiful and let's
+[00:27:52] see exactly what we've got so you are
+[00:27:54] highly efficient AI email assistant
+[00:27:56] designed to create professional and
+[00:27:58] textually relevant HTML formatted email
+[00:28:01] responses in a turn of voice and style
+[00:28:03] specified of the sender you have access
+[00:28:05] for up to 10 relevant emails that
+[00:28:07] provide context and additional
+[00:28:08] information about the subject matter
+[00:28:10] some of these emails may be from the
+[00:28:11] sender and some of them may be sources
+[00:28:14] related to the topic we give it
+[00:28:15] specifics on its TX its task using
+[00:28:18] contextual emails then we give it all
+[00:28:20] these things so the email for you to
+[00:28:22] respond to who sent it uh the name of
+[00:28:26] the person that sent it the date they
+[00:28:27] sent it it what they sent in terms of
+[00:28:29] the subject line and then crucially the
+[00:28:32] text content so the AI system knows
+[00:28:34] everything about who what when where and
+[00:28:36] how then relevant emails context is
+[00:28:38] simply the output from the iterator so
+[00:28:41] this is everything that's coming now
+[00:28:42] here's all your relevant context
+[00:28:44] underneath that and then we've got turn
+[00:28:46] of voice style now guys for the turn of
+[00:28:47] voice what I'd recommend you do is use
+[00:28:49] this system I've got here this meta
+[00:28:52] prompt what I would like you to do
+[00:28:54] before you do this pop the stage is
+[00:28:56] basically just get like 10 20 of your
+[00:28:59] emails now when we talk about tone of
+[00:29:00] voice what's really important to
+[00:29:02] understand is it's domain specific the
+[00:29:04] way that I talk on YouTube versus for
+[00:29:06] example in my school Community could be
+[00:29:08] slightly different versus the way that I
+[00:29:10] write emails so we want to replicate
+[00:29:12] your style in the domain that it's at so
+[00:29:14] just go through get emails that you've
+[00:29:16] sent that really think capture your
+[00:29:17] style the more the better quite frankly
+[00:29:20] and i' want you to give this prompt we
+[00:29:22] look at initial response structure we
+[00:29:23] look at visual structure pattern
+[00:29:25] analysis we look at formality markers
+[00:29:27] content flow closing analysis technical
+[00:29:28] elements special instructions blah blah
+[00:29:31] blah so we're going to look at things
+[00:29:32] about formats you know any how how your
+[00:29:34] response differs based on the context so
+[00:29:36] the more context we can give it the
+[00:29:38] better it will be now once you've done
+[00:29:40] that and you've given it this prompt
+[00:29:41] which either like a CLA or chat gbt CL
+[00:29:44] might be better for you actually what I
+[00:29:46] would love you to do after you've done
+[00:29:47] that is come back over and all you're
+[00:29:49] simply going to do guys is here on this
+[00:29:51] section where it says turn of voice just
+[00:29:54] enter it in there and that will mean
+[00:29:55] that every response that comes out is is
+[00:29:58] going to be completely unique to you
+[00:29:59] which means that people shouldn't even
+[00:30:01] know that you have this email brand
+[00:30:02] working for you in the background half
+[00:30:04] of them CS that then we got some
+[00:30:05] guidelines sign the inquiry leverage
+[00:30:07] contextual emails maintain tone
+[00:30:09] consistency and then also guys what I've
+[00:30:12] said is given it some HML formatting
+[00:30:14] specifics I've said there needs to be no
+[00:30:16] other information except for the text
+[00:30:17] making your job easier and what else is
+[00:30:19] really cool here finish the email with
+[00:30:21] the below htl signature you can build
+[00:30:23] that on HubSpot if you want to or you
+[00:30:25] could actually work with tgbt meaning
+[00:30:27] that the bottom sign is the same on
+[00:30:29] every email that you get how flipping
+[00:30:31] cool is that and once you've done that
+[00:30:33] it's pretty much ready to rock and roll
+[00:30:34] and go and have the model of use is gbt
+[00:30:36] for system and then we click okay so I'm
+[00:30:39] here for example now let's just add this
+[00:30:40] one in real quick uh create a completion
+[00:30:43] bada bing this is
+[00:30:45] beautiful all right model let's go for
+[00:30:47] GPT for
+[00:30:50] system Max C zero here's a message R is
+[00:30:53] going to be user text content is going
+[00:30:56] to be this which which is pretty sweet
+[00:30:59] uh and all we do guys is just simply
+[00:31:01] update all this stuff so who's it from
+[00:31:03] and the name all that sort of stuff so
+[00:31:04] let's go for uh from address and from
+[00:31:08] name so let's go down here let's see
+[00:31:09] where we got this information once we're
+[00:31:10] done we give it the relevant information
+[00:31:12] for context which is simply going to be
+[00:31:13] the value from the iterator which is
+[00:31:16] flip it Ace and we going to come down
+[00:31:17] we've got everything else we need then
+[00:31:19] guys we simply click okay we're going to
+[00:31:22] rename this one email brain of course
+[00:31:23] because it is our beautiful email brain
+[00:31:27] and let's get a big beautiful brain
+[00:31:29] there phenomenal next thing we're going
+[00:31:31] to do guys is Click next and then we're
+[00:31:32] going to do Gmail now what's really cool
+[00:31:34] I want you to create a draft now you can
+[00:31:35] send it's automatically going into but
+[00:31:37] draft is going to be good when we get
+[00:31:38] started the recipient this is where it
+[00:31:41] gets really really cool the recipient
+[00:31:43] now this is going to address it to and
+[00:31:44] obviously pick the folder that you want
+[00:31:46] you could put it in draft you could put
+[00:31:47] it in AI brain folder whatever takes
+[00:31:49] your fancy is we're going to address it
+[00:31:51] to the person sent you the email so
+[00:31:52] you're going to come down and let's see
+[00:31:53] who the email was from so just put the
+[00:31:54] email address in there and you're done
+[00:31:57] subject again come down find the subject
+[00:31:59] of what it was a automations with Jack
+[00:32:01] phenomenal then the content guys is
+[00:32:03] quite simply the results from the email
+[00:32:05] brand like that and literally that is
+[00:32:07] the entire automation so what I propose
+[00:32:10] we do we click okay we're going to run
+[00:32:11] the scenario I'm going to send it an
+[00:32:13] email asking it a question and we're
+[00:32:14] going to see exactly what the draft
+[00:32:15] looks like so I come back over I've just
+[00:32:17] asked a question and just said hey how
+[00:32:19] much do you charge for a sponsored video
+[00:32:20] I run the scenario I come down we're
+[00:32:22] watching for emails to come in this is
+[00:32:24] going to pick up the last email that I
+[00:32:25] sent now guys there's ways that we can
+[00:32:27] take this from here here to here we
+[00:32:29] could add an attachment so the very
+[00:32:30] first scenario what that would do and
+[00:32:32] look at this guys it's just rocketed
+[00:32:33] through giving it to email brain and now
+[00:32:35] it's going to create a draft for us in
+[00:32:36] the first scenario guys what I could do
+[00:32:38] as you can see we can tell when we get
+[00:32:40] attachments so we can grab all
+[00:32:42] attachments Now read the attachments
+[00:32:44] understand the attachments what else can
+[00:32:46] we do we can add perplexity search so
+[00:32:48] what I can also do is add an AI search
+[00:32:50] engine and let's say your domain is I
+[00:32:52] don't know coolblue bottles.com I can
+[00:32:55] then search for that company get context
+[00:32:57] and information about that that company
+[00:32:58] and add it to this Google Document and
+[00:33:01] i' just say hey FYI this is some
+[00:33:02] information in fact an even better place
+[00:33:04] to do it would be here where it gets
+[00:33:06] information and we just add it to the
+[00:33:07] email brand so we add Internet search
+[00:33:09] here and add that in as well which says
+[00:33:11] hey here's some information about the
+[00:33:12] company which means that when people
+[00:33:14] email you not only do you have the
+[00:33:16] context about who they are what they've
+[00:33:17] said on top of that we're also getting
+[00:33:19] internet search to make sure you've got
+[00:33:21] it so if you a scamers reaching out and
+[00:33:22] saying hey dude I want to sponsor a
+[00:33:24] video we'd know exactly who they are and
+[00:33:26] what the hell is going on which means
+[00:33:28] you could say look they've said this oh
+[00:33:29] but some information from the from blah
+[00:33:31] blah blah says that they may not be good
+[00:33:32] source how cool so you can see you can
+[00:33:35] take this in millions of things we can
+[00:33:36] also connect it with your calendar I
+[00:33:38] mean like I'm trying to get ahead of
+[00:33:40] myself I just want to put that as proof
+[00:33:41] of concept to see if you guys want that
+[00:33:43] kind of content and if you do then we'll
+[00:33:45] just simply Smash It and guys one very
+[00:33:46] quick amendment I just want to make sure
+[00:33:48] that using array metadata content rather
+[00:33:51] than the metad DAT because there's a
+[00:33:52] couple ones that come through on that so
+[00:33:53] let me just come through and update this
+[00:33:56] to make sure we get the right things all
+[00:33:58] right cool B wife always really good to
+[00:33:59] run through and make sure we got all the
+[00:34:01] bits in pieces so I'm just going to
+[00:34:02] number these real quick one two three
+[00:34:06] four
+[00:34:08] five oops six and then we should be
+[00:34:10] ready to go and guys I've just come over
+[00:34:12] to this email here check this out it's t
+[00:34:15] the same thing hey Jack thanks for
+[00:34:16] reaching out I you charge $3,000 for a
+[00:34:18] sponsored video within 69c integration
+[00:34:21] why is that so cool because my last fake
+[00:34:23] reply that I did I can even show you in
+[00:34:25] the emails we had here I think it was
+[00:34:27] email 2 wasn't it was it email 2 I had
+[00:34:30] this guys look my current sponsorship
+[00:34:33] rate is $3,000 for a 60 to 90 second
+[00:34:35] integration I come here it's the exact
+[00:34:38] same thing so it's read the email pulled
+[00:34:39] what's relevant and reply to it and also
+[00:34:41] add this nice little tasty thing at the
+[00:34:42] bottom we probably need get those little
+[00:34:44] dots but apart from that how flipping
+[00:34:46] incredible this actually is my favorite
+[00:34:48] automation so far guys I really hope you
+[00:34:50] find this video interesting and you can
+[00:34:51] see the potential whether do you want to
+[00:34:52] sell this companies because who the hell
+[00:34:54] would not want this like I'm going to be
+[00:34:56] using this all the time but you won't
+[00:34:58] know it to me well if you watch this
+[00:34:59] video know but otherwise you won't but
+[00:35:01] any case guys I hope you found the video
+[00:35:02] helpful and I'll catch you in the next
+[00:35:04] one

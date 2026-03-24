@@ -1,0 +1,1876 @@
+[00:00:00] Hey guys, it's Jack. Most businesses
+[00:00:02] waste hours of time checking emails, uh,
+[00:00:04] searching websites, or looking at
+[00:00:06] meeting notes, costing basically hours
+[00:00:09] of precious time. Now, in this video,
+[00:00:11] we're going to build this exact AI
+[00:00:13] client intelligence system, which is now
+[00:00:15] possible using N8 and this really cool
+[00:00:18] chat with website scraper
+[00:00:21] firecrawl.ai. Basically meaning that we
+[00:00:23] can chat with any client website or any
+[00:00:25] website we want to in a chat interface.
+[00:00:27] We can recall absolutely any email that
+[00:00:29] our client has ever sent us. And by the
+[00:00:31] way, as soon as we get that, it is
+[00:00:33] immediately stored in our agents memory.
+[00:00:36] Same with meetings. Any meeting we've
+[00:00:37] ever had with a client is completely
+[00:00:39] transcribed, put in our memory database,
+[00:00:41] and we ask you questions like, "Hey,
+[00:00:43] what did we talk about last week?" It
+[00:00:44] has all of that information and data,
+[00:00:46] meaning that we can basically save hours
+[00:00:48] and hours of time. And whether you want
+[00:00:49] to improve your own business to make it
+[00:00:51] more efficient and save time or sell
+[00:00:53] this to another business for like $500 a
+[00:00:55] month, you'll be able to crush it with
+[00:00:57] this automation. And by the way, I'm
+[00:00:58] Jack. I've helped thousands of business
+[00:01:00] owners crush it with AI automation and
+[00:01:02] build a sevenfigure AI automation
+[00:01:04] business myself. So, if you're a
+[00:01:05] business owner or you want to sell to
+[00:01:07] business owners, I'm going to show you
+[00:01:08] exactly how you build this entire system
+[00:01:10] step by step. Even if you've never coded
+[00:01:12] before or you don't know how to spell
+[00:01:14] the word and at the end of the video,
+[00:01:15] you'll have a fully working automation.
+[00:01:17] Beautiful. So with that in mind guys, I
+[00:01:19] guess grab that coffee and let's dive
+[00:01:21] straight in. Now what I first of all
+[00:01:23] want to start with is kind of explaining
+[00:01:25] the technology we're going to use and
+[00:01:26] then we're going to do a very quick
+[00:01:27] demo. In fact, you know what? Let's
+[00:01:29] start with a beautiful beautiful demo.
+[00:01:31] So architecturally this is what's
+[00:01:33] happening. Okay, we have two scenarios.
+[00:01:35] Scenario one, we have our AI agent which
+[00:01:38] is the guy that we chat to and we have
+[00:01:39] its memory. We have this process here
+[00:01:42] which is a vectorization of emails in
+[00:01:44] terms of if we get an email we do some
+[00:01:46] fancy logic to understand hey is this
+[00:01:48] from one is this from one of our clients
+[00:01:50] if it is we're going to turn it into a
+[00:01:52] document and store in our memory and
+[00:01:54] thirdly we've got this meeting thing
+[00:01:55] which will run periodically it'll pull
+[00:01:57] back all the meetings we've had and
+[00:01:59] every meeting you ever have with um
+[00:02:02] Fireflies AI basically again it's going
+[00:02:04] to save the transcript add it to our
+[00:02:06] database so we can ask it questions now
+[00:02:08] the way that our core agent warrants So
+[00:02:10] what's really cool about this and why I
+[00:02:12] think this is epic is we can now chat
+[00:02:13] with websites using fire crawl. Now
+[00:02:16] traditionally we would do a HTTPS
+[00:02:19] request right using this thing here. The
+[00:02:21] problem with that is it returns all of
+[00:02:23] the data from the homepage or we'd spend
+[00:02:25] ages downloading the entire website
+[00:02:28] which is not what we want. So for
+[00:02:29] example if I just type in this website
+[00:02:32] as a quick for instance which is
+[00:02:33] grind.co.uk UK which is a really cool
+[00:02:35] coffee website and I test that we get
+[00:02:38] all the HTML data but the problem is
+[00:02:40] what if we want to ask a question about
+[00:02:42] the careers or what vacancies are
+[00:02:44] available or pricing that's on the sub
+[00:02:46] page it's very difficult to do that but
+[00:02:49] with the technology in the playground in
+[00:02:51] firecraw what we can do is we can
+[00:02:53] actually ask it questions so what
+[00:02:55] firecraw enables to do is it does the
+[00:02:56] scraping bit but it's got like an agent
+[00:02:59] in the scraper so the agent looks at all
+[00:03:01] of the information for us on the website
+[00:03:03] and will pull back and extract what you
+[00:03:06] ask it to. For example, check this out.
+[00:03:08] I'm going to show you what it looks like
+[00:03:09] here. I've added the website. You can
+[00:03:10] add multiple websites, by the way. And
+[00:03:12] what I'm going to say is, look, what do
+[00:03:13] I want to find out? We could find out
+[00:03:14] the company mission. Uh what if I
+[00:03:16] instead wanted to find out something
+[00:03:18] like I know cheapest coffee. Okay? Or
+[00:03:22] what I'd say? Look, I'd say, hey, I'd
+[00:03:24] say find
+[00:03:26] me the cheapest coffee on the website.
+[00:03:31] Okay, beautiful. and I just say run.
+[00:03:34] What this will then do is go onto the
+[00:03:36] website and find out what the cheapest
+[00:03:38] coffee is for me. So I come down here.
+[00:03:39] Let's have a quick look. Hey, the
+[00:03:41] cheapest coffee is 10 pod box for $6.
+[00:03:43] Choose your blend. Select house.
+[00:03:45] Beautiful, right? Whereas before we'd
+[00:03:47] have to do stuff. If I said instead,
+[00:03:48] hey, go and find me mission. And I'd say
+[00:03:51] look what is their
+[00:03:53] mission mission
+[00:03:55] statement. All right, beautiful. And
+[00:03:59] then we can come down here and we can
+[00:04:00] then let's go ahead and
+[00:04:02] run. Beautiful. Give that a second. You
+[00:04:04] can enable an agent by the way to
+[00:04:06] interact and press buttons on the
+[00:04:07] website. But that's also really cool. So
+[00:04:08] now it's going through um the website
+[00:04:11] for us. The mission is coffee company
+[00:04:13] lives in London from a caffeine shortage
+[00:04:14] to homes all over the world. Beautiful.
+[00:04:16] That is the TLDDR of fire. What we can
+[00:04:18] also do with this guys is we can had it
+[00:04:20] we can add an asterisk at the end of the
+[00:04:23] website which basically let's it means
+[00:04:26] that we will be able to search all of
+[00:04:29] the pages on the website. So if I say
+[00:04:31] hey what is their mission statement and
+[00:04:32] I do this one more time one things
+[00:04:34] you'll see is it will start going
+[00:04:35] through all the different pages that
+[00:04:35] you've got. You see look at these tools
+[00:04:37] help blogs features blah blah blah
+[00:04:38] meaning it will literally check every
+[00:04:40] single thing on the website to get us
+[00:04:41] the answer which is really freaking
+[00:04:43] cool. Meaning we don't need to download
+[00:04:45] and pull all of that data back.
+[00:04:46] Obviously, that's really freaking epic.
+[00:04:49] Takes slightly longer, but we'll give us
+[00:04:50] the data. So, that's essentially how
+[00:04:52] fire crawl works. What we're doing is
+[00:04:54] we're going to chat with it. It's got a
+[00:04:56] few different features. First of all, it
+[00:04:58] has access to an air table. Let me show
+[00:05:00] you what this is. Now, I've used air
+[00:05:01] table, but effectively what this is is
+[00:05:03] your CRM. It's where you store all of
+[00:05:05] your clients. So, if I come down here to
+[00:05:06] clients, for example, I've got two in
+[00:05:09] here is if for instance, okay, I've got
+[00:05:11] the company, I've got the email address,
+[00:05:13] and then the email. The reason why I've
+[00:05:15] got that guys is because when I want to
+[00:05:17] vectorize emails, I want to be able to
+[00:05:19] identify who that email is from and what
+[00:05:22] which client it basically pertains to.
+[00:05:25] So, if it's one of my clients, it goes
+[00:05:26] in my knowledge database. And if it
+[00:05:28] isn't, we disregard it. And we know that
+[00:05:29] because we've got some core logic. By
+[00:05:31] the way, that also has some fancy things
+[00:05:32] that will check the body of the email,
+[00:05:34] the subject line. So, even if it's from
+[00:05:35] a different email address or it's an
+[00:05:37] internal email, it will still recognize
+[00:05:39] and bring it up. And the same with
+[00:05:41] meeting vectorization. So, the reason
+[00:05:42] I've got this here is if I just say to
+[00:05:44] the chat, "Hey, dude, could you just
+[00:05:45] check Brian's website and tell me what
+[00:05:47] their cheapest coffee is, I don't need
+[00:05:49] to give it the full URL because it
+[00:05:50] checks it knowledge database to find
+[00:05:52] that piece of information for us." Okay,
+[00:05:54] cool. It's got memory, which means it
+[00:05:56] can have it remembers the conversations
+[00:05:58] you've had. Obviously, we powered it by
+[00:05:59] AI. And here's its vector database that
+[00:06:02] is accessing for its memory. Now, what's
+[00:06:04] really cool is a sub agent work tool. So
+[00:06:05] I spent hours on this trying different
+[00:06:07] routes and one cuz basically what we
+[00:06:09] need to do is do a request to scrape and
+[00:06:12] then a request to pull it back. And what
+[00:06:14] I found was using I I tried different
+[00:06:16] things. I thought about what if we just
+[00:06:17] had a linear flow but then you couldn't
+[00:06:19] really have a conversation with it.
+[00:06:20] Well, what if we gave this agent the
+[00:06:22] ability to scrape and to pull back but
+[00:06:24] what was happening was you'd have a chat
+[00:06:26] and say look go and find it for me and
+[00:06:28] it say just come and ask me again in 30
+[00:06:30] seconds when got the data. So what I
+[00:06:31] built instead was a sub agent tool. So
+[00:06:34] effectively it calls this work tool here
+[00:06:36] that goes through to the sub agent. Now
+[00:06:38] the sub agent will scrape the data. It
+[00:06:40] will uh go ahead and grab that data and
+[00:06:42] then we have this really beautiful loop
+[00:06:44] that keeps on checking to see if the
+[00:06:45] data is available and the second that it
+[00:06:47] is it sends it straight back over to our
+[00:06:49] client intelligent box. So let's see
+[00:06:51] what this looks like. I've opened the
+[00:06:52] chat window. I'm going to say hey what
+[00:06:53] is keep product on gran's website. We
+[00:06:55] hit enter and then it will now begin the
+[00:06:57] flow. And you'll see it will call the
+[00:06:58] NA10 workflow tool real quick. It's
+[00:07:00] checking the database. So the first
+[00:07:02] thing I ask it to do is to check its own
+[00:07:03] rag database just in case that that
+[00:07:05] memory exists there. So now it's
+[00:07:07] basically spinning and as soon as that's
+[00:07:08] done it will return for us the exact
+[00:07:10] answer because it has initiated this sub
+[00:07:12] workflow. There you go guys and the
+[00:07:14] result the cheapest product on the
+[00:07:15] website is a temp box for priced at $6.
+[00:07:18] You can find it here. Beautiful. So we
+[00:07:20] have crushed that. Now let's go check
+[00:07:21] out the next part and then we'll go
+[00:07:22] together and build this entire thing. So
+[00:07:24] Gmail trigger. Let's have a quick go at
+[00:07:26] this one guys and see what this looks
+[00:07:27] like. So if I click on test workflow,
+[00:07:29] this will pull down the latest email I
+[00:07:31] got. It grabs the email. It searches our
+[00:07:33] database to see and basically pull down
+[00:07:35] all of our client information. It then
+[00:07:36] formats it and does this code. This code
+[00:07:38] here, guys, is really cool. Basically,
+[00:07:40] what it does is this will check out what
+[00:07:42] it's about and match it with our
+[00:07:44] database. And if it's got nothing to do
+[00:07:46] with any of the websites, it will not
+[00:07:48] proceed and not get vectorized. And then
+[00:07:49] finally, at the bottom, we've got this
+[00:07:51] beautifulization flow that will grab all
+[00:07:53] the transcripts that we want. So for
+[00:07:54] example, if I come down here and do this
+[00:07:56] request to pull down all meetings, uh
+[00:07:58] you can do this either every couple of
+[00:08:00] days or however frequently you want to.
+[00:08:01] If I click on this, you'll see this has
+[00:08:03] pulled down every single one of your
+[00:08:05] last meetings on that particular time
+[00:08:06] period, which is code for pretty
+[00:08:08] freaking cool. And then we can go down
+[00:08:10] and get all the transcripts, which I
+[00:08:11] will show you right here. If I click on
+[00:08:12] this guy, as you can see on the left,
+[00:08:14] I've got the full transcript, the
+[00:08:15] meeting title, and everything else like
+[00:08:16] that, which is code for pretty cool
+[00:08:18] freaking good news. So with that in
+[00:08:20] mind, guys, let's go ahead and build
+[00:08:21] this entire thing uh step by step. Uh if
+[00:08:23] you wanted to grab this from the
+[00:08:24] community by the way uh just so you know
+[00:08:26] it is in the classroom section. You come
+[00:08:28] down to automation and I believe it is
+[00:08:31] this one here. So just come down
+[00:08:32] download it and then what you can do any
+[00:08:33] is just simply click the buttons click
+[00:08:36] import from file you select it and then
+[00:08:38] the whole thing will populate for you
+[00:08:39] automatically. Cool. So we are going to
+[00:08:41] build this one together. So let's create
+[00:08:42] a brand new N10 flow and start from
+[00:08:44] scratch. Beautiful. Here we go. So let's
+[00:08:45] call the first one here our customer
+[00:08:47] intelligence agent. Now guys, the reason
+[00:08:49] I really like this is because for me,
+[00:08:51] what this is the so what, right? We get
+[00:08:53] new technology to scrape websites
+[00:08:55] intelligently. But I just wanted to
+[00:08:57] build something that would just be like
+[00:08:59] the hub of all of my client information,
+[00:09:01] right? Like I don't really want to have
+[00:09:03] to go check emails. I don't want to have
+[00:09:04] to think about what the meeting is
+[00:09:05] about. I just want it all immediately
+[00:09:07] stored to a database that I can talk to
+[00:09:08] and chat to. And that is the vision of
+[00:09:10] this agent. Like I can just ask it
+[00:09:12] anything and it freaking does it, which
+[00:09:14] is really important. So, first thing I
+[00:09:15] want to do is we're going to build out
+[00:09:17] the chat and the scraping part and then
+[00:09:19] we're going to build out the
+[00:09:20] vectorization sequences. So, number one,
+[00:09:22] let's start off with the trigger. Let's
+[00:09:24] do the beautiful chat trigger for now.
+[00:09:26] And obviously, guys, what we can do with
+[00:09:27] this, we can embed this in any website
+[00:09:30] we want to. It could be lovable. We get
+[00:09:31] a URL that we share with people. You
+[00:09:33] name it. It's it's really freaking cool.
+[00:09:34] All right. So, first we want to do is an
+[00:09:36] AI agent. Let's have a quick look
+[00:09:38] because and are we choosing an AI agent
+[00:09:40] here? because we may ask it 20 different
+[00:09:42] things and we may get 162 different
+[00:09:44] responses. Cool. So, first thing I'm
+[00:09:46] going to do is choose the chat model.
+[00:09:47] Come down here. We're going to go for
+[00:09:49] OpenAI. Beautiful. So, if you don't know
+[00:09:51] to grab your API key from OpenAI, just
+[00:09:53] come to
+[00:09:54] platform.opai.com/ API keys. Come over
+[00:09:56] here, create a new secret key. Give it a
+[00:09:58] random name if you like and then you'll
+[00:10:00] have the key that will populate. You're
+[00:10:01] going to copy that and enter it into
+[00:10:02] NA10. So, once you're in NA10, you come
+[00:10:04] down here to create new credentials and
+[00:10:06] you type that API key in and click save.
+[00:10:07] And then you are all ready to rock and
+[00:10:09] roll and connect. Cool. Beautiful. So
+[00:10:11] I've selected my credential. GPT4 Mini
+[00:10:13] will be fine for the moment. Obviously
+[00:10:14] we could add if we want to
+[00:10:16] GBT41. Do you know what? Let's do that.
+[00:10:18] Let's add the brand new model cuz that
+[00:10:20] one's really freaking powerful. So lots
+[00:10:22] of different ones here. We want GBT41.
+[00:10:24] Let's have a quick look. Now let's just
+[00:10:26] go for this guy here. Beautiful. All
+[00:10:27] right. Cool. We're ready to rock and
+[00:10:28] roll. Fantastic. Memory. Going to click
+[00:10:30] on this guy. Go for simple memory.
+[00:10:32] Context window length. This is like of
+[00:10:33] how many times have you spoken to it? Do
+[00:10:35] you want it to go back? I'm gonna say
+[00:10:36] 10. Uh, in fact, let's go for 15. I
+[00:10:39] think 15 will be very cool. Beautiful.
+[00:10:41] All right. Now, we start to add in the
+[00:10:42] beautiful and wonderful tools. So, one
+[00:10:44] of the first tools I'm going to add it
+[00:10:46] in, guys, is your CRM. So, this is going
+[00:10:48] to be where you store all of your client
+[00:10:49] data. Effectively, what we want our AI
+[00:10:51] agent to be able to do is just to access
+[00:10:53] it to get the URLs, the emails, uh,
+[00:10:56] stuff basically, the core information.
+[00:10:58] So, for that, come down to Air Table or
+[00:11:01] your CRM of choice. Uh, it'll be
+[00:11:03] different for whatever it is. I've done
+[00:11:04] air tableable because air table's like
+[00:11:05] you know Google sheets on steroids and
+[00:11:07] I'd use it all the freaking time. So
+[00:11:08] operation is going to be to get uh and
+[00:11:11] we pick the base. So if you haven't
+[00:11:12] created one air tableable just simply
+[00:11:14] head over to airtable.com. We are going
+[00:11:16] to go down to the bottom left and click
+[00:11:17] create. Uh start from scratch blah blah
+[00:11:19] blah. You can call this whatever you
+[00:11:20] want to clients blah blah blah blah
+[00:11:22] blah. Uh then you give a name. So this
+[00:11:24] be
+[00:11:26] client name. Uh and then over here it
+[00:11:29] could just be you know all the
+[00:11:30] information you would want about the
+[00:11:31] client. Okay. email and if you've got
+[00:11:33] hard-coded information you really think
+[00:11:35] it's important you could just come over
+[00:11:37] here and just say in got key info you
+[00:11:39] could have the phone number if you want
+[00:11:40] to call them as well. So basically just
+[00:11:42] think of this as the hardcode codeex of
+[00:11:44] all the information and then as that
+[00:11:46] information changes you add client
+[00:11:47] choose clients you can simply update
+[00:11:49] this as you go uh as you go along. Cool.
+[00:11:52] So you're going to create that in our
+[00:11:53] table. You're then you're going to pick
+[00:11:54] uh the base. So then you'll just type in
+[00:11:56] the thing that you just created. In our
+[00:11:58] case that's going to be clients. Uh, and
+[00:12:00] then we pick the table, which is going
+[00:12:01] to be table one. And I'm just going to
+[00:12:03] use the one that I prepared earlier just
+[00:12:05] out of respect for your time. So, we
+[00:12:06] come down here. I'm just going to delete
+[00:12:08] this guy. We don't need him. We don't
+[00:12:09] need a second client base. Get this guy
+[00:12:10] out of here. Cool. We got clients. And
+[00:12:12] there we go. So, I've given it to just
+[00:12:14] for simplicity sake. I have given it um
+[00:12:16] grind coffee and grandmother roastery,
+[00:12:19] which is really decent. So, let's just
+[00:12:20] delete this guy because we don't need
+[00:12:21] it. Cool. All right. Sweet. So, we come
+[00:12:23] back over to our phenomenal workflow and
+[00:12:26] record ID. Don't worry about that. So if
+[00:12:28] I just say I'm going to come out here. I
+[00:12:30] think it is just get actually. We come
+[00:12:32] down here actually guys. Now we want to
+[00:12:34] search records not get records. That's
+[00:12:36] going to be the better one. Okay. So we
+[00:12:38] want to search. Beautiful. Okay. Let me
+[00:12:40] just choose this one real quick cuz what
+[00:12:42] that will do is it's not looking for one
+[00:12:44] particular record. It's actually going
+[00:12:45] to find everything for us. Okay. Cool.
+[00:12:47] Table one that return all. Beautiful. So
+[00:12:50] this is its ability to get records uh
+[00:12:52] set automatically. That's fine. Okay.
+[00:12:54] Fantastic. Now the next thing I want to
+[00:12:55] do is to give it a database. So, as we
+[00:12:57] go, I'm going to put these in folders,
+[00:12:59] little note things, so you can follow
+[00:13:00] along and we know exactly what
+[00:13:01] everything does. That is generally,
+[00:13:03] guys, really good practice cuz then as
+[00:13:05] you're looking at it at a glance, you
+[00:13:06] can actually understand exactly what it
+[00:13:09] does. And of course, we're going to give
+[00:13:10] it emoji because we are not crazy
+[00:13:12] savages. Okay, beautiful. Get this guy
+[00:13:15] get this guy up and running. Cool. Okay,
+[00:13:16] AI agent. Cool. Now, what we want to do
+[00:13:18] is we want to give it some beautiful
+[00:13:21] memory. Okay, so if you haven't created
+[00:13:23] a rag database yet, where I encourage
+[00:13:24] you to head over to is, and I say this
+[00:13:26] one because it's just so easy, Pineco.
+[00:13:28] If you're not familiar with rag,
+[00:13:30] basically it's like having a million
+[00:13:31] different drawers. It vectorizes
+[00:13:32] information and just means it only grabs
+[00:13:34] the information it needs based on unique
+[00:13:36] codes. So create an account with Pine
+[00:13:38] Cone. You can head over here. Give this
+[00:13:41] a hot beautiful second. If you haven't
+[00:13:42] created one, click on create index. Come
+[00:13:45] down. Give it a name. We can call this
+[00:13:46] one beep. Actually, let's call it coffee
+[00:13:49] cuz coffee is brilliant. Uh the model I
+[00:13:51] recommend that you choose is going to be
+[00:13:52] text embedding through small which is
+[00:13:54] fantastic. Serless is fine. AWS is fine.
+[00:13:56] That's all fine. And then create index.
+[00:13:59] That sound pretty cool. Decent. And then
+[00:14:01] you've got your hosting over here which
+[00:14:02] is great. So we've got our coffee index.
+[00:14:04] And this is going to be where we store
+[00:14:06] all. And of course you can create
+[00:14:07] different indexes for different clients
+[00:14:09] that you hold and maintain it or maybe
+[00:14:10] different business units based on what
+[00:14:12] you want to do. Cool. Now what do we do?
+[00:14:14] We come back over to our beautiful
+[00:14:15] scenario. And this one is an agent. This
+[00:14:17] one is going to be memory. And of
+[00:14:20] course, what emoji do we use for memory?
+[00:14:21] It needs a big beautiful
+[00:14:23] brain. Okay, sweet. And let me just
+[00:14:25] change the color because I can't have
+[00:14:26] everything yellow. Let's go for orange
+[00:14:28] memory. Cool. So, what we then do is we
+[00:14:30] want to add a new tool and we want to do
+[00:14:32] vector store. And at the bottom here,
+[00:14:34] guys, vector store question answer tool.
+[00:14:36] Okay, I'm going to bring this guy over
+[00:14:38] here, which is answer questions with
+[00:14:39] vector store. First of all, we select
+[00:14:41] the vector. That is exactly the same.
+[00:14:43] We're going to do panko, which is
+[00:14:45] beautiful, phenomenal. And we got to
+[00:14:47] give it the model. So again, I would
+[00:14:48] just encourage you to use
+[00:14:50] OpenAI. Okay, sweet. And let's just pick
+[00:14:53] our credentials from before GP4 Mini.
+[00:14:56] You know, let's just give it the
+[00:14:57] powerful the big the big guns, right?
+[00:14:59] Let's give it the big beautiful 4.1
+[00:15:00] guns. Beautiful. Okay, great. And then
+[00:15:03] we need to pick down here. So first
+[00:15:05] thing we want to do is just give this
+[00:15:06] some information. So I'm going to call
+[00:15:07] this
+[00:15:09] rag memory and then description of the
+[00:15:12] data. So I've said, hey, retrieve data
+[00:15:14] about clients including all previous
+[00:15:15] emails and meetings with those clients.
+[00:15:17] And the limit is forced. This is how
+[00:15:18] many of the say say like one thing is an
+[00:15:21] email, one thing is a meeting. How many
+[00:15:23] of all the documents you've got do you
+[00:15:24] want me to bring back? I would encourage
+[00:15:25] the larger your databases, increase it.
+[00:15:28] Unless you think it's like a sniper
+[00:15:29] answer, right? So, for example, if I
+[00:15:31] said, "Dude, tell me um you know what
+[00:15:34] were that what was that turnover last
+[00:15:35] year?" You don't need to go and access
+[00:15:36] 29 documents to tell me that. You need
+[00:15:38] to access one document. So, if you're
+[00:15:40] asking more specific questions, reduce
+[00:15:42] the number down. If it's more generic
+[00:15:43] questions, increase the number. So four
+[00:15:45] will be fine for this. Then we've got
+[00:15:47] the Pine Cone vector store, which is
+[00:15:48] cool. And let's just create a new
+[00:15:50] credential so you know exactly how to do
+[00:15:51] that if you haven't already. It's asking
+[00:15:52] for an API key. So to do that, we head
+[00:15:55] back over to Pine Cone. On the left you
+[00:15:57] see API keys and then you click on
+[00:15:58] create new API key. You give it a name
+[00:16:01] like beep or whatever you want. Then
+[00:16:03] click create
+[00:16:04] key. And there you go. API key is
+[00:16:07] generated. You copy that. You come back
+[00:16:08] over to N8N and enter in the API key.
+[00:16:11] Phenomenal. And then click save. What
+[00:16:13] I'll do is create a new credential with
+[00:16:14] Pine Cone account 3. And guys, almost by
+[00:16:17] magic, we see coffee. That's pretty
+[00:16:19] cool, right? Which means now this is the
+[00:16:21] database it's going to pull all of its
+[00:16:22] information from, which is ace. Cool.
+[00:16:25] Now, we need to finally create an
+[00:16:26] embedding. So, do you remember when we
+[00:16:28] created it, we set it up as Open AI's um
+[00:16:32] let me just go and get the correct
+[00:16:33] credential on here, which is 14. Uh we
+[00:16:36] got the model, which is cool. Text
+[00:16:37] embedding three small. That's one we
+[00:16:39] select because that's the same code, the
+[00:16:42] same kind of system that we did on pine
+[00:16:44] cone. So they need to be the same.
+[00:16:46] Beautiful. Okay. So now we have given it
+[00:16:47] the ability to retrieve information from
+[00:16:50] pine which is pretty freaking cool. And
+[00:16:52] we'll use that when we start loading
+[00:16:54] memory in later. All right. Sweet. So
+[00:16:56] the next thing we want to do is to
+[00:16:58] create a sub agent workflow to go ahead
+[00:17:01] and grab fire. Now remember when we're
+[00:17:03] building this we need to do a couple of
+[00:17:05] things, right? We need it to go ahead
+[00:17:07] and scrape data. we need to head to go
+[00:17:09] forth and scrape the data. Then what we
+[00:17:11] need to say is when that scrape is
+[00:17:12] complete which could take 20 seconds, 40
+[00:17:14] seconds, how long it is, we then send
+[00:17:15] another request to go ahead and grab
+[00:17:17] that data which is the two things that
+[00:17:19] we need to do and then send it straight
+[00:17:21] back. I've built it this way to make it
+[00:17:23] as frictionless as possible for you as a
+[00:17:26] user building it. I tried three
+[00:17:27] different versions. I figured that this
+[00:17:29] would be the best one and the best way
+[00:17:30] to go about it. Uh but of course there
+[00:17:32] are always different ways to do things
+[00:17:33] and you can try those out. So, this one
+[00:17:35] here, we're going to call um let's just
+[00:17:37] call this one firecraw
+[00:17:40] uh
+[00:17:43] scraper and then add a little fire
+[00:17:45] emoji. Beautiful. All right, cool. So,
+[00:17:47] the first thing we're going to do with
+[00:17:48] this one is this is and also really cool
+[00:17:49] if you've not done this before way to
+[00:17:51] activate a sub agent from a workflow.
+[00:17:53] And when you would want to do that is
+[00:17:56] when things are more complicated like
+[00:17:57] this where several things need to happen
+[00:17:59] for us to get the information back is
+[00:18:01] when you would use another sub agent.
+[00:18:03] Whereas if it's just a go this and grab
+[00:18:05] or whatever it is, you would just build
+[00:18:07] it into the existing tool set. So think
+[00:18:09] about it as like a threshold of
+[00:18:10] complexity after which it exceeds we
+[00:18:12] then would build a sub agent workflow.
+[00:18:14] Cool. So what do we do? Well, the first
+[00:18:16] thing you would do is click on add first
+[00:18:17] step in scenario and type in uh let's
+[00:18:21] have a look. When executed by another
+[00:18:23] workflow. Okay, cool. Then come back
+[00:18:25] over here. And all we're going to say to
+[00:18:26] it is look cool call NAN workflow tool.
+[00:18:30] Very very very cool. Uh beautiful. And
+[00:18:32] then we get to pick the list. So what
+[00:18:33] did we call this one? We called it
+[00:18:34] firecrol scraper. Little tip guys is
+[00:18:37] just to remember to keep saving your sub
+[00:18:39] agent. If it stops doesn't work, it's
+[00:18:40] cuz you haven't saved and updated it.
+[00:18:42] This is firecrol scraper. So if I come
+[00:18:44] back here, what am I looking for? I'm
+[00:18:46] looking for firecrawl scraper.
+[00:18:49] Beautiful. This is really ace. And I
+[00:18:50] want to give it a name and a
+[00:18:52] description. So I'm going to paste this
+[00:18:53] one in here, which is send the website,
+[00:18:55] the prompt, and the property to this
+[00:18:56] tool. And it will return information
+[00:18:57] from script website within x seconds.
+[00:19:01] Okay, cool. name is going to be uh
+[00:19:05] scrape website data. Very very cool. And
+[00:19:09] then we just click off that and then we
+[00:19:10] are good to rock and roll which is very
+[00:19:12] very cool. So now we've given it the
+[00:19:14] ability to reach forth and do stuff like
+[00:19:15] that. Now when you head over to this
+[00:19:17] section, one of the things you'll notice
+[00:19:18] for it wants some test JSON. So come
+[00:19:20] down here and define using JSON example.
+[00:19:22] Okay. Now what this is saying guys is
+[00:19:25] like how do you want me to receive the
+[00:19:27] data? What is the data structure I
+[00:19:29] should request from this like employee
+[00:19:32] agent? This is like the employee working
+[00:19:34] for the manager. This guy is the
+[00:19:35] employee. This guy's a manager. The
+[00:19:37] employee is saying, "Look, when I'm
+[00:19:38] asked for this information, what's the
+[00:19:40] information you want me to tell the
+[00:19:42] agent that I need back?" And just to cut
+[00:19:44] through the noise, I'm just going to
+[00:19:45] paste this in here. I'll put all this
+[00:19:46] down below so you can just grab it and
+[00:19:48] use it if you want to. It's like the
+[00:19:49] simplest JSON thing ever. And you can
+[00:19:51] just change the structure whenever you
+[00:19:52] want to. It's really easy, right? If you
+[00:19:53] want to add another one in, you'll just
+[00:19:55] copy this, paste it down, uh, bring this
+[00:19:57] guy back, obviously, and you can change
+[00:19:58] information and be ready to go. Cool.
+[00:20:00] So, this is what we're saying. We want
+[00:20:02] four things. We want the website. We
+[00:20:03] want to know what the prompt is. The
+[00:20:05] website is what what's the thing I'm
+[00:20:06] scraping? The prompt is what's the thing
+[00:20:08] you want me to search for on that
+[00:20:10] website. The property is when I bring it
+[00:20:12] back, what do you want me to title it?
+[00:20:14] And then the required is what is the
+[00:20:16] thing that you need me to get that I
+[00:20:17] must bring back for you. It is my
+[00:20:19] understanding of those four things. So,
+[00:20:21] we come off. I know we can test step.
+[00:20:22] Nothing should really happen. Cool. Now
+[00:20:24] guys, you see we've got these four
+[00:20:25] beautiful website prompt, property, and
+[00:20:27] required. Cool. This is really decent.
+[00:20:30] Now, what do we do next? What we want to
+[00:20:31] kind of do now is add the go forth to
+[00:20:33] firecrawl and grab me the thing that I
+[00:20:36] need. Now, what's really cool about
+[00:20:37] firecraw guys is if you come over to
+[00:20:41] docs.firecrol.dev, you have these
+[00:20:42] extract endpoints over here, which is
+[00:20:44] really cool. And you can just test and
+[00:20:45] have good fun with anything that you
+[00:20:47] want to. So for example, if I say I want
+[00:20:49] to extract, I can click on try it and
+[00:20:51] then it'll ask ask me for a prompt, ask
+[00:20:53] me for schema, ask me for whatever I
+[00:20:54] want to and it will all appear here on
+[00:20:57] the right hand side, which is really
+[00:20:58] freaking cool. And when you want to uh
+[00:21:00] what you can actually do is come down to
+[00:21:02] the curl. If you click on copy curl and
+[00:21:04] come back, I then I come down here to
+[00:21:06] the sub agent. I type in HTTP request,
+[00:21:09] click on import curl, enter that in
+[00:21:11] there, and then import. And then you can
+[00:21:13] see all the information has just
+[00:21:15] appeared for us automatically which is
+[00:21:17] really freaking cool. So what I did
+[00:21:19] though is I kind of took all the
+[00:21:21] documentation with VC crawl. I threw it
+[00:21:22] into a language model and I said look
+[00:21:24] help me build this out. Now what I would
+[00:21:26] encourage you to do is to get this
+[00:21:29] information. So the information I would
+[00:21:30] want you to get if I just come down here
+[00:21:32] and just show you this is look if I come
+[00:21:34] over to the schema and I pull this out.
+[00:21:36] This is going to be the code for the
+[00:21:38] website. This is going to be the code
+[00:21:39] for the prompt. This is the code for the
+[00:21:41] property. And this is a code for what is
+[00:21:43] required. So what I did is I went over
+[00:21:45] to chatb. I basically fed it
+[00:21:47] documentation said hey here's the
+[00:21:49] documentation for fire crawl AI. I say
+[00:21:54] write me a call
+[00:21:55] request
+[00:21:57] with these
+[00:22:00] placeholders. Of course you can just
+[00:22:02] enter in yourself but if you just want
+[00:22:04] to get the full thing you can do that.
+[00:22:05] Then you enter in the request and get
+[00:22:06] the information back. And then once you
+[00:22:08] pull that in guys, you can come down and
+[00:22:10] save the information like so. And you'll
+[00:22:13] see once I click on this now I've got
+[00:22:15] the post, the method, the authentication
+[00:22:16] is nil. I come down and you can see the
+[00:22:19] JSON down here with all of the
+[00:22:21] information that you can just copy and
+[00:22:23] paste over. The only thing it's got is
+[00:22:24] the URL it's sending it to. Uh the
+[00:22:26] fields authorization. So this is your
+[00:22:28] API key which you'll get from filecrol.
+[00:22:30] And that just appears for you
+[00:22:31] automatically when you're on
+[00:22:32] docs.firecrol.dev. And you just copy
+[00:22:34] that over. Uh and then I come back over
+[00:22:36] here. We're cool. And then it's just
+[00:22:37] using JSON and all this stuff. Okay, so
+[00:22:39] that will now go forth and create the
+[00:22:41] thing that we need. Beautiful. Now the
+[00:22:43] next step that we need to do is we want
+[00:22:45] to request the data to bring that back.
+[00:22:48] But what we need to do is get the ID
+[00:22:51] from this. So for example, we come back
+[00:22:53] here. We click on get extract status
+[00:22:55] which is cool. And then we just click on
+[00:22:57] this copy here. We come back over to our
+[00:22:59] beautiful scenario. Click on this guy.
+[00:23:01] And then we want to do again is HTTP
+[00:23:03] request. and HTTP request guys, web
+[00:23:05] hooks, these are the kind of bread and
+[00:23:06] butters of it. Click on import curl
+[00:23:08] which is code for give me the TLDDR and
+[00:23:10] I'll put everything in there. Bam. And
+[00:23:12] then it's populated it with some uh
+[00:23:15] information. Now you can see here this
+[00:23:17] ID is the bit we need to change. So
+[00:23:19] first of all let's give it our API key
+[00:23:21] which we can just grab from this guy
+[00:23:22] here which is bearer and a load of data.
+[00:23:25] Come on here. Uh let's enter that in
+[00:23:28] there. Phenomenal. Now what I want to do
+[00:23:30] is click on expression. I need to come
+[00:23:32] back here. I need to click on this guy.
+[00:23:33] This is really important actually. You
+[00:23:34] can miss this quite easily is you want
+[00:23:36] it to be expression. If you do fixed, it
+[00:23:38] will not work. It needs to be
+[00:23:40] expression. Expression means it's
+[00:23:41] dynamic. I will grab whatever the thing
+[00:23:43] is that you're giving me. Cool. So, this
+[00:23:45] is going to give us an output. And once
+[00:23:47] you send this scrape data off, it
+[00:23:49] returns with hey, it's successful.
+[00:23:52] Here's your unique ID. Then we use that
+[00:23:55] unique ID to go and kind of do it's like
+[00:23:57] here's like a Sharpie like did I need a
+[00:23:59] coffee? Okay, you're number 79. And then
+[00:24:01] when 79 comes, we grab it. So that's the
+[00:24:03] data we're going to get back. So what we
+[00:24:05] need to say to this guy is first of all
+[00:24:07] give him a name which is going to be get
+[00:24:09] data and we need to say look I want you
+[00:24:12] based on what scrape data says to go
+[00:24:13] forward and get that right. So to do
+[00:24:15] that we're going to give it this code
+[00:24:17] here which I know from the previous
+[00:24:19] scenario which is here again I'll just
+[00:24:20] put that down below in the comments
+[00:24:22] description. If you wanted to get that
+[00:24:23] dynamic in the scenario you could just
+[00:24:25] detach it and run it individually but
+[00:24:26] just to save you the time that's what it
+[00:24:28] comes back as. Cool. Phenomenal. So this
+[00:24:30] is going to get the data. This is going
+[00:24:32] to scrape the data, but it will not be
+[00:24:33] ready for us immediately because we just
+[00:24:36] need to wait for the scraper to do that.
+[00:24:37] So, we need to build a bit of a loop.
+[00:24:39] So, what I want you to do is click on
+[00:24:40] this. I'm going to click on if. Now, if
+[00:24:44] effectively what we're saying here is
+[00:24:46] like if this value uh isn't success or
+[00:24:50] is isn't waiting, I you're going to
+[00:24:52] reloop and try again in 5 seconds time.
+[00:24:54] So what I'm going to say is if the
+[00:24:57] status again you'll see when I run this
+[00:24:59] like does not starts with let's have a
+[00:25:02] look here
+[00:25:03] um string I'd say starts
+[00:25:06] with completed it equals true so in
+[00:25:09] other words this scenario ends if it
+[00:25:11] starts with completed which is cool
+[00:25:13] right and if it doesn't you're going to
+[00:25:15] come back over here and grab the data
+[00:25:16] again but if it's an instant thing it
+[00:25:18] will send off like a million requests so
+[00:25:20] we need to add a time delay so to do
+[00:25:22] that we're going to come down here to uh
+[00:25:24] Wait. Beautiful. And let's just give it
+[00:25:26] in, I don't know, 5second intervals is
+[00:25:28] fine. We could do 10 seconds. Whatever
+[00:25:30] you sort of fancy. Beautiful. So now we
+[00:25:32] have this fantastic scenario that
+[00:25:34] basically
+[00:25:35] means if it's completed, it will keep on
+[00:25:37] retrying the status every 10 seconds to
+[00:25:39] see if it's ready. And if it is, they'll
+[00:25:41] send it back to our core agent. And if
+[00:25:42] it is, and it won't work. Cool. Now we
+[00:25:44] hit beautiful save module. Fantastic.
+[00:25:47] Come back to our big beautiful customer
+[00:25:49] intelligent agent. And I think guys,
+[00:25:51] it's at the point now where we can
+[00:25:52] actually try it. So, if I just said open
+[00:25:54] chat and I say, "Hey, bro. Um, what is
+[00:26:00] Grind's
+[00:26:02] cheapest
+[00:26:05] product?" Now, let's see here. This guy
+[00:26:07] works. Checks the agent. Oops. I So,
+[00:26:09] there's been a small error in the
+[00:26:10] workflow. Cool. So, let's just figure
+[00:26:12] out what's happened there. So, come
+[00:26:13] down. He wasn't able to access it. So,
+[00:26:14] let's just find out what we could do.
+[00:26:16] This is great cuz I can show you some
+[00:26:17] cool troubleshooting stuff with this.
+[00:26:18] Now, click on this guy. Bad request.
+[00:26:21] Please check your parameters. Ah, you
+[00:26:23] know what's happened, guys? We missed
+[00:26:24] some big mistake. Do you see on this
+[00:26:26] actual agent, what we need to do first
+[00:26:28] of all is it said, look, I've been told
+[00:26:32] by our sub agent that I need four pieces
+[00:26:34] of information from you. Okay, what this
+[00:26:36] magic button lets us do is let the model
+[00:26:38] define what that information is. It
+[00:26:41] wasn't working because we didn't send it
+[00:26:43] over, which is cool. Now, the next thing
+[00:26:44] we need to do as well is give this AI
+[00:26:46] agent a prompt to tell it how to behave.
+[00:26:49] So, all we can do is come down here to
+[00:26:50] add options and add in system message.
+[00:26:52] And I'm going to give you the prompt
+[00:26:53] that I prepared earlier. And this was
+[00:26:54] with lots of uh love and affection and
+[00:26:56] time I spent on this, but I'll just show
+[00:26:58] what it's about. Ro, you're a customer
+[00:26:59] intelligent agent. Your primary goal is
+[00:27:01] to answer user questions about
+[00:27:03] companies, clients, or related context
+[00:27:04] by leveraging internal intelligence,
+[00:27:07] structured databases, and external
+[00:27:08] scraping necessary. Core principles.
+[00:27:10] Prioritize existing knowledge before
+[00:27:12] initiating data gathering. In other
+[00:27:13] words, check your check your database.
+[00:27:15] Check air table. If you can just tell
+[00:27:16] me, give it to me before scraping. Okay.
+[00:27:19] Um, always state the source of your
+[00:27:21] answer. response workflow and we say,
+[00:27:22] "Look, here's what you're going to do.
+[00:27:23] The first thing you're going to do is
+[00:27:24] you're going to check check your
+[00:27:25] memory." That's number one. Okay,
+[00:27:26] awesome. Meaning summaries, email
+[00:27:27] correspondence, project history,
+[00:27:28] stakehold details, blah blah blah.
+[00:27:29] Number two, check Air Table. See if
+[00:27:31] you've got it in your fixed data. If you
+[00:27:33] haven't got it, use the sub agent for
+[00:27:35] real-time data via firecrawl. Only use
+[00:27:37] this if it's not it's not in rag memory.
+[00:27:40] It's not in air table. I know it sounds
+[00:27:41] specific, but having run the scenario
+[00:27:43] like a 100 times, these are little
+[00:27:44] details I found that like just help it
+[00:27:46] be more intelligent. Output prompt u the
+[00:27:48] sub agent will and it gives a
+[00:27:50] description for what it does. You will
+[00:27:51] wait for the result. You'll present the
+[00:27:53] answer to the user and you'll s the data
+[00:27:55] source and memory and then some key
+[00:27:57] things on its behavior. Cool. All right.
+[00:27:59] Sweet. So that's all that we've given a
+[00:28:01] really specific thing there. So we click
+[00:28:02] off this now. Uh we click on save and
+[00:28:05] then let's open the chat. And you see
+[00:28:07] the session ID the memory is tied to the
+[00:28:10] session ID. So if you refresh it, you'll
+[00:28:12] see this session ID changes. That means
+[00:28:14] it will not remember what's happened
+[00:28:16] when you refresh the chat. So let's give
+[00:28:17] this another go. Hey, what is Gran's
+[00:28:19] cubes product? Bam. We hit it checks
+[00:28:21] open AI checking rag memory as we told
+[00:28:23] it to cuz that's what we wanted to do
+[00:28:25] first of all it's checking air table can
+[00:28:27] it find it no and I found by the agents
+[00:28:29] the more sequential you can make the
+[00:28:31] inputs the better the thing is cool so
+[00:28:32] this has failed on the workbook let's
+[00:28:34] find out why that hasn't worked bad
+[00:28:36] request please check your answers look
+[00:28:38] at other info so what we can do here you
+[00:28:40] see this view subexecution bit if we
+[00:28:42] click that up what that will let us do
+[00:28:44] is kind of inspect the uh information of
+[00:28:47] where it went wrong so where it failed
+[00:28:49] was in the first module. So, I click
+[00:28:51] into this guy, we can figure out what
+[00:28:52] happened. We had a bad request. Let's
+[00:28:55] have a quick look why. All right, guys.
+[00:28:56] What we actually didn't do is bring over
+[00:28:58] the key bits of information. Okay, so
+[00:28:59] it's just sending out fake stuff. So,
+[00:29:01] you're going to come down here to URLs.
+[00:29:03] You're going to grab the website and pop
+[00:29:04] him in there. Cool. And then we've got
+[00:29:06] the prompt. So, we come over here and we
+[00:29:08] grab the prompt and we pop him in there.
+[00:29:10] Sweet. And then we've got the object,
+[00:29:12] which is fine. Properties, which is
+[00:29:14] where that properties, these two arrows
+[00:29:16] here. Bring the property over.
+[00:29:20] Beautiful. Uh, and then we've got
+[00:29:21] required and then bring required over.
+[00:29:24] Fantastic. Cool. Then it's all good and
+[00:29:27] dusted. And we're sorted. And then
+[00:29:28] again, we click save. So many times I've
+[00:29:29] done I was like, dude, why is this not
+[00:29:31] working? So, Jack, you didn't save it,
+[00:29:32] dude. You need to go back and have one
+[00:29:34] of those coffees real quick. Cool. And I
+[00:29:36] love I love the uh editing function just
+[00:29:38] to check out different stuff like if
+[00:29:40] it's not working. Cool. So, refresh it.
+[00:29:41] What if we say third time's a charm?
+[00:29:43] What else could possibly go wrong? We
+[00:29:45] set this workflow tool. Okay, that's
+[00:29:47] working. We check the database school
+[00:29:48] then it'll check air table if it
+[00:29:49] behaves. It has doesn't have information
+[00:29:52] which is fine. Now it's calling the
+[00:29:53] workflow tool and that spinning is good
+[00:29:55] news which means that it's most likely
+[00:29:57] now in this beautiful cycle of waiting
+[00:29:59] and checking regularly. And again I've
+[00:30:01] just tried to build this to be simple as
+[00:30:03] humanly possible. And look at this guys.
+[00:30:05] Beautiful. The cheapest product on the
+[00:30:07] website is a 10 box for $6. Two quick
+[00:30:09] little details for you to know by the
+[00:30:10] way. Number one is if it's going ahead
+[00:30:12] and scraping the website, it can take
+[00:30:14] like 30 40 seconds to come back. Maybe
+[00:30:17] slightly longer based on how big the
+[00:30:18] website is and how complicated it is.
+[00:30:20] It's been my experience that if you're
+[00:30:22] doing it on the website directly, it
+[00:30:24] just seems to work within like 15
+[00:30:25] seconds. But the second you try to do it
+[00:30:27] via API and finding information, it just
+[00:30:30] seems to take longer. So just expect a
+[00:30:31] slight delay with that. Uh just manage
+[00:30:33] your expectations. Hopefully that
+[00:30:35] increases in speed over time. The second
+[00:30:37] thing I want to call out with this is
+[00:30:39] that actually there's a cool thing you
+[00:30:40] can do on the scope data thing. If you
+[00:30:42] come down here to the website, oh my
+[00:30:44] goodness, let me just open this up so we
+[00:30:45] can get a better view. You see what you
+[00:30:47] can do is add an asterisk. Okay, if you
+[00:30:50] add an asterisk after this point here,
+[00:30:53] what this will do is actually scrape
+[00:30:55] every page on the website, not just the
+[00:30:58] homepage. So you can make that slight
+[00:31:00] difference if you want to. You can
+[00:31:02] actually then just include this into
+[00:31:04] your prompt with uh chat GPT and then it
+[00:31:06] will search every page and so you can
+[00:31:07] make it kind of decide do I need to
+[00:31:09] scrape every page or not and make a
+[00:31:11] decision off that. So that's just a bit
+[00:31:12] based on your scraping needs as you want
+[00:31:14] to kind of balance like time and depth
+[00:31:15] at the same time. Cool. So
+[00:31:18] congratulations by the way cuz you've
+[00:31:19] just built first part of the scenario
+[00:31:21] which is the memory and the agent. Now
+[00:31:23] the next thing that I want us to look at
+[00:31:25] is the vectorization of emails. So what
+[00:31:28] does that look like? Well, what we're
+[00:31:29] going to do first of all, guys, is come
+[00:31:30] down here and look for email. I'm going
+[00:31:32] to get accept of my beautiful
+[00:31:33] electrolyte filled
+[00:31:36] water. Beautiful. Now, I found it like
+[00:31:39] easier just to kind of get the email
+[00:31:41] coming in and then decide like is it
+[00:31:42] this or is it this and kind of make a
+[00:31:44] decision. So, we're going to have
+[00:31:45] triggers. We're going to go for down
+[00:31:46] here in the triggers button on a message
+[00:31:48] received. Beautiful. Okay, we're going
+[00:31:50] to come down here. Let's see what deeply
+[00:31:53] personal information I just got on a
+[00:31:55] test event. So, unselect simplify
+[00:31:57] because that won't give us all the data
+[00:31:58] that we need. Click on fetch test event
+[00:32:00] and let's see what I got an email on.
+[00:32:01] Let's have a look. I got a message from
+[00:32:04] um Okay, this is cool. Cool. We we got a
+[00:32:07] message from a cool bro. All right,
+[00:32:08] sweet. So, we've got the message and
+[00:32:09] we've got the output. Very cool. Now,
+[00:32:11] the first thing I'm going to do here,
+[00:32:12] guys, is just set some fields. So, let's
+[00:32:14] just go to set fields. And I'm doing
+[00:32:16] this just so that the the actual
+[00:32:18] scenario knows what to use where. So,
+[00:32:20] let's first of all say what we're going
+[00:32:21] to do is like uh sender, right? That's
+[00:32:24] going to be number one. So send it.
+[00:32:25] We're going to find out the email
+[00:32:26] address that sent us the email. In fact,
+[00:32:28] guys, what I've done, I've sent myself
+[00:32:29] an email. So I don't like doc some
+[00:32:31] random person's email me. Okay, cool. We
+[00:32:33] come over here. Come down to email
+[00:32:34] fields. Cool. And let's have a look what
+[00:32:36] we've done now. So send it is going to
+[00:32:38] be the person who sent it. So let's grab
+[00:32:39] that one on the left hand side. Uh
+[00:32:41] address. There you go. From over here.
+[00:32:43] Boom. In fact, let me just change this
+[00:32:45] to from um just so we don't go crazy.
+[00:32:47] Second thing I want to find out now is
+[00:32:48] going to be the subject. And the reason
+[00:32:50] I want subject, I want body, and I want
+[00:32:52] sender is because from my perspective,
+[00:32:54] those are all information that we want
+[00:32:56] to know to determine whether or not this
+[00:32:57] is worth a saving. Because what if you
+[00:32:59] send it to your buddy and say, "Hey, you
+[00:33:00] that company we work with last week,
+[00:33:01] they freaking suck." Like, we want to
+[00:33:03] know that because if their name is
+[00:33:04] referenced somewhere in the email or
+[00:33:06] body, I want us to grab that. And that's
+[00:33:07] part of the intelligence system that
+[00:33:09] we're building with this. So,
+[00:33:11] subject is going to be I just put
+[00:33:13] subject to subject. Cool. Then I want um
+[00:33:16] also, you're going to love what I'm
+[00:33:17] going to show you in a second as well.
+[00:33:18] Come down to body. Uh, let's have a
+[00:33:20] look. Where's the body? Oh my goodness.
+[00:33:23] I just typed a lot of crazy stuff. Okay.
+[00:33:25] Body. Body. Body. Body. We just don't
+[00:33:26] need HTML. And then also, guys, the
+[00:33:28] other thing I want to know is the when,
+[00:33:30] right? Uh, which is date or time. Maybe
+[00:33:35] date's fine. Yeah, date is cool. So,
+[00:33:37] this is when the email was sent, which
+[00:33:38] is this guy here. Why is that important?
+[00:33:40] Cuz I'm going to rag it. You know, some
+[00:33:42] say that I rag everything I touch. And
+[00:33:44] maybe that's true. But I also want to
+[00:33:45] know when it's sent because we want to
+[00:33:47] prioritize more recent information over
+[00:33:49] less recent information. Cool. So if I
+[00:33:51] test this step, we've got all this stuff
+[00:33:52] now. We can easily grab and grab and
+[00:33:54] drop. We need to contend with these
+[00:33:56] billions of data on the left. Beautiful.
+[00:33:58] Now the next thing we want to do guys is
+[00:33:59] grab an air table module like we've done
+[00:34:01] before. You may be familiar with him.
+[00:34:03] And we're going to go for I think it's
+[00:34:05] search records. Now just explain why I'm
+[00:34:08] doing this. Basically um I'm getting the
+[00:34:11] data. I need something to compare that
+[00:34:13] data to my CRM, right? To say, look,
+[00:34:15] here's the data I've got. Let me wash
+[00:34:17] that against my entire client database
+[00:34:19] just to see is it actually something to
+[00:34:21] do with one of my clients. So, if I come
+[00:34:23] to my database here, I'm going to for
+[00:34:25] list is going to be yeah, search is
+[00:34:27] fine. Again, the exact same thing as
+[00:34:29] before. Okay,
+[00:34:32] client. Beautiful. From list table one,
+[00:34:35] which is the table we had, come down
+[00:34:37] here and then I just test step. It will
+[00:34:39] bring down everything on the right hand
+[00:34:40] side, right? which is all the data. Now,
+[00:34:42] why is that important? This is just the
+[00:34:44] thing you're comparing it against,
+[00:34:45] right? So, that could be a serum, it
+[00:34:46] could be anything. Beautiful. Now, the
+[00:34:48] next thing I want to do is to format
+[00:34:50] this air table data with some code. So,
+[00:34:53] I want you to come over here to code
+[00:34:55] over here, and we're going to enter some
+[00:34:56] information into here. Now, this code,
+[00:34:58] guys, after building the scenario, after
+[00:34:59] drinking coffees, one of the things I
+[00:35:01] realized I needed to do is we've got the
+[00:35:03] data, right, which is flicking cool, but
+[00:35:05] I just want to extract that out. So, you
+[00:35:07] can enter this code, and I'll put it
+[00:35:08] down below for you, so you can copy
+[00:35:10] paste it in. and you're ready to go. I
+[00:35:11] click on test up and we should get all
+[00:35:13] of the beautiful information out for us
+[00:35:15] to grab and have rock and rolling good
+[00:35:17] freaking time with. Now, this is the bit
+[00:35:18] where it gets really cool and clever,
+[00:35:20] right? So, we're basically then going to
+[00:35:22] add some logic. So, what I did is I kind
+[00:35:24] of went over to chat GBT and I basically
+[00:35:26] said something along the lines of look,
+[00:35:28] uh, I said, look, this is what I want.
+[00:35:30] I'm going to give you data. I'm going to
+[00:35:32] give you the subject line. I'm going to
+[00:35:33] give you the email address. I'm going to
+[00:35:34] give you the body. And what I I gave it
+[00:35:36] those things. And I said, "Look, what I
+[00:35:37] want you to do is write some creative
+[00:35:39] code, some intelligence to validate
+[00:35:42] whether or not that is relevant." So the
+[00:35:44] code that I basically had that
+[00:35:46] conversation and you can and this is why
+[00:35:48] one of the really cool things about N10
+[00:35:49] guys is that you can add these I call
+[00:35:51] them fudge modules, the fudger modules,
+[00:35:53] which is hey this is what I've got. This
+[00:35:55] is what I want. Just write me code to do
+[00:35:57] it. So I click on code and basically I
+[00:35:59] entered this really cool thing again.
+[00:36:01] I'll put it down below for you kind
+[00:36:02] little play around with it and stuff.
+[00:36:03] And what this is going to do, guys, is
+[00:36:05] basically check to see if the email we
+[00:36:09] got matches with one of the several
+[00:36:10] things. First thing it's going to check
+[00:36:12] is the subject. It's going to check the
+[00:36:13] body. It's going to check the sender.
+[00:36:15] And if any of those match, it will give
+[00:36:16] us a match or non-match thing. So, we
+[00:36:18] enter in this code. Run once for all
+[00:36:20] items is fine. And click on test step.
+[00:36:22] And it will say whether or not it passes
+[00:36:24] the uh thing. Now, look at this. It has
+[00:36:27] passed. Look, is climb email true. So,
+[00:36:30] one of the things it checked. Well, hang
+[00:36:31] on a second, right? Well, let's just see
+[00:36:32] what's up. What's the client email? Jack
+[00:36:34] air automations withjack.com. So, one of
+[00:36:37] the things it said is look, this is
+[00:36:38] matching because dude, this matches with
+[00:36:41] what I had in your air table. The email
+[00:36:42] is the same. So, it matches it as a
+[00:36:44] match. It's matched the client grind
+[00:36:46] coffee. So, if it matches on either the
+[00:36:47] subject, the reason or the email or
+[00:36:50] whatever it is or the body, it will bill
+[00:36:52] over and it will give it a big plus.
+[00:36:54] That is so freaking cool, guys. Like
+[00:36:55] this level of intelligence, guys. Like,
+[00:36:57] I'm telling you, it's this is insane.
+[00:36:59] So, we've got this stuff. Now, I want to
+[00:37:01] create an if statement, right? And that
+[00:37:02] if statement is quite simply again if
+[00:37:04] you're building this make it beat you'd
+[00:37:05] add it like as a little thing. But what
+[00:37:06] I want to say is look we want to make a
+[00:37:09] decision on is it do we save or not. So
+[00:37:12] to do that I'm going to grab decision
+[00:37:14] save and I'm going to say is equal to.
+[00:37:16] I'm going to say look I like to just go
+[00:37:17] along with something
+[00:37:20] like starts with save. All right. So if
+[00:37:25] this starts with save it will proceed to
+[00:37:27] the next steps. Click on test app. It
+[00:37:29] goes ahead. But I'm just going to
+[00:37:30] validate that this isn't the case. I'm
+[00:37:32] going to send it another email with
+[00:37:33] something completely random. All right,
+[00:37:34] guys. So, I just sent something at it
+[00:37:35] from my previous email address. So,
+[00:37:36] look, I click on this guy. I'm going to
+[00:37:37] fetch test event and it should be just
+[00:37:39] some random nonsense that I sent it,
+[00:37:40] right? Uh you'll see it. It's just
+[00:37:42] basically boom boom because complete
+[00:37:44] nonsense. Check this out. I'm going to
+[00:37:45] test the workflow one more time. So,
+[00:37:47] it's grabbing this new email. It's
+[00:37:48] adding the field, searching records,
+[00:37:50] checking the code, and it decides what
+[00:37:51] to do. Well, hang on a second. Let's
+[00:37:53] check this out. Wow, it said it as a
+[00:37:55] note. Why? Because check this out. It's
+[00:37:58] from a different email address. The
+[00:37:59] subject is Boom. The body is boom. the
+[00:38:01] date is there and this has said hang on
+[00:38:02] a second it's not matching email subject
+[00:38:05] it's not matching the body data and it's
+[00:38:06] not from our email address therefore we
+[00:38:08] don't want to know we we don't care
+[00:38:09] anymore get that guy out of here so now
+[00:38:11] what this means is true will only be the
+[00:38:14] stuff that we care about that's the key
+[00:38:16] thing and that's why this is so
+[00:38:17] intelligent I'm even going to rename
+[00:38:19] these okay we're going to call this guy
+[00:38:20] formatting and if he's a formatting
+[00:38:22] let's just go with this guy oh my
+[00:38:23] goodness let's just rename this real
+[00:38:25] quick okay so let's name them so we know
+[00:38:28] what's going on um and by the way if
+[00:38:30] selling like scenarios and stuff, I'd
+[00:38:32] encourage just go a little extra
+[00:38:33] distance to have this sort of stuff. So,
+[00:38:35] here we go, Brian. And this is going to
+[00:38:37] be the uh
+[00:38:40] intelligence guy. Beautiful. All right.
+[00:38:43] Sweet. We called him intelligence. We're
+[00:38:44] happy. Now, I decide what happens if
+[00:38:46] it's true. So, if it's true, what I want
+[00:38:48] to now do is I want to create a
+[00:38:50] document. Okay. I want to then add that
+[00:38:53] information into the document and then
+[00:38:54] I'm going to download the document and
+[00:38:56] then I'm going to vectorize it. That
+[00:38:57] sounds difficult. It is. You'll see why
+[00:38:59] I look. So if it's true, the following
+[00:39:01] happens. First of all, I want to click
+[00:39:03] on Google Docs. All right. And what I
+[00:39:04] want to do is create a document. Now,
+[00:39:07] annoyingly, I would love it if you could
+[00:39:09] create and insert the content. We just
+[00:39:10] simply cannot do that. So, what do we
+[00:39:12] do? We come down here, operations,
+[00:39:13] create uh driver miner ID. I've got this
+[00:39:17] here to basically go over to your
+[00:39:19] drive.google.com real quick. And I want
+[00:39:20] you to create a folder called
+[00:39:22] vectoriz. That's all I want to do. And
+[00:39:24] create a second folder called vectorz
+[00:39:26] meetings that we're going to use shortly
+[00:39:27] after that. As you can see, there's
+[00:39:29] nothing in this file at the moment. By
+[00:39:30] the way, if you haven't connected Google
+[00:39:32] Drive to NAN, I'm going to put a
+[00:39:34] timestamp down below. Click on that
+[00:39:36] video, watch it. Takes about 2 or 3
+[00:39:38] minutes, but just follow that step by
+[00:39:39] step and you'll connect. I just want to
+[00:39:40] make sure that you're taken care of in
+[00:39:42] case you've never done that before, cuz
+[00:39:43] it can be a little tricky pickly. Cool.
+[00:39:45] So, we've got here
+[00:39:47] vectoriz. Sweet. That's all I want to
+[00:39:49] do. Then, I've got the t uh the title.
+[00:39:51] So, let me just test the steps
+[00:39:53] behind. Hold on a second. Let me just
+[00:39:56] run an entire workflow real quick.
+[00:39:58] problem. Execute the workflow. Why is
+[00:40:00] that? Because it's not happy with what's
+[00:40:02] happening. Type in some random
+[00:40:03] information. That's fine. Okay, let's
+[00:40:05] test workflow real quick. This is the
+[00:40:07] annoying thing about Google Docs is you
+[00:40:08] have to keep testing it to get the data
+[00:40:10] from behind. So, I click on this now and
+[00:40:12] the data is not come into it. All right.
+[00:40:14] What I need to do is get data that will
+[00:40:16] actually send. So, we come back over to
+[00:40:17] my Gmail. All right. I've come back
+[00:40:18] over. I've sent it an email. The reason
+[00:40:20] I've done that is because it will not go
+[00:40:22] through to this route unless I have
+[00:40:24] something that's true. So, you just need
+[00:40:25] to trigger it somehow. There you go. All
+[00:40:26] right. Sweet. So, it's great a
+[00:40:28] fictitious document. I can click on it
+[00:40:29] and voila, all the information's
+[00:40:31] appeared. So, what's the title? To be
+[00:40:33] honest with you guys, you can do this in
+[00:40:34] a bazillion different ways. I like to
+[00:40:36] personally just say client, right? And
+[00:40:39] then the date. So, to do the date, do
+[00:40:41] two curly brackets, do a little dollar
+[00:40:43] sign, uh, do
+[00:40:45] now. I think it needs to be case
+[00:40:47] sensitive actually. Yeah, that's it. So,
+[00:40:49] basically, client name and date. That's
+[00:40:50] all I care about. Cool. Next thing I
+[00:40:53] want to do is uh come down to Google
+[00:40:55] Docs one more time and then I want to
+[00:40:58] update a document and I want to do the
+[00:41:00] doc ID. So come over to the left and
+[00:41:02] grab that guy. Bring it over which is
+[00:41:04] cool. Uh decent. And now we get to
+[00:41:06] decide what we want to add in. So what
+[00:41:08] we want to add in first of all is going
+[00:41:09] to be the date. So where is the date? On
+[00:41:11] the left which we got. So look guys
+[00:41:12] check this out. This is an interesting
+[00:41:13] one. If I just grab the data which we
+[00:41:15] need right in the edit field section
+[00:41:16] comes up as red. Can I determine which
+[00:41:19] item to use? Execute node for more info.
+[00:41:21] So instead of that, enter these four
+[00:41:23] codes in instead. Edit fields first,
+[00:41:25] JSON from, and then it will understand
+[00:41:27] why. And I'll put these down below for
+[00:41:29] you again. So you can just grab and just
+[00:41:30] have a good time with it. Beautiful. So
+[00:41:32] now it's going to enter who it's from,
+[00:41:34] the subject, when it happened, and the
+[00:41:36] body. But of course, we kind of want the
+[00:41:37] subject, the date at the top, right? Um,
+[00:41:40] okay. Beautiful. And then we come off,
+[00:41:41] and we're fine. So what this has done,
+[00:41:43] this is creates a document. This updates
+[00:41:44] the document. Then what we need to do is
+[00:41:46] download the document. And this is where
+[00:41:48] it get starts to get really freaking
+[00:41:49] easy. So come down here to
+[00:41:51] drive Google Drive and I want to
+[00:41:54] download a file and then again what's
+[00:41:57] the list not from list by ID and I'm
+[00:42:00] just going to grab the document ID.
+[00:42:02] What's really cool is even that's not
+[00:42:03] happened yet it's allowing us to pull
+[00:42:04] through understand what that is and then
+[00:42:06] we come on to probably the most easiest
+[00:42:08] simplest part ever. You thought rag was
+[00:42:10] difficult guys this is absolutely
+[00:42:12] insane. So we come over we're going to
+[00:42:14] click on this little plus button. We're
+[00:42:15] going to go for pine cone vector store
+[00:42:17] like so. And we want to add documents to
+[00:42:21] a vector store. In other words, hey, we
+[00:42:22] want to give you some. Now, pick our
+[00:42:23] pine cone index. It's going to be coffee
+[00:42:25] that we created together. Remember,
+[00:42:26] embedding batch size. I wouldn't worry
+[00:42:27] too much about that. And if you are
+[00:42:28] curious about the embedding batch size,
+[00:42:30] but guys, it's basically if you're how
+[00:42:32] many documents you send at the same time
+[00:42:34] to limit the number that get updated at
+[00:42:35] the same point, which is cool. So, we
+[00:42:37] click off this guy. All right. Cool.
+[00:42:38] Then we've got the embedding, which is
+[00:42:40] cool. And we're going to use exactly
+[00:42:41] OpenAI for this. So, let's find on the
+[00:42:43] right hand side. Here we go. Beautiful.
+[00:42:45] Uh again, pick your credentials. Uh
+[00:42:47] let's go to credential 14 for me. Model
+[00:42:49] text remaining small. Beautiful. Okay.
+[00:42:51] Great. Cool. And then we come to
+[00:42:52] document and we want this guy here. We
+[00:42:55] want type of data is going to be binary.
+[00:42:57] It's a document. Loadal input data
+[00:42:58] automatically detect by mime type
+[00:43:00] basically with PF. It's a document.
+[00:43:02] Whatever it is, we'll grab it. We'll
+[00:43:03] have a rock and roll and good time.
+[00:43:05] Fantastic. And then text splitter. We
+[00:43:07] want I believe it's recursive character
+[00:43:09] text splitter. Chunk size is 1,00. chunk
+[00:43:12] overlap can be 100. In reality, you're
+[00:43:15] not going to have emails that long. But
+[00:43:17] basically, what it is is if it's too
+[00:43:20] long, in fact, with it being emails,
+[00:43:22] guys, it kind of needs to be complete by
+[00:43:25] itself, right? Because we need to know
+[00:43:27] who the client's referring to. So, in
+[00:43:29] this particular case, I'm actually going
+[00:43:31] to go high with the chunk and zero on
+[00:43:33] the overlap because I want the emails to
+[00:43:35] be assessed on their own merits. I don't
+[00:43:37] want half an email here and half an
+[00:43:38] email there. Uh that's my take and my
+[00:43:40] pulse on it. Cool. So now this is done.
+[00:43:43] I think we can actually test this whole
+[00:43:44] thing. Right. So let's do it. Now just
+[00:43:47] to confirm this is all working perfectly
+[00:43:49] fine. I come off this. I come to my
+[00:43:51] database. Check this out. I come to
+[00:43:53] indexes. I come to coffee. The the best
+[00:43:54] somebody said this is the best database
+[00:43:56] that's ever existed. I haven't said
+[00:43:57] that. I just hear that. So come down
+[00:43:59] here. We've got nothing. Zero zilch
+[00:44:01] nada. All right. Now let's actually give
+[00:44:04] this a full test end to end. Right. If I
+[00:44:06] come over to my
+[00:44:07] email, I'm going to create an email. I'm
+[00:44:09] going to send it to myself. I am going
+[00:44:12] to say, uh, grind
+[00:44:14] coffee. I'm going to say, "Hey, the
+[00:44:17] CEO
+[00:44:19] loves the
+[00:44:21] color
+[00:44:23] pink. He will
+[00:44:26] not tell his wife. Keep it secret."
+[00:44:30] Okay. Really top secret could, you know,
+[00:44:33] confidential information here. Bam. We
+[00:44:35] send that off. Why have I done that?
+[00:44:36] Because I'm going to ask my chatbot
+[00:44:38] about that. What his favorite color is.
+[00:44:39] Okay. So, we come back over. I mean,
+[00:44:41] this is really important stuff, right,
+[00:44:42] guys? So, we come over. First of all,
+[00:44:44] let's test to see if the thing is
+[00:44:45] created. If I come over to my drive now,
+[00:44:47] I've got this fake thing. So, the two
+[00:44:49] things I want to check. Number one is,
+[00:44:50] is it being added to an email? And
+[00:44:52] number two, can my AI access the
+[00:44:54] information that we created. So, we come
+[00:44:56] back over here. We're going to run this
+[00:44:57] workflow. Cool. Gmail's testing trigger.
+[00:44:59] We've added the fields. We check in air
+[00:45:01] table. We're formatting it. We've done
+[00:45:03] some intelligence. We've validated it's
+[00:45:04] worth saving. We've updated a document.
+[00:45:06] We've added to Google Drive. And now
+[00:45:07] it's been sent to our Pine Cone
+[00:45:08] database. Okay, let's check this out.
+[00:45:11] So, our database, Grind Coffee. Click on
+[00:45:14] this guy. What is inside it? Date. The
+[00:45:17] CEO loves the color pink. He will not
+[00:45:19] tell his wife. Keep a secret. Cool. So,
+[00:45:20] we've saved that now. That's really
+[00:45:21] freaking cool. Now, let's see if it's
+[00:45:23] made its way into our database. And it's
+[00:45:25] loading. Oh my gosh, guys. Look at this.
+[00:45:28] We've got it here. The CEO loves the
+[00:45:30] color pink. That is really freaking
+[00:45:31] cool. Now guys, if I come back, we
+[00:45:33] should chat with our agent, right? To
+[00:45:34] see if we can have that conversation.
+[00:45:36] So, if I open chat, let me just refresh
+[00:45:37] it and say, "Hey, dude. Hey, dude. Um,
+[00:45:41] what
+[00:45:42] is okay, the CEO of Grind's
+[00:45:46] favorite color?" Now, if this works,
+[00:45:48] guys, just think about what this means.
+[00:45:51] Any email you've ever gotten from a
+[00:45:52] client is automatically saved and I can
+[00:45:54] chat with it in alongside understanding
+[00:45:56] everything else like their website and
+[00:45:57] their meetings. So, let's see if this
+[00:45:59] works. We hit enter and see if he comes
+[00:46:00] back. All right, agent's checking. He's
+[00:46:02] checking his memory. He's pulling some
+[00:46:03] information. The se of grinds coffee
+[00:46:05] loves the color pink from an internal
+[00:46:07] Gmail in rag memory. And guys, this is
+[00:46:10] freaking unbelievable, guys. This is
+[00:46:12] insane. And we did it. We freaking done
+[00:46:14] it. And you know what's cool, guys? This
+[00:46:16] runs on autopilot. You don't have to
+[00:46:17] think about this. You have to touch it.
+[00:46:19] It won't won't ragify. I'm making words
+[00:46:21] up or maybe it exists anything we ever
+[00:46:23] need again. Now, look, I come this over.
+[00:46:25] Let me bring this up. I'm going to
+[00:46:26] change the color. And let's just make
+[00:46:28] sure we're labeling everything we're
+[00:46:29] doing here. Uh, come down. All right,
+[00:46:31] cool. This guy, we're going to call this
+[00:46:33] one
+[00:46:35] vectoriz. The opportunities with this
+[00:46:37] are in freaking
+[00:46:40] uh, and usually when I build stuff like
+[00:46:42] this, a lot of it's what people want.
+[00:46:43] It's some of it sometimes just stuff I
+[00:46:45] think is really freaking cool and that I
+[00:46:46] would like really use cuz it's very easy
+[00:46:49] just to do a little bit of this. But I I
+[00:46:50] always ask the question, well, so what,
+[00:46:52] right? Like, and what does this actually
+[00:46:54] do? And I I just thought a lot about the
+[00:46:56] clients I work with and people on the
+[00:46:58] channel and the community like what
+[00:46:59] would really be helpful and I think
+[00:47:01] something that could just be a complete
+[00:47:02] hands-off systems epic. Cool. We've done
+[00:47:04] the agent. We've done the memory. Now
+[00:47:06] we're going to do the meeting notes. Now
+[00:47:08] it's like there's a lot of different
+[00:47:10] options. So I'm not you know sponsored
+[00:47:11] by these guys. This is just what I use
+[00:47:13] personally. There could be better ones
+[00:47:14] out there. I'm just telling you what I
+[00:47:16] use which is Fireflies. Now Fireflies
+[00:47:18] another option I think is um Fathom.
+[00:47:20] Some people use Fathom. Um, now what we
+[00:47:23] want to happen here is we have an email.
+[00:47:25] We have our AI join the call. Sometimes
+[00:47:27] we call it Maverick in the community.
+[00:47:28] And what we want him to do is to listen.
+[00:47:30] He's going to take notes of the entire
+[00:47:32] call, the entire transcript of what
+[00:47:34] everything that's said. And what
+[00:47:35] Fireflies will do is send you an email
+[00:47:37] after. So, look dude, great conversation
+[00:47:39] by the way. Here's obviously talked
+[00:47:40] about. Here's the actions. And obviously
+[00:47:41] with that, we can do whatever you want
+[00:47:42] to. Now, I'd head over to Fireflies. I
+[00:47:45] would open the app or sign in. Right
+[00:47:46] guys, you land in this. I want you to
+[00:47:47] come left down to settings. I want you
+[00:47:49] to scroll down to developer settings and
+[00:47:52] you'll see an API key. You just copy it.
+[00:47:54] That's all we're going to do is freaking
+[00:47:56] copy it. Then we're going to come back
+[00:47:57] over to our freaking awesome big brain
+[00:48:00] scenario. Now what we're going to do is
+[00:48:01] we're going to do a HTTP request. Again,
+[00:48:02] let's come down here. HTTP request.
+[00:48:05] Going to come down here and we're going
+[00:48:06] to do a curl for this one, guys. So, as
+[00:48:08] always, the way that I usually do these
+[00:48:10] HTTP requests is I simply go over to
+[00:48:12] chatgpt and I say, "Hey,
+[00:48:15] using
+[00:48:16] fireflies documentation
+[00:48:19] uh create a curl request to pull down
+[00:48:24] all meeting
+[00:48:26] ids." Boom. And then I had let it search
+[00:48:30] fireflies. So, what we need to do with
+[00:48:32] Fireflies, guys, is we need to do step
+[00:48:34] one is to pull down the ids. And then
+[00:48:36] with those ids, we then download the
+[00:48:37] transcript as a step two. Okay, really
+[00:48:40] freaking cool. Nice. I like it. So all
+[00:48:42] we do is going to come down here and
+[00:48:43] copy, which is ace. And then we can come
+[00:48:45] back over to our freaking awesome
+[00:48:46] scenario, which is right here. Click on
+[00:48:48] our HTTP request, import curl, enter the
+[00:48:50] information, and then bam, we're there.
+[00:48:52] And the only thing you need to do then
+[00:48:53] is replace this with your API key. Now,
+[00:48:55] here's an interesting thing I found out
+[00:48:56] in testing this is it the API will pull
+[00:48:58] down basically the information as one
+[00:49:01] item with loads of data suboints. So, I
+[00:49:03] want to do is add the fudge module aka
+[00:49:05] the code module to take that as one item
+[00:49:07] and I just want it to split it out into
+[00:49:09] five different things. So, come down
+[00:49:11] here, type in code, and what I wanted to
+[00:49:14] do is take all that information and
+[00:49:16] basically just enter this in, and it'll
+[00:49:18] take it from being one input to five
+[00:49:20] inputs. There's obviously ways you can
+[00:49:21] do this. It's just way freaking easy.
+[00:49:23] Look, test step, I should get five
+[00:49:24] inputs. That hasn't won. Let me just
+[00:49:26] check out why that is. Uh, it's not
+[00:49:28] connected to a trigger node. Okay, cool.
+[00:49:30] So, this is something to do. I'm going
+[00:49:32] to cancel these guys. I'm going to
+[00:49:34] deactivate, bro. Going to come down and
+[00:49:36] click on plus. Type in add another
+[00:49:37] trigger. Type on trigger manually. Find
+[00:49:40] out where that trigger manually button
+[00:49:41] went. That would be my feedback to N10.
+[00:49:44] Like, if I'm zoomed in, bring it where
+[00:49:45] I'm looking, please. It'll save me about
+[00:49:48] 2 seconds a day. I'd really appreciate
+[00:49:49] it. Now, look. Test workflow. Okay,
+[00:49:51] cool. So, we're testing it. HTP request.
+[00:49:53] We got the code. Bam. Five items. That's
+[00:49:56] important because I want to vectorize
+[00:49:57] each of the transcripts individually. I
+[00:49:59] don't want to do it, you know, like
+[00:50:01] freaking by itself, right? You know what
+[00:50:02] I mean? Because now we need to do five
+[00:50:03] ones instead of one. Cool. The next
+[00:50:06] thing we need to do then is go forth and
+[00:50:07] we need to grab that transcript and
+[00:50:10] well, you'll see why in a second
+[00:50:11] actually, cuz we need to find out what
+[00:50:12] the transcripts are. So for that, we're
+[00:50:14] going to do another HTTP request.
+[00:50:16] Beautiful. Then we come back over. I'm
+[00:50:17] going to say, hey, cool. Now, do me one
+[00:50:21] to grab the
+[00:50:24] transcripts dot dot dot. Cool. We come
+[00:50:26] back over to African. Beautiful.
+[00:50:28] Beautiful scenario. Cool. Now, we're
+[00:50:30] going to do this just to grab all the
+[00:50:31] five transcripts that we need. And then
+[00:50:33] once again, guys, we copy. We come back.
+[00:50:35] You might be getting the drill by now
+[00:50:36] onto this scenario again. HTCP request.
+[00:50:38] Actually, what's good practice here is
+[00:50:40] to name it. Okay. So, let's just call
+[00:50:41] this one uh meeting IDs. All right. And
+[00:50:45] let's give that a little calendar
+[00:50:48] module. Cool. All right. And then we
+[00:50:50] should call this one transcripts because
+[00:50:52] you'd be surprised how quickly you
+[00:50:55] actually forget this stuff.
+[00:51:00] Um, okay. Cool. Beautiful. Click on
+[00:51:02] import curl. Enter the information. Bam.
+[00:51:05] The whole thing's there. And then we
+[00:51:06] just want to give our API key. Just
+[00:51:08] remember guys, it's bearer space than
+[00:51:10] your API key. And what I've done, guys,
+[00:51:12] with the transcripts, so actually pinned
+[00:51:13] it. So if I click into this, you can see
+[00:51:15] we've got the data there. So we can now
+[00:51:16] run the rest of the modules easily.
+[00:51:18] Okay, cool. So let's think about this.
+[00:51:19] Now we've got the meeting IDs, we got
+[00:51:20] the code, we got the transcripts. But
+[00:51:21] the problem with this is when you
+[00:51:23] actually look at the transcript, it's
+[00:51:24] like sentence by sentence. like Jack
+[00:51:26] said this, then Ben said this, then Jack
+[00:51:28] said this. So, what we want to do is to
+[00:51:29] extrapolate that into one gigantic
+[00:51:31] thing. So, to do that, what we're going
+[00:51:33] to do is give it some code. So, let me
+[00:51:34] just come over here real quick and
+[00:51:36] rename this guy. So, we're going to
+[00:51:37] rename this one um I just call this data
+[00:51:40] sortter. It's kind of not what it does,
+[00:51:42] but we can include that anyway, right?
+[00:51:43] Come down here. Data sortter. Uh,
+[00:51:46] beautiful. Cool. And then let's call
+[00:51:48] this one here full transcript, guys. So,
+[00:51:49] come down to code. Come to code. And
+[00:51:51] again, uh, oops. Just give it a name
+[00:51:53] real quick, which is extract
+[00:51:58] uh
+[00:52:00] full
+[00:52:01] transcript. Cool. Come over and let's do
+[00:52:04] a little coder thing cuz it's quite
+[00:52:05] codalicious. Cool. And essentially what
+[00:52:07] you're going to do is give the input
+[00:52:09] again to chat GPT. It'll give you some
+[00:52:10] fancy code to make sure you extract all
+[00:52:12] that stuff. A little tip by the way
+[00:52:14] guys, one of the things you want to do
+[00:52:15] is you want to kind of grab uh what
+[00:52:17] these variables are so that when Chat
+[00:52:20] GBT does it, it knows the things that
+[00:52:22] it's referencing. But just to save you
+[00:52:23] all the headache, this is the code that
+[00:52:25] you enter. And you click on test step.
+[00:52:26] And then we should get full transcripts
+[00:52:27] on the right hand side if it's done it
+[00:52:29] job properly. It hasn't yet. Oh, I think
+[00:52:32] this one fell because I did uh run once
+[00:52:34] for all items rather than uh one for
+[00:52:36] each item. Let me just double check that
+[00:52:38] real quick. Ah, okay. Beautiful. Now
+[00:52:39] we've got it. And I think we've got
+[00:52:41] everything we need in the table. which
+[00:52:43] is very cool. On a table, it should show
+[00:52:44] the full transcript. Give that a hot
+[00:52:46] second because there's lots of data.
+[00:52:47] Sometimes it can take a hot second.
+[00:52:49] Beautiful. All right. So, we've done it.
+[00:52:51] We are ready to rock and roll. I'm just
+[00:52:52] going to pin this data just to make our
+[00:52:54] lives a bazillion times easier.
+[00:52:55] Fantastic. And guys, the last steps are
+[00:52:58] exactly the same as a step before. So,
+[00:53:00] in good classic automation fashion, do
+[00:53:02] you know what J's going to do? He's
+[00:53:03] going to copy all this stuff. I'm going
+[00:53:05] to we're going to do control C and the
+[00:53:06] control V, baby. That's what we're going
+[00:53:08] to do right here. So, bring these over.
+[00:53:10] Okay. Fantastic. All right. Cool. So,
+[00:53:12] but what we need to do very quickly is
+[00:53:14] just to simply uh change one or two
+[00:53:16] things. So, first of all, create
+[00:53:17] document. We need to change some of the
+[00:53:19] info. So, if I come over to uh table,
+[00:53:23] first thing I want to do is give this a
+[00:53:25] second. Obviously, we do want the date
+[00:53:27] clearly. Uh cool. And I'm going to do is
+[00:53:29] come down dates. Come down instead of
+[00:53:31] now. Grab full transcript. Drop him in.
+[00:53:34] Cool. Is there anything else we'd kind
+[00:53:35] of want? Maybe like the date or
+[00:53:36] something.
+[00:53:38] Um maybe meeting IDs. There's some
+[00:53:41] interesting dates on that. I don't think
+[00:53:43] so. Actually, maybe what the uh data
+[00:53:45] scraper got for us on the first one
+[00:53:47] because it didn't really bring anything
+[00:53:48] back, did it? No. Mind you, we've got
+[00:53:51] the date so we know when we're grabbing
+[00:53:52] it, which I think is fine. So, I think
+[00:53:53] we'll be okay with that. Cool. So,
+[00:53:56] again, that is going to create the
+[00:53:57] document. Oh, the other thing we need to
+[00:53:58] do, by the way, is specify where that's
+[00:54:00] happening. We're going to do it in a
+[00:54:01] different location. So, you remember I
+[00:54:02] told you create that vectorize uh
+[00:54:04] transcripts thing. Well, that's exactly
+[00:54:05] what we're going to do here. So, look,
+[00:54:06] my drive vector meetings. We click off
+[00:54:09] uh again. Update document should be Oh,
+[00:54:13] this is an interesting one actually.
+[00:54:14] Hang on a second. Create document. No,
+[00:54:16] we need to change this. This is actually
+[00:54:18] going to be the title. So, the title
+[00:54:19] would be a bazillion. We'd probably
+[00:54:21] destroy Google if we did that. Okay,
+[00:54:23] hang on a second. Um, let me just get
+[00:54:25] rid of this guy. It'd be now. And
+[00:54:27] ideally, we just want the title, right?
+[00:54:29] So, if I come over to basically type in
+[00:54:31] now and then meeting title. Yeah, that
+[00:54:33] sounds really cool. Okay, sweet. Then
+[00:54:36] when we come over to update document,
+[00:54:38] this is where we JSON ID is the previous
+[00:54:40] one. Cool. And here we're just going to
+[00:54:42] have in that information. Cool.
+[00:54:45] Beautiful. Then we've got download the
+[00:54:47] file, which is exactly the same. And
+[00:54:48] then it should just get vectorized.
+[00:54:49] Brilliantly. So I think guys, the only
+[00:54:51] thing left to do is to freaking test
+[00:54:53] this one out, right? So let's come
+[00:54:54] forward forth and test workflow. Before
+[00:54:56] I do that, let me just show you there's
+[00:54:58] nothing in my Google Drive real quick,
+[00:55:00] which is over here. Okay, beautiful. So
+[00:55:02] there's nothing in my vectorzed
+[00:55:02] meetings. I've just deleted it from the
+[00:55:04] last time I did this. I come over to the
+[00:55:06] scenario. Let's run once. Let's see what
+[00:55:07] happens. Okay, this stuff is pinned.
+[00:55:09] That's cool. Anyway, Google Docs is
+[00:55:11] creating a document five times. This was
+[00:55:13] so important to make sure it happened
+[00:55:14] five times. So, they're all processed
+[00:55:16] individually. This is creating five
+[00:55:18] documents. How do we know that? Well, we
+[00:55:19] will see if I can have a quick cursory
+[00:55:21] glance. Bam. They're creating right now.
+[00:55:23] I come back over. It's updating it with
+[00:55:24] all of the information, all of the
+[00:55:26] beautiful information. It's now
+[00:55:27] downloading the file, which is cool. And
+[00:55:30] now it's all being added to our vector
+[00:55:32] database. Ah, one small thing we should
+[00:55:34] do actually to be fair with you is to um
+[00:55:39] change the not the embedding batch size.
+[00:55:41] I reckon we change the default. No, it's
+[00:55:43] uh there you go. Recursive current text
+[00:55:44] split. This one doesn't need to be so
+[00:55:46] big. This one I think can be 2,000 with
+[00:55:48] a chunk overlap
+[00:55:50] of 10% 200. Um yeah, I don't mind so
+[00:55:55] much it being like this. It's done five.
+[00:55:57] It's done five. It's done five. Guys,
+[00:55:58] let's go over now to our beautiful
+[00:56:00] thing. We have one hit. Well, do we have
+[00:56:03] one hit? Let's refresh it. We should
+[00:56:04] start to see all of this appeared now in
+[00:56:05] vector database, which is freaking
+[00:56:07] awesome. Okay, six hits. Bam. All there.
+[00:56:10] Now, if I head over to my Google Drive,
+[00:56:11] let's have a quick look. Where is that
+[00:56:13] right now? Do we see five? We should see
+[00:56:15] five appearing. Let me just refresh the
+[00:56:16] me refresh the folder. There we go.
+[00:56:18] That's looking promising to me. And then
+[00:56:21] we've got all the data. If I click in,
+[00:56:22] let's have a quick look. Okay, so when I
+[00:56:24] click in, I'm just getting the date. So,
+[00:56:25] that means it didn't bring over the
+[00:56:26] transcript. Let's just go back and fix
+[00:56:28] that real quick. Let's find out why.
+[00:56:30] Update document. Do we have the
+[00:56:33] information? Ah, the JSON full
+[00:56:34] transcript will not pull through. So,
+[00:56:36] let's just figure out where we need to
+[00:56:37] grab that from real quick. Ah, that's
+[00:56:38] it, guys. You've got to go to this one
+[00:56:40] and then click on full transcript. So, I
+[00:56:42] reckon we just do this one more time. We
+[00:56:44] do this one more time. Test workflow.
+[00:56:46] Meanwhile, let me come over to my Google
+[00:56:48] Drive and delete all these guys. Get
+[00:56:49] them out of here. Get them removed and
+[00:56:52] get them completely out of here. Come
+[00:56:53] back to the scenario. This is running.
+[00:56:55] Now, this is something that can
+[00:56:57] completely change it for your business.
+[00:56:58] But if you wanted to sell this, we've
+[00:57:00] had guys on the channel, my last
+[00:57:02] competitive intelligence automation, I
+[00:57:03] said for 297 a month. We had lots of
+[00:57:05] people in the community sell that. One
+[00:57:07] guy did I think now 80 different
+[00:57:09] businesses paying 297 a month for that.
+[00:57:11] This is something that genuinely why
+[00:57:13] wouldn't every business want to know
+[00:57:14] more about their clients and things?
+[00:57:16] Also, guys, this is something you could
+[00:57:18] give away for free as a kind of nice
+[00:57:19] lead magnet for your larger services.
+[00:57:21] Meaning, it's code for pretty flipping
+[00:57:23] epic. Now look, I come over to this
+[00:57:25] system here. Let's refresh it. And we
+[00:57:27] should have all five documents with all
+[00:57:28] the information into it. We know this if
+[00:57:30] we start to see information. So let's
+[00:57:31] have a quick look real quick. And dude,
+[00:57:32] there we go. Hey, broki. Yo yo, how's it
+[00:57:34] going, dude? It's going well, man. Long
+[00:57:35] day, but good. Kevin, we need to get you
+[00:57:37] shorter days. And just like guys, you
+[00:57:39] can see all of the information has
+[00:57:40] appeared in his documents. It's pages
+[00:57:42] long, guy. This one's eight pages, but
+[00:57:43] everything is there. And on top of that,
+[00:57:45] if we come over here to our beautiful
+[00:57:47] pine cone database, we should now have
+[00:57:49] 11 hits uh cuz it's all added in there.
+[00:57:52] 10 hits. Freaking insane. There you go.
+[00:57:54] Look, it's all there. It's all ready to
+[00:57:55] rock and roll. And of course, just to
+[00:57:57] finish off, let's give a quick
+[00:57:58] background. Beautiful. So, Vectoriz
+[00:57:59] meetings, email, the agent, the memory.
+[00:58:01] If you want the full blueprints and
+[00:58:03] support, you can check that out over in
+[00:58:04] the school community. We have a 100%
+[00:58:06] tech issue guarantee. So, any problem
+[00:58:08] that you've got with this stuff, we will
+[00:58:10] either fix it with you on a call, a
+[00:58:11] cobalt, or in the community so you get
+[00:58:13] that answered guaranteed. If you want to
+[00:58:15] know what things AI agencies are
+[00:58:16] selling, I give this a video here on
+[00:58:18] screen somewhere where I sold two for
+[00:58:20] $10,000. I show you what it is, how I
+[00:58:22] work through it, and how you can
+[00:58:23] replicate it yourself.

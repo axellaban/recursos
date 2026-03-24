@@ -1,0 +1,658 @@
+{
+    "name": "tweetify build together 🐥",
+    "flow": [
+        {
+            "id": 1,
+            "module": "paperform:submission",
+            "version": 1,
+            "parameters": {
+                "__IMTHOOK__": 594079
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTHOOK__": {
+                            "label": "My New Submission webhook",
+                            "data": {
+                                "editable": "false"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTHOOK__",
+                        "type": "hook:paperform",
+                        "label": "Webhook",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "onesaas:codepython",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 1545688
+            },
+            "mapper": {
+                "pythonCode": "from youtube_transcript_api import YouTubeTranscriptApi\n\n\ndef fetch_video_transcript(video_url):\n    # Extracting Video ID from URL\n    if \"youtu.be\" in video_url:\n        video_id = video_url.split('/')[-1]\n    else:\n        video_id = video_url.split('v=')[-1].split('&')[0]\n     \n    # Attempt to fetch the video transcript\n    try:\n        transcript_list = YouTubeTranscriptApi.get_transcript(video_id)\n        full_transcript = '\\n'.join([item['text'] for item in transcript_list])\n        return full_transcript\n    except Exception as e:\n        return f\"Failed to fetch transcript: {str(e)}\"\n\n\n# Main block to set the 'result' variable, as expected by the platform\nvideo_url = \"{{1.data.`3eofn`.value}}\"\nresult = fetch_video_transcript(video_url)"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My 0-CodeKit connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "onesaas2"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "otherInputParameters": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:onesaas2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "otherInputParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "pythonCode",
+                        "type": "text",
+                        "label": "Your Python Code",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "anthropic-claude:createAMessage",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1528134
+            },
+            "mapper": {
+                "model": "claude-3-opus-20240229",
+                "max_tokens": "4000",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": "Act as an informed twitter expert in the finance industry. You will be provided a youtube transcript. You will create  {{1.data.c090c.value}} an optimized Twitter post based on that content, incorporating Twitter posting best practices and using the structure outlined below: Prompt: Please read the following content and create an engaging tweet based on its main points, using the tweet best practices provided: 1. Keep the tweet concise, focusing on one clear message.2. Use the format Hook-Explain-Question-Hashtags3. Add a space after the hook after explain and before the hashtags4. Your output must be a maximum 240 characters maximum (including emojis)5. Keep it factual and clear to understand.6. Do not start a sentence with an emoji7. Incorporate a thought-provoking question at the end of the tweet8. Use 1-2 relevant hashtags to increase visibility but avoid overusing them.9. Do not include any links or recommend the original content10. Never start a sentence with an emoji11. Where there are statistics or data, you must reference that in the tweet12. Do not add any additional information13. For the avoidance of doubt, the message shall not exceed 220 characters14. You must not say ‘here is the suggested tweet’, you must only provide the tweet itself with no other supporting text15. You must output in html Think step-by-step. For example, Example text 1:According to the article, house sales in the UK are expected to increase in the coming months. The Royal Institution of Chartered Surveyors (Rics) reported a steady improvement in housing market sentiment in March, with rising demand from home buyers and an increase in the supply of available properties for the fourth consecutive month. 1 A net balance of 8% of property professionals saw an increase in inquiries from new buyers in March, the most positive result since February 2022. Additionally, a net balance of 13% reported a rise in new property listings for sale. 1 Over the next three months, a net balance of 13% of professionals expect house sales to increase, while over the next year, a balance of 46% are anticipating a jump in sales. 1 However, elevated mortgage rates are likely to limit the acceleration of housing market activity. The article notes that house prices appear to be stabilizing, with a net balance of 4% of professionals finding that prices fell in March. 1 The senior economist at Rics commented that the gradual recovery in demand, coupled with the prospect of interest rate cuts later in the year, should continue to support the housing market to some degree. 1 Example Tweet 1:Breaking: UK House prices expected to rise this quarter, according to RICS 📈 There has been a13% rise in property listings. What are you seeing in your market? 🤔 Example text 2:The industry needs to provide more properties to second-time buyers and downsizers, rather than overwhelmingly focusing on first-time buyers, estate agency platform eXp UK has claimed.The company said there are 9.4 million 29 to 40 year olds across the nation, accounting for just 25% of the total population aged 29 and above – the lowest proportion of all homebuyer demographics. Despite this, homes suitable for first-time buyers accounts for the largest proportion of housing market stock, with an estimated 5.4 million flats making up 23% of total housing stock, while some 6.6 million terraced homes make up 28% of all available housing.Adam Day, head of eXp UK, said: “There’s no denying that first-time buyers are at a severe disadvantage when it comes to climbing the property ladder but it’s clear that the government’s insistence on fuelling demand while neglecting supply is only making the issue worse. “At the same time, our research shows that when it comes to the issue of supply, the market is seriously out of kilter, with an oversupply of first-time buyer suitable homes to serve the smallest proportion of the homebuying population. “Yes, more must be done to incentivise downsizers in particular, as it will help unclog the higher rungs of the housing market, however, we need to deliver homes suitable to do so if we have a chance of rebalancing the market.” Second home buyers aged 41 to 64 form the most significant chunk of the nation’s homebuyers, accounting for 47% of the homebuying population aged 29 and above.At 28%, downsizers also account for a larger proportion of the homebuying population compared to first-time buyers. Example Tweet 2:The UK housing industry needs change 🤷 According to the estate agency platform eXp, Despite the 29-40 age group being the smallest homebuyer demographic at just 25%, the majority of the available housing stock consists of flats and terraced homes suitable for first-time buyers. Is it too difficult for first-time buyers at the moment? 🤔Example 3:Never start a tweet with an emoji:Great:  Affiliates, sponsorships, partnerships, or starting your own brand - 4 ways to monetize your audience as an influencer 📈   Which strategy would you choose? 🤔 #AudienceMonetization #InfluencerMarketingBad:  📈 Affiliates, sponsorships, partnerships, or starting your own brand - 4 ways to monetize your audience as an influencer.   Which strategy would you choose? 🤔 #AudienceMonetization #InfluencerMarketingUse the below transcript to create the {{1.data.c090c.value}} tweets:{{2.result}}"
+                            }
+                        ]
+                    }
+                ],
+                "metadata": {},
+                "temperature": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Anthropic Claude connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "anthropic-claude"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "claude-3-opus-20240229"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    },
+                                    "content": {
+                                        "mode": "chose",
+                                        "items": [
+                                            {
+                                                "type": {
+                                                    "mode": "chose",
+                                                    "label": "Text"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "stop_sequences": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:anthropic-claude",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "uinteger",
+                        "label": "Max Tokens",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true,
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": [
+                                        {
+                                            "label": "User",
+                                            "value": "user",
+                                            "nested": [
+                                                {
+                                                    "name": "content",
+                                                    "spec": {
+                                                        "spec": [
+                                                            {
+                                                                "help": "You can send image content blocks starting with Claude 3 models.",
+                                                                "name": "type",
+                                                                "type": "select",
+                                                                "label": "Type",
+                                                                "options": [
+                                                                    {
+                                                                        "label": "Text",
+                                                                        "value": "text",
+                                                                        "nested": [
+                                                                            {
+                                                                                "help": "Content of the message on behalf of the selected **Role** .",
+                                                                                "name": "text",
+                                                                                "type": "text",
+                                                                                "label": "Text",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "label": "Image",
+                                                                        "value": "image",
+                                                                        "nested": [
+                                                                            {
+                                                                                "name": "source",
+                                                                                "spec": [
+                                                                                    {
+                                                                                        "help": "File name, including the extension, for example, `image.jpg`.",
+                                                                                        "name": "filename",
+                                                                                        "type": "filename",
+                                                                                        "label": "Filename",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:name",
+                                                                                        "extension": [
+                                                                                            "jpeg",
+                                                                                            "jpg",
+                                                                                            "png",
+                                                                                            "gif",
+                                                                                            "webp"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "help": "Binary data of the image. For example, you can retrieve the binary data of your image using the **HTTP: Get a file** module.",
+                                                                                        "name": "data",
+                                                                                        "type": "buffer",
+                                                                                        "label": "Data",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:data"
+                                                                                    }
+                                                                                ],
+                                                                                "type": "collection",
+                                                                                "label": "Source",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "required": true
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Content"
+                                                    },
+                                                    "type": "array",
+                                                    "label": "Content",
+                                                    "labels": {
+                                                        "add": "Add content"
+                                                    },
+                                                    "required": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Assistant",
+                                            "value": "assistant",
+                                            "nested": [
+                                                {
+                                                    "help": "If the request ends with an assistant turn, then the response content will continue directly from that last turn.",
+                                                    "name": "content",
+                                                    "type": "text",
+                                                    "label": "Content",
+                                                    "required": true
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "system",
+                        "type": "text",
+                        "label": "System Prompt"
+                    },
+                    {
+                        "name": "metadata",
+                        "type": "collection",
+                        "label": "Metadata",
+                        "spec": [
+                            {
+                                "name": "user_id",
+                                "type": "text",
+                                "label": "User ID"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "stop_sequences",
+                        "type": "array",
+                        "label": "Stop Sequences",
+                        "spec": {
+                            "type": "text",
+                            "label": "Stop Sequence",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "uinteger",
+                        "label": "Top K"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "google-email:ActionCreateDraft",
+            "version": 2,
+            "parameters": {
+                "account": 1480479
+            },
+            "mapper": {
+                "folder": "[Gmail]/Drafts",
+                "to": [
+                    "{{1.data.`7h7j0`.value}}"
+                ],
+                "subject": "Hey, {{1.data.f1qs3.value}}, here are your {{1.data.c090c.value}} Viral Tweets 👀",
+                "html": "{{3.textResponse}}",
+                "attachments": [],
+                "cc": [],
+                "bcc": []
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "account": {
+                            "label": "My Google Restricted connection (jack@aiautomationswithjack.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "folder": {
+                            "mode": "chose",
+                            "path": [
+                                "Drafts",
+                                "Drafts"
+                            ]
+                        },
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        },
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "folder",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "to",
+                        "type": "array",
+                        "label": "To",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "html",
+                        "type": "text",
+                        "label": "Content"
+                    },
+                    {
+                        "name": "attachments",
+                        "type": "array",
+                        "label": "Attachments",
+                        "spec": [
+                            {
+                                "name": "fileName",
+                                "label": "File name",
+                                "type": "filename",
+                                "required": true,
+                                "semantic": "file:name"
+                            },
+                            {
+                                "name": "data",
+                                "label": "Data",
+                                "type": "buffer",
+                                "required": true,
+                                "semantic": "file:data"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "cc",
+                        "type": "array",
+                        "label": "Copy recipient",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "bcc",
+                        "type": "array",
+                        "label": "Blind copy recipient",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": [
+                [
+                    {
+                        "id": 5,
+                        "module": "openai-gpt-3:sendMessageToAssistant",
+                        "version": 1,
+                        "parameters": {
+                            "__IMTCONN__": 1425946
+                        },
+                        "mapper": {
+                            "message": "Act as an informed twitter expert in the finance industry. You will be provided a youtube transcript. You will create  {{1.data.c090c.value}} an optimized Twitter post based on that content, incorporating Twitter posting best practices and using the structure outlined below: Prompt: Please read the following content and create an engaging tweet based on its main points, using the tweet best practices provided: 1. Keep the tweet concise, focusing on one clear message.2. Use the format Hook-Explain-Question-Hashtags3. Add a space after the hook after explain and before the hashtags4. Your output must be a maximum 240 characters maximum (including emojis)5. Keep it factual and clear to understand.6. Do not start a sentence with an emoji7. Incorporate a thought-provoking question at the end of the tweet8. Use 1-2 relevant hashtags to increase visibility but avoid overusing them.9. Do not include any links or recommend the original content10. Never start a sentence with an emoji11. Where there are statistics or data, you must reference that in the tweet12. Do not add any additional information13. For the avoidance of doubt, the message shall not exceed 220 characters14. You must not say ‘here is the suggested tweet’, you must only provide the tweet itself with no other supporting text15. You must output in html Think step-by-step. For example, Example text 1:According to the article, house sales in the UK are expected to increase in the coming months. The Royal Institution of Chartered Surveyors (Rics) reported a steady improvement in housing market sentiment in March, with rising demand from home buyers and an increase in the supply of available properties for the fourth consecutive month. 1 A net balance of 8% of property professionals saw an increase in inquiries from new buyers in March, the most positive result since February 2022. Additionally, a net balance of 13% reported a rise in new property listings for sale. 1 Over the next three months, a net balance of 13% of professionals expect house sales to increase, while over the next year, a balance of 46% are anticipating a jump in sales. 1 However, elevated mortgage rates are likely to limit the acceleration of housing market activity. The article notes that house prices appear to be stabilizing, with a net balance of 4% of professionals finding that prices fell in March. 1 The senior economist at Rics commented that the gradual recovery in demand, coupled with the prospect of interest rate cuts later in the year, should continue to support the housing market to some degree. 1 Example Tweet 1:Breaking: UK House prices expected to rise this quarter, according to RICS 📈 There has been a13% rise in property listings. What are you seeing in your market? 🤔 Example text 2:The industry needs to provide more properties to second-time buyers and downsizers, rather than overwhelmingly focusing on first-time buyers, estate agency platform eXp UK has claimed.The company said there are 9.4 million 29 to 40 year olds across the nation, accounting for just 25% of the total population aged 29 and above – the lowest proportion of all homebuyer demographics. Despite this, homes suitable for first-time buyers accounts for the largest proportion of housing market stock, with an estimated 5.4 million flats making up 23% of total housing stock, while some 6.6 million terraced homes make up 28% of all available housing.Adam Day, head of eXp UK, said: “There’s no denying that first-time buyers are at a severe disadvantage when it comes to climbing the property ladder but it’s clear that the government’s insistence on fuelling demand while neglecting supply is only making the issue worse. “At the same time, our research shows that when it comes to the issue of supply, the market is seriously out of kilter, with an oversupply of first-time buyer suitable homes to serve the smallest proportion of the homebuying population. “Yes, more must be done to incentivise downsizers in particular, as it will help unclog the higher rungs of the housing market, however, we need to deliver homes suitable to do so if we have a chance of rebalancing the market.” Second home buyers aged 41 to 64 form the most significant chunk of the nation’s homebuyers, accounting for 47% of the homebuying population aged 29 and above.At 28%, downsizers also account for a larger proportion of the homebuying population compared to first-time buyers. Example Tweet 2:The UK housing industry needs change 🤷 According to the estate agency platform eXp, Despite the 29-40 age group being the smallest homebuyer demographic at just 25%, the majority of the available housing stock consists of flats and terraced homes suitable for first-time buyers. Is it too difficult for first-time buyers at the moment? 🤔Example 3:Never start a tweet with an emoji:Great:  Affiliates, sponsorships, partnerships, or starting your own brand - 4 ways to monetize your audience as an influencer 📈   Which strategy would you choose? 🤔 #AudienceMonetization #InfluencerMarketingBad:  📈 Affiliates, sponsorships, partnerships, or starting your own brand - 4 ways to monetize your audience as an influencer.   Which strategy would you choose? 🤔 #AudienceMonetization #InfluencerMarketingUse the below transcript to create the {{1.data.c090c.value}} tweets:{{2.result}}",
+                            "role": "user",
+                            "assistantId": "asst_pWGpr12Q8hBEIo5aFJtMabMr"
+                        },
+                        "metadata": {
+                            "designer": {
+                                "x": 0,
+                                "y": 306,
+                                "name": "Delete me or Claude 🤷‍♂️",
+                                "messages": [
+                                    {
+                                        "category": "reference",
+                                        "severity": "warning",
+                                        "message": "Referenced module 'Paperform - New Submission' [1] is not accessible."
+                                    },
+                                    {
+                                        "category": "reference",
+                                        "severity": "warning",
+                                        "message": "Referenced module '0CodeKit - Run Python Code' [2] is not accessible."
+                                    },
+                                    {
+                                        "category": "link",
+                                        "severity": "warning",
+                                        "message": "The module is not connected to the data flow."
+                                    }
+                                ]
+                            },
+                            "restore": {
+                                "parameters": {
+                                    "__IMTCONN__": {
+                                        "label": "My OpenAI connection",
+                                        "data": {
+                                            "scoped": "true",
+                                            "connection": "openai-gpt-3"
+                                        }
+                                    }
+                                },
+                                "expect": {
+                                    "assistantId": {
+                                        "mode": "chose",
+                                        "label": " (gpt-4o)"
+                                    },
+                                    "model": {
+                                        "mode": "chose",
+                                        "label": "Empty"
+                                    },
+                                    "fileIds": {
+                                        "mode": "chose"
+                                    },
+                                    "tools": {
+                                        "mode": "chose"
+                                    }
+                                }
+                            },
+                            "parameters": [
+                                {
+                                    "name": "__IMTCONN__",
+                                    "type": "account:openai-gpt-3",
+                                    "label": "Connection",
+                                    "required": true
+                                }
+                            ],
+                            "expect": [
+                                {
+                                    "name": "message",
+                                    "type": "text",
+                                    "label": "Message",
+                                    "required": true
+                                },
+                                {
+                                    "name": "role",
+                                    "type": "hidden",
+                                    "label": "Role"
+                                },
+                                {
+                                    "name": "assistantId",
+                                    "type": "select",
+                                    "label": "Assistant",
+                                    "required": true
+                                },
+                                {
+                                    "name": "threadId",
+                                    "type": "text",
+                                    "label": "Thread ID"
+                                },
+                                {
+                                    "name": "model",
+                                    "type": "select",
+                                    "label": "Model"
+                                },
+                                {
+                                    "name": "fileIds",
+                                    "type": "array",
+                                    "label": "File IDs",
+                                    "validate": {
+                                        "maxItems": 10
+                                    },
+                                    "spec": {
+                                        "type": "select",
+                                        "label": "File ID",
+                                        "options": [],
+                                        "name": "value",
+                                        "dynamic": true
+                                    }
+                                },
+                                {
+                                    "name": "tools",
+                                    "type": "select",
+                                    "label": "Tools",
+                                    "multiple": true,
+                                    "validate": {
+                                        "enum": [
+                                            "retrieval",
+                                            "code_interpreter"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "instructions",
+                                    "type": "text",
+                                    "label": "Instructions"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            ]
+        },
+        "zone": "eu2.make.com"
+    }
+}

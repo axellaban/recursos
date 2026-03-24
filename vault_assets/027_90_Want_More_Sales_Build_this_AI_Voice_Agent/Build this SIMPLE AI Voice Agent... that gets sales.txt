@@ -1,0 +1,1141 @@
+[00:00:00] If you contact a customer within 60
+[00:00:02] seconds, you can actually increase your
+[00:00:03] conversion rate by
+[00:00:05] 391%. So, in this video, I'm going to
+[00:00:07] show you a really powerful AI agent,
+[00:00:09] voice agent, that will take information
+[00:00:11] from your website or a lead magnet form
+[00:00:13] or whatever you want to. And then what
+[00:00:14] we're going to do is give them a call
+[00:00:16] within 30 seconds and we're going to
+[00:00:18] qualify them. We're going to see if they
+[00:00:19] should be A or B. And based on that
+[00:00:22] conversation, it's going to go ahead and
+[00:00:23] either book a meeting with them or point
+[00:00:26] them to different resources. basically
+[00:00:28] meaning that you can spend more of your
+[00:00:29] time growing your business without the
+[00:00:31] need for any human beings. And even if
+[00:00:33] you've never spelled the word voice
+[00:00:35] agent, if you follow this video along,
+[00:00:37] by the end of it, you're going to be
+[00:00:38] able to build these things and implement
+[00:00:39] them in your own business or potentially
+[00:00:41] sell them to somebody else. And I've
+[00:00:43] built this thing on meg.com with two
+[00:00:45] modules to make it as simple as humanly
+[00:00:48] possible. By the way, my name is Jack. I
+[00:00:50] run a sevenfigure AI automation
+[00:00:52] business. and I've helped thousands of
+[00:00:54] businesses now grow and scale using AI
+[00:00:56] in many different ways. And with that in
+[00:00:58] mind, guys, if you haven't already, grab
+[00:01:00] that coffee and let's dive straight in.
+[00:01:02] Now, to get us started, I kind of want
+[00:01:04] to show you briefly how this works. So,
+[00:01:06] I've got a website here. Really cool.
+[00:01:08] What we're going to do is we're going to
+[00:01:09] capture information from the customer.
+[00:01:11] Say, for example, we get a bit of an
+[00:01:12] email here, random information, and I'll
+[00:01:14] give it this phone number here as a
+[00:01:16] quick form instance. And then we'll say,
+[00:01:17] hey, our budget for this is £11,000.
+[00:01:20] Now, this is what happens, right? So, we
+[00:01:22] have this scenario here. I'm going to
+[00:01:24] unlink this for a moment and show you.
+[00:01:25] Basically, we have a form that exists
+[00:01:28] and just captures our lead contact
+[00:01:29] information, right? So, we hit submit on
+[00:01:31] this and basically what will happen is
+[00:01:33] we'll get all the data automatically
+[00:01:35] from that. As you can see down here,
+[00:01:36] it's got all of the beautiful data,
+[00:01:38] which is flipping awesome. Then, what
+[00:01:40] that will do is go ahead and trigger
+[00:01:41] this. So, look, if I run this module
+[00:01:43] only real quick, you'll see right now in
+[00:01:45] a moment, I'll get a call coming through
+[00:01:46] my phone. And there you go. Look at
+[00:01:48] this. I'm going to open it up. We'll see
+[00:01:49] what it is.
+[00:01:51] and I'm calling from Blue Light
+[00:01:52] Automation. I see you just filled out an
+[00:01:54] inquiry form on our website a moment ago
+[00:01:56] regarding our AI automation services.
+[00:01:58] Thank you so much for that. Bam. And
+[00:02:00] then it goes straight into an entire
+[00:02:02] conversation. And once that conversation
+[00:02:04] is finished, basically what happens is
+[00:02:06] it will send all the information to this
+[00:02:07] web hook and they will add it into a
+[00:02:10] Google sheet where you can see the name,
+[00:02:11] the appointment of the summary. I said
+[00:02:13] vibes. We can pretty much specify any
+[00:02:16] information that we want to and then the
+[00:02:18] whole thing is completely done for you
+[00:02:19] on autopilot. Now what he will also do
+[00:02:21] is book appointments and he'll check
+[00:02:22] your calendar and we can link upc.com to
+[00:02:25] do that. So it's very very very
+[00:02:26] impressive. You can do test examples
+[00:02:28] here for instance like if I come down
+[00:02:30] here and just show you briefly. This
+[00:02:32] might be even easier for you to hear. Hi
+[00:02:34] is this Jack? My name is Alex and I'm
+[00:02:36] calling from Blue Light Automations. I
+[00:02:38] see you just filled out an inquiry form
+[00:02:39] on our website a moment ago regarding
+[00:02:41] our AI automation services. Thank you so
+[00:02:44] much for that. I also noted the
+[00:02:45] potential budget you mentioned was
+[00:02:46] around £11,000. I just wanted to follow
+[00:02:49] up quickly while it's fresh in your
+[00:02:50] mind. Is now a good time for a brief
+[00:02:52] chat about what you're looking for?
+[00:02:54] Yeah, that sounds perfect, man. Thank
+[00:02:56] you.
+[00:02:58] Great. Thanks for taking the call, Jack.
+[00:02:59] To make sure I point you in the right
+[00:03:01] direction, could you tell me a bit more
+[00:03:03] about what specifically caught your
+[00:03:04] interest in AI automation for your
+[00:03:06] business? Yeah, I basically I want to
+[00:03:08] scale up my veterinary practice to
+[00:03:12] 5060,000 a month. I'd quite like to have
+[00:03:15] a call and just see if I can just figure
+[00:03:16] this all out if
+[00:03:19] possible. That's great to hear, Jack.
+[00:03:21] Given your interest in scaling your
+[00:03:23] veterinary practice and the potential
+[00:03:25] scope you've indicated, the best next
+[00:03:27] step is usually a complimentary
+[00:03:29] 15-minute discovery call with our
+[00:03:31] specialist, Jack. He can dive into your
+[00:03:33] specific needs, answer your questions in
+[00:03:35] detail, and discuss potential AI
+[00:03:38] solutions for your business. Would you
+[00:03:40] like to go ahead and book that call? You
+[00:03:41] know what? I think I would, actually.
+[00:03:45] Fantastic. I can check Jack's calendar
+[00:03:47] for you. Do you have a preference for a
+[00:03:49] particular day or time this week or next
+[00:03:50] for that 15-minute call? Ooh, yeah. How
+[00:03:53] about the 12th of May? Maybe 3 p.m.
+[00:03:55] Something like that.
+[00:03:58] Let me quickly check Jack's availability
+[00:04:00] for May 12th. around 3 p.m. for you.
+[00:04:02] Jack is available on May 12th from 3:00
+[00:04:04] p.m. to 4 p.m. Would you like to book
+[00:04:06] the call for 3:00 p.m. on that day? Yes,
+[00:04:08] let's do that.
+[00:04:10] Perfect. To book that in, I'll just
+[00:04:12] confirm a few details. Your first name
+[00:04:14] is Jack. Is that correct? Yes. And is
+[00:04:16] your best email address still
+[00:04:17] jackautomationswithjack.com?
+[00:04:20] That's correct. And then guys, once that
+[00:04:21] phone call is finished, you can come
+[00:04:23] down here and see when the appointment
+[00:04:24] was booked, the first name, detailed
+[00:04:26] call summary, and also vibes like
+[00:04:27] friendly professional and how much it
+[00:04:29] cost. So, with that in mind, let's
+[00:04:31] actually go through and build this one
+[00:04:32] together. Just some really quick value
+[00:04:34] for you as well if you haven't already.
+[00:04:35] Um, what I recommend, I'm going to pull
+[00:04:37] this up just so you can have a very
+[00:04:38] quick look at it. Right, Voice Agents. A
+[00:04:41] lot of that actually, guys, comes down
+[00:04:42] to the prompting. So, if I take a look
+[00:04:44] at this, I want to show you a couple of
+[00:04:45] things. I'm going to put some of this
+[00:04:45] down below for you as well. If I come
+[00:04:47] down to our um voice agent prompting
+[00:04:49] guide, uh, this one's really interesting
+[00:04:51] and also the ABCs of voice. I'll put
+[00:04:54] both these links down below so you can
+[00:04:55] grab it. But basically, this is like if
+[00:04:57] you had to give a tiled horrible voice,
+[00:04:59] I'd encourage you to have a good look
+[00:05:00] through this. I'll mention lots of stuff
+[00:05:02] in the call, but this is good. I spoke
+[00:05:03] to thousands of automators like what is
+[00:05:05] your absolute best advice for voice AI
+[00:05:07] and I just put in this guide for you to
+[00:05:08] grab. And especially we've got lot stuff
+[00:05:10] that we'll see on the voice agents, how
+[00:05:12] you actually prompt them, prompting
+[00:05:13] context, stuff like that. And I'll
+[00:05:15] explain that when we go into actually
+[00:05:16] building it out. So, if we're going to
+[00:05:18] build this then, let's actually start by
+[00:05:19] creating a brand new agent in retail.
+[00:05:22] And what I propose that we do is we
+[00:05:24] build this agent to scratch. we make
+[00:05:25] sure it's okay, it's working and then
+[00:05:27] we'll start to integrate it with uh
+[00:05:29] booking calendar appointments and then
+[00:05:31] we'll also integrate it with different
+[00:05:32] scenarios. So to do this we're going to
+[00:05:34] come down and click on create an agent
+[00:05:36] and for this one I think single prompt
+[00:05:38] agent is fine. So the um use case I have
+[00:05:40] envisaged here is basically somebody
+[00:05:42] does a uh contact form on our website
+[00:05:45] and then we're going to have somebody
+[00:05:46] call them and say hey thank you so much
+[00:05:49] we're on it. they're getting called in
+[00:05:50] 30 seconds makes you look amazing. And
+[00:05:52] we just confirm one or two of the
+[00:05:53] things. We can further qualify them
+[00:05:55] because remember it's always a trade-off
+[00:05:57] with like the amount of data you get and
+[00:05:59] actually like whether they fall out or
+[00:06:01] not. I mean I I had a business with
+[00:06:02] about 10,000 people coming through my
+[00:06:04] form every month. Small details matter.
+[00:06:06] So I come down to single prompt agent.
+[00:06:08] Obviously there's lots of things that we
+[00:06:09] can do. What we're going to do is just
+[00:06:10] start from blank. And I'd write this
+[00:06:13] your first voice agent. I would rather
+[00:06:15] you start off um basically you know with
+[00:06:17] something simple and build it out. And
+[00:06:18] I'll also cover some of the limitations
+[00:06:20] of this system uh in this video as we go
+[00:06:22] through. So make sure you stick around
+[00:06:23] to cover all that stuff. All right,
+[00:06:24] cool. So let's start off. First of all,
+[00:06:26] we're going to pick the brains. So we
+[00:06:27] got GPT 4.1. I'm just going to go with
+[00:06:29] GBT4. What is really cool about retail
+[00:06:31] AI and you'll see other options like
+[00:06:33] Vappy is it's very clear on the costs of
+[00:06:36] everything. And remember, you're always
+[00:06:38] treading off on a couple things, speed,
+[00:06:41] performance, and cost. Right? So you've
+[00:06:43] got these different um dynamics based on
+[00:06:45] where you want to be. And you think
+[00:06:46] about that in respect to your offer. So
+[00:06:48] we're going to go for GBT4 which is
+[00:06:50] going to charge us 5 cents a minute.
+[00:06:52] Beautiful. And the next thing we can do
+[00:06:54] then is pick a voice. Now what's really
+[00:06:56] cool is you can actually connect this
+[00:06:58] with 11 Labs. All these voices here. So
+[00:07:00] I chose Adrian but you can check them
+[00:07:01] out. For example, greetings. I'm
+[00:07:05] so you can go for that one if you'd like
+[00:07:07] to. Curator crafted to enrich your
+[00:07:09] experience with insightful assistance
+[00:07:11] and tailored advice. Do you want some
+[00:07:14] burgers?
+[00:07:15] This guy does not want to stop talking,
+[00:07:17] does he? That is hilarious. So, you can
+[00:07:19] add custom voices. You can bring in your
+[00:07:20] voice clone from 11 Labs, upload that,
+[00:07:22] and get it all beautiful and rocking,
+[00:07:23] ready to rock and roll. I am going to go
+[00:07:25] with Let's just go with someone random
+[00:07:27] like Amy, maybe. Good day. I'm Good Day.
+[00:07:30] Okay, maybe not Amy. Greetings. I'm
+[00:07:32] Billy, your AI custer. Hey, I'm Brian.
+[00:07:35] Ready to get going? Whatever you need.
+[00:07:37] We're going to go with Brian on right
+[00:07:40] now. Beautiful. Thank you, Brian. We
+[00:07:41] appreciate that. You come down to
+[00:07:43] collect some sections if you want to
+[00:07:44] temperature. Think about temperature is
+[00:07:46] like variability like the higher the
+[00:07:48] temperature the more kind of varied the
+[00:07:50] response you'll get to. If it's very um
+[00:07:53] think of it as like um deterministic you
+[00:07:56] would want lower temperature structured
+[00:07:58] output that'd be cool. High priority yes
+[00:08:00] okay cool. So we'd rather consistent
+[00:08:01] latency at high cost but I think it's
+[00:08:03] worth it in this instance. Beautiful.
+[00:08:05] Now, what's really cool is we can add in
+[00:08:07] or let's first of all add the prompt and
+[00:08:10] I'll show you how you do these dynamic
+[00:08:11] variables and what that looks like. So,
+[00:08:13] as a quick and beautiful for instance,
+[00:08:15] let me come back over here and show you
+[00:08:17] my example voice prompt for the guy that
+[00:08:19] we're going to pick. So, here we have
+[00:08:20] blue light automations. Now, you see
+[00:08:23] guys, what's really cool is that the
+[00:08:25] agent when it calls your customer will
+[00:08:27] know any information that we want to
+[00:08:29] give it, right? Because crucially what's
+[00:08:31] happening is if I can pull up this
+[00:08:33] website which I have subsequently
+[00:08:35] absolutely just lost haven't I? Uh where
+[00:08:38] is it right now? Okay I've pulled it up
+[00:08:39] here. Okay we ask any questions you want
+[00:08:41] to any variables you wanted to know
+[00:08:43] their financial position how much money
+[00:08:45] they can afford their name their their
+[00:08:47] phone number their email anything. I'd
+[00:08:49] always recommend that you bring over the
+[00:08:50] phone number and the email because then
+[00:08:53] the agent doesn't need to clarify that
+[00:08:54] on the conversation and some things are
+[00:08:56] more difficult to hear. So any
+[00:08:57] information you want the agent to know
+[00:08:59] capture before really important. Okay.
+[00:09:01] Now basically we come back over here.
+[00:09:02] What we're going to do if I come to our
+[00:09:05] beautiful example here is you can
+[00:09:07] specify these dynamic variables with
+[00:09:10] these two curly brackets and then the
+[00:09:12] variable you want and then two curly
+[00:09:14] brackets right and we define what that
+[00:09:15] is. So we're saying to the agent, hey
+[00:09:17] look, this is the information you're
+[00:09:18] going to get about the customer. We give
+[00:09:20] it an identity. So it's hey this is your
+[00:09:21] name. Uh this is your goal and this is
+[00:09:23] what I want you to do. So, for the
+[00:09:25] purposes of this, I've said, look, if
+[00:09:27] they have a budget that is $10,000 or
+[00:09:29] greater, you're going to do this. If
+[00:09:31] it's less than 10K, you're going to do
+[00:09:33] this. So, we've given it a really clear
+[00:09:35] purpose, and its job is to dig deeper
+[00:09:37] and find it. So, now we have the agent
+[00:09:39] closing down and vetting our people. So,
+[00:09:41] maybe you run an MMA gym. Maybe you're
+[00:09:42] thinking, look, can they actually afford
+[00:09:44] 90 quid a month? If not, completely
+[00:09:47] cool. This is what we recommend you do
+[00:09:49] instead. Okay. We go to things like
+[00:09:51] style guardrails. You incl professional,
+[00:09:53] embrace variety, engaging, productivity,
+[00:09:55] blah blah blah. Response guidelines, key
+[00:09:58] behaviors, uh the things wanted to do
+[00:10:00] for eligible callers, resource guided
+[00:10:02] callers, handling dissatisfaction, task
+[00:10:04] workflow, and this is really cool
+[00:10:06] actually. So, we can kind of like break
+[00:10:08] down uh the system of the conversation
+[00:10:10] and kind of give it some guardrails of
+[00:10:12] how we'd expect that to go. So, first
+[00:10:14] one is intro. Then, we're going to
+[00:10:15] qualify and pass determination. Like,
+[00:10:16] okay, we've welcomed them in, we said,
+[00:10:18] welcome to the JR universe. Now let's
+[00:10:20] find out where they are on the budget
+[00:10:21] scale and what they need to do. Um and
+[00:10:24] then again we can say if they hesitate
+[00:10:25] do this if they don't do this um which
+[00:10:28] path want to go down there. Step three
+[00:10:29] is to check availability if they're on a
+[00:10:31] high high budget pathway. Answer any
+[00:10:34] basic questions address further
+[00:10:36] questions concluding remarks quick
+[00:10:38] reference blah blah blah. And what you
+[00:10:40] can do by the way guys with this full
+[00:10:41] guide that I've got for you um you can
+[00:10:43] actually just give this to an AI. I mean
+[00:10:45] one of the things I built my community
+[00:10:46] is a GPT. So they can just like it'll
+[00:10:48] ask you questions and build it for you.
+[00:10:50] It's really cool. But also you can just
+[00:10:51] use this and say great build me a a
+[00:10:54] system off off the back of that which is
+[00:10:55] really cool and you'll end up with a
+[00:10:57] really beautiful thing like this. Okay
+[00:10:59] really detailed and really structured.
+[00:11:00] So what we're going to do is we are
+[00:11:02] going to oh we've got the function calls
+[00:11:03] as well which is really cool and we'll
+[00:11:05] build those out as well. So we're going
+[00:11:06] to come down here. We're going to copy
+[00:11:07] it all and then we're going to go over
+[00:11:08] to our beautiful and wonderful thing. Um
+[00:11:12] and by the way guys the first one you
+[00:11:13] build can just be anything you want it
+[00:11:15] right. Okay, cool. So, let's get down to
+[00:11:18] functions. So, functions are basically,
+[00:11:20] think about it as like things it can do.
+[00:11:23] So, one of the things it can do is end
+[00:11:25] the call, right? Ending the call. Like,
+[00:11:28] if you don't give it the ability to put
+[00:11:29] the phone down, it's just going to sit
+[00:11:31] there and be like, "Yep, okay." Like,
+[00:11:32] and now I'm waiting. But next thing we
+[00:11:34] want to be able to do, which is going to
+[00:11:35] be interesting here, is check calendar
+[00:11:37] availability. Right? That's really
+[00:11:39] important. So, hey, when you use
+[00:11:41] ability, check the calendar and provide
+[00:11:42] available slots. Cool. So, now we need
+[00:11:44] to sync up our calendars. So, for that,
+[00:11:46] we're going to go over to cal.com, which
+[00:11:48] is really, really cool. And which is
+[00:11:50] this guy here. Let's go over to the app.
+[00:11:52] Uh, and we log in like so. And you
+[00:11:53] basically connect it. And if you come
+[00:11:55] down, I believe it's to bookings, you
+[00:11:57] can connect your calendars together,
+[00:12:00] which is very, very, very cool. And then
+[00:12:01] you can add your Gmail, you can add
+[00:12:03] Outlook. When you set up this account,
+[00:12:05] it'll just say, "Hey, do you want to
+[00:12:06] connect this account, that account?"
+[00:12:08] Really, really straightforward. And then
+[00:12:09] what you're going to do is create the
+[00:12:11] kind of meeting that you want. I'm going
+[00:12:13] to say like a 15minute meeting. So I
+[00:12:14] click on this guy for example and then
+[00:12:16] what you'll find in the actual search
+[00:12:18] bar guys if I just copy and paste it
+[00:12:21] down here is a number. I want you to
+[00:12:23] come down and copy that number. Okay.
+[00:12:26] And then come back over to retail. And
+[00:12:28] here we've got cal.com API key event.
+[00:12:31] Enter event type ID. You're going to pop
+[00:12:33] that in there. And then time zone. Let's
+[00:12:35] just come off this. I think we can just
+[00:12:36] uh blank that out for a moment just for
+[00:12:38] the simplicity sake of a demo. Then API
+[00:12:40] key. We come back over to cal on the
+[00:12:42] left hand side. You are going to come
+[00:12:43] down. I believe it is to settings and
+[00:12:46] then API keys. Cool. And then I'm just
+[00:12:49] going to add a new API key for example.
+[00:12:50] Call this one random. I'm going to put
+[00:12:52] this one down for um 7 days. Click on
+[00:12:55] save. I'll delete it after the call
+[00:12:57] obviously. And then we copy this guy.
+[00:12:59] No, I don't trust people, but it's best
+[00:13:00] practice. We just don't want to keep
+[00:13:01] lucid lucy goosey API keys. All right.
+[00:13:03] We copy the API key. We come down here
+[00:13:05] and we enter it. And now we are ready to
+[00:13:08] rock and roll, which is decent. So we
+[00:13:09] click on save. Cool. So that has given
+[00:13:11] it the ability to check calendar
+[00:13:13] availability. So let's add a new one.
+[00:13:15] This one is going to be to book a
+[00:13:16] calendar. And once again, we do the same
+[00:13:18] thing. We're going to enter the API key.
+[00:13:20] Uh and then we're going to want to
+[00:13:23] uh get the event type ID one more time
+[00:13:25] to come back over uh to our beautiful
+[00:13:28] calendar real quick, which is this one.
+[00:13:31] And then we're going to capture this
+[00:13:33] number from the browser. Cool. And then
+[00:13:35] we'll come back over here. Enter the ID.
+[00:13:37] Perfect. And then we'll just uh get rid
+[00:13:39] of times there real quick and hit
+[00:13:41] save. Cool. So we've given it three
+[00:13:43] things. It can end the call. It can
+[00:13:44] check our calendar appointments. And it
+[00:13:46] can also book the appointments which is
+[00:13:47] really really cool. All right. Decent.
+[00:13:49] Now just to test that it can do that
+[00:13:50] effectively. Let's actually just
+[00:13:52] actually do that. Right. Cool. So first
+[00:13:54] of all let's just add some dynamic
+[00:13:55] variables by clicking on this guy here.
+[00:13:57] Enter variable name. Um so first one
+[00:13:59] we've got is first name. So we'll come
+[00:14:01] down here.
+[00:14:02] Whoops. Beautiful. All right. Cool. So
+[00:14:04] variable name is going to be uh test
+[00:14:07] value. We'll just say hey it's Jack
+[00:14:09] variable name. Then this one can be
+[00:14:11] something like I don't know email and it
+[00:14:14] will have uh jackai
+[00:14:17] autoamations. Actually you know what?
+[00:14:19] Let's just go for a different
+[00:14:20] email. It's
+[00:14:23] jackoutlook.com. Beautiful. And we'll
+[00:14:25] add a further one. This one is going to
+[00:14:26] be budget. And we'll say, uh, hey, my
+[00:14:30] budget is around
+[00:14:33] £11,000. Cool. And then finally, let's
+[00:14:35] just do phone
+[00:14:37] number. Actually, let's do number cuz we
+[00:14:40] want to be able to call maybe we want to
+[00:14:41] call them ourselves, right? And I'll
+[00:14:42] just put a random number in here. So
+[00:14:44] that'll be
+[00:14:47] zero. Okay, sweet. Really decent, right?
+[00:14:49] Now, what we can also do is give it a
+[00:14:51] knowledge base. Just bear in mind as you
+[00:14:52] add a knowledge base, that will increase
+[00:14:53] the latency. So you can actually see at
+[00:14:55] all times the latency. So this is uh in
+[00:14:57] milliseconds obviously. So it's around 1
+[00:15:00] second.97% 97% of a second to 1.3 230%
+[00:15:04] of a second. Cool. And then the cost is
+[00:15:05] going to be 20 cents a minute. Uh which
+[00:15:08] actually is really not that bad. So if
+[00:15:09] you kind of magnified that over like we
+[00:15:11] do some quick math real quick. Yeah. So
+[00:15:13] I've just done some quick math. That's
+[00:15:14] about 10 bucks a minute. 10 bucks an
+[00:15:16] hour for having a conversation which I
+[00:15:18] don't think is that bad at all really. I
+[00:15:19] think that's really really cool. So
+[00:15:20] let's get knowledge base. So you've got
+[00:15:22] a website right? What we can do? Add
+[00:15:23] knowledge base. Add new knowledge base.
+[00:15:25] Give this a second. And what we can do
+[00:15:27] is give it the URL for your business,
+[00:15:30] right? Enter knowledgebased name. This
+[00:15:31] could be hey my website. Beautiful
+[00:15:34] documents to add. You could add web
+[00:15:36] pages crawl and sync your website. I
+[00:15:38] could click on this guy and then we
+[00:15:39] enter URL. So if I just gave it
+[00:15:40] something random like I don't know um
+[00:15:42] let me just give it something really
+[00:15:44] simple and stupid like if I come over to
+[00:15:46] in fact I'm going to give it a coffee uh
+[00:15:49] like come down here grind.co.uk
+[00:15:53] UK https. Oh my gosh, cannot forget the
+[00:15:57] s. Right, click save. This is cool. And
+[00:15:59] it's going to select through the site
+[00:16:00] map. It's actually really cool how it
+[00:16:01] does this. It kind of solves a lot of
+[00:16:03] the scraping thing. You can obviously
+[00:16:04] upload documents. Just one, just think
+[00:16:07] about when you're building these voice
+[00:16:08] agents if it's necessary or required to
+[00:16:10] do that. And often cases doesn't really
+[00:16:12] need access to your entire website
+[00:16:14] unless it's like I don't know like
+[00:16:15] interviewing you or something crazy like
+[00:16:17] that. Okay, beautiful. So, it's found
+[00:16:18] all this stuff and you can kind of
+[00:16:19] select the bits you want or take all
+[00:16:21] 1,24 pages. We're not interested in
+[00:16:23] that, but if you wanted to, you could
+[00:16:24] just grab that. Uh, alternatively, of
+[00:16:26] course, you can just upload files or add
+[00:16:28] text, whatever you like to, and that
+[00:16:29] gave it a really cool knowledge base
+[00:16:30] that you can rock and roll with, which I
+[00:16:31] think is really cool, right? So, let's
+[00:16:33] come back over then to our agent, which
+[00:16:35] has come along very, very nicely. Of
+[00:16:37] course, let's call him, and we'll call
+[00:16:38] this guy BTG, which is build together GF
+[00:16:42] with a lot of Fs. And I think we should
+[00:16:44] give him a little bit of a fire emoji
+[00:16:46] for good measure.
+[00:16:47] All right, this is cool. Oh my gosh.
+[00:16:49] Okay, there you go. He's okay. He's
+[00:16:50] having a good time. Cool. And then we've
+[00:16:52] got speech settings down there. So,
+[00:16:53] background noise. I would recommend that
+[00:16:54] you do have something. I've had a lot of
+[00:16:56] people recommend different things on
+[00:16:57] here. I quite Do we want to call from
+[00:16:58] mountains or call center? I think
+[00:17:01] probably coffee shop is a better feel
+[00:17:02] and vibe to it. Uh, and then you can
+[00:17:04] play around and have a good amount of
+[00:17:05] time for this. We'll optimize for
+[00:17:07] accuracy as opposed to speed. Um, so
+[00:17:09] like dn noising mode, filter out
+[00:17:11] unwanted background noise of speech.
+[00:17:12] Remove noise is fine. Cool. Beautiful.
+[00:17:14] And you got booster keywords. So, this
+[00:17:15] could be things that you want it to say
+[00:17:18] particularly or improve its vocabulary
+[00:17:19] by really double clicking into that sort
+[00:17:21] of stuff. That's okay. Beautiful. Now,
+[00:17:23] if I take a look at call settings here,
+[00:17:25] the key one I'd really want to double
+[00:17:26] click into is max call duration. Um, we
+[00:17:28] don't really need this to be any longer
+[00:17:30] than, you know, maybe 10 minutes. Maybe
+[00:17:32] he's very chatty, but if I just come up
+[00:17:33] to 10, yeah, set this as you want. So,
+[00:17:34] bear in mind you you've got the cost and
+[00:17:36] that sort of stuff and calls on silence.
+[00:17:38] Um, yeah, let's just not make that
+[00:17:40] massively long. That doesn't need to be
+[00:17:42] huge, right? I think if it's nothing
+[00:17:43] after like I don't know 15 seconds we
+[00:17:45] can probably hang out. Cool. Beautiful
+[00:17:47] ring duration, how long you want to
+[00:17:48] call, loads of stuff like that. Then
+[00:17:50] we've got beautiful post call analysis
+[00:17:52] which is really handy. And for that come
+[00:17:54] down to the add button and let's just
+[00:17:55] add some stuff that we want. So this is
+[00:17:57] kind of like everything you'd write
+[00:17:58] there. So if I just said call uh
+[00:18:01] summary a summary of the entire call,
+[00:18:05] please. Cool. All right. Sweet. What
+[00:18:07] else do we want to know? I would say the
+[00:18:08] other information we want is probably
+[00:18:09] going to be something like the user's
+[00:18:15] email. Uh looking for text call
+[00:18:20] booked. Uh you can't do
+[00:18:23] cabs. Was a uh diary appointment made
+[00:18:26] and if so
+[00:18:29] when? Cool. And then we can give a good
+[00:18:31] format example. Uh I don't know. Let's
+[00:18:33] just say like 19th of December. And then
+[00:18:37] in brackets we could open up like
+[00:18:42] um cool. All right. Sweet. Loads of
+[00:18:45] stuff like that. And then I really want
+[00:18:46] to add in vibes as well because
+[00:18:51] um just give me a general description of
+[00:18:52] vibes of the call. Were they positive,
+[00:18:53] negative, chill? Um happy with the AI,
+[00:18:58] whatever. Cool. Uh, I want vibes in
+[00:19:00] there because I think it'd be really
+[00:19:01] decent to get a sense of, you know, like
+[00:19:04] what are we walking into when we
+[00:19:05] actually have a good conversation with
+[00:19:06] this guy. All right. Sweet. Really,
+[00:19:08] really cool. It's currently fallback
+[00:19:09] settings. Um, again, you know, you can,
+[00:19:11] if you've got certain things from a
+[00:19:12] sensitive data perspective, you can play
+[00:19:14] around with different uh ideas there,
+[00:19:15] which is cool. And then web hook
+[00:19:17] settings. Cool. So, what we want then,
+[00:19:19] uh, this is going to be an outbound
+[00:19:20] agent. And this is going to be how we
+[00:19:22] actually get it to make calls. So, what
+[00:19:25] I'm going to do here is you're going to
+[00:19:26] come over and I'm just going to delete
+[00:19:28] these guys real quick. Let me get these
+[00:19:30] guys out of here. And we're going to
+[00:19:32] create a uh web hook. Okay. In fact, let
+[00:19:35] me come in this one. Delete these guys.
+[00:19:37] All right. Get them out of here.
+[00:19:38] Beautiful. Get those guys deleted. Cool.
+[00:19:41] Let's come down to custom web hook,
+[00:19:42] which is cool. We'll add new hook. This
+[00:19:44] one will be uh uh let's just say this
+[00:19:47] one is like a cool
+[00:19:51] data. Beautiful. And then just copy this
+[00:19:54] guy right here. Beautiful. Come back
+[00:19:56] over to retail and then come down and
+[00:19:57] post it here. And this will basically be
+[00:19:59] where he sends the kind of information
+[00:20:00] which is really cool. Uh, beautiful. So
+[00:20:03] I think we can save this. I think we
+[00:20:05] don't want the user finish yet. Let's do
+[00:20:07] AI begins with dynamic message. Cool.
+[00:20:09] And then we click on save. Cool.
+[00:20:11] Beautiful. I think we are ready to give
+[00:20:13] this guy a test. Right. So let's come
+[00:20:14] down. And what is really cool about
+[00:20:16] retail is like how you could actually
+[00:20:17] test all this stuff here. I'm just going
+[00:20:19] to disable my horsey for this website.
+[00:20:21] Thank you very much. So now let's just
+[00:20:22] test that this actually works for us
+[00:20:23] here. Okay. So let's come down and we'll
+[00:20:26] say, "Hey there, my name is Jeff. I have
+[00:20:28] a budget of
+[00:20:30] $62,000. I would like to book an
+[00:20:32] appointment with Jack at 300 p.m. on the
+[00:20:34] 15th of May. Is he free
+[00:20:38] then?" Beautiful. Bam. We send it off
+[00:20:40] and let's just see what we get back with
+[00:20:41] in the test. This is the really cool
+[00:20:43] thing, guys, is that you can actually
+[00:20:44] test and have those things. What's
+[00:20:46] really cool is you can come down, it'll
+[00:20:48] tell you checks and tells you the tool
+[00:20:50] results. So, look, it says, "Hey,
+[00:20:51] availability blah blah blah.
+[00:20:52] Availability range from 3 to 4 p.m.
+[00:20:54] That's really cool." So, I'll say, uh,
+[00:20:56] my email uh is Ben at Ben, I don't know,
+[00:21:03] Benatlog.com. Let's book the
+[00:21:05] appointment. Let's book the
+[00:21:07] appointment. Cool. I'd always recommend
+[00:21:09] troubleshooting with like the text
+[00:21:11] conversations on the right hand side
+[00:21:12] before you go ahead and put it into
+[00:21:13] production. It's just way quicker.
+[00:21:15] Beautiful. I mean, look at this, guys.
+[00:21:17] It's gone to book the call, which is
+[00:21:19] decent. And the tool result successful.
+[00:21:21] Okay, cool. This is fantastic. Just like
+[00:21:23] that, it's booked the appointment in.
+[00:21:24] Obviously, I sped from that. But all
+[00:21:26] we're trying to test is the fact that I
+[00:21:28] actually can book appointments and check
+[00:21:29] appointments. And guys, that I've got a
+[00:21:31] 15-minute appointment. It's been
+[00:21:32] successfully calendarized with
+[00:21:34] banalog.com. Do you know who banalog.com
+[00:21:36] is? I certainly don't, but we've got a
+[00:21:38] call with him on Thursday at 4 p.m. I
+[00:21:40] just realized this is my alternate
+[00:21:41] inbox, actually. So, it's quite handy
+[00:21:42] that like I'm actually going to be
+[00:21:44] giving out my legit email to these
+[00:21:45] random uh individuals. So just like that
+[00:21:47] guys, we have successfully created. Now
+[00:21:49] I think this is really cool. So what we
+[00:21:51] can also do is test audio to see what it
+[00:21:52] sounds like. Do we like the Do we like
+[00:21:54] his vibe? Hi. Is this name? My name is
+[00:21:57] Alex and I'm calling from Blue Light
+[00:21:58] Automations. I see you just filled out
+[00:22:00] an inquiry form on our website a moment
+[00:22:02] ago. So I'm not a big fan of his voice.
+[00:22:04] I'm just going to change that real
+[00:22:05] quick. Let's go back to Adrian. Hi, I'm
+[00:22:07] Adrien, your friendly virtual helper.
+[00:22:09] Always here to make your daily easier
+[00:22:11] and stressfree. What would you like
+[00:22:13] assistance with today? Okay, there we
+[00:22:14] go. Hi. This guy really has got a lot to
+[00:22:16] say, doesn't he? Okay, cool. So, guys,
+[00:22:18] what we've done successfully now is
+[00:22:19] create a voice agent, which is really
+[00:22:20] cool. What we now need to do is give it
+[00:22:22] a phone number, right? Because that's
+[00:22:23] done. So, let's publish this guy.
+[00:22:25] Actually, before we do that, let me just
+[00:22:27] publish it. I'll call this one uh Jeffy
+[00:22:30] boy. Uh Jeffy boy. Okay, beautiful. And
+[00:22:33] outbound phone number. Okay, now don't
+[00:22:34] worry, you wouldn't see this
+[00:22:36] yet. Okay, I'm just going to uncclick
+[00:22:38] this for a moment and publish it. Okay,
+[00:22:40] beautiful. Now, what we need to do,
+[00:22:42] guys, is get a phone number. So, phone
+[00:22:44] numbers. Now, here are some of the
+[00:22:45] limitations of uh retail, right? And
+[00:22:48] that's that it basically works as US to
+[00:22:50] US unless you go over to Twilio and you
+[00:22:53] get a UK number. And if you want to do
+[00:22:56] outbound calls with Twilio, you've
+[00:22:58] basically got to create something on
+[00:22:59] there like upload an ID, ask some
+[00:23:01] questions, they just verify it. Now,
+[00:23:03] when you want to add a phone number to
+[00:23:05] retail, one of the things that you need
+[00:23:07] to do is verify that you are who you say
+[00:23:09] you are. I I wonder if that's because
+[00:23:11] they don't want some person from, you
+[00:23:13] know, some crazy town just making loads
+[00:23:15] of random calls and crushing it. So,
+[00:23:16] what we're going to do, you'll find you
+[00:23:18] have like 10 bucks, free credits. Really
+[00:23:20] freaking cool. So, you come down, you're
+[00:23:21] going to add a phone number and you can
+[00:23:23] buy a new number. And it is as simple as
+[00:23:25] picking the Eric code if you want to.
+[00:23:26] Twilio of 10x Twilio is fine. Click
+[00:23:29] save. And then a number will appear for
+[00:23:31] you right here. And then what you can do
+[00:23:33] is just basically u attach it to any of
+[00:23:36] the voice agents that you want to. Now,
+[00:23:37] I've already attached a number to this
+[00:23:40] guy. So, what I'm actually going to do,
+[00:23:41] guys, is going to come down here. Um,
+[00:23:43] I'm going to be pretty savage here. I'm
+[00:23:44] going to delete this guy. I'm getting
+[00:23:46] him out of there. He's gone. We have no
+[00:23:48] more interest in. He's out of here. He's
+[00:23:49] finished. Okay, beautiful. So,
+[00:23:51] basically, and if you think about if
+[00:23:52] you're selling this agent, different
+[00:23:54] businesses. You just build up loads of
+[00:23:56] different agents, all different things.
+[00:23:57] The setup is remarkably simple. So, we
+[00:23:59] come to agents and now we're going to do
+[00:24:00] is give an outbound call for outbound
+[00:24:02] phone number. So, let's come down here
+[00:24:04] to publish and hits an outbound phone
+[00:24:07] number. And then we should be able to
+[00:24:08] describe and pick one, a free available
+[00:24:09] one, which is there. And we'll call this
+[00:24:11] one uh
+[00:24:13] Jeffy boy. Beautiful. And then click
+[00:24:15] publish. Publish. And then we are done.
+[00:24:19] We're fine. We come back over now. He's
+[00:24:21] got a phone number. So, what I suggest
+[00:24:23] we do is we actually then want to
+[00:24:25] connect this to make.com to our form and
+[00:24:27] get him to give us a call and have a
+[00:24:29] conversation. Okay. Beautiful. So, the
+[00:24:30] way to test this is I built a website on
+[00:24:32] car.co.
+[00:24:34] It's very very cool. It's like 49 bucks
+[00:24:37] for 20 50 websites or something crazy
+[00:24:40] for the year. It's wild. But basically,
+[00:24:41] you can pull this up and just build
+[00:24:43] something to get started. And you can
+[00:24:44] build these kind of integrated forms on
+[00:24:46] paper form bafflingly easily. Like I've
+[00:24:49] got some information here. Very very
+[00:24:50] cool. And then you click on share and
+[00:24:52] you go to embed. And then you just copy
+[00:24:55] this code here like C. And then you go
+[00:24:57] over to your website of choice. You can
+[00:24:58] just embed the code and then it will
+[00:25:00] like appear. And obviously like I
+[00:25:01] haven't done a lot with the format and I
+[00:25:02] just kind of built this as a for
+[00:25:04] instance. Okay. Now what we want to do
+[00:25:06] then is connect the information that we
+[00:25:08] get with the actual automation. So if I
+[00:25:12] then come remember we've got two
+[00:25:13] scenarios, right? One is this is going
+[00:25:15] to take the data and the first one's
+[00:25:16] actually going to trigger the call. So
+[00:25:18] what we want to do is come down here to
+[00:25:19] paper form or whatever the thing is it's
+[00:25:22] triggering it for you. Add a hog. Uh
+[00:25:24] come over here for a second. Choose the
+[00:25:26] form and we want the AI voice agent
+[00:25:27] form. We click okay. We click save and
+[00:25:30] then if I run this one once as a quick
+[00:25:32] for instance and then I come over to our
+[00:25:34] beautiful scenario here. Going to hit
+[00:25:36] phone number and we'll just copy this
+[00:25:38] guy for argument sake. Decent. And then
+[00:25:41] what's your budget for this? Hey, I have
+[00:25:42] a budget of 11,000. We hit submit. We
+[00:25:45] come back over to scenario and just like
+[00:25:46] that guys, we've got all of our
+[00:25:48] beautiful data. How cool is that? Super
+[00:25:50] simple, right? But you think that's
+[00:25:52] simple? Wait till you see this next
+[00:25:53] step. I come down to plus and go to
+[00:25:55] retail. So, no need to fuff around with
+[00:25:58] like HTTP requests. We're just going to
+[00:26:00] do something really, really, really
+[00:26:01] freaking simple. And that is going to be
+[00:26:03] the beautiful wonderful uh where is it
+[00:26:06] right now? It's going to be make make a
+[00:26:08] call. Create a phone call. That's it.
+[00:26:11] That's literally all you do. You'll need
+[00:26:13] to connect your API key. To do that,
+[00:26:15] come over to retail. If you come down
+[00:26:16] here to API keys here, you can actually
+[00:26:19] just copy this. Bam. And then you just
+[00:26:21] input it into your make scenario. Uh,
+[00:26:23] and it's like he's ready to go. So, we
+[00:26:25] got the phone number. This is the number
+[00:26:26] from which it's calling. So for that,
+[00:26:28] we're going to come back over to our
+[00:26:30] phone numbers real quick. This is always
+[00:26:32] going to be the same thing. So just
+[00:26:34] simply copy this, the one underneath it.
+[00:26:36] Come back over, put that there. And then
+[00:26:38] the two number is the number we're going
+[00:26:40] to call, right? It's going to be number
+[00:26:41] from the individual. So if I come over,
+[00:26:43] let's have a quick look. And it's going
+[00:26:44] to be this guy. Okay. Actually, it will
+[00:26:46] be the uh one below. It will be the
+[00:26:48] value. And then you've got the override
+[00:26:50] agent ID. To get that guys, when you
+[00:26:53] open up your agent like here, click on
+[00:26:56] BTG Jeff, you'll see loads of stuff in
+[00:26:58] the browser extension. You can't see it,
+[00:27:00] so I'll paste it here. This is what it
+[00:27:01] is. You copy all of it from agent. Okay,
+[00:27:04] X or whatever. That's it. Okay, dead
+[00:27:06] simple. Come back over. That's your
+[00:27:08] override agent ID. Now, crucially, we're
+[00:27:10] going to add some variables. So, add
+[00:27:12] variable. Now, the key is just going to
+[00:27:14] be really simply the thing. So, if I
+[00:27:16] come down and I'm going to say, hey, key
+[00:27:18] for email. And then the email is this.
+[00:27:21] Beautiful. Add variable uh and the key
+[00:27:23] is going to be name and the value will
+[00:27:26] be
+[00:27:28] uh
+[00:27:29] Jack. Cool. And then add variable. Key
+[00:27:32] is going to be uh we'll just say like
+[00:27:34] what did we actually say for the
+[00:27:35] variables so I can check this actually
+[00:27:37] first name. Okay. Actually better to use
+[00:27:39] the exact same frame
+[00:27:42] here. I'm going to hardcode this guys.
+[00:27:44] But in reality you don't need to. Okay.
+[00:27:46] So I put jack email and just put uh
+[00:27:52] jackout.com. And then finally, what is
+[00:27:55] the third variable we had? Budget. Okay,
+[00:28:01] cool. Cool. And then budget can be, hey,
+[00:28:04] I have a budget of £11,000 a month for
+[00:28:08] this. Cool. In reality, guys, you just
+[00:28:10] select the thing here. I'm just doing it
+[00:28:12] so we don't need to re-trigger the paper
+[00:28:14] form every time. And then we click save.
+[00:28:16] Now what's really cool is I can actually
+[00:28:18] run this now and he'll give me a call
+[00:28:20] which is really epic. But before we do
+[00:28:22] that, let's set up the second part of
+[00:28:23] the scenario here. And that's with the
+[00:28:25] call data. Right? So what I want to do
+[00:28:27] is actually take this and then I want to
+[00:28:29] input into something. So we could do air
+[00:28:31] table. We could do many things. Just for
+[00:28:32] simplicity, we'll do a Google Sheets.
+[00:28:34] Come to Google Sheets. We will do uh add
+[00:28:36] a row. Uh pick a spreadsheet. Just
+[00:28:39] create a really simple one. I've got
+[00:28:40] here which is this one. Name,
+[00:28:42] appointment, summary, vibes. Come back
+[00:28:44] over here. Choose the spreadsheet ID and
+[00:28:47] let's go for what did we call this guy?
+[00:28:49] Actually, we called it calls bucked.
+[00:28:51] Okay,
+[00:28:53] cool. Nice. And by the way, speaking to
+[00:28:55] people in my like accelerator and stuff
+[00:28:57] like these voice AIs are selling like
+[00:29:00] hot cakes. I know several people
+[00:29:01] actually now, several people that are
+[00:29:03] absolutely crushing it with voice AI and
+[00:29:05] it's probably one of those things that's
+[00:29:07] got high perceived complexity, quite
+[00:29:09] easy to execute, so to speak. So now we
+[00:29:11] got name. Now, we don't have the
+[00:29:12] variables to pull over yet. So, that's
+[00:29:14] absolutely fine. So, I'm just going to
+[00:29:15] unlink this. Um, and we are going to
+[00:29:17] give this a quick test and then we can
+[00:29:18] come all the way through. So, if I come
+[00:29:19] over here, I right click, run this
+[00:29:21] module only. And then we got the value.
+[00:29:23] I didn't need to add one more thing in,
+[00:29:24] right, which is the two numbers. So, let
+[00:29:26] me just get the number that we're
+[00:29:28] calling for the purposes of this
+[00:29:28] demonstration. And it is this guy here.
+[00:29:31] Beautiful. Come back over. All right.
+[00:29:33] Cool. Come back over and let's just give
+[00:29:35] this guy a quick run test. Enter the
+[00:29:37] value. Beautiful. Hit okay. And now he
+[00:29:39] has given us a fantastic call. And we'll
+[00:29:41] see will my screen start kicking off.
+[00:29:43] Beautiful. Here we go. Let's have a chat
+[00:29:45] with him.
+[00:29:48] I see you just filled out an inquiry
+[00:29:50] form on our website a moment ago
+[00:29:51] regarding our AI automation services.
+[00:29:53] Thank you so much for that. I also noted
+[00:29:55] the potential budget you mentioned was
+[00:29:56] around £11,000 a month. I just wanted to
+[00:29:58] follow up quickly while it's fresh in
+[00:30:00] your mind. Is now a good time for a
+[00:30:02] brief chat about what you're looking
+[00:30:03] for? Yeah, but I will just say my budget
+[00:30:05] isn't £11,000. is actually £29 a month.
+[00:30:11] Thanks for clarifying that, Jack.
+[00:30:13] Understanding your budget helps us guide
+[00:30:14] you effectively for projects in that
+[00:30:16] range. We often recommend starting with
+[00:30:18] some foundational learning to explore
+[00:30:20] the possibilities of AI automation and
+[00:30:23] how it might fit into your goals. We
+[00:30:25] have a fantastic YouTube channel packed
+[00:30:27] with insights, case studies, and tips.
+[00:30:29] Thank you, bro. All right, cool. So, I
+[00:30:31] basically told this guy if he doesn't
+[00:30:32] have budget for 10K, send him to the
+[00:30:34] YouTube channel. Now what you can really
+[00:30:35] do that's really cool at the end of
+[00:30:36] every call guys is come over to um yeah
+[00:30:40] if you go down to call history you can
+[00:30:42] see the full details right that was 49
+[00:30:44] seconds it cost us 15 cents uh the vibes
+[00:30:47] are neutral with a focus on clarifying
+[00:30:48] budget for help resources call books no
+[00:30:51] call summary the user Jack clarified
+[00:30:53] that his budget for a automation
+[00:30:54] services is £29 a month not previously
+[00:30:56] 11k mentioned really freaking cool right
+[00:31:00] and then actually what we've got here
+[00:31:01] this web hook if I just test this one
+[00:31:03] again I can fix the error real quick.
+[00:31:06] Um, all right. Let me just save this. He
+[00:31:07] should be okay, right? Okay, then run
+[00:31:09] this guy once real quick. Maybe I can
+[00:31:11] connect them. Hang on a
+[00:31:14] second. Okay, I need to enter some dummy
+[00:31:16] value. Okay, there you go. Cool. So, run
+[00:31:17] this one real quick. Waiting for the
+[00:31:19] data. So, to validate that, I'm going to
+[00:31:20] come back in and just have a very quick
+[00:31:22] conversation with it real quick. Cool,
+[00:31:23] guys. To test our web hook, I've just
+[00:31:24] had a fictitious conversation with it.
+[00:31:26] I'm going to click off send. That's
+[00:31:27] okay. Uh, all good. Thank
+[00:31:30] you. Beautiful. Now, he should end the
+[00:31:33] call. There you go. Thanks, Ben. Blah,
+[00:31:35] blah, blah. Decent. Let's check if we
+[00:31:36] got the web hook. Okay, guys. So, let's
+[00:31:37] just get the data. I'm going to hit run
+[00:31:39] once on this. I'm going to come back
+[00:31:40] over to our scenario. I'm going to hit
+[00:31:41] here to run this module only. Uh, which
+[00:31:44] information is this we need to give it
+[00:31:45] real quick. Hang on a second. Two
+[00:31:48] number. Let's just give that and
+[00:31:49] hardcode that in real quick. Okay, I've
+[00:31:51] hardcoded in. Let's just give this guy
+[00:31:53] his number. Beautiful. Gim's giving me
+[00:31:54] call. I'm just going to like say nothing
+[00:31:56] just so I can actually get the data to
+[00:31:58] come through. Let's have a look.
+[00:32:01] Blue light automation. Hey there, dude.
+[00:32:02] I just want to just want to say that I'm
+[00:32:04] not I'm not interested. My budget's 5
+[00:32:06] quid and I can't help you. So, sorry. I
+[00:32:08] can't really I'm not interested.
+[00:32:12] Thank you for letting me know, Jack. I
+[00:32:14] completely understand. Cool. Because we
+[00:32:16] can this guy off. That's done. Let's see
+[00:32:17] if we get the information back now. And
+[00:32:19] we do. So, you can see we've got all our
+[00:32:21] the beautiful data. Now, you see this
+[00:32:23] event, guys, there's actually multiple
+[00:32:25] different events that can happen, but we
+[00:32:26] only want this to trigger when we have
+[00:32:28] call analyzed. So what I'd love you to
+[00:32:30] do is come down to the filter and the
+[00:32:32] condition is when uh event is equal I
+[00:32:36] think it's
+[00:32:39] call_analyzed. Beautiful. So when that
+[00:32:41] happens it will only then send that
+[00:32:43] information over which is the only
+[00:32:44] information that we realistically care
+[00:32:46] about. Okay. Decent. And then on Google
+[00:32:47] Sheets let's just map this information
+[00:32:49] across. So we've got the name. Let's
+[00:32:51] just get this beautiful stuff. In fact
+[00:32:53] if I run this module only yeah use
+[00:32:55] existing data. You'll see uh that was
+[00:32:58] call ended. And one more time and we
+[00:33:00] should see uh callies. Cool. This is
+[00:33:03] sweet. Then we come down and we come
+[00:33:04] down to name and let's have a look at
+[00:33:06] what we've got. Dynamic variables. Look
+[00:33:08] at this guys. Jack. Beautiful
+[00:33:10] appointment. Uh no, we didn't get the
+[00:33:12] appointment right because um we didn't
+[00:33:14] have any information. So if I come down
+[00:33:16] have a look at the detail. Okay guys, so
+[00:33:17] let me just run this one more time real
+[00:33:19] quick. Let's just run this guy. That's
+[00:33:21] absolutely fine. Cool. So I just
+[00:33:22] re-triggered this. Let's have a look.
+[00:33:23] The first one is called started. Now
+[00:33:25] we're okay with that. Let's run this
+[00:33:26] module only one more time. Use existing
+[00:33:28] data. Call ended. No, we don't want that
+[00:33:30] one. We want call analyzed. Let's run
+[00:33:32] this one more time. Using some data.
+[00:33:34] Call analyzed. Beautiful. And now we
+[00:33:37] have all the ace information that we
+[00:33:38] want, guys. So, appointment. Let's have
+[00:33:40] a look at all the beautiful, beautiful,
+[00:33:42] beautiful data that we've got here. Um,
+[00:33:45] hang on a second. Oh my goodness. Let's
+[00:33:47] bring them over. All right. Cool. This
+[00:33:48] is more like it, right? Okay, cool. So,
+[00:33:50] appointment. Let's have a
+[00:33:51] look and bring it over just so you can
+[00:33:53] see. And because you got all this cord,
+[00:33:55] the cool detail that we wanted. Let's
+[00:33:56] have a quick look what we got. We got
+[00:33:57] the transcript, which is really cool as
+[00:33:59] well, which I quite like and that's so
+[00:34:00] so helpful. So, if you come down here to
+[00:34:01] call analysis, we've got the call
+[00:34:04] summary, which is cool. And we got the
+[00:34:05] appointment. So, let's have a look. Call
+[00:34:07] booked. If it's empty, we know that it's
+[00:34:09] now. We got the call summary. Bring this
+[00:34:11] guy over here. And let's go down here.
+[00:34:14] And then for summary, put the call
+[00:34:15] summary. And then we got vibes at the
+[00:34:17] bottom. And then we could also, if you
+[00:34:18] want to, guys, just add in any
+[00:34:19] information. So, this is the number they
+[00:34:21] called. And then column F could be, for
+[00:34:22] example, just the transcript. So it
+[00:34:25] could be recording URL so you could
+[00:34:26] listen to it if you want to. Loads of
+[00:34:28] cool stuff. So you can just double click
+[00:34:29] and hear the conversation. So come out
+[00:34:30] here. I'm going to run this one more
+[00:34:32] time and then I'm going to get this guy
+[00:34:33] to give me a call and then we should see
+[00:34:34] if this works properly the full
+[00:34:36] transcript. So let's give us a very
+[00:34:37] quick call. As you can see it's done.
+[00:34:38] It'll start popping up. Where is he?
+[00:34:40] He'll be here in a second. There we go.
+[00:34:43] Sweet.
+[00:34:46] Blue light automation. I see you just
+[00:34:48] filled out an inquiry form. Yes, bro. Um
+[00:34:51] so my budget my budget is $500.
+[00:34:57] Thanks for sharing that, Jack. Based on
+[00:34:59] your budget, a great starting point
+[00:35:00] would be exploring foundational
+[00:35:01] concepts. I love that. And can I just
+[00:35:03] say how much can I just say how much I
+[00:35:05] love what you guys do. Very much
+[00:35:06] appreciated.
+[00:35:08] Okay, cool. So, that's done. Now, this
+[00:35:10] has triggered because we've got call
+[00:35:11] started. Obviously, guys, you would just
+[00:35:13] have this running constantly, so you
+[00:35:15] wouldn't need to do this. This would
+[00:35:15] just run fine. One more time, and then
+[00:35:17] it should go through to Google Sheets.
+[00:35:19] That's uploading. And let's go check out
+[00:35:20] the data.
+[00:35:23] And look at this guys. Look. So, first
+[00:35:26] of all, uh let me bring this one down.
+[00:35:28] Okay. Obviously, we need to change this
+[00:35:29] so we don't get all these crazy colors.
+[00:35:31] Let's come down and let's just reset the
+[00:35:33] formatting. And obviously, since we're
+[00:35:35] not crazy savages, we are going to line
+[00:35:37] in the middle. And we are also going to
+[00:35:39] Whoops. Uh where is it right now? Not
+[00:35:41] merge. Oh my gosh. You can tell I've not
+[00:35:43] used this Google Sheets in ages,
+[00:35:45] right? Ah, text wrapping. There we go.
+[00:35:48] Cool. The user jack enthusiasm for
+[00:35:50] automation. The vibe is enthusiastic.
+[00:35:51] This is a number. This was a call
+[00:35:52] recording so let's go listen to that
+[00:35:54] again just selling this to different
+[00:35:55] businesses guys you can actually say
+[00:35:57] look these are the conversations that
+[00:35:58] have happened with your users so you get
+[00:36:00] that full data so I've opened up on
+[00:36:01] Apple Music a platform that we never use
+[00:36:04] hi is this Jack my name is Alex and I'm
+[00:36:06] calling from blue light automations I
+[00:36:08] see you just filled out an inquiry form
+[00:36:10] on our website a moment ago so my budget
+[00:36:13] my budget is and just like that guys you
+[00:36:15] got a functional AI voice agent that
+[00:36:17] does the calls save the transcripts and
+[00:36:19] all this amazing stuff if you haven't
+[00:36:21] already checked out some of the voice
+[00:36:22] guides down below. And YouTube really
+[00:36:24] believes that you can enjoy one of the
+[00:36:25] videos on screen here. So, be sure to
+[00:36:27] check that out.

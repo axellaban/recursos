@@ -1,0 +1,489 @@
+[00:00:00] in this video I'm going to show you
+[00:00:01] exactly how you can build and deploy
+[00:00:02] full scale air applications using only
+[00:00:05] one app called repet now if you're not
+[00:00:08] familiar with repler as you can see I'm
+[00:00:09] actually recording as an OBS in Germany
+[00:00:11] right now because I'm in Germany I'm in
+[00:00:13] Frankfurt doing the community Meetup you
+[00:00:15] can ask it to do things you can design
+[00:00:17] pretty much anything you want to and it
+[00:00:19] will do all the back end all the
+[00:00:20] specifics for you so that you can
+[00:00:22] develop any application what's a good
+[00:00:24] example of that well look I built this
+[00:00:26] in like 20 minutes 15 minutes I wanted a
+[00:00:29] map that showed me the best coffee
+[00:00:30] places in lead City Center guys it gives
+[00:00:32] me everything it wants and basically
+[00:00:34] I'll even show how it works it's pretty
+[00:00:35] wild how this works actually you can
+[00:00:37] come down you can plan your coffee
+[00:00:38] routes you get all the coffee shot by
+[00:00:39] ratings you can write them yourselves
+[00:00:41] you can even have guys a login and log
+[00:00:44] out functionality so they can have user
+[00:00:46] bases and the really cool thing about
+[00:00:48] repet is the fact that you can actually
+[00:00:50] have database storage within repet so it
+[00:00:52] can actually save login information
+[00:00:54] other things meaning that you don't need
+[00:00:55] to use multiple applications to build
+[00:00:58] your apps now in this video I'm going to
+[00:00:59] show you something really cool I'm going
+[00:01:00] to show you how we can build our replant
+[00:01:02] so we're going to build an example on
+[00:01:03] together show exactly how it works you
+[00:01:04] can build it yourself and then I'm also
+[00:01:06] going to show you how you connect that
+[00:01:08] to make.com so whether you want to go to
+[00:01:10] your own databases maybe you want to
+[00:01:11] send off automations it's a really
+[00:01:13] really really cool tool for building
+[00:01:15] something in a conversation style chat
+[00:01:17] window that can do many things so they
+[00:01:19] give you a few examples here like local
+[00:01:20] Landmark apps stock analysis weightless
+[00:01:23] websites discover books AI chat linol
+[00:01:25] bios is a really cool one uh R Tracer
+[00:01:28] and statistical significance calculator
+[00:01:31] now guys from this page there's a couple
+[00:01:32] ways that you can do this number one is
+[00:01:33] come to the homepage Ander any prompt
+[00:01:35] that you like to for the purposes of
+[00:01:37] this I'm going to take one of their
+[00:01:38] existing ones their Linkin bio prompt
+[00:01:40] for a coffee shop because you know we
+[00:01:43] love our coffee over here on the jack
+[00:01:44] robits YouTube channel and I'm going to
+[00:01:46] make a slight amendment to it to give
+[00:01:47] you something really interesting okay so
+[00:01:49] you're going to click on try the prompt
+[00:01:50] for Linkin bio okay make a Linkin bio
+[00:01:52] app which presents all my seal accounts
+[00:01:53] and easy intuitive aesthetic interface
+[00:01:55] use a random image profile picture place
+[00:01:56] all out do you know what let's do
+[00:01:58] something about let's use the attached
+[00:02:01] coffee shop logo add a request
+[00:02:04] information
+[00:02:09] field and give their email
+[00:02:13] address this data is then sent to this
+[00:02:17] web hog okay and then guys we're going
+[00:02:19] to head over to me.com so me.com we
+[00:02:21] basically get a new a new page and we're
+[00:02:23] going to open web hooks over here I'm
+[00:02:25] going to call this one custom web hook
+[00:02:27] beautiful let's add a new web hook we're
+[00:02:29] going to call this one on let's see the
+[00:02:32] German takeover and we're calling it the
+[00:02:34] German takeover because I am in
+[00:02:36] Frankfurt right now for the community
+[00:02:37] Meetup so it only feels appropriate that
+[00:02:40] we call it the German takeover excellent
+[00:02:42] and then we're going to copy this
+[00:02:43] address to the clipboard and we come
+[00:02:45] straight back over by the way don't ask
+[00:02:46] me to do this video just yet I'm
+[00:02:48] brushing up on the strength of that uh
+[00:02:50] and then the image for the logo boom and
+[00:02:53] then I'm just going to contrl + V and
+[00:02:55] voila it's done it so what have we done
+[00:02:57] we've done text in one window with the
+[00:02:58] image and all we're going to do do guys
+[00:03:00] is hit start building yes we agree it's
+[00:03:02] it's an experiment of the product it's
+[00:03:04] just a beginning and click continue now
+[00:03:05] the way this works which I think is
+[00:03:06] really interesting is that like it's got
+[00:03:08] like this really cool agentic flow
+[00:03:10] behind scenes where it tries to
+[00:03:12] understand and as you'll see in a second
+[00:03:13] it will build up like a load of tasks
+[00:03:16] that it thinks it needs to do based on
+[00:03:18] the questions that you've asked it so
+[00:03:19] check this out it's got our thing there
+[00:03:21] then it begins to think now you'll know
+[00:03:22] from the channel that I've covered
+[00:03:23] things on this like you know building a
+[00:03:26] front end with card and then having an
+[00:03:27] AI web application in that that you can
+[00:03:30] design with code and implant in it I've
+[00:03:32] covered things like full endtoend AI SAS
+[00:03:34] products okay so when would you use
+[00:03:37] repler and I give you the TL at the
+[00:03:38] bottom line of it repet is great it has
+[00:03:40] a few quirks but I'll explain why we use
+[00:03:42] this in a second let me just show you
+[00:03:44] what we're seeing here okay look I'm
+[00:03:45] working on a detailed plan for your
+[00:03:46] lincol bio app using flask and vanilla
+[00:03:49] JavaScript the initial prototype will
+[00:03:51] include your social media links the
+[00:03:52] coffee shop logo and a contact form that
+[00:03:54] sends data to a specified web hook
+[00:03:56] pretty flipping cool right let me know
+[00:03:58] if you'd like to proceed with this in
+[00:03:59] playing on any modifications now look at
+[00:04:01] this guys this is cool first thing it
+[00:04:02] does is build the initial prototype then
+[00:04:04] it says hey would you like any other
+[00:04:06] additional features like hey add
+[00:04:08] analytics track links Implement a simple
+[00:04:10] admin panel to easily update social
+[00:04:12] media links add custom themes or color
+[00:04:14] schemes of personalization and integrate
+[00:04:16] social media apis to display live follow
+[00:04:19] accounts that is crazy now you can
+[00:04:21] obviously click all of them or add your
+[00:04:22] own I'm just going to say look let's
+[00:04:24] give me a custom theme decider and I'm
+[00:04:26] happy with that and then we approve the
+[00:04:28] plan and it begins now the first thing
+[00:04:30] it's going to do is develop this
+[00:04:31] prototype of the app for us and I'm
+[00:04:34] going to chat to you a little bit well
+[00:04:35] obiously look in the background to tell
+[00:04:36] you what I found from it now I love the
+[00:04:38] fact that it shows you exactly the code
+[00:04:39] that's unfolding as it happens just to
+[00:04:42] give you some knowledge and
+[00:04:43] understanding about how this stuff
+[00:04:44] actually works and like we are like
+[00:04:46] literally at the point now where we're
+[00:04:48] coding with language as you can see it's
+[00:04:50] done the first bit it's not the template
+[00:04:52] which is excellent now when would you
+[00:04:53] users if you just want to build an AI
+[00:04:57] web application with not getting any of
+[00:04:59] the sub descriptions that you could
+[00:05:00] deploy yourself just from prompt a
+[00:05:02] conversational app window like this um
+[00:05:05] that you can build anything you want to
+[00:05:07] this might be an option that you want to
+[00:05:08] explore but you can get around this many
+[00:05:10] other ways you can do things in this
+[00:05:12] like having users create you know their
+[00:05:14] login sections and dashboards and stuff
+[00:05:17] um you may find if you want to get
+[00:05:18] better design I'd recommend that you do
+[00:05:21] use a front-end develop developing
+[00:05:23] website like card or WordPress for the
+[00:05:25] time being if design is really important
+[00:05:27] to you because you can get it by worsing
+[00:05:30] this but sometimes it's just a little
+[00:05:31] bit quicker to make those changes
+[00:05:33] yourself as you seen my other videos
+[00:05:35] then work with this kind of um back and
+[00:05:37] forth back and forth back and forth but
+[00:05:39] the fact that you can get something live
+[00:05:40] and operational super quickly I think is
+[00:05:42] nothing short of amazing now let's see
+[00:05:44] what we've got here we've got coffee
+[00:05:46] shop links we've got this logo so it
+[00:05:48] hasn't brought through our logo but
+[00:05:49] that's cool it's done a really good job
+[00:05:51] and we can pick everything that we want
+[00:05:52] to now let's look at this okay so look
+[00:05:54] is the cof shop links website learning
+[00:05:56] correctly can you see the social media
+[00:05:58] links and the contact form so we come
+[00:06:00] down and what we're going to say is yes
+[00:06:02] we can uh could you please use the
+[00:06:08] logo we provided and what I'm also going
+[00:06:10] to do guys is just test uh let's say
+[00:06:12] Jack uh my email and say howdy and let's
+[00:06:16] just see if this has I'm really
+[00:06:17] impressed with this sent over the
+[00:06:19] information so look this is trying to
+[00:06:20] determine a data structure if I say
+[00:06:23] send okay so it's not allowed anything
+[00:06:27] yet that could just be because it hasn't
+[00:06:28] developed yet okay so can you please do
+[00:06:30] with the Logan provided let's just copy
+[00:06:31] this one more time just for its benefit
+[00:06:33] let's come back over um the form is not
+[00:06:37] sending over the data to the web hog I'm
+[00:06:44] just going to say also improve the font
+[00:06:47] design and everything else keep it very
+[00:06:49] broad for moment so we can actually
+[00:06:51] design everything that we need to
+[00:06:52] awesome and then it thinks I like the
+[00:06:54] way that it runs in a kind of really
+[00:06:56] logical sequential manner it's not kind
+[00:06:59] of all over the place you can really see
+[00:07:00] what it's doing and how it's working and
+[00:07:02] I guess like the levels they've gone to
+[00:07:04] in the background to make sure that a
+[00:07:06] system like this works and what you're
+[00:07:08] seeing on this video guys is the worst
+[00:07:10] it will ever be it will only ever
+[00:07:12] continue to get better and the cool
+[00:07:13] thing about repet is that they host
+[00:07:15] everything they take all the database
+[00:07:16] they take all the files they'll host
+[00:07:18] everything that means it's just
+[00:07:19] literally this conversational window and
+[00:07:21] then it sits in a browser and it's so so
+[00:07:23] sick so let's see where we can get to
+[00:07:25] with this one so now look it understands
+[00:07:27] our concerns it's working on
+[00:07:28] implementing the changes we requested
+[00:07:30] including the logo fixing the form
+[00:07:31] submission and improving AAL design and
+[00:07:33] functionality I will update you once
+[00:07:36] these improvements are in place okay
+[00:07:38] incredible then you can see it's think
+[00:07:39] in the background and it just shows you
+[00:07:41] all of the aspects it's done the other
+[00:07:44] cool thing with this guys is you can
+[00:07:45] actually share this with other
+[00:07:47] individuals and they themselves can
+[00:07:49] collaborate with you on developing these
+[00:07:50] apps so they can be hosted and posted uh
+[00:07:52] hosted and posted oh my goodness and
+[00:07:54] just kick and butt with it cool if the
+[00:07:56] website is leing correctly with a new
+[00:07:57] design include the logo image update
+[00:07:59] color scheme and improve layout cool so
+[00:08:01] the logo we lost okay we've got
+[00:08:04] basically a different design which I'm
+[00:08:06] not quite happy with but again we can be
+[00:08:07] specific with that and then we got a
+[00:08:09] contact us form so let's just give this
+[00:08:10] one by time my name my email and we'll
+[00:08:12] call this one howdy and then we click
+[00:08:15] send it to bottom sending form submit
+[00:08:17] successfully and do we see it over here
+[00:08:19] we do so successfully determined means
+[00:08:21] that the web hog has received data so
+[00:08:23] let's do this one more time okay click
+[00:08:25] okay run this one once come back over to
+[00:08:27] repc now and let's do the same thing
+[00:08:29] again
+[00:08:31] hey good looking what's
+[00:08:34] cooking beautiful send that one off
+[00:08:37] sending sent we come back over and guys
+[00:08:40] so what's happened here name email but
+[00:08:43] it hasn't actually gotten the message
+[00:08:45] right so let's just try that one more
+[00:08:46] time just to make sure that it's not
+[00:08:48] bugging
+[00:08:52] out sending send over come back over
+[00:08:55] here and it's all empty Okay cool so
+[00:08:58] what do we say we'll just say the design
+[00:09:01] is worse go with white
+[00:09:05] background the form is sending over
+[00:09:10] data in the correct
+[00:09:13] format however it is not carrying it is
+[00:09:16] not posting any of the
+[00:09:21] content the logo is not
+[00:09:25] showing either and what would be cool
+[00:09:28] like maybe there we go Instagram
+[00:09:29] Facebook Twitter I just say improve the
+[00:09:32] UI of the
+[00:09:34] buttons beautiful hit enter and guys and
+[00:09:37] basically anytime you're developing any
+[00:09:38] AI web application this essentially is
+[00:09:40] the process where you're going back and
+[00:09:41] forth and giving it suggestions and
+[00:09:43] guidance to build the thing that you
+[00:09:44] actually need to do but here's a crucial
+[00:09:46] thing once it fixes this we'll be able
+[00:09:48] to get data from our AI web form and
+[00:09:50] you'll see what it looks like in a
+[00:09:51] second into make once it's in make we
+[00:09:53] can do anything we want to we could
+[00:09:54] access our own databases we could uh
+[00:09:57] leverage any number of AI applications
+[00:09:59] that we wish and send the data straight
+[00:10:01] back over to uh the automation for the
+[00:10:03] purpose of this I'm going to show you a
+[00:10:04] very simple email automation that we can
+[00:10:06] do off the back of it and it's going to
+[00:10:08] be excellent now the other thing you can
+[00:10:10] do with repa that you that may surprise
+[00:10:12] you is you can actually C you know
+[00:10:14] connect to the open AI API within a ret
+[00:10:17] which means if I say hey I want a
+[00:10:19] dynamic chat window it'll say awesome
+[00:10:21] can you give me your open AI API key
+[00:10:24] which means that we can then just build
+[00:10:25] these chat Bots within ret which I think
+[00:10:28] is pretty cool okay so round two it's
+[00:10:30] improved the UI for us let's just give
+[00:10:31] it my name email and a message once more
+[00:10:35] come over to make.com run this one once
+[00:10:37] we come straight back over and click
+[00:10:39] Send let's see if that's sending it say
+[00:10:41] it's been sent successfully let's wait
+[00:10:43] for the web hook to gland and no data's
+[00:10:45] coming oh it is cool guys watch you look
+[00:10:47] at that man approved the email the
+[00:10:49] message incredible then what we could do
+[00:10:51] really simply is just say I don't know
+[00:10:53] we could add like a chat GPT module on
+[00:10:56] there like let's just say we want to
+[00:10:58] create completion we come down let's
+[00:11:00] just select the method could be
+[00:11:01] something like uh model db4 assistant
+[00:11:04] messages added system message content
+[00:11:07] hey write a nice welcome email for this
+[00:11:12] person based on this
+[00:11:19] message I can say my business is a
+[00:11:22] coffee shop by the way guys worst prompt
+[00:11:24] in the world I just want to show you
+[00:11:25] like an example of the output I like
+[00:11:28] what it could be instead of sister let's
+[00:11:29] just go down to user apologies Max token
+[00:11:31] is going to be zero and this one's going
+[00:11:32] to be Gmail click on send an email
+[00:11:35] beautiful and what we'll do guys
+[00:11:36] recipient click on the add email address
+[00:11:38] is simply going to be the email
+[00:11:40] subject's going to be
+[00:11:42] hey welcome and then content could be
+[00:11:45] just the result of this and then we've
+[00:11:46] come back over and said the contact form
+[00:11:47] works but the logo is not visible I
+[00:11:50] understand the logo is not visible it's
+[00:11:51] working on a fix for us incredible and
+[00:11:53] guys you can just get the idea now that
+[00:11:54] basically have this sort of works we
+[00:11:55] launch it now once this is done we're
+[00:11:58] going to publish it so it's live and we
+[00:11:59] could do all the different things and
+[00:12:00] pretty much anything that could be coded
+[00:12:01] we could do here I've just added a
+[00:12:03] contact form as an example but in
+[00:12:05] reality you can do anything that you
+[00:12:06] want to with this application and guys
+[00:12:08] like if you check out the last one I did
+[00:12:10] for example right you basically you
+[00:12:11] deploy it you get this cool domain and
+[00:12:13] you can get your own domains and do
+[00:12:14] different things and you can get this
+[00:12:16] login section so i' let people create
+[00:12:18] accounts and obviously I did this in a
+[00:12:19] couple of minutes you can imagine we can
+[00:12:21] do this like literally 30 40 50 minutes
+[00:12:23] they can log in create accounts
+[00:12:24] registers and it stores all that
+[00:12:26] information so it literally remembered
+[00:12:28] my exact Lo in details so you could
+[00:12:30] literally have now a system where people
+[00:12:32] create accounts they log in they access
+[00:12:33] any application that you want to and
+[00:12:35] it's so easy to throw in even payments
+[00:12:37] on top of that if you so wanted to so
+[00:12:39] going to come back over let's see what
+[00:12:41] it's doing it's presenting to the user
+[00:12:42] it's doing a little bit more thinking
+[00:12:44] and then we'll see exactly how it's
+[00:12:45] finished and this one guys it's
+[00:12:46] basically done the avir font upgrades
+[00:12:48] which is excellent we the Dark theme
+[00:12:50] we've got more themes now we've got
+[00:12:51] ocean themes we got oh this is crazy but
+[00:12:53] you basically get the concept of it now
+[00:12:55] when we're happy with this what do we do
+[00:12:56] we basically say hey all looks good
+[00:13:02] publish it okay and once it's done we'll
+[00:13:04] then be able to view this and have a
+[00:13:05] link that we can share and do various
+[00:13:07] other things this is now finalizing the
+[00:13:09] details and the bits for his Autumn
+[00:13:11] theme what do we think about Autumn
+[00:13:12] theme I there you go so look it's
+[00:13:14] complete the plan successfully the
+[00:13:16] following steps were executed do we
+[00:13:18] think it's good not good then we can
+[00:13:20] publish it so in the top right here we
+[00:13:21] click on deploy like so and then we have
+[00:13:23] a few different options that we could do
+[00:13:24] based on your own particular use cases
+[00:13:26] just pick the style of deployment that
+[00:13:27] you want you can read through and which
+[00:13:28] ones best for you and we click on set up
+[00:13:30] your deployment asks for a primary uh
+[00:13:33] domain so we can just make a random one
+[00:13:34] here so we'll just call this one coffee
+[00:13:37] linkers meu Germany and for instance we
+[00:13:41] might add some hyphens in between these
+[00:13:43] and then it will
+[00:13:45] check to see cool it seems like it's
+[00:13:47] available and the pricing is $12.80 per
+[00:13:49] month and that's basically how you do
+[00:13:51] this cuz it's based on the bot that runs
+[00:13:52] here all the deployment secrets that's
+[00:13:54] cool web server background worker and
+[00:13:56] then we just hit this deploy down by
+[00:13:57] here at the bottom like so
+[00:13:59] once we're happy with it now it's going
+[00:14:01] through provision build bundle promote
+[00:14:04] all this beautiful Cycles so you can see
+[00:14:05] full fully transparently everything
+[00:14:07] that's happening then once this is done
+[00:14:08] we're going to quickly run through that
+[00:14:10] and test it to make sure that it's
+[00:14:11] working properly and of course guys if
+[00:14:13] you want to know all the agents the
+[00:14:14] blueprints to guide you can check over
+[00:14:16] my school Community for everything from
+[00:14:17] building an AI SS from the very
+[00:14:20] beginning all the way through to the
+[00:14:21] part of the you know the way you can
+[00:14:22] actually monetize and start gener income
+[00:14:24] in the classroom we've got loads of
+[00:14:25] materials and now you probably find
+[00:14:26] really really helpful to happy level up
+[00:14:27] your AI automation game from Zero to
+[00:14:30] Hero and Beyond and we' got lots of cool
+[00:14:32] people we do um we do master classes
+[00:14:34] every Friday so we've had Facebook ad
+[00:14:36] experts LinkedIn we've had prompt
+[00:14:39] engineering it's been like honestly
+[00:14:40] every Friday it's like oh my goodness
+[00:14:42] it's like it's wonderful okay now this
+[00:14:43] is just finishing we're just waiting for
+[00:14:44] this to let up in the background and
+[00:14:46] guys once that's finished it then hits
+[00:14:47] production and we can actually check out
+[00:14:49] exactly what this looks like and guys
+[00:14:50] then we open up into a new window we can
+[00:14:52] check out on make NA scenarios running
+[00:14:54] we come back over so we've got Instagram
+[00:14:56] Facebook Twitter and Tik Tok we can
+[00:14:58] provide URLs for that we'll try the
+[00:14:59] contact form so we say hey chat Roberts
+[00:15:01] email is this and we'll say hey uh I
+[00:15:04] would like to order I don't know
+[00:15:08] something like 200 100 bags of coffee
+[00:15:14] beans thanks awesome and hit send
+[00:15:18] sending sent form submit successfully
+[00:15:21] obviously we can change and customize
+[00:15:22] the F the contrast that sort of stuff
+[00:15:23] and we come back over the web hooks
+[00:15:24] picked everything up let's see what
+[00:15:26] we've got there add like 100 bags of
+[00:15:27] coffee beans thanks let's chat you bque
+[00:15:29] cre for us let's have a quick look we
+[00:15:31] come down to the message 100 bags of our
+[00:15:33] premium coffee beans have truly made our
+[00:15:34] day we proud ourselves and blah blah
+[00:15:35] blah you come down L Stu obviously the
+[00:15:37] prompt was terrible but the idea is now
+[00:15:39] we sent an email off the back of that so
+[00:15:41] essentially we've got our own web page
+[00:15:42] we've got a contact form we've connected
+[00:15:44] it to make and essentially we can do
+[00:15:45] anything if you had a few more minutes
+[00:15:47] with this you would work on
+[00:15:48] troubleshooting to get the logo bit
+[00:15:49] fixed and then would' add all links in
+[00:15:51] and essentially guys that is the entire
+[00:15:53] process in a nutshell I can't wait to
+[00:15:55] see what you build with repler and your
+[00:15:56] own particular thoughts on it but in any
+[00:15:58] case guys have a a wonderful week and
+[00:15:59] I'll see you in my next video

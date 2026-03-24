@@ -1,0 +1,2149 @@
+{
+    "name": "200IQ Research Assistant 🧠",
+    "flow": [
+        {
+            "id": 1,
+            "module": "paperform:submission",
+            "version": 1,
+            "parameters": {
+                "__IMTHOOK__": 659749
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTHOOK__": {
+                            "data": {
+                                "editable": "false"
+                            },
+                            "label": "My New Submission webhook"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTHOOK__",
+                        "type": "hook:paperform",
+                        "label": "Webhook",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "http:ActionGetFile",
+            "version": 3,
+            "parameters": {
+                "handleErrors": false
+            },
+            "mapper": {
+                "url": "{{1.data.fll64.value}}",
+                "method": "get",
+                "serializeUrl": false,
+                "shareCookies": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {},
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "hidden",
+                        "label": "Method"
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "regexp:HTMLToText",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "html": "{{3.data}}",
+                "newline": "lf",
+                "uppercaseHeadings": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "newline": {
+                            "label": "LF (\\n) - Unix/Mac OS X"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "html",
+                        "type": "text",
+                        "label": "HTML"
+                    },
+                    {
+                        "name": "newline",
+                        "type": "select",
+                        "label": "Line break",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "lf",
+                                "crlf",
+                                "cr"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "uppercaseHeadings",
+                        "type": "boolean",
+                        "label": "Uppercase headings",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "module": "openai-gpt-3:CreateCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "model": "gpt-4o",
+                "top_p": "1",
+                "select": "chat",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "You will be provided with the copy of a website. Your task is to carefully read and comprehend the content of the website. After analyzing the text, generate a concise summary of the key points and main ideas discussed in the website. The summary should be informative, helpful, and to the point, with a maximum length of 35 words.\n\nWhen creating the summary, focus on the following aspects:\n\n- Identify the core message or theme of the website.\n- Highlight the most important facts, statistics, or examples that support the main points.\n- If applicable, briefly mention any significant conclusions or recommendations made in the website.\n\nAvoid using unnecessary fluff or filler phrases, and do not include introductory phrases like \"this website is about.\" Instead, concentrate on directly communicating the essential information in a clear and efficient manner.\n\nTo ensure your summary is effective, consider the following tips:\n\n- Use concise and precise language to convey the key ideas.\n- Prioritize information based on its relevance to the main message.\n- Ensure that the summary can be easily understood by someone who hasn't seen the website.\n- Read through your summary to check for clarity, coherence, and adherence to the 35-word limit.\n\nRemember, your goal is to provide a comprehensive yet succinct overview of the website's content, enabling readers to quickly grasp the core message and main takeaways. Do not repeat the title.\n\nThen, write 5 core features about the website in bullets\n\n* 📝 fact 1\n* 🔍 fact 2\n* 📊 fact 3\n* 💡 fact 4\n* ⚡ fact 5\n\nThe website copy: {{4.text}}"
+                    }
+                ],
+                "max_tokens": "0",
+                "temperature": "1",
+                "n_completions": "1",
+                "response_format": "text"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0,
+                    "name": "Website Snappy 🐊"
+                },
+                "restore": {
+                    "expect": {
+                        "stop": {
+                            "mode": "chose"
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "gpt-4o (system)"
+                        },
+                        "select": {
+                            "label": "Create a Chat Completion (GPT Models)"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        },
+                        "logit_bias": {
+                            "mode": "chose"
+                        },
+                        "response_format": {
+                            "mode": "chose",
+                            "label": "Text"
+                        },
+                        "additionalParameters": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            },
+                            "label": "My OpenAI connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Select Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "chat",
+                                "prompt"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens",
+                        "required": true
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "n_completions",
+                        "type": "number",
+                        "label": "Number"
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "logit_bias",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "token",
+                                    "type": "text",
+                                    "label": "Token ID",
+                                    "required": true
+                                },
+                                {
+                                    "name": "probability",
+                                    "type": "number",
+                                    "label": "Probability",
+                                    "required": true,
+                                    "validate": {
+                                        "max": 100,
+                                        "min": -100
+                                    }
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Token Probability"
+                        },
+                        "type": "array",
+                        "label": "Token Probability"
+                    },
+                    {
+                        "name": "response_format",
+                        "type": "select",
+                        "label": "Response Format",
+                        "validate": {
+                            "enum": [
+                                "text",
+                                "json_object"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "seed",
+                        "type": "integer",
+                        "label": "Seed"
+                    },
+                    {
+                        "name": "stop",
+                        "spec": {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Stop Sequence"
+                        },
+                        "type": "array",
+                        "label": "Stop Sequences",
+                        "validate": {
+                            "maxItems": 4
+                        }
+                    },
+                    {
+                        "name": "additionalParameters",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Parameter Name",
+                                    "required": true
+                                },
+                                {
+                                    "name": "type",
+                                    "type": "select",
+                                    "label": "Input Type",
+                                    "options": [
+                                        {
+                                            "label": "Text",
+                                            "value": "text",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "text",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Number",
+                                            "value": "number",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "number",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Boolean",
+                                            "value": "boolean",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "boolean",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "date",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "date",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Any",
+                                            "value": "any",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "any",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Input Parameter"
+                        },
+                        "type": "array",
+                        "label": "Other Input Parameters"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": [
+                                        {
+                                            "label": "System",
+                                            "value": "system"
+                                        },
+                                        {
+                                            "label": "User",
+                                            "value": "user"
+                                        },
+                                        {
+                                            "label": "Assistant",
+                                            "value": "assistant"
+                                        }
+                                    ],
+                                    "required": true
+                                },
+                                {
+                                    "name": "content",
+                                    "type": "text",
+                                    "label": "Message Content"
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message"
+                        },
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "module": "app#perplexity-ai-2cmiq4:createAChatCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1367079
+            },
+            "mapper": {
+                "model": "llama-3-70b-instruct",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "Your task is to uncover 10 fascinating facts about this business:{{1.data.fll64.value}}. \n\nDive deep into the website and explore a wide range of reliable external sources to gather the most interesting and relevant information. For each fact, make sure it meets the following criteria:1. Well-Sourced: Provide the exact page, section, or article where you found the fact to ensure its credibility. Use in-text citations or footnotes for easy reference.2. High-Quality: Verify the accuracy and reliability of each fact by cross-checking with multiple reputable sources. Avoid using outdated, incorrect, or misleading information.3. Up-to-Date: Prioritize facts from the last 12 months to ensure the information is current and relevant. If historical data is crucial for context, include it but clearly indicate the time period.4. Diverse Coverage: Explore various aspects of the website, such as different topics, categories, or sections, to provide a well-rounded understanding of its content. Don't limit yourself to just one area.5. Relevance Matters: Focus on facts that are significant and valuable for comprehending the main themes, objectives, or unique features of the website. Avoid trivial or unrelated information.6. Clear Documentation: Present each fact clearly and concisely, providing brief explanations or context where necessary. Use bullet points or numbered lists for easy readability.7. Avoid Redundancy: Ensure that each fact is unique and adds new information to the list. Avoid repeating similar facts or restating the same information in different ways.8. Data-Driven Insights: Whenever possible, include interesting statistics, percentages, or data points that support the facts and make them more compelling. Cite the sources for these figures.9. Business Relevance: Focus on facts that provide valuable insights into the company's operations, target market, competitive landscape, or growth opportunities. This information will help you deliver a well-informed consultation to support their business.10. Thought-Provoking: Aim to include at least one or two facts that are surprising, counterintuitive, or thought-provoking. These can be unique insights or lesser-known aspects of the website that spark curiosity and demonstrate your deep understanding of the company.Please present the facts in a numbered list format, with each fact followed by its specific source(s) using in-text citations or footnotes. Include sources as naked urls.\n\n{{1.data.fll64.value}}"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 0,
+                    "name": "Research A 🔬🟡"
+                },
+                "restore": {
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "llama-3-70b-instruct"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "app#perplexity-ai-2cmiq4"
+                            },
+                            "label": "My Perplexity AI connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:app#perplexity-ai-2cmiq4",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "spec": [
+                            {
+                                "name": "content",
+                                "type": "text",
+                                "label": "Content",
+                                "required": true
+                            },
+                            {
+                                "name": "role",
+                                "type": "select",
+                                "label": "Role",
+                                "options": [
+                                    {
+                                        "label": "User",
+                                        "value": "user"
+                                    },
+                                    {
+                                        "label": "Assistant",
+                                        "value": "assistant"
+                                    },
+                                    {
+                                        "label": "System",
+                                        "value": "system"
+                                    }
+                                ],
+                                "required": true
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1.999,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "number",
+                        "label": "Top K",
+                        "validate": {
+                            "max": 2048,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "app#perplexity-ai-2cmiq4:createAChatCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1367079
+            },
+            "mapper": {
+                "model": "llama-3-70b-instruct",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "Please analyze the following output from the previous model:{{6.choices[].message.content}}\n\nFor each bullet point in the output, perform the following tasks:1. Check if the bullet point has a source URL.   - If a source URL is missing, attempt to find a relevant and reliable source that supports the information provided.   - If a source URL is found, include it alongside the bullet point.- You MUST include the naked url for every source   - If no reliable source can be found, remove the bullet point from the list.2. Fact-check the information in each bullet point.   - Verify the accuracy of the claims made using reliable sources and fact-checking techniques.   - If any information is found to be inaccurate, correct it or remove the bullet point if it cannot be corrected.3. Maintain the original format of the output, including the emoji bullet points and headers.4. For each bullet point that passes the fact-check, include the source URL(s) used to verify the information.5. Do not include any further information in your answer than the list. You must use one emoji per number, do not use mark down by using '**' 6. You can only provide the output an no further information, such as 'sure, here's the updated list you asked for'. Do not add aniy addtional copy before or after the 10 facts such as 'here are the facts you asked for'You MUST include the naked url for every sourcePlease provide the updated output with fact-checked information, source URLs, and any necessary corrections, while keeping the emoji bullet points and headers intact."
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1500,
+                    "y": 0,
+                    "name": "Research B 🔬🟢"
+                },
+                "restore": {
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "llama-3-70b-instruct"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "app#perplexity-ai-2cmiq4"
+                            },
+                            "label": "My Perplexity AI connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:app#perplexity-ai-2cmiq4",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "spec": [
+                            {
+                                "name": "content",
+                                "type": "text",
+                                "label": "Content",
+                                "required": true
+                            },
+                            {
+                                "name": "role",
+                                "type": "select",
+                                "label": "Role",
+                                "options": [
+                                    {
+                                        "label": "User",
+                                        "value": "user"
+                                    },
+                                    {
+                                        "label": "Assistant",
+                                        "value": "assistant"
+                                    },
+                                    {
+                                        "label": "System",
+                                        "value": "system"
+                                    }
+                                ],
+                                "required": true
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1.999,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "number",
+                        "label": "Top K",
+                        "validate": {
+                            "max": 2048,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "anthropic-claude:createAMessage",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1528134
+            },
+            "mapper": {
+                "model": "claude-3-opus-20240229",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "text": "Opportunities Bot Prompt 🤖\n\nAs an AI-powered Opportunities Bot, your mission is to uncover valuable insights and identify potential areas where our AI automation agency can best serve our prospective clients. To accomplish this, you will analyze three crucial pieces of information:\n\n1. Details about our AI automation agency, including our services, expertise, and successful case studies.\n2. Information about the prospective client, such as their industry, size, current processes, and technology stack.\n3. The client's dreams, aspirations, and most pressing challenges or pain points.\n\nUsing this information, generate three compelling paragraphs that highlight the specific opportunities where our agency can provide the most value to the client. Emphasize how our services can help them overcome their challenges, optimize their processes, and achieve their goals.\n\nIn the first paragraph, focus on the client's most pressing pain point and explain how our agency's relevant services can address this issue head-on. Provide a clear and concise solution that demonstrates our understanding of their needs and our ability to deliver results.\n\nIn the second paragraph, explore the client's dreams and aspirations, and showcase how our agency's expertise can help them realize these goals. Highlight the potential benefits of our services, such as increased efficiency, cost savings, and improved customer satisfaction.\n\nIn the third paragraph, identify a unique opportunity that the client may not have considered before. Demonstrate our agency's innovative thinking and proactive approach to problem-solving. Explain how this opportunity aligns with their goals and how our services can help them seize it.\n\nFinally, conclude your analysis with three thought-provoking questions that I should ask the client during our meeting. These questions should be designed to spark meaningful discussions, uncover additional insights, and demonstrate our genuine interest in their success. Number these questions as follows:\n\n1. [Question 1] \n2. [Question 2] \n3. [Question 3] \n\nEach question must have one emoji after it.\n\nSo, to confirm, you will have three paragraphs of analysis followed by three questions. This is an executive report.\n\nA good question is defined as something that would enable a positive discussion towards understanding the client business' problems or dream outcome. For example:\n\n- You mentioned you are struggling with client acquisition, which channels have you explored so far? 🤔\n- I noticed you offer digital marketing services to the design agencies on your website, but you wanted to focus on a different product. Is that something you would like to explore? 💎\n- To help you achieve your goal of scaling effectively using AI, please share your client acquisition cost and life time customer value 💷\n\nRemember to tailor your language and tone to the specific client and their industry. Use clear, concise, and persuasive language that showcases our agency's value proposition and differentiates us from competitors. Your insights will be instrumental in helping me prepare for a productive and impactful meeting with the prospective client.\n\nHere is the data.\n\nClient's dream outcome & problems: {{1.data.`6112a`.value}}\n\nData & research about the client: {{7.choices[].message.content}}\n\nInformation about my business: \n\nAutomation Planet 🌎AI-Powered Automation Agency 🌍Automation Planet is a cutting-edge AI automation agency that specializes in optimizing processes, automating workflows, and elevating businesses through the power of artificial intelligence. Our team of experienced tech experts from diverse backgrounds, including fintech, crypto startups, design agencies, media giants, and blue-chip companies, is dedicated to helping businesses streamline their operations and focus on their core objectives.Services:1. AI-Driven 301 Redirect Mapping 🗺️   - Utilize natural language processing (NLP) to accurately map web pages   - Increase accuracy and reduce the overall required time by up to 80%   - Example: Successfully mapped 10,000 URLs for a client's website migration, saving them 200 hours of manual work2. High-Volume Copy Generation 📝   - Employ hybrid workflows that allow copywriters to interact with cutting-edge 'long short-term memory' neural networks and NLP   - Create large volumes of highly-crafted, SEO-friendly copy   - Example: Generated 500 product descriptions for an e-commerce client in just 2 days, a task that would have taken a human writer weeks to complete3. Intelligent Lead Generation and Qualification 🕵️‍♂️   - Develop custom chatbots and AI tools to efficiently generate and qualify leads   - Integrate with existing CRM systems for seamless lead management   - Example: Implemented an AI-powered chatbot for a B2B client, resulting in a 30% increase in qualified leads and a 20% reduction in lead response time4. CRM Automation 📊   - Automate lead assignment, follow-ups, and data entry tasks   - Optimize lead management processes for improved efficiency and effectiveness   - Example: Automated the lead assignment process for a sales team, reducing manual effort by 80% and increasing lead conversion rates by 15%5. Sales Funnel Optimization 📈   - Design and oversee result-oriented sales funnels   - Monitor performance and make data-driven optimizations for maximum efficiency   - Example: Restructured a client's sales funnel using AI-driven insights, resulting in a 25% increase in conversion rates and a 40% reduction in customer acquisition costs6. Predictive Analytics 🔮   - Leverage AI and machine learning to analyze customer data and make accurate predictions   - Identify high-value opportunities and potential risks for proactive decision-making   - Example: Developed a predictive model for a retail client, accurately forecasting demand for key products and optimizing inventory management, leading to a 20% reduction in stockouts and a 15% increase in revenue7. Workflow Automation 🎡   - Identify and automate repetitive tasks across various departments   - Streamline processes and reduce manual effort, allowing teams to focus on high-value activities   - Example: Automated the expense reporting process for a client's finance department, reducing processing time by 70% and eliminating errors associated with manual data entryAt Automation Planet, we are committed to helping businesses harness the power of AI and automation to optimize their processes, automate workflows, and elevate their performance. Our tailored solutions are designed to address the unique needs of each client, ensuring maximum efficiency and measurable results.\n",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ],
+                "metadata": {},
+                "max_tokens": "4000",
+                "temperature": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1800,
+                    "y": 0,
+                    "name": "Claude 🌱"
+                },
+                "restore": {
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "claude-3-opus-20240229"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    },
+                                    "content": {
+                                        "mode": "chose",
+                                        "items": [
+                                            {
+                                                "type": {
+                                                    "mode": "chose",
+                                                    "label": "Text"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "stop_sequences": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "anthropic-claude"
+                            },
+                            "label": "My Anthropic Claude connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:anthropic-claude",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "uinteger",
+                        "label": "Max Tokens",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": [
+                                        {
+                                            "label": "User",
+                                            "value": "user",
+                                            "nested": [
+                                                {
+                                                    "name": "content",
+                                                    "spec": {
+                                                        "spec": [
+                                                            {
+                                                                "help": "You can send image content blocks starting with Claude 3 models.",
+                                                                "name": "type",
+                                                                "type": "select",
+                                                                "label": "Type",
+                                                                "options": [
+                                                                    {
+                                                                        "label": "Text",
+                                                                        "value": "text",
+                                                                        "nested": [
+                                                                            {
+                                                                                "help": "Content of the message on behalf of the selected **Role** .",
+                                                                                "name": "text",
+                                                                                "type": "text",
+                                                                                "label": "Text",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "label": "Image",
+                                                                        "value": "image",
+                                                                        "nested": [
+                                                                            {
+                                                                                "name": "source",
+                                                                                "spec": [
+                                                                                    {
+                                                                                        "help": "File name, including the extension, for example, `image.jpg`.",
+                                                                                        "name": "filename",
+                                                                                        "type": "filename",
+                                                                                        "label": "Filename",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:name",
+                                                                                        "extension": [
+                                                                                            "jpeg",
+                                                                                            "jpg",
+                                                                                            "png",
+                                                                                            "gif",
+                                                                                            "webp"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "help": "Binary data of the image. For example, you can retrieve the binary data of your image using the **HTTP: Get a file** module.",
+                                                                                        "name": "data",
+                                                                                        "type": "buffer",
+                                                                                        "label": "Data",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:data"
+                                                                                    }
+                                                                                ],
+                                                                                "type": "collection",
+                                                                                "label": "Source",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "required": true
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Content"
+                                                    },
+                                                    "type": "array",
+                                                    "label": "Content",
+                                                    "labels": {
+                                                        "add": "Add content"
+                                                    },
+                                                    "required": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Assistant",
+                                            "value": "assistant",
+                                            "nested": [
+                                                {
+                                                    "help": "If the request ends with an assistant turn, then the response content will continue directly from that last turn.",
+                                                    "name": "content",
+                                                    "type": "text",
+                                                    "label": "Content",
+                                                    "required": true
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message"
+                        },
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    },
+                    {
+                        "name": "system",
+                        "type": "text",
+                        "label": "System Prompt"
+                    },
+                    {
+                        "name": "metadata",
+                        "spec": [
+                            {
+                                "name": "user_id",
+                                "type": "text",
+                                "label": "User ID"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Metadata"
+                    },
+                    {
+                        "name": "stop_sequences",
+                        "spec": {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Stop Sequence"
+                        },
+                        "type": "array",
+                        "label": "Stop Sequences"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "uinteger",
+                        "label": "Top K"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "module": "openai-gpt-3:CreateCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "model": "gpt-4o",
+                "top_p": "1",
+                "select": "chat",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "Opportunities Bot Prompt 🤖\n\nAs an AI-powered Opportunities Bot, your mission is to uncover valuable insights and identify potential areas where our AI automation agency can best serve our prospective clients. To accomplish this, you will analyze three crucial pieces of information:\n\n1. Details about our AI automation agency, including our services, expertise, and successful case studies.\n2. Information about the prospective client, such as their industry, size, current processes, and technology stack.\n3. The client's dreams, aspirations, and most pressing challenges or pain points.\n\nUsing this information, generate three compelling paragraphs that highlight the specific opportunities where our agency can provide the most value to the client. Emphasize how our services can help them overcome their challenges, optimize their processes, and achieve their goals.\n\nIn the first paragraph, focus on the client's most pressing pain point and explain how our agency's relevant services can address this issue head-on. Provide a clear and concise solution that demonstrates our understanding of their needs and our ability to deliver results.\n\nIn the second paragraph, explore the client's dreams and aspirations, and showcase how our agency's expertise can help them realize these goals. Highlight the potential benefits of our services, such as increased efficiency, cost savings, and improved customer satisfaction.\n\nIn the third paragraph, identify a unique opportunity that the client may not have considered before. Demonstrate our agency's innovative thinking and proactive approach to problem-solving. Explain how this opportunity aligns with their goals and how our services can help them seize it.\n\nFinally, conclude your analysis with three thought-provoking questions that I should ask the client during our meeting. These questions should be designed to spark meaningful discussions, uncover additional insights, and demonstrate our genuine interest in their success. Number these questions as follows:\n\n1. [Question 1] \n2. [Question 2] \n3. [Question 3] \n\nEach question must have one emoji after it.\n\nSo, to confirm, you will have three paragraphs of analysis followed by three questions. This is an executive report.\n\nA good question is defined as something that would enable a positive discussion towards understanding the client business' problems or dream outcome. For example:\n\n- You mentioned you are struggling with client acquisition, which channels have you explored so far? 🤔\n- I noticed you offer digital marketing services to the design agencies on your website, but you wanted to focus on a different product. Is that something you would like to explore? 💎\n- To help you achieve your goal of scaling effectively using AI, please share your client acquisition cost and life time customer value 💷\n\nRemember to tailor your language and tone to the specific client and their industry. Use clear, concise, and persuasive language that showcases our agency's value proposition and differentiates us from competitors. Your insights will be instrumental in helping me prepare for a productive and impactful meeting with the prospective client.\n\nHere is the data.\n\nClient's dream outcome & problems: {{1.data.`6112a`.value}}\n\nData & research about the client: {{7.choices[].message.content}}\n\nInformation about my business: \n\nAutomation Planet 🌎AI-Powered Automation Agency 🌍Automation Planet is a cutting-edge AI automation agency that specializes in optimizing processes, automating workflows, and elevating businesses through the power of artificial intelligence. Our team of experienced tech experts from diverse backgrounds, including fintech, crypto startups, design agencies, media giants, and blue-chip companies, is dedicated to helping businesses streamline their operations and focus on their core objectives.Services:1. AI-Driven 301 Redirect Mapping 🗺️   - Utilize natural language processing (NLP) to accurately map web pages   - Increase accuracy and reduce the overall required time by up to 80%   - Example: Successfully mapped 10,000 URLs for a client's website migration, saving them 200 hours of manual work2. High-Volume Copy Generation 📝   - Employ hybrid workflows that allow copywriters to interact with cutting-edge 'long short-term memory' neural networks and NLP   - Create large volumes of highly-crafted, SEO-friendly copy   - Example: Generated 500 product descriptions for an e-commerce client in just 2 days, a task that would have taken a human writer weeks to complete3. Intelligent Lead Generation and Qualification 🕵️‍♂️   - Develop custom chatbots and AI tools to efficiently generate and qualify leads   - Integrate with existing CRM systems for seamless lead management   - Example: Implemented an AI-powered chatbot for a B2B client, resulting in a 30% increase in qualified leads and a 20% reduction in lead response time4. CRM Automation 📊   - Automate lead assignment, follow-ups, and data entry tasks   - Optimize lead management processes for improved efficiency and effectiveness   - Example: Automated the lead assignment process for a sales team, reducing manual effort by 80% and increasing lead conversion rates by 15%5. Sales Funnel Optimization 📈   - Design and oversee result-oriented sales funnels   - Monitor performance and make data-driven optimizations for maximum efficiency   - Example: Restructured a client's sales funnel using AI-driven insights, resulting in a 25% increase in conversion rates and a 40% reduction in customer acquisition costs6. Predictive Analytics 🔮   - Leverage AI and machine learning to analyze customer data and make accurate predictions   - Identify high-value opportunities and potential risks for proactive decision-making   - Example: Developed a predictive model for a retail client, accurately forecasting demand for key products and optimizing inventory management, leading to a 20% reduction in stockouts and a 15% increase in revenue7. Workflow Automation 🎡   - Identify and automate repetitive tasks across various departments   - Streamline processes and reduce manual effort, allowing teams to focus on high-value activities   - Example: Automated the expense reporting process for a client's finance department, reducing processing time by 70% and eliminating errors associated with manual data entryAt Automation Planet, we are committed to helping businesses harness the power of AI and automation to optimize their processes, automate workflows, and elevate their performance. Our tailored solutions are designed to address the unique needs of each client, ensuring maximum efficiency and measurable results.\n"
+                    }
+                ],
+                "max_tokens": "0",
+                "temperature": "1",
+                "n_completions": "1",
+                "response_format": "text"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 2100,
+                    "y": 0,
+                    "name": "ChatGPT 🤖"
+                },
+                "restore": {
+                    "expect": {
+                        "stop": {
+                            "mode": "chose"
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "gpt-4o (system)"
+                        },
+                        "select": {
+                            "label": "Create a Chat Completion (GPT Models)"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        },
+                        "logit_bias": {
+                            "mode": "chose"
+                        },
+                        "response_format": {
+                            "mode": "chose",
+                            "label": "Text"
+                        },
+                        "additionalParameters": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            },
+                            "label": "My OpenAI connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Select Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "chat",
+                                "prompt"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens",
+                        "required": true
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "n_completions",
+                        "type": "number",
+                        "label": "Number"
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "logit_bias",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "token",
+                                    "type": "text",
+                                    "label": "Token ID",
+                                    "required": true
+                                },
+                                {
+                                    "name": "probability",
+                                    "type": "number",
+                                    "label": "Probability",
+                                    "required": true,
+                                    "validate": {
+                                        "max": 100,
+                                        "min": -100
+                                    }
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Token Probability"
+                        },
+                        "type": "array",
+                        "label": "Token Probability"
+                    },
+                    {
+                        "name": "response_format",
+                        "type": "select",
+                        "label": "Response Format",
+                        "validate": {
+                            "enum": [
+                                "text",
+                                "json_object"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "seed",
+                        "type": "integer",
+                        "label": "Seed"
+                    },
+                    {
+                        "name": "stop",
+                        "spec": {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Stop Sequence"
+                        },
+                        "type": "array",
+                        "label": "Stop Sequences",
+                        "validate": {
+                            "maxItems": 4
+                        }
+                    },
+                    {
+                        "name": "additionalParameters",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Parameter Name",
+                                    "required": true
+                                },
+                                {
+                                    "name": "type",
+                                    "type": "select",
+                                    "label": "Input Type",
+                                    "options": [
+                                        {
+                                            "label": "Text",
+                                            "value": "text",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "text",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Number",
+                                            "value": "number",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "number",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Boolean",
+                                            "value": "boolean",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "boolean",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "date",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "date",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Any",
+                                            "value": "any",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "any",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Input Parameter"
+                        },
+                        "type": "array",
+                        "label": "Other Input Parameters"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": [
+                                        {
+                                            "label": "System",
+                                            "value": "system"
+                                        },
+                                        {
+                                            "label": "User",
+                                            "value": "user"
+                                        },
+                                        {
+                                            "label": "Assistant",
+                                            "value": "assistant"
+                                        }
+                                    ],
+                                    "required": true
+                                },
+                                {
+                                    "name": "content",
+                                    "type": "text",
+                                    "label": "Message Content"
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message"
+                        },
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 10,
+            "module": "app#perplexity-ai-2cmiq4:createAChatCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1367079
+            },
+            "mapper": {
+                "model": "llama-3-70b-instruct",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "Opportunities Bot Prompt 🤖\n\nAs an AI-powered Opportunities Bot, your mission is to uncover valuable insights and identify potential areas where our AI automation agency can best serve our prospective clients. To accomplish this, you will analyze three crucial pieces of information:\n\n1. Details about our AI automation agency, including our services, expertise, and successful case studies.\n2. Information about the prospective client, such as their industry, size, current processes, and technology stack.\n3. The client's dreams, aspirations, and most pressing challenges or pain points.\n\nUsing this information, generate three compelling paragraphs that highlight the specific opportunities where our agency can provide the most value to the client. Emphasize how our services can help them overcome their challenges, optimize their processes, and achieve their goals.\n\nIn the first paragraph, focus on the client's most pressing pain point and explain how our agency's relevant services can address this issue head-on. Provide a clear and concise solution that demonstrates our understanding of their needs and our ability to deliver results.\n\nIn the second paragraph, explore the client's dreams and aspirations, and showcase how our agency's expertise can help them realize these goals. Highlight the potential benefits of our services, such as increased efficiency, cost savings, and improved customer satisfaction.\n\nIn the third paragraph, identify a unique opportunity that the client may not have considered before. Demonstrate our agency's innovative thinking and proactive approach to problem-solving. Explain how this opportunity aligns with their goals and how our services can help them seize it.\n\nFinally, conclude your analysis with three thought-provoking questions that I should ask the client during our meeting. These questions should be designed to spark meaningful discussions, uncover additional insights, and demonstrate our genuine interest in their success. Number these questions as follows:\n\n1. [Question 1] \n2. [Question 2] \n3. [Question 3] \n\nEach question must have one emoji after it.\n\nSo, to confirm, you will have three paragraphs of analysis followed by three questions. This is an executive report.\n\nA good question is defined as something that would enable a positive discussion towards understanding the client business' problems or dream outcome. For example:\n\n- You mentioned you are struggling with client acquisition, which channels have you explored so far? 🤔\n- I noticed you offer digital marketing services to the design agencies on your website, but you wanted to focus on a different product. Is that something you would like to explore? 💎\n- To help you achieve your goal of scaling effectively using AI, please share your client acquisition cost and life time customer value 💷\n\nRemember to tailor your language and tone to the specific client and their industry. Use clear, concise, and persuasive language that showcases our agency's value proposition and differentiates us from competitors. Your insights will be instrumental in helping me prepare for a productive and impactful meeting with the prospective client.\n\nHere is the data.\n\nClient's dream outcome & problems: {{1.data.`6112a`.value}}\n\nData & research about the client: {{7.choices[].message.content}}\n\nInformation about my business: \n\nAutomation Planet 🌎AI-Powered Automation Agency 🌍Automation Planet is a cutting-edge AI automation agency that specializes in optimizing processes, automating workflows, and elevating businesses through the power of artificial intelligence. Our team of experienced tech experts from diverse backgrounds, including fintech, crypto startups, design agencies, media giants, and blue-chip companies, is dedicated to helping businesses streamline their operations and focus on their core objectives.Services:1. AI-Driven 301 Redirect Mapping 🗺️   - Utilize natural language processing (NLP) to accurately map web pages   - Increase accuracy and reduce the overall required time by up to 80%   - Example: Successfully mapped 10,000 URLs for a client's website migration, saving them 200 hours of manual work2. High-Volume Copy Generation 📝   - Employ hybrid workflows that allow copywriters to interact with cutting-edge 'long short-term memory' neural networks and NLP   - Create large volumes of highly-crafted, SEO-friendly copy   - Example: Generated 500 product descriptions for an e-commerce client in just 2 days, a task that would have taken a human writer weeks to complete3. Intelligent Lead Generation and Qualification 🕵️‍♂️   - Develop custom chatbots and AI tools to efficiently generate and qualify leads   - Integrate with existing CRM systems for seamless lead management   - Example: Implemented an AI-powered chatbot for a B2B client, resulting in a 30% increase in qualified leads and a 20% reduction in lead response time4. CRM Automation 📊   - Automate lead assignment, follow-ups, and data entry tasks   - Optimize lead management processes for improved efficiency and effectiveness   - Example: Automated the lead assignment process for a sales team, reducing manual effort by 80% and increasing lead conversion rates by 15%5. Sales Funnel Optimization 📈   - Design and oversee result-oriented sales funnels   - Monitor performance and make data-driven optimizations for maximum efficiency   - Example: Restructured a client's sales funnel using AI-driven insights, resulting in a 25% increase in conversion rates and a 40% reduction in customer acquisition costs6. Predictive Analytics 🔮   - Leverage AI and machine learning to analyze customer data and make accurate predictions   - Identify high-value opportunities and potential risks for proactive decision-making   - Example: Developed a predictive model for a retail client, accurately forecasting demand for key products and optimizing inventory management, leading to a 20% reduction in stockouts and a 15% increase in revenue7. Workflow Automation 🎡   - Identify and automate repetitive tasks across various departments   - Streamline processes and reduce manual effort, allowing teams to focus on high-value activities   - Example: Automated the expense reporting process for a client's finance department, reducing processing time by 70% and eliminating errors associated with manual data entryAt Automation Planet, we are committed to helping businesses harness the power of AI and automation to optimize their processes, automate workflows, and elevate their performance. Our tailored solutions are designed to address the unique needs of each client, ensuring maximum efficiency and measurable results.\n"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 2400,
+                    "y": 0,
+                    "name": "Llama 🦙"
+                },
+                "restore": {
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "llama-3-70b-instruct"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "app#perplexity-ai-2cmiq4"
+                            },
+                            "label": "My Perplexity AI connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:app#perplexity-ai-2cmiq4",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "spec": [
+                            {
+                                "name": "content",
+                                "type": "text",
+                                "label": "Content",
+                                "required": true
+                            },
+                            {
+                                "name": "role",
+                                "type": "select",
+                                "label": "Role",
+                                "options": [
+                                    {
+                                        "label": "User",
+                                        "value": "user"
+                                    },
+                                    {
+                                        "label": "Assistant",
+                                        "value": "assistant"
+                                    },
+                                    {
+                                        "label": "System",
+                                        "value": "system"
+                                    }
+                                ],
+                                "required": true
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1.999,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "number",
+                        "label": "Top K",
+                        "validate": {
+                            "max": 2048,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 12,
+            "module": "anthropic-claude:createAMessage",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1528134
+            },
+            "mapper": {
+                "model": "claude-3-opus-20240229",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "text": "Your mission is to analyze the responses from three AI models, each addressing the Opportunities Bot Prompt. Follow these steps to create an enhanced final output:\n\n1. Carefully review the three responses, focusing on their key insights, recommendations, and questions.\n\n2. Compare the responses to identify any hallucinations, inaccuracies, or inconsistencies. Highlight the strengths of each response, such as unique perspectives, compelling arguments, or well-crafted questions.\n\n3. Merge the best parts of each response to create a cohesive, persuasive, and insightful final output. Leverage the strengths of each model to enhance the overall quality and impact of the final response.\n\n4. Ensure that the final output maintains the specified format:\n   - Three compelling paragraphs highlighting specific opportunities where our agency can provide the most value to the client.\n   - Each paragraph should focus on a different aspect, such as addressing pain points, realizing dreams and aspirations, or identifying unique opportunities.\n   - Conclude with three thought-provoking questions designed to spark meaningful discussions and demonstrate our genuine interest in the client's success.\n   - Number the questions as follows:\n     1. [Question 1] \n     2. [Question 2] \n     3. [Question 3] \n   - Include a relevant emoji after each question.\n\n5. Present the final output as a standalone response, without any additional commentary or explanations.\n\n6. do not write this as a letter. keep each paragraph to a maximum of 75 words and write this as a succinct, informative executive report. You must add three questions at the end of the analysis:\n\nparagraph 1\nparagraph 2\nparagraph 3\nquestion 1\nquestion 2\nquestion 3\n\nRemember to maintain a clear, concise, and persuasive tone that showcases our agency's value proposition and differentiates us from competitors. The final output should be a powerful tool to help prepare for a productive and impactful meeting with the prospective client.\n\nDo not copy just one of these. You must produce an executive report combining elements from all of them. So, to confirm, you will have three paragraphs of analysis followed by three questions. This is an executive report.\n\nYou must learn at least one thing from each response.\n\nOutput 1: {{8.textResponse}}\nOutput 2: {{9.result}}\nOutput 3: {{10.choices[].message.content}}",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ],
+                "metadata": {},
+                "max_tokens": "4000",
+                "temperature": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 2700,
+                    "y": 0,
+                    "name": "King 👑"
+                },
+                "restore": {
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "claude-3-opus-20240229"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    },
+                                    "content": {
+                                        "mode": "chose",
+                                        "items": [
+                                            {
+                                                "type": {
+                                                    "mode": "chose",
+                                                    "label": "Text"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "stop_sequences": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "anthropic-claude"
+                            },
+                            "label": "My Anthropic Claude connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:anthropic-claude",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "uinteger",
+                        "label": "Max Tokens",
+                        "required": true
+                    },
+                    {
+                        "name": "messages",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": [
+                                        {
+                                            "label": "User",
+                                            "value": "user",
+                                            "nested": [
+                                                {
+                                                    "name": "content",
+                                                    "spec": {
+                                                        "spec": [
+                                                            {
+                                                                "help": "You can send image content blocks starting with Claude 3 models.",
+                                                                "name": "type",
+                                                                "type": "select",
+                                                                "label": "Type",
+                                                                "options": [
+                                                                    {
+                                                                        "label": "Text",
+                                                                        "value": "text",
+                                                                        "nested": [
+                                                                            {
+                                                                                "help": "Content of the message on behalf of the selected **Role** .",
+                                                                                "name": "text",
+                                                                                "type": "text",
+                                                                                "label": "Text",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "label": "Image",
+                                                                        "value": "image",
+                                                                        "nested": [
+                                                                            {
+                                                                                "name": "source",
+                                                                                "spec": [
+                                                                                    {
+                                                                                        "help": "File name, including the extension, for example, `image.jpg`.",
+                                                                                        "name": "filename",
+                                                                                        "type": "filename",
+                                                                                        "label": "Filename",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:name",
+                                                                                        "extension": [
+                                                                                            "jpeg",
+                                                                                            "jpg",
+                                                                                            "png",
+                                                                                            "gif",
+                                                                                            "webp"
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "help": "Binary data of the image. For example, you can retrieve the binary data of your image using the **HTTP: Get a file** module.",
+                                                                                        "name": "data",
+                                                                                        "type": "buffer",
+                                                                                        "label": "Data",
+                                                                                        "required": true,
+                                                                                        "semantic": "file:data"
+                                                                                    }
+                                                                                ],
+                                                                                "type": "collection",
+                                                                                "label": "Source",
+                                                                                "required": true
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "required": true
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Content"
+                                                    },
+                                                    "type": "array",
+                                                    "label": "Content",
+                                                    "labels": {
+                                                        "add": "Add content"
+                                                    },
+                                                    "required": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Assistant",
+                                            "value": "assistant",
+                                            "nested": [
+                                                {
+                                                    "help": "If the request ends with an assistant turn, then the response content will continue directly from that last turn.",
+                                                    "name": "content",
+                                                    "type": "text",
+                                                    "label": "Content",
+                                                    "required": true
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message"
+                        },
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    },
+                    {
+                        "name": "system",
+                        "type": "text",
+                        "label": "System Prompt"
+                    },
+                    {
+                        "name": "metadata",
+                        "spec": [
+                            {
+                                "name": "user_id",
+                                "type": "text",
+                                "label": "User ID"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Metadata"
+                    },
+                    {
+                        "name": "stop_sequences",
+                        "spec": {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Stop Sequence"
+                        },
+                        "type": "array",
+                        "label": "Stop Sequences"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "uinteger",
+                        "label": "Top K"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 15,
+            "module": "util:SetVariables",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "scope": "roundtrip",
+                "variables": [
+                    {
+                        "name": "COMPANYNAME",
+                        "value": ""
+                    },
+                    {
+                        "name": "CLIENTNAME",
+                        "value": ""
+                    },
+                    {
+                        "name": "MEETINGDATE",
+                        "value": ""
+                    },
+                    {
+                        "name": "WEBSITE",
+                        "value": ""
+                    },
+                    {
+                        "name": "DREAMOUTCOME",
+                        "value": ""
+                    },
+                    {
+                        "name": "WEBSITEOVERVIEW",
+                        "value": ""
+                    },
+                    {
+                        "name": "RESEARCH",
+                        "value": ""
+                    },
+                    {
+                        "name": "OPPORTUNITIESKING",
+                        "value": ""
+                    },
+                    {
+                        "name": "CLAUDE",
+                        "value": ""
+                    },
+                    {
+                        "name": "CHATGPT",
+                        "value": ""
+                    },
+                    {
+                        "name": "LLAMA",
+                        "value": ""
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 3003,
+                    "y": -9
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        },
+                        "variables": {
+                            "items": [
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ]
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "variables",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Variable name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Variable value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Variables"
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "COMPANYNAME",
+                        "type": "any",
+                        "label": "COMPANYNAME"
+                    },
+                    {
+                        "name": "CLIENTNAME",
+                        "type": "any",
+                        "label": "CLIENTNAME"
+                    },
+                    {
+                        "name": "MEETINGDATE",
+                        "type": "any",
+                        "label": "MEETINGDATE"
+                    },
+                    {
+                        "name": "WEBSITE",
+                        "type": "any",
+                        "label": "WEBSITE"
+                    },
+                    {
+                        "name": "DREAMOUTCOME",
+                        "type": "any",
+                        "label": "DREAMOUTCOME"
+                    },
+                    {
+                        "name": "WEBSITEOVERVIEW",
+                        "type": "any",
+                        "label": "WEBSITEOVERVIEW"
+                    },
+                    {
+                        "name": "RESEARCH",
+                        "type": "any",
+                        "label": "RESEARCH"
+                    },
+                    {
+                        "name": "OPPORTUNITIESKING",
+                        "type": "any",
+                        "label": "OPPORTUNITIESKING"
+                    },
+                    {
+                        "name": "CLAUDE",
+                        "type": "any",
+                        "label": "CLAUDE"
+                    },
+                    {
+                        "name": "CHATGPT",
+                        "type": "any",
+                        "label": "CHATGPT"
+                    },
+                    {
+                        "name": "LLAMA",
+                        "type": "any",
+                        "label": "LLAMA"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 14,
+            "module": "google-docs:createADocumentFromTemplate",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "from": "drive",
+                "name": "{{1.data.`6nc0t`.value}}",
+                "image": {},
+                "select": "dropdown",
+                "document": "/1szoZ7ApAkJx62iA4Gs19TxBjOL2y3J2J/1AIxza-q2To8gfyEpCULdWNeXl5bAhkCNdA7pPCkCCPc",
+                "folderId": "/1szoZ7ApAkJx62iA4Gs19TxBjOL2y3J2J",
+                "requests": {
+                    "LLAMA": "{{10.choices[].message.content}}",
+                    "CLAUDE": "{{8.textResponse}}",
+                    "CHATGPT": "{{9.result}}",
+                    "WEBSITE": "{{1.data.fll64.value}}",
+                    "CLIENTNAME": "{{1.data.bhp6i.value}}",
+                    "COMPANYNAME": "{{1.data.`6nc0t`.value}}",
+                    "MEETINGDATE": "Date: {{1.data.`8pjq0`.value.start_date}}\nTime{{1.data.`8pjq0`.value.start_time}}",
+                    "DREAMOUTCOME": "{{1.data.`6112a`.value}}",
+                    "WEBSITEOVERVIEW": "{{5.result}}",
+                    "OPPORTUNITIESKING": "{{12.textResponse}}"
+                },
+                "destination": "drive"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 3300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "select": {
+                            "label": "By Dropdown"
+                        },
+                        "document": {
+                            "path": [
+                                "1,000 IQ Meeting Prep 💎",
+                                "Automation Planet Template 💎"
+                            ]
+                        },
+                        "folderId": {
+                            "mode": "chose",
+                            "path": [
+                                "1,000 IQ Meeting Prep 💎"
+                            ]
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "Google Connection (jack@aiautomationswithjack.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Create a Document from a Template",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "map",
+                                "dropdown"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Title",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "New Drive Location",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "document",
+                        "type": "file",
+                        "label": "Document ID",
+                        "required": true
+                    },
+                    {
+                        "name": "requests",
+                        "spec": [
+                            {
+                                "name": "COMPANYNAME",
+                                "type": "any"
+                            },
+                            {
+                                "name": "CLIENTNAME",
+                                "type": "any"
+                            },
+                            {
+                                "name": "MEETINGDATE",
+                                "type": "any"
+                            },
+                            {
+                                "name": "WEBSITE",
+                                "type": "any"
+                            },
+                            {
+                                "name": "DREAMOUTCOME",
+                                "type": "any"
+                            },
+                            {
+                                "name": "WEBSITEOVERVIEW",
+                                "type": "any"
+                            },
+                            {
+                                "name": "OPPORTUNITIESKING",
+                                "type": "any"
+                            },
+                            {
+                                "name": "CLAUDE",
+                                "type": "any"
+                            },
+                            {
+                                "name": "CHATGPT",
+                                "type": "any"
+                            },
+                            {
+                                "name": "LLAMA",
+                                "type": "any"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Values"
+                    },
+                    {
+                        "name": "image",
+                        "spec": [
+                            {
+                                "name": "kix.sn9ue73ar1li",
+                                "type": "url",
+                                "label": "Body: Image No. 1"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Image URLs"
+                    },
+                    {
+                        "name": "folderId",
+                        "type": "folder",
+                        "label": "New Document's Location",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

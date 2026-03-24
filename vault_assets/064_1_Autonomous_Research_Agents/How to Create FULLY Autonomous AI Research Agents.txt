@@ -1,0 +1,462 @@
+[00:00:00] in this video I'm going to give you a
+[00:00:01] step-by-step tutorial on how to create
+[00:00:03] an AI research agent that has like
+[00:00:05] hundreds if not thousands of use cases
+[00:00:08] using perplexity Ai and make.com
+[00:00:11] perplexity AI is basically like chat gbt
+[00:00:14] Plus Google at the same time and enables
+[00:00:16] us to look at different URLs get data
+[00:00:19] and insights from it then we'll have an
+[00:00:20] army of gbt assistants that will do a
+[00:00:23] lot of the heavy lifting and turn this
+[00:00:24] into something really incredible you can
+[00:00:26] build this Automation in so many
+[00:00:27] different ways for the purposes of this
+[00:00:30] video and this tutorial here's the
+[00:00:32] ultimation we're going to build so we're
+[00:00:33] going to feed perplexity AI a prompt and
+[00:00:37] URL that URL could be a YouTube video it
+[00:00:40] could be a Reddit post it could be an
+[00:00:42] interesting article just something that
+[00:00:44] we think is interesting and we want to
+[00:00:46] create content on after that we're going
+[00:00:48] to transpose that into Google doc as a
+[00:00:51] script that we can use to make content
+[00:00:53] then we're going to send it to three
+[00:00:55] different GPT specialist agents that are
+[00:00:58] going to give us three completely
+[00:00:59] different put one is going to turn that
+[00:01:01] into LinkedIn post another is going to
+[00:01:03] turn it into a tweet and then finally
+[00:01:05] something for Facebook as well so from
+[00:01:07] just entering one URL we're going to get
+[00:01:09] four completely different content
+[00:01:11] outputs and you can use this as a
+[00:01:13] research assistant but on top of that
+[00:01:15] what perplexity is also going to do is
+[00:01:17] find his unique data and insight based
+[00:01:20] on the topic that we're discussing that
+[00:01:22] we just could not get through a typical
+[00:01:24] language model and not only will this
+[00:01:26] enable us to take let's say an
+[00:01:27] interesting article it will enable us to
+[00:01:29] get deep deeper more analytical
+[00:01:31] understanding and get it transposed into
+[00:01:33] a post ready format for whatever we want
+[00:01:35] and we'll use this an example but like I
+[00:01:37] said there's so many different ways you
+[00:01:39] could use this integration to create
+[00:01:40] something epic but we're going to start
+[00:01:41] from this from the beginning so the
+[00:01:43] software we're going to use for this is
+[00:01:44] a no code automation tool called
+[00:01:46] make.com you might have heard of it a
+[00:01:49] similar competitor to it is zapia but
+[00:01:51] they basically do the same thing they
+[00:01:53] give you this drag and drop build
+[00:01:56] functionality where you can connect 600
+[00:01:59] 700 apps from Gmail Google Docs you name
+[00:02:03] it and this is going to be the no code
+[00:02:04] automation tool that we're going to use
+[00:02:06] and that's another the call up by the
+[00:02:07] way there's going to be no coding
+[00:02:09] whatsoever this entire video it's
+[00:02:10] literally drag and drop and just follow
+[00:02:12] the instructions so when you come over
+[00:02:14] to make what I'm going to do is
+[00:02:17] basically you come on to the homepage so
+[00:02:20] we'll discard all these changes to build
+[00:02:21] it from again and you have this
+[00:02:22] dashboard it shows you how much how many
+[00:02:24] operations that you've had and what the
+[00:02:25] cost of that so all we're going to do is
+[00:02:27] come to this button here called create
+[00:02:28] new scenario like this
+[00:02:30] and then there we are we start from the
+[00:02:31] beginning so the first thing we want to
+[00:02:33] do is add perplexity okay so we search
+[00:02:35] for perplexity
+[00:02:38] here bro now the first thing you'll see
+[00:02:40] when you do this is this perplexity
+[00:02:42] Community tab because you'll need to
+[00:02:44] come on to a third party website to get
+[00:02:45] the complexity AI integration so we come
+[00:02:48] down here we click this install button
+[00:02:50] at the bottom we leave make the make.com
+[00:02:52] website now this integration here is €37
+[00:02:56] but what it basically means is that you
+[00:02:58] can use it within all of your me. Chrome
+[00:03:00] Integrations for life I'm not sponsored
+[00:03:02] by these guys uh but this is well well
+[00:03:04] well worth the investment for the level
+[00:03:06] of automation that we can get so what
+[00:03:07] then happens is you hit the get access
+[00:03:10] for3 37 and you get this email and this
+[00:03:12] email gives you step-by-step
+[00:03:13] instructions on how to add it and also
+[00:03:16] crucially your unique access code that
+[00:03:18] you can use to integrate it with me
+[00:03:20] you'll then need to come back over to
+[00:03:21] perplexity which by the way is such an
+[00:03:23] Epic tool you click on your username at
+[00:03:25] the bottom and then you come over to API
+[00:03:27] in the top right hand corner and then we
+[00:03:29] need to add a couple of API chronics to
+[00:03:31] our account I've added $5 I've used this
+[00:03:33] a lot and I've not run out at all it's
+[00:03:35] so so so cheap to run but essentially
+[00:03:38] click on the buy credits button and lo
+[00:03:40] the account with just a couple of
+[00:03:41] dollars so we can run these automations
+[00:03:42] and use it in the background once we've
+[00:03:45] done that we then come back over to make
+[00:03:47] and essentially the perplexity AI icon
+[00:03:50] will appear for you then you'll be able
+[00:03:51] to click it and we're going to click on
+[00:03:53] this one here which is create a chat
+[00:03:55] completion now for the purposes of this
+[00:03:58] video we're going to leave it as mral 7
+[00:04:00] be instruct that's absolutely fine and
+[00:04:03] then we're going to add an item into it
+[00:04:04] now for the purposes of this tutorial
+[00:04:06] let's say that you and I want to create
+[00:04:08] content on personal finance and that's
+[00:04:10] our Niche and that's what we want to do
+[00:04:11] and we want to stay a breast of all the
+[00:04:13] latest developments where would we go
+[00:04:15] let's say we head over to the a Reddit
+[00:04:17] Forum personal finance and we want to
+[00:04:19] look at the top post for this month and
+[00:04:21] find topics that we think are
+[00:04:23] interesting and that we think that our
+[00:04:25] customers our target audience might find
+[00:04:27] interesting so let's look at this one
+[00:04:29] here for example right please playay
+[00:04:30] close attention to your company's 401K
+[00:04:32] vesting schedule what we're going to do
+[00:04:34] is copy the URL and I've created a test
+[00:04:35] prompt here for perlex which is hey you
+[00:04:37] are a summarization expert who can
+[00:04:39] identify the most Salient and exciting
+[00:04:41] aspects of any Reddit post and comment
+[00:04:43] section you will summarize URL and also
+[00:04:46] complete further research on this topic
+[00:04:48] to provide data points then I give it
+[00:04:50] stepbystep instructions I basically ask
+[00:04:53] it to give me three outputs I ask it to
+[00:04:56] create a summarization of the article
+[00:04:58] and then I ask it to summarize the
+[00:05:00] comments to give us some unique
+[00:05:01] perspective from the audience in terms
+[00:05:03] of what's the pulse on how this has been
+[00:05:04] perceived and then for perplex to do its
+[00:05:06] own insights and research and data point
+[00:05:08] so we can bring some actual facts to the
+[00:05:10] conversation so all we ever do is change
+[00:05:12] this URL so in this case we're going to
+[00:05:14] copy all the text we come over to this
+[00:05:16] Mage here we're going to paste it in and
+[00:05:18] then we assign it the role of user we
+[00:05:20] click okay and then we're going to run
+[00:05:22] this module and the cool thing about
+[00:05:24] mega.com and these no code automation
+[00:05:25] tools is that you can run this as
+[00:05:27] frequently as you like so every 50
+[00:05:29] minutes every hour every week whatever
+[00:05:31] you want now we've got this one up here
+[00:05:33] so let's see what the output is we come
+[00:05:35] over here onto the output section come
+[00:05:37] down to choices plus one message roll
+[00:05:41] content let's have a look at this post
+[00:05:44] summary I once ignored my my company's
+[00:05:46] 401K enrollment assume it wasn't worth
+[00:05:48] my time but a colleague's unexpected
+[00:05:50] retirement due to health issues made me
+[00:05:52] reconsider I had men she enrolled blah
+[00:05:54] blah blah and by the way you can
+[00:05:56] completely edit this prompt and just you
+[00:05:58] know basically kol it a little bit until
+[00:06:00] you get the perfect output that you like
+[00:06:02] and then it gives us some perspective
+[00:06:03] telling us what other people have found
+[00:06:04] like some experiences the importance of
+[00:06:07] starting early in taking advantage on
+[00:06:08] employee matches some off advice maximum
+[00:06:11] contributions and then we got data so
+[00:06:13] we've got some data on it like tax
+[00:06:15] benefits contributions 41k are made with
+[00:06:17] pre-tax dollars reducing taxal income
+[00:06:19] starting early the Early starts blah
+[00:06:21] blah blah so we've got a summary of the
+[00:06:22] post we've got sum of the comments and
+[00:06:24] we've got some data all from just URL
+[00:06:27] perfect now the next question is what do
+[00:06:29] we do with that and I'll just say as
+[00:06:30] well by the way this could be a Reddit
+[00:06:32] URL it could be an article it could be a
+[00:06:34] research paper whatever you want and you
+[00:06:37] can just add as many specifics as you
+[00:06:38] want here so let's say we want to do a
+[00:06:41] video on that what we want to do is add
+[00:06:42] and get an output into Google Docs if we
+[00:06:44] just come here we type in Google Docs
+[00:06:47] verified perfect then we click on insert
+[00:06:49] a paragraph to a document Perfect by
+[00:06:53] drop down my drive click here and I've
+[00:06:56] said hey add this to content ideas right
+[00:06:59] so then it has a pended text so what do
+[00:07:02] we want it to be well let's have a look
+[00:07:03] we look at choices come down to
+[00:07:07] message
+[00:07:08] content beautiful so what this will then
+[00:07:11] basically do is take the content from
+[00:07:13] the previous module and put it into
+[00:07:15] there and then we click okay we've got
+[00:07:17] our document here on content ideas so we
+[00:07:20] come back over to the whole automation
+[00:07:22] we hit the Run once perplexes magic in
+[00:07:25] the background once it's answered the
+[00:07:27] question for us it will fire over to the
+[00:07:29] Google dog so if we come back over to
+[00:07:31] Google dog we should see some content
+[00:07:34] and here we go look post summary first
+[00:07:36] person the perspective and a data and
+[00:07:39] then it will just keep on adding this
+[00:07:41] every single time we do and we can do
+[00:07:43] really cool fancy stuff with the
+[00:07:44] formatting just to keep this video
+[00:07:45] simple I've tried to keep it as you know
+[00:07:47] basic as possible but essentially every
+[00:07:49] time runs automation it will just add it
+[00:07:51] into this document for us that we can
+[00:07:53] just review and make content from but
+[00:07:55] then this is where it gets really
+[00:07:57] interesting where we get these
+[00:07:58] individual GPT agents to do some extra
+[00:08:01] stuff for us so we first of all want to
+[00:08:03] unlink these so we come here we right
+[00:08:05] click and then we hit unlink and then we
+[00:08:07] want what's called a router now a router
+[00:08:09] just lets us say hey this is the input
+[00:08:11] and these are several other things that
+[00:08:12] F off at the same time so we click on
+[00:08:14] flow control and then we're going to
+[00:08:16] come down here to router perfect so one
+[00:08:19] of the roots is going to be to this
+[00:08:21] Google Docs so we'll bring that over
+[00:08:23] here perfect and then let's add chat GPT
+[00:08:27] and there's so many different ways that
+[00:08:28] you can use this but the one that will
+[00:08:29] looking for in particular is to message
+[00:08:31] an assistant so we click on that one
+[00:08:33] there perfect you'll be prompted here to
+[00:08:36] connect to your openai API now here's
+[00:08:39] exactly how you do that so you're going
+[00:08:41] to head over to platform. open.com and
+[00:08:44] in this place here you'll be able to
+[00:08:45] create API keys for your connection so
+[00:08:48] you come down on the left hand side to
+[00:08:49] API keys and you can create a new secret
+[00:08:51] key for every use case so you can
+[00:08:52] actually track your usage based on the
+[00:08:54] automations or if you're doing this for
+[00:08:55] clients that makes it very easy now
+[00:08:58] standard practice never never sh API
+[00:09:00] keys with anybody they may just run up a
+[00:09:01] huge Tab and you may have an idea about
+[00:09:03] it so what will happen is you'll get a
+[00:09:05] new API key and then when you come back
+[00:09:07] over you'll enter it here you'll connect
+[00:09:09] them together and then that will make
+[00:09:10] perfect sense but then what we need to
+[00:09:12] do next is create some really cool
+[00:09:14] interesting agents for our new
+[00:09:16] automation so what we do here is we come
+[00:09:18] down to assistants on the left hand side
+[00:09:21] and you can see I've got a couple of
+[00:09:22] assistants there already making an
+[00:09:24] assistant is unbelievably easy so what
+[00:09:27] we're going to do is we click on this
+[00:09:28] crate button the top right and let's
+[00:09:30] call the first assistant LinkedIn bot
+[00:09:34] and we'll give him a little bot emergy
+[00:09:35] as well so it's perfect and then we're
+[00:09:36] going to give some really clear
+[00:09:37] instructions here now rather than use a
+[00:09:39] prebuild promt that I had what I wanted
+[00:09:41] to do is show you how easy it is to
+[00:09:43] create instructions for this by using a
+[00:09:45] platform like Claude so if you come over
+[00:09:47] to Claude Ai and ask it a question like
+[00:09:48] this now with Claude what I've done here
+[00:09:50] is given it a prompt that is I think
+[00:09:52] pretty Universal will help you in almost
+[00:09:54] every scenario so your role is to create
+[00:09:56] custom instructions for a custom EG a i
+[00:10:00] bot think step by step the purpose of
+[00:10:02] the bot is to take content and to
+[00:10:04] transform it into a LinkedIn post the
+[00:10:06] bot will receive a redit post summary a
+[00:10:08] summary with comments on that post and
+[00:10:10] some data here is the supporting
+[00:10:12] information to help with instructions
+[00:10:13] and information on the desire turn the
+[00:10:15] voice we would like the AI agent to
+[00:10:17] create the content in and then all I did
+[00:10:19] here is I basically just went on Google
+[00:10:21] uh and I did this offline CU I thought
+[00:10:23] it be a bit quicker but basically just
+[00:10:24] find the three like seminal pieces of
+[00:10:27] content on how you should create
+[00:10:29] LinkedIn post post length guidance you
+[00:10:32] know how we need to structure and think
+[00:10:33] about it and then what I did is I fed it
+[00:10:36] with my turn of voice or should I say
+[00:10:38] the monzo turn of voice because they do
+[00:10:40] it I find in a way that doesn't really
+[00:10:42] make it feel like it's an AI Le thing I
+[00:10:45] talked about it before my channel but
+[00:10:46] giving it some instructions on how I
+[00:10:48] want to sound you can feed it with your
+[00:10:50] own data then we're going to hit
+[00:10:52] enter and then what Claude is going to
+[00:10:54] do for us essentially is give us the
+[00:10:55] prompt to feed into chat GPT agent and
+[00:10:58] then we can experiment with it and
+[00:11:00] change it if we need to but this is
+[00:11:02] going to give us something incredibly
+[00:11:03] detailed so we just had a little thing
+[00:11:04] here just to say that please only
+[00:11:06] respond with the content add need for
+[00:11:07] the bot you are instructing the bot and
+[00:11:09] then Cloe here with the with the second
+[00:11:11] problem to basically start to give us
+[00:11:12] all the output that we need look at this
+[00:11:15] optimal length 1300 characters or less
+[00:11:17] Clarity logical flow Maximum Impact
+[00:11:19] enhanc engagement by blah blah blah very
+[00:11:22] very very very cool so then we'll just
+[00:11:24] get that improved a little bit just to
+[00:11:26] make sure it's exactly the kind of thing
+[00:11:27] that we need and again once this is done
+[00:11:29] in complete this isn't something that
+[00:11:31] you have to come back and touch a
+[00:11:33] thousand times over right you're pretty
+[00:11:34] much just going to leave it there and
+[00:11:36] this automation is going to run the
+[00:11:37] background you know in perpetuity
+[00:11:40] essentially cool so this is all loading
+[00:11:42] up fantastic and as you can imagine
+[00:11:44] we'll do the exact same thing for
+[00:11:46] Facebook we'll do the exact same thing
+[00:11:47] for X great so we copy this and then
+[00:11:49] we're going to come back over to our
+[00:11:50] assistant and give it the instructions
+[00:11:52] and what's really cool about this right
+[00:11:53] we've got the turn and style link down
+[00:11:54] we've got the post structure editing and
+[00:11:56] optimization ensure Clarity logical flow
+[00:11:58] for Maximum Impact it's really really
+[00:12:00] good like that and interestingly look at
+[00:12:01] this cting attention grabbing headline
+[00:12:03] that captures the main point open with a
+[00:12:04] compelling hook surprising fact or brief
+[00:12:07] anecdote all right excellent so then
+[00:12:09] we've got this here which is perfect the
+[00:12:11] model we're going to go for GPT 4 Turbo
+[00:12:14] preview it does cost a little bit more
+[00:12:16] but overall honestly I actually haven't
+[00:12:17] noticed any of the cost in a significant
+[00:12:19] way so that's all done and complete and
+[00:12:22] once that's done we come back over to
+[00:12:23] make here so we click on this one here
+[00:12:26] we've got the Open Eye connection done
+[00:12:27] and sorted which is excellent so the
+[00:12:29] message is going to be the output from
+[00:12:31] the perplexity AI right so we come down
+[00:12:34] here let's have a look let's go to
+[00:12:36] choices
+[00:12:38] message content perfect great so then
+[00:12:41] this is here then we're going to do
+[00:12:43] assistant we're going to pick our bot
+[00:12:45] which is the LinkedIn bot which we're
+[00:12:47] happy about which is perfect and then
+[00:12:49] we're going to click okay excellent and
+[00:12:52] then we're going to hit run the
+[00:12:56] Automation and these individual agents I
+[00:12:59] find just so helpful because it's just
+[00:13:01] so much easier to have like six seven 8
+[00:13:03] 10 agents all doing one really specific
+[00:13:05] thing rather than having one that's
+[00:13:07] trying to do a million different things
+[00:13:09] and they can feed into this in a million
+[00:13:11] different ways as well like you can
+[00:13:13] literally have so many assistants
+[00:13:15] running around all doing really really
+[00:13:17] specific tasks for you that just make
+[00:13:19] your life so much easier when I was
+[00:13:21] saying that like there's no limitations
+[00:13:23] to how good this can be like genuinely
+[00:13:25] It Isn't So let's check out what we've
+[00:13:27] got here then great we come down to
+[00:13:28] Output
+[00:13:30] come down to Content plus one
+[00:13:34] text value
+[00:13:38] annotations great look at this did you
+[00:13:40] know the average 41k balance is over
+[00:13:42] $100,000 what's even remarkable is how
+[00:13:45] much of that comes from free money
+[00:13:47] through employer matching a recent
+[00:13:48] sharing on a poll Forum book The like
+[00:13:50] blah blah blah blah blah why it matters
+[00:13:53] so what's holding you back L ass and
+[00:13:55] wisdom and it's even giv us some things
+[00:13:57] there are a couple of things that I
+[00:13:58] would change out of this for sure but
+[00:14:00] like how outrageous is it that we all we
+[00:14:04] ever did is we started with the Reddit
+[00:14:05] URL and then like we've got this thing
+[00:14:08] that's like literally specifically
+[00:14:09] designed now for LinkedIn and then what
+[00:14:11] we can do after that for this particular
+[00:14:13] th flow is add in LinkedIn so we click
+[00:14:16] on LinkedIn again we'd have to verify
+[00:14:18] that after done that in
+[00:14:19] advance but again it's exactly the same
+[00:14:22] process create a user text post and then
+[00:14:25] we're here then we create connection and
+[00:14:26] then just to touch on pricing briefly so
+[00:14:28] I make you can get it for free and I've
+[00:14:30] been using the free version for this
+[00:14:31] video it will cover you for the basics
+[00:14:33] but then if you want to scale up $9 a
+[00:14:36] month $16 a month maybe a little bit
+[00:14:38] more so it's all based on the size of
+[00:14:39] your operation but it's very very very
+[00:14:41] low cost the other thing that you'll
+[00:14:43] need of course is going to be with the
+[00:14:45] chat GPT and to get the AI systems
+[00:14:47] within chat GPT you do need chat GPT
+[00:14:49] plus so that's going to be around $20 a
+[00:14:51] month and then for perplexity we just
+[00:14:53] buy credits as we go but that's $5 and
+[00:14:55] that lasts quite a while and then you've
+[00:14:57] got the cost of getting the perplexity
+[00:14:58] integration into make but if you do
+[00:15:01] those things and you get it set up the
+[00:15:03] applications of this I genuinely think
+[00:15:05] are really significant and I just wanted
+[00:15:08] to run through this one in particular as
+[00:15:09] a kind of for instance of like check
+[00:15:12] this one out and see what you can do but
+[00:15:13] I'd be really curious to know any ideas
+[00:15:14] that you've got if you want tutorials on
+[00:15:17] getting specific outcomes let me know
+[00:15:19] Down Below in the comment section I can
+[00:15:20] do more these kinds of videos I
+[00:15:22] appreciate it's a little bit different
+[00:15:23] than the standard video but I just think
+[00:15:25] this whole thing is just so epic that it
+[00:15:28] warranted a video by itself but in any
+[00:15:30] case that's it for this one guys have a
+[00:15:31] great week and see you next time

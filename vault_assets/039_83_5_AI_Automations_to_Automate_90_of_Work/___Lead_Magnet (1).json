@@ -1,0 +1,178 @@
+{
+  "name": "🔥 Lead Magnet",
+  "nodes": [
+    {
+      "parameters": {
+        "formId": "Ke4XsLth"
+      },
+      "type": "n8n-nodes-base.typeformTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -160,
+        -120
+      ],
+      "id": "6412fcfa-fe49-4148-a5c7-3e9770c17353",
+      "name": "Typeform Trigger",
+      "webhookId": "495817a1-66dc-4790-bb99-f495203f541f",
+      "credentials": {
+        "typeformApi": {
+          "id": "6cdb2Do62kFuuhmm",
+          "name": "Typeform account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "GPT-4O"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json['Are you a hotel in Dubai?'] }}{{ $json['Are you looking to purchase umbrellas for your hotel?'] }}{{ $json['Are you specifically interested in umbrella packages for hotels?'] }}{{ $json['Is your business related to the hospitality industry?'] }}\n\n{{ $json['Are you located in Dubai?'] }}"
+            },
+            {
+              "content": "=Based on these responses and the information about our business, create a unique document in html that looks amazing. \n\nI want a bespoke 10 step process for scaling their business to 10 per month.\n\nThe below is an example outline. use this and make it specific and unique for that business.\n\nUse the below html, but it make it unique.\n\n\nYou must reference the business' name and tailor the responses in the pdf to the business. Talk about their first name and their company name\n\nYour outputs MUST begin with: `html\\n\n\nand end with: n</html>\\n\n\n\n\nfn: {{ $json['First name'] }} {{ $json['Last name'] }}\ncompany name: \n {{ $json.Company }}\n\n\nYou must output in html only.\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>10 Steps to Scale Your Business to $10k/Month</title>\n    <style>\n        :root {\n            --primary: #2563eb;\n            --primary-dark: #1d4ed8;\n            --secondary: #f97316;\n            --text: #1e293b;\n            --text-light: #64748b;\n            --bg: #ffffff;\n            --bg-alt: #f8fafc;\n            --border: #e2e8f0;\n        }\n        \n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n        \n        body {\n            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n            color: var(--text);\n            background-color: var(--bg);\n            line-height: 1.6;\n            max-width: 1200px;\n            margin: 0 auto;\n            padding: 20px;\n        }\n        \n        .container {\n            background-color: var(--bg);\n            border-radius: 12px;\n            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);\n            overflow: hidden;\n        }\n        \n        .header {\n            background: linear-gradient(135deg, var(--primary), var(--primary-dark));\n            color: white;\n            padding: 60px 40px;\n            text-align: center;\n            position: relative;\n        }\n        \n        .header h1 {\n            font-size: 2.5rem;\n            font-weight: 800;\n            margin-bottom: 16px;\n            letter-spacing: -0.025em;\n        }\n        \n        .header p {\n            font-size: 1.25rem;\n            max-width: 700px;\n            margin: 0 auto;\n            opacity: 0.9;\n        }\n        \n        .content {\n            padding: 40px;\n        }\n        \n        .steps-container {\n            display: grid;\n            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n            gap: 30px;\n            margin-top: 20px;\n        }\n        \n        .step-card {\n            background-color: var(--bg);\n            border-radius: 10px;\n            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);\n            padding: 30px;\n            transition: transform 0.3s ease, box-shadow 0.3s ease;\n            border: 1px solid var(--border);\n            height: 100%;\n            display: flex;\n            flex-direction: column;\n        }\n        \n        .step-card:hover {\n            transform: translateY(-5px);\n            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);\n        }\n        \n        .step-number {\n            background-color: var(--primary);\n            color: white;\n            width: 40px;\n            height: 40px;\n            border-radius: 50%;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-weight: 700;\n            font-size: 1.2rem;\n            margin-bottom: 20px;\n        }\n        \n        .step-card h3 {\n            font-size: 1.5rem;\n            font-weight: 700;\n            margin-bottom: 15px;\n            color: var(--primary-dark);\n        }\n        \n        .step-card p {\n            color: var(--text-light);\n            flex-grow: 1;\n        }\n        \n        .metrics {\n            margin-top: 15px;\n            display: flex;\n            align-items: center;\n            gap: 10px;\n        }\n        \n        .metric {\n            background-color: var(--bg-alt);\n            border-radius: 6px;\n            padding: 6px 12px;\n            font-size: 0.875rem;\n            font-weight: 600;\n        }\n        \n        .metric.positive {\n            color: #047857;\n            background-color: #d1fae5;\n        }\n        \n        .metric.highlight {\n            color: var(--secondary);\n            background-color: #fff7ed;\n        }\n        \n        .footer {\n            background-color: var(--bg-alt);\n            padding: 30px 40px;\n            text-align: center;\n            border-top: 1px solid var(--border);\n        }\n        \n        .cta-button {\n            display: inline-block;\n            background-color: var(--secondary);\n            color: white;\n            font-weight: 600;\n            padding: 12px 24px;\n            border-radius: 8px;\n            text-decoration: none;\n            transition: background-color 0.2s ease;\n            margin-top: 20px;\n        }\n        \n        .cta-button:hover {\n            background-color: #ea580c;\n        }\n        \n        .divider {\n            height: 4px;\n            width: 60px;\n            background: var(--primary);\n            margin: 30px auto;\n            border-radius: 2px;\n        }\n        \n        .intro {\n            text-align: center;\n            margin-bottom: 40px;\n        }\n        \n        .intro p {\n            max-width: 800px;\n            margin: 0 auto;\n            font-size: 1.1rem;\n            color: var(--text-light);\n        }\n        \n        @media (max-width: 768px) {\n            .header {\n                padding: 40px 20px;\n            }\n            \n            .header h1 {\n                font-size: 2rem;\n            }\n            \n            .content {\n                padding: 30px 20px;\n            }\n            \n            .steps-container {\n                grid-template-columns: 1fr;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <div class=\"header\">\n            <h1>10 Steps to Scale Your Business to $10k/Month</h1>\n            <p>A proven roadmap to transform your side hustle into a profitable business that consistently generates five figures monthly.</p>\n        </div>\n        \n        <div class=\"content\">\n            <div class=\"intro\">\n                <p>Growing a business to $10,000 in monthly revenue requires strategic planning, consistent execution, and a focus on scalable systems. Follow these ten actionable steps to reach your revenue goals faster.</p>\n                <div class=\"divider\"></div>\n            </div>\n            \n            <div class=\"steps-container\">\n                <!-- Step 1 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">1</div>\n                    <h3>Define Your Niche Market</h3>\n                    <p>Identify a specific audience segment where your expertise can solve a clear problem. Narrowing your focus allows for more targeted marketing and higher conversion rates.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">+42% Conversion Rate</span>\n                    </div>\n                </div>\n                \n                <!-- Step 2 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">2</div>\n                    <h3>Create a Scalable Offer</h3>\n                    <p>Design a core product or service that can be delivered efficiently without requiring proportional time increase. Focus on solutions that scale without draining your resources.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">80% Profit Margin</span>\n                    </div>\n                </div>\n                \n                <!-- Step 3 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">3</div>\n                    <h3>Build Automated Sales Funnels</h3>\n                    <p>Implement a systematic approach to guide prospects from awareness to purchase. Use email sequences, webinars, and content marketing to nurture leads without manual intervention.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">24/7 Lead Generation</span>\n                    </div>\n                </div>\n                \n                <!-- Step 4 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">4</div>\n                    <h3>Implement Strategic Pricing</h3>\n                    <p>Price your offerings based on value rather than time. Create tiered pricing options that appeal to different customer segments while maximizing your average transaction value.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">$3,500 Average Sale</span>\n                    </div>\n                </div>\n                \n                <!-- Step 5 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">5</div>\n                    <h3>Develop Recurring Revenue Streams</h3>\n                    <p>Create subscription-based models or retainer services that generate predictable monthly income. Focus on delivering consistent value that justifies ongoing payments.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">68% Customer Retention</span>\n                    </div>\n                </div>\n                \n                <!-- Step 6 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">6</div>\n                    <h3>Optimize Customer Acquisition</h3>\n                    <p>Calculate your customer acquisition cost (CAC) and lifetime value (LTV). Refine your marketing strategies to ensure profitability with each new customer you bring on board.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">3:1 LTV:CAC Ratio</span>\n                    </div>\n                </div>\n                \n                <!-- Step 7 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">7</div>\n                    <h3>Leverage Partnerships & Affiliates</h3>\n                    <p>Identify strategic partnerships that can help promote your business to relevant audiences. Create affiliate programs that incentivize others to sell your products or services.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">35% Revenue From Partners</span>\n                    </div>\n                </div>\n                \n                <!-- Step 8 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">8</div>\n                    <h3>Systemize Your Operations</h3>\n                    <p>Document processes and create standard operating procedures for all business functions. This enables you to delegate effectively and maintain quality as you scale.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">60% Time Saved</span>\n                    </div>\n                </div>\n                \n                <!-- Step 9 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">9</div>\n                    <h3>Implement Data-Driven Decisions</h3>\n                    <p>Set up analytics to track key performance indicators. Use this data to identify bottlenecks, optimize conversion points, and make informed business decisions.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">28% Conversion Boost</span>\n                    </div>\n                </div>\n                \n                <!-- Step 10 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">10</div>\n                    <h3>Scale Your Team Strategically</h3>\n                    <p>Hire for roles that directly impact revenue growth first. Use contractors for specialized tasks and only bring on full-time employees when the economics clearly support it.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">4.5x ROI On Team</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n        \n        <div class=\"footer\">\n            <h2>Ready to Scale Your Business?</h2>\n            <p>These strategies have helped our clients grow from struggling startups to thriving businesses generating over $10k monthly.</p>\n            <a href=\"#\" class=\"cta-button\">Get Your Custom Growth Plan</a>\n        </div>\n    </div>\n</body>\n</html>",
+              "role": "assistant"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        100,
+        -120
+      ],
+      "id": "de530bbf-7cf6-4754-a10d-7c2cce56985c",
+      "name": "OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pdf.co/v1/pdf/convert/from/html",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "name",
+              "value": "output.pdf"
+            },
+            {
+              "name": "html",
+              "value": "={{ $json.message.content }}"
+            },
+            {
+              "name": "pagesize",
+              "value": "A4"
+            },
+            {
+              "name": "margins",
+              "value": "20px 20px 20px 20px"
+            },
+            {
+              "name": "printBackground",
+              "value": "true"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        460,
+        -120
+      ],
+      "id": "7e59979f-9931-4969-8d50-5162c21dfed8",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {
+    "Typeform Trigger": [
+      {
+        "json": {
+          "First name": "jane",
+          "Last name": "smieth",
+          "Phone number": "+12017474748",
+          "Email": "itsssssjack@outlook.com",
+          "Company": "Jack",
+          "Are you a hotel in Dubai?": "Yes",
+          "Are you looking to purchase umbrellas for your hotel?": "Yes",
+          "Tell me about your business?": "I spend more than 30k, I am stuck at 2k a month, I have 3 clients. I don't know how to scale. my business is based in london, I want client axquiiton strategies",
+          "Are you specifically interested in umbrella packages for hotels?": "Yes",
+          "Is your business related to the hospitality industry?": "Yes",
+          "Are you located in Dubai?": "Yes"
+        }
+      }
+    ],
+    "OpenAI": [
+      {
+        "json": {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>10 Steps to Scale Jack to $10k/Month</title>\n    <style>\n        :root {\n            --primary: #2563eb;\n            --primary-dark: #1d4ed8;\n            --secondary: #f97316;\n            --text: #1e293b;\n            --text-light: #64748b;\n            --bg: #ffffff;\n            --bg-alt: #f8fafc;\n            --border: #e2e8f0;\n        }\n        \n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n        \n        body {\n            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n            color: var(--text);\n            background-color: var(--bg);\n            line-height: 1.6;\n            max-width: 1200px;\n            margin: 0 auto;\n            padding: 20px;\n        }\n        \n        .container {\n            background-color: var(--bg);\n            border-radius: 12px;\n            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);\n            overflow: hidden;\n        }\n        \n        .header {\n            background: linear-gradient(135deg, var(--primary), var(--primary-dark));\n            color: white;\n            padding: 60px 40px;\n            text-align: center;\n            position: relative;\n        }\n        \n        .header h1 {\n            font-size: 2.5rem;\n            font-weight: 800;\n            margin-bottom: 16px;\n            letter-spacing: -0.025em;\n        }\n        \n        .header p {\n            font-size: 1.25rem;\n            max-width: 700px;\n            margin: 0 auto;\n            opacity: 0.9;\n        }\n        \n        .content {\n            padding: 40px;\n        }\n        \n        .steps-container {\n            display: grid;\n            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n            gap: 30px;\n            margin-top: 20px;\n        }\n        \n        .step-card {\n            background-color: var(--bg);\n            border-radius: 10px;\n            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);\n            padding: 30px;\n            transition: transform 0.3s ease, box-shadow 0.3s ease;\n            border: 1px solid var(--border);\n            height: 100%;\n            display: flex;\n            flex-direction: column;\n        }\n        \n        .step-card:hover {\n            transform: translateY(-5px);\n            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);\n        }\n        \n        .step-number {\n            background-color: var(--primary);\n            color: white;\n            width: 40px;\n            height: 40px;\n            border-radius: 50%;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-weight: 700;\n            font-size: 1.2rem;\n            margin-bottom: 20px;\n        }\n        \n        .step-card h3 {\n            font-size: 1.5rem;\n            font-weight: 700;\n            margin-bottom: 15px;\n            color: var(--primary-dark);\n        }\n        \n        .step-card p {\n            color: var(--text-light);\n            flex-grow: 1;\n        }\n        \n        .metrics {\n            margin-top: 15px;\n            display: flex;\n            align-items: center;\n            gap: 10px;\n        }\n        \n        .metric {\n            background-color: var(--bg-alt);\n            border-radius: 6px;\n            padding: 6px 12px;\n            font-size: 0.875rem;\n            font-weight: 600;\n        }\n        \n        .metric.positive {\n            color: #047857;\n            background-color: #d1fae5;\n        }\n        \n        .metric.highlight {\n            color: var(--secondary);\n            background-color: #fff7ed;\n        }\n        \n        .footer {\n            background-color: var(--bg-alt);\n            padding: 30px 40px;\n            text-align: center;\n            border-top: 1px solid var(--border);\n        }\n        \n        .cta-button {\n            display: inline-block;\n            background-color: var(--secondary);\n            color: white;\n            font-weight: 600;\n            padding: 12px 24px;\n            border-radius: 8px;\n            text-decoration: none;\n            transition: background-color 0.2s ease;\n            margin-top: 20px;\n        }\n        \n        .cta-button:hover {\n            background-color: #ea580c;\n        }\n        \n        .divider {\n            height: 4px;\n            width: 60px;\n            background: var(--primary);\n            margin: 30px auto;\n            border-radius: 2px;\n        }\n        \n        .intro {\n            text-align: center;\n            margin-bottom: 40px;\n        }\n        \n        .intro p {\n            max-width: 800px;\n            margin: 0 auto;\n            font-size: 1.1rem;\n            color: var(--text-light);\n        }\n        \n        @media (max-width: 768px) {\n            .header {\n                padding: 40px 20px;\n            }\n            \n            .header h1 {\n                font-size: 2rem;\n            }\n            \n            .content {\n                padding: 30px 20px;\n            }\n            \n            .steps-container {\n                grid-template-columns: 1fr;\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <div class=\"header\">\n            <h1>10 Steps to Scale Jack to $10k/Month</h1>\n            <p>Jane Smieth brings you a tailored roadmap to elevate Jack into a revenue-generating powerhouse. These steps will help transform your business into one that consistently brings in five figures monthly.</p>\n        </div>\n        \n        <div class=\"content\">\n            <div class=\"intro\">\n                <p>Jane, growing Jack to $10,000 in monthly revenue isn't just a dream—it's an attainable goal with the right strategy. Here's your bespoke guide to reaching those heights swiftly and effectively.</p>\n                <div class=\"divider\"></div>\n            </div>\n            \n            <div class=\"steps-container\">\n                <!-- Step 1 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">1</div>\n                    <h3>Pinpoint Your Unique Niche</h3>\n                    <p>Jane, focus on the specific needs of Jack's ideal customer. Deep dive into market research to carve out your unique space in the business landscape.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">+42% Conversion Rate</span>\n                    </div>\n                </div>\n                \n                <!-- Step 2 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">2</div>\n                    <h3>Develop a Scalable Product Suite</h3>\n                    <p>Create offerings for Jack that provide high value without exponential time investment. Take what you do best and magnify it through scalable systems.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">80% Profit Margin</span>\n                    </div>\n                </div>\n                \n                <!-- Step 3 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">3</div>\n                    <h3>Automate the Sales Journey</h3>\n                    <p>For Jack, set up funnels that nurture prospects around the clock. Utilize technology to bridge the gap between interest and sale seamlessly.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">24/7 Lead Generation</span>\n                    </div>\n                </div>\n                \n                <!-- Step 4 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">4</div>\n                    <h3>Strategic Value-Based Pricing</h3>\n                    <p>Ensure the pricing strategy for Jack reflects its true value. Implement tiered models to maximize revenue from each customer segment.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">$3,500 Average Sale</span>\n                    </div>\n                </div>\n                \n                <!-- Step 5 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">5</div>\n                    <h3>Diversify Revenue Streams for Jack</h3>\n                    <p>Create steady income through subscriptions or retainers. This stable revenue will fuel Jack's growth and sustainability.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">68% Customer Retention</span>\n                    </div>\n                </div>\n                \n                <!-- Step 6 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">6</div>\n                    <h3>Optimize Customer Acquisition Strategies</h3>\n                    <p>Review and refine how Jack attracts customers. Aim to lower acquisition costs while increasing customer lifetime value.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">3:1 LTV:CAC Ratio</span>\n                    </div>\n                </div>\n                \n                <!-- Step 7 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">7</div>\n                    <h3>Harness the Power of Partnerships</h3>\n                    <p>Ally with complementary brands to expand Jack's reach. Referral systems can propel sales through a wider audience network.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">35% Revenue From Partners</span>\n                    </div>\n                </div>\n                \n                <!-- Step 8 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">8</div>\n                    <h3>Systemize Operations for Maximum Efficiency</h3>\n                    <p>Every process in Jack should be documented and streamlined. Solid SOPs ensure reliability and scalability.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">60% Time Saved</span>\n                    </div>\n                </div>\n                \n                <!-- Step 9 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">9</div>\n                    <h3>Data-Driven Growth Strategies</h3>\n                    <p>Implement analytics to guide decisions for Jack. Data insights will illuminate paths to higher conversion and growth rates.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric positive\">28% Conversion Boost</span>\n                    </div>\n                </div>\n                \n                <!-- Step 10 -->\n                <div class=\"step-card\">\n                    <div class=\"step-number\">10</div>\n                    <h3>Strategic Team Expansion</h3>\n                    <p>Identify when and where to expand Jack's team. Balance talent acquisition with business needs to ensure sustainable scaling.</p>\n                    <div class=\"metrics\">\n                        <span class=\"metric highlight\">4.5x ROI On Team</span>\n                    </div>\n                </div>\n            </div>\n        </div>\n        \n        <div class=\"footer\">\n            <h2>Let's Scale Jack Together!</h2>\n            <p>Jane, these strategies are crafted to elevate Jack beyond its current limitations, ushering in a new era of growth.</p>\n            <a href=\"#\" class=\"cta-button\">Get Your Personalized Plan for Jack</a>\n        </div>\n    </div>\n</body>\n</html>\n```",
+            "refusal": null,
+            "annotations": []
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Typeform Trigger": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "c4fc6a61-c7e4-4f71-9580-fd2f86fbd189",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "jAsT0pCVere9sFxu",
+  "tags": []
+}

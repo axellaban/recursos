@@ -1,0 +1,1088 @@
+[00:00:00] Most businesses spend hours watching
+[00:00:02] videos on YouTube on AI that look really
+[00:00:05] cool but don't deliver any actual
+[00:00:07] results. If you don't know me, I'm Jack
+[00:00:09] Roberts. I built and sold my last tech
+[00:00:11] startup which had over 60,000 customers.
+[00:00:13] And now I run a 7figure AI automation
+[00:00:15] business using these AI systems. So I'm
+[00:00:18] going to walk you through how to build a
+[00:00:19] [music] real productionready AI system
+[00:00:22] focusing on what gets you 80% of the
+[00:00:24] results without [music] any of the
+[00:00:26] noise. And if you haven't already, grab
+[00:00:28] that coffee and let's jump straight in.
+[00:00:30] So, what is the technology that we're
+[00:00:32] looking at in this video? Well, the best
+[00:00:34] way to learn, I have found, is to
+[00:00:36] actually build something. So, we in this
+[00:00:39] video, we're going to build a YouTube
+[00:00:40] growth agent. This could apply to
+[00:00:42] literally any social media thing that
+[00:00:44] you wanted to or any system that you
+[00:00:45] wanted to. We're going to take any
+[00:00:47] video, we're going to grab a transcript,
+[00:00:48] we're going to get all the data, and
+[00:00:50] then we're going to get instant insights
+[00:00:51] that are going to help us grow. But what
+[00:00:53] actually is an AI system before we
+[00:00:55] actually start looking at building one?
+[00:00:56] Again, these AI systems could be lead
+[00:00:58] generation. They could be lead
+[00:00:59] qualification. When you understand the
+[00:01:01] principles that I'm going to show you in
+[00:01:03] this video, it will apply to anything
+[00:01:05] that you want to do in your business or
+[00:01:06] for your clients. It has four parts. It
+[00:01:08] has some degree of automation. It has
+[00:01:10] AI. It has some data. And then it has
+[00:01:14] some kind of front end that we would use
+[00:01:16] and interact with. Now, we're going to
+[00:01:17] build an AI automation system because on
+[00:01:20] this channel, the Jack Robbert's YouTube
+[00:01:21] channel, we're going to look at building
+[00:01:23] profitable automation systems. It's what
+[00:01:25] we do in the community, why I've got so
+[00:01:26] many amazing results, and what we're all
+[00:01:28] about. Now, to build this, we're going
+[00:01:29] to use the ACE framework to go from idea
+[00:01:32] to fully produced AI system. But I'm
+[00:01:35] also going to show you this across two
+[00:01:37] levels of difficulty. If our best friend
+[00:01:40] was on the couch and he was very
+[00:01:42] overweight, we wouldn't be having
+[00:01:43] conversations about what's the best
+[00:01:44] flavor protein shake or what is the best
+[00:01:47] split and macros for him on leg day.
+[00:01:49] We'd just focus on getting him to the
+[00:01:51] gym. And that's what the first section
+[00:01:53] is going to be about building your first
+[00:01:54] AI system very quickly. Now, the A in
+[00:01:57] our system stands for architect, which
+[00:02:00] is to design. So, I told you that we're
+[00:02:01] going to build something first of all.
+[00:02:03] Now, one of the easiest ways to get
+[00:02:04] started with this is to use something
+[00:02:06] like Lovable, which will function as our
+[00:02:08] front end and to some extent just
+[00:02:10] connect everything together. And it's so
+[00:02:12] easy to plug and play. So, I said I
+[00:02:14] wanted to build a YouTube agent. I built
+[00:02:15] a prototype and then I'm going to show
+[00:02:17] you how it works and we're going to
+[00:02:18] build this one together very easily. So,
+[00:02:20] if I show you what I built earlier, this
+[00:02:21] is the dashboard where effectively all
+[00:02:23] we do in this example is we throw in a
+[00:02:26] YouTube video. So, let's grab this one
+[00:02:27] from school. Beautiful company. Come
+[00:02:29] over, we enter this in and we hit
+[00:02:31] analyze. So the front end of our system,
+[00:02:34] the thing that you and I use in our
+[00:02:35] business or the thing that we share with
+[00:02:37] clients is hosted on Lovable. And then
+[00:02:39] what this is doing is calling an N8
+[00:02:42] scenario and it's connected to NAN in an
+[00:02:45] unbelievably simple thing. You don't
+[00:02:47] even have to mess around with any of the
+[00:02:48] plumbing. We're scraping the stuff and
+[00:02:51] then we're grabbing all the data and
+[00:02:52] then we're sending it straight back over
+[00:02:54] to Lable. And look at this guys. We've
+[00:02:55] got it. We've got this YouTube video.
+[00:02:57] We've got the views. We got the likes.
+[00:02:58] We've got the comments. We can save the
+[00:03:00] video. And what's really cool here is
+[00:03:01] you can have AI do different things to
+[00:03:03] it like extract the intro or if you're
+[00:03:05] trying to grow on Instagram or LinkedIn
+[00:03:07] you could save the post and get ideas
+[00:03:09] which is really cool. And then the other
+[00:03:11] key part here is if we're using this
+[00:03:13] software we might want to save the data.
+[00:03:14] Right? So if I came down I click on save
+[00:03:16] video what this has done is saved it in
+[00:03:19] my save videos. Right now has it
+[00:03:21] actually saved? Well if I refresh the
+[00:03:23] app and show you you will see it is
+[00:03:24] still there. Well it will be when it
+[00:03:26] loads. Right. Let's have a look on save
+[00:03:27] videos and it's still there. How is this
+[00:03:30] possible, Jack? Well, it's connected to
+[00:03:32] something called Superbase, which I'll
+[00:03:33] get on to shortly. But the point is that
+[00:03:35] all these things here are connected
+[00:03:36] together into one system. So, let's go
+[00:03:39] through building this one together, and
+[00:03:40] I'll show you how it works. And then
+[00:03:41] we're going to go on to how you take
+[00:03:42] this from what is a very fast car to a
+[00:03:45] worldclass Ferrari. Now, since we're in
+[00:03:47] the A for architect stage, the first we
+[00:03:49] want to do is explain the app we want to
+[00:03:50] build. And again, this is really about
+[00:03:52] just the 80% of stuff. So, we kind of
+[00:03:54] want to explain what the thing is that
+[00:03:55] we want, right? So deliverable, we could
+[00:03:56] say something the lines of, "Hey, I
+[00:03:58] would like you to build for me a YouTube
+[00:04:00] dashboard. You're going to connect to an
+[00:04:03] N8 scraper via their MCP." I'll explain
+[00:04:07] what that is in a second. And you'll be
+[00:04:09] given a YouTube URL and I would like you
+[00:04:11] to display for me lots of different
+[00:04:13] information. Beautiful. Okay. And I'm
+[00:04:14] going to say, I would like you to use
+[00:04:17] this as a design reference. Cool. So we
+[00:04:19] just pick a design we want to. I'd
+[00:04:20] recommend dribble.com. So you can come
+[00:04:22] down here and type in something like
+[00:04:24] dashboard. Find one that you think is
+[00:04:25] really cool. This is just a website that
+[00:04:27] shows you loads of cool things. So AI is
+[00:04:29] great at designing if it knows what it's
+[00:04:31] designing. So you can find one that you
+[00:04:33] think looks really cool. This is one
+[00:04:34] that we used earlier. So let's just use
+[00:04:36] this one once again as a reference
+[00:04:37] image. So come down here and we just
+[00:04:38] simply copy the image. Obviously you go
+[00:04:41] way more complex than this. I'm just
+[00:04:42] want to show the basics so you can get
+[00:04:43] started and get a quick one under your
+[00:04:45] belt with this. Bam. And then what we
+[00:04:47] want to do is kind of define what the
+[00:04:49] inputs are going to be. And then we want
+[00:04:50] to be clear on the data points that it's
+[00:04:52] going to use. So what we're going to be
+[00:04:54] using here is you can see I'm going to
+[00:04:55] say the data from YouTube will be this.
+[00:04:59] Okay. And then this is everything. The
+[00:05:00] title, the term name, channel URL, blah
+[00:05:02] blah blah. So we're going specific about
+[00:05:03] the kind of things it gets. So it knows
+[00:05:05] okay. In fact, this data from N8N will
+[00:05:08] be this. And then the other thing you
+[00:05:10] always want to make sure you cover off
+[00:05:11] is integrations. As I'm going to say
+[00:05:12] here, in addition to connecting to N8,
+[00:05:15] I'd also like it to connect to Superbase
+[00:05:17] and store all of the information in
+[00:05:19] there so that I can save the video for
+[00:05:21] later analysis. I would also like the
+[00:05:23] ability to have AI within the app that
+[00:05:25] can summarize the intro and I can ask
+[00:05:27] questions about it. Cool. And I'll be
+[00:05:29] honest, guys, there's some really
+[00:05:30] incredible stuff that you can do in
+[00:05:31] lovable as a beginner. For example, you
+[00:05:33] don't need to actually give any of your
+[00:05:36] APIs to lovable for chat GPT or Gemini
+[00:05:39] or Claude. Lovable now has this feature
+[00:05:41] inside it where it will use what they
+[00:05:42] call the lovable universal API which
+[00:05:45] essentially means that you don't need to
+[00:05:46] connect anything and you can just speak
+[00:05:47] and do. Now, one of the reasons why I'm
+[00:05:49] showing you the easy mode version of
+[00:05:51] Lovable is because it will connect to
+[00:05:53] NAM. It will connect to Superbase and
+[00:05:56] also AI without you having to do the
+[00:05:58] plumbing, which is crazy. Now, you see
+[00:06:01] the first thing that's happened here,
+[00:06:02] guys, it wants to connect to NAM. So,
+[00:06:04] you can connect loads of applications
+[00:06:06] within Lovable. And you can do that if I
+[00:06:08] come down here to the bottom left and I
+[00:06:09] click on I believe it is connectors and
+[00:06:11] I click on manage connectors, I can
+[00:06:13] connect everything. So, you're going to
+[00:06:14] want to connect N10. You want to enable
+[00:06:16] that. And you want to enable Superbase.
+[00:06:18] Remember, Superbase is kind of just like
+[00:06:21] a Microsoft Excel. It's been hitting the
+[00:06:22] gym. It's on steroids. It's kicking
+[00:06:25] butt. This is where we store our data.
+[00:06:27] And NA10 is where we do automations in
+[00:06:29] this case. Okay. So, you're going to
+[00:06:30] enable all this stuff. Now, this is
+[00:06:31] saying, "Hey, Jack, I want to connect to
+[00:06:33] NA10. Can I do that?" So, what we need
+[00:06:35] to do now is go over to NA10. I'm going
+[00:06:36] to put this workflow down below for you
+[00:06:38] so you can grab that completely and just
+[00:06:39] rock and roll with it so you can get
+[00:06:40] this one tested. But, if I come over to
+[00:06:42] NA10, we have over here the scenario.
+[00:06:44] Okay. Now the cool thing is NA10
+[00:06:47] recently released something called their
+[00:06:48] model context protocol the N810 MCP
+[00:06:51] which is really cool and what it
+[00:06:53] basically means you connect these
+[00:06:54] scenarios to apps to anything that you
+[00:06:57] want to without having to configure it.
+[00:06:59] So in the old world we would have to get
+[00:07:01] this web hook address we'd have to move
+[00:07:03] it back and forth now we don't need to
+[00:07:04] do that. So the two key things you must
+[00:07:06] know when you build the soren anytime is
+[00:07:09] a when you create a web hook you don't
+[00:07:11] need to worry about it make sure that
+[00:07:13] under respond it's when last node
+[00:07:15] finishes if you put respond immediately
+[00:07:17] it will just trigger off and won't work
+[00:07:19] and you don't need to add anything else
+[00:07:21] the whole NA10 MCP will take care of
+[00:07:23] everything then there's two things you
+[00:07:24] need to do inside N10 number one is
+[00:07:26] you're going to come down here to this
+[00:07:27] you're going to come down onto settings
+[00:07:28] if I could click that in a million years
+[00:07:30] that'd be great you're going to click on
+[00:07:31] MCP access and you're going to enable
+[00:07:34] this okay Now, when you connect Lovable,
+[00:07:36] what will happen is it will actually
+[00:07:38] open up a new page and you just click
+[00:07:40] connect and then you'll be ready to rock
+[00:07:41] and roll when you enable it in Lovable.
+[00:07:43] That will happen automatically. When we
+[00:07:45] use other things, there's different ways
+[00:07:46] of doing it. So, you enable it there.
+[00:07:47] And then the second thing you need to do
+[00:07:48] in the workflow, guys, is click on these
+[00:07:50] dots. First of all, you need to make
+[00:07:51] sure it's active and it has to start
+[00:07:52] with a web hook or a chat or something
+[00:07:54] like that. And then you're going to come
+[00:07:55] down to settings and you're going to
+[00:07:56] want to come over to available in MCP.
+[00:07:59] Again, MCP just a fancy way of saying
+[00:08:02] connects things to other things. That
+[00:08:03] one, write that one down. master J or J
+[00:08:05] classic Chrome. And then the other thing
+[00:08:07] we want to do before we go live is give
+[00:08:08] it a name, but we want to give a
+[00:08:09] description because you may do this with
+[00:08:11] several workflows. And how does the AI
+[00:08:13] know which of your incredible workflows
+[00:08:15] to call? Maybe one's for lead scraping,
+[00:08:17] maybe one's for YouTube, maybe another
+[00:08:18] one's for Instagram. Well, what we do is
+[00:08:20] add a description. And you can add edit
+[00:08:22] workflow description. What I like to do
+[00:08:23] is a little hack is I come down to the
+[00:08:24] NA10 AI. I come over to the ask and I
+[00:08:27] basically say, "Hey, in three sentences,
+[00:08:30] just explain what this does for me." And
+[00:08:32] then you just copy that. You come down
+[00:08:34] here and you enter it in there. So use
+[00:08:36] this workflow when you need to
+[00:08:37] automatically extract detail information
+[00:08:38] blah blah blah. So guys, we're not even
+[00:08:40] writing the things anymore. That's how
+[00:08:41] crazy it is. So once you've done all of
+[00:08:42] that and you actually go back to your
+[00:08:44] NA10 homepage, which I will do for you
+[00:08:46] very briefly so you can see. You know
+[00:08:48] that it works when you have this. So
+[00:08:50] just sign in. I'm going to show you this
+[00:08:51] locked and loaded. Cool. If I open an
+[00:08:53] instance, you're going to see now at the
+[00:08:55] bottom. Can you see down here guys? I've
+[00:08:57] got this little thing here. That means
+[00:08:58] it's available in MCP, which is really
+[00:09:00] cool. So we come back over to Lovable
+[00:09:02] which is building over here and it's
+[00:09:03] asked us to enable cloud. So we're going
+[00:09:05] to come down this and we're going to
+[00:09:06] allow. Fantastic. And it will ask for
+[00:09:08] our permission and all these things. Now
+[00:09:10] what we need to do is connect a database
+[00:09:12] to it. So what do we mean by database?
+[00:09:14] Well, think about it like this. Whatever
+[00:09:16] you're doing in any project, you're
+[00:09:18] going to want somewhere to store the
+[00:09:20] data, right? So if you think about it
+[00:09:21] like this, if we have customer data, if
+[00:09:23] we have videos that we like, if we have
+[00:09:25] opportunities or leads, we want to put
+[00:09:27] them somewhere, right? So we use
+[00:09:30] superbase for that and we use superbase
+[00:09:31] for that because it's very great to
+[00:09:33] scale. It's super configurable. We just
+[00:09:35] link it up with our apps and then all
+[00:09:37] the information can live there which is
+[00:09:38] really cool. Now in Superbase you can
+[00:09:40] create a project completely for free.
+[00:09:42] You can pick create an organization and
+[00:09:43] create a project. Okay. Then once you've
+[00:09:45] done that you're going to give it a name
+[00:09:46] and then it will take about a second
+[00:09:48] about maybe 10 15 seconds to load up.
+[00:09:50] And when you've done that you're going
+[00:09:52] to land on a dashboard like this once I
+[00:09:54] click through and we can see my thing
+[00:09:56] here. And you give it a name. So I've
+[00:09:58] given this one the name of lead
+[00:09:59] enrichment. Okay, you can create as many
+[00:10:01] projects as you want to. Now normally if
+[00:10:03] you want to do changes to this, you
+[00:10:05] would come on the left hand side and
+[00:10:06] you'd click on SQL editor. I know I
+[00:10:09] speak English, some people speak French
+[00:10:10] and Spanish and Italian. Tables speak
+[00:10:12] what we call SQL. You don't actually
+[00:10:14] even need to know what this is at all.
+[00:10:16] And the reason for that is because
+[00:10:17] Lovable connects to it for you. So you
+[00:10:19] don't need to worry about that and it
+[00:10:20] just connects automatically. Or as long
+[00:10:22] as you create the base and just connect
+[00:10:23] it to Lovable, Lovable will do all the
+[00:10:25] plumbing, all the work and just connect
+[00:10:26] everything. So, it's easy. Now, this is
+[00:10:28] asking to get workflow details. We're
+[00:10:29] going to allow it. So, this is saying,
+[00:10:31] look, you've told me, Jack, that you
+[00:10:34] want me to trigger an automation at 10.
+[00:10:35] That's completely fine. Can I have
+[00:10:36] permission to do that? And we're like,
+[00:10:37] Lovable, you don't need to ask us.
+[00:10:39] That's completely fine. So, Lovable's
+[00:10:41] going to do that. Now, one of the
+[00:10:42] reasons why I wanted to structure the
+[00:10:43] video in this way is because when you
+[00:10:45] understand the four or five technologies
+[00:10:47] that connect everything together, you
+[00:10:48] can build anything you want to. That's
+[00:10:50] kind of the logic here with this easy
+[00:10:51] thing. So, this is asking to modify the
+[00:10:52] database and we're just going to say we
+[00:10:54] don't need to ask it each time. you will
+[00:10:56] always allow and just click on allowed.
+[00:10:58] So this is now asking Jackie can I
+[00:11:00] actually go and you know amend the
+[00:11:01] databases in that superbase you showed
+[00:11:03] me? Well be perfectly fine. Well dude
+[00:11:05] it's completely fine. Beautiful guys it
+[00:11:06] has officially created it. Now the
+[00:11:08] astute observers of you will notice that
+[00:11:10] it's quite similar to the one that I
+[00:11:11] showed you earlier and one of the
+[00:11:13] reasons for that is I think lovable has
+[00:11:15] a set structure that follows and I also
+[00:11:17] wonder sometimes if it references
+[00:11:18] previous designs but in any case it's
+[00:11:20] very cool. So I think let's do the same
+[00:11:22] thing again. Let's come over to YouTube
+[00:11:24] and let's grab this information here.
+[00:11:26] This video. Let's come back over and
+[00:11:27] type this one in. Let's get some
+[00:11:29] analytics. Guys, this is so good. I
+[00:11:30] can't even get my words out right now.
+[00:11:32] So, this is cool. It's now analyzing it
+[00:11:34] and fetching it. Let's come back over to
+[00:11:36] Nit and to see how we're getting on. And
+[00:11:37] if I just click on YouTube transcripts,
+[00:11:39] one of the things we can always do is
+[00:11:40] check in executions to see how it's
+[00:11:41] getting on. And it's running. That is
+[00:11:43] code for great news. Little FYI, when
+[00:11:45] you download this one, there's only two
+[00:11:47] things that you need to do. One is add
+[00:11:49] in your Appify API key cuz that's what
+[00:11:50] we're using for this. By the way, what
+[00:11:52] I'm going to show you in the second part
+[00:11:53] of this video is going to blow your
+[00:11:54] mind. So, I hope you're buckled in
+[00:11:55] already cuz once we get out of easy
+[00:11:57] mode, I'm I'm going to really blow your
+[00:11:58] mind with this. Just very quickly aside,
+[00:12:00] you grab that by coming over here in the
+[00:12:01] bottom left, you can see settings here,
+[00:12:03] and you're going to go over at the top
+[00:12:04] to API integrations, copy that API key.
+[00:12:07] And the way that I've set this up, by
+[00:12:09] the way, is that you can literally, if I
+[00:12:10] click onto this, all you do, guys, is
+[00:12:12] just click onto this, enter app token
+[00:12:14] right there, and then the rest for snor
+[00:12:15] will work fine for you perfectly, which
+[00:12:17] is just crazy, right? You can just do
+[00:12:18] that. So that's all you'd need to do and
+[00:12:20] the scenario will work perfectly for
+[00:12:21] you. And then if we come back over to
+[00:12:22] the website, we officially have this,
+[00:12:25] right? Which is crazy. So it's got
+[00:12:26] everything in there. The likes, views,
+[00:12:28] the comments, got description, got the
+[00:12:29] transcript, everything we' possibly
+[00:12:31] need. The only thing I want to test now
+[00:12:32] is can I save the video? So if I save
+[00:12:34] the video, will it work? Give that a hot
+[00:12:36] second. It said it has saved. If I click
+[00:12:37] on save videos, we see it there. Cool.
+[00:12:39] Well, the only one way to find out if it
+[00:12:41] works properly is to simply refresh the
+[00:12:43] page. So let's just do that very
+[00:12:45] quickly. So this is in the save videos.
+[00:12:46] And there's something even crazier with
+[00:12:47] this and lovable guys is that this
+[00:12:49] doesn't even need superbase in lovable
+[00:12:51] because it has something called the
+[00:12:53] lovable cloud now which is its own
+[00:12:55] backend like powered like postgress
+[00:12:57] which will store all of this. Now you
+[00:12:58] can still connect it to superbase if you
+[00:13:01] want to especially if you want to scale
+[00:13:02] that up and you also want to connect it
+[00:13:04] to other things but for your prototypes
+[00:13:06] getting started you can actually do all
+[00:13:07] of that in lovable. So now you've
+[00:13:09] completed level one. The next thing we
+[00:13:10] need to do then is graduate to level
+[00:13:13] two, which is going to enable you to do
+[00:13:14] things that you couldn't even possibly
+[00:13:16] imagine or think about doing using these
+[00:13:19] drag and drop builders. We're going to
+[00:13:20] take you from a Ford Escort into a
+[00:13:22] complete Ferrari. Now using our Arc
+[00:13:24] framework, the very first thing that we
+[00:13:26] need to do here is architect. And
+[00:13:28] because we're going to be using cloud
+[00:13:30] code, we're going to be using Gemini.
+[00:13:32] We're actually going to go deeper and
+[00:13:33] think a lot more about different
+[00:13:34] functionalities. But the first thing
+[00:13:36] that I like to do and I find when I'm
+[00:13:37] building systems for my clients, I do
+[00:13:38] this a lot, is we spend more time with
+[00:13:41] the problem. So we want a very very
+[00:13:43] clearly defined problem before we start
+[00:13:45] building. So let me show you what I mean
+[00:13:46] when I go through this. So we're going
+[00:13:47] to actually get a language model to help
+[00:13:49] us shape what we build. And when we know
+[00:13:50] the problem, then we can build the
+[00:13:52] solution. I'm going to build a dashboard
+[00:13:54] for the growth with the express purpose
+[00:13:56] of helping me grow my YouTube. I'm going
+[00:13:57] to explain what the problem is. I want
+[00:13:59] you to feed back to me what your
+[00:14:00] perceived view of the problem is. And
+[00:14:02] once we agree on that, we're then going
+[00:14:03] to reverse engineer all the
+[00:14:05] functionality and features that this
+[00:14:06] dashboard would have. One of the key
+[00:14:07] leaders for growth is identifying
+[00:14:09] outlying videos both within the niche of
+[00:14:12] AI automations and predominantly
+[00:14:14] different niches that are adjacent and
+[00:14:16] different to it. So that might include
+[00:14:18] things like technology, that might
+[00:14:19] include things like, you know, you could
+[00:14:22] even say gaming, although I'm not sure
+[00:14:23] that's 100% accurate. But the idea is we
+[00:14:25] go to personal finance, we go outside.
+[00:14:27] So I want the ability to spar with this
+[00:14:29] information. I want the ability to
+[00:14:31] scrape all of YouTube content. I want to
+[00:14:33] know sentiment analysis about where the
+[00:14:35] market's moving. I want to know videos
+[00:14:36] that do very well, what the comments
+[00:14:38] say, what they like, what they don't
+[00:14:40] like, what we should start, stop, and
+[00:14:41] continue. I want to look at the
+[00:14:43] thumbnails that are working well, the
+[00:14:44] titles that are working well with a
+[00:14:46] broad overview of what's happening in
+[00:14:48] the industry so we can get a really good
+[00:14:50] cohesive strategy as well as full
+[00:14:52] context of what my channel's about and
+[00:14:54] what I stand for. Help me refine what
+[00:14:56] the problems are and then let's move to
+[00:14:57] some functions of this dashboard. So
+[00:14:59] that is a massive ramble to be fair of
+[00:15:02] what I would want to build which is
+[00:15:04] basically with express content of
+[00:15:05] helping my audience which is you get the
+[00:15:08] best value possible by understanding
+[00:15:09] what it is that you want and crushing
+[00:15:11] it. So I mean it sounds like an
+[00:15:12] additional step guys but honestly I
+[00:15:14] think it was Einstein that said you know
+[00:15:16] if he had an hour to solve an issue he'd
+[00:15:18] spend 55 minutes on the problem and 5
+[00:15:21] minutes on the solution. I mean it's
+[00:15:22] just like Abraham Lincoln said right?
+[00:15:23] 95% of all the things you hear online
+[00:15:25] are completely true. So we've got the
+[00:15:27] core problem here. All of the
+[00:15:29] information go look at this. We're happy
+[00:15:31] with it. Outli decision. You're missing
+[00:15:33] the Y behind success. Bam, bam, bam,
+[00:15:34] bam. Let's just get the challenge one
+[00:15:36] time. Challenge me on the syncing. Is
+[00:15:37] there anything else that I should
+[00:15:38] include? Beautiful. We get called to
+[00:15:40] challenge a little bit. And when we spar
+[00:15:41] with this, then we reverse engineer what
+[00:15:43] the dashboard is. So cool. In light of
+[00:15:45] this, I would like you to create for me
+[00:15:46] in SAP a list of things that we would
+[00:15:48] want this dashboard to do. We are then
+[00:15:50] going to connect it with superbase as a
+[00:15:52] back end so we can actually store
+[00:15:54] relevant data. I will also provide it
+[00:15:56] with core information about my channel.
+[00:15:57] I would like it to always know what's
+[00:15:59] performing well on my own channel. So, I
+[00:16:01] have to minimize the amount of
+[00:16:02] replicable actions. I want to see
+[00:16:04] thumbnails. I want to see titles. And I
+[00:16:05] especially want to know outliers. All
+[00:16:07] right. Sweet. So, we give Claude this
+[00:16:09] prompt. And then we're going to actually
+[00:16:10] get over to AI Studio. Now, you might be
+[00:16:12] wondering why AI Studio. Well, one of
+[00:16:15] the really cool things about this guys
+[00:16:16] is the fact that because it's a Google
+[00:16:18] app, it's within the Google ecosystem,
+[00:16:20] which essentially means that anything to
+[00:16:23] do with like, you know, Nano Banana,
+[00:16:25] like the apps or any YouTube APIs, it
+[00:16:28] just seems to get it because it's
+[00:16:29] already within there. So, we're going to
+[00:16:30] give Google Gemini a prompt now, and
+[00:16:32] we're also going to give it some visual
+[00:16:34] identity. So, I'm actually happy just
+[00:16:35] for the interest of consistency grabbing
+[00:16:37] the same thing that we had earlier from
+[00:16:39] dribble, which is this task management
+[00:16:40] dashboard. So, let's come over here to
+[00:16:42] this and I'd like you to build it in
+[00:16:44] this style, please. Cool. All right,
+[00:16:45] let's stream. Cuz remember, what we
+[00:16:46] build is more important sometimes than
+[00:16:48] the way in which you build it. So, we
+[00:16:50] want to make sure we're actually solving
+[00:16:51] the right problem with this stuff. So,
+[00:16:52] we've got it. We've got the SOP.
+[00:16:54] Claude's going to finish that and then
+[00:16:55] we just feed this Gemini and then we
+[00:16:56] start to rock and roll. All right, guys.
+[00:16:57] So, Claude has given us a beast. Like,
+[00:17:00] this is crazy. Do you know what's really
+[00:17:01] funny? Sometimes when you get client
+[00:17:03] proposals and it's so obviously been
+[00:17:05] written by Chat GPT and they're like,
+[00:17:07] you know, Jack, I just want this. And
+[00:17:08] then a lot of the times what a lot of
+[00:17:10] people do is just feed it back into chat
+[00:17:12] GBT. We we don't we like to read it but
+[00:17:13] like it's funny basically chat GBT
+[00:17:15] writing proposals and chat GBT reading
+[00:17:17] proposals and it would save everyone
+[00:17:18] time if they just kind of said
+[00:17:20] [laughter] what it is they actually want
+[00:17:21] but often times they don't know. So
+[00:17:23] we're going to enter all this stuff in
+[00:17:24] here like so. I'm going to come up and
+[00:17:26] we've got everything. And then pretty
+[00:17:28] much we hit build and then we let Gemini
+[00:17:30] loose on it. Then when it's done this we
+[00:17:32] are then going to take it. We're going
+[00:17:33] to do a lot of interesting things to it
+[00:17:34] once we finish the architecture. And now
+[00:17:36] we've got the exact SOPM design. That
+[00:17:38] brings us on to the C in our ACE
+[00:17:41] framework which stands for code.
+[00:17:42] Beautiful guys. So check this out. So
+[00:17:44] basically now it's got my total views.
+[00:17:46] It's actually got the images which is
+[00:17:47] really cool. What I want to do now is
+[00:17:49] leverage the superbase connection. So
+[00:17:50] let's add a feature here. So can you do
+[00:17:52] a feature now where I can add a YouTube
+[00:17:54] URL. I want you to show me that title
+[00:17:56] and thumbnail and then an outlier score.
+[00:17:58] And if you could add a design element by
+[00:18:00] the way where like the bigger the
+[00:18:01] outlier, we have it as like a multiple.
+[00:18:04] Like for example, as proportional to the
+[00:18:06] average views. So calculate the average
+[00:18:08] views on the channel and then let's
+[00:18:09] actually calculate. So for example, if I
+[00:18:12] get an average of 10,000 views and it
+[00:18:13] has 20,000 views on the video to 2x
+[00:18:16] outlier. So I want to show that
+[00:18:17] visually. I want the ability to add
+[00:18:19] these ideas to my dashboard. Then I also
+[00:18:21] want the ability to save it which will
+[00:18:22] then sync up to superbase. So have a I
+[00:18:25] don't know call it like ideas tab or
+[00:18:27] something like that. Cool. And we enter
+[00:18:28] this in. Let this build and then that
+[00:18:30] will actually fully leverage our
+[00:18:32] superbase functionality. Beautiful. So,
+[00:18:33] it's now done those updates. Let's see
+[00:18:35] what we've got in the idea queue, which
+[00:18:37] is nothing yet. So, if I click on, let's
+[00:18:39] say, a new idea. Let's see what this
+[00:18:41] does. And then, guys, once we've played
+[00:18:43] around with this and we're happy at a
+[00:18:44] point where it's functional, it's
+[00:18:45] connected, we then move on to this, the
+[00:18:47] last part of the process. I'm going to
+[00:18:49] full screen this just so you can see how
+[00:18:50] gorgeous and brilliant this is. It's got
+[00:18:52] all of my videos. It's pulled them all
+[00:18:53] down. We've got daily analytics. But
+[00:18:55] then, this is how we take it from a
+[00:18:56] brilliant kind of like really well
+[00:18:58] established thing to something even
+[00:19:00] better. So to do this, what we need to
+[00:19:01] do first of all is download it and get
+[00:19:03] it onto our laptop. Just command here to
+[00:19:04] download app and just click on save like
+[00:19:06] so. Then this will download all of the
+[00:19:07] code from this that we can just go and
+[00:19:09] edit ourselves. And then you go ahead
+[00:19:11] and download a couple of things. So
+[00:19:12] there's three things I want you to
+[00:19:13] download. The first one is going to be
+[00:19:15] what we call anti-gravity. This is
+[00:19:17] basically what you just saw but Google's
+[00:19:19] versions and will live in on your
+[00:19:21] laptop. The next one I want you to go
+[00:19:22] ahead and download then is going to be
+[00:19:24] node.js.org.
+[00:19:26] This is just something that lets us edit
+[00:19:28] things on a computer, edit files and do
+[00:19:30] different changes. And then I like
+[00:19:32] editing in cursor, but you could use VS
+[00:19:34] Code. These are just think of them as
+[00:19:35] different environments like Samsung,
+[00:19:36] Apple. They all do the same thing, but
+[00:19:38] just different environments. I like to
+[00:19:39] edit with, just so you know what I'm
+[00:19:41] using, cursor to download those three
+[00:19:43] things. And then the final one we're
+[00:19:45] going to want to go ahead go and do is
+[00:19:46] claude. Like so. Not clawed. Do claud
+[00:19:49] code download, which you may already be
+[00:19:51] aware of. It's going to be a series of
+[00:19:52] code. All we're really going to do with
+[00:19:54] this stuff is open up the terminal,
+[00:19:56] which you can do by pressing command
+[00:19:57] spacebar and then typing in terminal and
+[00:19:59] hit enter. And you're going to see
+[00:20:00] something like this. And then you're
+[00:20:01] basically going to copy this information
+[00:20:04] and throw it into the terminal. Once
+[00:20:05] you've done that, follow the steps. And
+[00:20:07] you know it works when you just simply
+[00:20:08] type in the word claude. And then you'll
+[00:20:11] see that it's all there ready to rock
+[00:20:12] and roll. And that's how you get all the
+[00:20:14] stuff downloaded. I'll put a link down
+[00:20:15] below that shows you even more detail if
+[00:20:16] you get stuck with any that stuff. But
+[00:20:18] now we've got the things downloaded.
+[00:20:19] Let's come on to growth intelligence.
+[00:20:20] Open that up. And now we've got it as a
+[00:20:22] folder. Awesome. Then I want you to open
+[00:20:24] up either anti-gravity or cursor. It
+[00:20:26] doesn't really make too much of a
+[00:20:27] difference. If I open up cursor, you can
+[00:20:29] see right here, this is cursor. This is
+[00:20:31] anti-gravity. It's the same thing. I
+[00:20:33] just all I really do is I click on file.
+[00:20:35] I click on open folder. I select growth
+[00:20:37] intelligence and then it's there. And
+[00:20:39] yes, I trust the authors and
+[00:20:40] everything's there ready to rock and
+[00:20:42] roll. So, we'll play around with
+[00:20:43] anti-gravity on this one, which is
+[00:20:44] really cool. We can open this one up.
+[00:20:46] And then I'm going to give it a really
+[00:20:47] simple command. I'm going to say
+[00:20:48] something like, "Hey, I would like you
+[00:20:49] to open up this project in my local
+[00:20:51] host, please." Dead simple. Enter on
+[00:20:53] that. Now, I like to flip between Gemini
+[00:20:55] 3.0 and also Claude 4.5. You can use
+[00:20:58] both those models and cursor, but I like
+[00:20:59] using different environments with this
+[00:21:01] stuff. So, this is working for in the
+[00:21:02] background. And again, this is just now
+[00:21:03] how we can have a greater level of
+[00:21:05] control outside of the app and do lots
+[00:21:07] of different stuff with it. Really cool
+[00:21:09] here, guys. It has opened it up and you
+[00:21:10] see the flashing stuff. Gemini, okay,
+[00:21:12] can literally open your browser and have
+[00:21:14] a look around and test things and I can
+[00:21:16] like, dude, do a UI test on this or do
+[00:21:17] an XYZ test. So, you can say to it,
+[00:21:19] dude, this button isn't working. And
+[00:21:21] then what Gemini will do in anti-gravity
+[00:21:23] is open up and actually play around in
+[00:21:25] the browser to get it to the point where
+[00:21:27] it works, which is really crazy. So what
+[00:21:30] I would then encourage you to do is to
+[00:21:31] go through this and you can refine it
+[00:21:32] and give it different informations,
+[00:21:34] different instructions, and you'll just
+[00:21:35] absolutely crush it. Now, if you're
+[00:21:36] using curs code, one really cool thing
+[00:21:38] to do in the terminal here is I like to
+[00:21:41] leverage a lot the following, which is
+[00:21:43] if you do shift tab, you go into plan
+[00:21:45] mode. So ask claw to think of a lot of
+[00:21:47] information beforehand before it does
+[00:21:49] anything. And then the other thing you
+[00:21:50] want to do on the left hand side of
+[00:21:51] these things guys is create a new file
+[00:21:53] and you want to say I want you to create
+[00:21:54] a new file called claude.md
+[00:21:57] or it could be anything you want to
+[00:21:58] right it's the same thing in
+[00:21:59] anti-gravity. We want a file over there
+[00:22:01] which has the context for the project
+[00:22:04] everything the project's about cuz as
+[00:22:06] these context windows end it's a file
+[00:22:08] then it can come and get fully
+[00:22:10] familiarized with everything and all the
+[00:22:11] instructions and leave a bit of an
+[00:22:13] update whenever it finishes updating.
+[00:22:14] And then once you've finished doing
+[00:22:16] everything you want to with this stuff,
+[00:22:17] you then let loose and have a great time
+[00:22:19] with this in the browser itself. Like
+[00:22:21] refine it, open things up, do whatever
+[00:22:23] you want to. Now, this is an incredibly
+[00:22:26] comprehensive series of things. I'm not
+[00:22:28] actually expecting Gemini to do this all
+[00:22:29] in one shot to be honest with you, but
+[00:22:31] we're going to be using it when we start
+[00:22:32] leveraging cla code and some other
+[00:22:34] things. And just FYI on that, by the
+[00:22:35] way, one of the reasons why you
+[00:22:37] sometimes want to use cloud code,
+[00:22:38] there's debate about which model is
+[00:22:40] better. I'm finding that in my just my
+[00:22:43] personal experience as always I'll share
+[00:22:44] with you just what I'm finding Gemini
+[00:22:46] just seems to have an a massive edge in
+[00:22:49] design but when it comes to pure brute
+[00:22:51] force and just its ability to architect
+[00:22:53] and do different things I'm finding
+[00:22:54] claude exceptional for that again you
+[00:22:56] can use both it's fine I'm going to show
+[00:22:57] you stuff that works for me and it is
+[00:22:59] kicking butt so it's now beginning it
+[00:23:00] it's thinking through it's designing
+[00:23:02] everything and then I'm going to show
+[00:23:03] you some really cool tricks once we get
+[00:23:04] an initial view of this beautiful guys
+[00:23:06] and it's done its magic now check this
+[00:23:08] out already all freaking ready Look at
+[00:23:11] the Oh my goodness, guys. I might just
+[00:23:13] stay here for a few minutes and keep
+[00:23:14] doing this. [laughter] That was crazy. I
+[00:23:16] mean, you compare that with a lovable
+[00:23:18] thing. Again, I love lovable. They're
+[00:23:19] great. This is ridiculous. So, what have
+[00:23:22] we got here now? We've got lots of
+[00:23:24] stuff. Latest outliers, channel
+[00:23:25] velocity, active outliers, clickthrough
+[00:23:27] rate. Insane. Insane. Insane. Outlier
+[00:23:29] explorer, competitors, idea cues,
+[00:23:32] sparring partner. That must have taken
+[00:23:33] some language literally cuz one of the
+[00:23:35] tools I typically tend to use is this
+[00:23:36] guy, which is one of 10, which is a
+[00:23:37] really cool tool for finding outliers.
+[00:23:39] You can track different things like I've
+[00:23:40] got this one here which is like tech and
+[00:23:42] entrepreneur niche. We can click in it
+[00:23:43] and have a look and find different
+[00:23:44] things and see. Oh, this one's done
+[00:23:46] really well. 30 hidden Gemini 3.0 pro
+[00:23:49] features that Google doesn't want you to
+[00:23:50] know about. All right. Interesting. So
+[00:23:52] cool. So we come back over then and
+[00:23:54] let's have a look. Now what I kind of
+[00:23:55] need to do is make it specific to me. So
+[00:23:58] we need to come back and give some
+[00:23:59] prompts here to Gemini. Hey, really
+[00:24:01] really cool love a designer layout. What
+[00:24:03] information do you need for me to make
+[00:24:05] this work? Also, I'm going to give you
+[00:24:07] my YouTube channel. I'd like you to pull
+[00:24:09] all of my videos into there and do
+[00:24:11] outlier analysis of my own. I want to
+[00:24:13] see the titles, the thumbnails, and let
+[00:24:14] me know any other of the integrations or
+[00:24:16] specifics that you need to do to connect
+[00:24:18] to Superbase so that I can actually save
+[00:24:20] this. Let me know everything you need
+[00:24:21] from me. Cool. Now, I know that sounds
+[00:24:23] crazy, right? But what's really
+[00:24:24] interesting about this is that in many
+[00:24:26] ways now, you kind of do just chat to AI
+[00:24:29] like a bro or maybe a bro or broette,
+[00:24:32] whatever you want to call it, right at
+[00:24:34] my channel. Bam. There we go. Sweet. So,
+[00:24:36] we get this extra prompt, but it's very
+[00:24:38] conversational and you can just say,
+[00:24:40] "This isn't making sense. What do I need
+[00:24:42] to do?" And that's one of the key hacks
+[00:24:43] that's going to get you most results is
+[00:24:45] that the AI will tell you if something's
+[00:24:48] not working, if it just doesn't work.
+[00:24:50] Little hack as well whenever you're
+[00:24:51] building stuff like this is try to
+[00:24:53] oneshot it because once it lays out all
+[00:24:56] the code, you can see it. Think of it
+[00:24:58] like foundations for a house, right? And
+[00:25:00] if we're you and I building a house
+[00:25:01] together and we lay out the foundations
+[00:25:04] and we say, "I don't really like that. I
+[00:25:05] actually wanted you to have a cliff
+[00:25:06] face. It might need to completely
+[00:25:08] reconstitute all of the foundations,
+[00:25:10] which is way more difficult to do and it
+[00:25:11] gets stuck in loops and it will never
+[00:25:13] look the way that you want. So, you want
+[00:25:14] the foundational architecture of the
+[00:25:17] build to be as accurate as possible on
+[00:25:18] the first go. So, if you look at it and
+[00:25:20] like, no, it really didn't. It really
+[00:25:21] went off the wire on this one. I really
+[00:25:23] don't like it. Just refresh it and go
+[00:25:25] again. There's no harm in, you know,
+[00:25:27] sparring out three, four different
+[00:25:28] versions before you get ready. Cool. So,
+[00:25:30] it's asking us questions now. YouTube
+[00:25:32] data API key. Cool. So, I'm going to
+[00:25:33] show you how you get that. So, let's go
+[00:25:35] and grab that right now. So, let me show
+[00:25:36] you how you get this API key. You're
+[00:25:37] going to come over to
+[00:25:38] console.cloud.google.com.
+[00:25:40] And this is going to be a good way.
+[00:25:41] Anytime you want to connect to Google
+[00:25:42] API services, you do this. All right.
+[00:25:44] So, what do we do? We're going to click
+[00:25:45] on this. You're going to click on a new
+[00:25:46] project. We're going to give it a cool
+[00:25:48] name. We're going to call this one like
+[00:25:50] YouTube
+[00:25:52] 1 million. Wouldn't that be really cool?
+[00:25:53] YouTube 1 million. Organization is fine.
+[00:25:55] Click on create. Cool. So, this is now
+[00:25:57] creating YouTube 1 million, which we'll
+[00:25:59] do briefly in the background here.
+[00:26:00] Hopefully this is great for watch
+[00:26:02] because I I always find I always learn
+[00:26:03] best when I can see the stuff that's
+[00:26:05] happening. We're building it together
+[00:26:06] over the shoulder step by step. So I
+[00:26:08] select the project which is cool.
+[00:26:10] [snorts] I'm going to open this one up.
+[00:26:11] Uh once it finishes it does. So then
+[00:26:14] what we need to do is now we've created
+[00:26:15] a kind of project scope within Google.
+[00:26:17] So to get the API key we're going to
+[00:26:18] come back on. So just do
+[00:26:19] console.cloudg.com and then you're going
+[00:26:21] to call API and services. Let's have a
+[00:26:24] look at this guy. You're going to click
+[00:26:26] on credentials on the left hand side.
+[00:26:27] And then we're going to create a new
+[00:26:29] credential which is going to be under
+[00:26:30] API keys which is great. So create
+[00:26:32] credential API key. Fantastic. And then
+[00:26:35] this is going to enable Gemini to do
+[00:26:36] wonderful and beautiful things. And then
+[00:26:37] you're going to have an API key and all
+[00:26:38] we do is copy it and then throw it back
+[00:26:40] into Gemini real quick. So let's go for
+[00:26:41] Gemini and do that. And guys, I hope you
+[00:26:43] are buckled in to your chairs cuz you're
+[00:26:45] about to fall off those chairs. Look at
+[00:26:47] this. Welcome back, Jack. Stop your
+[00:26:49] latest video. Stop doing any build new
+[00:26:51] AI systems in 2026. That is completely
+[00:26:54] true because if you come over to my
+[00:26:55] channel, you'll see that that is the
+[00:26:57] latest video that I had. That is
+[00:26:59] actually crazy. So, it's pulled up
+[00:27:01] perfectly. That's exactly the video.
+[00:27:02] Great video by the way if I don't say so
+[00:27:04] myself. But check this out. Recent
+[00:27:06] views, market outliers, average
+[00:27:08] engagement, ideas, Q. But look at this
+[00:27:10] guys. This is crazy. It's got all of the
+[00:27:12] information there. Stop link intent. How
+[00:27:13] I build XYZ, the new way to build ABC.
+[00:27:15] And it gives them an engagement score,
+[00:27:17] but it's calculated. That is that is
+[00:27:19] freaking wild. And if you come down,
+[00:27:20] we've got outlier explorer, different
+[00:27:22] things from different competitors, idea
+[00:27:23] key, which is nuts. And if you come down
+[00:27:25] to settings, if you want to use this
+[00:27:26] yourself, all you have to do is put your
+[00:27:27] channel handle in about data API key.
+[00:27:29] I'll put this on all the AI systems that
+[00:27:31] I build that work for my businesses and
+[00:27:33] thousands of other businesses. So you
+[00:27:34] can check that down below. Tech support
+[00:27:36] guarantee. There is no such thing as a
+[00:27:38] tech headache in the JR community
+[00:27:39] because we kick and sort everything out
+[00:27:41] and we have a great time doing it. So
+[00:27:42] this is I'm really, really, really
+[00:27:44] impressed with this guys. It is
+[00:27:46] absolutely wild. So one final thing I
+[00:27:48] want to do with this is just give it a
+[00:27:49] bit more of a question. I'm going to say
+[00:27:50] actually no one other thing we must do
+[00:27:52] is connect superbase. So to do that we
+[00:27:54] need to give it two things project URL
+[00:27:56] and the non-public keys. So let's come
+[00:27:58] and do this. And this is going to enable
+[00:27:59] us then to store things store data store
+[00:28:01] ideas so we can grow interstellar and
+[00:28:03] kick some butt. So we're going to head
+[00:28:05] over to superbase.com and we're going to
+[00:28:08] create a new project together. So click
+[00:28:09] on new project. We'll call this one
+[00:28:11] YouTube 1 million. Of course we're using
+[00:28:12] Glider the world's coolest text to
+[00:28:14] speech startup. fastest one actually
+[00:28:16] right now which is cool. Hence the cap.
+[00:28:17] And then we got the database password
+[00:28:19] which we can generate a cool one there
+[00:28:20] which is nice. Region doesn't matter cuz
+[00:28:22] we're not doing it out outward facing
+[00:28:23] for clients. And then we create a new
+[00:28:25] project. Cool. So give us a hot second
+[00:28:27] and then we're going to give it the two
+[00:28:28] pieces of information that it needs and
+[00:28:30] then we're going to create the stuff
+[00:28:31] there. So to do that we come over to
+[00:28:33] project settings and then we're going to
+[00:28:34] go down to I believe it's API keys on
+[00:28:37] the left hand side and then we're going
+[00:28:38] to grab two piece of information after
+[00:28:40] we click on legacy and non-service ro
+[00:28:43] API keys like so. And all we do guys is
+[00:28:45] copy the anon.public and then come back
+[00:28:47] over to Gemini which is right here and
+[00:28:50] say great superbase creds. I'm going to
+[00:28:52] say anon public is this and then going
+[00:28:55] to say database database bam. Okay. And
+[00:28:59] then we come over and just grab that
+[00:29:01] from superbase which is literally just
+[00:29:02] this. And then come back over to Gemini.
+[00:29:05] Paste that in like so. And then we can
+[00:29:06] get rid of settings and all that sort of
+[00:29:08] stuff. Awesome. And then what it also
+[00:29:09] needs to do then is a query. So copy
+[00:29:13] this SQL. Remember I told you it's just
+[00:29:14] like we speak English models speak SQL.
+[00:29:18] All we're going to do now is come back
+[00:29:19] over to Superbase on the left hand side.
+[00:29:21] Just click on SQL editor and then enter
+[00:29:23] the information here. And if it works it
+[00:29:26] should come back with success. No rows
+[00:29:27] returned. Click on run. And once you've
+[00:29:29] done that that leads us on to the third
+[00:29:31] part of our ACE framework which is E for
+[00:29:34] execution. And the way we do this now is
+[00:29:36] we can publish this on GitHub and then
+[00:29:39] have our own full app and website. So to
+[00:29:41] do this, I'm going to say, "Hey there. I
+[00:29:42] would like you to publish this onto
+[00:29:44] GitHub for me. Make sure that it is
+[00:29:45] ready to be published and then publish
+[00:29:47] it here." Beautiful. Then we're going to
+[00:29:48] head over to our browser. In our
+[00:29:49] browser, we're going to head over to
+[00:29:50] github.com. You're going to come over
+[00:29:52] here to new. Just create a new account.
+[00:29:54] It's completely free. We'll call this
+[00:29:55] one YouTube 1 million. Description is
+[00:29:59] getting YouTube to 1 million subscribers
+[00:30:01] or whatever your goal is. For example,
+[00:30:03] come down. Public is okay for now. Click
+[00:30:05] on create repository like so. And then
+[00:30:07] give this a hot second. And then you're
+[00:30:08] going to copy this link. So, I'm going
+[00:30:10] to turn this to private afterwards. But
+[00:30:12] once we've done that, we then we come
+[00:30:13] back over to anti-gravity. And then we
+[00:30:16] just say here you go. Bam. Enter that
+[00:30:18] in. And then hit enter like that. And
+[00:30:20] then what this will do is just go
+[00:30:21] through all the files, make sure it's
+[00:30:22] ready and appropriate to be published.
+[00:30:24] And then we can then co coers this
+[00:30:26] basically with GitHub to get it live.
+[00:30:28] And then we can publish it onto website,
+[00:30:29] give it unique a unique domain and do
+[00:30:31] anything we want to. And obviously as
+[00:30:32] you go through this, it will ask us if
+[00:30:34] you want to accept. You just basically
+[00:30:35] say yes and it will just that means it
+[00:30:37] won't have to keep asking all the time
+[00:30:38] if you put auto accept on which is great
+[00:30:40] and just approve all the things it wants
+[00:30:41] to do and then you kick an ass. And just
+[00:30:42] like that guys it is now done it and it
+[00:30:44] says that we can now view our repo. So
+[00:30:46] we just click on that for instance it
+[00:30:47] will then open up a new tab and would
+[00:30:48] you believe it is all there ready to
+[00:30:50] rock and roll. How crazy is that? Then
+[00:30:52] if you want to publish it all we have to
+[00:30:53] do is come over to visel.com which is a
+[00:30:56] place that lets us publish our stuff I
+[00:30:58] guess if I had to um give it a specific
+[00:31:01] thing. So going to come down here and
+[00:31:02] click on add new. Click on add project
+[00:31:04] and then once you're connected to GitHub
+[00:31:05] which is a simple sign in you can just
+[00:31:07] import it like this you come down you
+[00:31:09] can then deploy this which is amazing
+[00:31:11] and then this will actually be a live
+[00:31:13] website that you can track and use and
+[00:31:14] change a domain on it is crazy and just
+[00:31:16] like that it is live. So, if I just
+[00:31:18] click on this, does it work? And we give
+[00:31:19] it a hot second. And there we go. We've
+[00:31:21] now got a full beautiful live thing. And
+[00:31:22] we can connect our channel by clicking
+[00:31:24] this. Enter in the API key, sync channel
+[00:31:26] data. Obviously, I've populated this
+[00:31:27] one, which is really cool. And then
+[00:31:29] we've got all of our great information
+[00:31:32] data, which is crazy. And then once you
+[00:31:33] give it any changes like change the
+[00:31:35] color scheme or change XYZ, it will
+[00:31:36] update for you automatically, which is
+[00:31:38] the big benefit of having GitHub for
+[00:31:40] sale and this whole system plan
+[00:31:42] together. And now you know how to get
+[00:31:43] 80% of the systems. If you want to get
+[00:31:45] access to every system that I've ever
+[00:31:46] built and will build, direct access to
+[00:31:48] me every week and every day in the
+[00:31:50] community, and also 100% tech support
+[00:31:52] guarantee, you can click the link in
+[00:31:53] description and I'll catch you inside
+[00:31:54] the Medicine.

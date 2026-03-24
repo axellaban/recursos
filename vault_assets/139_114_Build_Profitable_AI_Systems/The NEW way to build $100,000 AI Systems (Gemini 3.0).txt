@@ -1,0 +1,357 @@
+[00:00:00] Most businesses waste time on AI that looks cool but doesn't deliver any real results. And Gemini 3.0 has changed
+[00:00:07] everything. For those of you who don't know, I'm Jack Roberts. I built and sold a top 100 UK startup over 60,000
+[00:00:13] customers. And I now run a 7figure AI automation business. And in this video, I'm going to show you how to build
+[00:00:19] profitable AI systems quickly. They can buy you hours of your time back and save
+[00:00:24] you thousands of dollars on hiring costs. So, if you haven't already, grab that coffee and let's dive straight in.
+[00:00:30] Your man's on the iced coffee these days. Honestly, it's getting a bit chilly over here. So, profitable AI systems with Gemini 3.0. There are three
+[00:00:38] important things that you have to know that's going to help your learning accelerate and all the beautiful things that come from it. And these are very,
+[00:00:45] very recent changes. So, app builders were kind of like Microsoft Paint. If you remember what those looked like, it
+[00:00:51] was unresponsive and painful when it went down rabbit holes. And then we saw the rise of templates. That was things
+[00:00:58] like lovable. They looked really good, but it kind of became meh, especially when you saw loads of them stacked in
+[00:01:04] front of each other. And they were also really difficult to connect to our automations, right? And then Gemini 3
+[00:01:10] came along. The subset was a pretty much of a pretty cool guy, this Gemini 3 character. And they basically solved the
+[00:01:16] UI problem. I mean, this is a website, by the way, exactly identical prompt. I showed it in my last video. The one on
+[00:01:22] the right is lovable, still okay. The one on the left is just a step change above in terms of quality. You literally
+[00:01:28] just type and it builds incredible things. And this trend is only heading one direction, which is north. Now, it
+[00:01:35] is also the second thing you need to understand easier than ever. Literally this week to connect NATM via an MCP.
+[00:01:44] Now, what the hell is MCP? Well, MCP basically is kind of like a universal um remote control. It just lets you control
+[00:01:52] any app. It's a universal coding language essentially, but lets things talk to other things without having to
+[00:01:58] know a billion different other things. It makes it super super simple to understand. And it means for your purposes that you can just connect your
+[00:02:05] AI apps now to no code automations, which kind of look a little bit like this, right? Beautiful front ends with
+[00:02:11] really complicated, exceptional backends, which I'm going to show you in this video as well. And you just don't have to worry about the plumbing. In
+[00:02:18] other words, it becomes way easier, way quicker. However, this new tech is amazing, right? But if it doesn't buy
+[00:02:24] your time back or make you money, it's not a profitable system. In this video, I'm going to show you the speedy
+[00:02:29] framework, which is how you can actually build these apps. It's the same stuff that I used to scale my first startup to
+[00:02:35] 60,000 customers. So, you can just literally copy those things and get started. At the end of the video, I'm also going to cover how you might then
+[00:02:40] actually, if you wanted to, go ahead to sell this to different businesses to crush it. S stands for signal, which is
+[00:02:46] basically finding an actual problem that people want to solve. And ideally, those people have money or it's a real pinch
+[00:02:52] point within your own business. So to do that, I'm going to use this really cool website that lets you kind of search
+[00:02:57] through Reddit or different platforms. I'm going to go to my classroom and grab this real quick. I believe it's Yeah, it's in business systems. If I come down
+[00:03:04] and show you this cuz we're going to be using this throughout the video to couple the different things we need. So let's head over to the beautiful where
+[00:03:10] is it right now? Social insights which is buzzabout.ai. So the idea with this is that you can actually try different
+[00:03:15] things, give it different keywords and it will help you find things. Okay. So if let's say for example that we want to
+[00:03:20] search for something like ideas social media growth which actually is something
+[00:03:26] that I've sold automations on. It's probably one of the biggest things for small businesses mediumsized businesses that want to grow. They want to create
+[00:03:32] content but they don't know what to do on. Now I use a similar system to this and actually literally the first video I
+[00:03:38] did on Instagram after it got like 120,000 views. It's really really cool. So what we can do now is use tools like
+[00:03:43] this and this will actually search through help you refine it find keywords so you can get an understanding of what
+[00:03:49] we call signal which is the things that they actually want. So once we understand the problem that we're solving ideally for somebody if you're
+[00:03:55] selling that has more money or for your own business what the biggest bottleneck is the next thing that we want to do realistically is build out a little bit
+[00:04:01] of an idea of a dashboard. So what I thought would be cool to build in this sort of video which I've got summarized down below is a dashboard. The inner
+[00:04:08] screen can show you live trending topics from some cool websites like this. And let me grab my beautiful pen from the
+[00:04:14] left hand side. All right, we got my pen. Is it working? Good. This is really cool, right? So, we basically what we
+[00:04:19] want to do is and we know that 80% of growing on social media is to do with the idea and the packaging of the video,
+[00:04:26] right? Which stands to reason that having the right content input, understanding what is trending before
+[00:04:32] other people will let us break that news and effectively add more value to our audience. So, we want to be able to get
+[00:04:37] trending topics. So we need to decide where we want to get that information from. That could be X, that could be YouTube, it could be Reddit. And
+[00:04:43] remember, if you're the one going to different places, you you'll get ahead of other people. Then we kind of want to do some kind of scoring mechanism.
+[00:04:48] Either we could do that or we get AI to do that. We could do something on hook generation. So if we were doing short form content or we sell to somebody, you
+[00:04:55] can get those hooks already built into it cuz that is a big part of the process. And then we've solved the hook and the idea. Okay, hook and idea.
+[00:05:03] Beautiful. We could if we wanted to do some auto posting on to YouTube. And then we could also do some learning thing. And then we've got a cool little
+[00:05:09] tech stack here. So this is a general idea of how we want to kind of approach and think about this problem.
+[00:05:14] Effectively a dashboard that will go forward and scrape viral things from Reddit, script viral things from newsletters and then put that into a
+[00:05:20] beautiful dashboard for us to review on a weekly basis to inform our content strategy on either LinkedIn, Instagram
+[00:05:26] or Tik Tok. Then P stands for process. So what we want to get is a standard operating procedure from Claude. So
+[00:05:32] let's give it a question here. Hey, I would like you to create for me a guide for a prompt to create a beautiful app.
+[00:05:39] Here are the things I would like it to do. I would like it to be a gorgeous, beautiful, minimalistic app with a
+[00:05:45] fantastic design. It's going to connect to N810V and MCP. It's going to have the ability to connect to Superbase to save
+[00:05:52] different things. And the way that I would like it to do is have a button that scrapes now. It's going to be fed a
+[00:05:58] series of information. It's going to be fed articles from Reddit and it's going to be fed highlights from a newsletter.
+[00:06:04] It will present that in a visually engaging way. Then what I would like to be able to do is to save things and have
+[00:06:10] a second tab on the left hand side that will then let me go ahead and then turn those into hooks and do various
+[00:06:16] different things. Think of it like a dashboard. We will have assigned in there eventually, but don't worry about that at the beginning. Okay, beautiful.
+[00:06:22] And of course, guys, we're using the beautiful glider cuz time is of the essence, right? And we have time to wait around for things buffering. Funny
+[00:06:28] story, when I did the competition in New York, I was using a different model, should we say, for Texas speech, and I
+[00:06:33] did this huge twominute thing and I was like, bear in mind, you 20-minute competitions, this genty thing I did,
+[00:06:38] right? And then I literally did a minute and a half thing and it fell and I was like, guys, never again can I let that
+[00:06:45] happen. So, I'm really pleased that we we cracked that. So, what we're doing here though with this, right, is we're getting a bit of an overview in SOP,
+[00:06:52] which is great. So remember, Claude is fantastic or if you give a model very specific task, it will just make the
+[00:06:57] process better. So we've got that and then what I'm going to do in the background here is whip up AI Studio,
+[00:07:03] which is phenomenal. Okay, great. Cuz AI Studio's got Gemini built into it, which is really cool. So
+[00:07:08] this one rock and roll, and then we're going to give it this prompt. So once we've got this from Claude, we've got everything that we need. Let's just come
+[00:07:15] down and then we can just copy this. And then what we're also going to do is really even though Gemini's crushed the
+[00:07:20] design. What I recommend that we do is to first of all copy this. Come back over to Gemini. We're going to paste
+[00:07:26] that in. Let's head over to dribble.com. Another option by the way is a place called Code Pen. Um these are places
+[00:07:32] where you can This is a bit more code focused. Like if you want really weird wacky things like electric borders or whatever, this one is really cool for
+[00:07:40] discovering amazing design. It's absolutely gorgeous. So what we are really going to
+[00:07:46] do is type in dashboard for example. Mhm. Let this load up and then we can
+[00:07:51] pick one that we like. This one might look a little bit familiar. So let's find a design that we think is cool. Maybe we go for something a bit dark
+[00:07:57] mode. But effectively we can just scroll through this, find one that we think is really decent. I kind of like the
+[00:08:03] aesthetic on this one here. So what we could probably do is just come down. Uh we can copy the image and then go over
+[00:08:10] to our phenomenal Google which is over here and just say I've attached a
+[00:08:17] screenshot for your reference. Beautiful. Fantastic. And we come back up. Cool. And then I think we just go down and
+[00:08:23] then we are going to enter and let this work its magic. Whilst this is building in the background, what I want you to do
+[00:08:29] is get ready for the next step ahead of time. This is typically one of the best ways to do this because AI will go down
+[00:08:34] these beautiful coding rabbit holes, but we want to be productive. What we're going to do is download an
+[00:08:39] app called anti-gravity which is basically this but it will live in our laptop. So you need to first of all go
+[00:08:46] to node.js if you haven't done this before and download it. The tlddr is node.js just basically lets you edit it
+[00:08:52] and make decisions on your laptop. So you're going to download that and then you're going to go ahead and download at Google's anti-gravity. And when you
+[00:08:57] install anti-gravity it will look something like this which is very familiar and we can open folders and do great things. So, let's come back over
+[00:09:04] to our scenario and see how this is progressing for us right now. And beautiful. Just like that, guys. We have
+[00:09:09] our first version. This is really minimalistic. I'm actually very impressed with this design and I'm happy
+[00:09:16] with it. Generally speaking, it's kind of taken a lot of nice viewpoints on it. So, what I'm going to do is actually
+[00:09:21] connect this now to NA10 MCP. Now, effectively at this stage, what we're going to do is oneclick integrate it
+[00:09:27] with NA10. Now, what that means is that we no longer have to worry about any of the plumbing or the web hooks. we can
+[00:09:33] just change a scenario in NAM and then flawlessly connect it to this dashboard
+[00:09:38] which means that anything that we build will work. But to do that we need to first of all grab a blueprint. And for that I'm just going to come back over to
+[00:09:44] the beautiful community and grab this red news scraper that I pulled together earlier. All right, fantastic. So we're
+[00:09:49] just going to download that and then let's head over to NN and let's upload this guy. So come down here and then
+[00:09:55] we're going to import from file and once we've done that it will load for us automatically. So just explain exactly what's going on here. I have for
+[00:10:01] simplicity sake split this across two sources. The first one here is going to be Reddit. So the idea here is that
+[00:10:08] based on the niche that you've got, you can give it any number of subreddits. So I picked four. So I have r/n r/noode r/
+[00:10:17] artificial intelligence and r/ai agent. So I'd encourage you to go on to Reddit, check it out, find out the basically the
+[00:10:24] areas and the and the kind of subreddits that have the information that are relevant for your posting. So, what this will do is search for the top 10 hottest
+[00:10:31] posts every time I run it in that subreddit for the last seven weeks. This filters it by date, formats the output,
+[00:10:37] adds the source tag, and then combines it. And then down here, we've got an RSS feed. So, if you're thinking about
+[00:10:43] what's the best way to get relevant news, one of the things we can do is go to a newsletter. So, for example, the
+[00:10:48] one I've used here is a really, really cool one, which is Ben's Bites. So, we got Ben's Bites, and it's very, very
+[00:10:54] cool. But what's interesting is if you actually just scrape the page with HTTP, it will have like a sign-in box. So you
+[00:11:00] want to get the basically what they call like the RSS feed. So then essentially what we can do is grab this information. So let me just show you how this works
+[00:11:06] real quick. I'm going to come back over to our scenario in Nan and then execute the workflow in the background. We're
+[00:11:12] going to have a full live build of this inside the community. So if you want to learn how to build this, uh we can do that together with you step by step.
+[00:11:17] Guaranteed that you'll have it all up by the end of the call. We'll show you all the bits and pieces. So then here at the end we have 80 items, right? And it's
+[00:11:23] got the Reddit, the title, and everything that we need. So, I love N10 for automation. I turn my, look at this.
+[00:11:29] I turn my N10 workflow into a functional micros using Gemini feed at the front end. How cool is that, right? So, then
+[00:11:34] we can see how many ups it's had, how viral it is, and everything that kind of makes sense. So, we can use that to
+[00:11:40] decide, cool, well, what content do we want to create, right? So, what do we do then to how do we then connect this Jack
+[00:11:45] to Google Gemini? Well, what we're going to do first of all is come down here to first of all, going to say number one.
+[00:11:50] We're going to come down here and we're going to settings and then what you're looking on the left hand side is MCP access. Now you need to make sure that
+[00:11:56] this here is enabled. If it's not enabled, you need to make sure that's enabled. Once you've done that, going to
+[00:12:01] come back over to this public scenario and what we need to do is give it a little bit of a description. So I'm going to come down here into settings
+[00:12:08] and then you can see it says available in MCP, which we're going to change real quick. But before we do that, we need to
+[00:12:14] activate the scenario. So to do that, you can trigger an MCP scenario with a chat functionality. You can do it with a
+[00:12:20] web hook. You can do it with schedule as well. There's a like four different ways you can do it. We're going to come down here and just add a chat node in. It
+[00:12:27] doesn't really make a difference from our point of view, but we can put it down here and then just have it cuz all we're doing is really triggering it.
+[00:12:32] It's it's irrelevant for us. Really cool. So then we're going to save this one. Fantastic. We're going to set this one to active. Workflow activated. We
+[00:12:39] like this. And then what we're going to do is come over here and we're going to change this n settings to activate this
+[00:12:44] for MCP. So let's just come ahead and do that real quick. available in MCP.
+[00:12:49] Fantastic. And then click on save. Beautiful. Then if you actually come back to your NA10 overview in a
+[00:12:54] different page, you'll be able to see that this is activated. And you know that this is activated because you can see Reddit news script here guys has
+[00:13:00] that beautiful available in MCP. Cool. So then what we need to do is actually physically connect this then to our
+[00:13:06] scenario. So to do that, what we need to do is actually head over to basically on the left hand side. We're going to come
+[00:13:12] down here to Jack Roberts. We're going to come to down to settings. We're going to go through to MCP. And then you're gonna go on access token. And then you
+[00:13:19] can see this. You're gonna hit this regenerate button here. And then it's going to give you a list of code. And then we're just going to give that over to Google Gemini. So once I hit
+[00:13:26] regenerate, you can see the access token. I click on this button here. And I've got all this code. So let's copy it. And then we're going to come back
+[00:13:32] over then to Google Gemini real quick, which is going to be in Google Studio. I'm going to say, excellent. I would like you to connect the scope now button
+[00:13:38] to this NAT scenario via the MCP. Here is the code to do that. Okay. Bam. And
+[00:13:44] then we just boop throw that in. And then we're going to hit enter like so. And that's going to connect it for us beautifully. And then we're going to
+[00:13:50] download this and then take this to the next level. And this brings us on to E in our speedy framework which is engine.
+[00:13:56] And this is everything we're doing right now. Basically chatting with Gemini to build out the actual beautiful structure
+[00:14:03] that we've got and bringing everything we need in to make this as an efficient engine as humanly possible. So this is going to work for us in the background.
+[00:14:09] When this is done, we should have something that we think is basically what I'm looking for here is functional
+[00:14:14] and connected. When it's done that, I'm going to download it so I can actually get a bit more granular in my build and
+[00:14:19] kind of pull things together and just have that greater layer of control. And then we're going to get it on something
+[00:14:25] called GitHub, which that sounds complicated. Don't worry, I'll make it. It's actually quite simple and it makes
+[00:14:30] a lot of good sense. So, you'll see as we get that rocking and rolling. But one of the things that we need to do in order for this to actually understand
+[00:14:35] what it is is write a description. because if you have multiple scenarios connected, it's going to decide which
+[00:14:41] one to activate. So, what we're going to do here is give it a bit of a description. So, this workflow scrapes Reddit and online AI newsletters to
+[00:14:49] provide information about the latest, most popular posts for AI automations.
+[00:14:54] Use this when getting information, something like that. And then we go down here and click on save. Now, there's been questions about, well, Jack, what
+[00:15:00] if I have multiple MCPS? How do I do that? Basically, that's all just given
+[00:15:06] in the description that you have. Okay, you just got to give it a good description. But if you want it to be completely robust with absolutely zero
+[00:15:11] chance, just only have activated MCPs, the ones that you want. Cuz if you think about if I have six different apps and
+[00:15:17] six different scenarios, how do you safeguard to make sure it's done that? That is accomplished by that. And actually, one of the ways that we can
+[00:15:22] get around this is if you come over then to beautiful tab here, we can say you're only allowed to call this particular
+[00:15:28] Reddit workflow. So I can just come back over, I can come over to the scenario and say you can only call the Reddit newspaper. So, let's come back over to
+[00:15:35] our system and say for the MCP, you are only explicitly allowed to call this
+[00:15:40] scraper. Here is its description. Write this into the notes and then just come back over and I just grab a description
+[00:15:47] to be super duper explicit on that. Come down. There we go. Sweet. Come back. And then we are ready to rock and roll. Then
+[00:15:53] once it's done that, guys, we are going to test it. We're going to download it. But I want to kind of do it in my local host, which again, local host can sound
+[00:15:59] confusing, but effectively this is the direction where all the future of AI stuff is going. I'm really discerning on
+[00:16:06] your time and the sense that I never want to show you a technology or a way of doing something that isn't going to take you further. This the juice has got
+[00:16:13] to be worth the squeeze with this system, guys. It 100% is. And you'll
+[00:16:19] notice you can build these automations with these apps now. But you still need
+[00:16:25] NA10 still has an incredible role to play here. One of the things I didn't touch on when I was building this is how
+[00:16:31] exceptional the N810 AI is. Like I'm not joking. Like when I built this scenario,
+[00:16:36] guys, I literally was talking to it like I wanted to do ABCD EFG. Then I was the
+[00:16:42] the engineer in like loose terms, whatever you want to call it, that kind of move things around. Like I'm not joking. It has gotten to the point where
+[00:16:48] we're literally talking to workflows now. It has arrived. But no matter how good these app builders get, you're
+[00:16:54] still going to want granular level control and turn the knobs because AI is only as good as your ability to explain
+[00:17:00] something to it. And it's a really important concept for for us all to think about as we're building these profitable systems um using Gemini or
+[00:17:07] other apps for our businesses. Okay, so now we got the skeleton. I'm going to upload this to GitHub and then we're going to edit it to get this functional
+[00:17:14] on our laptop. So come to save to GitHub right here. If you don't have an account, you can just literally create one at github.com. It is completely free
+[00:17:21] to do in 2025 which is cool. So open this up. Yes, that is absolutely fine.
+[00:17:26] Install and authorize. We give it our password. Okay. Beautiful. So this will connect and it's done which is cool. All
+[00:17:33] right. All right. All right. All right. So it looks like this is done. Something's went wrong. Let's try again then. Let's see if we can get this one
+[00:17:38] working the functional. So on this page we just save all repositories. Cool. And this will load. Fantastic. So give it a
+[00:17:43] repository name. And we'll call this one something like content uh scraper. finds the latest viral ideas for all content
+[00:17:50] in AI automations. Cool. And we'll make this one public. Cool. And then quote git repo, which basically means it's
+[00:17:56] taken all the files behind what we've built here and has put it on git. GitHub's just a a repository. It's just
+[00:18:02] somewhere where you store code basically. So you stored it and you can share it with the people. You can download it. You can do anything you
+[00:18:08] want to. So you can see all this stuff guys. All this gobbledegook. I know there's a lot of code is not going to like me saying this, but it just it just
+[00:18:14] makes the app. That's all it does. This is all done, which looks great to me. stage and commit all changes. So it's syncing all changes and then this is the
+[00:18:21] point where we say aistic studio.com you've been wonderful we appreciate you but your services are no longer
+[00:18:26] required. So it's all done. Cool. So what do we do? We head back over then to github.com. And you can see guys on the
+[00:18:32] inside we've got this suspiciously familiar looking content scraper which is very very cool. All right this is
+[00:18:37] decent. I like this. So now we want to grab all these files and put it on our computer so we can make it amazing. So
+[00:18:42] we click on this and you can see this which is clone using this web URL. You just click copy. Then if you should have
+[00:18:49] already installed Node.js which I showed you, you're going to come down now to anti-gravity. Probably the coolest name
+[00:18:56] on the block if you ask me. We click on clone repo and we enter in this. And then we just hit enter. And then the
+[00:19:02] rest should happen as it goes there. So we'll call new folder. Let's call this one something like content scraper. And
+[00:19:09] then why don't we call this one BTG standing for build together and click on create. Cool. And then select repo as
+[00:19:14] destination. And then it's cloning, which is great. Would you like to open a clone repo? And almost, look at this.
+[00:19:20] Yes, I trust this folder. That's fine. Fantastic. And now, just like magic, we've got all of the stuff. So, for
+[00:19:26] example, I'm going to come down with a command to this. So, it's loading up. I'm going to say something like, "Hey there, I would like you to open up this
+[00:19:33] app for me on my computer on the local host." Okay. So, the way this is going to work now, it's going to give us a local host ID. And then we click on
+[00:19:39] that, and then we can actually view the app. And this gives us so much more configurability, which is great. So now
+[00:19:44] it's going to run us through all the different projects that we've got, which is very, very cool, and make some judgment calls and decisions on it. Then
+[00:19:51] we can click this link, open it up, get it to the level that we're happy with, and make some final integrations, which
+[00:19:56] are going to be very exciting. So, if we look at this, guys, it has a local host, which is fantastic. So, we click on that to open it up, and let's just see what
+[00:20:02] we get. Well, nothing is loading up, which is code for pretty normal with these things sometimes. Hey there, bro.
+[00:20:08] When I click on that, nothing loads up. I just get a blank screen. Please fix this. Cool. Now, what's really cool
+[00:20:14] about anti-gravity is it also has the ability to open the thing in a browser. So, it can selfcorrect,
+[00:20:20] which is incredible because before it used to be a case of pasting screenshots 24/7. One of the things that we can do
+[00:20:25] now as you look at this, look what look at guys, the hands are up here. The hands are not touching the keyboard. Would you believe this? It's opening up
+[00:20:32] and it's going to see, hang on a second. Nothing's popping up. That's code for not working properly, right? So, then
+[00:20:38] this will run in the background and then down here it's actually going to check the URL and see what's going on. that gets that live feedback which is really
+[00:20:44] cool. So always expect some small degree of troubleshooting. One of the things that you'll see over time with these
+[00:20:50] systems guys is that the error rate per 100 interactions just goes down over
+[00:20:55] time. So in other words it can all it's it's on this like ever growing system of getting more things right the first time
+[00:21:01] make and also making it easier to troubleshoot and identify. So these guys that are building it it's like how do we
+[00:21:06] get it right quicker and then how do we actually fix what's gone wrong faster? like that. Those are the two matrices
+[00:21:12] that these these apps and systems are getting better into. And then there's also the integration thing that you're going to see with MCP once I connect
+[00:21:18] that now uh to our NA10 scenario. And look, guys, it sees the issue. The index.html file is missing the script
+[00:21:24] tag. Obviously, didn't we all know that? I'm surprised it took this long to figure it out. I mean, what is it playing at? So, it's fixing it for us.
+[00:21:31] Then, we can see it works. Then, we're going to do the NAN connection, and then we move on to the next step, which is
+[00:21:36] going to take it into overdrive. And guys, apparently, it should already be fine. And so if I swing back over now, and would you believe we're seeing it.
+[00:21:41] This looks great. It's got a very clawed type feel to it. Obviously, we can move it in any direction you want to, but I think this is clean, clean, crisp, and
+[00:21:48] beautiful. These are apps that I personally paid tens and tens and tens of thousands of dollars for. So, let's
+[00:21:53] click on scrape. Now, this is a major thing, and see what happens. We clicking scrape, and we have got random
+[00:21:59] information, which I'm not very uh pleased with, to be honest with you. So, we need to come back and make sure it's
+[00:22:04] actually pulling the right information. So, I'm going to come back over here and I'm going to say to him, "Hey there, bro. When I click scrape now, the app is
+[00:22:11] not calling the NAN MCP. Please fix this." It should be calling the NA10
+[00:22:17] scenario once I hit scrape now. Just for your reference, this is the MCP call.
+[00:22:23] Okay. Bam. I'm going to come back over now and just give it the same information that I gave it last time. So, come down here. MCP.json file. Okay.
+[00:22:31] You need a MCP.json file. Please create one with this below. Okay. And give it that. Fantastic. Then
+[00:22:39] once it's worked its magic, we should be cooking. You see guys, all along the API is already configured, but it should be
+[00:22:45] using a cause proxy, which might be causing issues. I mean, guys, what is this amateur hour? I thought I thought we'd already covered this, but you can
+[00:22:51] see just the troubleshooting is already a little bit better in the apps, which is funny. I like to I like to riff on it in my spare time cuz I think it's really
+[00:22:57] funny. Do I have better things to be doing? Probably, but I I like to riff on the AI, which I think is very funny. Cool. So you basically will spar back
+[00:23:03] with it a couple of times to get this up and running and then yeah it it's just very very standard part of the process and it's come back with some more
+[00:23:09] information. So we just click on accept all. Often times it'll come back and say hey you happy with this hey you happy
+[00:23:14] with that and we just say yeah yeah yeah that's absolutely fine. We just make sure we accept all that stuff that we're happy with. If you're not familiar with
+[00:23:20] this interface on the left hand side here you have all the files. Basically you can add and create your own files. middle is just the code and then the
+[00:23:26] only window that you're really going to be focused on is the one on the right hand side which is giving it commands testing things and then you open it up
+[00:23:32] on your laptop whenever you physically need to and you can always come down here file open folder which would be a
+[00:23:37] new project. So if you want to do a new project you could actually just build it all from scratch in this application if you like. So it's now text from proxies
+[00:23:44] give us a few seconds and then check back in with it. Hey there guys. So this is working quite steadily in the background but it's kind of run out of
+[00:23:50] credits and it's stuck in a loop at the moment where it's working on something. So, what I'm going to do in this case is actually just continue the exact same
+[00:23:56] thing over in Claude code. So, I'm going to click stop on this. You can actually download the Claude app. It's the exact
+[00:24:02] same process and we can just continue the conversation. And this is a good thing to do if you run out of credits or
+[00:24:07] you want to switch models. So, in this one here, all we do is select the folder, same one as before, and then we
+[00:24:13] just give it the prompt, which is, hey, this is the issue that I've got. And effectively, all we're really doing, guys, with this stuff is we test it. We
+[00:24:19] go back and forth until we get something that's fully functional and working. So what we've established so far in a few moments is that when you click scrape
+[00:24:26] now it says found through the content items but if you come over to N10 what
+[00:24:31] you can actually see if I come off this and show you in the executions that it is actually triggering the scenario
+[00:24:37] perfectly in the background. The one other trend that I would recommend that you adapt in here as well is this idea
+[00:24:42] of using a web hook instead of chat. For some reason when I was running the test in this particular case it seemed to
+[00:24:48] just respond better with a web hook than with chat conversation. So, we come back over to Claude. Claude is now going to
+[00:24:54] go through and check all this stuff out. Remember Claude's 4.5 model is incredibly powerful and we could combine
+[00:24:59] that with Gemini to get insane results. So, just like that, Claude has worked its magic and this brings us on to the next E, which is to enhance because
+[00:25:07] you'll see guys, it is now working properly. If I click on scrape now, this will then activate NAN with the MCP and
+[00:25:14] bring us everything down. So, give this a hot second. It's scraping and bam, guys. Look at this. OpenAI just hit code
+[00:25:20] red 3 years after Google panicked over chat GPT. MCP add support for external oorthth. Oh my goodness. And we've got
+[00:25:27] it split down here by Reddit and also newsletters. We can also X things if we
+[00:25:32] don't want that which is cool. Boom. Let's see. Don't listen to deep scoop photos. Okay. So I'm finding here on
+[00:25:38] Benes is not enough information. But you can see we've got thing that it scrapes on the left hand side and then
+[00:25:43] everything. So if I say hey, you know, I don't like the look of this. Get rid of this. Get rid of this. I can do all this stuff and I can save it and if I save it
+[00:25:50] comes over here then I could use this to generate a hook. So interesting guys I
+[00:25:55] had the idea that actually I think it would be simpler if we had one edited scenario per thing. So we've got this
+[00:26:01] Reddit news scraper but I think the next best thing for us to do is to have a scraper per medium because we get so
+[00:26:09] much unique information from Reddit like the likes and the shares and we kind of want to have that per platform. So my
+[00:26:15] idea now is to amend this slightly so we can have different basically different platforms in different places. So I've
+[00:26:21] reimplified this down for simplicity sake. I'm going to script this one now to get the data with some of the improvements that we made. Give that a
+[00:26:27] hot second and then that will repopulate. And now you can see when we sort by likes or date or comment, we can
+[00:26:32] actually have this now left to right. So we can go through this. We can save it and it goes through to the save thing. But the next step is how do we actually
+[00:26:38] save it? Because if I refresh this for example, everything disappears. So what we need to do now is connect the
+[00:26:43] database and that's where D in our speedy framework comes from which is all about the data. So to do that we're
+[00:26:49] going to head back over to our chat which could be cursor could be cloud code could be anything and then what we're going to do is give it a beautiful
+[00:26:55] prompt. So let's come over here and do that directly. So I'm going to say something along the lines of hey there I
+[00:27:00] would now like to connect this to superbase. I have a superbase table already. Please give me a SQL code to
+[00:27:06] create the appropriate database so that anything that is saved is then saved in the system and it remembers all the
+[00:27:11] information that is already there and whenever you refresh it should then add those modules as new. Okay, beautiful.
+[00:27:16] So we enter that one in there. Then what's going to happen is Superbase going to give us an SQL code and we can do that. But first what we're going to
+[00:27:22] do is head over to Superbase ourselves. So let's go over there and create a new environment together. Beautiful. Come
+[00:27:29] over to our new project which we'll create. All right. Fantastic. So, let's give it a new organization. We are going
+[00:27:34] to create a new organization. So, let's come back over to the main website real quick. Beautiful. Start a project. We
+[00:27:41] want to create a new organization which is nowhere to be found. Oh, it's right there. Perfect. Let's get that one up
+[00:27:46] there. We'll call this one something like content personal. That's fine. And then we create this organization. Again,
+[00:27:52] Superbase is completely free to get started. So, when this is loaded up, we can then provide it with the appropriate information, which is decent. We'll give
+[00:27:57] it a database password. We'll generate a strong one. Beautiful Asia-Pacific. Uh, it doesn't really matter to me. So,
+[00:28:03] let's create a new project. Fantastic. Meanwhile, we've got cursor working in the background doing all the things. Yes, we'll just give it all of the
+[00:28:08] appropriate permissions. Phenomenal. That's working for us quite nicely. Okay, let's have a think. Let me come
+[00:28:14] back over to Superbase. Yeah, we're going to get rid of that. That's fine. And now we have our project. So, we can
+[00:28:19] start to integrate this together now with the codebase that we can save everything. And when you know how to
+[00:28:24] connect it with Superbase and build anything you want to in these apps, you can effectively create anything that you want to. Beautiful guys. Now it's got a
+[00:28:31] Superbase readme which you can see here which is fantastic. So go over to Superbase, copy the contents of the
+[00:28:36] space SQL. All right, cool. So let's go with this and then there we go. So we're just going to copy all of this stuff
+[00:28:41] here. And guys, what is SQL? SQL we I speak English, some people speak French. SQL is just the language that databases
+[00:28:48] speak. So in Superbase, you come to SQL editor here and you just enter that information and then you click on run
+[00:28:53] and it says success. No row is returned. Error failed. Interesting. except let's just remove this and try one more time.
+[00:29:02] Okay, so there's an issue with line 69. Let's find out what that was. But we just come back over to our beautiful
+[00:29:08] scenario and just say on the SQL code and then we can just amend that real
+[00:29:13] quick and try again. Okay, we retried it and we got success. No rows returned. That is code for great news. Then we're
+[00:29:19] going to come back over to cursor or editor of choice. And then in superbase guys, all we do to come and grab the
+[00:29:24] non-public key is just copy this one. And the second piece of information is the dashboard. So you're going to copy this URL. This key go over to your AI
+[00:29:31] and then share them both. Beautiful guys. And now we can test this out. So we're just going to click on local host. We click on script now to see what we've
+[00:29:38] got and give that a heart a beautiful second. All the content will come down for us. We just go through everything. We said, you know, guys, I want to look
+[00:29:44] at the most popular stuff is open. I just hit code red 3 years after Google panic checkp IBM CEO. There's no way
+[00:29:50] spending 20 data. So you can go through this and cross validate based on if it hits the kind of content you want to
+[00:29:55] create. When we find something we like. We say we hit save and then we hit save. We come over to our save file. We have
+[00:30:00] two things saved in our saved items which we can then go ahead and create some beautiful hooks for. But if we
+[00:30:06] refresh it, what happens? I'm going to refresh this. And guys, look at this. We now have two saved things. And how
+[00:30:12] freaking cool is that? Plus, if you actually come over to Superbase and you're going to come over here then to
+[00:30:18] let me show you where you would need to go to view this. You come to project overview. You come over to database I believe and then it is um let's have a
+[00:30:26] look it is there's our saved items I think it is under tables great and then
+[00:30:32] you come down here view and table editor and you can actually now see all this stuff so we've got the ID the source the
+[00:30:37] source text and it just basically all falls out just like that and this leads on to the final one which is why which
+[00:30:42] is all about yield this is the part where you take the app and you play around with it you check out the
+[00:30:47] different data sources you see if it's right you see if they're the right subreddits build it out with different
+[00:30:52] sources, making it as comprehensive as possible. And when you've hit that and you're getting the right data flow, it
+[00:30:58] is going to save you literally hours and hours and hours every single week. I'm
+[00:31:03] going to put the whole project reper down below in the community so you can grab that. I'm also going to be building on this over this week so you can see
+[00:31:08] the new and beautiful features and just steal them for yourselves. But the next thing I want to cover on is well, what if you actually then know how to build
+[00:31:14] it? But what would you do if you actually wanted to go and sell it and turn this into income and help another business with this sort of thing? Well,
+[00:31:20] one of the best ways to do that I found is personalized Loom videos. It's great to have high volume, but one thing that
+[00:31:25] people can't compete on is personalization and effort. And it really makes a big difference. So, one
+[00:31:31] of the things I found personally converts really well and also in a lot of my students and community is the personal outreach. So, the way that this
+[00:31:37] works, you send a short informal email and on that you do a Loom video. Now, the balloon video takes no more than
+[00:31:43] like 90 to I'd say 120 seconds. Very, very, very short. The way that you open
+[00:31:49] up is like this. So you have a screenshot of their website. Now the cool thing is when you do this for one customer and you've got a problem that
+[00:31:55] you're solving. You can pretty much do this for anyone's that you want to. So let's say we've got this one here. I'm going to change the Poppins font because
+[00:32:01] we are not crazy savages over here, guys. We've got to make sure that it looks great. Cool. So we're going to
+[00:32:06] have this over here. Let's just up this up. Beautiful. And will it not let me change the font? Is this actually crazy?
+[00:32:12] It looks like it looks like Canva for some reason isn't happening. But anyway, that's besides the point. The point is
+[00:32:18] that you would have a CTA up here. So, for example, this is usually your offer and it may be something like 10 clients
+[00:32:24] within 28 days guaranteed or something like that or double your email conversion rates or whatever it is your
+[00:32:30] specific offer. And then you're going to have a photo of their website that they can see. So, immediately I open up the
+[00:32:37] email because remember Loom actually plays the first four to five seconds. So for instance, if you check out on my
+[00:32:42] community, if you come over here, this thing here with Hozi, this should also play, I believe. There you go. So you
+[00:32:48] can see me hanging out with blah blah blah. You can go through and then have a look and do whatever you want to with that, right? Also got to love the
+[00:32:55] festivities, guys. It is Christmas after all, so we need to get the Christmas jumpers out. Oh my goodness. So anyway,
+[00:33:00] we've got this thing here. It captures attention. As I'm actually going through the email, I see it. It looks great. It
+[00:33:05] brings me up. Now, here's the thing. What you can realistically do with this is show them their website experience
+[00:33:11] personalized and if you've built this app guys you can easily show them on that as a quick demo. Now, the first
+[00:33:16] thing we do is we have the proof, we have the demo there, and then you'd say, you know, I can get you, you know, 10 extra clients in 30 days, blah, blah,
+[00:33:23] blah. That would be your big thing here. And then you basically reach out and say, "Hey, hey, Jack. Seen your stuff recently. I really love the effort. I've
+[00:33:29] always wanted to work with you. I've done a quick 60-second interview." Bam. And then you pull over to this side and over here we have credibility. Why you?
+[00:33:37] This is a little bit different than on a website. On the website, you have the hook, you have the value prop, which is
+[00:33:43] we got here, and then you need the proof. The proof is why should I trust you? So you're going to touch on that briefly which is why am I listening to
+[00:33:49] this crazy guy in a beautiful white jumper and a beautiful white cap. We say FYI just I've done this with 10
+[00:33:55] different businesses. Little screenshot. We touch on it for two to three seconds accolades. Like FYI we work with 10
+[00:34:01] other dental agencies. We've helped them scale um and we're blah blah blah. Insert insert insert proof. Then you
+[00:34:06] come over and you basically there's three things I think you could do to improve your conversions. I just wanted to quickly share that with you. Then you
+[00:34:11] do conversion one, conversion two. Scroll over conversion three then a very
+[00:34:16] clear CTA after that and then you may say something like look if you want to find out exactly how much money you
+[00:34:22] might be able to make with emails or save with XYZ I put a free link down below to grab XYZ or you can book a call
+[00:34:28] I'm very happy to do that's 15 minutes whatever the specifics are and if you've built an app like this one of the things
+[00:34:34] that you might say is we've got this application we built it dude I'm completely happy for you to grab that
+[00:34:39] and run that and then just pull it up and show and like you could even if you wanted to change the logo on that for
+[00:34:45] them. Like imagine actually like opening up your loom and this actually had their logo on instead and then it had a thing
+[00:34:51] at the top that said we will XYZ your leads within Y period of time. Those are kind of personal emails that have
+[00:34:56] absolute insane conversion rates when you understand the problem and the actual avatar. I distinctively remember
+[00:35:02] working with one of the largest companies in the UK in a particular sector and the contract value was
+[00:35:08] genuinely about six figures a month. And one of the things that I really made sure that I did was customize and put
+[00:35:13] the effort in because a few as few number of very large outsized clients pay for thousands of very small ones
+[00:35:20] which has always been my bias. And now you know exactly how to build these apps. The next step is to see how you can build really profitable systems like
+[00:35:27] I did with my entire $100,000 funnel. And you can watch that by checking out this video right

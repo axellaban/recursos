@@ -1,0 +1,1573 @@
+[00:00:00] in this video I'm going to show you
+[00:00:01] exactly how to build an AI powered
+[00:00:03] Outreach system that will from a simple
+[00:00:05] keyword that you enter into a table like
+[00:00:08] accountants search the entire internet
+[00:00:10] it will grab all the data for those
+[00:00:13] individual websites including everything
+[00:00:16] they've done their rewards all the
+[00:00:18] content on the homepage of their website
+[00:00:20] it will grab their phone number it will
+[00:00:21] grab their Twitter their LinkedIn their
+[00:00:23] Instagram that contact email address
+[00:00:25] even potentially YouTube if it's there
+[00:00:27] and then what it will also do this
+[00:00:28] system guys and there's a couple of
+[00:00:29] parts to it it will then all prepopulate
+[00:00:32] it here first of all for you to decide
+[00:00:34] hey here's the title of the website
+[00:00:36] here's a URL here's what they do do I
+[00:00:38] want to scrape it do I not want to
+[00:00:39] scrape it you can decide that here and
+[00:00:41] if you decide that you do it will pull
+[00:00:43] through all of the information that
+[00:00:45] email phone LinkedIn Twitter Instagram
+[00:00:47] Facebook and then also on top of that
+[00:00:49] what it will do is based on what is in
+[00:00:52] that website so say for example these
+[00:00:54] guys have won a award over something
+[00:00:55] unique it will generate for you a custom
+[00:00:58] unique email for that website combined
+[00:01:01] with the information about your business
+[00:01:04] using AI it will give it a unique
+[00:01:05] subject line it will give it a unique
+[00:01:07] email for example here check this out I
+[00:01:09] want to start off by congratulating you
+[00:01:11] on having this prestigious International
+[00:01:13] Association award this is all done guys
+[00:01:16] completely automatically and the only
+[00:01:18] thing you ever need to do in this
+[00:01:19] automation is quite simply decide when
+[00:01:22] you get the results do you want to
+[00:01:23] scrape it or not I'm going to show you
+[00:01:25] exactly how you build this entire
+[00:01:26] automation step by step and if you don't
+[00:01:28] know who I am my name is Jack and my
+[00:01:30] YouTube channel and my school Community
+[00:01:32] is all about the latest AI it's about
+[00:01:35] incredible automations and most
+[00:01:37] importantly it's about the stuff that
+[00:01:39] actually works so if you haven't already
+[00:01:41] grab that coffee and let's jump straight
+[00:01:43] in I should also say that all the
+[00:01:45] prompts the blueprint the agents for
+[00:01:46] every automation I cover on the channel
+[00:01:48] and all the ones that that I don't are
+[00:01:51] all available down below here in my
+[00:01:52] school community so if you ever wanted
+[00:01:54] to build one of these automations and I
+[00:01:55] make a lot really cool automations all
+[00:01:57] you ever do is you come down here to
+[00:01:58] more you click import blueprint you
+[00:02:01] choose the file you select the file you
+[00:02:03] click save and it all autop populates
+[00:02:06] automatically then obviously you get
+[00:02:07] over generation agents and on top of
+[00:02:09] that guys if that wasn't enough what
+[00:02:11] else do we get also run two sessions
+[00:02:13] every week that are an hour plus long
+[00:02:14] for you to come down chat to an expert
+[00:02:16] and get help building your automations
+[00:02:18] if you're ever struggling with anything
+[00:02:20] so with that in mind what I'm going to
+[00:02:22] do this automation is show you how it
+[00:02:24] works end to end briefly then I'm going
+[00:02:27] to cover the tools that you need to run
+[00:02:28] this and then I'm going to show you
+[00:02:29] exactly how to build this step by step
+[00:02:31] so what's the very first thing we need
+[00:02:34] to do well I've put this off as keywords
+[00:02:37] so you could if you already have a
+[00:02:39] predefined list of the websites you want
+[00:02:41] to contact you can skip this part but I
+[00:02:43] know some of you are going to want to
+[00:02:44] grow your business or give this as a
+[00:02:46] service to agencies as an a automation
+[00:02:48] agency and you'll want different
+[00:02:49] keywords so what do we do to start off
+[00:02:52] well let's say that we want to have a
+[00:02:54] search term like I don't know call it
+[00:02:56] tax planning so the first thing we do is
+[00:02:58] we enter keyword into this keyword
+[00:03:00] database like that okay perfect that's
+[00:03:03] done then what happens we are going to
+[00:03:06] come here we're going to set this one to
+[00:03:08] watch for new submissions scenario 2
+[00:03:11] here we just hit run once and don't
+[00:03:13] worry I'll explain almost done that
+[00:03:15] watches for anything that happens here
+[00:03:17] so every time we add a new keyword this
+[00:03:19] guy says hey whoa Something's Happened
+[00:03:20] Here we need to grab it we then run the
+[00:03:22] no code scraper tool which will show you
+[00:03:24] how to build and this says hey cool now
+[00:03:27] I've got that keyword what I'm going to
+[00:03:28] do is I'm going to search the internet
+[00:03:30] for loads of different examples of when
+[00:03:32] I type that into Google in the UK or in
+[00:03:34] the US or wherever you are Germany
+[00:03:35] France I'll find all the results on
+[00:03:37] Google and we can specify and give up
+[00:03:39] loads of parameters for that right what
+[00:03:42] happens then this guy then waits for the
+[00:03:45] the first actor to do this thing it
+[00:03:47] grabs the data set and then adds it to
+[00:03:49] our table so look what happens I come to
+[00:03:52] results and for the purposes of this
+[00:03:54] video guys what I've basically done is
+[00:03:56] just said give me one so this automation
+[00:03:58] starts with this database and all you
+[00:04:00] ever need to do now some of you will
+[00:04:01] have URLs you or need to contact but
+[00:04:03] some of you will want to start AI
+[00:04:05] automation agencies or you'll have
+[00:04:06] keywords and different different
+[00:04:08] businesses you want to Target so all you
+[00:04:10] ever do at the beginning is you come
+[00:04:11] here and let's say I do want to do
+[00:04:13] accountants okay let's say I want to
+[00:04:15] Target accountant I hit enter that's all
+[00:04:18] I ever do now I click the second
+[00:04:20] scenario to watch out now again in
+[00:04:22] reality this will all be running
+[00:04:23] automatically then what this will do
+[00:04:25] will be running automatically and the
+[00:04:27] second you enter a new keyword this
+[00:04:29] kicks in this finds the keyword that we
+[00:04:31] just entered and then what it will do
+[00:04:33] once it's found that is this no code
+[00:04:34] agent appify will type into Google could
+[00:04:37] be it will look for you know Great
+[00:04:39] Britain exclusive it could be France
+[00:04:40] Germany Italy America wherever you live
+[00:04:42] we can parameterize all of that we can
+[00:04:44] control how many results we get it will
+[00:04:46] let go and grab it this actor here in
+[00:04:49] the second scenario waits for the first
+[00:04:52] one to work and don't worry if it sounds
+[00:04:53] complicated I promise it'll make perfect
+[00:04:55] sense I just want to show you end to end
+[00:04:57] there's only four parts there's four
+[00:04:58] little automations and once you've done
+[00:05:00] that you basically set up bra all the
+[00:05:02] time this actor here waits for the first
+[00:05:04] one to Fire and once that's done what it
+[00:05:07] will do is populate in this table the
+[00:05:10] title the URL the description if it's
+[00:05:13] there and then we get to decide the
+[00:05:14] status in other words do we want to for
+[00:05:17] example do we want to scrape it or do we
+[00:05:19] want to reject it now the reason why
+[00:05:21] I've built this in to give you the
+[00:05:23] option of scraping or rejecting it's
+[00:05:25] because sometimes when we're scraping
+[00:05:26] the web there'll be things in there that
+[00:05:28] we don't want to contact maybe it's
+[00:05:30] you know a big competitor of ours or
+[00:05:32] perhaps it's someone you've already got
+[00:05:33] a relationship with so you control 100%
+[00:05:36] of a Time whether or not you initiate
+[00:05:38] that conversation so look at this guys
+[00:05:40] it's just pulled Five results why is it
+[00:05:42] pulled five instead of 50 well because I
+[00:05:45] specified it to do that here I put query
+[00:05:48] 5 I put query 50 I'd get 50 I can do as
+[00:05:50] many as I want from this so I come back
+[00:05:52] over right that's run and I've got all
+[00:05:54] these cool things let's just check it
+[00:05:55] out so who's the first accountant we've
+[00:05:57] got online accountants Unlimited expert
+[00:06:00] and advice and service the perfect
+[00:06:01] combination of simple accounting
+[00:06:03] software expert advice and great service
+[00:06:05] and charted certified accounts for
+[00:06:07] Freelancers I love it so then what I
+[00:06:09] would do I would look through these you
+[00:06:11] know I could say reject or scrope you
+[00:06:13] could hire someone to do this VA if you
+[00:06:15] wanted to now what happens after that
+[00:06:17] you done two out of four parts of a
+[00:06:19] scenario we've got this guy here he's
+[00:06:20] going to watch for records and then
+[00:06:22] we've got this final cool super I
+[00:06:24] absolutely love this automation I'm
+[00:06:26] going to click run once the reason I'm
+[00:06:27] clicking run once in automation 4 is
+[00:06:29] because he's just going to wait for
+[00:06:30] number three to run so let's say for
+[00:06:33] example I want this let's just just to
+[00:06:37] give it simple I'm going to scrap one
+[00:06:39] particular circumstance I'm going to say
+[00:06:40] yes I want you to have go ahead I like
+[00:06:43] this company go and grab me all the
+[00:06:44] information available on that website
+[00:06:46] and build me a bespoke email about my
+[00:06:48] particular business using all their all
+[00:06:51] their data that's what I want to happen
+[00:06:53] so look I come here I click run once
+[00:06:56] this is waiting for this to grab and
+[00:06:58] Baran this will be automatic you need to
+[00:06:59] do this this is just to show you and
+[00:07:01] then this guy here is going to wait for
+[00:07:02] the previous one to F through and when
+[00:07:04] this happens you're going to see an
+[00:07:06] absolute Crescendo of all these cool AI
+[00:07:08] things and the thing is guys businesses
+[00:07:10] pay a lot of money for these automations
+[00:07:12] because the easiest thing to sell is to
+[00:07:13] say hey I'll get you all the clients you
+[00:07:15] want in the world they don't really
+[00:07:16] understand how this stuff works because
+[00:07:18] this is like this is the meta like how
+[00:07:21] this works scraping this information but
+[00:07:23] then we're not just using nood tools
+[00:07:26] what we want to do I want to do in this
+[00:07:27] channel help educate you is about how
+[00:07:28] you combine that with AI and AI is
+[00:07:31] always evolving the Noid space is
+[00:07:32] evolving this is the Epic this is like
+[00:07:35] the the kind of like intersection of two
+[00:07:37] incredible things and you're going to be
+[00:07:38] the person that from watching this so
+[00:07:40] what's happening at the moment is it's
+[00:07:43] ran it's basically ran and started to
+[00:07:45] scrape the website that we gave it it's
+[00:07:47] gone through appify basically we we've
+[00:07:49] drawn down the data right we've got the
+[00:07:51] file we've turned the HTML language into
+[00:07:53] English we've created a unique subject
+[00:07:55] line for that business based on the
+[00:07:58] content of their website we've created a
+[00:08:00] draft email we've then built it in Gmail
+[00:08:02] as a draft and we've thrown everything
+[00:08:05] over to air table so I'm going to show
+[00:08:07] you two things now I'm going to show you
+[00:08:09] all this data that's just appeared at
+[00:08:10] air table as if by Magic except for it
+[00:08:13] isn't Magic because you know how to do
+[00:08:15] it now like a magician should never real
+[00:08:16] with Secrets except for on the jack
+[00:08:17] Roberts YouTube channel here we do we
+[00:08:19] show you all the secrets well most of
+[00:08:21] them some are in the school I must admit
+[00:08:23] we come down to contact info and guys
+[00:08:26] look at this so in the crunch we've got
+[00:08:29] this right we've got CR at crunch info
+[00:08:31] crunch we've got the phone number we've
+[00:08:32] got in fact let me just open this up and
+[00:08:34] I've just come over right email phone
+[00:08:37] number LinkedIn profile Twitter
+[00:08:39] Instagram Facebook it even created a
+[00:08:43] subject line now look we've got all this
+[00:08:45] contact information and from this guys
+[00:08:47] you can run like a million different
+[00:08:48] automations Outreach on different
+[00:08:50] platforms if I showed you every possible
+[00:08:52] configuration of what's possible here
+[00:08:55] this video would be 24 hours I might I
+[00:08:57] might do a load of a Rings Marathon I'll
+[00:08:58] do the video as long as lord of rings in
+[00:09:00] the background but this is where it gets
+[00:09:02] really interesting the other thing that
+[00:09:03] we did is I said I want you to create
+[00:09:06] this in Gmail right so I come back over
+[00:09:08] now to Gmail if I refresh the page here
+[00:09:11] there should be a draft with that
+[00:09:13] internet so check this out right look
+[00:09:15] come off here click on this top one here
+[00:09:17] look discover seamless AI automation for
+[00:09:19] your accounting needs I hope you're
+[00:09:20] doing well I'm reaching out as we notice
+[00:09:22] your robust offerings for soul Traders
+[00:09:23] and limited companies that's interesting
+[00:09:25] Soul Traders and limited companies well
+[00:09:27] is that true well if I love their
+[00:09:29] website I type in Soul Trader is that
+[00:09:31] true these guys Focus specifically on
+[00:09:34] Soul Traders so it's given us something
+[00:09:36] unique to do that and obviously we can
+[00:09:38] build that and specify the emails Pro
+[00:09:39] specifications guys but in essence
+[00:09:42] that's exactly the entire automation now
+[00:09:44] I'm going to show you exactly how you
+[00:09:45] build this step by step every person you
+[00:09:47] know you watching this video you're
+[00:09:48] going to see this and think I like this
+[00:09:50] I'm going to add this and it's very
+[00:09:52] modular and you can customize that way
+[00:09:54] so I'm going to start by Shing the tools
+[00:09:56] that you need for this now all of these
+[00:09:57] automations are built in make.com which
+[00:10:00] is a no code automation platform it
+[00:10:02] basically lets you parade around as a
+[00:10:04] coda Without Really knowing much of the
+[00:10:05] coding part so it's pretty sweet like
+[00:10:07] that all the links will be down below in
+[00:10:08] description for you so you just click
+[00:10:09] and get started straight away the second
+[00:10:12] thing we're going to need is something
+[00:10:13] called air table if you're regular
+[00:10:14] watching the channel you'll know this
+[00:10:15] bit but hey it's always good to refresh
+[00:10:17] our memory right so air table Google
+[00:10:19] Sheets on steroids we love it it's way
+[00:10:21] more customizable it's way more robust
+[00:10:23] it's easy to use and it's free up to
+[00:10:25] 1,000 records so no additional cost even
+[00:10:27] better after that we need something
+[00:10:29] called appify now appify itself um is a
+[00:10:34] scraping tool that does a lot of the
+[00:10:36] heavy lifting foros it has I'll just
+[00:10:38] show you very briefly this kind of rep
+[00:10:41] repository excuse me repository of
+[00:10:43] different things that you can use it's
+[00:10:44] got like the store of different actors
+[00:10:47] you know Instagram scraper you can
+[00:10:48] scrape websites you have seen it in
+[00:10:50] different parts of the of the channel
+[00:10:52] before but basically it's how we scrape
+[00:10:54] things and you get $5 free every month
+[00:10:56] and obviously you can add more in there
+[00:10:57] well so you can just literally plug can
+[00:10:59] play with this and get started with no
+[00:11:01] additional cost at all but to be honest
+[00:11:04] with you thinking of cost is a wrong way
+[00:11:06] to think about this stuff you got to
+[00:11:07] think about it in terms of value like
+[00:11:09] how valuable is this information how
+[00:11:11] valuable is it to know this stuff and
+[00:11:13] you can't really put a price tag on I
+[00:11:15] think because it's insane but in any
+[00:11:17] case you get $5 every month that's cool
+[00:11:19] the only other thing that you need guys
+[00:11:21] is access to the GPT module and to get
+[00:11:24] your GPT it's basically like the chat
+[00:11:25] GPT version but via an API and it's just
+[00:11:27] a fansy where saying that you could use
+[00:11:28] your chat GPT account VI have this
+[00:11:30] developer portal which again used to be
+[00:11:32] exclusive coders but not for us okay so
+[00:11:34] you head over to platform. open ey.com
+[00:11:36] you come down here you can see an API
+[00:11:38] key you can grab that you can bring that
+[00:11:40] over you can insert it into your um you
+[00:11:43] insert it into your scenario I've got
+[00:11:45] teachings in fact we've got a live live
+[00:11:47] excuse me co- building session happening
+[00:11:49] around maybe we should jump in jump in
+[00:11:50] live on our Channel and say hello to
+[00:11:51] everybody that'd be cool right but if
+[00:11:52] you need help setting this stuff up I
+[00:11:54] have got tutorials like I said that AR
+[00:11:56] on the channel like how you connect all
+[00:11:57] this stuff like how you connect social
+[00:11:59] medias how do you actually set up a blah
+[00:12:02] blah blah so all that stuff's there and
+[00:12:03] you can basically grab an API key and
+[00:12:05] you'll be prompted to do so and you can
+[00:12:06] link them all up together within this
+[00:12:08] platform you can deposit like $5 of
+[00:12:10] credits and get started so it's really
+[00:12:12] really good in mod like that before we
+[00:12:13] jump in just for your reference of how
+[00:12:15] automation works we got step one which
+[00:12:17] is a keyword okay we've got one out of
+[00:12:19] four which is scraping the internet for
+[00:12:21] that keyword we have automation 2 out of
+[00:12:23] four which is loading the results and
+[00:12:25] throwing it over to here so we can see
+[00:12:27] the results in our air table
+[00:12:29] then we decide if we scrape or not after
+[00:12:32] we've decided that this then goes ahead
+[00:12:34] looks for this looks for our answer
+[00:12:36] scrapes the information for us this
+[00:12:38] comes back this grabs it it creates an
+[00:12:41] email creates a subject line and then
+[00:12:43] finally loads all the results that we
+[00:12:45] want in the contact information section
+[00:12:47] cool so let's get started and of course
+[00:12:49] who are we with our off formalities okay
+[00:12:51] one out of four I'm going to call this
+[00:12:53] one Epic um let's call it epic
+[00:12:57] scraper program okay cool and of course
+[00:13:00] we need an emergy for that don't we
+[00:13:02] let's give it a little give it a little
+[00:13:04] um game feeling on that okay cool so
+[00:13:07] what do we need to do first well the
+[00:13:09] first thing we want to do actually is
+[00:13:10] going to be to build our air table so
+[00:13:13] I'm going to briefly show you how you do
+[00:13:15] that okay so let's head over to
+[00:13:17] airtable.com and build everything that
+[00:13:19] we need so I'm on air table I come down
+[00:13:21] here I create um again you'll see
+[00:13:24] something similar to this when you
+[00:13:25] actually build a table you'll be
+[00:13:27] prompted to log in into a new page and
+[00:13:28] you'll be be ready to do that cool so
+[00:13:30] we've got air table I'm going to change
+[00:13:32] the color first of all to Pink because
+[00:13:33] I'm in a pink fact like I'm I'm wearing
+[00:13:36] blue right let's go for blue cool we'll
+[00:13:38] call this epic scriper program come over
+[00:13:40] here let's give it that name awesome
+[00:13:43] okay so what do we want well let's go
+[00:13:44] check out the first one that we built
+[00:13:46] right so what do we have in the keywords
+[00:13:48] all we had was a search term a created
+[00:13:50] time and a last modified time okay sweet
+[00:13:53] so the first thing we're going to do is
+[00:13:53] we're going to call this guy this is
+[00:13:55] your search term cool search term single
+[00:13:58] line text cool uh and this one doesn't
+[00:14:01] really need to be any more complicated
+[00:14:02] than that to be fair with you um so all
+[00:14:05] we're going to do is come on here and
+[00:14:07] we're going to edit field and we're
+[00:14:08] going to type in single select it's
+[00:14:10] going to be created time so in other
+[00:14:13] words what this will say is hey tell me
+[00:14:16] when this was created what time was it
+[00:14:18] created cool you need created time the
+[00:14:21] second one you're going to need is
+[00:14:23] last modified time and we come to field
+[00:14:27] type and we type in last modified time
+[00:14:29] okay cool sweet great field so this this
+[00:14:32] field here will tell is let's say we
+[00:14:33] have 100 records if we edit record 75
+[00:14:36] say hey look this is the one that edited
+[00:14:38] therefore this is the one that needs to
+[00:14:39] run amazing Okay cool so we're going to
+[00:14:42] rename this one rename this table we're
+[00:14:44] going to call this guy um search
+[00:14:48] term cool and we click save and the
+[00:14:51] reason IO is I just think I I love
+[00:14:53] design excuse me oh my goodness I'm even
+[00:14:55] breaking up thinking about design I love
+[00:14:57] design and I also think that the more
+[00:14:59] emojis you add in you rename the modules
+[00:15:01] just the easy the whole thing gets to
+[00:15:02] follow so let's click save on
+[00:15:05] that awesome sweet so the first thing
+[00:15:09] we're going to do is essentially watch
+[00:15:11] for when it sees a change in that
+[00:15:14] particular folder so we click on this
+[00:15:15] plus button the Big Shiny purple thing
+[00:15:18] going to type in air table and looking
+[00:15:20] for watch records cool you'll see
+[00:15:23] something like this it loads up in the
+[00:15:25] background we pick the base and the base
+[00:15:27] is epic graper program amazing and there
+[00:15:30] Ls up a little bit for us we pick the
+[00:15:32] table it is search term you see robing
+[00:15:34] table one table two Table Three get a
+[00:15:36] bit confusing it's a bit nuts we look at
+[00:15:38] the trigger field trigger field is last
+[00:15:40] modified time label field we're looking
+[00:15:43] for search term one of the things guys
+[00:15:44] when you setting up the first automation
+[00:15:46] make sure on the air table that you only
+[00:15:48] have one in the limit okay now this is
+[00:15:52] going to fire off like the second that
+[00:15:55] we change something or last modified
+[00:15:56] time has happened so essentially what
+[00:15:58] was saying is the moment that anything
+[00:16:01] changes in here start this automation
+[00:16:03] off okay sweet so we come back then the
+[00:16:06] next thing that's going to happen now we
+[00:16:07] need we need a bot now to go forth
+[00:16:10] conquer the world and actually grab all
+[00:16:13] the data for us for that particular
+[00:16:15] thing so if I reference my initial
+[00:16:17] scenario here for example we've got
+[00:16:19] appify and we can see we got the appify
+[00:16:22] Google search scraper so this is the bit
+[00:16:25] where we head over to appify now check
+[00:16:27] this out head over to apply.com you will
+[00:16:30] um you'll see you'll see a page like
+[00:16:32] this it's really cool really reliable
+[00:16:34] you're going to log in or create an
+[00:16:35] account if you don't have one yet cool
+[00:16:37] so I've I've signed in nice now come
+[00:16:39] over here the left to store and we type
+[00:16:42] in Google search scraper we got this one
+[00:16:44] here you click on it it's run and
+[00:16:46] maintained by appify if this $350 per
+[00:16:49] th000 results you know you get your like
+[00:16:50] $5 free credit so basically if you click
+[00:16:52] on that what it means is that it is paid
+[00:16:55] by Resort but it's like managed by
+[00:16:57] appify in the particular case okay so it
+[00:17:00] all comes out of the appy platform usage
+[00:17:03] and you got a fixed particular price per
+[00:17:05] run now look at this you'll see
+[00:17:06] something like this it can look a bit
+[00:17:08] weird like oh my goodness what's going
+[00:17:09] on what's the situation look how this
+[00:17:12] works is you're going to have a search
+[00:17:13] term what I propose you do is type in a
+[00:17:15] random word like I don't know call it
+[00:17:18] accountancy okay sweet and then what we
+[00:17:20] can specify for here is number of
+[00:17:22] results so how many results do you want
+[00:17:24] and how many pages would you like would
+[00:17:26] you like 10 10 results you want 50 do
+[00:17:28] want 100 how many different results you
+[00:17:29] want so I'll set this a 10 location
+[00:17:31] language I've set this for United
+[00:17:33] Kingdom but whatever country you're in
+[00:17:35] Bulgaria you're in you know Croatia
+[00:17:37] you're in like Fiji if you're looking up
+[00:17:39] in Fiji not in the UK at the moment then
+[00:17:40] you'd be sorted you got the language
+[00:17:42] which same as a country you can add some
+[00:17:43] additional parameterization there if you
+[00:17:45] want to and additional settings if you
+[00:17:47] don't specify the country you'll end up
+[00:17:49] getting like accountants in America whil
+[00:17:51] they're lovely they don't do as a great
+[00:17:53] deal of help in the UK so cool that's
+[00:17:56] done then come to Json you see this I
+[00:17:59] just want you to click it copy all of it
+[00:18:02] contrl + C right and then click on
+[00:18:04] create task here I've already created a
+[00:18:07] task so I don't need to but you create a
+[00:18:09] task awesome cool then we here we come
+[00:18:11] back over we click on this we look for
+[00:18:13] appify you're looking for run and actor
+[00:18:16] U not the Hollywood kind this is the bit
+[00:18:18] of a cooler type pick the actor which is
+[00:18:20] going to be Google search scraper you
+[00:18:22] type it in there he is that's cool here
+[00:18:24] we go down input Json so I want you to
+[00:18:26] enter the things I told you about uh
+[00:18:29] basically control and V and you see
+[00:18:30] we've got this accountancy thing right
+[00:18:31] that was our query I want to copy that
+[00:18:34] delete it and then I want you to
+[00:18:37] select here search term cool and so what
+[00:18:40] they will basically do and you may need
+[00:18:42] to just make sure that there's no spaces
+[00:18:43] in it cuz so about code gets really
+[00:18:45] finicky about spaces for some reason so
+[00:18:48] make sure there's no spaces that
+[00:18:49] shouldn't be there and essentially what
+[00:18:50] this says is run the whole thing with
+[00:18:52] that particular search term we come down
+[00:18:55] we're happy with that stuff then we
+[00:18:56] click okay cool now you've done now
+[00:18:59] you've done that you can pretty much
+[00:19:00] build the rest of it now you understand
+[00:19:01] those Concepts you're going to be
+[00:19:02] absolutely set so the next thing we do
+[00:19:05] is number two of four so we copy that we
+[00:19:08] come over here we type that in and we
+[00:19:10] call it 2 out four epic scraper program
+[00:19:13] cool we come down here look on this big
+[00:19:15] plus button you can look for applify
+[00:19:17] again so what's happened here okay is
+[00:19:22] we've given it a search term it's grab
+[00:19:23] the search term it's now said go do the
+[00:19:25] searches on it but we need a way to be
+[00:19:27] able to grab the data now unfortunately
+[00:19:28] the way this is set up we have to create
+[00:19:30] a new scenario for that you know that's
+[00:19:32] just a feature of the the one of the
+[00:19:34] quirks of make at the moment and to keep
+[00:19:36] it simple it's a lot easier to do that
+[00:19:37] way for the time being so now we're here
+[00:19:40] all you going do is watch actor runs so
+[00:19:42] I'm saying hey you guy in the second
+[00:19:44] part of the automation look for this guy
+[00:19:46] and as soon as this actor runs anywhere
+[00:19:48] in the world it will then trigger it'll
+[00:19:50] say choose a hug so we'll just click on
+[00:19:52] ADD for your sake it'll come up you pick
+[00:19:55] the actor Google search scraper and then
+[00:19:58] automatically will give you a web hook
+[00:19:59] ID without basically doing anything and
+[00:20:01] you can see there if we read your mind
+[00:20:03] we attach this web hook automatically
+[00:20:04] for
+[00:20:06] you amazing now now we've grabbed the
+[00:20:10] data we need to go and add that to our
+[00:20:11] air table so we come back over now to
+[00:20:13] our air table here you're going to add
+[00:20:16] in a new table so let's have a look we
+[00:20:19] come here uh start from scratch so
+[00:20:22] basically the plus button start from
+[00:20:24] scratch so table two let's go back to
+[00:20:26] our original air table we call that
+[00:20:28] results with title URL description and
+[00:20:30] Status didn't we cool so look table two
+[00:20:33] we're going to call this one results we
+[00:20:36] come here excuse me get a rocket emoji
+[00:20:39] cuz we love that okay amazing so first
+[00:20:42] one's going to be
+[00:20:44] title single single line text is
+[00:20:46] absolutely fine click on this one call
+[00:20:49] this one URL sweet long text is okay and
+[00:20:52] let's see what else we got there got
+[00:20:54] title URL description uh let's just add
+[00:20:57] a little emergy title as well
+[00:21:00] sweet got title with
+[00:21:02] URL the next thing we need is
+[00:21:04] description and then we want the status
+[00:21:07] right so we come here for example click
+[00:21:09] on the description and again want to
+[00:21:12] make sure it's single line text select
+[00:21:14] okay now the status is going to be like
+[00:21:17] a single line select so you click on
+[00:21:19] edit and all I want you to do is deny on
+[00:21:22] the green deny on the red excuse
+[00:21:25] me get rid of yellow and you can click
+[00:21:28] approve in fact for our purposes let's
+[00:21:30] just call it scrape and you can change
+[00:21:32] the colors if you're so inclined to do
+[00:21:34] so there cool then we click okay and as
+[00:21:37] you might remember we need to add those
+[00:21:38] to other fields again so the first one's
+[00:21:41] going to be
+[00:21:43] um created
+[00:21:47] time sweet and then again we add another
+[00:21:51] one and this one's going to be last
+[00:21:53] modified time come down here and then
+[00:21:56] find last modified time right so now
+[00:21:59] we've done that what we now need to do
+[00:22:01] is we're going to come back over to our
+[00:22:03] automation which is we got epic number
+[00:22:05] one we've got number two now we just
+[00:22:08] need to grab it and add it now back into
+[00:22:10] the air table okay so click on air table
+[00:22:12] click on create a record we're going to
+[00:22:14] select the place where we're going to
+[00:22:16] add it so click on the base it's going
+[00:22:18] to be epic scraper program let's have a
+[00:22:20] look search 10 results so we've got the
+[00:22:21] ad table there now I want you to unlink
+[00:22:23] this for a second now come back to
+[00:22:25] appify and now we've got the actor runs
+[00:22:28] before before we send it over to a table
+[00:22:29] we need to download the data okay so
+[00:22:31] click on this click on appify uh get
+[00:22:34] data set items come down data set ID and
+[00:22:38] then it is default data set ID which is
+[00:22:40] somewhere near the bottom I mean cool
+[00:22:42] great they I wish they just said insert
+[00:22:44] this one for the data comma bro please
+[00:22:47] thank you okay cool now we've done that
+[00:22:49] now we can link these guys up together
+[00:22:50] then we click on the air table let's see
+[00:22:52] if we can get the results in there and
+[00:22:53] you can see right that like nothing's
+[00:22:55] popped up yet right so that's happened
+[00:22:57] because do not run yet so we need to
+[00:23:00] kind of like throw some juice through
+[00:23:01] the wheels a little bit to get it to get
+[00:23:03] the data so we know how to map it so on
+[00:23:06] scenario 2 unlink these two click run
+[00:23:09] once he's going to run in the background
+[00:23:11] come back over now to your scenario one
+[00:23:13] I want you to right click on him and
+[00:23:15] just put run this module only and it's
+[00:23:17] going to ask for a search term the
+[00:23:18] search term is going to be I don't know
+[00:23:20] how about
+[00:23:22] plants how about London
+[00:23:26] plant okay cool we run London plants air
+[00:23:30] table will rotate a tiny bit but then
+[00:23:32] the appy actor is going to run and once
+[00:23:34] this appy actors's run this guy's going
+[00:23:37] to grab it and then we're going to
+[00:23:38] download all the data set items from
+[00:23:41] that own particular search T which is
+[00:23:43] going to be epic and I think that the
+[00:23:45] use cases for this are insane they're
+[00:23:47] literally crazy oh a little tip by the
+[00:23:49] way just well let's go in the background
+[00:23:50] can you see I come over now you see the
+[00:23:52] memory in the bottom left hand hand side
+[00:23:54] you can always flip back to and fr to
+[00:23:56] see go to schedules for example
+[00:23:59] let's go home let's go for you can
+[00:24:01] actually see the actor runs and what's
+[00:24:03] happening the memory is done which means
+[00:24:04] if I go back it will be complete or
+[00:24:08] it'll be grabbing the actors run now so
+[00:24:10] yeah we can actually see all the stuff
+[00:24:11] that's happening in real time if you
+[00:24:12] come to and fro you can see the activity
+[00:24:15] um within the actual platform itself
+[00:24:17] cool so that's now watching active runs
+[00:24:18] and once that's done we'll able to grab
+[00:24:20] the data set and one of the cool things
+[00:24:22] here about use cases is like it pretty
+[00:24:24] much blows it blows to L off everything
+[00:24:27] I mean like any industry any anything
+[00:24:29] you want to get data forever we can grab
+[00:24:31] it but that's one thing data is one
+[00:24:33] thing but it's also about like data and
+[00:24:35] service of what okay you've got the data
+[00:24:37] but you got all the data and no one's
+[00:24:39] actually do anything about it then like
+[00:24:40] it doesn't mean anything for you so the
+[00:24:42] intelligence of this system is how we
+[00:24:44] therefore use that data to create
+[00:24:46] something amazing cool as I say that the
+[00:24:48] actors grabbed it and we got the data
+[00:24:50] set items so if I click this one here
+[00:24:52] for
+[00:24:53] example let's take a look got the URL
+[00:24:56] and look at this guys all the data you
+[00:24:58] get do you want paid results do you want
+[00:24:59] paid products do you want organic
+[00:25:01] results suggested results we want
+[00:25:02] organic results purps of this and then
+[00:25:04] it's given us like 10 options right the
+[00:25:06] one Plant World London number two we've
+[00:25:09] got London house plant number three
+[00:25:11] we've got London house plant again two
+[00:25:14] and through my goodness Forest London
+[00:25:16] collection cool we like it it's perfect
+[00:25:18] that's exactly what I wanted to see now
+[00:25:20] I'm going to zoom out a little bit oh my
+[00:25:22] goodness what is going on right now I
+[00:25:24] love I love make for maybe it's just me
+[00:25:27] T me down this is just me this happens
+[00:25:29] to him now and again like honestly it's
+[00:25:31] just like I'm like I swear like 5% of
+[00:25:33] every video is me like messing around
+[00:25:34] with the zoom functions on this a little
+[00:25:35] bit cool all right title let's have a
+[00:25:38] look oh we don't see it anywhere this
+[00:25:40] happens sometimes if this ever happens
+[00:25:42] just save it save anyway that's fine
+[00:25:45] delete him and then refresh the page yep
+[00:25:47] refresh it that's cool we go in and
+[00:25:50] let's go back in here cool click on the
+[00:25:52] air table and just restart it again now
+[00:25:54] the reason this happens is because we
+[00:25:56] built the air table before we did the
+[00:25:58] appify data so the connectivity is not
+[00:26:00] not blasted in going on to table click
+[00:26:02] on results we scroll over a tiny bit
+[00:26:05] great and do we see title we do this is
+[00:26:07] cool all right sweet so what's the title
+[00:26:10] well let's come down on the right hand
+[00:26:12] side and we should see if we come down
+[00:26:15] let's have a look we got the right one
+[00:26:17] yes data set items search query yeah
+[00:26:19] it's got the URL it's got the term it's
+[00:26:21] got the type the device the domain let's
+[00:26:23] have a look and we're going to come down
+[00:26:25] to organic results cool okay so on
+[00:26:28] organic results okay I I just mentioned
+[00:26:31] about the zoom thing and like literally
+[00:26:33] in no less than 20 seconds the exact
+[00:26:35] same thing happened so we got the title
+[00:26:38] good data URL it's have a quick look
+[00:26:42] let's just squeeze down here a little
+[00:26:44] bit come down to organic results there
+[00:26:46] you go URL it's the one on the on
+[00:26:48] organic results that you want come down
+[00:26:50] to
+[00:26:51] description there you go about the scbs
+[00:26:53] what they do and that's all we need
+[00:26:55] that's what we really need so now I'm
+[00:26:57] going to click
+[00:26:59] okay all right sweet and then let's
+[00:27:00] realign these guys together and then do
+[00:27:02] you know what guys let's just run this
+[00:27:04] whole thing over one more time but
+[00:27:06] before we do that I want to come and
+[00:27:07] build scenario 3 of four and then we're
+[00:27:10] going to run this all together okay so
+[00:27:12] then let's copy cuz what are we with our
+[00:27:14] formalities we come back over and we
+[00:27:16] come here and I'm going to go for three
+[00:27:19] out of four great now as you might
+[00:27:21] remember so what's going to happen now
+[00:27:23] okay just zoom out so scenario one okay
+[00:27:26] excuse me we gave it a keyword that
+[00:27:30] triggered this automation we sent the
+[00:27:31] actor off to get on Google and find our
+[00:27:33] data this guy was sat there with his
+[00:27:35] binocul looking for him he sees him he's
+[00:27:37] that good he's over there he's grabb the
+[00:27:38] stuff let me go find out what he's
+[00:27:39] learned he grabs it he then delegates it
+[00:27:42] to this guy to say bro I'm too lazy I've
+[00:27:43] got the B you need to go and grab it so
+[00:27:45] this guy's SED and puffed and he's gone
+[00:27:47] out and he spoken to this guy grabbed
+[00:27:50] this data and is very kindly for us put
+[00:27:52] it into air table right which will be in
+[00:27:55] the results tab which is exactly what we
+[00:27:57] wanted now that
+[00:27:59] happened once we're in this tab we're
+[00:28:02] basically going to decide do we want to
+[00:28:03] deny or scrap cuz you may get like a
+[00:28:05] competitor in there you may get someone
+[00:28:06] in there that you already work with or
+[00:28:08] whatever it is so we want some agency
+[00:28:11] over who we want to contact and send
+[00:28:13] through our super mega also mega mind
+[00:28:15] system so to do that we would decide
+[00:28:18] this now as you probably remembered so
+[00:28:20] what that means is we need something to
+[00:28:21] look for some changes to that air table
+[00:28:24] so the first thing we're going to add is
+[00:28:26] air table cool and we click on watch
+[00:28:29] records sweet this loads up in the
+[00:28:31] background does its wonderful thing we
+[00:28:32] come down we select epic scraper program
+[00:28:36] and get some cof gets loading
+[00:28:39] up wow look at this fail to load data
+[00:28:43] that is not very nice I don't like that
+[00:28:44] it's fa to Lad data let's delete it
+[00:28:47] let's save it there's some rule that
+[00:28:48] like 60% of every problem solved by
+[00:28:51] refreshing the page or set the laptop I
+[00:28:53] wish it wasn't the case I really do wish
+[00:28:54] I sometimes like I've had something like
+[00:28:56] not work I'm like why is it that work
+[00:28:58] working why is it not working and so did
+[00:28:59] you refresh the page I'm like I refuse
+[00:29:01] to refresh the page in 2024 I feel we're
+[00:29:04] past refreshing the page this is the bit
+[00:29:06] now where it doesn't work again and I'm
+[00:29:07] like oh my gosh I'm going have to go
+[00:29:08] refresh the laptop or something okay
+[00:29:11] table looking for results it's loading
+[00:29:13] for is cool and it's worked almost by
+[00:29:16] Magic guys who would have thought
+[00:29:17] refreshing the page would work cool but
+[00:29:18] look at trigger field last modified time
+[00:29:21] great label field we're going to click
+[00:29:24] on for this one let's go with the URL
+[00:29:26] limit is going to be 10 and then we
+[00:29:28] click okay sweet now that's happened we
+[00:29:32] now need to get a second agent in okay
+[00:29:35] so we're going to come back over to appi
+[00:29:36] now the second agent we need I come up
+[00:29:39] this one for example this guy is going
+[00:29:42] to go and grab the information for us
+[00:29:44] now now we got the URL but we need to
+[00:29:46] find out the contact information so if I
+[00:29:48] come over to my actors for example let's
+[00:29:50] have a look contact details scraper all
+[00:29:53] right so you would search for this guy
+[00:29:56] in store come here you go boom let's
+[00:29:58] find him contact you do scer I use this
+[00:30:00] one here by this by this bro cool now
+[00:30:04] look couple things to understand about
+[00:30:06] this you can decide how many pages it
+[00:30:10] goes into the URL if I said five I might
+[00:30:12] get the homepage I might get the how it
+[00:30:14] works I might get the contact does I
+[00:30:15] might get blah blah blah you get a lot
+[00:30:17] of different pages depending on how deep
+[00:30:19] you want to go into the website just for
+[00:30:21] simplisity sake I'm just going to put
+[00:30:22] one here I'm going to come down to
+[00:30:24] scraping options maximum link depth
+[00:30:27] maximum Pages for the whole scrape we
+[00:30:28] got prod configurations and then we've
+[00:30:30] got run options where things get
+[00:30:33] infinitely more complicated cool now
+[00:30:36] what happens we go over so I put
+[00:30:37] test.com in I like to give it like a a
+[00:30:39] dumb URL I give it a dumb URL so it when
+[00:30:41] actually bring it back over to make I
+[00:30:42] can just easily identify where it is and
+[00:30:44] replace it that's cool then we go to
+[00:30:46] Json and Json is here we copy all this
+[00:30:50] we contrl + C and we come back cool so
+[00:30:53] what do we do well we oh I should say
+[00:30:56] excuse me create a Tas if you haven't
+[00:30:58] done so before create a task so that you
+[00:31:00] can actually then connect it with your
+[00:31:02] appify uh and you'll be set and ready to
+[00:31:04] go that and by the way if you're this
+[00:31:05] part of the far in the video I'm
+[00:31:06] assuming you've connected appify at the
+[00:31:08] moment if you haven't there is like an
+[00:31:10] API section you can grab and enter the
+[00:31:12] API key and it connects it all perfectly
+[00:31:14] together for you so look I come back
+[00:31:16] over now I click on add new module I
+[00:31:19] click on appify cool we got run an actor
+[00:31:22] run a task data set items we're going to
+[00:31:24] run an actor okay cool and what's the
+[00:31:26] name of this wonderful actor let's grab
+[00:31:29] it from our previous one this one's
+[00:31:30] called contact info scraper sweet
+[00:31:34] okay contact info scraper sweet we got
+[00:31:37] him input Json bada bing boom it's
+[00:31:40] straight in there I love it now we got
+[00:31:41] test.com let's get rid of that guy and
+[00:31:44] then we're going to put in the URL that
+[00:31:47] this will pull and the Beautiful Thing
+[00:31:49] guys the beautiful thing about air table
+[00:31:52] making sure there's nothing there yeah
+[00:31:53] that's cool oops the beautiful thing
+[00:31:55] about air table is it like when it
+[00:31:57] watches the C it just pulls down
+[00:31:58] everything for us everything that's in
+[00:32:00] that Row the title your all description
+[00:32:01] State script all that stuff brings it
+[00:32:03] down that's cool then we click okay the
+[00:32:05] first thing we need to do is click on
+[00:32:07] the filter set up a filter and all we're
+[00:32:10] going to say is that
+[00:32:12] status okay come
+[00:32:16] down we're looking for contains case
+[00:32:19] insensitive and scrape so basically if
+[00:32:22] we haven't said scrap it won't send it
+[00:32:24] to run this actor okay let's run this
+[00:32:26] whole automation from top to bottom okay
+[00:32:28] this actor is running so go to step two
+[00:32:30] hit run the actor let's head over to our
+[00:32:32] search term let's add a new search term
+[00:32:34] in let's put in London plants we hit
+[00:32:36] enter we're done we go to scenario one
+[00:32:38] we hit run once air table is going to
+[00:32:40] find it Appice found the London plant
+[00:32:43] awesome appy is going to run as an actor
+[00:32:45] then it's going to get dragged down by
+[00:32:47] this guy who's going to go out and see
+[00:32:49] what the first person has physically
+[00:32:51] done cool and back down to step two it's
+[00:32:53] got It's watch the actor runs it's got
+[00:32:54] the data set items and we go over here
+[00:32:56] to table it's found Endor plan plant
+[00:32:58] let's just say we click on it do we
+[00:32:59] think they could work for us yeah you
+[00:33:01] know I think London plant London the
+[00:33:03] London Endor plants page I like it so
+[00:33:04] what we do I come here I click on scrape
+[00:33:07] I come over to the third part of the
+[00:33:08] automation then I run this Automation
+[00:33:10] and as you can see guys that's run
+[00:33:11] successfully cuz has found the word
+[00:33:13] scrape there look scrape had I not
+[00:33:15] clicked scrape that never would have
+[00:33:17] happened and then it's run this
+[00:33:18] automation here which is given the
+[00:33:20] output cool so what does that mean it
+[00:33:22] means guys that You' successfully built
+[00:33:24] third part of the automation which is
+[00:33:26] amazing and yet again
+[00:33:28] my thing has zoomed out and gone crazy
+[00:33:29] and now it's back to normal again that's
+[00:33:30] what I like to see all right so now we
+[00:33:32] do the final part of this whole thing so
+[00:33:34] we're going to get again what are we
+[00:33:36] with formalities we come here and we're
+[00:33:38] going to create the final part now this
+[00:33:40] part of the scenario is epic okay again
+[00:33:43] first thing we do we come down to appify
+[00:33:45] we're going to look for watch actor runs
+[00:33:48] cool we're going to add a hug and so we
+[00:33:50] pick our actor and it's this one contact
+[00:33:52] infos scraper call click save that's
+[00:33:55] decent then we click okay sweet add a
+[00:33:58] new one in and then for this one here
+[00:33:59] we're going to click on applify again
+[00:34:01] get data set items data set ID let's
+[00:34:04] bring it over so you can see all the way
+[00:34:06] down there at the bottom and if I
+[00:34:08] remember correctly the one that we want
+[00:34:11] is in fact I'm just going to double
+[00:34:12] check it's always good to double check
+[00:34:13] cuz like it's like default data set ID
+[00:34:15] okay sweet come over look down looking
+[00:34:18] for default data set ID awesome then we
+[00:34:20] click okay then we come out then we
+[00:34:22] click save the scenario so let's run
+[00:34:25] this from the top then so let's run
+[00:34:28] part four which is okay I need to come
+[00:34:30] back over now to part three I need to
+[00:34:31] right click on this guy run this module
+[00:34:34] early and then let's just give it a URL
+[00:34:36] if I Google London house plans I click
+[00:34:37] this URL I copy it I come over now to
+[00:34:40] SAR 3 I enter it in I click okay this
+[00:34:43] actor is going to run and I come back
+[00:34:45] over to four he once that's run he'll
+[00:34:47] grab it pull it through then we'll get
+[00:34:49] the data set items and then once we've
+[00:34:51] got that data set items we can then
+[00:34:52] start to build out this cool epic part
+[00:34:55] of the automation because as soon as
+[00:34:57] we've done that what essentially we're
+[00:34:59] going to do then is we're going to grab
+[00:35:02] the file in other words great we've got
+[00:35:04] it and we've got this called Contact
+[00:35:05] data but we now want to enrich it right
+[00:35:07] because essentially if you just wanted
+[00:35:08] the contact data you would just cut um
+[00:35:12] these out of it that would be it but the
+[00:35:14] reason why we've got these five modules
+[00:35:15] is we're taking the data URL from the
+[00:35:18] website and then we're going to enrich
+[00:35:19] it we're going to build something
+[00:35:20] specific for that individual right we're
+[00:35:22] going to get the data from the website
+[00:35:23] we're going to create a unique subject
+[00:35:25] line and we're going to create a new
+[00:35:27] body for the email and then draft that
+[00:35:29] email and then we're going to add
+[00:35:30] everything over to the air table so it's
+[00:35:31] going to get a really cool automation
+[00:35:33] for us so come back over and also about
+[00:35:35] magic guys it's appeared look at the
+[00:35:37] data set items check this out look it's
+[00:35:40] got emails we've got the email now have
+[00:35:43] we got a phone number no phone number
+[00:35:45] LinkedIn no Twitter No Instagram no
+[00:35:48] Facebook no and that's cool because not
+[00:35:50] every website you go on is going to have
+[00:35:51] every social media but that's completely
+[00:35:53] okay so look what's the next thing we
+[00:35:55] want to do well look we now want to be
+[00:35:56] able to get all the information from the
+[00:35:59] website so to do that I want you to type
+[00:36:01] in HTTP it's called get a file and the
+[00:36:04] URL you're going to give it here is
+[00:36:06] going to be this URL here londonhouse
+[00:36:08] plans.com call click it click okay
+[00:36:12] phenomenal then you're going to do
+[00:36:14] HTML to text now because the problem at
+[00:36:17] the moment right is we'll have all the
+[00:36:19] HTML but it needs to be in a way that
+[00:36:21] like we can understand the Queen's
+[00:36:23] beautiful English Okay grab that we'll
+[00:36:25] turn it in from what internet GOOG into
+[00:36:27] something that we as human beings can
+[00:36:29] actually read and understand click data
+[00:36:32] amazing and then you're going to do two
+[00:36:33] other modules you're going to click plus
+[00:36:35] you going to come on on chat GPT you're
+[00:36:38] going to click create a completion I
+[00:36:39] recommend GPT 40 which is recently
+[00:36:42] launched got a video on the channel
+[00:36:43] recently I'm loving gbt 40 but we can't
+[00:36:46] build it as an assistant at the moment
+[00:36:48] that's something we'll to do hopefully
+[00:36:50] in the near future so for that we're
+[00:36:51] just going to build it within the um
+[00:36:54] within no code if that doesn't make
+[00:36:55] sense don't worry just copy what in the
+[00:36:57] button I'm pressing come down to gbt 40
+[00:36:59] system it's insanely fast and it's half
+[00:37:01] the price of I run half the price of
+[00:37:03] Turbo and stand Max tokens put zero that
+[00:37:06] basically means just use as many tokens
+[00:37:08] as you got um and then we've got this
+[00:37:10] add message so the role you wanted to
+[00:37:12] play is as a user and then message
+[00:37:13] content so look this is going to be our
+[00:37:16] subject line bar okay so let me come
+[00:37:18] over to ouro on line now look the way
+[00:37:22] that now this is going to be the key bit
+[00:37:23] based on your business and this will
+[00:37:25] change for everybody but this is a b an
+[00:37:27] agent that I think you can use and get
+[00:37:29] started with now look you are an email
+[00:37:31] headline writer bot designed to get the
+[00:37:32] user to click on the email you do not
+[00:37:35] create clickbait for context this email
+[00:37:37] is and then you would insert the context
+[00:37:39] of your email generate a personalized
+[00:37:41] email to encourage them to buug a
+[00:37:42] 50-minute discovery call I've said in
+[00:37:44] this case with an AI automation agency
+[00:37:46] you will have an extract of their
+[00:37:47] website have to change that if outf try
+[00:37:50] to find on something unique and about
+[00:37:51] that specific website and Achievement
+[00:37:53] Award a relevant piece of news that you
+[00:37:54] may want to include in the email you are
+[00:37:56] capable of producing only a subject line
+[00:37:59] you will not include any other tags or
+[00:38:01] parameters other than a subject line you
+[00:38:03] must provide no more than 60 characters
+[00:38:06] as a maximum do not provide any
+[00:38:07] additional text and explain or otherwise
+[00:38:09] only provide the email subject line
+[00:38:12] Rogue I let's get rid of him here
+[00:38:13] website information and here guys is
+[00:38:15] where we would just enter the
+[00:38:17] information for the website here are
+[00:38:19] some guidelines so we would say keep it
+[00:38:21] short and sweet I delete under 50
+[00:38:22] characters and all these guidelines are
+[00:38:23] based on like the best practices for
+[00:38:25] creating like subject lines I had like
+[00:38:26] so many Edition data data points in
+[00:38:28] insides and research make it
+[00:38:30] eye-catching attention grabbing avert
+[00:38:32] curiosity emotional fomo personalize it
+[00:38:34] where possible using email's name or
+[00:38:36] reference to interest re actions align
+[00:38:38] it with the your users by the way the
+[00:38:40] name bit can build into any automations
+[00:38:41] so it's there if you fit up the name
+[00:38:43] segment your list or tellor subject
+[00:38:45] lines casual conversational T blah blah
+[00:38:47] blah and then guys a 100 examples of
+[00:38:49] great subject lines all the way down the
+[00:38:51] bottom so what do we do we copy all of
+[00:38:53] this um this is available again in
+[00:38:55] school Community dambler you just click
+[00:38:56] on it you can just like where you get
+[00:38:58] the automations and you're ready to go
+[00:39:00] we come over to number four come to
+[00:39:01] message content paste it so we get rid
+[00:39:04] of this and then what do we do come down
+[00:39:08] and there we are here's website
+[00:39:09] information and then I want you to put
+[00:39:11] the information excuse me the
+[00:39:14] information from here which is going to
+[00:39:16] be the text pass not the HTML the HTML
+[00:39:19] will be like a billion lines long and
+[00:39:20] like it will crack and break and you
+[00:39:22] stop working and it's a nightmare how do
+[00:39:24] I know that I'll let you guess I've been
+[00:39:27] that before okay cool click okay amazing
+[00:39:30] and then of course guys we got to rename
+[00:39:31] this right we got to rename this
+[00:39:32] something really cool so let's call this
+[00:39:34] one email
+[00:39:38] subject
+[00:39:42] line and then we'll call him um let's
+[00:39:44] give him a little give a little email
+[00:39:46] sign cool all right sweet and then right
+[00:39:49] click on him clone in just like the
+[00:39:53] sixth day rename this
+[00:39:56] one and let's rename this one email body
+[00:39:59] okay email body get rid of a line bit
+[00:40:02] come here get rid of that come here give
+[00:40:03] me a little fire emergy and then we need
+[00:40:05] to give it something different so then
+[00:40:07] we're going to go onto our email body
+[00:40:09] script so look you are a conversational
+[00:40:12] humanlike expert specialized in
+[00:40:14] converting cold leads to the next call
+[00:40:15] to action you must make us feel heard
+[00:40:18] understood and valid so the purpose
+[00:40:20] what's the purpose of a cold email
+[00:40:21] person called email is a to get their
+[00:40:23] attention and B to give them value we
+[00:40:25] need to give them value in this
+[00:40:26] conversation um that could be hey here's
+[00:40:28] a free thing booking 50 minute calls
+[00:40:30] there's a million things I go into I
+[00:40:32] I've just built this to show you like
+[00:40:34] here's how you create an email and a
+[00:40:36] subject line not I'm not going deep into
+[00:40:38] the science of how we tournament clicks
+[00:40:41] um but I do a lot of that in the group
+[00:40:42] in the community so look instructions
+[00:40:45] using the following inputs from
+[00:40:46] potential client generate a personalized
+[00:40:48] email to encourage them to sign up for
+[00:40:50] 50 minutes of Rec call with our AI
+[00:40:52] automation agency again if you've got an
+[00:40:54] agency amazing if not change it for what
+[00:40:56] you want or your purposes maybe you
+[00:40:57] don't want a 50-minute call maybe want
+[00:40:58] something else reply to the prompt with
+[00:41:00] an email formatted in HTML why do we
+[00:41:03] want that well you'll find out soon what
+[00:41:04] it lands in Gmail otherwise it's all
+[00:41:06] like this horrible text you're like no
+[00:41:08] so you need you need the htl so look try
+[00:41:11] to find out something specific from the
+[00:41:12] website and Achievement Award a relevant
+[00:41:14] piece of news to include an email it's
+[00:41:16] bespoke it's Unique right for example if
+[00:41:18] the website shows they've won an award
+[00:41:19] you might say hey I'd like to start off
+[00:41:21] byy a congrat on your next award we
+[00:41:22] specify the input I put a load of
+[00:41:25] description about our services so I
+[00:41:26] create this like fake AI agency called
+[00:41:28] forgotten re which is revolutionary
+[00:41:30] despite the fact it doesn't exist go
+[00:41:31] figure how that works we offer a range
+[00:41:33] of Cutting Edge Solutions I mean that's
+[00:41:35] straight out of the corporate you know
+[00:41:38] the corporate handbook right there
+[00:41:40] predictive blah blah blah blah lots of
+[00:41:41] cool stuff then I've given it a set of
+[00:41:43] rules start by every email by saying hey
+[00:41:46] hey first name you'll be provided with
+[00:41:48] an email address if that name is in the
+[00:41:49] email address and use that if not have
+[00:41:51] been use a generic greeting if there is
+[00:41:53] Adam say hey Adam if it's Jack say hey
+[00:41:55] Jack and each email with and then you
+[00:41:57] can specify how you want the outro to be
+[00:41:59] and then I've given it some really clear
+[00:42:00] guidelines in terms of how I want it to
+[00:42:02] be for example positive ambitious expan
+[00:42:04] clear and concise everyday words use
+[00:42:07] less than 20 words per sentence do not
+[00:42:09] make a paragraph long than two sentences
+[00:42:10] a short and sweet email and you know
+[00:42:12] what man avoid corporate jogon please
+[00:42:14] because we don't like our corporate
+[00:42:15] jogon over here at AI automations for
+[00:42:18] Jack so we copy this we then go to
+[00:42:20] automation we click on this guy we come
+[00:42:23] down got the message content it's all
+[00:42:24] there because we copied it we paste it
+[00:42:26] cool we remove this now let's look for
+[00:42:29] the bits with the inputs so have a look
+[00:42:31] here's the inputs okay client website
+[00:42:33] come down get rid of this move it over
+[00:42:35] here so you got a really good look at it
+[00:42:37] and an email Okay cool so what's the
+[00:42:40] website well the
+[00:42:42] website again if you can
+[00:42:45] see okay is going to be text passer okay
+[00:42:50] that's the website what's the first name
+[00:42:52] the first name if at all it is available
+[00:42:55] is going to be by the way when people
+[00:42:57] say they scrap first names and stuff a
+[00:42:59] lot of the time it is by doing stuff
+[00:43:00] like getting an email address and like
+[00:43:02] oh it's Adam blah blah bl.com it's like
+[00:43:04] oh maybe it's Addam then so what we
+[00:43:06] would do you see this emails click on
+[00:43:08] emails click on one there you go look
+[00:43:10] sweet so we got that information there
+[00:43:12] right and then email address at the
+[00:43:14] bottom exactly the same thing cool and
+[00:43:18] then we've got description Services blah
+[00:43:19] blah blah cool done wonderful beautiful
+[00:43:21] we love it we like it so let's go to air
+[00:43:23] table and we've got this I'm going to
+[00:43:25] create a new one here for us we got
+[00:43:26] results let's click on ADD start from
+[00:43:28] scratch and we're going to call this one
+[00:43:31] contact and then let's give it some
+[00:43:33] googly eyes and click save so let's go
+[00:43:36] through all the fills that we need to
+[00:43:38] add in really simple fashion so we've
+[00:43:40] got URL we've got email cool so first
+[00:43:42] one double click URL my suggestion guys
+[00:43:46] is keep it all single line text or long
+[00:43:48] text if you try to specify it and the
+[00:43:49] output's a bit weird it just saves you a
+[00:43:51] headache so corate URL then we want
+[00:43:54] email then we want Fern so click edit
+[00:43:59] field email long text cool duplicate
+[00:44:04] field click on this
+[00:44:07] guy
+[00:44:09] phone course guy phone of course we need
+[00:44:12] a phone mergy where are we with merg man
+[00:44:14] we're Savages we're just we're crazy un
+[00:44:16] civilized LinkedIn Twitter Instagram
+[00:44:19] Facebook cool so let's just duplicate
+[00:44:21] this guy a couple of
+[00:44:23] times and again like all the I mean you
+[00:44:25] can get YouTube and everything on this
+[00:44:27] guys it's crazy right
+[00:44:29] so Linked In of course what better
+[00:44:33] depicts LinkedIn roll in the suitcase
+[00:44:35] next guy
+[00:44:39] Instagram and then
+[00:44:42] Facebook come on
+[00:44:45] here add that in there we don't want
+[00:44:47] user you'll get messed up sometimes if
+[00:44:49] you just have the wrong format or
+[00:44:52] whatever cool next one we want is
+[00:44:54] subject now the subject guys is going to
+[00:44:57] be single line select on that just for
+[00:45:00] the email it's if you want it like you
+[00:45:01] don't have to add this stuff um but it's
+[00:45:05] like why not why not have it is there
+[00:45:07] anything else need to add I think that's
+[00:45:09] literally Hur before we add in and grab
+[00:45:11] that data I just want to one more time
+[00:45:13] so let's click on run once here and just
+[00:45:15] recommend you use this URL here htps
+[00:45:18] docr because it has a lot of the data
+[00:45:21] already and it will pour over for you
+[00:45:22] nicely so click okay this is going to
+[00:45:24] run the actor and now is going to scrape
+[00:45:26] all the data from that now when you're
+[00:45:28] when you're uploading this to air table
+[00:45:31] essentially if it finds like five emails
+[00:45:34] it outputs them a slightly different way
+[00:45:36] so instead of just like naturally
+[00:45:37] grabbing all five together and saying
+[00:45:39] hey here's hello it crunch here's
+[00:45:41] contacted crunch it'll bundle them
+[00:45:44] together and you won't get the correct
+[00:45:45] output that you're looking for in the
+[00:45:47] air table so there's little there's ways
+[00:45:49] you can obviously counter that with
+[00:45:50] different like tools and stuff within
+[00:45:52] the make universe but to keep this
+[00:45:53] simple and get you up and running I'm
+[00:45:54] just going to show you a really basic
+[00:45:56] one that will grab the first one and
+[00:45:57] then I can get into more complex
+[00:45:58] Solutions after the fact but I just want
+[00:46:00] to get up and running with it and this
+[00:46:02] video is already like I I'm guessing I
+[00:46:04] don't know if the time recording but I'm
+[00:46:05] guessing we're near 50 minutes into this
+[00:46:07] so I'll show you how to get the basics
+[00:46:08] up and then we can add a little fan
+[00:46:10] stuff in afterwards cool so that's now
+[00:46:11] done actually need to re I need to
+[00:46:12] rename this one right this is not
+[00:46:14] subject line this guy is
+[00:46:17] email okay sweet click okay crunch.com
+[00:46:20] which we use a beginning the video which
+[00:46:21] is like a accountancy thing so check it
+[00:46:23] out Buck your 50 minutes of recall with
+[00:46:25] awardwinning crunch Swit so we can see
+[00:46:27] we've got a subject line and we got an
+[00:46:29] email that's cool let's check out the
+[00:46:30] results that's all in HTML cool we love
+[00:46:33] it sweet now let's add this all into a
+[00:46:36] table click on a table we're going to
+[00:46:38] click on create a
+[00:46:42] record about loads up click the base
+[00:46:44] come down click on Epic scriper program
+[00:46:47] that's
+[00:46:48] cool click on table and we're going to
+[00:46:51] do contact at the
+[00:46:53] bottom cool and then we just map
+[00:46:55] everything over so we start with the URL
+[00:46:56] so come down to URL here which is crunch
+[00:46:58] UK then come down to phone let's go down
+[00:47:00] to
+[00:47:03] phones one there you go sweet and what
+[00:47:06] what I recommend you do guys one of the
+[00:47:07] weird functions of air table is that if
+[00:47:09] this pulls through like five phones it
+[00:47:12] won't just do phone number comma phone
+[00:47:14] number comma phone number comma so just
+[00:47:16] to keep this simple cuz this video is
+[00:47:17] already getting like very very long what
+[00:47:19] I would want you to do is when you
+[00:47:21] select these things if I come down to
+[00:47:23] LinkedIn for example it's got LinkedIn
+[00:47:25] one LinkedIn 2 whatever click this one
+[00:47:28] here come down to Instagram right come
+[00:47:31] down to Instagram select the one come
+[00:47:33] down to
+[00:47:35] Facebook select the one so this will
+[00:47:37] just pull through the first result most
+[00:47:39] of these you're never going to need to
+[00:47:40] do more than one so come down to Twitter
+[00:47:43] there is no Twitter blah blah blah okay
+[00:47:45] that's cool there we go and then to stop
+[00:47:46] you from getting like the same data
+[00:47:47] point a million times over because you
+[00:47:49] don't need multiple cases of this what
+[00:47:51] I'd suggest you do is copy one of the
+[00:47:53] results go to your browser paste it in
+[00:47:55] and instead of pH just change it to
+[00:47:57] email emails copy it come back in and
+[00:48:01] post it and then all that will ever do
+[00:48:02] is pull the first results you actually
+[00:48:04] never need to get like a thousand of
+[00:48:05] them instead so come down let's have a
+[00:48:07] look emails perfect and then what is the
+[00:48:10] final one that we
+[00:48:11] need Twitter and how does it describ
+[00:48:13] Twitter Twitter is described
+[00:48:16] as where is Twitter oh my goodness
+[00:48:19] Twitter twit Twitter cool post it in
+[00:48:22] again get here Twitter's cool sweet put
+[00:48:26] it in there there nice and then we got
+[00:48:27] subject click on the subject that's
+[00:48:29] going to be from the subject line bar
+[00:48:30] and then we got HTML body which is
+[00:48:32] result for that done boom perfect
+[00:48:34] complete now guys we're going to run
+[00:48:36] this whole thing from the top right to
+[00:48:39] the bottom and we're going to see how
+[00:48:40] this all plays out and practice so back
+[00:48:43] to the first step with our lovely this
+[00:48:46] is my other one okay now back to the
+[00:48:47] first step let's start off with the
+[00:48:49] search ter what search ter did we
+[00:48:51] want why don't we go something like used
+[00:48:56] cars leads enter okay I come over I
+[00:49:00] pre-program to run this guy we'll wait
+[00:49:02] for new data so pre-program number two I
+[00:49:04] go over to number one I hit run once
+[00:49:06] this is going to find used cars leads
+[00:49:07] and then send it over to the actor so
+[00:49:09] we'll see maybe we want to buy maybe we
+[00:49:11] want to work with garages to help them
+[00:49:12] automate stuff so that's really going to
+[00:49:14] save us a ton of
+[00:49:17] time amazing so a table just grabbed it
+[00:49:20] run it through the actor then this guy's
+[00:49:22] going to wait for this guy to come down
+[00:49:23] which is
+[00:49:24] amazing okay we'll give this guy a
+[00:49:26] couple seconds cool so appi has grabbed
+[00:49:28] it we got the data items and it's just
+[00:49:30] been added into the air table so let's
+[00:49:32] go to our air table into results what do
+[00:49:35] we see we see this Co use cards for
+[00:49:37] sales and Lead now bear in mind guys I
+[00:49:38] use one particular website in reality
+[00:49:41] this could be 510 205 I'm just doing one
+[00:49:43] for the sake of it again how would you
+[00:49:45] change that come back to one click on
+[00:49:47] run actor and you see here Max pages per
+[00:49:50] query one change that to whatever number
+[00:49:53] you want to and results per page
+[00:49:54] whatever so again all that's modifiable
+[00:49:56] with an applify you can change all
+[00:49:58] parameters when you're building it cool
+[00:50:00] I'm here I look at it I take a quick
+[00:50:02] peruse of it use cards for sales and
+[00:50:04] leads the AA blah blah blah do I like
+[00:50:06] that do I want to reach out to the AA
+[00:50:08] maybe I do AA is really huge but purpos
+[00:50:10] of this I'm going to say yes let's
+[00:50:13] scrape that particular website we' got
+[00:50:15] number three and then we've got number
+[00:50:16] four so I'm going to cck on run this
+[00:50:18] actor here so he's going to wait we come
+[00:50:20] over here and we hit run ones and bear
+[00:50:22] in mind guys the only thing that you're
+[00:50:23] ever going to do now look at this is
+[00:50:25] pass the filter why
+[00:50:27] cuz I said scrap how cool is that I come
+[00:50:30] back out excuse me let me just re
+[00:50:33] realign this again my goodness all right
+[00:50:35] well let him just realign the background
+[00:50:37] okay cool aut to realign this is now
+[00:50:39] waiting for it we' grabbed it we've
+[00:50:40] grabbed the we' basically we scraped the
+[00:50:42] web page got a file of it we've got a
+[00:50:44] text pass it we've created a subject
+[00:50:45] line for it we've created an email for
+[00:50:47] it this is now loading for us in the
+[00:50:49] background the one thing I haven't added
+[00:50:51] yet is going to be the Gmail thing so
+[00:50:52] once that's done let's create a record
+[00:50:54] and sent it over to air table if I go to
+[00:50:57] air table now we should have and see all
+[00:50:59] the data they create for us right so
+[00:51:01] let's go over to the air table and see
+[00:51:03] in contact and look at this guys again
+[00:51:06] no email available no phone available
+[00:51:08] but we've got the LinkedIn got the
+[00:51:09] Facebook got the Twitter and then we've
+[00:51:11] got the information from the Gmail how
+[00:51:13] cool is that that is epic now look if I
+[00:51:15] come back here and I click on Gmail I
+[00:51:19] click on create a
+[00:51:20] draft I click on subject the subjects
+[00:51:23] I'm going to put in there is going to be
+[00:51:24] the email subject line content I put in
+[00:51:26] there is going to be on the email itself
+[00:51:28] right there boom perfect and then again
+[00:51:30] add a recipient I'm just going to put
+[00:51:33] test at test.com the reason I'm going to
+[00:51:36] do that guys is because you won't always
+[00:51:39] necessarily get an email so it will fail
+[00:51:42] at that point in the automation so just
+[00:51:44] by having test at test.com and then what
+[00:51:46] we can do is just simply add the email
+[00:51:48] parameter at the bottom so that if we
+[00:51:51] don't get it we can grab it from from
+[00:51:54] the actual body itself then we click
+[00:51:56] okay awesome what fold do we want well I
+[00:51:58] think we want to get it in let's have a
+[00:52:00] quick look drafts once it loads up for
+[00:52:03] us drafts okay cool perfect so then guys
+[00:52:05] let's run this one final time we're
+[00:52:06] going to run the fourth one over here
+[00:52:08] we're going to back over number three
+[00:52:09] we're going to test this with crunch Cod
+[00:52:10] UK and click okay that's going to run
+[00:52:13] the background that hasn't worked why
+[00:52:15] has that not
+[00:52:16] worked let's have a quick
+[00:52:19] look ah I didn't give it a valid URL
+[00:52:22] that's not great right guys let's run
+[00:52:24] this one one more time okay
+[00:52:28] https bum bum
+[00:52:30] bum crunch. Code art UK okay awesome
+[00:52:35] cool right enter hopefully this one's
+[00:52:36] going to work for us
+[00:52:38] okay okay now it's worked that's cool
+[00:52:41] now wait for that Al Po in background we
+[00:52:42] going to the whole system one more time
+[00:52:44] and when that's done we're going to be
+[00:52:46] ready to go we can go check in on appify
+[00:52:48] see if this is going so you can see the
+[00:52:49] bottom here it shows you how long it's
+[00:52:52] been and how long it'll take to run the
+[00:52:54] whole automation by the way guys if this
+[00:52:56] like takes a minute to do that's
+[00:52:59] completely fine could be a minute could
+[00:53:00] be 2 minutes it could be based on so
+[00:53:02] many different things and already guys
+[00:53:04] it's rocketed through the whole system
+[00:53:06] we've got the website we've got the
+[00:53:07] subject line let's check out the subject
+[00:53:09] line unlock 1% pricing for Soldier
+[00:53:11] success book a call now love that email
+[00:53:14] air table and now draft in Gmail let's
+[00:53:16] go check out Gmail come over let's
+[00:53:17] refresh the
+[00:53:18] page come and check it out have I got
+[00:53:21] this here let's have a quick look and
+[00:53:23] there we go guys so look get rid of this
+[00:53:25] bit here
+[00:53:27] hey there I hope this find you well
+[00:53:28] first I want to congratulate you on your
+[00:53:29] SE integration of counting solutions for
+[00:53:31] soul Traders limited companies your
+[00:53:32] detailed guides BL so it's already
+[00:53:34] already take into account something
+[00:53:37] specific about the website again can we
+[00:53:39] improve this oh my gosh we can improve
+[00:53:40] this a million times but this is just to
+[00:53:41] show you we can grab content and
+[00:53:43] personalize for it and look we've got
+[00:53:45] stuff about what we do it's got format
+[00:53:47] and it's bold then if I come over to
+[00:53:48] this we should see some data in our web
+[00:53:51] page and look at this guys we've got the
+[00:53:54] fern a LinkedIn an Instagram a Facebook
+[00:53:55] a Twitter a subject line and the HML
+[00:53:58] body and that is the whole Automation in
+[00:54:01] a nutshell and one thing I'd say guys is
+[00:54:03] there are multiple contact detail
+[00:54:05] scraping Bots okay I chose this one
+[00:54:07] because it's free um but at the end of
+[00:54:10] the day guys you can actually use so
+[00:54:12] many different ones right contact
+[00:54:13] details scraper okay like there are lots
+[00:54:17] of different ones on here some are paid
+[00:54:18] some are free and you know if you're
+[00:54:20] really scaling this up you can
+[00:54:21] experiment different solutions and
+[00:54:22] that's how build this whole AI automated
+[00:54:24] outage system this whole by the way came
+[00:54:27] from suggestion in school Community
+[00:54:28] someone asked me so I built it so if you
+[00:54:30] haven't checked out yet check that out
+[00:54:31] down below if you haven't seen this GPT
+[00:54:33] 40 video I'd encourage you to head over
+[00:54:35] there right now and watch it but in any
+[00:54:37] case guys you've been great and I will
+[00:54:38] see you in the next video

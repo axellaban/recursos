@@ -1,0 +1,450 @@
+{
+    "name": "YouTube Scraperrr 📹",
+    "flow": [
+        {
+            "id": 1,
+            "module": "rss:ActionReadArticles",
+            "version": 4,
+            "parameters": {
+                "include": []
+            },
+            "mapper": {
+                "url": "https://rss.app/feeds/OljOF0c4w4ZhoATi.xml",
+                "username": "",
+                "password": "",
+                "filterDateFrom": "",
+                "filterDateTo": "",
+                "maxResults": "100",
+                "gzip": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": -355,
+                    "y": -34
+                },
+                "restore": {},
+                "parameters": [
+                    {
+                        "name": "include",
+                        "type": "select",
+                        "label": "Process RSS fields",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "google-merchant-center",
+                                "itunes"
+                            ]
+                        }
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "username",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "password",
+                        "type": "text",
+                        "label": "Password"
+                    },
+                    {
+                        "name": "filterDateFrom",
+                        "type": "date",
+                        "label": "Date from"
+                    },
+                    {
+                        "name": "filterDateTo",
+                        "type": "date",
+                        "label": "Date to "
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of returned items",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "title",
+                        "type": "text",
+                        "label": "Title"
+                    },
+                    {
+                        "name": "description",
+                        "type": "text",
+                        "label": "Description"
+                    },
+                    {
+                        "name": "summary",
+                        "type": "text",
+                        "label": "Summary"
+                    },
+                    {
+                        "name": "author",
+                        "type": "text",
+                        "label": "Author"
+                    },
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL"
+                    },
+                    {
+                        "name": "dateUpdated",
+                        "type": "date",
+                        "label": "Date updated"
+                    },
+                    {
+                        "name": "dateCreated",
+                        "type": "date",
+                        "label": "Date created"
+                    },
+                    {
+                        "name": "comments",
+                        "type": "url",
+                        "label": "Comments"
+                    },
+                    {
+                        "name": "image",
+                        "type": "collection",
+                        "label": "Image",
+                        "spec": [
+                            {
+                                "name": "title",
+                                "label": "Name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "url",
+                                "label": "URL",
+                                "type": "url"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "categories",
+                        "type": "array",
+                        "label": "Categories",
+                        "spec": {
+                            "type": "text"
+                        }
+                    },
+                    {
+                        "name": "source",
+                        "type": "collection",
+                        "label": "Source",
+                        "spec": [
+                            {
+                                "name": "title",
+                                "label": "Name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "url",
+                                "label": "URL",
+                                "type": "url"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "enclosures",
+                        "type": "array",
+                        "label": "Enclosures",
+                        "spec": [
+                            {
+                                "name": "url",
+                                "label": "URL",
+                                "type": "url"
+                            },
+                            {
+                                "name": "type",
+                                "label": "Type",
+                                "type": "text"
+                            },
+                            {
+                                "name": "length",
+                                "label": "Length",
+                                "type": "number"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "rssFields",
+                        "label": "RSS fields",
+                        "help": "Other RSS fields. All values are in text format.",
+                        "type": "collection",
+                        "spec": [
+                            {
+                                "name": "title",
+                                "label": "title",
+                                "type": "text"
+                            },
+                            {
+                                "name": "description",
+                                "label": "description",
+                                "type": "text"
+                            },
+                            {
+                                "name": "link",
+                                "label": "link",
+                                "type": "text"
+                            },
+                            {
+                                "name": "guid",
+                                "label": "guid",
+                                "type": "text"
+                            },
+                            {
+                                "name": "pubdate",
+                                "label": "pubdate",
+                                "type": "text"
+                            },
+                            {
+                                "name": "enclosure",
+                                "label": "enclosure",
+                                "type": "text"
+                            },
+                            {
+                                "label": "media:content",
+                                "name": "media:content",
+                                "type": "collection",
+                                "spec": [
+                                    {
+                                        "name": "props",
+                                        "label": "Properties",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "label": "medium",
+                                                "name": "medium",
+                                                "type": "text"
+                                            },
+                                            {
+                                                "label": "url",
+                                                "name": "url",
+                                                "type": "text"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "label": "Value",
+                                        "name": "value",
+                                        "type": "text"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "onesaas:codepython",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 1545688
+            },
+            "mapper": {
+                "pythonCode": "from youtube_transcript_api import YouTubeTranscriptApi\n\n\ndef fetch_video_transcript(video_url):\n    # Extracting Video ID from URL\n    if \"youtu.be\" in video_url:\n        video_id = video_url.split('/')[-1]\n    else:\n        video_id = video_url.split('v=')[-1].split('&')[0]\n     \n    # Attempt to fetch the video transcript\n    try:\n        transcript_list = YouTubeTranscriptApi.get_transcript(video_id)\n        full_transcript = '\\n'.join([item['text'] for item in transcript_list])\n        return full_transcript\n    except Exception as e:\n        return f\"Failed to fetch transcript: {str(e)}\"\n\n\n# Main block to set the 'result' variable, as expected by the platform\nvideo_url = \"{{1.url}}\"\nresult = fetch_video_transcript(video_url)"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -19,
+                    "y": -35
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My 0-CodeKit connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "onesaas2"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "otherInputParameters": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:onesaas2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "otherInputParameters",
+                        "type": "array",
+                        "label": "Other Input Parameters",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "any",
+                                "label": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "pythonCode",
+                        "type": "text",
+                        "label": "Your Python Code",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "google-docs:appendADocument",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "choose": "dropdown",
+                "destination": "drive",
+                "document": "/1MFqnQVvxgGE6iqStjShKM9_AQX6hucOvcbapzZim2qY",
+                "select": "document",
+                "text": "{{2.result}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 281,
+                    "y": -35
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "Google Connection (jack@aiautomationswithjack.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "choose": {
+                            "label": "By Dropdown"
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        },
+                        "document": {
+                            "path": [
+                                "Jack YouTube 📹"
+                            ]
+                        },
+                        "select": {
+                            "label": "By appending to the body of document"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "choose",
+                        "type": "select",
+                        "label": "Select a Document",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "mapping",
+                                "dropdown"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "document",
+                        "type": "file",
+                        "label": "Document ID",
+                        "required": true
+                    },
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Insert a Paragraph",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "location",
+                                "document",
+                                "segment"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Appended Text",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

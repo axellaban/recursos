@@ -1,0 +1,380 @@
+{
+  "name": "Reddit News Scraper",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "5080323d-03ae-4881-b689-e6d25c1d560a",
+      "name": "When clicking 'Test workflow'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        1568,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "id-1",
+              "name": "subreddits",
+              "value": "[\"r/n8n\", \"r/NoCode\", \"r/ArtificialInteligence\", \"r/ai_agents\"]",
+              "type": "array"
+            },
+            {
+              "id": "id-2",
+              "name": "daysBack",
+              "value": 7,
+              "type": "number"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "88eec95d-2db1-40f4-bbf2-a5229859d131",
+      "name": "Workflow Configuration",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1792,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "subreddits",
+        "options": {}
+      },
+      "id": "3a922d76-59f6-48dc-ad50-502e518c751b",
+      "name": "Split Subreddits",
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        2016,
+        -96
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "subreddit": "={{ $json.subreddits.replace('r/', '') }}",
+        "limit": 10,
+        "filters": {
+          "category": "top"
+        }
+      },
+      "id": "9d6b097f-c547-4370-a9b2-5fd345d670ce",
+      "name": "Get Top Posts",
+      "type": "n8n-nodes-base.reddit",
+      "typeVersion": 1,
+      "position": [
+        2240,
+        -96
+      ],
+      "credentials": {
+        "redditOAuth2Api": {
+          "id": "DhEzrVDikRifZA6Z",
+          "name": "Reddit account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the daysBack value from the first item of 'Workflow Configuration' node\nconst daysBack = $('Workflow Configuration').first().json.daysBack || 7;\n\n// Calculate the cutoff timestamp (current time minus daysBack days)\nconst cutoffTimestamp = Math.floor(Date.now() / 1000) - (daysBack * 24 * 60 * 60);\n\n// Filter items where created_utc is greater than the cutoff timestamp\nconst filteredItems = $input.all().filter(item => {\n  return item.json.created_utc > cutoffTimestamp;\n});\n\n// Return the filtered items\nreturn filteredItems;"
+      },
+      "id": "6e93967e-926a-494a-bba1-ba07032c2564",
+      "name": "Filter Posts by Date",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2464,
+        -96
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "id-1",
+              "name": "subreddit",
+              "value": "={{ $json.subreddit }}",
+              "type": "string"
+            },
+            {
+              "id": "id-2",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "id-3",
+              "name": "text",
+              "value": "={{ $json.selftext }}",
+              "type": "string"
+            },
+            {
+              "id": "id-4",
+              "name": "upvotes",
+              "value": "={{ $json.ups }}",
+              "type": "number"
+            },
+            {
+              "id": "id-5",
+              "name": "post_url",
+              "value": "=https://reddit.com{{ $json.permalink }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "439da36a-dfb1-4710-aefd-ea1a1b557d80",
+      "name": "Format Output",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2688,
+        -96
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "id-1",
+              "name": "source",
+              "value": "Reddit",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "4c11f74f-de64-4a88-b4ac-80134c541b1d",
+      "name": "Add Reddit Source Tag",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2912,
+        -96
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineAll",
+        "options": {}
+      },
+      "id": "7ddde56d-bc38-466c-a324-763ee8a45776",
+      "name": "Combine All Sources",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        3184,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the daysBack value from the first item of 'Workflow Configuration' node\nconst daysBack = $('Workflow Configuration').first().json.daysBack || 7;\n\n// Calculate the cutoff timestamp (current time minus daysBack days)\nconst cutoffDate = new Date();\ncutoffDate.setDate(cutoffDate.getDate() - daysBack);\n\n// Filter items where the date is greater than the cutoff date\nconst filteredItems = $input.all().filter(item => {\n  const articleDate = new Date(item.json.date || item.json.pubDate || item.json.published);\n  return articleDate > cutoffDate;\n});\n\n// Return the filtered items\nreturn filteredItems;"
+      },
+      "id": "56ef3f70-6b99-4beb-9daf-fd2315851882",
+      "name": "Filter Articles by Date",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2688,
+        96
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "id-1",
+              "name": "source",
+              "value": "Ben's Bites",
+              "type": "string"
+            },
+            {
+              "id": "id-2",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "id-3",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            },
+            {
+              "id": "id-4",
+              "name": "pubDate",
+              "value": "={{ $json.pubDate }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0916863c-bdbe-44ba-aaf8-35d437639630",
+      "name": "Format Ben's Bites Output",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2912,
+        96
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.bensbites.com/feed",
+        "options": {}
+      },
+      "id": "c284af39-a314-4ce6-9213-f3ee1230c8c6",
+      "name": "Read Ben's Bites RSS Feed",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.2,
+      "position": [
+        2464,
+        96
+      ]
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking 'Test workflow'": {
+      "main": [
+        [
+          {
+            "node": "Workflow Configuration",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Workflow Configuration": {
+      "main": [
+        [
+          {
+            "node": "Split Subreddits",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Read Ben's Bites RSS Feed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Subreddits": {
+      "main": [
+        [
+          {
+            "node": "Get Top Posts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Top Posts": {
+      "main": [
+        [
+          {
+            "node": "Filter Posts by Date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Posts by Date": {
+      "main": [
+        [
+          {
+            "node": "Format Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Output": {
+      "main": [
+        [
+          {
+            "node": "Add Reddit Source Tag",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add Reddit Source Tag": {
+      "main": [
+        [
+          {
+            "node": "Combine All Sources",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Articles by Date": {
+      "main": [
+        [
+          {
+            "node": "Format Ben's Bites Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Ben's Bites Output": {
+      "main": [
+        [
+          {
+            "node": "Combine All Sources",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Read Ben's Bites RSS Feed": {
+      "main": [
+        [
+          {
+            "node": "Filter Articles by Date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "4afd93d1-a470-4126-9f90-770826067c67",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "hOzbq1fNzzZhGFzx",
+  "tags": []
+}

@@ -1,0 +1,867 @@
+[00:00:00] Most dashboards look flashy but never
+[00:00:02] make money and don't work because they
+[00:00:04] skip the correct systems. Gemini 3
+[00:00:07] changes everything. And as somebody
+[00:00:08] that's actually built and sold these
+[00:00:10] dashboards for thousands of dollars,
+[00:00:12] I'll show you how to design your very
+[00:00:14] first prolevel UI dashboard step by step
+[00:00:17] without any code so you can make more
+[00:00:18] money, save time, and make profitable
+[00:00:21] decisions with accurate business data.
+[00:00:23] And if you don't know who I am, my name
+[00:00:24] is Jack Roberts. I built and sold my
+[00:00:26] last tech startup with over 60,000
+[00:00:28] customers. and now I run a sevenf
+[00:00:30] figureure air automation business. So if
+[00:00:32] you haven't already, grab that coffee
+[00:00:34] and let's dive straight in. So let's
+[00:00:35] build this beautiful UI dashboards with
+[00:00:37] zero coding. And we're going to do that
+[00:00:39] with two very new technologies. First of
+[00:00:41] all is Gemini 3, which is the powerhouse
+[00:00:44] record-breaking Google software that
+[00:00:46] basically lets us design things the
+[00:00:48] likes of which we've never seen before.
+[00:00:49] And then we've got anti-gravity, which
+[00:00:51] is Google's coding environment. It makes
+[00:00:53] a lot of this stuff possible. And it
+[00:00:55] very recently came out. Now, if we're
+[00:00:57] thinking about, well, what is a great UI
+[00:01:00] dashboard? Essentially, it's it's this,
+[00:01:02] which is a great UI dashboard is
+[00:01:05] basically the translation layer between
+[00:01:08] complex data on one hand and better
+[00:01:12] decisions on the other. That's
+[00:01:13] effectively what it's doing if when you
+[00:01:15] get down to it fundamentally. Now, let's
+[00:01:17] go ahead and build one of these
+[00:01:18] dashboards together. And we're going to
+[00:01:19] build this incredible UI dashboard using
+[00:01:21] a very simple five-step framework called
+[00:01:23] the build framework. Imagine having the
+[00:01:25] world's fastest Ferrari, but no road you
+[00:01:28] can possibly drive it on. That's exactly
+[00:01:31] the same as having a really good UI
+[00:01:32] dashboard, but not thinking about the
+[00:01:34] purpose of it. Which is why the first B
+[00:01:36] is for business purpose. And to do this,
+[00:01:39] we only need to answer three questions
+[00:01:40] when we're thinking about our dashboard.
+[00:01:42] The first of which is what problem does
+[00:01:45] the dashboard solve? We're going to ask
+[00:01:47] who is the user and what decision are
+[00:01:50] they here to make because it's a
+[00:01:51] dashboard and service of something. So
+[00:01:53] in this video, we're going to do one
+[00:01:54] which is going to be we'll just say that
+[00:01:55] it is a SAS business that we're building
+[00:01:57] and we want to look at the users their
+[00:01:59] usage metrics to help us better
+[00:02:01] understand and decide what we should
+[00:02:03] invest our time in. So what we would do
+[00:02:04] here is really understand the use case
+[00:02:07] in the business. If you don't have that
+[00:02:09] information, one of the things I
+[00:02:10] recommend you did, and I did a video on
+[00:02:11] this recently, uh, if I come over to my
+[00:02:13] classroom here about how you can
+[00:02:14] actually do market research on these
+[00:02:16] things, gummy search system, answer
+[00:02:17] public, basically go through these
+[00:02:19] different websites, go into product
+[00:02:20] hunt, understand the user, scrape all
+[00:02:23] that information. I'll put a link on
+[00:02:24] screen so you can check out how to do
+[00:02:26] all that stuff so you can get a really
+[00:02:27] good understanding of what the problem
+[00:02:28] is that we're actually solving for the
+[00:02:30] customer. And then we've done that, we
+[00:02:31] head over to Claude and we basically ask
+[00:02:33] it to build out for us an SOP on this
+[00:02:35] problem. And we say, "Hey, here's a
+[00:02:37] problem. Here's one I build. Help me
+[00:02:38] build out a fundamental SOP for these
+[00:02:40] use cases. And then Chlo will come back
+[00:02:42] with a beautiful SOP. The one that we're
+[00:02:44] going to be building in this one is for
+[00:02:45] Glider, which is our speech text
+[00:02:47] startup. The idea being is that wouldn't
+[00:02:49] it be great to get some metrics so we
+[00:02:50] can track user flow and user journey. So
+[00:02:52] one of the core things that you have to
+[00:02:53] make sure you give Claude in this
+[00:02:55] initial planning stage is and actually
+[00:02:57] what we can do is download this because
+[00:02:58] it's very handy and we can give files
+[00:03:00] also to uh the models which is really
+[00:03:01] cool is we want to make sure we're
+[00:03:03] really clear on the metrics you want to
+[00:03:05] track. And if you don't know what those
+[00:03:06] numbers are, have the conversations.
+[00:03:08] Once we've done that, we're going to
+[00:03:09] head over to aistudio.com/apps.
+[00:03:12] I'm going to go ahead and left hand
+[00:03:13] side. I'm going to create a brand new
+[00:03:14] app. Now, why are we using this instead
+[00:03:17] of anti-gravity? A couple of reasons.
+[00:03:18] Number one is I want to save you on your
+[00:03:21] credit usage. So, for example, I'm on
+[00:03:22] the max plan for Gemini, but not
+[00:03:24] everybody is. And if you're using this
+[00:03:25] one online, what you can actually do is
+[00:03:28] use a lot of free tokens online and then
+[00:03:29] use additional tokens down below when
+[00:03:31] you get the app. So, you may as well
+[00:03:33] utilize those free tokens that are
+[00:03:34] available to you. Then what you can do
+[00:03:35] once you're in here is actually click on
+[00:03:36] the plus and click on upload the
+[00:03:38] document that we just added. And if you
+[00:03:39] find that you can't upload that
+[00:03:40] particular document, it could be because
+[00:03:41] Gemini doesn't accept DOCX files. So if
+[00:03:44] you come back over to Claude and ask it
+[00:03:45] for markdown, you can then literally
+[00:03:47] just copy and paste and then come over
+[00:03:49] to Google AI Studio and drop it in here.
+[00:03:51] Cool. So we've given all the text now.
+[00:03:53] Now the key principle here is you don't
+[00:03:55] need to reinvent the wheel. You're far
+[00:03:57] better off finding the bestin-class in
+[00:03:59] your particular field. Look at how they
+[00:04:01] do their dashboard, their design, and
+[00:04:02] use that as a reference image. Now, when
+[00:04:04] it comes to the design aspect, it gets
+[00:04:07] very deep and that's what we're going to
+[00:04:08] focus on in this video. But for this
+[00:04:10] stage, I just want to get a working
+[00:04:12] prototype and then we're going to run it
+[00:04:13] through several layers when we get it
+[00:04:15] into anti-gravity. Now, what I'm going
+[00:04:17] to use here from the community and I'll
+[00:04:19] put a link down below for this so you
+[00:04:20] can go ahead and grab it, is this, which
+[00:04:22] is very, very cool. So, this is a great
+[00:04:24] place to get inspiration for everything
+[00:04:26] that you want. So, check this out.
+[00:04:28] Right, you basically want to have a look
+[00:04:29] at all these different dashboards. You
+[00:04:30] can have a look. Just pull all the
+[00:04:31] different ones out that you want. Blah
+[00:04:33] blah blah. We've got all the different
+[00:04:34] stuff here. You can see. And then just
+[00:04:36] have a look at designs that you think
+[00:04:38] look really cool. So, for example, that
+[00:04:40] one's I've loaded too many times. This
+[00:04:42] one looks awesome. So, kind of think
+[00:04:44] about how you want to display your data
+[00:04:45] and what might be the best one for you
+[00:04:47] to take a look at. I think this one here
+[00:04:49] is gorgeous. Um, but again, just find
+[00:04:51] the ones that you like. And then once
+[00:04:52] you found that one, I want you to do is
+[00:04:54] go ahead and basically screenshot the
+[00:04:56] image. So, I think this is a really
+[00:04:57] great dashboard. I quite like the dark
+[00:04:59] mode which is cool. So all we would do
+[00:05:01] is come down here and then we will just
+[00:05:02] simply copy this and then let's also
+[00:05:04] show the light mode and the dark mode.
+[00:05:07] So we come back over to anti-gravity and
+[00:05:10] we throw that in. And then we want to go
+[00:05:11] and grab the second one which is in
+[00:05:12] light mode which is right there. Sweet.
+[00:05:14] And there are ways that you can
+[00:05:15] formulate light mode versus dark mode
+[00:05:17] changes. And then the next thing I want
+[00:05:18] you to basically crack is this. So this
+[00:05:21] is the meta prompt for creating
+[00:05:23] incredible dashboards. And what I've
+[00:05:25] done with this is I've found already for
+[00:05:27] you all of the text stack that it's just
+[00:05:29] the best tech stack for designing apps.
+[00:05:31] It's got everything on there. It's got
+[00:05:33] the app architecture requirements,
+[00:05:34] design frameworks, UIUX specifications,
+[00:05:37] all the stuff that makes designs really
+[00:05:39] good basically based on like the leading
+[00:05:40] design advice, all that sort of stuff.
+[00:05:42] It's very very cool. And obviously we've
+[00:05:44] got stuff in there like quality gates
+[00:05:45] like it needs to be understandable
+[00:05:46] within 10 seconds etc etc. Now we will
+[00:05:48] go through this as a checklist after the
+[00:05:50] fact but for the time being we're going
+[00:05:53] to come back over and add that into
+[00:05:54] Gemini at the top and then we are going
+[00:05:56] to kick some butt. So we simply paste
+[00:05:58] that in and then we go ahead and click
+[00:05:59] build. And that brings us brilliantly
+[00:06:01] onto the next step in our five-step
+[00:06:02] framework which is underlying data. So
+[00:06:05] this is the bit where we have to ask the
+[00:06:06] question where is the data coming from?
+[00:06:09] What are the sources and how does it all
+[00:06:11] connect? And what the key thing you have
+[00:06:13] to understand is how frequently will the
+[00:06:15] data change? Is it dynamic? Is it
+[00:06:16] static? that kind of thing. So, what
+[00:06:18] we're going to do in this one here,
+[00:06:19] guys, actually, is we're going to use
+[00:06:20] something called Superbase. And the
+[00:06:22] reason we're going to use Superbase is
+[00:06:23] because it's like a really it's like
+[00:06:24] Microsoft Excel on steroids. So, for
+[00:06:27] example, if I come up to Superbase, I'm
+[00:06:28] going to show you exactly what that
+[00:06:29] looks like. And what we need to do also
+[00:06:31] is download anti-gravity. So, if you
+[00:06:33] haven't got anti-gravity ready, head
+[00:06:34] over to anti-gravity.google.com
+[00:06:36] and download it for your computer. I'll
+[00:06:38] put all the links down below so you can
+[00:06:40] just click. And when you've downloaded
+[00:06:41] it, you're going to see something that
+[00:06:43] looks a little bit like this. Awesome.
+[00:06:45] So, what we're going to do is we're
+[00:06:46] going to add in a new file and then
+[00:06:48] we're going to go and start thinking
+[00:06:49] about Superbase. So, the way that we do
+[00:06:52] this here, okay, is you simply click on
+[00:06:53] file at the top and you click on open
+[00:06:55] folder and then you're going to create a
+[00:06:57] brand new folder here. So, let's call
+[00:06:59] this one something like uh dashboard UI.
+[00:07:01] All right, that's really cool. When
+[00:07:03] you've done that, you select open. And
+[00:07:04] now we've opened that file within
+[00:07:06] anti-gravity. And what we've got to do
+[00:07:08] is take all of the code that we've got
+[00:07:10] from our actual dashboard and take it
+[00:07:12] down into anti-gravity. But what we want
+[00:07:15] to do is create the data structure which
+[00:07:17] is going to be in superbase. So you're
+[00:07:19] going to click on your superbase is
+[00:07:21] completely free to create an account.
+[00:07:22] And once you do that, you're going to
+[00:07:24] actually see an interface that looks a
+[00:07:26] little bit something like this. Don't
+[00:07:28] worry if this feels slightly strange. I
+[00:07:29] promise it will make perfect sense. And
+[00:07:31] when we come back over to our dashboard,
+[00:07:33] guys, we can see, look how beautiful
+[00:07:35] this is. This is exceptional. Look how
+[00:07:38] fantastic this is as a UI. This is
+[00:07:40] gorgeous. We've got real-time logs,
+[00:07:42] growth funnel. It's separated down by
+[00:07:44] dictation, transcription, API status,
+[00:07:46] lots of really cool things. And we can
+[00:07:48] check by seven days, 30 days, and 90
+[00:07:50] days, which is amazing. It's really
+[00:07:53] captured the essence of what we've asked
+[00:07:55] it to do. It's actually followed almost
+[00:07:57] all the design principles. Like I say,
+[00:07:59] guys, just literally copy and paste
+[00:08:00] information that I gave you. Now, what
+[00:08:01] I'd like you to do after this, to be
+[00:08:03] fair, is just to kind of fill out some
+[00:08:04] of the information on the left hand
+[00:08:06] side. Hey, dude, looks amazing. Could
+[00:08:08] you just fill out some information for
+[00:08:09] all of the different tabs on the left
+[00:08:11] hand side? So, we've got some dummy data
+[00:08:13] that's consistent. And then when I
+[00:08:14] select 30-day 90-day view, I'd like that
+[00:08:16] to change also. Cool. Paste that one in
+[00:08:18] there. Let it make those changes. And
+[00:08:20] then we can start looking and basically
+[00:08:21] hooking this all up to data. And then we
+[00:08:23] come back over. You can see we've got
+[00:08:24] things here for dictations. We've got
+[00:08:26] things on the realtime logs. And then we
+[00:08:28] can also get different views like
+[00:08:30] 30-day, 90day, which is ace. So, what we
+[00:08:32] want to do next then, guys, is actually
+[00:08:33] push this over to GitHub. GitHub just
+[00:08:35] going to place where we actually store
+[00:08:36] this information. So, go on save to
+[00:08:38] GitHub. Call this one uh what did we say
+[00:08:40] we're going to call this one? something
+[00:08:41] like UI dashboard and then again that's
+[00:08:43] the same for the repo description that's
+[00:08:45] cool and we can make this one private
+[00:08:46] actually doesn't need to be public so
+[00:08:48] create the git repo give this a hot and
+[00:08:50] beautiful second now with the data
+[00:08:52] what's really going to blow your mind is
+[00:08:54] how within anti-gravity we can connect
+[00:08:56] this to anything I'm going to show you
+[00:08:58] some tips and tricks that most people
+[00:08:59] don't know so it's going to ask us to
+[00:09:02] stage and commit the changes which is
+[00:09:03] taking it from anti-gravity and pushing
+[00:09:06] it now into the cloud you can flirt with
+[00:09:08] it back and forth here if you want to
+[00:09:09] but what I'm more concerned about here
+[00:09:11] is actually getting the live data locked
+[00:09:13] in and proce basically processed so that
+[00:09:16] because if it hasn't got the data it's
+[00:09:17] not really worth anything. So it we need
+[00:09:19] to prioritize that at the front end
+[00:09:21] before doing flashy stuff that doesn't
+[00:09:22] drive anything. Now when you click this
+[00:09:24] thing at the top it will take you to
+[00:09:25] GitHub and within GitHub you will see
+[00:09:27] everything here. The only thing that we
+[00:09:28] really care about guys is clicking on
+[00:09:30] code and we're going to click on copy.
+[00:09:32] That's it. Then we're going to head over
+[00:09:33] to anti-gravity
+[00:09:35] which is cool. We're going to say yes I
+[00:09:36] trust the authors. Now anti-gravity is
+[00:09:38] amazing. if you're not familiar with how
+[00:09:39] to use anti-gravity. I'll put a link on
+[00:09:41] screen that shows you everything step by
+[00:09:43] step, but you will still be able to
+[00:09:45] follow this if you just push the buttons
+[00:09:46] that I do in this video. Okay, now we've
+[00:09:48] got the dashboard UI here. The first
+[00:09:49] thing that I want to call out is that
+[00:09:50] you have different modes for planning
+[00:09:52] and fast based on your use case. And if
+[00:09:54] click on this one, we've got the
+[00:09:55] different models. Now, what I'm going to
+[00:09:56] ask you to do first of all is pull down
+[00:09:58] the repo. Hey dude, what I'd like to do
+[00:10:01] is to pull down this GitHub repo.
+[00:10:04] Beautiful. Okay. Now, one of the things
+[00:10:05] that you'll notice that I did, okay, is
+[00:10:08] that I actually when I published this to
+[00:10:09] GitHub is that I made it private. Just
+[00:10:12] so you can get started and use it
+[00:10:13] properly, come through to settings and
+[00:10:15] instead of private, just change that to
+[00:10:17] public. When you change that to public,
+[00:10:18] it basically means that if someone's on
+[00:10:20] your profile, they can access the code.
+[00:10:21] But ultimately, we're going to want to
+[00:10:23] make that private so you can do it. Now,
+[00:10:24] I'm going to show you something in
+[00:10:25] anti-gravity that means that you don't
+[00:10:27] need to make it public cuz we're
+[00:10:29] actually going to connect GitHub to
+[00:10:32] anti-gravity. And we're also going to
+[00:10:34] connect superbase to anti-gravity. And
+[00:10:37] the upshot of that basically means that
+[00:10:39] we can tell Gemini in language, hey, add
+[00:10:41] these users or write me code or give me
+[00:10:43] this database. And it all connects
+[00:10:45] together in just like a natural chatbot
+[00:10:47] interface, which is really freaking
+[00:10:49] cool. Like genuinely nuts. I'll show you
+[00:10:50] exactly how you do that. So we come to
+[00:10:52] anti-gravity. We just click on accept to
+[00:10:54] do this. The way that you connect these
+[00:10:55] guys is these dots on the right hand
+[00:10:57] side. As you can see, it's pulled down
+[00:10:58] everything. If I click on MCP service,
+[00:11:00] MCP by the way stands for model context
+[00:11:03] protocol. Don't worry if that sounds
+[00:11:04] complicated. All MCP is is a universal
+[00:11:08] language of how apps speak to other apps
+[00:11:11] which basically means it's it's
+[00:11:13] frictionless and effortless to for a
+[00:11:15] database to speak to your front end to
+[00:11:17] speak to the code repo and everything in
+[00:11:19] between. It's like a universal language.
+[00:11:21] You and I might speak English or Spanish
+[00:11:22] or whatever. This speaks in a slightly
+[00:11:24] different language. So all you would do
+[00:11:26] down here is come down and you type in
+[00:11:27] superbase like so like that. I've
+[00:11:30] already installed it. So but when it
+[00:11:31] won't be installed for you so you click
+[00:11:32] on that and then when you've clicked on
+[00:11:33] configure for GitHub the way that you
+[00:11:34] grab that guys is just simply come back
+[00:11:36] over to GitHub. You click on over here
+[00:11:38] you come down onto uh settings on the
+[00:11:41] bottom left looking for developer
+[00:11:42] settings. When we're on developer
+[00:11:43] settings we're then going to come down
+[00:11:45] to personal access tokens and fine grain
+[00:11:47] classic tokens cuz it's fine as hell.
+[00:11:50] And then in here you create a new token.
+[00:11:52] You give it the permissions that you
+[00:11:53] would like. My general uh view is to
+[00:11:55] give it all the permissions and then I
+[00:11:56] throttle it myself at GitHub and then
+[00:11:58] once you've generated a token, you'll
+[00:11:59] get a link and then you use that link to
+[00:12:01] connect to GitHub. And then when you're
+[00:12:02] in GitHub, you can actually toggle on
+[00:12:04] and off various different things. The
+[00:12:05] other one I I'd suggest you add is
+[00:12:07] contact 7, but don't worry for this
+[00:12:08] video, but I just want to give you the
+[00:12:09] information. You can watch that full
+[00:12:10] guide if you want to see how to do this.
+[00:12:12] But basically, you want to make sure
+[00:12:13] you're enabling no more than 50 tools
+[00:12:14] cuz they take context. And the way that
+[00:12:16] we connect Superbase, of course, is just
+[00:12:17] to find Superbase in the MCP store like
+[00:12:20] this. Okay, which is right there. We
+[00:12:22] click on it and then you click on
+[00:12:23] configure and all you do is click on
+[00:12:25] this button here and this will open up a
+[00:12:26] brand new thing for access tokens. I
+[00:12:28] want you to click on generate a new
+[00:12:30] token like so. Give it a name blah blah
+[00:12:32] blah put an expiry date however long
+[00:12:34] you're comfortable with. Once you've
+[00:12:35] done that you come down and click on
+[00:12:36] generate token and then you'll have the
+[00:12:37] token here. You just simply copy that
+[00:12:39] come over and drop it in superbase
+[00:12:40] access token. Click save and then
+[00:12:42] everything is connected for you. Now
+[00:12:44] you've done those two
+[00:12:46] hard steps. We've connected superbase
+[00:12:48] and we've connected GitHub. It can now
+[00:12:50] run seamlessly and effortlessly through
+[00:12:53] absolutely everything which is cool. So
+[00:12:54] what I really want to do here is
+[00:12:55] actually just connect and create that
+[00:12:57] stuff within superbase which I can do in
+[00:12:59] natural language. Hey dude, I would like
+[00:13:01] you to create for me in Superbase.
+[00:13:03] Basically all of the files, all of the
+[00:13:05] data I've created dummy data in the
+[00:13:07] application. I kind of want to hardcode
+[00:13:08] and configure that within Superbase. So
+[00:13:10] basically that the data in the app is
+[00:13:12] pulling down the data from Superbase.
+[00:13:14] Could you go into Superbase, create the
+[00:13:15] appropriate tables and just make sure
+[00:13:17] that's all set up and working please.
+[00:13:19] Beautiful. That's done. Now, here's the
+[00:13:21] thing. When that's connected then to
+[00:13:23] Superbase, what will happen is we then
+[00:13:25] just feed Superbase all of our data.
+[00:13:27] Now, it's like that's like this whole
+[00:13:28] thing lynches together. And while this
+[00:13:30] is working in the background, I want to
+[00:13:31] go ahead and I want to do some
+[00:13:32] additional work, right? What I want to
+[00:13:34] do, and I'll bring it down so you can
+[00:13:35] see it is I want to open up the agent
+[00:13:37] manager. Now, in anti-gravity, what it
+[00:13:39] will do is give you basically what it's
+[00:13:42] what it's like plan is to do. Okay? So,
+[00:13:44] it's going to go setting up superbase.
+[00:13:46] is identifying it's going to create the
+[00:13:47] tables SQL you know we speak English
+[00:13:50] tables speak SQL that's as simple as it
+[00:13:52] is so it's creating all this stuff but
+[00:13:53] what we can do is actually head over
+[00:13:55] here to agent manager and what agent
+[00:13:57] manager lets us do is actually run what
+[00:13:58] we call parallel AI agents to do various
+[00:14:01] different things so whilst this is
+[00:14:03] working hard in the background what I
+[00:14:04] want to do is add a new agent to
+[00:14:06] something different so I'm going to open
+[00:14:07] up a new agent by clicking this plus
+[00:14:08] sign and then what I want to say to this
+[00:14:09] agent is something along the lines of
+[00:14:11] hey there dude I want you to open this
+[00:14:12] app for me in the local host local host
+[00:14:14] it just means it's running on your
+[00:14:15] laptop, right? Cuz like you know, Excel
+[00:14:17] is for spreadsheets, Word is for
+[00:14:19] documents, anti-gravity is for software.
+[00:14:21] And by local host, it just means that
+[00:14:22] it's running on your computer,
+[00:14:24] basically. So, we now have two things
+[00:14:26] that are running in parallel. How cool
+[00:14:28] is that? And then we can click on
+[00:14:30] proceed. And what you can also do with
+[00:14:32] this stuff, guys, and remember two views
+[00:14:34] in anti-gravity. We have this, which is
+[00:14:36] your agent manager where we manage all
+[00:14:38] these different agents. I can work on
+[00:14:39] various different tasks simultaneously.
+[00:14:41] All these are different projects, right?
+[00:14:43] All I can do is come to inbox and here I
+[00:14:45] can like this is like my command center.
+[00:14:47] Like if JavaS had a control room it it
+[00:14:48] would be this one and all the agents
+[00:14:50] almost chat to you like hey Jack um this
+[00:14:52] one's done can I proceed and you can
+[00:14:54] just literally go yep yep yep yep yep
+[00:14:55] yep like actual employees in your team
+[00:14:57] and kicks butt. All right awesome. So
+[00:14:58] now these are all working for us
+[00:15:00] independently which is fantastic. This
+[00:15:02] has said that it's opened up. So we're
+[00:15:03] going to be happy with that. We're going
+[00:15:04] to approve that one real quick. And you
+[00:15:06] basically will just get questions. You
+[00:15:07] approve those and then you're going to
+[00:15:09] be ready to rock and roll. So let's head
+[00:15:10] back over now to the editor. And you can
+[00:15:12] do that again by just clicking open
+[00:15:14] editor right here. And as you can see,
+[00:15:16] everything is appearing for us at the
+[00:15:18] exact same time. And then once that's
+[00:15:19] completed, you'll be able to see it in
+[00:15:21] the local host like this. And check it
+[00:15:22] out, guys. Look how freaking cool this
+[00:15:24] thing looks. It's so so sick. And it's
+[00:15:27] connected everything to Superbase for us
+[00:15:29] automatically. And we didn't even need
+[00:15:31] to press a button. We just made that
+[00:15:33] connection and it all worked in the
+[00:15:34] background. But the question is, how do
+[00:15:36] we know that this is actually connected
+[00:15:38] to dashboard? Well, the way we check
+[00:15:39] that out is we actually head over to
+[00:15:41] Superbase and let's have a quick look at
+[00:15:42] it. So, if you head over to your
+[00:15:44] Superbase now on the left hand side, if
+[00:15:45] you come down here to database, we
+[00:15:47] should see all of this information for
+[00:15:49] us. Now, look at this guys. Daily
+[00:15:51] metrics, logs, all this data has been
+[00:15:53] created. It's created everything. I
+[00:15:54] mean, look at this. This is crazy. And
+[00:15:57] for example, if you come down here on
+[00:15:58] the left hand side to users, you can see
+[00:16:00] we've got user zero@ample.com who is a
+[00:16:02] paid user. And if I come to the
+[00:16:04] dashboard, you can see user
+[00:16:05] zero@acample.com is a paid user and it's
+[00:16:07] got their usage. So how many things
+[00:16:09] they've done which is 2,817 and then we
+[00:16:12] come back over and exact the same to
+[00:16:13] 817. So basically now we've got
+[00:16:15] everything connected to Superbase. This
+[00:16:17] is our core if you like calling it
+[00:16:18] source of truth which means it's all
+[00:16:20] fully connected and ready to kick some
+[00:16:22] butt. And this brings us very nicely
+[00:16:23] onto the third step. Now imagine if your
+[00:16:26] fire alarm sounded just as loud as your
+[00:16:28] TV or your radio. The reality is that
+[00:16:30] would be a nightmare because if there's
+[00:16:32] a fire we need to know about it
+[00:16:33] immediately. This is the idea of
+[00:16:35] hierarchy that we want the most
+[00:16:37] important information to be the most
+[00:16:39] visible. And if I show this one here as
+[00:16:41] a for instance, you can see this image
+[00:16:43] on the right hand side is an example of
+[00:16:45] terrible hierarchy. Everything's trying
+[00:16:47] to get to our attention. So effectively
+[00:16:49] what we need to ask now with our
+[00:16:50] dashboard is what is the most important
+[00:16:53] information that we realistically want
+[00:16:55] to be able to understand and focus in
+[00:16:57] on. So Mr's great, AU is awesome,
+[00:17:00] conversion is fantastic. Now, I would
+[00:17:02] say over here on the right hand side
+[00:17:03] that this conversion funnel is awesome
+[00:17:05] because this maps the general flow of a
+[00:17:07] customer, right? We have 5,000 people on
+[00:17:10] the website, 750 download, this many
+[00:17:12] activate, this many people get to the
+[00:17:14] pay wall and this is how many click on
+[00:17:15] paid. So, we can then understand by
+[00:17:17] looking at our funnel just exactly where
+[00:17:20] that needs to matter. So, the next thing
+[00:17:21] we need to do is go through the
+[00:17:22] dashboard and think about well, what
+[00:17:24] information is most most important and
+[00:17:26] what do we want to prioritize. So for
+[00:17:28] example, one of the key metrics here is
+[00:17:30] APU, which is activated paid power
+[00:17:33] users. So these are people that are
+[00:17:35] using the software 4 days a week and
+[00:17:37] they're paying members. So this would be
+[00:17:38] a really important number, a metric to
+[00:17:40] understand. So we may want to, let's
+[00:17:42] say, for example, highlight what that
+[00:17:44] is. And remember, this has got to help
+[00:17:45] us make better decisions. So the MR is
+[00:17:48] awesome, but I think that's taking up
+[00:17:49] real estate that we don't realistically
+[00:17:51] need it to do. So what we can do is head
+[00:17:52] back over to anti-gravity, and we can
+[00:17:54] accept any changes. Oh, by the way, I
+[00:17:56] should say you can ask anti-gravity at
+[00:17:58] any point to say, "Hey, dude, publish
+[00:17:59] this to GitHub." And then that will
+[00:18:01] update all the repos because again, it's
+[00:18:03] connected to GitHub, so it does it for
+[00:18:04] you instantaneously. I would like you to
+[00:18:06] consider and think about how we can
+[00:18:08] prioritize from a hierarchical point of
+[00:18:10] view the most important metrics. I would
+[00:18:12] like to emphasize either by some kind of
+[00:18:15] highlights or positional dominance, the
+[00:18:17] APU number, and then I think we can move
+[00:18:20] the paid MR figure over to the right a
+[00:18:23] little bit. So I just want to really
+[00:18:24] draw attention to that from a hierarchy
+[00:18:25] point of view. Now what I will say here
+[00:18:27] is I've been really specific on this.
+[00:18:29] There's two ways that you can actually
+[00:18:30] think about this. Okay. One of them is
+[00:18:32] that we kind of by our own assessment
+[00:18:35] think about this stuff. But if you're
+[00:18:36] really struggling what you can actually
+[00:18:37] ask Gemini to do in anti-gravity is you
+[00:18:40] can put it into planning mode and say
+[00:18:42] hey I want you to go through the entire
+[00:18:43] website and my objective here is to have
+[00:18:45] a dashboard that helps you make
+[00:18:46] decisions about X based on that
+[00:18:48] information. how would you reconstitute
+[00:18:50] the hierarchy of this dashboard to
+[00:18:52] better reflect and enable me to make
+[00:18:54] those decisions and then Gemini will
+[00:18:56] actually come up with a full list of
+[00:18:58] actions and suggestions and then you can
+[00:19:00] even ask it for supporting information.
+[00:19:01] So if you're presenting this to a
+[00:19:02] client, you can actually then just say,
+[00:19:04] "Hey, cool. Here's the reason, rationale
+[00:19:06] behind it." But remember, you want to
+[00:19:07] use your own brain in thinking about
+[00:19:09] this stuff. And this is where like a
+[00:19:11] little bit of it's a little bit of
+[00:19:12] science and a little bit of kind of
+[00:19:14] artistic flare. And as you can see guys,
+[00:19:15] this is updated it now. So we have a
+[00:19:17] slightly bit more of a focus on the APU.
+[00:19:19] So we know exactly what that looks like
+[00:19:20] and we can see the metrics. So we would
+[00:19:22] go through, we would have a particular
+[00:19:24] think about how we want everything to be
+[00:19:25] displayed and what the most important
+[00:19:27] things are. And this brings us nicely
+[00:19:28] onto the fourth step in our framework,
+[00:19:30] which stands for layout and design. So
+[00:19:33] when you're in a museum, you never
+[00:19:34] notice the walls, the hallways, the kind
+[00:19:37] of ceilings, and that's because that's
+[00:19:39] not the focus. The purpose of the museum
+[00:19:41] is to draw your attention towards the
+[00:19:43] beautiful artwork. And this section here
+[00:19:45] where we look at UI and navigation, the
+[00:19:47] sidebars, it exists so that we can
+[00:19:49] actually focus on the things that
+[00:19:50] actually matter within the dashboard.
+[00:19:51] And so what I like to use for this one
+[00:19:52] is below prompts, which is really cool.
+[00:19:54] So, you're a senior product designer
+[00:19:55] reviewing and improving existing
+[00:19:56] application UI. I want to talk about the
+[00:19:58] primary focus, the sidebar audit, which
+[00:20:00] is really key. We don't want it to be
+[00:20:02] overwhelming cuz if there's too much
+[00:20:03] information, it wasn't to be used. So,
+[00:20:05] we're going to validate the purpose of
+[00:20:06] each sidebar. Core point being is that
+[00:20:08] everything has to kind of earn its spot.
+[00:20:10] I think it's a little bit too
+[00:20:11] overcrowded now to the point like where
+[00:20:13] would I click? What would that look
+[00:20:14] like? Which I think is kind of
+[00:20:15] compromising design a little bit. We
+[00:20:17] want to evaluate item priority,
+[00:20:18] navigation discipline. So, we want to
+[00:20:20] delineate between what we call global
+[00:20:22] navigation and also from local page
+[00:20:24] specific navigation. That's like stuff
+[00:20:26] that affects the whole web page versus
+[00:20:28] stuff that's quite local to a specific
+[00:20:29] part. Um, we've got interesting things
+[00:20:31] on color and focus. Again, if
+[00:20:33] everything's drawing your attention, you
+[00:20:34] don't know exactly where to focus on,
+[00:20:36] for example. Right. Beautiful. And then
+[00:20:38] we've got an outcome test. So, what
+[00:20:39] we're going to do is copy this prompt
+[00:20:41] here. We're going to head over to
+[00:20:42] anti-gravity. Beautiful. And then we're
+[00:20:44] going to push this down here and in
+[00:20:45] planning mode. That's very cool. and
+[00:20:47] say, and remember the core purpose of
+[00:20:49] this is to enable me to make better
+[00:20:51] decisions to grow the business.
+[00:20:52] Beautiful. And then we hit enter and
+[00:20:54] then it will have a look. And by the
+[00:20:55] way, we're going to be running a master
+[00:20:56] class inside the community where we're
+[00:20:58] going to basically go through this
+[00:20:59] entire thing together uh and set this
+[00:21:01] whole thing up in a call. So you join
+[00:21:02] with an idea and then you'll leave with
+[00:21:04] a fully built application. We'll connect
+[00:21:06] everything to Superbase. We'll also
+[00:21:07] cover a lot of the stuff about how you
+[00:21:08] actually then push the data in
+[00:21:09] Superbase. If that sounds interesting,
+[00:21:11] you can click the link down below and
+[00:21:12] check that one out. So we've got this
+[00:21:14] working in the background. It's going to
+[00:21:15] audit it. And what Gemini is going to do
+[00:21:17] is actually come up with a bit of a plan
+[00:21:19] that we can review. Again, use our
+[00:21:21] brain. Don't just delegate all this to
+[00:21:22] AI, even though it is incredible now.
+[00:21:24] And just think about how this would
+[00:21:26] apply, what bits you, what bits you want
+[00:21:28] to take, and which bits you'd like to
+[00:21:29] advance. And as you can see, it's done.
+[00:21:30] The thing is, I've ordered the design
+[00:21:32] based on your senior product designer
+[00:21:33] criteria. Here are the refinement
+[00:21:34] criteria. So, clean the sidebar up to
+[00:21:36] reduce noise. Simplified the removing
+[00:21:38] heavy pro admin badge and large glider
+[00:21:40] loader block. Lowering the contrast for
+[00:21:42] native inactive items. layering
+[00:21:43] discipline to remove decoration subtle
+[00:21:46] navigation and then ensuring the AP U
+[00:21:48] card remains clear at first glance hero.
+[00:21:50] Then we click on proceed. And guys, if
+[00:21:51] you look at this, look how much better
+[00:21:52] this design looks. You see how they've
+[00:21:54] added these little dashes? I think that
+[00:21:56] is absolutely gorgeous that it's done
+[00:21:57] that. And obviously, if you've got
+[00:21:58] specifics that you want to drive with
+[00:22:00] this as you're thinking about it, that's
+[00:22:02] really good. The key is that the right
+[00:22:04] things remain the focus and there isn't
+[00:22:06] any one particular color that's taking
+[00:22:08] way too much attention. The core
+[00:22:10] principle is simply don't make me think.
+[00:22:13] And this brings us very nicely onto the
+[00:22:14] fifth and final step which is called
+[00:22:16] dynamics and trust. Now imagine you and
+[00:22:18] I are heading off to the mall together
+[00:22:19] to get some beautiful coffee which
+[00:22:21] hopefully one day we can right and we
+[00:22:22] approach this revolving door but it just
+[00:22:25] doesn't move and you're like this is so
+[00:22:26] frustrating and then when you do it
+[00:22:28] starts it stops. It's a fully
+[00:22:29] frustrating experience. Well we'd expect
+[00:22:32] the doors to open automatically and it's
+[00:22:34] the exact same way with our dashboard
+[00:22:36] and our websites. When we interact with
+[00:22:38] something, we kind of expect it to do
+[00:22:40] the exact intended function seamlessly
+[00:22:42] without any kind of encumbrances. In
+[00:22:44] other words, it must notice us. It must
+[00:22:46] respond to us and behave the exact same
+[00:22:48] way whenever it happens. I mean, it
+[00:22:49] loads things automatically. Now, the
+[00:22:51] prompt that we're going to use for this
+[00:22:52] dynamics and trust is basically be built
+[00:22:54] around a few core principles, which is
+[00:22:56] interaction, intent, filters, sorting,
+[00:22:58] and bulking actions. So, I'm going to
+[00:22:59] copy this one down here, and I'll talk
+[00:23:00] through it in a second. So, let's head
+[00:23:02] back over to anti-gravity. Give it this
+[00:23:03] one here. Scroll down a little bit and
+[00:23:05] then we're going to ahead and say I
+[00:23:06] would like you to open up the browser
+[00:23:07] and visibly check this one for yourself
+[00:23:09] so you can see that it meets all the
+[00:23:10] desired principles and then we send that
+[00:23:12] one off. Beautiful. Now what we're
+[00:23:14] really talking about here if you can see
+[00:23:15] is we want to do a trust test which
+[00:23:17] means the system can understand you it
+[00:23:19] it's a really good final step to do but
+[00:23:21] but head of that we're going to a couple
+[00:23:22] of things filters sorting and bulk
+[00:23:24] action which is really key. So ensure
+[00:23:25] filters and sorting clearly indicate
+[00:23:27] when they're active. So, if you're
+[00:23:28] saying, "Hey, I want to look at views of
+[00:23:30] the last 30 days." Let's make sure that
+[00:23:32] we're visibly showing that. These are
+[00:23:34] all really small details that are so
+[00:23:35] easy to miss. Now, look, this is even
+[00:23:37] opening it up right now in the browser.
+[00:23:39] It's not loading because it's got the
+[00:23:40] wrong local host, but Gemini will fix
+[00:23:42] that in a second. As you can see, it's
+[00:23:43] now opening the right one, so it can
+[00:23:44] check and do a little bit of its
+[00:23:45] research. Now, this is another really
+[00:23:47] cool thing is what we call popovers and
+[00:23:49] inline UI. So, for example, if you're
+[00:23:51] doing a website that triggers other
+[00:23:52] actions or a dashboard that does various
+[00:23:54] different things, one thing we may want
+[00:23:55] to do is we don't want that notification
+[00:23:57] to be really glaring and take up a load
+[00:23:59] of a dashboard, what we want is a kind
+[00:24:00] of nice subtle kind of fading UI in the
+[00:24:03] bottom rightand corner. So, we want to
+[00:24:04] pay attention to that like when we do
+[00:24:06] submissions, we collect things, how are
+[00:24:07] those notifications actually physically
+[00:24:09] being um checked and and developed.
+[00:24:10] Then, we've got feedback in system
+[00:24:11] states. Let's look at loading states,
+[00:24:13] toast notifications, error states. So,
+[00:24:15] what is the color scheme that we use
+[00:24:17] when we're in error states? and then
+[00:24:18] speed, consistency, and reliability.
+[00:24:20] Now, Gemini is going to go ahead and
+[00:24:21] make all these plans for us, and then we
+[00:24:23] can go ahead and approve it when we're
+[00:24:24] comfortable with that. And then we can
+[00:24:26] actually almost get to the point where
+[00:24:27] this is going to be ready to rock and
+[00:24:28] roll and publish. And then Gemini will
+[00:24:30] come back with a suite of options based
+[00:24:32] on the refinement. Again, you can go
+[00:24:33] through this yourself and think about
+[00:24:34] what you want those particular things to
+[00:24:36] be based on my dashboard. And then
+[00:24:37] you've got a plan, you simply go ahead,
+[00:24:39] you proceed, and then Gemini will start
+[00:24:40] to build that for you. And then Gemini
+[00:24:41] has completed that with a few
+[00:24:43] interesting features basically. So, what
+[00:24:45] I really like about this is if we come
+[00:24:47] down to export CSV for our data. Look at
+[00:24:49] we should get a notification. Look at
+[00:24:51] this guys. Export 7-day data
+[00:24:52] successfully CSV. It's kind of
+[00:24:54] non-intrusive. It's awesome. We can see
+[00:24:56] loads of really nice things as we bring
+[00:24:58] and scroll this over. It's very, very
+[00:25:00] tasty. I must admit this is a verified
+[00:25:01] dashboard right now and we've built it
+[00:25:03] step by step across all these
+[00:25:04] principles. Now, building these
+[00:25:05] incredible UI dashboards is one thing,
+[00:25:07] but if you can't publish them, update it
+[00:25:09] and know the specifics, you're never
+[00:25:10] going to reach your full potential.
+[00:25:12] Which is why the next thing that we need
+[00:25:13] to do is actually physically host this,
+[00:25:15] which you can learn by watching this
+[00:25:16] video right

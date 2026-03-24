@@ -1,0 +1,1417 @@
+[00:00:00] here's how you build a profitable AI SAS
+[00:00:02] using liable and stripe you may think
+[00:00:04] that building an AI SAS is one thing but
+[00:00:07] if you can't monetizer and do something
+[00:00:08] that's valuable it's going to be
+[00:00:10] difficult to create an income but the
+[00:00:12] good news is it's never actually been
+[00:00:13] simpler than it has been today to build
+[00:00:15] something that looks flipping epic with
+[00:00:17] AI actually integrate it with cool no
+[00:00:20] code automations and then go on to
+[00:00:22] monetize it my name is Jack i r the
+[00:00:24] largest paid AI automations community on
+[00:00:26] the planet I make over six figes a month
+[00:00:28] doing that my last text start up uh made
+[00:00:30] up to 50K per month and I wanted to sell
+[00:00:32] that and in this video what I want to do
+[00:00:34] guys is show you step by step how we can
+[00:00:37] build this entire game plan it's going
+[00:00:39] to be completely zero code beginner
+[00:00:41] friendly so if you watch this to the end
+[00:00:43] of the video You're can have a fully
+[00:00:44] functioning AI SAS that you can start to
+[00:00:47] monetize and begin with so let's begin
+[00:00:49] with the game plan and the way I want to
+[00:00:51] run this video is build it with your own
+[00:00:53] real time so if there's mistakes we're
+[00:00:55] going to confront those mistakes
+[00:00:57] together and crucially of course we're
+[00:00:58] going to be adding stripe so I think
+[00:01:01] about it realistically let's think about
+[00:01:02] the software we're going to do so we're
+[00:01:03] going to build this one in lovable okay
+[00:01:06] let's bring this to the front so we know
+[00:01:07] there are a few options we could do b.
+[00:01:09] new but I'm going to use lovable because
+[00:01:10] it's freaking awesome then we've got the
+[00:01:13] idea so what I thought would be really
+[00:01:14] cool for the idea of this video is to
+[00:01:16] have an aias platform that somebody
+[00:01:19] could let's say submit a photo one it
+[00:01:21] could be anything we wanted right and so
+[00:01:22] my idea is to use this called technology
+[00:01:24] that Google just released which is
+[00:01:25] supposed to be a Photoshop killer but
+[00:01:27] let's just build it into an a app so I'm
+[00:01:29] going to give it a photo of my myself
+[00:01:30] let's come down here click on plus and
+[00:01:31] then add an image all right cool there's
+[00:01:33] a head shot and I'm going to say hey uh
+[00:01:36] change the tank top to a
+[00:01:40] suit and let's just see what it does so
+[00:01:42] the idea of this is that you can
+[00:01:43] conversation chat to it and it should be
+[00:01:45] able to change something about that
+[00:01:46] image into something else so let's see
+[00:01:48] how it gets on um and then what I want
+[00:01:50] to do is Boom you see that guys straight
+[00:01:52] away I'm now in a suit that's really
+[00:01:54] cool and then you could say something
+[00:01:55] like hey make the suit yellow this is
+[00:01:59] just to show you what this looks like
+[00:02:00] and why they think this is cool what I
+[00:02:02] want our AI app to do is to take an
+[00:02:04] image and then I want it to do some
+[00:02:06] maybe some analysis on the color of
+[00:02:07] their skin the eyes and then boom I mean
+[00:02:10] it's pretty fing cool right but you get
+[00:02:11] the idea so what we want to do is have
+[00:02:13] an app where the user can submit an
+[00:02:14] image and then based on that image what
+[00:02:17] effectiv is going to happen is it's
+[00:02:18] going to change it and send it back to
+[00:02:19] them something really cool but you know
+[00:02:20] what I mean it could be anything that
+[00:02:21] you want to so for that I'm going to put
+[00:02:23] Gemini 2.0 in the idea category
+[00:02:26] obviously when you comes to the own a
+[00:02:28] the idea is the most important thing and
+[00:02:29] I won't cover it in detail in this video
+[00:02:31] because this video could be a 10-hour
+[00:02:33] master class but essentially we're
+[00:02:34] always servicing a problem that a
+[00:02:36] customer has and that they're willing to
+[00:02:37] pay for and the brilliant thing about
+[00:02:39] these softwares guys and they used to
+[00:02:40] cost so much money to make is the fact
+[00:02:42] that we can actually validate that
+[00:02:44] somebody will pay something for your
+[00:02:46] idea in a day you don't need to spend
+[00:02:48] hundreds of thousand devs that's why
+[00:02:50] this is so flipping powerful you can
+[00:02:51] build this in an hour or so and then you
+[00:02:53] can say hey here you go buy it then for
+[00:02:55] the automation we can use a make or n
+[00:02:57] I'm going to use uh make in this
+[00:02:58] automation of course you can do do in
+[00:03:00] either it doesn't really make a
+[00:03:01] difference uh oh my if I can get make in
+[00:03:03] that that' be quite handy right and then
+[00:03:04] for payment processing we are going to
+[00:03:06] use the beautiful stripe so let's write
+[00:03:08] together now a little bit of a game plan
+[00:03:10] about how we're going to attack this
+[00:03:11] together so just for my oh my gosh let's
+[00:03:14] just get everything centralized cool all
+[00:03:16] right so let's have to think about game
+[00:03:17] plan what's the first thing I want to do
+[00:03:19] well the first thing I'm going to want
+[00:03:21] to do here is to kind of build the uh
+[00:03:24] let's just dealify this um prototype
+[00:03:30] in um we're going to build that in
+[00:03:31] lovable okay then we're going to
+[00:03:34] integrate
+[00:03:35] it with super base so that's basically
+[00:03:38] going to be an area where we can store
+[00:03:39] login details and we can have accounts
+[00:03:41] and we in fact if I make this a little
+[00:03:43] bit in here let's push this in here
+[00:03:45] super base let's just then integrate it
+[00:03:47] let's do the
+[00:03:49] stripe at that point what you're going
+[00:03:51] to have is a AI app okay that will be
+[00:03:54] connected to a database and connected to
+[00:03:55] stripe once we've done that and then
+[00:03:57] want to build the automation
+[00:04:01] make
+[00:04:02] automation with Gemini uh first part of
+[00:04:05] that is going to be uh Gemini uh
+[00:04:09] function and the second part of that is
+[00:04:11] then going to be connecting
+[00:04:13] it actually you know I'm going to do I'm
+[00:04:15] going to get rid of this just to make it
+[00:04:16] really simple because I think part three
+[00:04:18] realistically then is connect both
+[00:04:21] together so on the one hand we've got
+[00:04:23] the app that connects to stripe that's
+[00:04:24] going to be step one and the step two is
+[00:04:26] how we kind of Leverage this call make
+[00:04:27] automation so that we can give it
+[00:04:29] something then pop it back so let's head
+[00:04:31] over to lovable and create something
+[00:04:33] cool so we're going to start with our
+[00:04:34] idea what I usually do with these things
+[00:04:36] guys is I get uh Claude to create a
+[00:04:39] prompt that I think is better so let's
+[00:04:41] head over to Claude here all right so
+[00:04:43] I'll say hey Write a brief um prompt for
+[00:04:48] the creation
+[00:04:50] of cool
+[00:04:53] website
+[00:04:55] functionality is going to be something
+[00:04:56] like this uh user uploads and
+[00:05:02] um that is sent to a web hug and what
+[00:05:07] I'm going to do guys is give it a web
+[00:05:08] hook address in a second uh and then
+[00:05:10] what we're going to want to do is
+[00:05:11] basically then a image is
+[00:05:14] returned at login
+[00:05:18] functionality looks epic and actually
+[00:05:21] guys what I'm going to do now is just
+[00:05:22] grab the web hook address from make.com
+[00:05:24] so make.com is our no code automation
+[00:05:26] Builder so let me just come over and get
+[00:05:28] a new scenario all right guys so we've
+[00:05:30] got a brand new scenario to make let's
+[00:05:31] just call this one uh
+[00:05:34] stripe integration in fact call this one
+[00:05:38] lovable image and of course we are not
+[00:05:41] crazy so let's give it a really nice
+[00:05:43] Emoji now what I want to do is get a web
+[00:05:45] hug web hooks basically guys are the in
+[00:05:49] fact does not response essentially if
+[00:05:51] you can use web hooks you can build
+[00:05:53] anything that you like on the planet
+[00:05:54] because a web hug effectively is going
+[00:05:57] to be how we get the information
+[00:06:00] from our app over to our scenario so
+[00:06:03] think about this the users on this app
+[00:06:04] they're talking to us this is going to
+[00:06:06] fire out information to make by a web
+[00:06:08] hug make does its magic and then sends
+[00:06:10] it straight back so if we can connect
+[00:06:12] things by web hugs think of it as how
+[00:06:14] you link things together you can do
+[00:06:16] essentially absolutely anything that you
+[00:06:17] want to so I've got a web hook here I've
+[00:06:19] got a custom one I'm just going to call
+[00:06:21] this one
+[00:06:22] lovable this is if you want to do
+[00:06:24] something fancy a lot of people will
+[00:06:25] show you um automations where you can
+[00:06:26] just add your AI to lovable I think
+[00:06:28] that's cool if you want take it to a
+[00:06:30] level 10 which is going to be a business
+[00:06:31] that you can actually automate so that
+[00:06:33] you can actually monetize to an insane
+[00:06:34] degree you're going to want to do
+[00:06:36] something like this so you copy the
+[00:06:37] address to the clip board okay and then
+[00:06:39] we're going to come back over to Claude
+[00:06:41] to finish
+[00:06:42] this um that web hook will
+[00:06:46] return an image in let's just say 60
+[00:06:50] seconds show a loading
+[00:06:54] animation cool there we go so let's do
+[00:06:56] this I'll just say make the design that
+[00:06:58] looks that cool this is I'm going kind
+[00:06:59] of like a little bit of a tldr just to
+[00:07:01] show you then once we get this we're
+[00:07:03] going to give this over to uh Liverpool
+[00:07:05] and then when we get it in Liverpool we
+[00:07:06] are then going to go over to um
+[00:07:09] integrate everything together which I
+[00:07:10] think is really flipping cool you know
+[00:07:12] often times it's not necessarily the
+[00:07:14] most complicated AI that captures things
+[00:07:17] so let's just grab this information
+[00:07:19] let's get back over liable and let's
+[00:07:21] give it the prompt bam and then we enter
+[00:07:23] this in and just make sure that the
+[00:07:24] correct web hook has been provided
+[00:07:26] here let's see it hasn't actually has it
+[00:07:29] oh it has okay that's cool so liverpol
+[00:07:31] is now going to work in the background
+[00:07:32] we're going to do a couple of things the
+[00:07:35] first thing we're going to do is connect
+[00:07:36] it to super base super base is a
+[00:07:38] database it's basically where we can
+[00:07:39] store the information so as our billions
+[00:07:41] of customers start creating accounts to
+[00:07:43] use our new AI software we can say what
+[00:07:45] the name is what their email address is
+[00:07:48] and the cool thing is like it enables us
+[00:07:49] to log basically like capture that
+[00:07:52] passwords and things like what are they
+[00:07:53] doing and so when they come to log back
+[00:07:55] in again they can actually use a service
+[00:07:56] and it's actually functional and works
+[00:07:58] properly so while this is starting to do
+[00:07:59] this magic in the background guys what I
+[00:08:01] would recommend you do is head over to
+[00:08:03] superb.com uh and then create an account
+[00:08:06] and log in you'll be able to do this for
+[00:08:07] free by the way uh building a weekend
+[00:08:09] scale to Millions it's cool it just
+[00:08:10] makes it very scalable which is very
+[00:08:12] decent I want you to go over to
+[00:08:13] dashboard start your project so let's go
+[00:08:15] over to dashboard if you don't see this
+[00:08:16] you will basically just create a brand
+[00:08:18] new project so let's create a project
+[00:08:20] together let's call this one new project
+[00:08:21] the organization is test or whatever you
+[00:08:23] created it as and the project name let's
+[00:08:26] call this one not Steven po not her Jack
+[00:08:29] podcast by the way this this is
+[00:08:31] obviously pulling from something that
+[00:08:32] I've got on my YouTube let's call it
+[00:08:33] something
+[00:08:34] like I don't know we'll call this one
+[00:08:38] image um
+[00:08:39] Master okay does that sound cool I don't
+[00:08:41] know if that sounds cool and then we're
+[00:08:42] going to give it a strong database
+[00:08:44] password so I'm just going to enter in a
+[00:08:46] cool password there beautiful and then
+[00:08:49] create new project so we've got a
+[00:08:51] beautiful project name called image
+[00:08:52] Master which is Ace and we don't need to
+[00:08:55] save that yet that's absolutely fine
+[00:08:56] cool so we've got a brand new project
+[00:08:58] now I come back over to to the beautiful
+[00:09:00] liable and this is still working for us
+[00:09:02] in the background which is great usually
+[00:09:03] with liable it takes just a couple of
+[00:09:05] minutes while that's loading up if you
+[00:09:06] haven't seen this before by the way I
+[00:09:08] did just want to show you something very
+[00:09:09] briefly if you head over to uh
+[00:09:12] codepen what codepen can do is it's a
+[00:09:15] website where people basically upload a
+[00:09:16] lot of that information about like cool
+[00:09:19] ass designs that you like and what's
+[00:09:21] really cool about it is they give you
+[00:09:22] the code so if you see this for instance
+[00:09:24] guys like how freaking cools that well
+[00:09:26] if you want to build that here's all the
+[00:09:27] HTML here's all the CSS here's all the
+[00:09:29] JavaScript and then what we can
+[00:09:31] basically do is copy that information
+[00:09:33] and put it back into uh our beautiful
+[00:09:35] lovable because the thing about AI it
+[00:09:38] doesn't always know what good code looks
+[00:09:40] like so by using a open source platform
+[00:09:42] like this like look at this cool login
+[00:09:44] screen for instance right is this pretty
+[00:09:46] cool yeah I think this is cool I like
+[00:09:48] this so if we like this we could just
+[00:09:49] say hey I want a login screen that looks
+[00:09:51] like this and in fact I think that's
+[00:09:52] exactly what we'll do when we build our
+[00:09:54] login screen so let's head back over to
+[00:09:56] liable and see how it's getting on and
+[00:09:57] voila guys after a couple seconds we've
+[00:09:59] got the cool thing which I think looks
+[00:10:00] really cool we can click this button to
+[00:10:02] hide the Side Bar I'd say that's
+[00:10:04] actually really foring nice right so we
+[00:10:05] got login sign up so let's see if we
+[00:10:07] click on login as a for instance page is
+[00:10:09] not fine great cool so let's click on
+[00:10:11] this super base in the top right hand
+[00:10:13] corner first of all okay it's loading
+[00:10:15] what do we want to connect it to we want
+[00:10:16] to connect it to image master so let's
+[00:10:19] do that and obviously you can connect it
+[00:10:20] to any super base that you want to I be
+[00:10:22] happy with all these things yeah that's
+[00:10:24] absolutely fine beautiful I think that's
+[00:10:26] absolutely decent so you can click on
+[00:10:28] that and you can see the dashboard of of
+[00:10:29] everything that's happening inside which
+[00:10:31] is decent beautiful let's go back down
+[00:10:33] to the project and then we are going to
+[00:10:35] open this back up and then we're going
+[00:10:36] to say something like ah the build has
+[00:10:38] been unsuccessful so let's just see what
+[00:10:40] happened cannot find name X let's just
+[00:10:43] get it to fix that very quickly and then
+[00:10:44] we can come back but essentially The
+[00:10:45] Next Step guys is going to be to connect
+[00:10:47] super base and then we're going to test
+[00:10:48] the web hook and then we can start
+[00:10:50] building it out beautiful so it looks
+[00:10:51] like it has worked perfectly so let's
+[00:10:53] just say here for example we want to on
+[00:10:55] the sign up screen
+[00:11:01] let's um
+[00:11:05] integrate with the super base I'm going
+[00:11:08] to say no need to uh basically like
+[00:11:11] validate email on every
+[00:11:15] signin and as make the sign
+[00:11:22] up look like this so this is the first
+[00:11:26] one so let's get over to codan and get
+[00:11:28] this information come back over to
+[00:11:30] loable and all you're going to do guys
+[00:11:31] is very simply just copy it all and
+[00:11:33] paste it all into lovable and of course
+[00:11:37] one of the things I'm going to say to it
+[00:11:38] first of all though is to keep
+[00:11:41] the uh open this up here but keep the
+[00:11:45] existing
+[00:11:47] color scheme if I could spell color that
+[00:11:49] would be ace and enter okay guys it's
+[00:11:51] come back with some suggestions that
+[00:11:52] sounds pretty decent we'll just apply
+[00:11:54] those changes and then guys what I might
+[00:11:56] do actually is send this over to n8m n
+[00:11:59] and I'll explain why I'm going to use
+[00:12:01] an8 an for this particular us case in a
+[00:12:04] second because what I think we're going
+[00:12:05] to need to do because I've actually
+[00:12:07] chosen quite a unique um functionality
+[00:12:09] with this coding and I think it' be a
+[00:12:11] good learning experience for you as well
+[00:12:12] actually to go through this because what
+[00:12:13] we're going to need to do with the image
+[00:12:15] is turn it into Bas 64 with this API so
+[00:12:17] we can actually send it over to Google
+[00:12:19] which we're going to figure out together
+[00:12:21] live on core so I've looked on it before
+[00:12:23] which is going to be cool and we're
+[00:12:24] dealing with a new beautiful uh set of
+[00:12:27] instructions uh so I think n1's going to
+[00:12:29] be just a lot easier to walk through
+[00:12:30] that together because we can we can do
+[00:12:31] some different bits and pieces um in
+[00:12:33] reality if you're do something very
+[00:12:35] simple like a web hook like with a uh
+[00:12:37] like an air table or an email system
+[00:12:39] it's very straightforward I'm just
+[00:12:40] showing you something that I thought was
+[00:12:41] something cool I literally wanted this
+[00:12:43] to be I have an idea let's just build it
+[00:12:46] and then whatever the build is to do
+[00:12:47] that we just freaking build together and
+[00:12:48] I think this is cool overall I'm really
+[00:12:51] happy with the kind of design that
+[00:12:52] they've got here obviously we would go
+[00:12:54] through and do this I think it's cool
+[00:12:56] yeah I'm very happy with this look so
+[00:12:57] we'll let this load a second and then
+[00:12:59] we'll use our web hooks all right guys
+[00:13:00] so what we've got here we've got a
+[00:13:01] stylish authentication page login sign
+[00:13:04] up forms match design that is pretty
+[00:13:06] cool integration super pay for secure
+[00:13:08] authentication and user profile storage
+[00:13:10] in database cool so this is decent let's
+[00:13:13] just refresh the page and see what it's
+[00:13:14] up all right cool so let's log in into
+[00:13:17] what it looks like and guys look at this
+[00:13:19] this is point number one I want to show
+[00:13:20] you how similar does that look to this
+[00:13:23] pretty damn freaking similar and that's
+[00:13:25] by the way how you hack and I say hack
+[00:13:27] it's like when the Matrix something so
+[00:13:29] login have got password we need to
+[00:13:30] register I would make that a little bit
+[00:13:31] clearer to be fair that's cool um now we
+[00:13:35] want to register let's have a l okay so
+[00:13:37] what I want to do is maybe log in with
+[00:13:39] Gmail and what that looks like C on this
+[00:13:40] Gmail for instance I'm guessing it's not
+[00:13:42] made that so what I'm going to say is
+[00:13:44] hey um make the register
+[00:13:49] button easier to see plus when I click
+[00:13:54] it the page glitches
+[00:14:01] and I cannot uh create an
+[00:14:05] account fix this please cool and then we
+[00:14:08] let this one work in the background but
+[00:14:10] fundamentally this is cool and then we
+[00:14:11] can add in single sign integration with
+[00:14:13] all these things I think this looks
+[00:14:15] really flipping epic guys I'm very very
+[00:14:16] pleased with this all right guys so now
+[00:14:17] it's done let's click on the register
+[00:14:19] button for instance uh let's do welcome
+[00:14:22] back uh we want to click on register oh
+[00:14:24] we need to fix this don't we actually
+[00:14:25] Okay so we've G overlay let me just show
+[00:14:27] this up for instance let's come down
+[00:14:29] this can be the thing sometimes guys if
+[00:14:30] you use different image designs so just
+[00:14:31] bear that in mind so hey overlays I
+[00:14:34] cannot register just get rid of it and
+[00:14:35] remove the overlay okay so beautiful
+[00:14:37] this is now done it so we don't log in
+[00:14:38] let's see if we can register phenomenal
+[00:14:40] all right let's give it something like
+[00:14:41] my email address we will give it a
+[00:14:44] random password so let's go like
+[00:14:46] this oh wait no hang on a second that is
+[00:14:49] username I'll call this
+[00:14:53] one Jack and I'll call this one my email
+[00:14:59] cool then we give it run a password then
+[00:15:00] we click on register which is cool give
+[00:15:02] that a second to load then what we can
+[00:15:04] do guys is actually check this in super
+[00:15:05] base to see if this has happened so if I
+[00:15:07] then go to log in um and I think I need
+[00:15:10] to check my emails and then guys confirm
+[00:15:12] your signup so click on confirm your
+[00:15:13] mail here the site can't be reached but
+[00:15:15] don't worry we can fix that in a second
+[00:15:16] so then we come back over to our
+[00:15:18] beautiful lovable and then we should
+[00:15:20] able to log in uh yeah we'll save that I
+[00:15:23] don't mind serving that that's cool and
+[00:15:24] just click on oops let's just sign in
+[00:15:25] one more time and log in invel cenal
+[00:15:29] this one should be fine cool and it's
+[00:15:31] actually remembered it perfectly this is
+[00:15:33] flipping sick so now we've got this
+[00:15:34] question is am I actually saved in a
+[00:15:36] datab base somewhere so to check that is
+[00:15:38] to head over to super base and if I'm in
+[00:15:39] super base if I come down to
+[00:15:41] authentication guys can you see right
+[00:15:42] there I've got a unique ID an email and
+[00:15:45] now I am officially in super bases user
+[00:15:47] and this is where all your users and
+[00:15:48] customers will live on this beautiful
+[00:15:50] Journey we're about to Embark in cool so
+[00:15:52] now we've got this what I'm not going to
+[00:15:53] get it to do is I'm going to get it to
+[00:15:56] send an image over to n8n and we just
+[00:15:58] want validate that the web hook side
+[00:16:01] works and I think actually now I'm
+[00:16:02] thinking about it what I think is a
+[00:16:04] better way is to get the system actually
+[00:16:06] working and then let's add in stripe as
+[00:16:08] a payment mechanism at the end because
+[00:16:09] then it'll be functional and then we can
+[00:16:11] do something really cool so um and this
+[00:16:13] always happens by with builds you'll
+[00:16:14] have an idea but as you get into it
+[00:16:17] there's this artistic sense of let's
+[00:16:19] just go in this direction call so I'm
+[00:16:21] going to say this when a user um uploads
+[00:16:24] an
+[00:16:25] image send it over to this
+[00:16:29] web hook now let's head over to nat10
+[00:16:31] and get this cool web hook address and
+[00:16:33] by the way if you're brand new to n10
+[00:16:35] I'm going to put a link on screen to an
+[00:16:36] n10 Master Class it takes you from how
+[00:16:38] do you spell n10 to building your first
+[00:16:40] AI agent and getting used to it if
+[00:16:42] you're new to him so again we'll call
+[00:16:44] this one over here uh let's call this
+[00:16:46] one image SAS and guys I got to love I
+[00:16:49] got to love a good little bit of emoji I
+[00:16:50] got love an emoji you know it's funny
+[00:16:52] when you're building a technology
+[00:16:53] business uh often times it's nothing at
+[00:16:55] all and then it's all at once cuz all
+[00:16:57] your results come after you lock in a
+[00:16:58] certain things
+[00:17:00] so my to war ball this is so good so
+[00:17:03] fresh um let's add in a web hook for
+[00:17:06] this okay so let's come down here and
+[00:17:07] click on first step and I would like a
+[00:17:09] web hook starts the workflow when a web
+[00:17:11] Hook is called so go this thing get and
+[00:17:13] what it love to do is just copy them and
+[00:17:15] then we come over to Liverpool and then
+[00:17:16] we just say here we go here's the web
+[00:17:18] hook address cool and then we are just
+[00:17:19] going to enter this one here and give
+[00:17:21] this am moment to load and now
+[00:17:22] essentially when we load a web when we
+[00:17:23] load an image it will then send over to
+[00:17:25] a beautiful n8n scenario and my vision
+[00:17:27] for this is I mean there a million you
+[00:17:29] could do we could call it cartoonify so
+[00:17:31] you've load an image and it turns you
+[00:17:32] into cartoon we could do something like
+[00:17:34] cuz they say sometimes like in fashion
+[00:17:36] like based on your eye color your skin
+[00:17:38] tone there are certain color palettes
+[00:17:39] that suit you well there's loads of
+[00:17:40] color theory on that so it could be like
+[00:17:42] design me a perfect suit whatever but
+[00:17:44] the bottom line is guys if you can use
+[00:17:46] these systems these processes these
+[00:17:48] Technologies and skills that we're
+[00:17:50] covering in this video you're going to
+[00:17:51] be able to apply for anything you want
+[00:17:53] to so don't think the what matters so
+[00:17:55] much the how is the important thing
+[00:17:57] right I mean it's like the same with any
+[00:17:59] job you do if you just did a job you
+[00:18:00] know working at McDonald's or something
+[00:18:02] you know it's the skills that you learn
+[00:18:03] in the process not the fact that it's
+[00:18:05] cheeseburger versus beef burger or
+[00:18:07] something right so that's probably about
+[00:18:08] analogy I'll work on an analogy creat
+[00:18:10] app next maybe that will be the next
+[00:18:11] move okay allegedly this is now created
+[00:18:13] image so let's try this now and click
+[00:18:15] here and see what happens cool I've
+[00:18:16] uploaded a selfie so let's go on
+[00:18:18] transform image like so sending image I
+[00:18:20] love how it's got processing this is
+[00:18:22] really freaking sick so let's just see
+[00:18:24] what's happened here has just oh I
+[00:18:26] didn't listen for test event my bad okay
+[00:18:27] let's come back and try that one again
+[00:18:29] that's completely my bad um all right
+[00:18:31] let's refresh this and do it one more
+[00:18:32] time all right done transform image come
+[00:18:34] back over to N1 and are we going to see
+[00:18:36] anything but maybe say makes a get
+[00:18:39] request actually guys I just thought we
+[00:18:40] need to do Post request not get so let's
+[00:18:43] go HTP method is going to be post listen
+[00:18:46] test event come back and I'll say hey
+[00:18:49] make a post request to the web
+[00:18:54] hooker I think that's just well a couple
+[00:18:57] of reasons why but one's going to be F
+[00:18:58] sort of file size so that's absolutely
+[00:19:01] fine for some reason N8 n always
+[00:19:02] defaults to get okay that's cool give
+[00:19:05] this a load a second and then we'll give
+[00:19:06] it the image again and then once we get
+[00:19:08] the information from our beautiful
+[00:19:11] lovable app over to make or na10 we can
+[00:19:14] effectively do anything that we wish to
+[00:19:16] just give us a second this I like that
+[00:19:18] it's done in reality I'm going to have
+[00:19:20] this running in the background until it
+[00:19:21] gets the image that we send back to it
+[00:19:23] which is
+[00:19:24] cool okay it looks like that's done so
+[00:19:26] let's just refresh this one more time
+[00:19:28] and upload the image cool imag is there
+[00:19:30] now is this listening for test event in
+[00:19:32] na 10 what that basically means guys is
+[00:19:34] that it's waiting bam there we go check
+[00:19:37] that out now if I view the image do I
+[00:19:38] see something there we go cool how
+[00:19:40] flipping cool is that guys we freaking
+[00:19:42] got the image and we got it back so what
+[00:19:44] I want to do now now it's in here we can
+[00:19:47] do all the beautiful wonderful things we
+[00:19:48] want to do and then send the image back
+[00:19:50] so I think at this stage let's get the
+[00:19:53] magic of the Google doing the crazy
+[00:19:55] stuffff um and then we can send it back
+[00:19:57] to our beautiful app and then we can
+[00:19:58] have payment into it and then we're Dr
+[00:20:00] them R so coming back to our game plan
+[00:20:01] guys what I'm going to do now is head
+[00:20:02] over to the school Community I'm going
+[00:20:03] to grab the automation so we can connect
+[00:20:05] it to our beautiful liable scenarios so
+[00:20:08] let's head over to classroom um every AI
+[00:20:12] Automation and this build AI SAS under
+[00:20:14] image and video which is cool and let's
+[00:20:16] just download this blueprint obviously
+[00:20:17] guys whatever the thing is that you want
+[00:20:19] to use um you can build it really simply
+[00:20:22] with these tools um I've got a million
+[00:20:25] tutorials on the channel and then the
+[00:20:26] community that shows you how to build
+[00:20:27] these things step by step so look if I
+[00:20:30] then come back over to na10 for instance
+[00:20:32] I can come here I can click on import
+[00:20:33] from file so I select the file and then
+[00:20:35] this Imports beautifully okay cool and
+[00:20:38] let's just make sure that we've given
+[00:20:39] this a name L the name missing in the
+[00:20:40] right one that's absolutely fine cool so
+[00:20:42] let's call this one Google
+[00:20:46] image API and what I'll show you as well
+[00:20:49] guys is if you want you need to get your
+[00:20:50] API key if you would like to use it so
+[00:20:53] for example if I come over to the
+[00:20:55] software uh here what you want to do is
+[00:20:56] click on this get API key Buton the top
+[00:21:00] left and then guys what you do is you
+[00:21:02] click on this create API key and then
+[00:21:04] down here you'll see where you can
+[00:21:05] basically copy and use and then you're
+[00:21:06] going to be ready to rock and ROM so how
+[00:21:08] this automation Works what I've done is
+[00:21:10] this one is just going to download a
+[00:21:11] file from Google Drive what we're going
+[00:21:13] to do is convert that file into
+[00:21:16] something called a Bas 64 string which
+[00:21:19] is complicated text Big for basically
+[00:21:21] meaning we need to send this image over
+[00:21:23] to Google right so if you think about
+[00:21:25] for example we've got Gemini here okay
+[00:21:28] don't know why that's there let's put
+[00:21:29] that back here okay that's cool we got
+[00:21:31] Gemini there and then we have uh na10 in
+[00:21:34] our case which is here what we're sort
+[00:21:36] of saying is look we've got the image
+[00:21:38] here we're grabbing the image from
+[00:21:40] lovable so image goes from lovable to N1
+[00:21:43] via a web hog so let's just write this
+[00:21:45] down I think this is really good just to
+[00:21:46] explain just so you know how this
+[00:21:48] actually how this actually works all
+[00:21:51] right cool it goes from liable to na1
+[00:21:53] via web hook and what we transport over
+[00:21:55] here guys is the image so we're sending
+[00:21:57] the image over now once na10 gets it n8n
+[00:22:01] is going to send something to Gemini to
+[00:22:03] create the image we get it back into N1
+[00:22:07] and then once it's back in N1 we send it
+[00:22:09] all the way back to
+[00:22:11] Liverpool using this web hook here and
+[00:22:14] that's basically the flow we get the
+[00:22:15] image it lands at na10 if you can
+[00:22:17] imagine for example right if I just
+[00:22:19] bring this up feel free just to skip
+[00:22:21] past this part if this is like really
+[00:22:23] obvious to and it makes sense but just
+[00:22:24] for those who aren't really 100% sure
+[00:22:26] just want to show what that looks like
+[00:22:28] this
+[00:22:29] uh here
+[00:22:30] is n8n scenario okay and then this is
+[00:22:34] lovable and that's how we connect
+[00:22:36] between the two so that's basically the
+[00:22:37] flow of how this whole thing is going to
+[00:22:39] work so let's pull the images back just
+[00:22:40] so it looks nice and aesthetic uh Gemini
+[00:22:43] Nan beautiful Okay cool so I'll show you
+[00:22:46] how this works very briefly just using
+[00:22:48] our scenario here so what I'm going to
+[00:22:50] do is download a file I'm going to go to
+[00:22:51] my Google Drive and in my Google Drive
+[00:22:53] I've got a photo of me and I've called
+[00:22:55] it Jack so what I'm going to do is I'm
+[00:22:56] going to download this image and I'm
+[00:22:57] going to say hey put jack in a suit and
+[00:23:00] I'm going to reupload it but there then
+[00:23:01] once we've done that we're going to
+[00:23:02] substitute it with web hook just to make
+[00:23:04] sure that it works so for example let's
+[00:23:06] click on this one here to download the
+[00:23:07] file and what we're going to come down
+[00:23:09] here let's have a quick look choose from
+[00:23:12] list I think it's this one right let's
+[00:23:14] have a
+[00:23:15] look give this a hot second oops cuz I
+[00:23:18] spelled that
+[00:23:20] wrong beautiful Jack and oftentimes when
+[00:23:22] you build these automations guys what I
+[00:23:23] would recommend you do is you test that
+[00:23:26] it works and then we can actually think
+[00:23:29] of them as like some people call it
+[00:23:30] Frankenstein you'll use an automation
+[00:23:32] you just change like five or 10% of your
+[00:23:34] particular use case that's cool and we
+[00:23:35] just upload it to my drive and we want
+[00:23:37] to just put it in the root folder which
+[00:23:39] in other words is just code for just
+[00:23:41] gets uploaded that okay and then what
+[00:23:42] you'll need to do here so we've got the
+[00:23:44] image downloaded awesome we're
+[00:23:45] converting that image into base 64 which
+[00:23:48] is really cool so let's go through this
+[00:23:49] step by step step one is download the
+[00:23:50] image how this download the image we
+[00:23:52] click on it view it beautiful it's
+[00:23:55] downloaded it then we come on to extract
+[00:23:57] that from the file so let's click on on
+[00:23:58] this guy you don't need to do this but I
+[00:23:59] can show you if I just test step here by
+[00:24:01] clicking the play button this will turn
+[00:24:03] it into B 64 string which is me as a
+[00:24:06] load of uh 64 strings then what we can
+[00:24:09] do is convert that uh is do the request
+[00:24:11] okay so if I come here for example I've
+[00:24:13] got this URL and at the end of it uh
+[00:24:15] basically youve got key equals insert
+[00:24:17] key so what I'd want you to do is copy
+[00:24:19] in guys and paste in the key that you
+[00:24:21] got from here so come down guys copy the
+[00:24:23] key and then you paste it in at the end
+[00:24:25] of URL then we come off okay now what we
+[00:24:27] do is we can actually test this step and
+[00:24:30] then this code here as you can see it's
+[00:24:32] going to be a little bit of nice little
+[00:24:34] coding it's going to take it from um the
+[00:24:35] actual HTP request and they will us to
+[00:24:37] upload it into the file so I think we're
+[00:24:39] at the point now where we can do it and
+[00:24:41] if I come on this request here guys I
+[00:24:42] come down what I've just given it here I
+[00:24:44] said hey oh well here's woman of a woman
+[00:24:46] we don't want to change that I'll just
+[00:24:47] say something like hey uh
+[00:24:51] change his tank top to a
+[00:24:56] suit that's literally all I'm going to
+[00:24:58] say so let's test this one together and
+[00:25:00] if this works what essentially is going
+[00:25:01] to happen at the end of this is there
+[00:25:02] going to be a photo of me in Google
+[00:25:04] Drive with the suit instead of a tank
+[00:25:07] top so we're now making the request over
+[00:25:08] to Google which is awesome that's
+[00:25:09] completed then it's getting uploaded to
+[00:25:11] Google Drive and we'll see what that
+[00:25:12] looks like then once this has worked we
+[00:25:14] can actually plug this in with our
+[00:25:16] really really cool web hugs so that's
+[00:25:18] uploaded let's go check out Google Drive
+[00:25:19] and just like that guys they put me in a
+[00:25:21] super cool fresh suit which is exactly
+[00:25:22] what we like so now we've done that
+[00:25:24] let's just change this to be the web
+[00:25:25] hook now okay so what we're going to do
+[00:25:27] is we're going to delete this guy and
+[00:25:28] we're going to add in a web hook all
+[00:25:30] right let's go to web hook start the
+[00:25:31] flow when a web Hook is called and we
+[00:25:34] want this one to be post so let's copy
+[00:25:36] this one here and let's link it up what
+[00:25:38] I first want to do is just make sure
+[00:25:39] that the image will get there now this
+[00:25:41] for example need to come back over to
+[00:25:42] liver I'm going to say hey when an image
+[00:25:46] is sent please send it over to this web
+[00:25:51] hug boom hit enter bam okay now level
+[00:25:55] will do it magic in the background now
+[00:25:57] we can get it and guys once you connect
+[00:25:58] these things with web hooks they're kind
+[00:25:59] of like you know in Lego you have those
+[00:26:02] like four bricks that like are the most
+[00:26:03] important bricks in the world that's
+[00:26:04] kind of that's kind of your web hook how
+[00:26:06] you connect applications together it's
+[00:26:08] that connecting them together that makes
+[00:26:09] it really epic so liver B is going to
+[00:26:11] work on that awesome stuff in the
+[00:26:12] background which is Ace one of the
+[00:26:14] things to bear in mind guys when it
+[00:26:15] comes to
+[00:26:16] this I moved over to decaf recently um
+[00:26:20] actually I've got my flat white I have
+[00:26:21] my latte my flat white and a couple of
+[00:26:23] beautiful little decaps because um yeah
+[00:26:26] you don't really notice a difference
+[00:26:27] okay let's go dashboard and actually uh
+[00:26:29] upload image so let's try this one right
+[00:26:31] now let's upload the image all right I'm
+[00:26:32] uploaded what I'm going to do is come
+[00:26:34] here I'm going to test the workflow
+[00:26:36] actually what I'm probably going to do
+[00:26:37] is I'm just going to uh unlink this okay
+[00:26:40] I'm going to click on this guy I'm going
+[00:26:42] to listen for test event okay come back
+[00:26:44] over now to our snar transform the image
+[00:26:47] this is processing come back over and
+[00:26:49] guys it's appeared okay so what I now
+[00:26:51] need to do is if I check out well what's
+[00:26:53] the input that it's got here okay let's
+[00:26:55] actually get this guy out of here and
+[00:26:57] then I'm going to connect these together
+[00:26:59] all right beautiful so if I run this all
+[00:27:02] together one more time then we should
+[00:27:04] get the same input right let's come back
+[00:27:05] over here uh that obviously hadn't
+[00:27:07] worked yet so let's upload a photo
+[00:27:09] beautiful photo has been uploaded come
+[00:27:10] back over now to nhn scenario test the
+[00:27:12] workflow come back hereit to liveable
+[00:27:14] let's transform the image come back over
+[00:27:16] to our scenario that's been done and has
+[00:27:18] the HTTP request happened yet and that
+[00:27:20] one hasn't worked so for some reason
+[00:27:21] here it says no output data has returned
+[00:27:23] so what I'm going to do instead is I'm
+[00:27:25] just going to use a Google uh as a quick
+[00:27:27] uh cleans are here so I'm just going to
+[00:27:29] come here just for time sake I'm going
+[00:27:30] to to Google Drive uh let's Google Drive
+[00:27:33] and let's just EAS we upload a file
+[00:27:36] beautiful and we'll do this one here and
+[00:27:39] we'll just say we'll put this to root
+[00:27:40] folder that's absolutely fine file name
+[00:27:42] we'll put um image test 1 2 3 which I
+[00:27:46] think is cool nice uh and then I think
+[00:27:49] that data is fine because it comes out
+[00:27:51] as a file name is jack.jpg in fact
+[00:27:54] before I do that I wonder if that's the
+[00:27:55] reason why this hasn't worked let's just
+[00:27:57] see if this is expecting data cuz what's
+[00:28:00] the output of this put output file and
+[00:28:03] field data okay so that's probably why
+[00:28:05] this hasn't worked all right cool what I
+[00:28:07] suggest we do then in this case is let's
+[00:28:09] just upload it to Google Drive and then
+[00:28:11] we can download it and then just use
+[00:28:12] this download a file thing all right
+[00:28:14] beautiful let's come here let's just
+[00:28:16] bring these guys in together which is
+[00:28:18] cool and test this step we need to test
+[00:28:21] it one more time just go back over to
+[00:28:22] the web hook we'll test the workflow
+[00:28:23] come back over transform image come back
+[00:28:25] over liable that didn't work and no bind
+[00:28:28] refill data item zero so guys looking at
+[00:28:30] this what I figured out was actually the
+[00:28:32] reason why the web hook isn't sending
+[00:28:34] information uh either to like Google
+[00:28:36] drive or this I had a quick look I
+[00:28:37] basically checked Claude about it and
+[00:28:39] one of the reasons why if I can lo this
+[00:28:41] beautiful page up is that the node
+[00:28:43] itself is expecting the field name to be
+[00:28:45] data but it's not finding it so looking
+[00:28:47] at the web BL input I can see the image
+[00:28:48] file jack. jpg that you want to upload
+[00:28:50] to fix this you need to make sure the
+[00:28:52] binary data is properly mapped to data
+[00:28:53] so it give us this cool F code we copy
+[00:28:56] the code we come back over we bring this
+[00:28:58] guy over and what did we do we click on
+[00:29:00] plus we type in code which is also code
+[00:29:03] keyword for the WD40 and if I come over
+[00:29:05] then enter this enter this which is
+[00:29:07] basically changing it to data so that we
+[00:29:09] can map it and get it that should work
+[00:29:11] perfectly for us now so like if I come
+[00:29:12] here and bring this over I'm going to
+[00:29:15] test the workflow and we can avoid then
+[00:29:16] the whole G Drive thing uh which is by
+[00:29:18] the way a lot of times where sometimes
+[00:29:20] you bring Google drive to fix something
+[00:29:21] you can use you code to do that instead
+[00:29:23] so let's go back over to lovable we
+[00:29:24] upload the image that's great transform
+[00:29:26] the image then we come back over to
+[00:29:28] beautiful scenario and already this is
+[00:29:30] working this is great news the last step
+[00:29:32] if this does work properly is just to
+[00:29:33] send it back to the web hook and then we
+[00:29:35] are ready to rock and roll which I think
+[00:29:37] is flipping epic I'm taking a
+[00:29:38] celebratory sip of coffee for
+[00:29:42] this and guys just like that I've gotten
+[00:29:44] a suit by the way this is a fun Mickey
+[00:29:45] laugh like it's really respect to my
+[00:29:47] there's my real actual arms they are
+[00:29:49] they've got to be right that's beautiful
+[00:29:51] dude I freaking love that dude I might
+[00:29:52] start rocking around like that I think
+[00:29:53] that's a freaking I freaking love that
+[00:29:55] fashion set guys this automation already
+[00:29:58] freaking adding value this is ridiculous
+[00:30:00] so what do we do we don't well we could
+[00:30:02] upload the file if we want to and
+[00:30:04] realistically though what we kind of
+[00:30:06] want to do is just send it back down to
+[00:30:07] the web hook so come down to web hook
+[00:30:09] like so and want to put click on respond
+[00:30:11] to web hook respond with first incoming
+[00:30:13] item um actually what I think we I
+[00:30:16] wonder if we just do this let's just can
+[00:30:17] this guy off bring this over here
+[00:30:20] connect this here and if I come here and
+[00:30:22] I say hey respond with the first coming
+[00:30:23] item that's cool cuz that's the image
+[00:30:25] then what we need to do crucially is
+[00:30:26] come over to web hog and then we need to
+[00:30:28] say respond not immediately when the
+[00:30:31] last oh respond to web node beautiful
+[00:30:34] okay so let's now see if the image comes
+[00:30:37] back into the app so let's test a
+[00:30:39] workflow come back over do it one more
+[00:30:41] time upload the image phenomenal and
+[00:30:43] transform image great so let's just see
+[00:30:45] what happens I do really like the way
+[00:30:47] that it kind of loads in the background
+[00:30:49] so I come back over here for instance
+[00:30:50] it's not working perfectly code one's
+[00:30:52] good respon to web hug is coming up so
+[00:30:54] do we get a response is processing
+[00:30:57] analyzing image structure it's making
+[00:30:59] some match our AI carefully transform
+[00:31:01] your image this typically takes around 6
+[00:31:02] seconds to ensure that's do you know
+[00:31:04] what's cool cuz people don't mind
+[00:31:05] waiting so long as you tell them what
+[00:31:06] they're waiting for so according to this
+[00:31:08] it has already sent the image I think if
+[00:31:11] that's correct yeah so let's just see if
+[00:31:14] that's happened or we'll find out what's
+[00:31:15] happening with the image all right guys
+[00:31:17] we're 93 95 97% do we get the refin
+[00:31:21] image and it says it's transformed I
+[00:31:23] don't think that worked so let's have a
+[00:31:25] look I wonder if it's just not
+[00:31:26] displaying it so if I actually come back
+[00:31:28] over to the scenario let's just see if
+[00:31:29] it did the job if I click on this and I
+[00:31:31] download this for example in fact guys
+[00:31:33] what I'll do is I will do two things I
+[00:31:35] will upload the image to the file uh
+[00:31:37] which will be fine let's just do that
+[00:31:39] and then what I'll also do is just say
+[00:31:40] to livero I'll say something like hey uh
+[00:31:44] the web
+[00:31:47] hook
+[00:31:49] returned the
+[00:31:51] image but it did not show in the
+[00:31:55] dashboard and then I'll also say uh once
+[00:31:58] the
+[00:31:59] image is returned you can stop the timer
+[00:32:04] uh keep the
+[00:32:08] image visible in the
+[00:32:13] dashboard cool so we'll let this make
+[00:32:15] some amendments then we'll try it one
+[00:32:16] more time and then we can also check
+[00:32:18] that the image is being transformed and
+[00:32:20] it's been uploaded to Google Drive which
+[00:32:22] I'm pretty confident that it is but it's
+[00:32:23] always worth just kind of like often
+[00:32:25] times guys and girls when you're
+[00:32:27] troubleshooting apps like this you've
+[00:32:29] just kind of got to go through every
+[00:32:30] single possible thing that you think
+[00:32:31] they could be wrong to figure out what
+[00:32:33] is actually the root cause of this stuff
+[00:32:35] okay so this looks like it's done and
+[00:32:36] it's basically completed so let's try
+[00:32:38] this one more time come over to a
+[00:32:39] scenario Let's test the workflow come
+[00:32:41] back over and upload the image and let's
+[00:32:43] say transform beautiful sending image to
+[00:32:45] web hug is it coming through yes
+[00:32:46] extracting a file doing the HTTP request
+[00:32:48] then b a code then send it back via the
+[00:32:50] web hug ordinarily what's interesting is
+[00:32:52] when you're doing image Transformations
+[00:32:54] usually you trans you have a request to
+[00:32:56] transform it then you've got to wait
+[00:32:58] then you pull it down I don't know
+[00:32:59] what's happening with this API but it
+[00:33:00] seems more instantaneous I come back
+[00:33:02] over has that done well I think this is
+[00:33:05] showing us a before and after that is
+[00:33:08] really cool I wonder if it actually did
+[00:33:10] the difference let's just check in our
+[00:33:11] Google Drive so according to this this
+[00:33:13] is the image that was uploaded but if I
+[00:33:15] come back over now I can see that's not
+[00:33:17] the one that we got back into liable so
+[00:33:20] we need to figure out why that image
+[00:33:21] isn't happening and I got something
+[00:33:23] saved in history that's really cool Dark
+[00:33:25] theme all right come back over to
+[00:33:26] transform let's figure out what's
+[00:33:27] happened then so say hate showing both
+[00:33:28] the before image left and right and page
+[00:33:30] please
+[00:33:32] use the web
+[00:33:35] hook
+[00:33:37] returned image on the right meanwhile
+[00:33:40] what I'm also going to do guys is come
+[00:33:42] back over to the scenario and I think
+[00:33:44] there's nothing really I can change on
+[00:33:46] this that would really improve the
+[00:33:47] outcome I'm pretty confident this is
+[00:33:49] pretty decent I mean we've got it we've
+[00:33:51] got the code and we're just sending to
+[00:33:52] the web hog and this is just taking the
+[00:33:53] same image that is from the web hog so
+[00:33:56] technically I think the issue is just be
+[00:33:58] a lovable side um because I think the
+[00:33:59] automation is sound and we know that
+[00:34:01] because we're seeing the enhanced image
+[00:34:03] in Google Drive it's just a case now of
+[00:34:05] getting it back over to loveable and I
+[00:34:07] think it could just be as simple as it's
+[00:34:08] just showing like the same image on both
+[00:34:10] sides of it cool so allegedly it has
+[00:34:13] fixed it the dashboard detex file is
+[00:34:15] quite long after to make it changes it
+[00:34:17] going to just refract it into smaller
+[00:34:18] mother focus components uh sounds
+[00:34:21] good let's do
+[00:34:24] that but first let's give it another
+[00:34:26] test okay transforming in image come
+[00:34:28] back over this is working as per usual
+[00:34:29] which is really cool oh my goodness have
+[00:34:31] I got have I not got an emoji on this
+[00:34:33] this is outrageous let me get an emoji
+[00:34:34] on this think star R is cool beautiful
+[00:34:36] okay so this has it worked once again
+[00:34:38] it's original and before also uh it
+[00:34:41] still is not
+[00:34:44] working think through this step by step
+[00:34:48] Bo and let's just check we did get the
+[00:34:49] right thing in Google Drive yeah and in
+[00:34:51] Google Drive oh my gosh dude this suit
+[00:34:53] is a freaking that one does look
+[00:34:54] slightly a related but I think that suit
+[00:34:56] looks freaking epic I'm might buy that
+[00:34:58] suit this is why it's so cool cuz you
+[00:34:59] get to see like one of the cool ideas I
+[00:35:01] think I've got with this is like imagine
+[00:35:03] it could take your skin tone your eye
+[00:35:04] color right and you could like try out
+[00:35:06] do you know there's websites that really
+[00:35:07] crush it where you can try out the
+[00:35:08] different suits this is perfect for that
+[00:35:10] do you know what I mean like you could
+[00:35:11] say put me in a suit that looks like
+[00:35:13] this and we could have ai breakdown
+[00:35:14] explain what the uh actual images that
+[00:35:17] you're wearing and then it could like
+[00:35:19] actually transpose that on you which I
+[00:35:21] think is really cool and by the way guys
+[00:35:22] the fact this takes a bit back and forth
+[00:35:25] is completely cool it's normal this is
+[00:35:26] actually one of the reasons why this AAL
+[00:35:28] opportunity if you can sit down grab a
+[00:35:29] coffee and just spend a couple minutes
+[00:35:31] going back and forth with this stuff to
+[00:35:32] get it work working then that's really
+[00:35:33] epic and guys would you look at this we
+[00:35:35] finally got the suit back in the
+[00:35:38] freaking automation how did we do that
+[00:35:41] well what did we do all I did is I just
+[00:35:42] changed the web web hog to be binary
+[00:35:44] Farm which makes sense and we learned
+[00:35:46] something really cool in scenario soste
+[00:35:48] to say you got to be persistent you got
+[00:35:49] to stick it in now freaking look at this
+[00:35:51] guys I've gone from tank top to freaking
+[00:35:53] suit and everything else in the image is
+[00:35:55] identical how Fring epic is that that so
+[00:35:57] now we've done the automation part by
+[00:36:00] the way if you just want to take this
+[00:36:01] sass by the way um you're more than
+[00:36:03] welcome to I'll post all a code in the
+[00:36:04] community you can just have a fun with
+[00:36:05] it cool now we want to do is add in
+[00:36:08] stripe so to add in stripe we going to
+[00:36:09] do a couple things we basically now need
+[00:36:11] to say hey U now if we're building a
+[00:36:13] sass one of the things you want to do
+[00:36:14] generally speaking is reduce the
+[00:36:16] friction from a user coming to your
+[00:36:18] website and using the product usually
+[00:36:20] have a marketing called cold demand and
+[00:36:22] hot demand so it's like push and pull
+[00:36:24] like for example you are going to drink
+[00:36:25] coffee the question is which coffee this
+[00:36:27] is like a brand new service so the
+[00:36:29] awareness for this is going to be low so
+[00:36:31] we've got to educate and because of that
+[00:36:33] one of my sentences is let's give people
+[00:36:34] a sample in a feel for how this works so
+[00:36:37] I'm going to say something like hey uh
+[00:36:39] let's
+[00:36:41] now
+[00:36:43] integrate stripe all right and I'm going
+[00:36:46] to say look first image transformation
+[00:36:48] is
+[00:36:53] free than if they want more
+[00:36:58] they
+[00:36:58] can
+[00:37:01] subscribe for $10 per
+[00:37:04] month and we'll put limits
+[00:37:07] at I don't know call it 20
+[00:37:10] Transformations all
+[00:37:12] right beautiful now we need to get a
+[00:37:15] couple bits of information from stripe
+[00:37:16] so let's over to stripe and I'll show
+[00:37:18] you connect stripe so you can actually
+[00:37:19] physically start connecting payments so
+[00:37:21] we going to dashboard. strip guys and
+[00:37:22] you can create a fake test account by
+[00:37:25] clicking test mode I think you just got
+[00:37:27] got to give it like a number and then
+[00:37:29] you're ready to rock and roll so we need
+[00:37:31] a couple bits of information from this
+[00:37:32] to get started the first one we want to
+[00:37:33] get guys is the secret key so to get
+[00:37:35] that we're going to come down to
+[00:37:37] developers and the only one you're going
+[00:37:38] to need guys is a secret key so you
+[00:37:40] hover over secret key and you click copy
+[00:37:43] that's it then we come back over to
+[00:37:44] liable and we say hey the
+[00:37:48] information you need is below let me
+[00:37:52] know when you're ready for the secret ke
+[00:37:54] then guys what you want to do is come
+[00:37:56] down here you're looking for product
+[00:37:57] catalog on the left hand side and you
+[00:37:59] want to create a fictitious thing so
+[00:38:01] create a product from top right uh you
+[00:38:02] can call this one something like uh
+[00:38:05] image
+[00:38:08] transformation uh where anything I don't
+[00:38:10] know but basically do this uh obviously
+[00:38:12] what you want to do is an image I'm
+[00:38:14] using a dark wizard in fact let's just
+[00:38:17] call this dark
+[00:38:18] wizard cool this is decent I like it and
+[00:38:21] let's just say the amount is10 and we
+[00:38:23] want to charge that recurring Revenue
+[00:38:24] billing every month which is cool then
+[00:38:26] click on ADD product like so
+[00:38:28] and give that a moment and we believe
+[00:38:29] guys we got dark wizard image
+[00:38:30] transformation so you can send a payment
+[00:38:32] link now this is where it gets really
+[00:38:33] cool obviously you could if you want to
+[00:38:36] just have a um button that you integrate
+[00:38:39] by this code so for example if I come
+[00:38:41] over to payment links and I can click on
+[00:38:44] new the top right I can look on dark
+[00:38:46] image in a basically transformation here
+[00:38:48] and I can have this here that you can
+[00:38:50] just basically send this to people click
+[00:38:51] on create Link at the top right and now
+[00:38:53] I've got this URL so basically if I
+[00:38:55] enter into a new website like so um and
+[00:38:59] you send it to somebody they can then
+[00:39:01] buy your product and when you sign up
+[00:39:02] for that you'll be paying 10 pound a
+[00:39:03] month that's cool but the problem that
+[00:39:05] you have by just putting this in oh and
+[00:39:07] by the way one of the things you can do
+[00:39:08] by the way guys is you can integrate
+[00:39:10] this I believe where is the integration
+[00:39:13] I'm just going to show you this going to
+[00:39:14] make sure you've got it URL parameters a
+[00:39:16] that's is cool so you can actually just
+[00:39:17] like integrate URLs which is really
+[00:39:19] decent oh and the other thing guys is
+[00:39:20] you can add things here like tax if you
+[00:39:21] want to to make sure you're collecting
+[00:39:22] all things that you need uh let's just
+[00:39:25] see how we integrate this I think if we
+[00:39:26] click on this
+[00:39:28] uh yeah where is this this is like
+[00:39:31] absolutely avoiding me this is hilarious
+[00:39:33] I wonder if it's into payment links
+[00:39:34] actually I click on this uh is it down
+[00:39:37] here yeah click on this
+[00:39:40] guy ah buy button that's it click on the
+[00:39:43] buy button you copy the code and then
+[00:39:45] you can have this in your thing it could
+[00:39:47] just look like this or this but here's a
+[00:39:49] problem if we just embedded this code
+[00:39:51] which is easy mode by the way there's no
+[00:39:53] way of the app knowing that they've
+[00:39:55] bought it do you know what I'm saying so
+[00:39:57] that's why we're going that one step
+[00:39:58] further to make sure that it's
+[00:39:59] integrated now we need two pieces of
+[00:40:01] information to give this to uh lovable
+[00:40:04] one is the product ID and the other one
+[00:40:06] is the price ID okay I think we want to
+[00:40:07] come over to the products here this is
+[00:40:09] cool okay this looks right so we need to
+[00:40:11] get a few bit we got the product ID so
+[00:40:13] let's just copy this copy the clipboard
+[00:40:14] come back over to lovable and we say
+[00:40:18] uh product ID boom and then we want the
+[00:40:21] price ID which is in other words how it
+[00:40:23] will pull how much it actually
+[00:40:24] physically costs so it come back over to
+[00:40:27] uh this one here and I think you got to
+[00:40:28] click on the logs to get this okay there
+[00:40:29] you go request post body which is
+[00:40:31] default prize and so we just copy this
+[00:40:33] unique code um I this could also be the
+[00:40:36] one actually there that's the ID for the
+[00:40:37] thing I think yeah we come back over to
+[00:40:40] our beautiful lovable and I think that's
+[00:40:42] the right one cool enter the Sim then
+[00:40:44] it's going to ask us for our uh key
+[00:40:46] which we're going to be able to enter
+[00:40:47] securely into the chat functionality
+[00:40:49] then once that's done we should have
+[00:40:50] payments then we can start scale and do
+[00:40:52] other beautiful wonderful things just
+[00:40:54] give us a hot second to do obviously
+[00:40:56] guys in I put this as test when you want
+[00:40:59] to yeah we're okay with that app changes
+[00:41:01] when you want to actually start
+[00:41:02] monetizing this all you do is go from
+[00:41:04] test mode to live mode and then you're
+[00:41:06] ready to rock and roll which is flipping
+[00:41:08] cool uh and then we come back over the
+[00:41:09] lovable and this is one of the things I
+[00:41:11] noticed in the space guys with like
+[00:41:12] building million apps and stuff is like
+[00:41:14] unless someone actually shows you how
+[00:41:16] you do the plumbing and connect it to
+[00:41:17] stripe like is it really going to like
+[00:41:19] be valuable so they want the stripe
+[00:41:21] secret key now this is cool I can click
+[00:41:22] on ADD API key this is stripe secret key
+[00:41:25] so let's go back over to stripe and just
+[00:41:26] grab that very quickly again we can on
+[00:41:29] to developers and we copy this
+[00:41:30] publishable key here actually no it's
+[00:41:33] the secret key my apologies it's secret
+[00:41:34] key and then we enter it in here click
+[00:41:35] submit and that's not logged in
+[00:41:38] perfectly which is fine and now it's
+[00:41:40] added API key so let's see if this works
+[00:41:43] and we can AC and go ahead and create
+[00:41:44] something decent and then we're going to
+[00:41:45] be rock and roll and think let's just
+[00:41:47] zoom out what you've done you've created
+[00:41:48] a complete app that's never existed
+[00:41:49] before you've connected it to N1 you've
+[00:41:52] add you've connected to stripe now you
+[00:41:54] got a website that you can share with
+[00:41:55] people where they can create an account
+[00:41:56] we say save their information they can
+[00:41:58] buy the product sign up subscription and
+[00:42:00] do absolutely everything that you want
+[00:42:01] to in my community I go into more
+[00:42:03] details about okay well now you've got
+[00:42:04] the technology how on Earth do you
+[00:42:06] actually get your first customer what
+[00:42:08] does that physically look like and while
+[00:42:09] this is loading in the background I'm
+[00:42:10] just going to show you very quickly in
+[00:42:12] the classroom section I did this thing
+[00:42:14] on the make money section because one of
+[00:42:15] my observations were that people wanted
+[00:42:17] a kind of a real step-by-step system of
+[00:42:20] how do you start the bottom which is you
+[00:42:22] know I haven't started your your
+[00:42:23] foundations getting the right Market
+[00:42:25] customer resonance getting your offer
+[00:42:27] have you your first 10K in Revenue all
+[00:42:28] the way up to getting you know a
+[00:42:31] scalable beautiful successful business
+[00:42:33] and getting customers is important but
+[00:42:35] usually one of the things I always say
+[00:42:36] guys is that an ounce in Pre is worth a
+[00:42:38] pound and post and most of the
+[00:42:40] conversations I have in my community on
+[00:42:41] a weekly basis about you know how do I
+[00:42:43] get this done I get that done and we've
+[00:42:44] had so many success stories of people
+[00:42:46] doing 10K 20K 30k you know deals with
+[00:42:49] this stuff and even smaller deals which
+[00:42:51] I could R my channel as well is the
+[00:42:53] questions actually it's usually small
+[00:42:54] little pivots that you got to make but
+[00:42:56] you got to do the hard up from and with
+[00:42:58] softwares like this guys you need to
+[00:42:59] validate that somebody actually
+[00:43:01] physically wants to buy the thing so
+[00:43:03] look we' got a free TI how freaking sick
+[00:43:04] is this now I'm very curious to see how
+[00:43:06] this is going to work 20 images I'm
+[00:43:08] really impressed with the on this let's
+[00:43:10] just say that I'm on the page I want to
+[00:43:11] test it out let's just minimize this
+[00:43:13] rment upgrade to premium for $10 a month
+[00:43:15] which is cool fail to create checkout
+[00:43:17] session all right that's decent so what
+[00:43:19] do we do we click on this and I say hey
+[00:43:22] I clicked on
+[00:43:28] upgrade and it gave me this error cool
+[00:43:33] so let's just copy this and see what the
+[00:43:34] error is that's
+[00:43:35] cool there we go and just Tred to fix
+[00:43:38] that one and then probably we'll have to
+[00:43:40] do two or three rounds of this little
+[00:43:41] pepper some some shs little tasty
+[00:43:43] Landing of some jab and some uppercuts
+[00:43:45] to get this working and we'll get it
+[00:43:47] done but I'm going to be very excited to
+[00:43:48] see how this works and then the other
+[00:43:50] thing we want to do is just make sure
+[00:43:51] that we uh can identify them as a
+[00:43:53] paining customer which we can ask you to
+[00:43:54] do in super base and then we're pretty
+[00:43:56] much production to do it now I don't
+[00:43:58] know how long this video is when it
+[00:43:59] comes out but one of the interesting
+[00:44:01] things here like you know youve built
+[00:44:02] this in like an hour right um that is
+[00:44:05] unheard of to get an MVP that actually
+[00:44:07] physically works like that so let's just
+[00:44:08] see if this works great it's premium
+[00:44:10] processing oh my gosh you freaking
+[00:44:12] kidding me right now right let's see
+[00:44:14] what this looks like it's loading up
+[00:44:16] give it a hot second cool so since
+[00:44:18] that's trugging to load I'm just going
+[00:44:19] to say hey uh it seems it is
+[00:44:24] getting stuck on this page boom and then
+[00:44:28] we just give that it's like stripe isn't
+[00:44:32] loading question mark hit enter let's
+[00:44:35] see what that
+[00:44:36] does it's like every conversation we
+[00:44:39] inch like one step further to getting
+[00:44:40] the result done and you know what's
+[00:44:41] funny guys like when I did my last tech
+[00:44:43] startup and one of the initiatives I had
+[00:44:46] was more ways to pay like how do we make
+[00:44:47] it easier to pay like Apple pay Google
+[00:44:49] pay and it takes like a week or two of
+[00:44:52] development to do this and it blurs my
+[00:44:54] mind that like this is just some
+[00:44:55] language and it's Chang in some things
+[00:44:57] and it's ready to rock and roll like
+[00:44:59] this is genuinely transformative stuff
+[00:45:01] um AI SES are cool I don't know what
+[00:45:03] else to say Okay cool so it set the
+[00:45:04] changes been done so let's refresh the
+[00:45:06] page and check out that that's the case
+[00:45:08] upgrade to premium $10 a month let's see
+[00:45:09] if it loads up powered by stripe
+[00:45:11] powering up in the background cool so
+[00:45:13] once again that one didn't work we say
+[00:45:14] hey it's not learning I wonder if
+[00:45:15] opening up in a new tab would be a good
+[00:45:17] idea and then we can refresh this one
+[00:45:19] here for a second while that works in
+[00:45:20] the background yeah cuz I wonder if the
+[00:45:22] redirection feature while this isn't
+[00:45:24] live is causing some problem which is
+[00:45:26] cool interesting thing guys it really
+[00:45:27] has nailed done the UI I mean look at
+[00:45:29] the spacing the difference it's really
+[00:45:31] freaking impressive cool it's modified
+[00:45:33] the page all right guys so let's give
+[00:45:34] this a moment of truth if I click this
+[00:45:36] upgrade topre button do I get to see
+[00:45:38] something decent let's open up and see
+[00:45:40] hands off the thing and what you now
+[00:45:42] magic weight list here we go so we're
+[00:45:44] going to give this a fake card
+[00:45:45] information and let's just say we'll do
+[00:45:46] the first uh 28 tvc's random number call
+[00:45:49] her
+[00:45:50] name Benjamin magu and then obviously
+[00:45:53] then the post code is here so let's
+[00:45:55] subscribe and see what happens we are
+[00:45:56] processed it's given a hot second oh my
+[00:45:59] gosh are we going to be beautiful
+[00:46:01] recipients of this cool thing it's
+[00:46:02] completed so if I come back over to
+[00:46:04] Liverpool subscription successful you
+[00:46:06] now have premium access guys and there
+[00:46:09] you go we've basically built now an AI
+[00:46:11] sass from start to finish and if you
+[00:46:12] haven't seen this video on screen which
+[00:46:14] is about getting a voice agent into your
+[00:46:15] application using liver Bol check that
+[00:46:17] one out in any case guys have a
+[00:46:18] beautiful week and I'll see you in my
+[00:46:20] next video

@@ -1,0 +1,802 @@
+{
+    "name": "3) 🔥 Weekly Content Load",
+    "flow": [
+        {
+            "id": 2,
+            "module": "airtable:TriggerWatchRecords",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 1532818,
+                "base": "app60aNaSNo2at4Do",
+                "useColumnId": false,
+                "table": "tblwxcJ4NavABV3IC",
+                "config": {
+                    "triggerField": "Last modified time",
+                    "labelField": "📚 Title"
+                },
+                "maxRecords": 1,
+                "formula": ""
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -678,
+                    "y": 20
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Airtable OAuth connection (User ID: usrWHZndszJIS5AWQ)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            }
+                        },
+                        "base": {
+                            "label": "📈 YouTube Knowledge"
+                        },
+                        "table": {
+                            "label": "Table 1"
+                        },
+                        "config": {
+                            "nested": {
+                                "triggerField": {
+                                    "label": "Last modified time"
+                                },
+                                "labelField": {
+                                    "label": "📚 Title"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "config",
+                        "type": "collection",
+                        "label": "Trigger configuration",
+                        "spec": [
+                            {
+                                "name": "triggerField",
+                                "type": "select",
+                                "label": "Trigger field",
+                                "required": true
+                            },
+                            {
+                                "name": "triggerField",
+                                "type": "hidden"
+                            },
+                            {
+                                "name": "labelField",
+                                "type": "select",
+                                "label": "Label field",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "maxRecords",
+                        "type": "integer",
+                        "label": "Limit",
+                        "required": true
+                    },
+                    {
+                        "name": "view",
+                        "type": "select",
+                        "label": "View"
+                    },
+                    {
+                        "name": "formula",
+                        "type": "text",
+                        "label": "Formula"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "📚 Title",
+                        "label": "📚 Title",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Attachments",
+                        "label": "Attachments",
+                        "type": "array",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "width",
+                                "type": "uinteger",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "height",
+                                "type": "uinteger",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File name"
+                            },
+                            {
+                                "name": "size",
+                                "type": "uinteger",
+                                "label": "Size"
+                            },
+                            {
+                                "name": "type",
+                                "label": "MIME type",
+                                "type": "text"
+                            },
+                            {
+                                "name": "thumbnails",
+                                "label": "Thumbnails",
+                                "type": "collection",
+                                "spec": [
+                                    {
+                                        "name": "small",
+                                        "label": "Small",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "large",
+                                        "label": "Large",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "full",
+                                        "label": "Full",
+                                        "type": "collection",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Thumbnail 🤩",
+                        "label": "Thumbnail 🤩",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "📹 Video",
+                        "label": "📹 Video",
+                        "type": "text"
+                    },
+                    {
+                        "name": "👀 Channel",
+                        "label": "👀 Channel",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "📚 Description",
+                        "label": "📚 Description",
+                        "type": "text",
+                        "multiline": true
+                    },
+                    {
+                        "name": "📈 Views",
+                        "label": "📈 Views",
+                        "type": "number"
+                    },
+                    {
+                        "name": "👍 Likes",
+                        "label": "👍 Likes",
+                        "type": "number"
+                    },
+                    {
+                        "name": "💬 Comments",
+                        "label": "💬 Comments",
+                        "type": "number"
+                    },
+                    {
+                        "name": "📆 Uploaded Date",
+                        "label": "📆 Uploaded Date",
+                        "type": "date",
+                        "time": false
+                    },
+                    {
+                        "name": "Status",
+                        "label": "Status",
+                        "type": "text"
+                    },
+                    {
+                        "name": "Date created",
+                        "label": "Date created",
+                        "type": "date",
+                        "time": false
+                    },
+                    {
+                        "name": "Last modified time",
+                        "label": "Last modified time",
+                        "type": "date"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "openai-gpt-3:analyzeImages",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "prompt": "describe this thumbnail in detail (maximum 100 words)",
+                "images": [
+                    {
+                        "imageUploadType": "url",
+                        "imageUrl": "{{2.`Thumbnail 🤩`}}"
+                    }
+                ],
+                "model": "gpt-4o-mini",
+                "max_tokens": "2048",
+                "temperature": "1",
+                "top_p": "1",
+                "n_completions": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -379,
+                    "y": 7,
+                    "name": "👀 Vision"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "images": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "imageUploadType": {
+                                        "mode": "chose",
+                                        "label": "Image URL"
+                                    }
+                                }
+                            ]
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "gpt-4o-mini"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "prompt",
+                        "type": "text",
+                        "label": "Prompt",
+                        "required": true
+                    },
+                    {
+                        "name": "images",
+                        "type": "array",
+                        "label": "Images",
+                        "required": true,
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "imageUploadType",
+                                    "type": "select",
+                                    "label": "How would you like to specify an image?",
+                                    "options": [
+                                        {
+                                            "label": "Image URL",
+                                            "value": "url",
+                                            "nested": [
+                                                {
+                                                    "help": "Public URL of the image. For example, `https://getmyimage.com/myimage.png`.",
+                                                    "mode": "edit",
+                                                    "name": "imageUrl",
+                                                    "type": "url",
+                                                    "label": "Image URL",
+                                                    "mappable": {
+                                                        "help": "Public URL of the image. For example, `https://getmyimage.com/myimage.png`."
+                                                    },
+                                                    "required": true
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Image File",
+                                            "value": "imageFile",
+                                            "nested": [
+                                                {
+                                                    "help": "Binary data of the image. For example, you can retrieve the binary data of your image using the __HTTP: Get a file__ module.",
+                                                    "name": "imageFileData",
+                                                    "type": "buffer",
+                                                    "label": "Image File",
+                                                    "required": true,
+                                                    "semantic": "file:data"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Image",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "uinteger",
+                        "label": "Max Completion Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "n_completions",
+                        "type": "number",
+                        "label": "Number"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "module": "app#deepseek-ff6ydu:deepseek",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 5035219
+            },
+            "mapper": {
+                "system": "help the user",
+                "user": "Overview:\nYour task is to generate three potential YouTube video titles and three distinct thumbnail suggestions and a brief outline of the idea for Jack Roberts’ channel. \n\nYou will adapt the core concept of a provided viral video to suit the channel’s focus on AI automations, business, trending AI, no-code strategies (e.g. using Make.com and n8n) and entrepreneurial advice.\n\nWhat You’ll Need • A viral video’s title and thumbnail description (to serve as inspiration). • Detailed channel information (see below).\n\nMy Channel Information\nChannel Name: Jack RobertsChannel Description: My channel focuses on AI Automations, showcasing tools and strategies that help people save time and money using no-code platforms like Make.com and n8n. I also share entrepreneurial content about making money, growing businesses, and staying ahead of AI trends. I run a paid Skool community for AI enthusiasts and create content for both specialists and beginners.Target Audience: Entrepreneurs, business owners, tech-interested individuals, and those passionate about AI or no-code tools. Niche/Category: AI Automations, AI, making money, and business growth.Unique Value Proposition:  Step-by-step guides featuring the latest AI tools and strategies that actually work.Recent Video Context Below is a list of the last 20 video titles for context:How DeepSeek AI Automates My Work Effortlesslyn8n vs Make: Don’t Choose the Wrong One (2025)This UNRELEASED Make.com Feature is Game-Changing…Alex Hormozi ROASTS My $100k/mo Business 😅How to Build a Profitable AI SaaS in 2025… ZERO CodeAutomate Anything with DeepSeek R1… Copy ThisThis AI Agent Will Automate Anything (INSANE)Steal This AI RAG Agent 🤯Build Your First AI Employee (Lindy AI)Automate Anything with AI Agents… Zero CodeAgentic AI Automation Will Dominate 2025He Sold a $300/mo AI Automation to 45 Clients…Automate Anything with DeepSeek V3 (HUGE)This Stops 90% of AI Agencies Making MoneyHow to Automate Incredible Client Proposals (INSANE)Steal This $397/mo AI SaaSHow I Made $20,392 in 3 Days on Skool…Steal This AI Client Intelligence System… WOWVideo Concept You will receive a viral video’s title and thumbnail description. Your mission is to adapt its core concept to create content ideas that align with Jack Roberts’ niche.Title Guidelines • Each title must be under 50 characters. • Spark immediate curiosity with a concise, clear premise. • Incorporate specific details, numbers and powerful adjectives. • Use proper title case (capitalize major words; keep connector words like “of”, “in”, “for” lowercase). • Avoid blatant clickbait while ensuring clarity and trust.Here are examples of highly viral and excellent titles:Business & Marketing TitlesThis Idea Will Make Your Business UnstoppableMake Money Online (Without Destroying Your Reputation)Sales Was Hard Until I Understood These 9 ConceptsHow to Grow Your Business SO Fast in 2025 It Feels ILLEGALHow I got 700 people to pay me $40,000 each...no bs..42 Recession Proof Money Hacks (2023)Veritasium TitlesWhy Super Glue Is Perfect For Gluing SkinWhy Is MIT Making Robot Insects?Why Don’t Railroads Need Expansion Joints?The Man Who Took LSD and Changed The WorldThis Musical Instrument Took Eons To Make34 Years Of Strandbeest EvolutionYou're Probably Wrong About RainbowsWhat Actually Happened To Amelia Earhart?The Most Important Material Ever MadeOn These Questions, Smarter People Do WorseThe Closest We’ve Come to a Theory of EverythingWe Might Find Alien Life In 2239 DaysPeople said this experiment was impossible, so I tried it - Thermite Part 1I built a QR code with my bare hands to see how it worksExposing The Flaw In Our Phone SystemWhat Everyone Gets Wrong About PlanesWhy Democracy Is Mathematically ImpossibleThese Illusions Fool Almost EveryoneThe Real Reason Robots Shouldn’t Look Like Humans | SupercutWhy People Prefer More PainWhat Jumping Spiders Teach Us About ColorThe Terrifying Real Science Of AvalanchesSomething Strange Happens When You Follow Einstein's MathWhy is this number everywhere?How Japanese Masters Turn Sand Into SwordsThe Oldest Unsolved Problem in MathThe Trillion Dollar EquationWhy It Was Almost Impossible to Make the Blue LEDThe Rainiest Place On EarthCan you list these objects in order?What Game Theory Reveals About Life, The Universe, and EverythingHow To Earthquake-Proof A HouseThe SAT Question Everyone Got WrongThe Surprising Genius of Sewing MachinesThe Secret To A Happy Life. Lessons From The Longest Study on HappinessHow Do Night Vision Goggles Work? (There's 3 types)The Problem With Science CommunicationHow One Line in the Oldest Math Text Hinted at Hidden UniversesThe Man Who Killed Millions and Saved Billions (Clean Version)Pushing The Limits Of Extreme Breath-HoldingHow Humanity Almost Destroyed ItselfThe Insane Math Of Knot TheoryShould Airships Make A Comeback?I Took an IQ Test to Find Out What it Actually MeasuresThe Real Story of OppenheimerThe Hidden Science of FireworksThe Most Misunderstood Concept in PhysicsI Vacuum Venom from the World's Deadliest SpiderSomething Strange Happens When You Keep SquaringThe Fastest Maze-Solving Competition On EarthWhy The First Computers Were Made Out Of Light BulbsHow NASA Reinvented The WheelGetting Buried In Concrete To Explain How It WorksHow Quantum Computers Break The Internet... Starting NowWorld's Strongest Magnet!The Most Controversial Problem in PhilosophyThe Stickiest Non-Sticky SubstanceThe Science Behind Dogs' Incredible Sense Of SmellTesting the US Military’s Worst IdeaHow To Measure The Tiniest Forces In The UniverseInside The Navy's Indoor OceanThe world depends on a collection of strange items. They're not cheapWhat Happens If A Star Explodes Near The Earth?The Most Important Algorithm Of All TimeHow Dangerous is a Penny Dropped From a Skyscraper?World's Highest Jumping RobotThe 4 things it takes to be an expertThe Man Who Killed Millions and Saved BillionsThe Riddle That Seems Impossible Even If You Know The AnswerThe Absurd Search For Dark MatterHow did they actually take this picture? (Very Long Baseline Interferometry)How Electricity Actually WorksThe Man Who Accidentally Killed The Most People In HistoryHow Horses Save Humans From SnakebitesFuture Computers Will Be Radically Different (Analog Computing)The Most Powerful Computers You've Never Heard OfThe Snowflake MythMost People Don't Know How Bikes WorkThe Big Misconception About ElectricityHow Imaginary Numbers Were InventedI Rented A Helicopter To Settle A Physics DebateA Robot That Walks, Flies, Skateboards, SlacklinesHow They Caught The Golden State KillerHow Hidden Technology Transformed BowlingWhy Scorpions Glow in the DarkThe Universe is Hostile to ComputersClickbait is Unreasonably EffectiveThe Genius of 3D Printed RocketsThe Simplest Math Problem No One Can Solve - Collatz ConjectureWhy You Should Want Driverless Cars On Roads NowThe Biggest Myth In EducationA Physics Prof Bet Me $10,000 I'm WrongThe Longest-Running Evolution ExperimentRisking My Life To Settle A Physics DebateMath's Fundamental FlawHow An Infinite Hotel Ran Out Of RoomThis Unstoppable Robot Could Save Your LifeThe Surprising Secret of SynchronizationThis is why we can't have nice thingsThe Discovery That Transformed PiWhy Robots That Bend Are BetterI Asked Bill Gates What's The Next Crisis?The Explosive Element That Changed The WorldQ&A + Giveaway for 10 Years on YouTubeThe Illusion Only Some People Can SeeThese are the asteroids to worry aboutWhy No One Has Measured The Speed Of LightWhat Actually Expands In An Expanding Universe?How One Supernova Measured The UniverseHow Gravity Actually WorksThe Infinite Pattern That Never RepeatsHow Kodak Exposed Nuclear TestingIs Success Luck or Hard Work?Is Dust Mostly Dead Skin?Half the universe was missing... until nowThe Launch of Perseverance to MarsTurbulent Flow is MORE Awesome Than Laminar FlowParallel Worlds Probably Exist. Here’s WhyThis equation will change how you see the world (the logistic map)Why New Years Resolutions Fail & How To SucceedHow to Slow Aging (and even reverse it)Chaos: The Science of the Butterfly Effect3 Perplexing Physics ProblemsWhy Trees Are Out to Get YouEngineering with OrigamiThe Bizarre Behaviour of Rotating BodiesDoes Planet 9 Exist?Flamethrower vs AerogelMaking Liquid Nitrogen From Scratch!Mars Helicopter (before it went to Mars)Why the Future of Cars is ElectricWhy Apollo Astronauts Trained in Nuclear Bomb CratersHow Cod Saved the VikingsI Waterproofed Myself With Aerogel!Can You Swim in Shade Balls?Thumbnail Guidelines • Each suggestion should include no more than three visual elements. • Focus on one dominant focal point that conveys the curiosity gap. • Ensure the visual style aligns with the channel’s theme of AI, technology and entrepreneurship.\n\nOutput Format Your response must strictly follow the format below, with no additional commentary. \n\nKeep the video idea to 20 words maximum:\n\nVideo idea:\n🤩Title:\n🤩Thumbnail:\n\nVideo idea:\n💎Title:\n💎Thumbnail:\n\nVideo idea:\n🔥Title:\n🔥Thumbnail:\n\nStep-by-Step Process Identify the Core Topic: Analyse the viral video’s content to determine its main subject.Spot the Curiosity Gap: Consider what surprising element or secret is hinted at—what makes the concept compelling?Adapt for the Channel: Transform the idea to fit Jack Roberts’ niche, ensuring consistency with the channel’s focus and tone.Craft Your Ideas: Produce three unique title and thumbnail combinations that adhere to the guidelines above.\n\nReview: Check for clear, concise, and grammatically correct British English throughout.Task Using the improved blueprint above, generate three YouTube video titles and three corresponding thumbnail suggestions for the given viral video: \n\nTitle:{{2.`📚 Title`}}\nDescription of its thumbnail: {{7.result}}\n",
+                "model": "deepseek-chat",
+                "maxtokens": "8192"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -81,
+                    "y": 17
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My deepseek connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "app#deepseek-ff6ydu"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "DeepSeek Chat"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:app#deepseek-ff6ydu",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "system",
+                        "type": "text",
+                        "label": "Enter system prompt",
+                        "required": true
+                    },
+                    {
+                        "name": "user",
+                        "type": "text",
+                        "label": "Enter user prompt",
+                        "required": true
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Select Model",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "deepseek-chat",
+                                "deepseek-reasoner"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "maxtokens",
+                        "type": "integer",
+                        "label": "Max tokens",
+                        "validate": {
+                            "max": 8192,
+                            "min": 1
+                        },
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "google-docs:addAnImageToADocument",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "choose": "dropdown",
+                "destination": "drive",
+                "document": "/1RX-rTiVGj7RwK4Zb85BApzySOuftQjJ0MP1QZrv_8L0",
+                "select": "document",
+                "uri": "{{2.`Thumbnail 🤩`}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 326,
+                    "y": 16
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "Google Connection (jack@aiautomationswithjack.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "choose": {
+                            "label": "By Dropdown"
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        },
+                        "document": {
+                            "mode": "chose",
+                            "path": [
+                                "👾 YouTube Analysis"
+                            ]
+                        },
+                        "select": {
+                            "label": "By appending to the document"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "choose",
+                        "type": "select",
+                        "label": "Select a Document",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "mapping",
+                                "dropdown"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "document",
+                        "type": "file",
+                        "label": "Document ID",
+                        "required": true
+                    },
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Insert an Image",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "location",
+                                "document",
+                                "segment"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "uri",
+                        "type": "url",
+                        "label": "Image URL",
+                        "required": true
+                    },
+                    {
+                        "name": "height_magnitude",
+                        "type": "number",
+                        "label": "Height Magnitude in Points"
+                    },
+                    {
+                        "name": "width_magnitude",
+                        "type": "number",
+                        "label": "Width Magnitude in Points"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "google-docs:appendADocument",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "choose": "dropdown",
+                "destination": "drive",
+                "document": "/1RX-rTiVGj7RwK4Zb85BApzySOuftQjJ0MP1QZrv_8L0",
+                "select": "document",
+                "text": "Title: {{2.`📚 Title`}}\nChannel: {{2.`👀 Channel`}}\nViews: {{2.`📈 Views`}}\nUploaded {{2.`📆 Uploaded Date`}}\n\nAI:\n{{6.choices[].message.content}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 622,
+                    "y": 23
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "Google Connection (jack@aiautomationswithjack.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "choose": {
+                            "label": "By Dropdown"
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        },
+                        "document": {
+                            "path": [
+                                "👾 YouTube Analysis"
+                            ]
+                        },
+                        "select": {
+                            "label": "By appending to the body of document"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "choose",
+                        "type": "select",
+                        "label": "Select a Document",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "mapping",
+                                "dropdown"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "document",
+                        "type": "file",
+                        "label": "Document ID",
+                        "required": true
+                    },
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Insert a Paragraph",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "location",
+                                "document",
+                                "segment"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Appended Text",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

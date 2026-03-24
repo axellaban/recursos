@@ -1,0 +1,3093 @@
+[00:00:00] Welcome to the most comprehensive rag
+[00:00:02] masterass on YouTube, where I'm going to
+[00:00:04] take you from beginner to expert. I've
+[00:00:07] sold rag systems to so many companies, I
+[00:00:09] even flew out to New York to compete in
+[00:00:12] NA10's first ever rag agent competition.
+[00:00:15] I'm going to take you from theory to
+[00:00:17] actual business systems that make money.
+[00:00:19] We're going to cover the best rag
+[00:00:21] systems that are working today and
+[00:00:23] practical builds that regardless of your
+[00:00:25] experience level, you can get working
+[00:00:27] immediately. There will be timestamps
+[00:00:28] down below the video, so feel free to
+[00:00:30] look at any section you want to as you
+[00:00:32] go and definitely bookmark this video so
+[00:00:34] you can come back to it whenever you're
+[00:00:36] going to building rag agent. Now, this
+[00:00:38] rag masterass is going to take you from
+[00:00:39] beginner to expert. Now, rag is the most
+[00:00:42] profitable AI skill that you can learn
+[00:00:45] in 2026. The annual global AI market is
+[00:00:49] projected to hit $1.8 trillion by 2030,
+[00:00:53] according to PWC. Businesses need AI
+[00:00:57] systems to use their data. And you can
+[00:00:59] rag any data you can imagine. PDFs,
+[00:01:02] documents, contracts, Excel
+[00:01:03] spreadsheets, phone conversations, the
+[00:01:05] internet, books, YouTube, podcasts. You
+[00:01:07] literally name it, you can rag it.
+[00:01:09] People often say, "Jack, you'll rag
+[00:01:10] anything." And I can't deny those
+[00:01:12] allegations. But let me give you a
+[00:01:13] thought experiment. You just hired the
+[00:01:16] world's smartest assistant. And we're
+[00:01:18] pretty happy about that because this is
+[00:01:19] good news. But there's a catch. So
+[00:01:21] whilst he's got a very high IQ and is
+[00:01:23] really helpful, they're not able to
+[00:01:25] retain any of the information that we
+[00:01:27] actually gave her and they're lying
+[00:01:28] about it. So we don't know when they're
+[00:01:30] lying and when they're actually
+[00:01:32] retrieving. Now this is what we call the
+[00:01:35] memory problem. And hallucinations
+[00:01:37] aren't just inconvenient for certain
+[00:01:39] sectors and businesses, healthcare,
+[00:01:40] medical, and anyone else. They can be
+[00:01:42] very costly because you're giving the
+[00:01:44] wrong information to people or straight
+[00:01:46] out illegal if it gives or creates false
+[00:01:49] information. is just simply not true.
+[00:01:51] And whatever business you're in, you
+[00:01:52] need accuracy. Now, rag is the strongest
+[00:01:56] defense that we have to this and every
+[00:01:58] business needs it. Whether you are a
+[00:01:59] significantly large business that has
+[00:02:01] turnovers of 8 n 10 figures or you're
+[00:02:04] smaller, rag has a place to help every
+[00:02:06] business. I'm going to cover exactly
+[00:02:07] what rag is shortly, but I have to
+[00:02:09] explain to you the context why we're
+[00:02:11] even talking about this today. And it's
+[00:02:12] cheaper than fine-tuning. And if you
+[00:02:14] don't know, finetuning is basically when
+[00:02:15] you train a model on specific data. and
+[00:02:17] it can cost between5 to $50,000 plus
+[00:02:20] depending on lots of variables. Rag is
+[00:02:23] way more accessible and way cheaper to
+[00:02:25] train that information on for your
+[00:02:26] particular company. Almost anything you
+[00:02:28] do with AI is going to involve data and
+[00:02:30] rag is at the center of that data. It's
+[00:02:33] one framework almost infinite
+[00:02:35] applications for example real estate
+[00:02:37] operations education tracking retrieving
+[00:02:39] data anything you could possibly imagine
+[00:02:42] rack can be involved in some shape or
+[00:02:43] form. Now, for business owners, the AI
+[00:02:46] native businesses of the future in 2026
+[00:02:48] and beyond are the ones that can
+[00:02:50] fundamentally control their data and
+[00:02:53] have the best access and context with
+[00:02:56] that data. And Rag is the operating
+[00:02:58] system for that data. And it saves you
+[00:03:00] hundreds of hours and can even unlock
+[00:03:02] new product categories for you that just
+[00:03:03] quite simply did not exist before. And
+[00:03:05] new product categories means new revenue
+[00:03:07] streams. For agencies, rag systems sell
+[00:03:10] between $5 to $50,000 plus. It's my
+[00:03:13] agency's most frequent request and I've
+[00:03:15] sold many of these myself and also
+[00:03:16] taught hundreds of other people to learn
+[00:03:18] how to build AI and actually monetize
+[00:03:20] and leverage it. Rag is the most
+[00:03:22] profitable skill to learn in 2026. And
+[00:03:24] in this video, I'm going to show you
+[00:03:26] quick one minute rag systems you can
+[00:03:27] build all the way to very complex rag
+[00:03:29] systems so you have a full comprehensive
+[00:03:32] knowledge. The kind of 20% of
+[00:03:34] information that's going to give you the
+[00:03:35] 80% of results. And I'm also going to
+[00:03:37] include what I call the the three rag
+[00:03:39] infinity stones, which is in part
+[00:03:41] inspired by the fact they've got this
+[00:03:42] beautiful huge Thanos gauntlet that I
+[00:03:44] got for a birthday a couple years ago.
+[00:03:46] That if you crack these three elements
+[00:03:48] of rag, it will put you in the top 1% of
+[00:03:51] all rag builders. Now, to build rag
+[00:03:53] systems that are actually profitable and
+[00:03:54] best-in-class, you've got to have a
+[00:03:56] great understanding of what it is. So,
+[00:03:57] in really simple terms, what is rag? Rag
+[00:04:00] stands for retrieval augmented
+[00:04:02] generation. It is in really simple terms
+[00:04:04] an AI that remembers and learns and
+[00:04:06] responds smarter. Essentially all it
+[00:04:09] does when you ask it a question is it
+[00:04:11] retrieves information. It augments that
+[00:04:13] information and then it generates it to
+[00:04:15] give a better response. But make it
+[00:04:17] sound a little bit simpler. Let's
+[00:04:18] imagine that we've hired this beautiful
+[00:04:21] 800 IQ librarian. Really great for our
+[00:04:23] library, right? Really freaking awesome.
+[00:04:25] We can ask it many questions about the
+[00:04:26] books. But the problem is despite this
+[00:04:29] wealth of knowledge that it's got, he
+[00:04:31] forgets often times where the books are,
+[00:04:34] he doesn't understand where the
+[00:04:35] information is. Rag is kind of like an
+[00:04:38] indexing card that lets him know where
+[00:04:41] all the information is on the bookshelf.
+[00:04:43] So, for example, if we ask it a question
+[00:04:44] about our company's HR policy or what
+[00:04:47] was it that Mrs. Higgins said on the
+[00:04:50] 17th of October, for example, it'll say,
+[00:04:53] "Great. I know exactly where that
+[00:04:56] information is and he'll simply reach
+[00:04:57] over to the right shelf and grab for us
+[00:04:59] the golden book that has that
+[00:05:01] information without the indexing card.
+[00:05:03] It will not be able to do this. Now,
+[00:05:05] there's one key piece of information
+[00:05:06] that's worth calling out here, which is
+[00:05:07] why we need rag anyway. And why can't we
+[00:05:10] just ask language models? So,
+[00:05:11] essentially what happens is with any
+[00:05:12] model you've got, it's got what is known
+[00:05:14] as a context window. Okay, so you may or
+[00:05:18] may not know this, but when you're
+[00:05:20] actually using an air chat bot like
+[00:05:22] Gemini, like chat GPT, what effectively
+[00:05:24] happens is that the whole conversation
+[00:05:26] is pasted into the chat every single
+[00:05:29] time you have it. So firstly, hey, how's
+[00:05:30] it going? And it says, I'm great, thank
+[00:05:32] you. How are you? And then I say, what's
+[00:05:34] the capital of Denmark? The entire
+[00:05:36] conversation is consistently filtered
+[00:05:38] through, which is fine. But what
+[00:05:40] happens? It's got a limited context
+[00:05:42] window. Which is why if you're using
+[00:05:43] these models, you may ask it a question
+[00:05:45] and it's like, "Hey, I don't actually
+[00:05:46] remember the answer." So Gemini, for
+[00:05:48] example, which is Google's model, has a
+[00:05:50] million token context window, which
+[00:05:53] means it can quote unquote remember
+[00:05:55] things up to a million tokens. So in the
+[00:05:58] early days, people used to just give it
+[00:05:59] loads of context. But the problem is
+[00:06:00] when you want to retrieve that
+[00:06:02] information reliably and accurately and
+[00:06:05] site things or you want more information
+[00:06:08] in a million tokens, context is no
+[00:06:10] longer sufficient. Even though that over
+[00:06:13] time models are getting better at
+[00:06:15] context, it's not great because we want
+[00:06:18] it to be accurate and we don't know when
+[00:06:20] the AI hallucinate. That's the problem.
+[00:06:23] It's your confidence in what it's
+[00:06:24] saying. So if I were to show you
+[00:06:26] practically what does it look like in
+[00:06:27] reality. So this is an example in N8N.
+[00:06:30] N8 is a noode platform and it just lets
+[00:06:33] us connect things other things. My last
+[00:06:36] business for example the startup that I
+[00:06:37] sold we built in a no code platform
+[00:06:40] initially. So I know a lot about these
+[00:06:41] things. So if you look over here
+[00:06:43] effectively what happens is we have an
+[00:06:44] agent and we will ask this qu you know
+[00:06:47] this agent questions here with this chat
+[00:06:49] window and what the agent can do is
+[00:06:51] reach over to its rag database over here
+[00:06:54] to retrieve information. So to give you
+[00:06:56] just a little bit of technical
+[00:06:58] background before I show you by analogy,
+[00:06:59] let's say that we have an infinite
+[00:07:02] bookcase and yes, this artwork is
+[00:07:05] beautiful. We have an infinite bookcase.
+[00:07:07] Okay. Now, effectively what happens is
+[00:07:09] when we vectorize something, effectively
+[00:07:12] what we do is we have a piece of
+[00:07:13] information. Let's just call it, I don't
+[00:07:14] know, the Harry Potter books. Okay. And
+[00:07:16] we've got our favorite book over here.
+[00:07:19] What happens when you vectorize this
+[00:07:22] information is that the AI will actually
+[00:07:24] chop it into chunks. So for example, it
+[00:07:26] will chop it into chunks of 10 pages
+[00:07:29] like this. And it does this throughout
+[00:07:30] the entire book. So there's 10 pages,
+[00:07:32] there's 10 pages, blah blah blah all the
+[00:07:35] way down. And then what it does is takes
+[00:07:37] each of those 10 pages and puts it in
+[00:07:40] the bookshelf. So this would be, you
+[00:07:42] know, bookshelf one, bookshelf two, blah
+[00:07:44] blah blah all the way through. But it
+[00:07:45] doesn't put it as text. What the AI
+[00:07:47] actually does is it converts that
+[00:07:49] information into well what we call it
+[00:07:51] vectorizes it and it gives it a really
+[00:07:54] really really really long number that
+[00:07:56] goes on and on and on and on on all the
+[00:07:58] way through and we call this the
+[00:08:00] embedding and that process is called
+[00:08:03] basically you have an embedding model
+[00:08:04] that does that. So that the data that
+[00:08:06] kind of 10 pages of information has a
+[00:08:09] kind of unique code identifier. Then
+[00:08:12] what happens is it's all stored in this
+[00:08:14] thing. And so let's just say these 10
+[00:08:15] pages are about why Harry Potter, you
+[00:08:18] know, when he gets his invisibility. You
+[00:08:20] can tell haven't seen Harry Potter in
+[00:08:21] ages. When we then ask a a question, it
+[00:08:24] uses the same embedding model to turn
+[00:08:27] that question into this kind of like a
+[00:08:29] number that's similar and then it will
+[00:08:31] pull back the most relevant sections for
+[00:08:33] us. Let me give you this by bit of
+[00:08:34] analogy. Okay, so let's just say that we
+[00:08:36] have an office for example and we have
+[00:08:38] somebody here who runs the office. In
+[00:08:39] this this instance, it's you. and we
+[00:08:41] have a wonderful and helpful secretary
+[00:08:42] and what she does is takes all the
+[00:08:44] company information and she puts it into
+[00:08:46] this bookcase in exactly the same print.
+[00:08:48] Okay, so we've got a book for HR
+[00:08:50] policies, a book for our standard
+[00:08:52] operating procedures and businesses,
+[00:08:53] whatever the specifics are. Okay, and
+[00:08:55] then effectively what we do is we can go
+[00:08:57] overhead and she goes over for us and we
+[00:08:59] when we ask her a question like hey you
+[00:09:00] know what's our policy on recruitment?
+[00:09:03] Okay, I want to hire somebody. Hey,
+[00:09:05] what's our policy on recruitment? All
+[00:09:07] she does is she simply shoots over she
+[00:09:08] grabs to do goes to the bookcase and
+[00:09:10] grabs the most relevant books on
+[00:09:12] recruitment and brings him back. That's
+[00:09:14] effectively all that raggers. And to
+[00:09:16] show what that looks like in practice
+[00:09:17] again we would have over here the office
+[00:09:20] which is our guy which is the in this
+[00:09:22] case the agent who we give instructions
+[00:09:24] to. Then we'd have the actual knowledge
+[00:09:26] base itself which is where we're storing
+[00:09:27] things the vectorization the information
+[00:09:29] and then finally we have the actual
+[00:09:31] memory where we access that thing. So
+[00:09:33] that is pretty much like a very kind of
+[00:09:35] like simplistic overview of what rag is
+[00:09:38] and why it's so freaking important. But
+[00:09:40] I want to really drill down on what you
+[00:09:42] can rag. And like I say, it's been said
+[00:09:44] that you can rag pretty much anything.
+[00:09:46] Any kind of information you could
+[00:09:47] possibly imagine. Literally, you know,
+[00:09:50] PDFs are a big one. Word docs,
+[00:09:52] databases. I'm going to show you some
+[00:09:54] really interesting insights on databases
+[00:09:55] that you may not have seen anywhere else
+[00:09:57] on YouTube about how do I get big data
+[00:09:59] sets that I can ask questions about? And
+[00:10:01] not only questions like you know what
+[00:10:03] happened with account 747 you can also
+[00:10:06] ask questions relationally which means
+[00:10:08] that we can understand the relationship
+[00:10:10] between the data. So say for example
+[00:10:12] you've got a community and you have
+[00:10:14] churn and you have sales and you have
+[00:10:17] people you can actually ask it questions
+[00:10:19] about things like trends. You can't do
+[00:10:22] that with traditional rack. So I'm going
+[00:10:23] to show you some really exciting stuff
+[00:10:24] in this video. You can do things about
+[00:10:26] Zoom. So, let's say you and I are on a
+[00:10:28] call together and we're selling to
+[00:10:29] somebody or, you know, maybe one of our
+[00:10:31] clients and we want to just
+[00:10:32] automatically capture a gold mine of
+[00:10:34] information. We can do emails, books,
+[00:10:37] literally websites, anything that exists
+[00:10:39] on the internet ever. Any article, any
+[00:10:42] website you can imagine, we can
+[00:10:43] essentially scrape that YouTube videos,
+[00:10:44] social stuff. So, if you want to grow
+[00:10:46] your social media, kickass, we can
+[00:10:47] effectively rag anything. Now, I'm going
+[00:10:50] to show you two agency you can build
+[00:10:51] just to get used to what brag looks like
+[00:10:53] in under a minute to get started. The
+[00:10:55] first of which is going to be 11 Labs
+[00:10:57] which is an incredible text to speech
+[00:10:59] technology platform and it does so much
+[00:11:00] stuff for this. So we're actually going
+[00:11:02] to hear it and ask it questions. So if
+[00:11:04] you use 11 Labs come over if you go to
+[00:11:05] agents on the left hand side and let's
+[00:11:07] want to create a brand new agent just
+[00:11:09] for the sake of it. I'm going to click
+[00:11:10] on a business agent like this and we're
+[00:11:12] going to say hey let's just say it's
+[00:11:13] finance and banking and we want it to do
+[00:11:15] customer support. Really really cool.
+[00:11:17] And we'll call this one doctor help.
+[00:11:20] Okay. And we can give it a website and
+[00:11:22] this will help us personalize it. So say
+[00:11:24] for example that we have a website of I
+[00:11:26] don't know let's go for Monzo's website
+[00:11:29] uh which is like a bank in the UK. We
+[00:11:30] come down here we can simply come over
+[00:11:32] and grab that information and you're
+[00:11:33] going to see just how easy it is to
+[00:11:35] create these rag things. Main goal is
+[00:11:37] help concepts. That's fine. And then
+[00:11:39] click on create a agent. You can make it
+[00:11:41] text only or audio. Really
+[00:11:43] straightforward. And this is something
+[00:11:44] you can easily slot into any website
+[00:11:46] that you want to. Now this is really
+[00:11:48] cool. Of course we can go down and pick
+[00:11:50] languages and how it sounds. But I just
+[00:11:52] want to give you a really simple view of
+[00:11:54] this. So we've got a cool system prompt
+[00:11:55] here you can give it. But if I just come
+[00:11:57] down and show you one really simple
+[00:11:58] thing knowledge base add document. I can
+[00:12:00] type in a URL. I can add files or I can
+[00:12:03] create text. So if I click on add files
+[00:12:04] here for example and upload something.
+[00:12:06] So I downloaded an insurance policy from
+[00:12:08] Lexus. Let me just upload that real
+[00:12:10] quick. I've selected it. I click on add
+[00:12:11] file. Equally I could give it any
+[00:12:13] information about a website if I wanted
+[00:12:15] to. It doesn't really matter. You can
+[00:12:16] just manually upload it. I'm going to
+[00:12:18] show you ways how you kind of expedite
+[00:12:19] this and take this to another level. And
+[00:12:21] again, add another document. Do you want
+[00:12:22] to add a website? Let's add in, you
+[00:12:24] know, this website. Why not? And you can
+[00:12:26] just very quickly, very simply, just add
+[00:12:28] in all this stuff, websites, documents,
+[00:12:30] files. Doesn't really make a difference.
+[00:12:32] And then we can come over and we can
+[00:12:33] simply save this and then test the agent
+[00:12:35] immediately. Obviously, there's a
+[00:12:36] million things you can do. I've got
+[00:12:38] videos on my channel if you'd love to
+[00:12:39] learn about voice technology just like
+[00:12:40] this. Excellent. Now, we want to pick
+[00:12:42] the voice. And if you're wondering why
+[00:12:43] is my shirt changed, when I recorded
+[00:12:45] this, the audio was really bad. So, I
+[00:12:46] didn't want to get bad audio. So, I am
+[00:12:48] redoing this entire thing. Now in the
+[00:12:50] agent section we can pick voice. I've
+[00:12:52] chosen Archer here cuz he's got a
+[00:12:53] beautiful English voice. It's not about
+[00:12:55] what we have or what. Beautiful. It's
+[00:12:57] fantastic. So what we can do is simply
+[00:12:59] test the agent if you want to. Now the
+[00:13:00] cool thing about Lemlabs is we can build
+[00:13:02] workflows. We can connect this to
+[00:13:04] websites. We can pretty much do anything
+[00:13:06] we want to this technology and it's a
+[00:13:08] full rag system. So we click on test AI
+[00:13:10] agent. We can click on this to chat with
+[00:13:12] him. Come down here and we can ask it
+[00:13:13] some kind of random question like hey
+[00:13:15] could you give him an example from the
+[00:13:17] insurance document? something that is
+[00:13:18] nonobvious. Bam. And if you want, you
+[00:13:20] want to use my text to speech. It's my
+[00:13:22] brand new startup, Glido. It's in beta
+[00:13:24] right now. I'll put a link down below if
+[00:13:25] you want to apply and uh join the wait
+[00:13:26] list. So, we push this one out here cuz
+[00:13:28] dude, text to speech is so cool. It's
+[00:13:30] actually the only thing that I I've ever
+[00:13:32] used that saved me like an hour a day.
+[00:13:34] It's so freaking cool. Hello. I can
+[00:13:36] certainly do that. I can give an
+[00:13:36] example. And you can have a conversation
+[00:13:38] with the entire document like that. As
+[00:13:39] you go down and go specifics, you can
+[00:13:41] also have a conversation with it if you
+[00:13:42] want to by clicking out, clicking test
+[00:13:44] agent, and then just calling the agent
+[00:13:46] like so. We just validate the Mac that
+[00:13:48] we're using.
+[00:13:48] >> Hi, I'm Marge, your finance guide. I can
+[00:13:50] explain.
+[00:13:51] >> And then you can essentially have a
+[00:13:52] conversation with it. Just like that,
+[00:13:53] we've got our first rack system nailed
+[00:13:55] down. Now, the second one that I want to
+[00:13:56] show you is this beautiful Google LLM
+[00:13:59] notebook. It's called Notebook LLM. It's
+[00:14:01] incredible. Click on try uh notebook LM.
+[00:14:04] And when you open up, you can
+[00:14:05] effectively get any data sources you
+[00:14:07] want. So, if I create a brand new
+[00:14:08] notebook, let's say that you've got a
+[00:14:09] video of mine and you think, Jack, I
+[00:14:11] love the video. I want to study it. I
+[00:14:13] want to learn more specifics. I want to
+[00:14:15] chat to your video. What you can do is
+[00:14:17] come over to the J YouTube channel. We
+[00:14:18] can find any video we like. So let's
+[00:14:20] just say that we go with this full AI
+[00:14:22] business course for instance. We copy
+[00:14:24] the clean link. You come over to this
+[00:14:26] and you can click on YouTube and paste
+[00:14:28] it in. And then what you can also do
+[00:14:29] with this is add any source material you
+[00:14:31] want to like ultimate YouTube videos or
+[00:14:33] any document from your Google Drive or
+[00:14:35] website. So we click on website. For
+[00:14:37] example, let's say that I want to know
+[00:14:38] more about 11labs.io, right? I can come
+[00:14:41] back over here and you basically just
+[00:14:43] keep on posting as many different
+[00:14:44] websites as you want to that you want to
+[00:14:46] chat with that you don't have time. Like
+[00:14:48] this is profoundly powerful guys. It's
+[00:14:50] insane. It's one of the most OP tools
+[00:14:52] that is very simple to use. And then you
+[00:14:54] can simply ask it questions like what
+[00:14:56] did Jack say the best way was to get
+[00:14:58] your very first client. Bam. Simple
+[00:15:01] question like that. It goes in and then
+[00:15:02] what will happen is we can ask any
+[00:15:04] single question. Again, look at this
+[00:15:05] text to speech saving us so much time. I
+[00:15:07] freaking love it. And then what we can
+[00:15:09] do here is then actually go then and
+[00:15:10] create full podcast off the back of it.
+[00:15:13] So recommended strategy, goal of
+[00:15:14] resonance, free offer, value exchange,
+[00:15:16] all this beautiful stuff. Now what we
+[00:15:17] can do is get an audio overview. We
+[00:15:19] click on that button and then what that
+[00:15:21] will do is turn all our resources into a
+[00:15:23] podcast. What this will do is accelerate
+[00:15:24] your rate of learning. But it's a
+[00:15:26] profoundly simple way for you to upload
+[00:15:27] documents, websites, YouTube videos to a
+[00:15:30] point where you can rank essentially
+[00:15:32] anything. This is an excellent uh
+[00:15:34] personal use case that will just help
+[00:15:35] you completely crush it. Now, the third
+[00:15:38] thing I want to show you here is going
+[00:15:39] to be in chat GPT, the third agent, uh,
+[00:15:41] which is a bit of a b bonus agent in a
+[00:15:43] way because this recently changed. Um,
+[00:15:45] so what you're going to do actually is
+[00:15:46] head over to platform.openi.com.
+[00:15:48] Uh, and I'm going to show you this brand
+[00:15:50] new system they've got here. Okay, so if
+[00:15:52] you come on the left hand side here,
+[00:15:53] we've got this thing called agents.
+[00:15:55] You've probably seen them recently about
+[00:15:57] building agents and click on agent
+[00:15:58] builder. And what this lets you do is
+[00:16:01] effectively build agents and do rag
+[00:16:03] system. So if I click on create a new
+[00:16:04] workflow for example, we've got start,
+[00:16:06] we've got my my agent. Now in the right
+[00:16:08] hand side here, you can come downstairs,
+[00:16:10] click on tools, click on file search,
+[00:16:14] and then literally upload anything that
+[00:16:16] you want to. So I've just chosen to
+[00:16:18] upload a rag query rewrite basically
+[00:16:20] just something about how make better
+[00:16:21] prompts and you'll see this later in the
+[00:16:22] video and I've attached that. Now what's
+[00:16:24] really cool here is you can customize
+[00:16:26] the chunk size and overlap. I'll get
+[00:16:27] into that later in the video, but
+[00:16:28] effectively add all the information that
+[00:16:30] you want to. What is really cool with
+[00:16:32] this one though is we can add in
+[00:16:33] guardrails. Cool. So guys, I've added in
+[00:16:35] this guardrail section and what you can
+[00:16:37] do here which is really decent is come
+[00:16:38] down here to you got moderation,
+[00:16:40] jailbreak, etc. You can click on this
+[00:16:43] which is personal identifiable
+[00:16:44] information and you can select any
+[00:16:46] unique information like national
+[00:16:47] insurance number, UK NHS number, all
+[00:16:49] these beautiful things and completely
+[00:16:51] remove it. basically means that if
+[00:16:53] you've got this as a chatbot or you're
+[00:16:55] giving it to clients and you want to
+[00:16:56] have an agent conversation and they give
+[00:16:58] you some personal data and none of that
+[00:17:00] will come through to your system and
+[00:17:01] obviously you can preview this and type
+[00:17:03] conversations like hey what is
+[00:17:06] I don't know something like what is the
+[00:17:08] fundamental purpose of a rag query
+[00:17:11] rewriter ask it any kind of question and
+[00:17:14] literally just like that you can have
+[00:17:16] full conversations and you can deploy
+[00:17:18] this into your website and do different
+[00:17:19] things like this so you see this one has
+[00:17:21] not this has failed because it's
+[00:17:22] detected something wrong with that. But
+[00:17:24] if I actually come off this, come over
+[00:17:25] here to his guard rerails and let's just
+[00:17:27] delete that. Bring it over. Now, if I
+[00:17:29] preview this and say something like give
+[00:17:31] me an example of a rag query rewriting
+[00:17:34] agent, something like this. We're going
+[00:17:36] to post this one in. And then you'll see
+[00:17:38] the agent will actually go ahead and
+[00:17:39] check its database of knowledge to make
+[00:17:41] to do that. The guardrails can be a
+[00:17:42] little bit strict, a little bit
+[00:17:43] overpowered, so you can select all the
+[00:17:45] things that you don't want to do and
+[00:17:46] make it as specific as you would like.
+[00:17:48] Beautiful. Now we're going to build one
+[00:17:49] of these rag systems in NA10. So we're
+[00:17:52] going to come over to NA10 and begin
+[00:17:54] with this one. So the first thing we
+[00:17:55] want to do is get your data. So let's
+[00:17:58] say this is a really simple way to get
+[00:17:59] any data into any vector database and
+[00:18:01] ask questions. The first thing we do is
+[00:18:03] come down here. I'm going to come down
+[00:18:04] here. I'm going to search for form. Now
+[00:18:06] NA10 has a feature where you can pretty
+[00:18:08] much create form within the scenario. So
+[00:18:10] come down here and I'll just say hey
+[00:18:11] this is the form name. Form description
+[00:18:14] is simply upload your file. Come down to
+[00:18:17] form elements. Come here and we call
+[00:18:20] this one files. Okay. And then element
+[00:18:22] type is very simply file. And then that
+[00:18:25] is literally it. And then what we can do
+[00:18:26] with this guys is upload as many files
+[00:18:29] as we'd like to rack. And if you want to
+[00:18:31] do databases, you want huge databases
+[00:18:33] and ask you questions. I'm going to show
+[00:18:34] you exactly how to do that in this video
+[00:18:36] because it's slightly different and it's
+[00:18:38] again I'm going to cover absolutely
+[00:18:39] everything you ever need. Now we've got
+[00:18:40] the file. The next thing that we need to
+[00:18:42] do here is get the vectorzation model.
+[00:18:45] Right. So to do that we're going to use
+[00:18:46] something called pine cone. Now pine
+[00:18:49] cone is really really cool. Effectively
+[00:18:50] you're going to come over here and
+[00:18:51] create an account if you haven't done so
+[00:18:52] already. When you've done that you're
+[00:18:53] going to see a page that looks a little
+[00:18:55] bit something like this. Now remember in
+[00:18:56] our analogy guys that we had we have
+[00:18:58] over here D for the data and then over
+[00:19:00] here we have our gigantic bookshelf
+[00:19:02] which is where all this data is going
+[00:19:04] and effectively all that pine cone is
+[00:19:06] doing is sitting in the middle and being
+[00:19:09] okay in our analogy our secretary right
+[00:19:11] who's taken the information from over
+[00:19:13] here and bring it over here. So this is
+[00:19:15] the world's best pine cone that we've
+[00:19:17] ever seen. As you can see, it looks a
+[00:19:18] little bit something like this. And
+[00:19:20] essentially what Pine cone will do is
+[00:19:21] take the data. It will vectorize it. So
+[00:19:24] give it loads of crazy numbers and then
+[00:19:26] store it in the data. And then in the
+[00:19:27] future, we want to ask questions. Pine
+[00:19:29] cone can come over to the data and bring
+[00:19:31] it back over here to the user. That's
+[00:19:32] the TTR of it. But practically speaking,
+[00:19:34] we learn pine cone.com. You can create
+[00:19:36] two scenarios completely for free. Come
+[00:19:38] down to correct index. Now this okay
+[00:19:41] over here you see lots of these are
+[00:19:42] called embedding models. When you hear
+[00:19:45] embedding models that's just a process
+[00:19:47] of turning data into a vectorzed store
+[00:19:50] into into a number. Now if I show you
+[00:19:53] here over here we had our beautiful
+[00:19:55] assistant right think of this as having
+[00:19:57] a level one assistant but they actually
+[00:19:59] go all the way up to level 10. I'm going
+[00:20:01] to touch on that later. For the time
+[00:20:02] being we're just going to pick over here
+[00:20:04] text embedding three small. Okay. This
+[00:20:07] is the model that's going to correct
+[00:20:08] codes for us. You need to come down here
+[00:20:09] to dimensions and just click 1536. We
+[00:20:13] need to give it a name. Since I'm
+[00:20:14] drinking beautiful coffee now, we got
+[00:20:16] this one from uh the fantastic coffee
+[00:20:18] planet. We're going to call this one
+[00:20:20] planet. Like that. And what we're going
+[00:20:21] to do is create index. Like two clicks.
+[00:20:23] We're ready to go. Now we come back over
+[00:20:25] to NAF and we need to add in the
+[00:20:27] assistant. So we come here. We're going
+[00:20:28] to go for Panko. So click on Pineco
+[00:20:31] Vector Store and click on add document
+[00:20:33] to vector store. Now we want to connect
+[00:20:35] it to Pineco. To do that, you click on
+[00:20:36] this little arrow. You're going to come
+[00:20:38] down here to create a new connection,
+[00:20:39] which I think you can do by here. Create
+[00:20:41] new credential. Come over to Pine. Come
+[00:20:43] down here on the left. Click on API
+[00:20:45] keys. Click on create a brand new API
+[00:20:47] key and call this one API key. Just like
+[00:20:49] that, or whatever you want to call it,
+[00:20:50] blah blah blah. Get that information.
+[00:20:52] And then just copy it. You come back
+[00:20:53] over. You paste that in there. Click
+[00:20:55] save. And then you're officially ready
+[00:20:57] to rock and roll. Now, when we click on
+[00:20:59] plan code index, it will show a couple
+[00:21:01] of examples. There we go. We got the
+[00:21:02] planet. Fantastic. Embedding batch size.
+[00:21:05] You don't need to worry about right now.
+[00:21:06] Again, I'm showing you a very simple
+[00:21:08] version and we're going to build on this
+[00:21:09] throughout the video as we go. Now, we
+[00:21:11] need to pick the embedding model, which
+[00:21:13] is exactly the same that we chose on
+[00:21:15] Pine Cap. So, we come down here. We're
+[00:21:17] going to go for the beautiful Open AI,
+[00:21:19] which is right here. And once again, if
+[00:21:20] you don't have the API key,
+[00:21:22] platform.com,
+[00:21:23] grab it, bring it over. Exact same
+[00:21:25] process I just showed you. Add options.
+[00:21:27] Text embedding three small is exactly
+[00:21:29] the one. And then we're good to go. And
+[00:21:30] then we just do this document thing,
+[00:21:32] which is basically saying, Jack, you've
+[00:21:33] given me the information. So come down
+[00:21:35] here, click on default data loader. Now
+[00:21:37] again, we could get more complicated
+[00:21:38] where you don't need to. We have this
+[00:21:39] data type. It's basically inject are you
+[00:21:42] giving me a document or are you giving
+[00:21:44] me text? If it's a document, we click
+[00:21:46] binary. If it's JSON, we just click
+[00:21:48] JSON. Now the cool thing is it will kind
+[00:21:50] of do all the hard work finding the
+[00:21:52] document. If it's a PDF, whatever it is,
+[00:21:53] it does all that stuff for us. Really,
+[00:21:55] really cool. Text splitting is simple
+[00:21:56] for now. If it's simple, it's every
+[00:21:58] thousand characters with a 200 character
+[00:22:01] overlap. So what does that actually
+[00:22:02] mean? Well, I'll show you right here. I
+[00:22:04] think I did a little analogy. You know,
+[00:22:05] I talked about we have a Harry Potter
+[00:22:06] book. Every 1,00 characters, it cuts off
+[00:22:09] and begins the next 1,00. But we have
+[00:22:11] this thing here which is the overlap.
+[00:22:13] And we call this overlap. So the last
+[00:22:15] 200 characters will also be included in
+[00:22:18] the next one. And so we have this kind
+[00:22:20] of oversection so that we can kind of
+[00:22:22] pull context and we don't lose anything
+[00:22:24] because what if the last sentence of
+[00:22:27] this one here, right, wasn't included
+[00:22:29] here. There was no overlap. But you'd
+[00:22:31] only really get that context if you
+[00:22:33] could see it in its full sentence. So
+[00:22:34] this is what that helps us to avoid by
+[00:22:36] having an overlap. All this to say,
+[00:22:37] we're just going to keep it simple for
+[00:22:38] this one and leave it right there. And
+[00:22:40] guys, that's literally it. So let's do
+[00:22:41] this one together. Click on execute
+[00:22:43] scenario like so. This pops up. We're
+[00:22:45] going to upload a file together. I've
+[00:22:47] uploaded our huge gigantic system with
+[00:22:49] lots of insurance stuff. And then we
+[00:22:51] click on submit. Once that's done, we
+[00:22:52] come back to the form. And you'll see
+[00:22:54] this working. We like the circle. Circle
+[00:22:56] is good. Circle means that it's it's
+[00:22:58] vectorizing for us. It's doing all the
+[00:22:59] embeddings which is ACE and it's
+[00:23:01] complete shut. If we head over now to
+[00:23:03] Pineco guys, we go to the database, we
+[00:23:05] should see this information and let's
+[00:23:07] have a look at it and you can see it is
+[00:23:09] now started to appear and it has taken
+[00:23:10] our big insurance document into 119
+[00:23:14] records. So if I click on one as a for
+[00:23:15] instance and you can see how it's given
+[00:23:17] us it's automatically pulled out all of
+[00:23:20] this metadata. What is the name of it?
+[00:23:22] What is this? What is that? And then
+[00:23:23] we've got the text here that you can see
+[00:23:25] that it's added it which is cool. You've
+[00:23:26] just vectorized your first document.
+[00:23:28] Congratulations. Now, the reason you
+[00:23:30] would use this instead of like a
+[00:23:31] standalone form is here we can do
+[00:23:33] anything. We can connect it to any
+[00:23:35] website, any database, any contact form.
+[00:23:37] You name it, we can literally do it.
+[00:23:38] Now, what we want to do is, well, we've
+[00:23:40] created it, but we want to ask it
+[00:23:41] questions, right? Maybe you want to give
+[00:23:42] that to a client, maybe you want to give
+[00:23:44] it to your team, whatever it is. So,
+[00:23:45] what we're going to do first of all is
+[00:23:46] come down here to chat trigger, and I'm
+[00:23:48] going to show you some cool stuff we can
+[00:23:49] do. But effectively, we want to ask it
+[00:23:51] questions. So, we come here. We click on
+[00:23:52] AI agent like sir. Beautiful. Now when
+[00:23:55] you build a agent we specify where's the
+[00:23:57] information coming from. It's just node
+[00:23:58] below which is fine but when we come
+[00:24:00] down here and give it a system message
+[00:24:02] which is basically it's call
+[00:24:03] instructions. So I'm going to say
+[00:24:04] something like hey answer questions by
+[00:24:07] using the insurance vector store. That's
+[00:24:10] it. Okay. Obviously we get more
+[00:24:12] complicated but this is just just to
+[00:24:13] show you. Okay. Now chat model come down
+[00:24:15] here. We're again we're going to go for
+[00:24:16] open AI which is fantastic. GPT4.1 mini
+[00:24:19] is okay for this one. Memory is just it
+[00:24:21] short-term memory in NA10. So this is
+[00:24:22] how this agent remembering things. I can
+[00:24:24] show you some bigger more impressive
+[00:24:26] memory in a little while, but
+[00:24:27] fundamentally that's the most important
+[00:24:28] thing. And then we'll just say I want
+[00:24:30] you to have a context conversation of
+[00:24:32] 50. And then we give it the tool which
+[00:24:33] is exactly the same as the last one. So
+[00:24:35] come down to pine cone pine cone vector
+[00:24:37] store. Now again look at this. All we do
+[00:24:39] is pick the same thing. So we had planet
+[00:24:41] is our vector store right for the
+[00:24:42] insurance documents and we say something
+[00:24:44] like information about insurance
+[00:24:46] documents. Cool. Then you have this
+[00:24:48] thing here called limit which is how
+[00:24:49] many segments do you want me to bring
+[00:24:52] back? General rule of thumb if it's a
+[00:24:54] question about concepts. So say for
+[00:24:56] example you had Alex Moses $100 million
+[00:24:58] leads and you want it to be more
+[00:24:59] conceptual stuff. I'm okay with it
+[00:25:01] bringing back more information. If I
+[00:25:03] want it to really get me the limited
+[00:25:06] most accurate things you would bias
+[00:25:07] towards having this lower. I'm going to
+[00:25:09] go for five on this one. But again I get
+[00:25:10] into more detail about these settings
+[00:25:12] video. This is just simple and we can
+[00:25:14] include the metadata for this one. It's
+[00:25:15] okay. Very simple. And then we want
+[00:25:17] embeddings model. Little quick hack you
+[00:25:19] can do very easily is just come down to
+[00:25:20] this embedding model here. Click on it.
+[00:25:22] We can just simply duplicate him, bring
+[00:25:23] him over, plug him in, and then we're
+[00:25:25] good to go. Now let's ask a question. So
+[00:25:27] if I said something like let's refresh
+[00:25:28] this here. All right. What can you tell
+[00:25:30] me about I don't know theft in my
+[00:25:33] policy. Okay, dead freaking simple. Ask
+[00:25:35] the question. Now you can see the
+[00:25:37] agent's thinking and you'll see the pine
+[00:25:39] con vector source start which is cool.
+[00:25:40] And you talk about these vectors guys.
+[00:25:42] You can see this is the query that it
+[00:25:44] sent theft coverage and this is response
+[00:25:46] got. But look at this. Your policy
+[00:25:48] covers theft under section two fire and
+[00:25:50] theft. The car suffers loss of damage
+[00:25:51] blah blah blah. And guys, just like
+[00:25:53] that, you've officially created your
+[00:25:55] first rag agent. Congratulations. Grab a
+[00:25:57] sip of coffee on JR for that. That's
+[00:25:58] really freaking cool. So that's
+[00:26:00] basically it. And with this one form
+[00:26:01] document guys, you can upload as many
+[00:26:03] documents as you want to. And once you
+[00:26:05] get it into these platforms, you can
+[00:26:06] effectively do anything you want to. And
+[00:26:08] of course guys, you can build the exact
+[00:26:10] same thing at meg.com. And I'll put this
+[00:26:12] blueprint down below for you so you can
+[00:26:13] copy it step by step. I will say that it
+[00:26:15] is a lot easier to build this into NA10,
+[00:26:18] which is why I'm going to focus on NA10
+[00:26:20] because if you do just literally follow
+[00:26:22] the steps I make, it will be way easier
+[00:26:24] for you to build that way. But
+[00:26:25] nonetheless, I'll put the blueprint down
+[00:26:27] below. So if you are using make, you can
+[00:26:28] plug and play as well. Now, building a
+[00:26:30] rag agent is one thing, a fundamental
+[00:26:32] rag agent. But if you don't know how to
+[00:26:33] get the data to scope data from any
+[00:26:35] source, your potential with rag is going
+[00:26:38] to be low. If you want to build
+[00:26:39] profitable rag systems, you've got to be
+[00:26:41] an incredible data scraper. Your very
+[00:26:44] first rag system, but the rabbit hole
+[00:26:47] goes so much deeper. Now, if you want to
+[00:26:49] be a great ragger, you must first become
+[00:26:53] an excellent scrape because if you can't
+[00:26:55] actually get the data, you can't really
+[00:26:57] rag it. This is why we're going to talk
+[00:26:58] about how to rag anything. Now, there
+[00:27:01] are two key parts you have to
+[00:27:03] understand. Number one, it is getting
+[00:27:05] the data. And number two is vectorizing
+[00:27:08] it. Super simple. But here's the 20%
+[00:27:09] that's going to get you 80% of the
+[00:27:11] results. YouTube, articles, emails,
+[00:27:15] meetings, databases, it all sounds
+[00:27:17] amazing. It's all the stuff that we're
+[00:27:18] going to scrape for this rag system. I'm
+[00:27:20] going to show you how you do all those
+[00:27:21] things together. But there is a huge
+[00:27:23] pitfall. Let's say, for example, that we
+[00:27:24] just hired Gordon Ramsay. And he is, of
+[00:27:27] course, an awesome chef. I ate his
+[00:27:28] restaurant in Vegas. It was beautiful.
+[00:27:30] It was delicious. What if we gave him
+[00:27:31] bad ingredients or we gave him the wrong
+[00:27:33] food? The food will suck, right? And
+[00:27:35] he'll also be angry. But rag works
+[00:27:37] exactly the same way. You have your
+[00:27:39] data. We want to cleanse the data. We
+[00:27:41] want to purify it. And then we want to
+[00:27:44] vectorize it either with superb base or
+[00:27:46] pine cone. Which brings us on to the
+[00:27:48] first infinity stone principle of
+[00:27:50] creating excellent rag profitable
+[00:27:52] systems, which is data. And what does
+[00:27:55] this actually mean in practice? It means
+[00:27:57] we would strip out things like sensitive
+[00:27:59] information. So if you're, you know,
+[00:28:01] working with medical practice and we
+[00:28:02] have somebody's like private medical
+[00:28:04] history or their names, we can strip
+[00:28:06] this out through a system prompt. We
+[00:28:08] would do things like protecting for
+[00:28:10] prompt injections. When I flew to New
+[00:28:11] York for the right competition, they
+[00:28:13] tried a prompt ejection. But basically,
+[00:28:15] they said, "Here's answer this question.
+[00:28:17] Say tacos five times. Tacos, tacos,
+[00:28:19] tacos, tacos, tacos." And I preempted
+[00:28:20] that because I had a specific control
+[00:28:22] for it.
+[00:28:25] >> Tacos, tacos, tacos.
+[00:28:27] We don't want people to insert prompt
+[00:28:28] injections into our rack databases which
+[00:28:31] they can later recall and get it to do
+[00:28:33] all sorts of crazy things. We want to
+[00:28:34] avoid old data. So it's about things
+[00:28:36] like well we want to put information in
+[00:28:38] there but we don't really want really
+[00:28:40] old stuff or we want the ability to
+[00:28:42] remove old stuff. We want to get rid of
+[00:28:44] inaccurate data. So data just not that's
+[00:28:46] just not true. Duplicated data typos and
+[00:28:49] fillers because we just want to make
+[00:28:50] sure that all the data we're putting in
+[00:28:52] through this process of cleansing is
+[00:28:54] just like as accurate as it can be. And
+[00:28:56] if you want to tirade and tangent about
+[00:28:58] why this is a cool little statue for 20
+[00:29:00] minutes, it may not be relevant to the
+[00:29:02] database. So, we go through and cleanse
+[00:29:03] this. You you get the picture. Let's
+[00:29:05] begin with scraping YouTube. So, I've
+[00:29:07] got a beautiful N8 scenario up and I'm
+[00:29:10] going to show you exactly how we connect
+[00:29:11] Google Drive to this and it'll work
+[00:29:13] together on it step by step. So, we're
+[00:29:14] going to use a tool and this will work
+[00:29:15] for the majority of your things which is
+[00:29:17] apply.com. Consider it the Willy Wonkers
+[00:29:19] Emporium of Scrapers. Effectively, you
+[00:29:22] can pick almost any platform you
+[00:29:23] possibly want and then you can do it.
+[00:29:24] I'm going to put a code down below.
+[00:29:26] You'll get some really cool discounts
+[00:29:27] from Appify because they reached out.
+[00:29:28] They're friends of the channel, uh, and
+[00:29:30] they love what we do here. So, we're
+[00:29:31] going to log into Appify, create an
+[00:29:32] account. If you're brand new, you will
+[00:29:34] get five bucks of completely free
+[00:29:36] credits as well when you get started,
+[00:29:38] which is very, very cool. So, let's have
+[00:29:39] a look then. So, the first thing I want
+[00:29:41] you to do is come down and click on, if
+[00:29:43] you come over to the Apple store, we're
+[00:29:44] going to look over. I'm going to go for
+[00:29:46] YouTube. Simple as that. Once you enter
+[00:29:48] in YouTube, you're going to see pop up,
+[00:29:49] which is the YouTube scraper. And then
+[00:29:52] you're going to click on it. Now, I'm
+[00:29:53] going to show you how this physically
+[00:29:54] works and what the cost is behind it.
+[00:29:56] So, you can do this for a,000 videos for
+[00:29:58] $5. You'd want to use YouTube, by the
+[00:30:00] way, because it's like the biggest
+[00:30:02] supply of information on the planet,
+[00:30:04] which is really cool. So, let's say
+[00:30:06] we've got all this information. I want
+[00:30:07] you to come down here and click on
+[00:30:09] direct URLs. And then we're going to
+[00:30:11] enter in a YouTube URL. Cool. So, I'm on
+[00:30:13] my YouTube channel. We're going to copy
+[00:30:15] this video URL real quick. So, copy
+[00:30:17] video URL. Come back over to Appify and
+[00:30:19] we're going to click on the direct URL,
+[00:30:21] which is cool. Then click on download
+[00:30:23] YouTube transcript and we download the
+[00:30:24] subtitles and save subtitles to key
+[00:30:26] value store. That's absolutely fine. And
+[00:30:28] as you can see there's loads of filters
+[00:30:29] and things that we can do. Now whenever
+[00:30:31] you scrape from a website like ampify my
+[00:30:33] recommendation to you is that we firstly
+[00:30:35] get it working in the platform and then
+[00:30:36] once it's working in the platform we
+[00:30:38] then bring it over to N8 to do that. So
+[00:30:41] I'm going to do here is click save and
+[00:30:42] start for example. This then fires up
+[00:30:44] which is now starting the run which is
+[00:30:45] excellent. And then we'll see the actual
+[00:30:47] transcript that lines with an app. And
+[00:30:49] just like that guys we have all of this
+[00:30:51] beautiful data. So I can represent this
+[00:30:53] as a JSON for example and we see all the
+[00:30:55] information. So we've got the title, the
+[00:30:56] ID, the URL, how many likes it got, the
+[00:30:59] date it was on, the channel URL, all
+[00:31:00] this beautiful stuff. And then I can see
+[00:31:02] all fields here. And then this will show
+[00:31:03] me the entire transcript with
+[00:31:05] timestamps. How freaking cool is that?
+[00:31:07] Of course, you can remove timestamps if
+[00:31:09] you want to in the settings. So this is
+[00:31:11] really cool. So let's go back over to
+[00:31:12] the YouTube scraper. Now once you played
+[00:31:14] around with the settings and you've got
+[00:31:16] the thing that you want, and by the way,
+[00:31:17] you can also just download it based on a
+[00:31:19] search term. So, I could say search for
+[00:31:21] the word rag and then download the last
+[00:31:22] 10 videos. You can do like a million
+[00:31:24] different things. You can do date
+[00:31:25] ranges. You can even do channel URLs
+[00:31:27] within the last x number of days, which
+[00:31:29] is pretty freaking cool. So, let's say
+[00:31:30] that we want to scrape my channel. I'm
+[00:31:32] going to grab my URL. I'm going to come
+[00:31:34] over to the scraper and I'm going to
+[00:31:35] come down and let's have a quick look.
+[00:31:37] So, we're going to go relative and I'm
+[00:31:39] going to say I want this to scraper
+[00:31:41] every 7 days, which is cool. And then
+[00:31:43] we're going to go down and add my
+[00:31:44] channel in there. So, let's bring this
+[00:31:45] now into NAM. So all you do is you come
+[00:31:48] over to JSON and you can see you've got
+[00:31:50] all this JSON here and effectively we're
+[00:31:52] just going to come ahead and copy that.
+[00:31:53] What we want to do is basically bring
+[00:31:55] this and import it into our any
+[00:31:57] scenario. So you click on API over here
+[00:31:59] and you click on API endpoints and then
+[00:32:02] what I personally like to do with APIs
+[00:32:03] like this guys is I basically just copy
+[00:32:05] all the information. I head over to chat
+[00:32:07] GPT and I give it a prompt guys like
+[00:32:09] based on this info give me a call
+[00:32:10] request to run asynchronously so that I
+[00:32:12] can request information. It will
+[00:32:13] retrieve it and send the output as part
+[00:32:14] of a module. This was using appy editor
+[00:32:17] and they just post all of that
+[00:32:18] information in there which is cool and
+[00:32:20] then we'll get what is known as a call
+[00:32:22] request from chat GPT which is great and
+[00:32:24] then we can bring it in. So the way this
+[00:32:26] would work is we would come down to
+[00:32:27] advert and we'll click on this button
+[00:32:28] over here and we go http request and I
+[00:32:31] actually came over to claude cuz chatttp
+[00:32:33] was taking ages. We come back over here
+[00:32:35] we paste this one in and then we can
+[00:32:37] import and as you can see we got all
+[00:32:39] this beautiful data. Now what we need to
+[00:32:41] do is just fill some of the stuff in.
+[00:32:42] And by the way, I'm also going to do is
+[00:32:44] I'm going to give you this blueprint
+[00:32:45] down here, which is a YouTube
+[00:32:47] competitive scraper. So you can just
+[00:32:48] download this and plug and play if you
+[00:32:50] want to download it from several
+[00:32:51] different YouTube channels. I just want
+[00:32:53] to show you how this works and then you
+[00:32:54] can just install this blueprint to kick
+[00:32:56] some butt. So let's come back over to
+[00:32:57] thing here. Now we need an API token. So
+[00:32:59] we're just going to shoot back over to
+[00:33:00] ampify. We are going to go over down
+[00:33:02] here to app. Let's have a quick look at
+[00:33:05] where we are. I believe it is in the
+[00:33:07] settings then API integrations. And then
+[00:33:08] you have your token here or you can
+[00:33:10] generate a new one. You just simply copy
+[00:33:11] that and you come back over to your
+[00:33:13] scenario. Then when it says apply token,
+[00:33:15] you just simply paste it in there. And
+[00:33:16] then in here guys, we're just going to
+[00:33:18] come and replace this with URL that
+[00:33:20] appears when we're on your YouTube
+[00:33:22] channel, which of course is right there
+[00:33:24] at the top, which is really cool. So
+[00:33:25] then we come back. And then that's done.
+[00:33:27] Max results I'm just going to set to
+[00:33:28] five for a moment. Come off this. And
+[00:33:30] then what we can do is simply execute
+[00:33:32] the request like so. And just like that,
+[00:33:34] we've got five results, which is great.
+[00:33:35] You can click on this and take a look.
+[00:33:37] And we have all of the beautiful
+[00:33:38] information, the channel description,
+[00:33:40] all this beautiful ids, loads and loads
+[00:33:42] and loads of really cool things. And
+[00:33:43] then we have lots of information that we
+[00:33:45] can just use and leverage whenever we
+[00:33:46] like. And then guys, what we would need
+[00:33:47] to do is come back over to Appify, copy
+[00:33:50] the JSON that we're happy with, you come
+[00:33:52] back over, put it in, and then when it
+[00:33:54] executes, it will actually download all
+[00:33:56] of the information for us. And now we've
+[00:33:57] got the data. What we're going to do now
+[00:33:59] is simply cleanse that data. So what
+[00:34:01] we're going to do is literally click on
+[00:34:02] a brand new module. We're going to add
+[00:34:04] in an AI chain. The reason by the way I
+[00:34:06] use the agent even without its agent
+[00:34:09] functionality. So you don't need an
+[00:34:11] agent if it doesn't have tools. But it's
+[00:34:12] my experience in NA10 that actually
+[00:34:14] using the agent feature is just way
+[00:34:16] quicker. So let me just come down and
+[00:34:17] give him a model just for argument sake.
+[00:34:19] Let's go for open AI. Little hack by the
+[00:34:21] way. If you want free models you can use
+[00:34:22] open router. They have loads of free
+[00:34:24] stuff. So it's like literally zero cost
+[00:34:25] with it. But we're going to use the
+[00:34:27] beautiful open eye for this one. Okay.
+[00:34:29] He's locked and loaded memory. No need
+[00:34:30] to do that. And we can just keep him
+[00:34:32] like this. So then let's say for example
+[00:34:34] we wanted to give them some information.
+[00:34:35] So let's go down onto instead of connect
+[00:34:38] to chat trigger node go for define below
+[00:34:40] and then we want to come down and we've
+[00:34:41] got the text there in it and then we've
+[00:34:43] got the description links we've got
+[00:34:45] loads of stuff. So let's find out where
+[00:34:46] all the information is that we got.
+[00:34:49] Okay. And here we have all of this
+[00:34:51] information here. What I want to do
+[00:34:53] basically is just cleanse this
+[00:34:55] information. So what I'm going to do is
+[00:34:56] come here for example and I'm going to
+[00:34:57] go down for a code node which is cool
+[00:34:59] which is kind of like the WD40 the do
+[00:35:01] anything you want to in N8 node. I'm
+[00:35:04] just going to strip this out. So within
+[00:35:06] N8N we're going to click on the agent
+[00:35:07] and what I want to do is give it this
+[00:35:09] prompt which of course is the big and
+[00:35:11] beautiful uh SRT here. All right
+[00:35:14] awesome. Then guys what I want to do is
+[00:35:16] come down to add options. Click on
+[00:35:17] system message and we're going to give
+[00:35:19] it this following prompt here. Okay is
+[00:35:22] essentially this. So you're a transcript
+[00:35:24] cleansing specialist. Optimize for rag.
+[00:35:26] Now this is really key your cleansing
+[00:35:28] process because remember garbage in
+[00:35:30] equals garbage out. So remove filler
+[00:35:32] words and vibble ticks because things
+[00:35:34] like what who now it doesn't really
+[00:35:36] matter without obviously altering the
+[00:35:37] context. Remove non-content elements. So
+[00:35:40] you can um even include in that stuff
+[00:35:42] like hey subscribe to the channel or do
+[00:35:43] this or do that. So it's we're not
+[00:35:45] adding kind of false data to our system.
+[00:35:47] Transcription errors. So a good example
+[00:35:48] is like N8N and it comes off as like a a
+[00:35:51] weird number instead, right? Because
+[00:35:53] remember it's just transcribing based on
+[00:35:55] the voice. So we can actually have the
+[00:35:56] AI translate that. So if you've got like
+[00:35:58] a funky business name, this is a really
+[00:36:00] cool process for you because if I ask a
+[00:36:01] question about it with the correct
+[00:36:03] spelling and you actually use video
+[00:36:05] content, it's not going to know like
+[00:36:07] what the thing is. That's why this
+[00:36:09] cleansing process is so important and
+[00:36:11] nobody's telling you about this, but
+[00:36:13] obviously I'm telling you right now.
+[00:36:14] This is really freaking important if you
+[00:36:15] want to be in the top 1% 1% of rag. And
+[00:36:18] let's be honest, guys, that's why we're
+[00:36:19] here to kick ass, right? Preserve
+[00:36:20] important elements. Optimize for rag
+[00:36:22] output clean readable text organized by
+[00:36:24] target segments. Cool. So, we're going
+[00:36:25] to come off this. That's literally all
+[00:36:26] we do. And then all we're going to
+[00:36:28] freaking do, guys. I'm going to pin this
+[00:36:29] data, which in any just means that we're
+[00:36:31] locking locking the data. Don't need to
+[00:36:32] rerun it. One of the reasons why it
+[00:36:33] makes it easier in any. And then we
+[00:36:35] execute the workflow like this. And then
+[00:36:37] we have the agent doing its magic which
+[00:36:39] is beautiful. And once that's done, we
+[00:36:41] can then start to vectorize it in it.
+[00:36:43] Now I'm going to show you a secondary
+[00:36:45] place where we can vectorize it called
+[00:36:48] Superbase. Now Superbase and Pine Cone
+[00:36:50] are two different secretaries. Not even
+[00:36:53] secretaries. Think of them as like
+[00:36:54] recruitment agencies, okay? And they
+[00:36:55] both have their pluses and their
+[00:36:57] minuses. And to be completely honest
+[00:36:59] with you guys, the best system can
+[00:37:01] leverage both of them for different
+[00:37:03] reasons. They're just like different
+[00:37:04] filing cabinets. Basically, one is one
+[00:37:06] is green and one is black. So, what you
+[00:37:08] do is you're going to head over to
+[00:37:09] Superbase. I want you to create an
+[00:37:10] account or sign in. It's free to do. And
+[00:37:12] then once you're in, you're going to be
+[00:37:14] prompted to create a project. What you
+[00:37:16] can do down here and basically give it a
+[00:37:17] project name, get your database
+[00:37:19] password, and I want you to save that
+[00:37:21] for a moment and then create a new
+[00:37:22] project. And then you'll see something
+[00:37:24] that looks a little bit like this. So,
+[00:37:27] you click on your own individual
+[00:37:28] project. This is one that I was playing
+[00:37:30] around with earlier and is very, very
+[00:37:31] cool. Now, don't look at this and be
+[00:37:33] intimidated. Honestly, once you've seen
+[00:37:35] this a couple of times, you'll be like,
+[00:37:36] "Jack, it's like looking at the back of
+[00:37:38] my hand." I absolutely freaking love
+[00:37:40] this platform. So, what happens? This is
+[00:37:42] now completed. And as you can see, we've
+[00:37:44] got all of this stuff, which is now
+[00:37:45] cleansed and makes a lot more sense,
+[00:37:47] which is really cool. And whilst that's
+[00:37:48] creating the background, one of the
+[00:37:49] things we'll notice in this cleansing
+[00:37:50] process is that the output is actually
+[00:37:53] significantly shorter than the big
+[00:37:54] video. And one of the reasons for that
+[00:37:56] is cuz this video is like over 2 hours
+[00:37:57] long. So the AI model summarization does
+[00:38:00] well with shorter text, but it runs into
+[00:38:02] a problem if it's really long. So the AI
+[00:38:05] is doing something what we call
+[00:38:06] probabilistic, which is we could ask it
+[00:38:08] 10 times, get 10 different responses,
+[00:38:10] but we typically want more control. So a
+[00:38:13] better way to do this is actually to add
+[00:38:15] in a code note, which is also known as
+[00:38:17] WD40 or the will do anything you want
+[00:38:19] thing. And what we can actually do with
+[00:38:21] this is specify certain things that we
+[00:38:24] don't want to include. So for example,
+[00:38:26] you could say I don't want any names in
+[00:38:28] it. I don't want any filler words like a
+[00:38:31] or I want any mention of XYZ completely
+[00:38:34] removed. You can head over to a platform
+[00:38:35] like Claude Chat GPT and basically just
+[00:38:37] say hey write me a JavaScript function
+[00:38:39] that will remove X these following
+[00:38:42] things from my transcript and you'll get
+[00:38:44] something that looks just like this and
+[00:38:45] you can basically copy it. Come over to
+[00:38:47] N8N click on your code in JavaScript
+[00:38:49] come up here enter. And then you can
+[00:38:51] execute the step and effectively what it
+[00:38:53] will do is just automatically cleanse
+[00:38:55] it. Now, every rag project you have
+[00:38:57] might be different. This just lets you
+[00:38:58] do that. And what's really cool here is
+[00:39:00] we absolutely have everything that we
+[00:39:02] requested and gave it in full detail
+[00:39:04] without it. If you were to give chat GPT
+[00:39:06] a 2hour 40-minute video, the reason we
+[00:39:08] do rag is it wouldn't know the context.
+[00:39:10] Then we've got that stuff. We can
+[00:39:11] actually physically vectorize it and
+[00:39:12] kick some butt. So, we've got this
+[00:39:14] information is how to actually connect
+[00:39:15] it to Superbase. So, to do that, what
+[00:39:18] we're going to do is bring this guy out
+[00:39:19] of here for a moment. I'm going to pin
+[00:39:21] this information and we're going to
+[00:39:22] click on this. I'm going to click on
+[00:39:24] superbase. Now, one of the powerful
+[00:39:26] things about superbase is the fact that
+[00:39:28] we can use it for databases. And I'll
+[00:39:30] explain what that means in a minute, but
+[00:39:31] it means we can give it like a thousand
+[00:39:33] rows or thousand pieces of data and we
+[00:39:35] can ask it relational questions like
+[00:39:36] what are the trends in churn or what are
+[00:39:38] the trends in growth and all this sort
+[00:39:39] of cool stuff. So, we're going to go
+[00:39:41] down for a vector store with Superbase.
+[00:39:43] So, let's have a quick look. Click on
+[00:39:45] Superbase vector store. I'm going to
+[00:39:47] click on add documents to a vector
+[00:39:49] store. Now, this is your first time
+[00:39:50] doing it. You need to follow these exact
+[00:39:51] things. You need to click on docs. Okay,
+[00:39:54] you're going to scroll down and you're
+[00:39:56] going to click on quick start for
+[00:39:57] setting up a vector store. So guys, what
+[00:39:59] we're going to do is we're going to over
+[00:40:00] to the SQL editor and we're just going
+[00:40:02] to paste in that information. And then
+[00:40:03] you're going to click on run. And what
+[00:40:04] that will do is basically create your
+[00:40:06] database for you. And if it comes back
+[00:40:07] with success, no rows returned. That is
+[00:40:09] code for really cool freaking news. Now
+[00:40:11] we come over to NA10 and you have your
+[00:40:13] Superbase vector store. Okay, so we
+[00:40:15] click on this guy which is cool. You're
+[00:40:16] going to need to create a new
+[00:40:17] credential. So to do that, you'll click
+[00:40:19] on this here. You'll click on create new
+[00:40:20] credential and it'll ask for a host and
+[00:40:22] a service ro secret. What on earth does
+[00:40:25] that mean? Well, we head back over to
+[00:40:27] the beautiful superb base over here. We
+[00:40:29] are then going to go over and make sure
+[00:40:30] I'm in the right one here. So, we're
+[00:40:31] going to go for coffee, I think, is the
+[00:40:33] one we want. Okay, beautiful. Now, come
+[00:40:35] down to project settings and you'll have
+[00:40:36] a project ID. So, on this credential
+[00:40:38] thing, guys, I want you to come down and
+[00:40:40] name it your thing. So, I'm going to
+[00:40:41] call this one coffee connection. Okay,
+[00:40:44] now you'll have host. It's literally
+[00:40:46] like this, but you're going to get this
+[00:40:47] information here. You are going to
+[00:40:48] remove that and you're going to look for
+[00:40:51] if you can see right here we've got a
+[00:40:53] dot. Let me remove this down. Beautiful.
+[00:40:55] We're looking for our unique identifier
+[00:40:57] which for us is this in the stream. So
+[00:41:00] if you go to your URL it'll be project/
+[00:41:02] a big code settings. So you come back
+[00:41:04] over and you basically put that in there
+[00:41:06] and you're good to go. Then you need
+[00:41:07] your service ro secret. And to do that
+[00:41:09] we're going to find this in the
+[00:41:10] settings. It will be in API keys on the
+[00:41:12] left hand side and you'll see service ro
+[00:41:14] secret. Just reveal and copy that. And
+[00:41:16] so for me, I come back, I paste this in
+[00:41:18] here, and I click on save, and it should
+[00:41:20] come back green. Green is good. We like
+[00:41:22] this. Cool. And that's basically it.
+[00:41:23] Then if I click on table name, it should
+[00:41:25] load up. And as we can see, we've got
+[00:41:27] documents and RPC/ documents. And so
+[00:41:30] we're just going to click on documents
+[00:41:31] with this embedding batch size 200.
+[00:41:33] Don't worry about it. Now, we're going
+[00:41:35] to come down here to embeddings. We're
+[00:41:36] going to use OpenAI's model on this one
+[00:41:38] real quick. So we come down here. Let's
+[00:41:40] just go for here. Text embedding too
+[00:41:41] small is fine. And then we click on
+[00:41:43] document. document is going to be
+[00:41:45] default data loader. Now, because we're
+[00:41:47] doing text, we're going to be using
+[00:41:48] JSON, which is fine. Now, instead of
+[00:41:50] simple, we're going to do custom. And
+[00:41:52] so, we're going to get a little bit more
+[00:41:54] details here. And a text splitter. This
+[00:41:56] is basically how you want it to be split
+[00:41:58] out. Now, because it's a video that's
+[00:42:00] building points over time, I'm going to
+[00:42:01] go for a chunk size of 2,00 with a chunk
+[00:42:04] overlap of 400. So, lots of really
+[00:42:06] interesting stuff happening in there.
+[00:42:07] And then, we're going to click off this
+[00:42:08] and be okay. Now, what we're going to do
+[00:42:10] is simply hit one button and vectorize
+[00:42:12] it. So, I'm going to execute the
+[00:42:13] workflow real quick. It's now working in
+[00:42:14] the background. It's now uploading all
+[00:42:16] the data, which is really cool. And as
+[00:42:18] we can see, it's pipping. It's popping.
+[00:42:19] It's having a good time. And it has
+[00:42:21] successfully created 431 items. So, if I
+[00:42:23] come back over to the tables now, we
+[00:42:25] have one table. So, we can come down
+[00:42:26] here to table editor and let's have a
+[00:42:29] quick look and refresh. I believe we go
+[00:42:31] down through to database actually and we
+[00:42:33] have documents. We can open up the
+[00:42:34] documents and then once it's load, we
+[00:42:36] will see all of the information. So, we
+[00:42:37] have all the content, all of the
+[00:42:39] metadata, which I'm going to come on to
+[00:42:41] shortly about what we do with that, what
+[00:42:42] that looks like. But you can see we've
+[00:42:43] got the content, loads of information
+[00:42:45] and text all the way through, and it
+[00:42:47] goes all the way down like this, which
+[00:42:48] is really cool. Now, the second thing
+[00:42:49] we're going to rank is going to be
+[00:42:52] websites and also RSS feeds. And you're
+[00:42:54] thinking, what does that mean? Well,
+[00:42:55] basically, a key thing for us to be able
+[00:42:57] to do is to scrape any information from
+[00:43:00] any website. So, I'm going to show you
+[00:43:01] the easiest way to do this in the world.
+[00:43:02] First of all, we're going to trigger the
+[00:43:04] scenario with a click, not click up,
+[00:43:06] although it is great project manager
+[00:43:08] software. Trigger manually. Cool. And
+[00:43:09] what we can do really easily is come
+[00:43:11] down and have http request. Phenomenal.
+[00:43:13] And then we can say get and give it any
+[00:43:15] URL we want to. So, for example, I've
+[00:43:17] got this random page here on Wikipedia
+[00:43:19] about coffee because as you know guys,
+[00:43:20] without our coffee, what are we
+[00:43:22] actually? So if you come back over here
+[00:43:23] and you click on the URL and very simply
+[00:43:25] hit execute tab and this will do is
+[00:43:27] bring down all of the information from
+[00:43:30] the entire website and then what we can
+[00:43:32] do is just convert this from HTML to
+[00:43:34] text. Now any has a beautiful node for
+[00:43:36] this. You just type in HTML and this S
+[00:43:38] for superhero appears. So click on
+[00:43:41] extract HTML content and we have all
+[00:43:43] this cool stuff here. So JSON property
+[00:43:45] is data. It's just referring to the name
+[00:43:46] of this the key SS CSS selector. You
+[00:43:49] just can type in body. I think that is
+[00:43:52] good and I believe this will just work
+[00:43:54] for us actually if I just click on
+[00:43:55] execute step and just like that we have
+[00:43:57] all the stuff without the internet
+[00:43:58] gobble with the guck and obviously once
+[00:44:00] we've done that we can just vectorize it
+[00:44:02] in the exact same way that we did with
+[00:44:03] our last scenario uh which we don't have
+[00:44:06] which is one thing now how do you take
+[00:44:08] this a level further so we can then
+[00:44:10] pretty much get any website you want to
+[00:44:12] input it with anything extract the text
+[00:44:14] and just like we do the YouTube
+[00:44:15] automation just kind of like completely
+[00:44:18] vectorize it and guys I just bought in
+[00:44:19] the YouTube thing and obviously you can
+[00:44:21] just connect these things together and
+[00:44:22] just replicate the process and
+[00:44:23] eventually you have them all connecting
+[00:44:25] as part of one mega system effectively.
+[00:44:27] So this is really cool and helpful now
+[00:44:29] for doing websites. But let's say for
+[00:44:32] example then what we wanted to do was do
+[00:44:34] something on an RSS feed which is like
+[00:44:36] Jack that's great but anytime that you
+[00:44:39] do a video or anytime someone has an
+[00:44:41] article I want to vectorize that. So how
+[00:44:43] on earth would we do that? Well to do
+[00:44:45] this we would use something very cool
+[00:44:46] called really simple syndication which
+[00:44:49] is cool. It always makes me laugh when
+[00:44:50] someone's got to say. It's really
+[00:44:51] simple. So, RSS.app is freaking so cool.
+[00:44:54] So, you're going to this page, big blue
+[00:44:56] with some yellow stuff. Going to go
+[00:44:58] ahead and click on login or sign up.
+[00:44:59] Now, what RSS will let you do guys is
+[00:45:01] basically generate a feed for anything.
+[00:45:03] So, you can type in any name you want to
+[00:45:05] like Elon Musk for example. If I click
+[00:45:07] on generate feed, effectively what we
+[00:45:09] can do here is track anything. Could be
+[00:45:11] Twitter, could be Instagram, YouTube.
+[00:45:13] Anytime there's any content on any
+[00:45:15] topic, we can actually get an automatic
+[00:45:17] update the second that that happens. And
+[00:45:19] on RSS obviously you can get any feeds
+[00:45:21] for anything. So if I come over to NAN
+[00:45:23] for example and I show you what we can
+[00:45:24] do here. We can click on this. We can
+[00:45:26] click on RSS. Click on RSS feed trigger.
+[00:45:29] And effectively what it will do is
+[00:45:30] anytime any articles created on that
+[00:45:33] topic or that created you like post this
+[00:45:35] will trigger. So if I come over here for
+[00:45:37] instance and let's execute this workflow
+[00:45:39] which is triggered up to the NA10 thing.
+[00:45:42] What it does is pull down the
+[00:45:44] information. So if a second is updated
+[00:45:46] it grabs it. And just in exactly the
+[00:45:47] same way with websites, we can then go
+[00:45:49] ahead and trigger it. This is
+[00:45:50] particularly good, guys. And if you an
+[00:45:52] RSS app, you can actually create
+[00:45:54] bundles. And bundles could be where you
+[00:45:56] add separate creators like I like this
+[00:45:58] YouTuber, this YouTuber, this YouTuber,
+[00:46:00] this YouTuber. And the second that any
+[00:46:02] of them post or create a video, we can
+[00:46:04] grab that and just like previously
+[00:46:05] download the transcripts and build this
+[00:46:07] out into something absolutely
+[00:46:08] incredible. But obviously with RSS
+[00:46:10] feeds, you can do across any social
+[00:46:11] media platform like X. You can even have
+[00:46:14] anytime they let the words Bitcoin is
+[00:46:16] mentioned online. I want you to grab the
+[00:46:18] article and I don't want you to include
+[00:46:20] certain terms and other terms. You can
+[00:46:21] customize that. You get a complete free
+[00:46:23] trial on RSS if you want to go ahead try
+[00:46:25] that out and kick some ass with it.
+[00:46:27] Beautiful. So, we've done YouTube, we've
+[00:46:28] done articles. Next, we're doing the big
+[00:46:30] and beautiful emails. How freaking cool
+[00:46:32] is that? So, this can be done from
+[00:46:34] Gmail. It can be done from Outlook. So,
+[00:46:36] let's have a Gmail trigger. If you've
+[00:46:39] not connected Google to NA10, I'm going
+[00:46:41] to put a link on screen for you to
+[00:46:43] follow that. Takes about 3 minutes. Go
+[00:46:45] click those buttons and once you're
+[00:46:46] done, I'll be waiting for you when you
+[00:46:47] come back. All right, welcome back. Hope
+[00:46:49] you got the coffee. Let's do Gmail. So,
+[00:46:51] first thing I'm going to do is on
+[00:46:52] triggers. So, the way that I like to do
+[00:46:54] this essentially is, hey, anytime I get
+[00:46:56] a message, fire off. So, let's have a
+[00:46:59] look at Gmail. So, if I come down here
+[00:47:00] and exit the workflow real quick. Okay,
+[00:47:02] so I've fetched a test event. I've got
+[00:47:03] one from Air. It's cool. You can do
+[00:47:05] simplify or complicated. I recommend
+[00:47:07] that you do basically nonsimplification
+[00:47:09] and we come down on pin and test. All
+[00:47:10] right. And then we've got way more data
+[00:47:12] which is really cool. Now the way we
+[00:47:13] want to do this basically is extract out
+[00:47:14] the core information that we think is
+[00:47:16] really important. So the first thing we
+[00:47:17] want to do is get a set node real quick
+[00:47:19] which is this. And then we're going to
+[00:47:21] bring over the data, right? So we're
+[00:47:23] going to grab over what would be
+[00:47:25] relevant to us. I guess we'd have
+[00:47:26] something like sender would be number
+[00:47:28] one. So who it's from. So this is from
+[00:47:30] no reply air table. Very cool. We want
+[00:47:32] to have the subject. Let's come down
+[00:47:34] here. Beautiful. We probably want to get
+[00:47:36] the date as well, right? So, let's get
+[00:47:38] the date that it was sent. And as you
+[00:47:39] can see, was sent on Monday, the 29th of
+[00:47:42] September, which is cool. So, get the
+[00:47:44] date it was sent on. And then finally,
+[00:47:46] most likely probably just the actual
+[00:47:48] message itself, right? And we type in
+[00:47:50] body. We should get that. We don't want
+[00:47:52] the HTML there. We want the full
+[00:47:53] non-HTML version, which we can get under
+[00:47:56] text here. Cool. And then we just have
+[00:47:58] here body. Cool. All right. Sweet. So,
+[00:48:00] we've got this information. I'm going to
+[00:48:01] pin this so we can use it. And I'm also
+[00:48:02] going to execute this real quick. And
+[00:48:04] then we've got the data. So the way that
+[00:48:05] we would do this is we convexize
+[00:48:08] information, but then we want to store
+[00:48:10] that other information like who it's
+[00:48:11] from and all that other key things as
+[00:48:13] metadata. You're thinking, damn, Jack,
+[00:48:15] what is this metadata? Metadata is just
+[00:48:18] basically data about data. So when we
+[00:48:21] ask it questions in future, we have like
+[00:48:23] the actual text, but it provides useful
+[00:48:25] context like well when did this data
+[00:48:27] come into be? Like it just helps you
+[00:48:29] make better decisions. Like you know a
+[00:48:30] conversation you you and I have fresh
+[00:48:32] face ready to kick some butt at 10:00
+[00:48:34] a.m. Monday morning drinking our
+[00:48:35] beautiful coffee is probably more like
+[00:48:38] worthwhile data than when we're drinking
+[00:48:40] Guinness at 2 2 a.m. Right? So it's all
+[00:48:43] subject to when you know actual
+[00:48:45] information about the data. So what
+[00:48:47] we're going to do here very simply is
+[00:48:50] just simply vectorizes. So again
+[00:48:51] superbase vector store. Okay. Come down
+[00:48:53] here. I'm going to go down for I believe
+[00:48:55] we need the vectorization model here.
+[00:48:57] Right. So let's have a look. Superbase
+[00:48:58] vector store. We're going to click on
+[00:48:59] add documents to a vector store. And
+[00:49:01] effectively now we can add in metadata.
+[00:49:03] I'm going to show you exactly how you do
+[00:49:04] that. So it's the same thing. We can
+[00:49:05] again we pick the table name that we've
+[00:49:06] got. Let me just make sure that I've got
+[00:49:08] the right credential. And what did we
+[00:49:09] call this one? We called it coffee I
+[00:49:11] believe, didn't we? There we go. Coffee
+[00:49:12] connection. Great. Table name should
+[00:49:14] then appear. We want the documents for
+[00:49:16] this one which cool. Embedding batch
+[00:49:17] size. Don't worry about that just yet.
+[00:49:19] It's just basically how much do you want
+[00:49:20] it to do in one go. Cool. Now we've got
+[00:49:21] this done. Let's actually then add in
+[00:49:23] the embeddings. Once again, embeddings
+[00:49:24] is going to be open AI. Phenomenal. Come
+[00:49:27] down. Very, very, very cool. Beautiful.
+[00:49:29] And then we click on document. Default
+[00:49:31] data loader. And then we've got JSON
+[00:49:33] because we're giving it text. Text
+[00:49:34] splitting can be simple. That's
+[00:49:36] absolutely fine. Now, in this default
+[00:49:38] data loader is when we're going to add
+[00:49:39] in the metadata. Okay. So, add options.
+[00:49:41] Click on metadata. And then we can
+[00:49:43] basically specify any fields we want to.
+[00:49:45] So, for example, this one is going to be
+[00:49:46] the sender who sent it to us. Cool. Then
+[00:49:48] we're going to go down. I'm going to
+[00:49:50] have the date. That would be cool as
+[00:49:52] well, right? Grab that date. and
+[00:49:53] anything you want to realistically. It's
+[00:49:55] really freaking cool like this. And then
+[00:49:57] we've got the actual body. We don't need
+[00:49:58] to add that in because obviously that's
+[00:50:00] not metadata, but we got subject data.
+[00:50:02] Yeah, we probably just want the subject
+[00:50:03] of the email. Cool. Come down. And then
+[00:50:05] that's great. And then you can add any
+[00:50:06] other information you want to. You can
+[00:50:08] also add unique identifiers and whatever
+[00:50:10] you want to. And I'll tell you in a
+[00:50:11] second, but you can add an AI model to
+[00:50:13] analyze this stuff ahead of a set node
+[00:50:15] to create it. So you could say, for
+[00:50:16] example, and I'll even show you this,
+[00:50:18] right? So, if I add in like an AI agent
+[00:50:19] as a quick for instance, I could say to
+[00:50:21] it something like define this below. I
+[00:50:23] come down and let's just say that I grab
+[00:50:25] like the text here. Come down and we
+[00:50:28] have the key information, the text.
+[00:50:29] Sweet. I could give it a prompt like
+[00:50:31] this, which will say something like
+[00:50:33] you'll get a message. I would like you
+[00:50:36] to give it a category from the below,
+[00:50:40] you know, and that could be anything
+[00:50:41] like admin, update, customer query,
+[00:50:46] anything you want to. You could even do
+[00:50:47] a segmentation agent if you want to.
+[00:50:48] That's better. But I'm just showing this
+[00:50:49] as an example. General opportunity, you
+[00:50:53] know, give me one word reply only. Okay.
+[00:50:57] Then you could actually execute this
+[00:50:58] step. This is just to show you what it
+[00:51:00] can do. Okay. We need to give it a
+[00:51:01] little model. So let's just give this a
+[00:51:02] chat model very quickly. Give him open
+[00:51:03] AI. Beautiful. And if I just ex unlink
+[00:51:06] and execute this guy, you'll see he's
+[00:51:08] now given us update. So then we can add
+[00:51:10] that to the metadata. And then that
+[00:51:11] would then go in and work for us. So
+[00:51:13] that's how you can get AI to actually
+[00:51:15] create for you custom bespoke stuff. So
+[00:51:17] if you want AI to do any analysis, we
+[00:51:19] can just add that module in, get into
+[00:51:21] the analysis, and it was a kick some
+[00:51:22] butt. So this is all cool and good. So
+[00:51:24] we click down here and let's actually
+[00:51:25] give this guy a little bit of I think
+[00:51:27] that's actually cool text and simple cuz
+[00:51:30] it's an email. I want it to be slightly
+[00:51:31] longer so we can get better basically
+[00:51:33] context because most emails typically
+[00:51:36] speaking are going to only be under
+[00:51:37] 1,000 characters, but I just want to
+[00:51:39] actually make sure that we have that.
+[00:51:40] So, what I'm actually going to do is add
+[00:51:41] in a recursive character text splitter.
+[00:51:44] And I'm going to make the chunk size I'm
+[00:51:46] going to make it slightly higher, 2,500.
+[00:51:48] I'm going to make the chunk overlap like
+[00:51:49] probably around 500. Now, guys, what we
+[00:51:51] need to make sure that we give this
+[00:51:52] super base is one simple text output
+[00:51:56] with the information that we want. So,
+[00:51:57] we're actually going to add in a second
+[00:51:59] set node here. And its only job is just
+[00:52:01] the stuff that's going to get
+[00:52:02] vectorized. So, we're going to call this
+[00:52:03] one data. And we're literally just going
+[00:52:05] to grab over the body and set it there.
+[00:52:07] And that means that the only thing
+[00:52:08] that's going to get vectorized is that.
+[00:52:10] So if we actually come down now and
+[00:52:12] execute this down here, you'll see it
+[00:52:14] should only vectorize that one simple
+[00:52:16] item. It's added one item. So if we come
+[00:52:17] over to database and we come over here,
+[00:52:19] you can see that it's been added in
+[00:52:21] which is basically all the information
+[00:52:22] from the Air Table team. But because
+[00:52:24] we've added an additional step, we just
+[00:52:26] need to double check click onto default
+[00:52:27] data loader. And we need to change this
+[00:52:29] because when it says JSON ddata, it's
+[00:52:32] basically just referring back to the
+[00:52:33] last module and bringing it over. But
+[00:52:35] we're going back two modules decade
+[00:52:37] away. So far away. So we need to change
+[00:52:39] the information. So look, I click on
+[00:52:41] sender. I bring it over. Awesome. I
+[00:52:43] click on the date again. All we're doing
+[00:52:45] is finding the date and bringing it
+[00:52:46] over. Cool. And then we've got name,
+[00:52:48] which is cool. Let's bring this guy over
+[00:52:51] real quick. Let's have a look what we've
+[00:52:52] got here. This one is going to be okay.
+[00:52:54] We got date, we've got sender, and then
+[00:52:56] we've got subject. Right. Cool. And then
+[00:52:57] come over. And then we're just going to
+[00:52:58] grab in this subject here. Okay. Now,
+[00:53:02] when I come over and we execute this, we
+[00:53:04] will see it properly loaded into the
+[00:53:06] database. So, if I come over to our
+[00:53:07] coffee thing, you'll see this one here
+[00:53:09] doesn't have it because we didn't
+[00:53:10] specify it. But check this out. It's now
+[00:53:12] reloaded. If I come down here, guys,
+[00:53:14] look at this. We've got the date, we've
+[00:53:16] got the sender, we've got the subject,
+[00:53:18] we've got any other specific information
+[00:53:20] that we like at our fingertips. Now, the
+[00:53:22] cool thing here is that we just set this
+[00:53:25] to run on autopilot. So, now every email
+[00:53:27] that we get is going to get vectorized.
+[00:53:29] Now, one other little bonus tip we can
+[00:53:31] do, guys, is actually add in an if node,
+[00:53:33] which is really freaking cool. So, what
+[00:53:35] I can say here, for instance, is I can
+[00:53:38] actually say, well, look, if this value,
+[00:53:41] okay, let's just say we have something
+[00:53:43] string contains any keyword I want. So,
+[00:53:47] say for example, if it has something
+[00:53:49] like no reply, okay, let's just say
+[00:53:52] that. And actually, let's not say it's
+[00:53:53] that. Let's just say it is the person
+[00:53:54] emailing us. So, let's find out what the
+[00:53:57] individual's email is. I believe they
+[00:54:00] actually do have no reply. If I type in
+[00:54:01] no reply, okay, this is from no
+[00:54:04] replyable.com, right? So, what I'm going
+[00:54:06] to say here is look, I want you to
+[00:54:07] vectorize stuff, but dude, if it's from
+[00:54:10] no reply, I don't even want to see it.
+[00:54:12] So, if I just execute this trigger real
+[00:54:13] quick, it's no reply. So, I sent it
+[00:54:15] through to false. How freaking cool is
+[00:54:16] that? Which means that the only people
+[00:54:18] that we're going to vectorize emails
+[00:54:20] from is like we're not going to do
+[00:54:21] anything from a generic email. So, this
+[00:54:22] lets us configure this in a really cool
+[00:54:24] way. Now, I'm going to show you a couple
+[00:54:25] more ways we can get this data. Then I'm
+[00:54:27] going to show you how you actually query
+[00:54:28] this in a really cool chat interface.
+[00:54:30] Okay, so to summarize, we're YouTube,
+[00:54:32] we've got articles, we've got emails.
+[00:54:34] Now, let's take a look at meeting
+[00:54:35] intelligence. This one is really
+[00:54:37] freaking cool. So, what I personally use
+[00:54:40] on every single meeting that I do
+[00:54:41] because again, I give you the stuff that
+[00:54:43] works, the stuff that I personally use
+[00:54:44] and seen work my businesses, I use
+[00:54:46] Fireflies. Now, here's a cool thing
+[00:54:48] about Fireflies is that what it will
+[00:54:50] actually do is join every meeting you
+[00:54:53] have, which is really freaking cool. and
+[00:54:55] as just a a participator in the meeting
+[00:54:57] and then it will just take the entire
+[00:54:58] transcript. The second that meeting is
+[00:55:00] done, it sends you a summary of what you
+[00:55:02] talked about, which is great. And then
+[00:55:03] you can come in and have a look at your
+[00:55:04] meetings and all the stuff that you want
+[00:55:05] to do like this YouTube master class I
+[00:55:07] did, whatever, which is freaking
+[00:55:09] awesome. But what I personally want to
+[00:55:11] do is take all these meetings and I want
+[00:55:13] them auto vectorized, which means that
+[00:55:14] like I you know what if I had this chat
+[00:55:16] here with Dustin or YouTube master
+[00:55:18] class, whatever it is, and I want to ask
+[00:55:20] questions about that meeting. How would
+[00:55:22] I actually physically do that? And so
+[00:55:24] the way that this system works guys is
+[00:55:26] really freaking cool. So we have a
+[00:55:28] trigger where it runs periodically to go
+[00:55:29] ahead and grab our information from
+[00:55:31] Fireflies because Fireflies actually
+[00:55:33] stores 100% of the transcripts. We then
+[00:55:36] have this request here that basically
+[00:55:38] goes down. We give it an API key and
+[00:55:40] we're querying for a certain number of
+[00:55:42] transcripts from that. And if you
+[00:55:44] Fireflies account real quick now to find
+[00:55:45] your Firefly API key, come over to their
+[00:55:48] website, click on integrations, and then
+[00:55:50] you're going to look for Fireflyy's API.
+[00:55:53] Actually, I think I've got it here
+[00:55:54] connected actually already. So, if you
+[00:55:55] click on Fireflyy's API, then click on
+[00:55:57] edit and then you can click on get API
+[00:55:59] key or if you don't have it, you just
+[00:56:01] basically create it and then you'll edit
+[00:56:03] in scenario in this basically this
+[00:56:05] blueprint here. You'll just enter in
+[00:56:07] your bearer API key and you can specify
+[00:56:09] loads of stuff like how many files, how
+[00:56:11] many conversations you want to bring
+[00:56:12] down. Then we use this code, this code
+[00:56:14] module here, which is going to break
+[00:56:16] down the transcript for us and put it
+[00:56:18] into one simple output. We've got this
+[00:56:19] one here that is then going to go ahead
+[00:56:21] and actually grab all the transcripts
+[00:56:23] for us, which is really freaking cool.
+[00:56:24] Then what we do is we create a Google
+[00:56:26] document with that entire transcript on
+[00:56:28] it. And then we upload it to Google
+[00:56:30] Drive. And once we've got that, then we
+[00:56:32] can actually take that information once
+[00:56:33] we've downloaded it and then put it into
+[00:56:35] a vectoration store. Effectively meaning
+[00:56:37] that any meeting that we ever have with
+[00:56:38] anybody, we can vectorize that entire
+[00:56:41] process. I've done a full video breaking
+[00:56:43] down specifically this transcript thing
+[00:56:44] and how you can configure it for any you
+[00:56:46] want to. I'll put a link on screen as
+[00:56:47] well so you can double click into this.
+[00:56:49] But at the moment, we've got meetings,
+[00:56:50] we've got emails, we've got articles,
+[00:56:51] and also YouTube. Now, let's take a look
+[00:56:54] at books. So, there's a couple ways you
+[00:56:55] can do this. I showed you the form at
+[00:56:57] the beginning video. We can just upload
+[00:56:58] things. But a really cool one, guys, is
+[00:57:01] actually kicking it off with Google
+[00:57:02] Drive. So, if we come down here to
+[00:57:03] triggers and click on changes involving
+[00:57:06] a specific folder, which is cool. So, we
+[00:57:08] are going to go ahead and check check
+[00:57:10] basically pick a specific folder and I'm
+[00:57:12] going to select an account that does
+[00:57:13] have access to Google Drive. Okay, cool.
+[00:57:16] fact that say it's photos of Jack and
+[00:57:18] then I said I want you to watch for when
+[00:57:19] a file is created which is really cool
+[00:57:22] and then let's say I go over to that
+[00:57:23] drive and I've got the drive here and
+[00:57:25] let's just say I upload let's say upload
+[00:57:26] one Alex's books. So I'm just uploading
+[00:57:29] the $und00 million models. I come back
+[00:57:31] over to our scenario and then what I can
+[00:57:34] do here is essentially we're going to
+[00:57:35] find this and then we're going to
+[00:57:37] download it. So if I execute this
+[00:57:38] workflow real quick and it's waiting for
+[00:57:39] the thing as you can see it has
+[00:57:41] successfully identified that we have
+[00:57:43] uploaded a really cool book. So, what we
+[00:57:45] want to do is just download the data.
+[00:57:46] So, we click on this, click on Google
+[00:57:48] Drive real quick. Beautiful. And then
+[00:57:50] we're going to click on download. So, we
+[00:57:52] need to download the file to then put it
+[00:57:53] into our vector store. Right? So, what
+[00:57:55] we need to do instead of from list is go
+[00:57:57] by ID. And then here, we're going to
+[00:57:59] just quickly search for ID. Phenomenal.
+[00:58:02] And the ID we're looking for is this one
+[00:58:03] right here. Bam. Perfect. Cool. Then I'm
+[00:58:06] going to pin this data. So, we keep
+[00:58:07] reactivating it. I'm going to execute
+[00:58:09] this one more time. All right.
+[00:58:10] Beautiful. It's downloading the file for
+[00:58:12] us, which is fantastic. And it has done
+[00:58:14] it successfully. So let's have a look at
+[00:58:15] the file $100 million models Alexi.
+[00:58:17] Cool. Then all we do guys, we connect
+[00:58:19] it. We click on this guy and then
+[00:58:21] instead of crucially here tag JSON, we
+[00:58:24] change this to binary which is cool. We
+[00:58:25] don't have any of this metadata. So I'm
+[00:58:27] just going to remove it. And then
+[00:58:28] basically if I just pin this data and I
+[00:58:31] run this one more time, it will then
+[00:58:32] start to vectorize the entire database
+[00:58:34] for us. So then we can ask any question
+[00:58:36] we want to about it. And we can validate
+[00:58:38] that very quickly by coming over here.
+[00:58:40] And if I refresh this column, we should
+[00:58:42] start to see things flow in from Alex's
+[00:58:44] book, which should be arriving any time
+[00:58:46] now. And there we go. Look at this.
+[00:58:47] Okay, so we got here, we click on this.
+[00:58:48] Think about it this way. Blah blah blah
+[00:58:50] blah stuff. And what it's done
+[00:58:51] automatically is gotten some interesting
+[00:58:53] data pre-built in. So it's already
+[00:58:55] telling us the title, the author, the
+[00:58:57] creator, modified date, blah blah blah,
+[00:58:59] all this other kind of key data. So we
+[00:59:01] could ask questions, which is very
+[00:59:02] freaking cool. So then the question is,
+[00:59:04] well, Jack, that's great, but how do I
+[00:59:06] actually then go ahead and query this?
+[00:59:08] Well, let me add a barrier to this.
+[00:59:10] Okay, I've added a little color coder
+[00:59:11] because I got we are nothing without our
+[00:59:13] organization, right? So come down here.
+[00:59:15] Cool. So let's say then we wanted to
+[00:59:17] query this. Well, let's add in a chat
+[00:59:19] window because we want to have a
+[00:59:20] conversation with our data. So let's say
+[00:59:22] you come down to a chat trigger which is
+[00:59:25] where is he gone right now on a chat
+[00:59:27] message. Cool. We're going to add in an
+[00:59:28] AI agent as a for instance. Beautiful.
+[00:59:31] Fantastic. And it is going to be
+[00:59:33] prompted by the prompt. Very very cool.
+[00:59:35] All right. So let's give a open AI brain
+[00:59:37] very quickly. Okay. Very very cool
+[00:59:39] memory. Yeah, let's give it a very
+[00:59:41] simple memory. But in fact, you know
+[00:59:42] what guys? I'm going to show you
+[00:59:43] something really cool. This when we talk
+[00:59:45] about memory, it's one thing because
+[00:59:47] this memor is loaded in the window. But
+[00:59:48] what if we had an organization where we
+[00:59:50] had a thousand people using the system?
+[00:59:52] That would be interesting, right? But
+[00:59:54] then what if like we wanted the rag
+[00:59:57] system to be aware of who the individual
+[01:00:00] was who was asking the questions? What
+[01:00:02] we would probably want to do is actually
+[01:00:04] save their data and their information in
+[01:00:07] our database itself which we can
+[01:00:09] actually do with something called
+[01:00:11] Postgress and I'm going to show you that
+[01:00:12] in a second once I've shown you how this
+[01:00:14] works. So I'm going to give it a simple
+[01:00:16] memory for a second and then I'm going
+[01:00:17] to show you how we can actually store
+[01:00:19] all the conversations and questions
+[01:00:20] which is really cool. So let's say we
+[01:00:22] have a simple memory here with 40
+[01:00:23] context window which means 40
+[01:00:24] interactions. I can add a tool and all
+[01:00:26] I'm going to do as you might have
+[01:00:27] guessed is superbase vector store and
+[01:00:28] you know I told you we had pine cone. We
+[01:00:30] can also add pine cone here. So it can
+[01:00:31] reach over and grab and interact with
+[01:00:33] multiple different ones. So I've got
+[01:00:35] here which is superbase vector store
+[01:00:36] which is cool. And I'm going to say hey
+[01:00:38] this gives you access to books and just
+[01:00:41] put vector store. Beautiful. Now what is
+[01:00:44] really cool here is we just take the
+[01:00:45] table name which is cool. Let me just
+[01:00:47] get the right credential which is our
+[01:00:48] coffee connection. Table name. Let's
+[01:00:50] have a look at this one is going to be
+[01:00:51] documents. Limit is how many things do
+[01:00:53] you want me to bring back? I'm going to
+[01:00:54] switch you on to reank results soon. And
+[01:00:56] why that's really freaking cool. And
+[01:00:57] then we're going to be good. All right.
+[01:00:59] Cool. Sweet. So we come here and let's
+[01:01:00] go for the embedding and once again the
+[01:01:02] embedding is going to be the same
+[01:01:03] embedding we've always been using at the
+[01:01:04] moment which is text embedding three
+[01:01:06] small cool now we've got this
+[01:01:08] effectively we're just going to give
+[01:01:09] this a quick system prompt which
+[01:01:10] basically says something like help
+[01:01:11] assistant query the database when asked
+[01:01:16] beautiful all right let's ask it a
+[01:01:17] question now we're going to ask it a
+[01:01:18] question about the homozy money models
+[01:01:20] so for example give me an example
+[01:01:24] of a homozy
+[01:01:26] money model Okay, bam. We send that one
+[01:01:30] off. The agent's now working. It's
+[01:01:31] checking chat memory. It's checking
+[01:01:32] Superbase. It's getting the information.
+[01:01:34] And let's see if it gives us information
+[01:01:37] from that. Let's have a quick look.
+[01:01:40] All right, look at this. Look how crazy
+[01:01:42] this is, guys. It's actually called the
+[01:01:44] thing. And you can see now what it's
+[01:01:46] done. And by the way, we can make this
+[01:01:48] whole rag system, like I'm telling you
+[01:01:50] right now, a thousand times better than
+[01:01:52] this. I'm just giving you it piece by
+[01:01:54] piece so you can build it sequential
+[01:01:55] because I don't want to overwhelm you
+[01:01:56] with it. Okay, look simple meaning. This
+[01:01:58] is what it said. Give me model system
+[01:02:00] message formatting instructions. Now you
+[01:02:02] can tell what it queried with honey
+[01:02:04] money
+[01:02:06] model example. And then this is the
+[01:02:08] information it got back. It got back um
+[01:02:11] nine different responses that from the
+[01:02:13] nine different sections. So basically
+[01:02:14] what it did is it went over here and
+[01:02:16] just pulled back nine different things
+[01:02:17] and brought them back over which is
+[01:02:18] really freaking crazy. And that is how
+[01:02:20] you actually um get that stuff. That's
+[01:02:23] how it's searching it for us perfectly.
+[01:02:24] Now what I want to do next is add in a
+[01:02:27] bit of a stronger memory which is a
+[01:02:30] little bit of a level above this um so
+[01:02:31] you can understand going on. So what
+[01:02:32] we're going to do is actually get rid of
+[01:02:34] the simple memory. I'm going to come
+[01:02:36] over here and we're going to add in this
+[01:02:38] guy which is Postgress chat memory which
+[01:02:41] is really really really freaking cool.
+[01:02:43] So remember the reason we're doing this
+[01:02:44] is because it's way more scalable and
+[01:02:46] it's also searchable. In other words, we
+[01:02:48] can actually search the conversation
+[01:02:49] history. So we've got Mr. Elephant. The
+[01:02:51] question is how do we actually bump him
+[01:02:53] up? Well, look, you open up, come down
+[01:02:55] to, let me show you here, uh, currently
+[01:02:58] credential and you see this information.
+[01:03:00] Do not be intimidated by it. Come over
+[01:03:01] here. I want you to come over to connect
+[01:03:03] on superbase. You're going to scroll
+[01:03:05] down, which is cool. The type is going
+[01:03:07] to be psql. You're going to come down to
+[01:03:09] the bottom guy and you click on view
+[01:03:10] parameters. And all we're going to do is
+[01:03:12] the classic copy and paste. So, we've
+[01:03:13] got the host. We come back over here to
+[01:03:15] the host. Bam. Then we've got database
+[01:03:17] and user. Cool. Well, the database is
+[01:03:19] Postgress. Is that Postgress? It is
+[01:03:21] awesome. And the user is Postgress. But
+[01:03:23] here it's something slightly different.
+[01:03:24] So we come over and basically all you're
+[01:03:26] going to do is just bring this stuff
+[01:03:28] over and then we've got the port which
+[01:03:30] is 5432. But this one is also 5432. But
+[01:03:33] it's asking for a password. I don't know
+[01:03:35] about you. I don't really know what the
+[01:03:36] password was. So come to database
+[01:03:38] settings. I click on reset database
+[01:03:40] password real quick. Ask it to generate
+[01:03:42] a password for us. Copy it. Come back
+[01:03:44] over here. And all I'm going to do is
+[01:03:46] come down here to password. Enter that
+[01:03:48] in. And then click save.
+[01:03:51] And it says, now it says it can't
+[01:03:52] connect those settings. Don't worry
+[01:03:54] about that for the moment. Okay, come
+[01:03:56] off here. Now we've got the JSON ID,
+[01:03:58] which is fine. Um, it says it gives you
+[01:04:01] a red error simply because it hasn't
+[01:04:04] used it before. But don't worry about
+[01:04:05] that at the moment. Okay. Now, I'm going
+[01:04:06] to come down here. And so, for example,
+[01:04:08] guys, once you've added those details
+[01:04:09] in, you can just say something like Mosi
+[01:04:11] money, and it'll break down everything
+[01:04:13] in detail. But crucially, it's uses
+[01:04:15] Postgress chat memory. So, what does
+[01:04:17] that mean? Well, if I show you now guys
+[01:04:19] and I come over here to our database, we
+[01:04:22] should then be able to see this
+[01:04:24] Postgress chat member that's been added
+[01:04:25] in. So, let's quick a quick look over
+[01:04:27] here on project overview. And guys, if
+[01:04:29] you actually open up table editor, you
+[01:04:31] can see we now have these two things.
+[01:04:33] One is documents and one is NAM chat
+[01:04:35] history, which means that any time you
+[01:04:37] ask a question, it's actually going to
+[01:04:39] be there. You can see the message in
+[01:04:41] detail. So, you can actually have a look
+[01:04:42] at everything that was said by the AI
+[01:04:44] and what was asked as a question.
+[01:04:46] meaning that you have now something
+[01:04:47] that's scalable. You can search it. You
+[01:04:49] can see what conversations been having
+[01:04:50] and you can improve it, which is
+[01:04:51] freaking unbelievable. Now, next I'm
+[01:04:54] going to show you how do you get a
+[01:04:55] relational database. So, what if we have
+[01:04:57] lots of information and we have a big
+[01:04:59] CSV file and we want to ask it
+[01:05:01] questions. Well, what I'm going to do
+[01:05:02] here, guys, is actually show you this.
+[01:05:03] So, let's go over to Claude and generate
+[01:05:06] a fake CSV for the purposes of this
+[01:05:08] because it's quite different than
+[01:05:09] traditional rag. Now, I have to explain
+[01:05:11] why you can't rag a database. Say for
+[01:05:14] example we have I don't know 500 rows at
+[01:05:16] the top which is a lot of data and a
+[01:05:18] thousand rows down below or let's say 50
+[01:05:20] rows and a thousand rows down below. You
+[01:05:22] can't rag it because if I was to rag
+[01:05:24] like seven rows and seven rows and seven
+[01:05:26] rows you lose context like let's say we
+[01:05:28] have different fields like location and
+[01:05:30] price and you want the ability to have
+[01:05:32] the full context of the actual database.
+[01:05:35] So we cannot use traditional rack
+[01:05:37] instead we create a database and
+[01:05:39] fundamentally what we do is we query the
+[01:05:42] database. So, let me show you exactly
+[01:05:44] what I mean when I say that. But first,
+[01:05:45] we need to create a data set to show
+[01:05:46] what this looks like. So, let's head
+[01:05:48] over to Claude and I'm going to say
+[01:05:49] something like, "Hey, create me a CSV
+[01:05:51] fake file with lots of dummy data and an
+[01:05:56] ID." Bam. Something crazy. We'll get the
+[01:05:58] CSV. We're going to download that and
+[01:06:00] then we're going to add it in. Now, I'm
+[01:06:01] going to show you something really
+[01:06:02] freaking cool with databases that you've
+[01:06:04] probably not seen before and I've not
+[01:06:05] seen anyone talk about despite the fact
+[01:06:07] it's probably one of the most important
+[01:06:08] things you could possibly do. So, I've
+[01:06:10] got this crazy CSV file. We've got loads
+[01:06:13] of names. We've got people from
+[01:06:14] different locations. And then we're
+[01:06:15] going to throw this into Superbase. Man,
+[01:06:17] that coffee is freaking delicious. Okay,
+[01:06:19] so we've got this stuff. What we need to
+[01:06:20] do is actually save this real quick. So,
+[01:06:22] we're going to create a brand new table
+[01:06:23] of data. You're going to come on the
+[01:06:24] left hand side. You're going to come
+[01:06:25] down to database on the left and you
+[01:06:27] click on tables. Then you're going to
+[01:06:29] click on add a new table. I'm going to
+[01:06:31] call this one something like Jack with a
+[01:06:34] letter of K's and description is our key
+[01:06:37] people data. All right. Something like
+[01:06:39] that. Yes, that's fine. And what we can
+[01:06:41] do is basically identify the columns or
+[01:06:43] just import the data from CSV which is
+[01:06:44] exactly what we're going to do. So we
+[01:06:45] click on this button and then we just
+[01:06:47] upload the data which is awesome and
+[01:06:49] automatically that has populated the 20
+[01:06:52] individuals and then we click on save
+[01:06:53] which is cool. So this is really cool
+[01:06:56] and then we've got everything there and
+[01:06:57] then just click on save and then we have
+[01:06:59] a brand new database that exists and is
+[01:07:02] really cool. Whilst that's doing that
+[01:07:03] you're going to come back over now to
+[01:07:04] NAM. We're going to grab an AI agent
+[01:07:07] which is cool. have this guy here
+[01:07:09] triggered by that. Once again, we're
+[01:07:10] going to give him a cool model. So,
+[01:07:12] let's just duplicate this guy real quick
+[01:07:14] and bring him up. Obviously, you could
+[01:07:15] just connect it and drag it over, but I
+[01:07:17] don't know. I like the aesthetics of
+[01:07:18] keeping it separate. Now, what we're
+[01:07:19] going to do here, guys, is give it a
+[01:07:21] tool. Now, the tool we're going to grab
+[01:07:22] here, guys, is going to come down here.
+[01:07:24] We're going to go for Postgress. Let's
+[01:07:26] see if we can the Postgress tool.
+[01:07:28] Beautiful. Now, let's get the credential
+[01:07:30] that we've been using here, which is
+[01:07:31] going to be my beautiful coffee
+[01:07:33] credential, which we keep seem to lose.
+[01:07:35] Actually, no, we created a credential.
+[01:07:36] My apologies. Cool. And then we're going
+[01:07:38] to have a look at tool description set
+[01:07:39] automatically. Schema is public. That is
+[01:07:41] the one that we want realistically. And
+[01:07:43] then we got the table from the list. And
+[01:07:44] can you believe it? Jack has appeared. I
+[01:07:48] like it. Now the operation that we want
+[01:07:49] here is going to be select which is to
+[01:07:51] select rows from table and just leave
+[01:07:54] everything else as it is. Come over
+[01:07:55] here. Come to the agent and just give
+[01:07:57] him this prompt guys which is system
+[01:07:59] excuse me uh not this guy max
+[01:08:01] iterations. We don't need that. given
+[01:08:03] this prompt which is answers the
+[01:08:04] question by generating safe read only
+[01:08:06] SQL and returning results you must use
+[01:08:08] the SQL database when creating it so
+[01:08:09] does this work well why don't we ask it
+[01:08:12] a question that it should only know so
+[01:08:14] if we're actually over here we can click
+[01:08:15] this click in view and table editor and
+[01:08:17] we got information right so let's just
+[01:08:19] say for example I want to ask what
+[01:08:20] department is Joseph Lewis in right and
+[01:08:24] if it works it should be able to tell us
+[01:08:26] engineering so let's go over to any and
+[01:08:28] ask the question open chat and we're
+[01:08:30] going to refresh this I'm going to say
+[01:08:32] something like what department is Joseph
+[01:08:36] Lewis in? Let's have a look. It's now
+[01:08:38] checking the database. Let's have a
+[01:08:40] look. Joseph Lewis is in the engineering
+[01:08:42] department. Is that true? Well, let's
+[01:08:45] have a look. It is. So, what I want to
+[01:08:47] know, guys, is can it actually extract
+[01:08:49] information relationally? Can it for
+[01:08:51] example find all the average salary? So,
+[01:08:53] we've got 50 records here. So, I've just
+[01:08:55] asked this model very simply, what is
+[01:08:57] the average salary in the business? So,
+[01:08:59] and come back over here and we've got
+[01:09:01] all the salaries. So, if we did a quick
+[01:09:02] search of these and we added them all
+[01:09:04] up, uh, let's say we get the entire
+[01:09:06] list. In fact, I'm going to chat GBT and
+[01:09:08] calculate what the answer is. Now,
+[01:09:09] what's really freaking cool here, guys,
+[01:09:11] is not only has it given me the answer,
+[01:09:13] but it's also done it for active
+[01:09:14] employees. So, if I said, "Hey, do it
+[01:09:17] for all employees, active or no." You
+[01:09:20] can see that not only is it giving us
+[01:09:21] the answer, but what actually it's doing
+[01:09:23] is using the context of the entire
+[01:09:25] database. It knows, for example, in the
+[01:09:27] database that we've got, if I come over
+[01:09:29] to our beautiful scenario here, that
+[01:09:31] we've got the city, we've got the
+[01:09:32] country, we've got the hire date, we've
+[01:09:34] got the salary, we've got whether
+[01:09:35] they're even working with us actively at
+[01:09:36] the moment or not. And then it's
+[01:09:38] literally come back, guys, with a full
+[01:09:40] detailed list for any question that you
+[01:09:41] want to. Now, one really interesting
+[01:09:43] thing I want to be able to do now is
+[01:09:44] actually add information. So, check this
+[01:09:46] out. You can actually come here. Let me
+[01:09:48] bring this chat window down. Grab this
+[01:09:50] guy and duplicate. Bring it over here.
+[01:09:52] Now what let's say for example I wanted
+[01:09:54] to add a record to it and we're having a
+[01:09:57] conversation like oh I need you to
+[01:09:58] update something. What we can do instead
+[01:10:00] of operation we can insert or update.
+[01:10:03] Let's say I wanted to insert a row.
+[01:10:05] Okay. And then we've got all this
+[01:10:06] information. What we can do is let the
+[01:10:09] AI literally specify everything. How
+[01:10:12] freaking cool is that? And we can also
+[01:10:13] get it to update and do anything you
+[01:10:15] want to just by clicking the operation
+[01:10:16] and picking the one. Do you want it to
+[01:10:18] delete something? Do you want it to run
+[01:10:19] a query? Do you want to do anything
+[01:10:20] else? You could run a query that says
+[01:10:22] reduce the average salary by 10%. You
+[01:10:25] could do literally anything with this
+[01:10:26] stuff. So say for example now I want to
+[01:10:28] chat. I could say hey I would like you
+[01:10:30] to add me in a another row into the
+[01:10:33] database. Put their main city as Dubai
+[01:10:35] and put their salary as $125,000 and
+[01:10:38] randomize all the other information for
+[01:10:41] example. Okay I'm just showing you the
+[01:10:42] capabilities what you can do here. So
+[01:10:44] the model is doing his work. The agent's
+[01:10:46] working in the background. What we'll
+[01:10:47] see now is the insert rows in table and
+[01:10:49] progress module start to kick in. And
+[01:10:51] just like that guys, it's inserted a
+[01:10:52] row. So let's see if this has worked
+[01:10:54] properly. Let's see what the chat window
+[01:10:55] has come back and said. I've added a new
+[01:10:57] row. Okay, so let's go over and just see
+[01:10:59] what we've got here. So we should see a
+[01:11:01] 51st row. So let's just refresh the
+[01:11:04] table and take a look at what we've got
+[01:11:05] there. Liam Roberts it $125,000 city
+[01:11:09] Dubai. Guys, just like that, we can now
+[01:11:11] edit this database, query it, and ask it
+[01:11:13] any questions that you want to. This is
+[01:11:15] the level 10 secretary. Let me show you
+[01:11:17] exactly what I mean cuz this is the best
+[01:11:19] illustration I could think of to show
+[01:11:21] you how important this is. So do you
+[01:11:23] remember before that we have over here
+[01:11:25] say for example you okay and you're the
+[01:11:27] person who's giving the data right and
+[01:11:30] then we have this beautiful assistant
+[01:11:32] here who's helping us out right and the
+[01:11:34] idea here is that the assistant takes
+[01:11:36] the data and they go over to our big and
+[01:11:39] beautiful filing cabinet and they just
+[01:11:42] basically store the information away.
+[01:11:44] But imagine if we had a secretary but
+[01:11:47] didn't speak English. We had a secretary
+[01:11:49] that didn't really know what they were
+[01:11:51] doing. They were disorganized. They were
+[01:11:53] just like a lowlevel secretary. And what
+[01:11:55] the point I make here is we call this
+[01:11:57] here in this instance this assistant is
+[01:12:00] the embedding model.
+[01:12:03] And the embedding model is just quite
+[01:12:05] simply the process of taking the data
+[01:12:08] and creating an embedding or creating
+[01:12:11] some a big long code basically. And
+[01:12:14] there are different levels that this
+[01:12:15] embedding model can be at. And what my
+[01:12:17] point here is that most people that you
+[01:12:19] follow or not all of them because some
+[01:12:21] are good but a lot of times people never
+[01:12:23] talk about the embedding model when
+[01:12:24] actually I want you to think of this as
+[01:12:26] difference between having a level one
+[01:12:27] assistant and a level 10 assistant. One
+[01:12:30] that is just the absolute best possible.
+[01:12:32] So think about this as who do you want
+[01:12:34] to organize the data in our big filing
+[01:12:35] cabinet. The better they are, the more
+[01:12:37] structured they are, the more powerful
+[01:12:38] they are, the actual better that your
+[01:12:40] rag database queries are going to be. So
+[01:12:43] it's the ability of the organization and
+[01:12:45] not only organization guys crucially the
+[01:12:48] ability to search. So we can talk about
+[01:12:50] a lot of specifics like graph rag. We
+[01:12:53] can talk about so many different types
+[01:12:54] of triple generation but the actual
+[01:12:57] vectorization of it is probably one of
+[01:12:59] the most important things that you could
+[01:13:02] possibly imagine. No probably about it
+[01:13:03] actually. It's one of the most
+[01:13:04] overlooked aspects of it and it it is
+[01:13:06] really really really freaking important.
+[01:13:08] And so we call this the level 10
+[01:13:10] secretary of a level tennis system. And
+[01:13:12] this is our second infinity stone
+[01:13:14] principle which is vectorization. And it
+[01:13:17] is so important. Now it makes a huge
+[01:13:20] difference. There are even, believe it
+[01:13:22] or not, leaderboards of this stuff. I
+[01:13:24] I'm actually not joking. Check it out.
+[01:13:26] Let me show you what I mean. So this
+[01:13:28] page up here. These are literally like
+[01:13:30] the world championships for
+[01:13:31] vectorization. That's how freaking nerdy
+[01:13:33] this thing gets. Okay, it is crazy. An
+[01:13:35] idea is that they have these different
+[01:13:37] benchmarks about how good the models
+[01:13:38] are. And what's really cool is they have
+[01:13:40] different specialtities. So for example,
+[01:13:43] you have this one here, which is
+[01:13:44] seventh, which is multilingual, which is
+[01:13:46] really good at getting stuff. And this
+[01:13:48] zero shot, by the way, is how good is it
+[01:13:50] just grabbing the thing? You can see all
+[01:13:51] these different density and embeddings.
+[01:13:53] Now, what most people use is Open AI,
+[01:13:56] right? Let's see if we can even find
+[01:13:57] Open AI here. Are they even on the list?
+[01:13:59] I I can't even find them on here, right?
+[01:14:01] If I just go for open AI and literally
+[01:14:03] I'm searching this. I can't see them
+[01:14:04] anywhere. Actually, maybe I can just
+[01:14:06] find them here. Open AI. Let's have a
+[01:14:07] look. Open AI. No. Okay. Text embedding
+[01:14:12] three small is 17th. It's got NA on
+[01:14:15] zeros. This is crazy. This is what most
+[01:14:18] people are using. And what I'm going to
+[01:14:20] show you here is how we can actually use
+[01:14:22] something that is in the top seven, top
+[01:14:24] five, top 10. And what we're going to be
+[01:14:26] using here is multilingual E5 instruct.
+[01:14:28] So instead of a level one assistant,
+[01:14:31] we're actually going to use a level 10.
+[01:14:33] That's the kind of difference we're
+[01:14:34] going to get there. So I'm going to show
+[01:14:35] you exactly how we do this together. So
+[01:14:38] to do this, we're going to do what?
+[01:14:39] Well, we're going to add an NA10 form so
+[01:14:41] I can show you what that looks like.
+[01:14:42] Let's add a quick form in here real
+[01:14:43] quick to generate a thing. Let me just
+[01:14:45] come down and build this one up on a new
+[01:14:46] event and add some information in. Okay,
+[01:14:48] cool. Now to do this, we're going to use
+[01:14:50] Pine Cone Vector Embeddings. Okay, so
+[01:14:52] we're going to come down here and show
+[01:14:53] you this. So again, Pine Cone vector
+[01:14:55] store and we're going to come down here
+[01:14:57] to add documents to vector store. Now we
+[01:14:59] need to actually head over to Pine Cone.
+[01:15:02] All right, let's head over to Pine Cone
+[01:15:03] and do this. And the reason we're using
+[01:15:05] Pine Cone instead of Superbase here is
+[01:15:07] when I went and did the research on
+[01:15:08] this, I actually couldn't get Superbase
+[01:15:11] to register with a more powerful model
+[01:15:13] because of the misalignment with like
+[01:15:15] the the databases that they just
+[01:15:16] wouldn't support a stronger embedding
+[01:15:18] model on Superbase when I was playing
+[01:15:20] around with it. So which is why I I came
+[01:15:22] back to Pine for this. Let's sign into
+[01:15:23] this Pine Code very quickly. Okay, so we
+[01:15:25] are logged into Pine Code. What I'm
+[01:15:26] going to do, guys, as hard as this is,
+[01:15:28] I'm going to delete this this thing
+[01:15:30] here. Get it out of here. So, planet is
+[01:15:32] going by. Now, the reason for this is
+[01:15:33] when we create the index, we actually
+[01:15:35] establish what this embedding model is.
+[01:15:38] So, index has been terminated. Thank
+[01:15:40] you. Come down to create index. Now,
+[01:15:42] what do now? I want you to come and
+[01:15:43] select this guy here, multilingual E5
+[01:15:45] large, which is the seventh best on the
+[01:15:48] entire leaderboard, which is freaking
+[01:15:49] cool. We're going to call this one here
+[01:15:51] big boy. Big boy with an I which is cool
+[01:15:54] and then we've got all the key
+[01:15:55] information here which is very very
+[01:15:56] decent. Come down serless fine create
+[01:15:58] index. Fantastic. All right. Now we got
+[01:16:01] big boy. He's having a good time. We've
+[01:16:02] come back over now to our N8N scenario.
+[01:16:05] Now embedding. This is where it gets
+[01:16:07] very interesting. Click on embeddings
+[01:16:08] hooking face interface and we need to
+[01:16:10] give it the model name. And what I've
+[01:16:12] done guys actually brought these
+[01:16:13] different squares over to make it easier
+[01:16:15] to have a look at. So we've got pine
+[01:16:16] cone vector store. Let me just bring and
+[01:16:18] make sure we got the big boy selected
+[01:16:19] which is cool. Now the model I want to
+[01:16:21] pick is this inflow for/multilingual.
+[01:16:23] But again I'll put this down below so
+[01:16:24] you can have a look at it and kick some
+[01:16:25] butt with it. E5 large instruct. That's
+[01:16:27] basically it. But what we've got to do
+[01:16:29] basically in order to do this is connect
+[01:16:31] it to hoging face. So let me show you
+[01:16:32] exactly how you do this. You come over
+[01:16:34] to hoggingface.com and we're going to
+[01:16:36] come over here to oh my goodness. Let me
+[01:16:38] come create an account very quickly. We
+[01:16:40] need to get an API section. So come down
+[01:16:41] to access tokens. We're going to sign in
+[01:16:43] very quickly and then we're going to use
+[01:16:45] this access token to do it. So create
+[01:16:46] new token and then basically give it a
+[01:16:48] name. call it big boy and then we can
+[01:16:51] give it access to all the repositories.
+[01:16:53] Come down here and then we just select
+[01:16:55] everything we want to have a look at.
+[01:16:57] Then once you've then created a token,
+[01:16:59] you copy it, you come back over to
+[01:17:01] beautiful scenario and then you just
+[01:17:03] simply connect it and you're ready to
+[01:17:04] rock and roll. So let's give this a
+[01:17:06] specific example. It's going to come
+[01:17:07] down here to on form submission one. So
+[01:17:09] let's do this. Upload a book. So we've
+[01:17:10] got it here. We're going to add in a
+[01:17:12] file. Cool. And I've given it the money
+[01:17:14] models book from Horosi. We click on
+[01:17:15] submit. And that is excellent. So we
+[01:17:17] then come back over here and as you can
+[01:17:19] see there is now been vectorized in our
+[01:17:21] beautiful model which is really freaking
+[01:17:23] cool. Beautiful. And that is complete.
+[01:17:24] So let's head over to big boy and we'll
+[01:17:26] refresh this guy. So we've got and this
+[01:17:28] has brought back everything for us. Cool
+[01:17:30] little tweak by the way you can mess
+[01:17:31] around with in pine cone is you can
+[01:17:33] actually search yourself by clicking on
+[01:17:34] the text field. So pine cone database is
+[01:17:36] loading up doing its beautiful pine cone
+[01:17:38] related thing. I've got my beautiful ice
+[01:17:41] latt kicking some butt spilling all over
+[01:17:43] the place. Cool. So what effectively
+[01:17:45] have we done that? We vectorized it with
+[01:17:47] this bigger model. Now what this means
+[01:17:49] for us is that equally don't worry about
+[01:17:51] the free ranker for a second. We'll come
+[01:17:53] on to that shortly. But when we're
+[01:17:54] asking it questions, right, we got this
+[01:17:56] chat interface. What we can
+[01:17:57] realistically do here and we have the
+[01:17:59] rag memory is once again you just have
+[01:18:01] the exact same thing. We copy and paste
+[01:18:03] it, bring it over with the exact same
+[01:18:05] Pine Cone thing that we did last time.
+[01:18:07] And as you can see now on Pine Cone, we
+[01:18:09] have all of the information we have down
+[01:18:11] here all the text which is awesome. And
+[01:18:13] I will tell you guys that my personal
+[01:18:15] experience using this thing is freaking
+[01:18:17] insane. Like genuinely speaking, the
+[01:18:18] quality that I get is outrageous. Again,
+[01:18:21] barely anyone does it. It's
+[01:18:22] unbelievable. And despite that, it's
+[01:18:24] like the most powerful thing that you
+[01:18:25] can do by changes vectorization model.
+[01:18:27] It's insane. So, let's give it a new
+[01:18:29] prompt. And I can test you show you how
+[01:18:30] this works. Add another trigger. We're
+[01:18:32] going to come down here to on chat
+[01:18:33] message. And then we're just literally
+[01:18:35] going to query this database together.
+[01:18:36] Come down here. Beautiful. And then we
+[01:18:38] can actually and then I'm going to ask
+[01:18:39] it a question here. What is the most
+[01:18:40] powerful money model? And again, it will
+[01:18:42] go ahead now and check it vector
+[01:18:43] database to see exactly what it can tell
+[01:18:46] us. And you can see there's all the
+[01:18:47] things it's asking here now. It's
+[01:18:48] literally multiple different questions
+[01:18:51] being posited there. We're getting all
+[01:18:52] the responses back. I'm back just like
+[01:18:54] this. And I will tell you from my
+[01:18:56] experience when I was preparing for the
+[01:18:57] NAN like AI agent rag competition. I
+[01:18:59] spent a lot of time with this model and
+[01:19:01] it is way way way more powerful than the
+[01:19:04] open embedding string. Now,
+[01:19:05] vectorization is really powerful, but if
+[01:19:08] you don't understand this third
+[01:19:09] principle, you're leaving so much
+[01:19:11] performance on the table. And I want to
+[01:19:13] call this out by highlighting that we
+[01:19:14] have three things here. First of all, we
+[01:19:17] have our CEO and she's asking questions
+[01:19:20] about the data, the information, the
+[01:19:22] filing cabinet. We have our assistant
+[01:19:24] who goes forth and finds the answer. And
+[01:19:26] then we've got the actual filing cabinet
+[01:19:28] itself, right? Where all the data and
+[01:19:30] information is stored. But what if the
+[01:19:32] CEO is really bad at explaining the
+[01:19:35] thing that they want? For example, with
+[01:19:37] the money models thing, let's say I say,
+[01:19:39] "Hey, what's the best money model?" But
+[01:19:40] I don't articulate it in the right way.
+[01:19:42] Because we know the question you ask is
+[01:19:44] more important than the answer. I can
+[01:19:46] give you the right answer, but if you're
+[01:19:47] not asking the right question, it's
+[01:19:49] pointless. So, the idea here is that
+[01:19:50] what if you just aren't asking the model
+[01:19:53] the right kind of question, and there's
+[01:19:54] what you want, and there's what you ask
+[01:19:56] for, right? It means that the assistant
+[01:19:58] doesn't really know which piece of data
+[01:20:00] they need because the assistant here is
+[01:20:02] basically trying to interpret what you
+[01:20:05] want. The AI model is thinking about,
+[01:20:06] okay, this is what Jack's asking me and
+[01:20:08] then is going to search. But if it if
+[01:20:10] but if you're not clear, you're asking
+[01:20:12] the right question, it does a bad job of
+[01:20:13] that. So you get bad results. Now the
+[01:20:15] third principle here is what we call
+[01:20:17] prompting and queries, which is
+[01:20:20] gamechanging. Now we have the filing
+[01:20:22] cabinet with the data. Okay? And the
+[01:20:24] idea here is that we want to add in two
+[01:20:26] steps. We want to add in a middle
+[01:20:29] management. This is the only time middle
+[01:20:30] management is actually good. And I call
+[01:20:32] this the query rewriter. So the idea
+[01:20:34] here is that we have the boss who's
+[01:20:35] asking a question. And then this query
+[01:20:37] rewriter takes your question and has
+[01:20:41] full context and understanding of what
+[01:20:43] your rag database is actually about.
+[01:20:45] Common terms, common expressions,
+[01:20:47] information about your business. and it
+[01:20:49] will take your query from a certain like
+[01:20:51] type of query and actually rewrite it
+[01:20:54] for the AI model. And this works for a
+[01:20:56] few different reasons. Number one, AIS
+[01:20:58] or 400 IQ interns, right? So the idea
+[01:21:00] here is that if you give it 16 things to
+[01:21:02] do, it will do them really poorly. But
+[01:21:03] if you have a specialized sub AI agent
+[01:21:07] whose only job is to rewrite your
+[01:21:10] question better, you will get
+[01:21:11] significantly better queries to your
+[01:21:13] rack database. And the better questions
+[01:21:14] and more specific things that we ask it,
+[01:21:16] the better responses that we get, which
+[01:21:18] is why this query rewriter is so so so
+[01:21:21] important. Now, in practice, this is
+[01:21:23] what it looks like. So, effectively, we
+[01:21:25] all we're doing is adding in a secondary
+[01:21:27] model with this reranker. What's really
+[01:21:29] cool about having like what we call a
+[01:21:31] parallel tool calls a genic is that the
+[01:21:33] agent can actually reach over and query
+[01:21:35] the vector database with a few different
+[01:21:37] queries at the same time, which makes it
+[01:21:39] more highly effective. And we basically
+[01:21:41] tell this agent that it needs to take
+[01:21:43] the user's query first of all and then
+[01:21:45] run it through the query reranker. You
+[01:21:47] could do if you wanted to as well have
+[01:21:50] the chat message a query rerank iter
+[01:21:52] here and then go through to the agent.
+[01:21:54] One of the reasons I like having it down
+[01:21:56] below is the agent can ask it questions
+[01:21:58] listen and if it needs to then call upon
+[01:22:00] it a second time it can do which I think
+[01:22:02] is a is a huge advantage. Then effect
+[01:22:04] what happens is the agent calls a query
+[01:22:05] reranker. It then asks the questions in
+[01:22:08] a better way. Then it consults the rack
+[01:22:10] memory. Then it gives you a better
+[01:22:12] thing. So we're getting way way way
+[01:22:13] better consultations over there. Now
+[01:22:15] this is where it gets even freaking
+[01:22:17] cooler. So look, I'm going to click on
+[01:22:18] inspected database here. You can also
+[01:22:20] click on this limits for I'm going to
+[01:22:22] increase the limit here to 20. Okay? And
+[01:22:25] what I'm also going to do is rerank the
+[01:22:26] results by adding in cohhere's reranker.
+[01:22:29] Now what cohhere does, it's a specific
+[01:22:31] thing. So what we're saying is I want
+[01:22:33] you down to go to the bookcase. Get me
+[01:22:35] 20 bucks, 20 bits of information. And
+[01:22:37] then we've got another model that says,
+[01:22:39] and this is the analogy here, that we
+[01:22:41] have a re-ranker in the middle that sits
+[01:22:43] between the assistant that gets the
+[01:22:45] information and is like, Jack, you've
+[01:22:47] given me like 20 things. I'm going to
+[01:22:49] pick the four best of the 20 things. So,
+[01:22:52] we get another level of optimization on
+[01:22:54] top of that. And adding this coher
+[01:22:56] ranker is so simple, it's crazy. It's
+[01:22:58] reranker, coher, and you just make an
+[01:23:00] account on that website by going to
+[01:23:01] reranker, coher, and then you just grab
+[01:23:03] the API key, and it's done. And then we
+[01:23:04] rerank. Literally, that's it. and then
+[01:23:07] it is ready to rock and roll. So let's
+[01:23:09] ask it a question about the book, right?
+[01:23:10] So if I said something like, what would
+[01:23:12] be the best model for a I don't know a a
+[01:23:17] I don't know monthly MR subscription
+[01:23:19] business. It's a really bad question,
+[01:23:22] but I just want to show you how this
+[01:23:23] kind of works, right? So we've got this
+[01:23:24] question here. The agent's now speaking
+[01:23:26] to the reranker who's given some
+[01:23:27] information and then it's checking the
+[01:23:29] rack memory database and it will rerank
+[01:23:31] the stuff and then it will give us the
+[01:23:32] answers which is really cool. So it's
+[01:23:33] just nice that it's done that. You can
+[01:23:35] actually see all the things it's got
+[01:23:35] there. best financial models for monthly
+[01:23:37] recurring revenue, MR subscription,
+[01:23:39] business revenue forecast, insurance
+[01:23:40] prediction. So, you see now how it's
+[01:23:42] taken my crap question, which I I made
+[01:23:44] it crap on purpose, and it's actually
+[01:23:46] then transitioned that into something
+[01:23:48] that is probably more relevant like
+[01:23:50] keywords like MR, things that you would
+[01:23:52] expect to see and think. Look at this
+[01:23:54] guys for example, offer sequencing,
+[01:23:56] model, subscription, business
+[01:23:57] optimization. It's got loads of things,
+[01:23:58] best financial models. What else has it
+[01:24:00] got on this? Like you can see the
+[01:24:01] quality is continuity, subscription,
+[01:24:03] business. Guys, these are insane. like
+[01:24:05] you compared these four things compared
+[01:24:07] to what I said. It's like speaking I
+[01:24:09] don't know like like a 2-year-old versus
+[01:24:10] a PhD scholar. It's insane. And then
+[01:24:12] we've had the information back and then
+[01:24:14] what we can do is check out what result
+[01:24:16] we got. So have a look at this TLDDR the
+[01:24:18] best money model for month blah blah
+[01:24:20] blah. And so now we're getting
+[01:24:21] significantly better results. I cannot
+[01:24:23] emphasize enough how important this is
+[01:24:25] and it's like no one does it and so I'm
+[01:24:27] so sick to show this master class cuz it
+[01:24:29] is so freaking insane and we've got all
+[01:24:31] the things. We've got examples, numbers
+[01:24:32] that matter, pitfalls and checks and
+[01:24:34] it's literally insane. And in fact, I'm
+[01:24:35] actually going to pull this up on the
+[01:24:37] system here to show you this because
+[01:24:38] this is really key, a really key detail
+[01:24:40] to understand. And this idea that when
+[01:24:42] we do rag, okay, effectively, we can do
+[01:24:44] it in a couple of different ways. And
+[01:24:45] I'm oversimplifying this a little bit
+[01:24:47] just to kind of like give you like big
+[01:24:49] results for small inputs is we can have
+[01:24:52] something on a very local level. Okay,
+[01:24:54] which is basically imagine our librarian
+[01:24:56] example, okay? Where we have like a
+[01:24:57] million gazillion different books. We
+[01:24:59] can have it in a way that it will only
+[01:25:01] ever tell us the information in the
+[01:25:05] book. So if I say is this illegal or is
+[01:25:08] this against our policy, the language
+[01:25:11] model in this instance here will go over
+[01:25:13] to the book, grab the information and
+[01:25:16] quote it back to you and it won't add
+[01:25:18] any any additional information. It won't
+[01:25:21] kind of um dilute its core message. Then
+[01:25:24] we have this idea of global and
+[01:25:27] essentially the idea behind this one is
+[01:25:28] that we do have the book but in addition
+[01:25:31] to that book the AI is kind of saying
+[01:25:33] look I get that you've got the book but
+[01:25:35] in addition to that I also happen to
+[01:25:37] know loads of other pieces of
+[01:25:39] information from several other books. So
+[01:25:42] it will tell you it will use the
+[01:25:43] knowledge and information you've got
+[01:25:44] about it being illegal based on your
+[01:25:46] source text. But in addition to that
+[01:25:48] said, look, I also happen to know
+[01:25:49] because I'm a freaking AI, I know
+[01:25:50] everything that there's some additional
+[01:25:52] context that I'm giving to you. So we
+[01:25:54] have these two different trainins of
+[01:25:56] thought here. One is I only want to know
+[01:25:58] this specific thing and the other one is
+[01:26:00] I want the best answer whether or not
+[01:26:03] that includes my core data. Now there's
+[01:26:05] ways that we can actually deliver this
+[01:26:07] in our systems in our rack systems based
+[01:26:09] on what your business needs and what the
+[01:26:11] client needs. Now how do you do that?
+[01:26:13] Well, one is in the agent itself when
+[01:26:16] it's querying it, we can actually add
+[01:26:19] metadata filters say that like look,
+[01:26:21] you're actually going to search for
+[01:26:23] certain metadatas and I only want you to
+[01:26:25] bring back things that are within X date
+[01:26:28] range or you must quote the specific
+[01:26:30] part and that gives us some beautiful
+[01:26:32] like kind of um configurability and
+[01:26:35] asurances that it's only going to call
+[01:26:37] back and do it so that we know that when
+[01:26:38] we get the information we get a specific
+[01:26:41] quote about where that was. So for
+[01:26:43] example, even if I show you now in the
+[01:26:44] big boy database, if we have a look at
+[01:26:46] this, right, we've got lots of different
+[01:26:48] metadata on this thing here, right? So
+[01:26:49] we've got the book that it came from and
+[01:26:51] you've got the lines that are in the
+[01:26:53] book. So essentially, if we're actually
+[01:26:55] adding in metadata about the thing, we
+[01:26:58] can then add these as metadata filters
+[01:26:59] in the scenario to make sure we get
+[01:27:01] something specific. But what's really
+[01:27:02] important as well when you're doing the
+[01:27:03] prompting is that you specify whether
+[01:27:06] you want it to be specific or you're
+[01:27:08] happy for it to kind of draw out like
+[01:27:10] the main key point that you're trying to
+[01:27:11] find. And just for an example of that,
+[01:27:13] if you come over to Superbase, you can
+[01:27:14] come down here. We can add in our
+[01:27:16] metadata filters. So you come down to
+[01:27:18] add options, metadata filter, and then
+[01:27:20] you can literally add the fields and the
+[01:27:22] values that you want it to filter by. So
+[01:27:23] it's only going to pull down things that
+[01:27:25] fit in with your metadata. Now, why this
+[01:27:28] is so cool is we can have the AI specify
+[01:27:31] email sender. So do you remember in our
+[01:27:32] superbase database and I'll pull this up
+[01:27:34] real quick so you can have a quick look
+[01:27:35] at it where we where we vectorized
+[01:27:37] emails. We could say look if it's now
+[01:27:39] going to the rag it will only be able to
+[01:27:41] go back and search for the specific
+[01:27:44] emails that we gave it. Right? So let me
+[01:27:45] come and actually show you this real
+[01:27:46] quick. Let's come over to our beautiful
+[01:27:48] database like in the Jack thing right
+[01:27:50] we've got the things here and also in
+[01:27:52] our document section we've got all the
+[01:27:54] information like emails and PDFs and
+[01:27:56] things. So we know that the third most
+[01:27:58] important part of rag is the prompt.
+[01:28:01] Now, I want to show you exactly why this
+[01:28:03] is so critical so you can leverage it
+[01:28:05] and 10x the quality of it. So, we've
+[01:28:08] done the vectorization. We've got a
+[01:28:10] super powerful assistant. Now, what
+[01:28:11] we've got really is the prompt itself.
+[01:28:13] So, I've got this rag master prompt
+[01:28:16] here. Now, what's really crucial and
+[01:28:18] there's so many different variables
+[01:28:20] based on your specific use case. For
+[01:28:22] example, what we would do is customize
+[01:28:24] this whenever you're building a rack
+[01:28:26] system. We have you are insert expert
+[01:28:28] role. Your task is to answer the user's
+[01:28:30] question only using retrieved context
+[01:28:33] provided below. And I'm going to show
+[01:28:34] you something about prompting with rag
+[01:28:35] guys that I've never seen anyone mention
+[01:28:37] because I went down very deep rabbit
+[01:28:38] holes to this. So all you simply do guys
+[01:28:40] is you go through this and you're going
+[01:28:42] to remove things. So you must act as a
+[01:28:45] is it a domain expert, a data analyst, a
+[01:28:47] research summarizer, an adviser giving
+[01:28:49] recommendations. So for instance, if we
+[01:28:51] were building a chatbot in my name like
+[01:28:53] a Jack GPT or a Hormosi GPT or a Grant
+[01:28:56] Cordone GPT or whatever it is, you would
+[01:28:59] only want it to act as advisor.
+[01:29:01] Conversely, if we have say a law firm,
+[01:29:04] okay, and they want to buy, you know, or
+[01:29:05] maybe you're a pharmacological
+[01:29:07] consultant, you want it to be explicit
+[01:29:09] about the thing it does. And all you do
+[01:29:11] guys is you come down and you basically
+[01:29:13] remove and delete the bits you don't
+[01:29:14] want. Then we have this chain overview
+[01:29:17] thing, which is really critical. So you
+[01:29:18] have access to a specialized query
+[01:29:20] rewriter agent. Now before retrieving
+[01:29:22] information or general response, send
+[01:29:24] the query the original uh query to the
+[01:29:26] query writer agent. Remember guys, that
+[01:29:29] is this guy right here. Having a rock
+[01:29:31] and rolling big and beautiful. Good
+[01:29:32] time. So bring him down a little bit
+[01:29:34] here. And what I'm going to do as well
+[01:29:35] is just show you here guys. We're going
+[01:29:36] to add the ranker results. And we want
+[01:29:38] 20. This is really key. So the query
+[01:29:40] reranker that we've got, let me get the
+[01:29:42] coherent here just to show you. Um,
+[01:29:45] basically 20 results come back from the
+[01:29:47] vector database and then the query
+[01:29:49] ranker will actually pull the top three
+[01:29:50] that it thinks are most relevant. That
+[01:29:52] was our secretary analogy. Now
+[01:29:55] objective, what do you want it to do? Do
+[01:29:57] you want it to give you the exact
+[01:29:58] information? Do you want a balanced
+[01:30:00] explanation combining the retrieve
+[01:30:01] information with the brief context? Do
+[01:30:02] you want an executive summary? Which do
+[01:30:04] you want? Again, let's say you want D.
+[01:30:06] Well, we would just simply remove and
+[01:30:08] then we just go down. And then
+[01:30:09] knowledge. Now, this is a really core
+[01:30:12] concept. this idea of do you want it to
+[01:30:14] be local strict again the analogy here
+[01:30:16] is a librarian right and she says do you
+[01:30:18] want the information only from that book
+[01:30:22] so I only want it from this book only
+[01:30:24] give me information from this book or
+[01:30:26] are you saying that yes I want you to
+[01:30:28] get me information from the book but
+[01:30:29] also if there's relevant data
+[01:30:31] information we call this global from
+[01:30:33] this book and this book you can bring
+[01:30:34] that in and synthesize it if we are
+[01:30:36] supporting a law firm for I've had a law
+[01:30:38] firm client quite a few of these sort of
+[01:30:40] builds um they'll say look Jack I only
+[01:30:43] really want information from my data, my
+[01:30:46] specific case law, in which case we do
+[01:30:48] what's called local strict, which is
+[01:30:51] quotations and citations only. But if
+[01:30:53] we're okay to paraphrase, paraphrase it,
+[01:30:55] then we do local grounded. But if you
+[01:30:57] want global augmented, in other words,
+[01:30:59] grab me data information more than
+[01:31:00] that's a completely different story.
+[01:31:02] Okay? And once again, we emphasize fab
+[01:31:04] fabricate citations and we let the model
+[01:31:06] know that it's okay to say that it
+[01:31:08] doesn't know. Uh, and we also wanted to
+[01:31:09] express it confidence. Citations. What
+[01:31:12] of citations? Output format. What do you
+[01:31:14] want it to be? Well, we let's just say
+[01:31:15] we may want markdown and concise
+[01:31:16] paragraphs. And then structure. What do
+[01:31:18] you want it to look and feel like as an
+[01:31:20] output? You wouldn't believe the number
+[01:31:21] of scenarios that don't actually specify
+[01:31:22] this. Okay. And then we have that. Then
+[01:31:25] we have down here our query reranker.
+[01:31:28] It's prompt is a little bit more simple
+[01:31:30] and I'm going to get nerd out on this
+[01:31:31] topic because this is a really key one
+[01:31:32] that I went deep on here. We give it the
+[01:31:34] role. Now domain context. So there's a
+[01:31:38] question here on rag about you know
+[01:31:40] let's say is it more helpful to give our
+[01:31:44] system here context and information
+[01:31:47] about our rag system or not and the
+[01:31:49] answer that I landed on from my research
+[01:31:51] is um yes and no. No in the sense that
+[01:31:54] this guy the main agent we don't want
+[01:31:57] him to have any information
+[01:31:59] realistically about what our rag
+[01:32:01] database is about. Isn't that crazy? And
+[01:32:04] one of the reasons for that is because
+[01:32:05] we don't want to pollute. So if we did
+[01:32:07] our data cleansing properly, okay, in
+[01:32:10] this knowledge database, it will have
+[01:32:13] the pure knowledge. Now if you start to
+[01:32:15] say, oh by the way, you do this and you
+[01:32:17] answer these kind of blah blah blah
+[01:32:18] blah, we can start to bias the models
+[01:32:21] retrieval too much. The query ranker by
+[01:32:24] the way is slightly different. And
+[01:32:25] again, like this is just what I found
+[01:32:28] based on all of my research and what I
+[01:32:29] found working for me. With the query
+[01:32:31] runner, we add what we call a
+[01:32:33] disambiguation contextual prompt, which
+[01:32:35] is a really fancy way of saying, "Give
+[01:32:37] me two sentences about what your rag
+[01:32:41] database is about." Now, we do this
+[01:32:43] because let's say, for example, we
+[01:32:44] trained this rag system on Alex's books
+[01:32:47] or Harry Potter books, whatever the
+[01:32:49] thing is. You may ask it a question that
+[01:32:52] it could interpret in slightly different
+[01:32:54] ways. But if it has the context of what
+[01:32:57] that rag database is about purely for
+[01:33:00] disambiguation purposes only. In other
+[01:33:02] words, we're not biasing its its
+[01:33:04] retrieval. It will then be able to get
+[01:33:06] we think better responses from it. And
+[01:33:08] then we give it instructions. We read it
+[01:33:10] carefully. Write two or three concise
+[01:33:12] close alternatives. Again, semantically
+[01:33:14] rich alternatives is key because again
+[01:33:16] we're using those words to go and grab.
+[01:33:18] So if I said something like how old is
+[01:33:20] Dexter, it may say springpananiel age,
+[01:33:23] how old is dog, Dexter age, some Dexter
+[01:33:26] years, months. So that's like loads of
+[01:33:27] like if you can think of a clustering of
+[01:33:29] words like that semantically would work.
+[01:33:30] Now to show you what it looks like an
+[01:33:32] example, I train this on again books.
+[01:33:36] Let me come down ask a simple question.
+[01:33:37] So I've said here, give me an example of
+[01:33:39] a money model. Now look, we've got a
+[01:33:41] core model. I've added a secondary
+[01:33:42] brain. I've got the think module as it
+[01:33:44] wants to think. It's gone through to the
+[01:33:46] reranker. So in other words, it's
+[01:33:47] reranked the actual questions and then
+[01:33:49] it searched the rag database and it's
+[01:33:51] thinking. So I want to show you an
+[01:33:52] example, right? So I my input here was
+[01:33:54] give me an example of um a money model.
+[01:33:57] Look at this. Examples of money models
+[01:33:58] used in business growth strategies,
+[01:34:00] illustrations of financial models
+[01:34:01] applicable for increasing business
+[01:34:03] revenue, sample money model frameworks,
+[01:34:04] blah blah blah. And down here, guys,
+[01:34:06] we've got an excellent response that
+[01:34:07] covers uh pretty much everything that we
+[01:34:10] want in the detail and the specifics
+[01:34:12] that I actually gave it. Now, you've
+[01:34:14] most likely heard of the expression
+[01:34:16] graph rag that's been thrown around and
+[01:34:18] I want to include it here in the
+[01:34:19] interest of of completeness. So, if
+[01:34:21] you're not aware what graph rag is,
+[01:34:23] graph rag is retrieval of mental
+[01:34:25] generation, but effectively we do it in,
+[01:34:28] as you might have guessed, a graph. And
+[01:34:29] what we effectively do is
+[01:34:32] illustrate the relationships of things
+[01:34:35] to other things. And what it's great at
+[01:34:38] is if you have a big um database and you
+[01:34:42] want to be able to ask it questions
+[01:34:43] that's um let's say very relational in
+[01:34:46] nature. Let's say you have a corpus of
+[01:34:48] lots of materials and you want to know
+[01:34:49] how certain things relate to other
+[01:34:51] things. Graph rag is great because kind
+[01:34:53] of like those games you like bubble io
+[01:34:55] whatever the bigger the bubble um the
+[01:34:57] more things that are connected to it. So
+[01:34:59] let's just say for example that this
+[01:35:00] chunk here document what the word
+[01:35:03] document would do is connect to
+[01:35:04] everything else that's document. So what
+[01:35:06] it enables you to do basically is find
+[01:35:07] out the relationships to other things.
+[01:35:09] Now this tutorial is about what we see
+[01:35:12] in 99% of production use cases and it's
+[01:35:16] a very advanced specific thing. So I'm
+[01:35:17] not including it in this video because
+[01:35:18] we're focusing on what is actually
+[01:35:20] driving a lot of the value of real
+[01:35:22] business applications. But I wanted to
+[01:35:24] cover it here just so you have a good
+[01:35:25] understanding of it. We can use tools
+[01:35:26] like light rack to do that. And if you
+[01:35:28] want a full video breaking down this
+[01:35:29] specifically just let me know down below
+[01:35:31] in the comments. I'm happy to build that
+[01:35:32] and show it for you. Now, understanding
+[01:35:34] how to build effective rack systems is
+[01:35:35] one thing, but that is only one part of
+[01:35:38] multiple different skills and systems
+[01:35:40] that you need to learn to generate
+[01:35:42] income from AI and systematize and scale
+[01:35:44] your business. In the community, I've
+[01:35:46] got six beautiful chapters that take you
+[01:35:48] from basically AI foundations, which is
+[01:35:51] all the basics you need to know all the
+[01:35:52] way through to becoming an AI native
+[01:35:54] entrepreneur. And if you want to
+[01:35:55] commercialize, we've got literally
+[01:35:57] step-by-step days and road mapaps that
+[01:35:59] cover all the stuff that I did, how I
+[01:36:00] kind of built and sold my own automation
+[01:36:02] business, how I've generated so much
+[01:36:03] money through my own agency, and I've
+[01:36:05] helped other people do that as well. And
+[01:36:06] then we have business systems, which are
+[01:36:08] lift and shift automation systems that
+[01:36:11] actually work that are going to save you
+[01:36:12] time and help you crush your business.
+[01:36:14] I'm going to put a link down below so
+[01:36:15] you can click that and join us. You have
+[01:36:17] direct daily access to me. And one thing
+[01:36:20] I'm really proud about the community is
+[01:36:21] how wholesome and supportive and how
+[01:36:24] many wins we have in the group. People
+[01:36:25] always crushing it and getting amazing
+[01:36:27] wins in our business, getting their
+[01:36:28] first clients, getting their first 10,
+[01:36:30] 20K a month. I've literally reverse
+[01:36:32] engineered all success stories to make
+[01:36:33] your pathway from beginner to expert as
+[01:36:37] simple as possible. You can hang out
+[01:36:39] with me every week and chat to me every
+[01:36:40] day and we will solve 100% of your tech
+[01:36:43] stuff. So, I wanted I wanted to include
+[01:36:44] that because if you're serious about
+[01:36:45] your AI journey and you want to turn
+[01:36:47] this incredible skill into income, um
+[01:36:50] this is the place I built to do it. So,
+[01:36:52] if that sounds all interesting and you
+[01:36:53] want to take that to the next level,
+[01:36:54] click the link down below in description
+[01:36:56] and I'll catch you

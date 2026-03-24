@@ -1,0 +1,1175 @@
+{
+    "name": "AI Powered Social Media System",
+    "flow": [
+        {
+            "id": 1,
+            "module": "slack:WatchGroupMessages",
+            "version": 4,
+            "parameters": {
+                "__IMTCONN__": 1365672,
+                "inputMethod": "list",
+                "limit": 2,
+                "channel": "C06SJKXSBEK"
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 300
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Slack (user) connection (jack)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "slack2"
+                            }
+                        },
+                        "inputMethod": {
+                            "label": "Select from a list"
+                        },
+                        "channel": {
+                            "label": "automation-private"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:slack2",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "inputMethod",
+                        "type": "select",
+                        "label": "Input Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "list",
+                                "search"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    },
+                    {
+                        "name": "channel",
+                        "type": "select",
+                        "label": "Private Channel",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "perplexity-ai:createAChatCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425898
+            },
+            "mapper": {
+                "model": "pplx-7b-online",
+                "messages": [
+                    {
+                        "content": "Summarise this URL word for word: {{1.type}}\n\nThen add a section sharing the latest insights from google on that topic.",
+                        "role": "user"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 300
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Perplexity connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "perplexity-ai"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "pplx-7b-online"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:perplexity-ai",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "pplx-7b-chat",
+                                "pplx-7b-online",
+                                "llama-2-70b-chat",
+                                "mistral-7b-instruct",
+                                "mixtral-8x7b-instruct",
+                                "sonar-small-chat",
+                                "sonar-medium-chat",
+                                "sonar-small-online",
+                                "sonar-medium-online"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "messages",
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true,
+                        "spec": [
+                            {
+                                "name": "content",
+                                "type": "text",
+                                "label": "Content",
+                                "required": true
+                            },
+                            {
+                                "name": "role",
+                                "type": "select",
+                                "label": "Role",
+                                "options": [
+                                    {
+                                        "label": "User",
+                                        "value": "user"
+                                    },
+                                    {
+                                        "label": "Assistant",
+                                        "value": "assistant"
+                                    },
+                                    {
+                                        "label": "System",
+                                        "value": "system"
+                                    }
+                                ],
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1.999,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "number",
+                        "label": "Top K",
+                        "validate": {
+                            "max": 2048,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 300
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 4,
+                            "module": "openai-gpt-3:sendMessageToAssistant",
+                            "version": 1,
+                            "parameters": {
+                                "__IMTCONN__": 1425946
+                            },
+                            "mapper": {
+                                "message": "{{2.choices[].message.content}}",
+                                "role": "user",
+                                "assistantId": "asst_CiNZoLMWiIu0kJSeHAYV88em"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 900,
+                                    "y": 0,
+                                    "name": "LinkedIN Text ✍️"
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "My OpenAI connection",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "openai-gpt-3"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "assistantId": {
+                                            "mode": "chose",
+                                            "label": "MMA Instagram Bot 💎 (gpt-4-turbo)"
+                                        },
+                                        "model": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "fileIds": {
+                                            "mode": "chose"
+                                        },
+                                        "tools": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:openai-gpt-3",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "message",
+                                        "type": "text",
+                                        "label": "Message",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "role",
+                                        "type": "hidden",
+                                        "label": "Role"
+                                    },
+                                    {
+                                        "name": "assistantId",
+                                        "type": "select",
+                                        "label": "Assistant",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "threadId",
+                                        "type": "text",
+                                        "label": "Thread ID"
+                                    },
+                                    {
+                                        "name": "model",
+                                        "type": "select",
+                                        "label": "Model"
+                                    },
+                                    {
+                                        "name": "fileIds",
+                                        "type": "array",
+                                        "label": "File IDs",
+                                        "validate": {
+                                            "maxItems": 10
+                                        },
+                                        "spec": {
+                                            "type": "select",
+                                            "label": "File ID",
+                                            "options": [],
+                                            "name": "value",
+                                            "dynamic": true
+                                        }
+                                    },
+                                    {
+                                        "name": "tools",
+                                        "type": "select",
+                                        "label": "Tools",
+                                        "multiple": true,
+                                        "validate": {
+                                            "enum": [
+                                                "retrieval",
+                                                "code_interpreter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "instructions",
+                                        "type": "text",
+                                        "label": "Instructions"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 6,
+                            "module": "openai-gpt-3:GenerateImage",
+                            "version": 1,
+                            "parameters": {
+                                "__IMTCONN__": 1425946
+                            },
+                            "mapper": {
+                                "model": "dall-e-3",
+                                "prompt": "{{4.result}}",
+                                "size": "1024x1024",
+                                "quality": "standard",
+                                "style": "vivid",
+                                "response_format": "url"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1200,
+                                    "y": 0,
+                                    "name": "LinkedIN Image 💎"
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "My OpenAI connection",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "openai-gpt-3"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "model": {
+                                            "mode": "chose",
+                                            "label": "Dall-E 3"
+                                        },
+                                        "size": {
+                                            "mode": "chose",
+                                            "label": "1024x1024"
+                                        },
+                                        "quality": {
+                                            "mode": "chose",
+                                            "label": "Standard"
+                                        },
+                                        "style": {
+                                            "mode": "chose",
+                                            "label": "Vivid"
+                                        },
+                                        "response_format": {
+                                            "mode": "chose",
+                                            "label": "URL"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:openai-gpt-3",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "model",
+                                        "type": "select",
+                                        "label": "Model",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "dall-e-3",
+                                                "dall-e-2"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "prompt",
+                                        "type": "text",
+                                        "label": "Prompt",
+                                        "validate": {
+                                            "max": 4000,
+                                            "min": 0
+                                        },
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "size",
+                                        "type": "select",
+                                        "label": "Size",
+                                        "validate": {
+                                            "enum": [
+                                                "1024x1024",
+                                                "1792x1024",
+                                                "1024x1792"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "quality",
+                                        "type": "select",
+                                        "label": "Quality",
+                                        "validate": {
+                                            "enum": [
+                                                "standard",
+                                                "hd"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "style",
+                                        "type": "select",
+                                        "label": "Style",
+                                        "validate": {
+                                            "enum": [
+                                                "vivid",
+                                                "natural"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "response_format",
+                                        "type": "select",
+                                        "label": "Response Format",
+                                        "validate": {
+                                            "enum": [
+                                                "url",
+                                                "imageFile"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "interface": [
+                                    {
+                                        "name": "created",
+                                        "type": "date",
+                                        "label": "Created"
+                                    },
+                                    {
+                                        "name": "data",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "revised_prompt",
+                                                "type": "text",
+                                                "label": "Revised Prompt"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Data"
+                                    },
+                                    {
+                                        "name": "resImgName",
+                                        "type": "text",
+                                        "label": "Response Image Name",
+                                        "semantic": "file:name"
+                                    },
+                                    {
+                                        "name": "resImgData",
+                                        "type": "buffer",
+                                        "label": "Response Image Data",
+                                        "semantic": "file:data"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 7,
+                            "module": "linkedin:ShareImage",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 1427607
+                            },
+                            "mapper": {
+                                "fileName": "{{6.resImgName}}",
+                                "data": "{{6.resImgData}}",
+                                "content": "{{4.result}}",
+                                "visibility": "PUBLIC",
+                                "feedDistribution": "MAIN_FEED",
+                                "isReshareDisabledByAuthor": false
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1500,
+                                    "y": 0
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "LinkedIN doodoo (Jack Roberts)",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "linkedin2"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "visibility": {
+                                            "mode": "chose",
+                                            "label": "Public"
+                                        },
+                                        "feedDistribution": {
+                                            "mode": "chose",
+                                            "label": "Main feed"
+                                        },
+                                        "isReshareDisabledByAuthor": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:linkedin2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "fileName",
+                                        "type": "text",
+                                        "label": "File name",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "data",
+                                        "type": "buffer",
+                                        "label": "Data",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "title",
+                                        "type": "text",
+                                        "label": "Title"
+                                    },
+                                    {
+                                        "name": "altText",
+                                        "type": "text",
+                                        "label": "Alt Text"
+                                    },
+                                    {
+                                        "name": "content",
+                                        "type": "text",
+                                        "label": "Content",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "visibility",
+                                        "type": "select",
+                                        "label": "Visibility",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "PUBLIC",
+                                                "CONNECTIONS",
+                                                "LOGGED_IN"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "feedDistribution",
+                                        "type": "select",
+                                        "label": "Feed Distribution",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "MAIN_FEED",
+                                                "NONE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "isReshareDisabledByAuthor",
+                                        "type": "boolean",
+                                        "label": "Is Reshare Disabled",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 8,
+                            "module": "openai-gpt-3:sendMessageToAssistant",
+                            "version": 1,
+                            "parameters": {
+                                "__IMTCONN__": 1425946
+                            },
+                            "mapper": {
+                                "message": "{{2.choices[].message.content}}",
+                                "role": "user",
+                                "assistantId": "asst_CiNZoLMWiIu0kJSeHAYV88em"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 900,
+                                    "y": 300,
+                                    "name": "Instagram Text ✍️"
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "My OpenAI connection",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "openai-gpt-3"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "assistantId": {
+                                            "mode": "chose",
+                                            "label": "MMA Instagram Bot 💎 (gpt-4-turbo)"
+                                        },
+                                        "model": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "fileIds": {
+                                            "mode": "chose"
+                                        },
+                                        "tools": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:openai-gpt-3",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "message",
+                                        "type": "text",
+                                        "label": "Message",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "role",
+                                        "type": "hidden",
+                                        "label": "Role"
+                                    },
+                                    {
+                                        "name": "assistantId",
+                                        "type": "select",
+                                        "label": "Assistant",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "threadId",
+                                        "type": "text",
+                                        "label": "Thread ID"
+                                    },
+                                    {
+                                        "name": "model",
+                                        "type": "select",
+                                        "label": "Model"
+                                    },
+                                    {
+                                        "name": "fileIds",
+                                        "type": "array",
+                                        "label": "File IDs",
+                                        "validate": {
+                                            "maxItems": 10
+                                        },
+                                        "spec": {
+                                            "type": "select",
+                                            "label": "File ID",
+                                            "options": [],
+                                            "name": "value",
+                                            "dynamic": true
+                                        }
+                                    },
+                                    {
+                                        "name": "tools",
+                                        "type": "select",
+                                        "label": "Tools",
+                                        "multiple": true,
+                                        "validate": {
+                                            "enum": [
+                                                "retrieval",
+                                                "code_interpreter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "instructions",
+                                        "type": "text",
+                                        "label": "Instructions"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 9,
+                            "module": "openai-gpt-3:GenerateImage",
+                            "version": 1,
+                            "parameters": {
+                                "__IMTCONN__": 1425946
+                            },
+                            "mapper": {
+                                "model": "dall-e-3",
+                                "prompt": "{{8.result}}",
+                                "size": "1024x1024",
+                                "quality": "standard",
+                                "style": "vivid",
+                                "response_format": "url"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1200,
+                                    "y": 300,
+                                    "name": "Instagram Image 💎"
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "My OpenAI connection",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "openai-gpt-3"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "model": {
+                                            "mode": "chose",
+                                            "label": "Dall-E 3"
+                                        },
+                                        "size": {
+                                            "mode": "chose",
+                                            "label": "1024x1024"
+                                        },
+                                        "quality": {
+                                            "mode": "chose",
+                                            "label": "Standard"
+                                        },
+                                        "style": {
+                                            "mode": "chose",
+                                            "label": "Vivid"
+                                        },
+                                        "response_format": {
+                                            "mode": "chose",
+                                            "label": "URL"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:openai-gpt-3",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "model",
+                                        "type": "select",
+                                        "label": "Model",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "dall-e-3",
+                                                "dall-e-2"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "prompt",
+                                        "type": "text",
+                                        "label": "Prompt",
+                                        "validate": {
+                                            "max": 4000,
+                                            "min": 0
+                                        },
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "size",
+                                        "type": "select",
+                                        "label": "Size",
+                                        "validate": {
+                                            "enum": [
+                                                "1024x1024",
+                                                "1792x1024",
+                                                "1024x1792"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "quality",
+                                        "type": "select",
+                                        "label": "Quality",
+                                        "validate": {
+                                            "enum": [
+                                                "standard",
+                                                "hd"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "style",
+                                        "type": "select",
+                                        "label": "Style",
+                                        "validate": {
+                                            "enum": [
+                                                "vivid",
+                                                "natural"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "response_format",
+                                        "type": "select",
+                                        "label": "Response Format",
+                                        "validate": {
+                                            "enum": [
+                                                "url",
+                                                "imageFile"
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "interface": [
+                                    {
+                                        "name": "created",
+                                        "type": "date",
+                                        "label": "Created"
+                                    },
+                                    {
+                                        "name": "data",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "revised_prompt",
+                                                "type": "text",
+                                                "label": "Revised Prompt"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Data"
+                                    },
+                                    {
+                                        "name": "resImgName",
+                                        "type": "text",
+                                        "label": "Response Image Name",
+                                        "semantic": "file:name"
+                                    },
+                                    {
+                                        "name": "resImgData",
+                                        "type": "buffer",
+                                        "label": "Response Image Data",
+                                        "semantic": "file:data"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 10,
+                            "module": "instagram-business:CreatePostPhoto",
+                            "version": 1,
+                            "metadata": {
+                                "designer": {
+                                    "x": 1500,
+                                    "y": 300
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 11,
+                            "module": "openai-gpt-3:sendMessageToAssistant",
+                            "version": 1,
+                            "parameters": {
+                                "__IMTCONN__": 1425946
+                            },
+                            "mapper": {
+                                "message": "{{2.choices[].message.content}}",
+                                "role": "user",
+                                "assistantId": "asst_CiNZoLMWiIu0kJSeHAYV88em"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 900,
+                                    "y": 600,
+                                    "name": "X Text 🚀"
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "My OpenAI connection",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "openai-gpt-3"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "assistantId": {
+                                            "mode": "chose",
+                                            "label": "MMA Instagram Bot 💎 (gpt-4-turbo)"
+                                        },
+                                        "model": {
+                                            "mode": "chose",
+                                            "label": "Empty"
+                                        },
+                                        "fileIds": {
+                                            "mode": "chose"
+                                        },
+                                        "tools": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:openai-gpt-3",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "message",
+                                        "type": "text",
+                                        "label": "Message",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "role",
+                                        "type": "hidden",
+                                        "label": "Role"
+                                    },
+                                    {
+                                        "name": "assistantId",
+                                        "type": "select",
+                                        "label": "Assistant",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "threadId",
+                                        "type": "text",
+                                        "label": "Thread ID"
+                                    },
+                                    {
+                                        "name": "model",
+                                        "type": "select",
+                                        "label": "Model"
+                                    },
+                                    {
+                                        "name": "fileIds",
+                                        "type": "array",
+                                        "label": "File IDs",
+                                        "validate": {
+                                            "maxItems": 10
+                                        },
+                                        "spec": {
+                                            "type": "select",
+                                            "label": "File ID",
+                                            "options": [],
+                                            "name": "value",
+                                            "dynamic": true
+                                        }
+                                    },
+                                    {
+                                        "name": "tools",
+                                        "type": "select",
+                                        "label": "Tools",
+                                        "multiple": true,
+                                        "validate": {
+                                            "enum": [
+                                                "retrieval",
+                                                "code_interpreter"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "instructions",
+                                        "type": "text",
+                                        "label": "Instructions"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 12,
+                            "module": "twitter:createATweet",
+                            "version": 6,
+                            "parameters": {
+                                "__IMTCONN__": 1472579
+                            },
+                            "mapper": {
+                                "text": "{{11.result}}"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1200,
+                                    "y": 600
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "My X (formerly Twitter) OAuth 2.0 connection (itsssss_Jaack)",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "twitter2"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "media_ids": {
+                                            "mode": "edit"
+                                        },
+                                        "for_super_followers_only": {
+                                            "mode": "chose"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:twitter2",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "text",
+                                        "type": "text",
+                                        "label": "Text Content",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "media_ids",
+                                        "type": "array",
+                                        "label": "Media IDs",
+                                        "mode": "edit",
+                                        "spec": {
+                                            "type": "text",
+                                            "name": "value"
+                                        }
+                                    },
+                                    {
+                                        "name": "place_id",
+                                        "type": "text",
+                                        "label": "Place ID"
+                                    },
+                                    {
+                                        "name": "direct_message_deep_link",
+                                        "type": "url",
+                                        "label": "Direct Message Link"
+                                    },
+                                    {
+                                        "name": "for_super_followers_only",
+                                        "type": "boolean",
+                                        "label": "Allow to Post Exclusively for Super Followers Only"
+                                    },
+                                    {
+                                        "name": "quote_tweet_id",
+                                        "type": "text",
+                                        "label": "Quote Post ID"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

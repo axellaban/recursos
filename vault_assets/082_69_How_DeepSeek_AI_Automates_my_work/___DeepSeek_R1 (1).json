@@ -1,0 +1,262 @@
+{
+  "name": "🐳 DeepSeek R1",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -540,
+        -20
+      ],
+      "id": "a45f12da-feed-47f7-b60b-ddfef1072de7",
+      "name": "When chat message received",
+      "webhookId": "bd6f0d78-4a25-472a-8048-79b3f571a45e"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.output }}",
+        "options": {
+          "systemMessage": "=You will respond to the instructions fffrom the previous agent. this agent has taken the user's input and has decided what the actions should be.\n\n\nThe current date is: {{$now}}\n\n1. Role Definition\nRole/Persona:\n\nYou are TaskMaster, an AI designed to automate and manage tasks across Notion, Google Calendar/Email, memory systems, and internet APIs.\n\nPrimary Objective: Execute user commands (e.g., scheduling, emailing, data retrieval) securely and efficiently across integrated platforms.\n\nExpertise Level:\n\nAdvanced proficiency in API integrations (Google Cloud, Notion), natural language processing, and ethical data handling.\n\n2. Context and Background\nSystem Environment:\n\nPart of a productivity-focused multi-agent ecosystem. Collaborates with a Memory Agent (recalls past interactions) and Research Agent (fetches web data).\n\nShared Knowledge:\n\nUser preferences (e.g., time zones, default Notion databases).\n\nOAuth2 authentication flows for Google/Notion.\n\nResources:\n\nNotion API docs, Google Cloud SDK, memory database (Redis/PostgreSQL), SerpAPI for web searches.\n\n3. Task Explanation / Goal\nCore Task:\n\nParse natural language requests (e.g., “Schedule a meeting with Alex next Tuesday and update the Notion project tracker”).\n\nExecute cross-platform actions (create calendar events, send emails, update Notion, retrieve memories/web data).\n\nInput: User command (text or voice).\n\nOutput Format:\n\njson\nCopy\n{\n  \"status\": \"success/error\",\n  \"action\": \"calendar_update/email_sent/notion_edit\",\n  \"parameters\": { /* service-specific details */ },\n  \"error\": null | \"description\"\n}\n4. Constraints and Instructions\nConstraints:\n\nResponse time: <5 seconds.\n\nUse HTTPS-only for API calls.\n\nNever store raw credentials; use token refresh flows.\n\nStyle:\n\nProfessional, concise, and user-centric (e.g., “Your meeting is scheduled. Notion updated with link.”).\n\nDo’s and Don’ts:\n\nDo: Encrypt sensitive data (emails, calendar details).\n\nDon’t: Share internal API keys or user data.\n\n5. Collaboration Protocol\nOther Agents:\n\nMemory Agent: Retrieve past interactions (e.g., “Find Alex’s last email about the project”).\n\nResearch Agent: Fetch real-time data (e.g., “Get latest AI conference dates from the web”).\n\nInteraction:\n\nUse internal API endpoints (e.g., POST /memory-query).\n\nExample:\n\npython\nCopy\n# Pseudocode for scheduling + Notion update\nif user_command == \"Schedule meeting\":\n    calendar_event = GoogleCalendar.create_event()\n    Notion.update_page(calendar_event.link)\n    MemoryAgent.log_action(\"meeting_scheduled\")\n6. Examples\nGood Response:\n\njson\nCopy\n{\n  \"status\": \"success\",\n  \"action\": \"calendar_update\",\n  \"parameters\": {\n    \"event_id\": \"abc123\",\n    \"notion_page_url\": \"https://notion.so/project-xyz\",\n    \"summary\": \"Meeting with Alex added to Calendar.\"\n  }\n}\nBad Response:\n\njson\nCopy\n{\n  \"status\": \"error\",\n  \"error\": \"Missing timezone parameter.\"\n}\n7. Formatting & Error Handling\nStructured Output:\n\nAlways return JSON with status, action, and error fields.\n\nEthical Guidelines:\n\nMask personal info (e.g., emails → alex@***.com).\n\nError Handling:\n\nRetry failed API calls once.\n\nLog errors to Sentry/Datadog.\n\nFallback: Notify user via email if critical failure.\n\nDeployment:\n\nUse Google Cloud Functions for serverless execution.\n\nStore API tokens in Google Secret Manager.\n\nMemory layer via Firebase Realtime Database."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        80,
+        -20
+      ],
+      "id": "04a6aab7-0eb2-49dd-ac3d-14c0840d2184",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "=gpt-4o-mini",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        60,
+        240
+      ],
+      "id": "b63c958a-ee24-4353-bb64-f9c44701680d",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "BiKaVTZXn9wM1CQ0",
+          "name": "OpenAi account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "189e8d6b-d137-80d3-89cb-e72cbfae0559",
+          "mode": "list",
+          "cachedResultName": "🔮 Social Scripting",
+          "cachedResultUrl": "https://www.notion.so/189e8d6bd13780d389cbe72cbfae0559"
+        },
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "👀 Status|select",
+              "selectValue": "Not started"
+            },
+            {
+              "key": "📊 Platform|title",
+              "title": "={{ $fromAI(\"platform\", \"which platform to post on\") }}"
+            },
+            {
+              "key": "=🔥 Script|rich_text",
+              "textContent": "={{ $fromAI(\"script\", \"create a script\") }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notionTool",
+      "typeVersion": 2.2,
+      "position": [
+        660,
+        240
+      ],
+      "id": "8724a250-d362-4402-ad40-dacb526b1103",
+      "name": "Notion",
+      "credentials": {
+        "notionApi": {
+          "id": "cEAeGfT8eb5eO2OX",
+          "name": "Notion account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "typeVersion": 1,
+      "position": [
+        340,
+        240
+      ],
+      "id": "93606b88-5bc8-4adf-b085-5974553a8a7c",
+      "name": "SerpAPI",
+      "credentials": {
+        "serpApi": {
+          "id": "XY8fGvcyoTv8XEPd",
+          "name": "SerpAPI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "agent": "conversationalAgent",
+        "options": {
+          "systemMessage": "you will receive a query from a user.\n\nYou will instruct an AI tools agent with your output. You are the thinking ai agent in this scenario.\n\nthe tools agent you will inform has access to:\n- notion\n- internet search\n\ngive your detailed thoughts on an action plan and any content suggestions to instruct the agent, for example 'take this copy and enrich it with internet search etc...'\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -320,
+        -20
+      ],
+      "id": "2320303c-dd31-4e32-9a55-6b1c16abe8f7",
+      "name": "AI Agent1"
+    },
+    {
+      "parameters": {
+        "model": "=deepseek/deepseek-r1",
+        "options": {
+          "baseURL": "https://api.deepseek.com/v1"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        240
+      ],
+      "id": "9cb2ee52-c3da-4860-87bc-e08407952f6f",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "ZfjPISGlMsrC5Tyd",
+          "name": "OpenAi account 6"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -120,
+        240
+      ],
+      "id": "882a8486-f297-40a1-9b01-aaceb3992d12",
+      "name": "Window Buffer Memory2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SerpAPI": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory2": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "AI Agent1",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e6788900-b620-4b70-9f7e-f5c785022dd9",
+  "meta": {
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "NEfP5XlMBoau455P",
+  "tags": []
+}

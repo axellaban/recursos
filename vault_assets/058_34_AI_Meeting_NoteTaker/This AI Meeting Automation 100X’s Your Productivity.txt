@@ -1,0 +1,673 @@
+[00:00:00] this simple AI meeting automation will
+[00:00:02] 100x your productivity the second you
+[00:00:04] finish any call with anybody it will
+[00:00:06] trigger this Automation and essentially
+[00:00:08] what it will do is give you a full list
+[00:00:10] of every single action that you should
+[00:00:12] have done on that call listed by
+[00:00:13] individual and the deck that it needs to
+[00:00:15] be done and if you want to as well you
+[00:00:17] could have a predefined checklist of
+[00:00:19] things that you'd like people in your
+[00:00:21] team to manage and then you can get a
+[00:00:23] rag status on whether or not they said
+[00:00:25] the things you wanted to do whether it's
+[00:00:26] like annual memberships or sales calls
+[00:00:29] all automatically for you off the back
+[00:00:30] of a meeting essentially meaning that
+[00:00:32] the only thing you ever need to do is
+[00:00:34] just jump on a call the the meeting that
+[00:00:36] are captured automatically and then you
+[00:00:37] get that all sent over to an action spot
+[00:00:40] this one is a really simple very
+[00:00:42] straightfor automation I can't wait to
+[00:00:43] share it with you so if you haven't
+[00:00:45] already grab that coffee and let's jump
+[00:00:47] straight in my name is Jack my school
+[00:00:49] community and my YouTube channel we are
+[00:00:50] all about three things we're about the
+[00:00:52] latest AI we're about uh incredible
+[00:00:54] automations and most importantly guys we
+[00:00:57] are about the stuff that actually works
+[00:00:59] now this automation is going to be
+[00:01:01] really straightforward you know exactly
+[00:01:02] how to do it because I'm going to show
+[00:01:04] you how to do the whole thing step by
+[00:01:05] step so what we're going to use to kick
+[00:01:07] this one off is you only really need two
+[00:01:09] softwares first of all obviously you
+[00:01:11] need make.com which is our no code
+[00:01:13] automation Builder I'll put the links
+[00:01:15] down below so you can click the buttons
+[00:01:17] for the purposes of this we're going to
+[00:01:18] use a software called fireflies Ai and
+[00:01:21] essentially anytime we're on any meeting
+[00:01:23] Firefly is going to come in jump in
+[00:01:25] it'll just join automatically for you
+[00:01:27] based on whatever you're using and it
+[00:01:29] will record the entire no so let me
+[00:01:31] start by first showing you what Firefly
+[00:01:33] looks like okay so if I go over to my
+[00:01:35] meetings and we'll sign up together I'll
+[00:01:36] click on this fictitious example okay
+[00:01:38] every meeting you do with firefly you
+[00:01:40] get a full transcript of what actually
+[00:01:43] happened in that conversation itself now
+[00:01:45] once me's happen this automation is
+[00:01:46] going to be running every single day for
+[00:01:48] 24 hours so within less than a day you
+[00:01:51] will actually get all this information
+[00:01:52] triggering what it will also do is send
+[00:01:54] an email to the participants if you wish
+[00:01:56] about that meeting um basically so
+[00:01:58] everyone can keep track so your
+[00:01:59] productiv
+[00:02:00] will go through the roof and everyone's
+[00:02:01] going to be saying hey man how on Earth
+[00:02:03] are you so on top of everything it's
+[00:02:05] crazy so look I give you an example of
+[00:02:06] the output okay so this one here um and
+[00:02:09] bear in mind guys once you get your
+[00:02:10] meeting notes into a no code automation
+[00:02:13] tool like make the possibilities from it
+[00:02:16] are endless we can do things like
+[00:02:18] analyze my performance in the call you
+[00:02:20] know where did I drop the ball was I as
+[00:02:22] engaging as I could have been did
+[00:02:24] somebody engage too much or too little
+[00:02:26] did I hit the right notes rank my sales
+[00:02:28] performance this could literally
+[00:02:30] transform your organizations and we can
+[00:02:31] build all of these prompts and we're
+[00:02:33] building up the promps in my community
+[00:02:34] for how you could add in lots of
+[00:02:36] different things if you got request of
+[00:02:38] one in particular like to see let me
+[00:02:40] know down below but the potential for
+[00:02:41] this one guys is literally insane it
+[00:02:43] will make you like a superum superpower
+[00:02:45] okay now look it shows us who the
+[00:02:47] participants of the core were it tells
+[00:02:49] us all the sentences that were said it
+[00:02:51] was hey there everybody so let's begin
+[00:02:53] and talk about X and we get all these
+[00:02:55] sentences okay we then throw something
+[00:02:57] called what we call an iterator and a
+[00:02:59] text aggregate sounds complicated
+[00:03:01] actually really straightforward I'll
+[00:03:03] just show you how to that in a second
+[00:03:04] then it goes through to R2 basically our
+[00:03:06] systems here as you can see which is
+[00:03:08] this is um effectively what this is
+[00:03:10] going to do is take out and extract the
+[00:03:13] meeting date the meeting time key
+[00:03:15] actions and then we have a checklist
+[00:03:17] I've identified about did they mention
+[00:03:18] annual membership did they do X did they
+[00:03:20] do y and then we just add it to a Google
+[00:03:22] Document or we could add it to slack or
+[00:03:24] we could add it to notion whatever you
+[00:03:26] want so let me show you how you build
+[00:03:27] this all step by step it's a profoundly
+[00:03:30] powerful yeah quite simple Automation
+[00:03:32] and I'm going to run through it very
+[00:03:33] quickly with you so look we open a new
+[00:03:35] scenario we come over here it's this big
+[00:03:37] beautiful button uh obviously if you're
+[00:03:39] part of the community you can just
+[00:03:41] import these by coming down to more
+[00:03:42] click import blueprint and then choose
+[00:03:45] the Json file you select the file that
+[00:03:46] you want click save and then
+[00:03:48] automatically the automations pop up
+[00:03:49] that's for every automation on YouTube
+[00:03:50] channel also the ones that are not on
+[00:03:52] YouTube channel in the school Community
+[00:03:54] if you want to know where they are in
+[00:03:55] the school Community FYI if you're part
+[00:03:56] of the group The beautiful wonderful
+[00:03:58] group it's on classroom every AI
+[00:04:01] automation uh and then you have the pick
+[00:04:02] of whatever you want come down basically
+[00:04:05] scroll down and all you ever do guys is
+[00:04:07] you just download this and upload it
+[00:04:09] quick aside by the way we've recently
+[00:04:10] launched Community automations in our
+[00:04:12] group so basically we get to leverage
+[00:04:14] there there's a group picture was
+[00:04:15] awesome meet all the guys basically it's
+[00:04:17] everybody in the group creating
+[00:04:18] incredible amazing things so you can
+[00:04:19] check that so far and obviously you can
+[00:04:20] unlock L of stuff like $1,600 with
+[00:04:23] software calls with me and and free
+[00:04:25] lifetime membership lots of cool stuff
+[00:04:27] but for this one guys we're going to
+[00:04:28] build it together from scratch let me
+[00:04:30] get rid of all that beautiful work now
+[00:04:32] let's give it a name let's call this one
+[00:04:35] uh 100x productivity cuz what are we
+[00:04:38] guys without our formalities okay and of
+[00:04:41] course I think we need a little bit of
+[00:04:43] an emoji I think we go for a calendar
+[00:04:44] it's only befitting since we're talking
+[00:04:46] about meetings cool awesome okay sweet
+[00:04:49] so the first thing you want to do is
+[00:04:50] head basically we need to head over now
+[00:04:52] to fireflies to create an account for
+[00:04:54] you so you're going to go to fireflies
+[00:04:55] AI we click on the link like so automate
+[00:04:57] your meeting notes sounds pretty cool
+[00:04:59] and then we'll just say hey well we want
+[00:05:00] to get started for free so click this
+[00:05:02] purple button here we can continue with
+[00:05:04] Google or Microsoft if we so wish so
+[00:05:06] we'll continue with Microsoft argument
+[00:05:07] sake and when we log in guys you'll see
+[00:05:08] a screen kind of like this and all of
+[00:05:10] your meetings will pop up basically for
+[00:05:12] you here in the middle now all we do for
+[00:05:14] this to integrate to make is come over
+[00:05:15] our to Integrations on the left hand
+[00:05:17] side and we're not going to type in make
+[00:05:19] what we're going to type in here is
+[00:05:21] fireflies API we click on that like so
+[00:05:24] and then what you'll see on the right
+[00:05:25] hand side at the bottom is the API key
+[00:05:28] all I want to do is come down copy that
+[00:05:30] API key and then head back over now to
+[00:05:33] make.com and just a little brief word on
+[00:05:35] the pricing Fireflight you can get
+[00:05:36] started for free uh 800 minutes of
+[00:05:39] basically meeting storage unlimited
+[00:05:41] transcription AI summaries and you can
+[00:05:43] upgrade if you want to to 18 bucks a
+[00:05:44] month on the monthly membership and you
+[00:05:46] can do things in annual but noton this
+[00:05:48] video I just think that software is cool
+[00:05:50] so I'm talking about it and I want you
+[00:05:51] to win so I'll share the stuff that
+[00:05:52] helps you win and then we come back over
+[00:05:54] now to our wonderful make we click on
+[00:05:55] this big beautiful gray button and just
+[00:05:58] type in fireflies okay and we just want
+[00:06:01] it to list transcripts okay now there's
+[00:06:04] a few ways I've seen people do
+[00:06:05] automations with note taking AI but
+[00:06:08] often times they can be a little bit
+[00:06:09] dodic it's like we only really want new
+[00:06:11] meetings to come through do you know
+[00:06:13] what I mean we don't want meetings from
+[00:06:14] 5 weeks ago now in make we can get one
+[00:06:18] by an ID or we can just list all of the
+[00:06:21] meetings that have already happened I
+[00:06:24] say that to say that when you basically
+[00:06:26] click on this you'll have to add a
+[00:06:27] connection you just enter the API ke
+[00:06:30] then you'll be connected okay we have
+[00:06:31] the user ID that will be the email for
+[00:06:34] which you're actually using now here's a
+[00:06:35] little trick okay the way this
+[00:06:37] automation is going to work effectively
+[00:06:39] is this we're going to specify hey this
+[00:06:41] is going to go forth and bring back
+[00:06:42] every conversation that you've had but
+[00:06:45] we only want the conversations have
+[00:06:46] happened say for argument sake in the
+[00:06:48] last 24 hours so to do that don't worry
+[00:06:50] about the title don't worry about the
+[00:06:52] host email click on the date and all I
+[00:06:54] want you to click on is now that's it so
+[00:07:00] essentially what this will do is go back
+[00:07:01] like 24 hours and grab all the meetings
+[00:07:03] that have happened within that time
+[00:07:05] frame which means that if a meet
+[00:07:06] happened two days ago it won't bring it
+[00:07:08] back and then we just set the automation
+[00:07:10] to run every 24 hours and guys literally
+[00:07:13] that's all you need to do so look if I
+[00:07:14] click okay on this right I right click I
+[00:07:17] run this module only there should be
+[00:07:18] only one output and the output should be
+[00:07:21] the victitious MMA meeting that I had
+[00:07:23] about 30 minutes ago so look MMA plan
+[00:07:26] all this sort of stuff okay dur 6
+[00:07:28] seconds by contract if I come back on
+[00:07:30] here I get rid of now I click okay I run
+[00:07:33] it it will pull forward every meeting
+[00:07:35] I've had so far using the software and
+[00:07:36] there should be six that I've used with
+[00:07:38] this particular software so we should
+[00:07:39] see you can see already it's taking
+[00:07:41] longer cuz it's working harder and there
+[00:07:43] you go all the different bundles cool so
+[00:07:45] we don't want that we just want the ones
+[00:07:47] that run now it's like so we click that
+[00:07:49] and then every 15 minutes is this down
+[00:07:51] here guys what I want you to do is every
+[00:07:53] day and pick the time then click okay
+[00:07:57] and this will run in the background like
+[00:07:58] magic for you guys like Absol magic now
+[00:08:00] there is a small problem with this isn't
+[00:08:02] there so look can you see like if I look
+[00:08:04] at sentences we've got all these things
+[00:08:06] here called collections it's like hey
+[00:08:08] there everybody next sentence let's
+[00:08:10] begin start talking about the actions
+[00:08:11] next sentence blah blah blah blah and
+[00:08:13] the other cool thing guys this will do
+[00:08:15] is it will tell you who's speaking it'll
+[00:08:16] say hey Jack said this but Ben said this
+[00:08:20] so what we need to do here okay is get
+[00:08:22] all of these Collections and get it into
+[00:08:25] one single output for something else so
+[00:08:27] to do that we're going to use something
+[00:08:28] called an iterator now what is an
+[00:08:31] iterator I hear you asking me we can see
+[00:08:33] this little beautiful green thing here
+[00:08:34] okay and all we do with it is select the
+[00:08:37] array for sentences okay and then you
+[00:08:39] can see an output what it does it turns
+[00:08:42] those arrays into bundles okay sounds
+[00:08:45] like why don't need to do that well
+[00:08:47] you'll see why and then we just have
+[00:08:48] this text aggregator that takes those
+[00:08:51] bundles and puts it them together into
+[00:08:53] one basically simple long text ring
+[00:08:57] which basically means that we can give
+[00:08:58] just one text ring to our language model
+[00:09:00] of choice and it can analyze everything
+[00:09:03] that's just because the way that
+[00:09:04] fireflies basically set it up is they
+[00:09:06] give it you loads of individual things
+[00:09:08] so what we need to do is get an iterator
+[00:09:09] and essentially just get the array there
+[00:09:11] so look let's go back over then to this
+[00:09:12] part add in a iterator d okay cool let
+[00:09:17] so beautiful click on it and then come
+[00:09:19] over here so you can get a beautiful
+[00:09:20] look what are we looking for just
+[00:09:22] sentences like that cool and then let's
+[00:09:25] just run it once because hey why not
+[00:09:26] yeah's run it anyway we don't mind if
+[00:09:28] but Transformers at the end and if we
+[00:09:29] see lots of bundles we do we see
+[00:09:32] beautiful beautiful bundles and then we
+[00:09:34] click on this here and just type in text
+[00:09:36] aggregator like
+[00:09:37] that beautiful Source module is just
+[00:09:40] going to be theator that we just chose
+[00:09:41] and The crucial bit is going to be the
+[00:09:42] speaker
+[00:09:46] name or just speaker and then text okay
+[00:09:51] so let's move over and add that in okay
+[00:09:53] so let's go speaker we open it up and
+[00:09:55] then we all we want to do here is from
+[00:09:56] the um iterator module is find the
+[00:09:59] speaker speaker which is going to be
+[00:10:00] right there and then raw text at the
+[00:10:02] bottom boom beautiful and let's run this
+[00:10:05] whole thing one more time from the top
+[00:10:06] which is good we'll run I get a sip of
+[00:10:08] coffee in the
+[00:10:10] process beautiful does that look about
+[00:10:12] right to me all these inputs and a one
+[00:10:15] output we got the speaker it's Jack
+[00:10:16] Roberts and here's all the texts that he
+[00:10:18] had to say about it incredible we love
+[00:10:20] it thank you very much so what's the
+[00:10:23] next thing that we want to do well we
+[00:10:25] want to add in claw now I'm just going
+[00:10:27] to copy these for speed sake but let me
+[00:10:30] show you how you do it let me bring
+[00:10:31] these guys over here like so whoops
+[00:10:34] right you would come here you type in
+[00:10:36] well basically clae or type in CL a UD
+[00:10:39] create a new prompt uh Max tokens is
+[00:10:42] going to be um basically put this at
+[00:10:43] 4,000 for the time being now I don't
+[00:10:46] want you to use the 3.5 Sonic in fact
+[00:10:48] now they've added it in now excellent
+[00:10:49] you used to have to map that over
+[00:10:50] because that wasn't in previously but
+[00:10:52] now we can just select it because
+[00:10:53] they've updated it incredible now let's
+[00:10:56] have a look at what our prompt is okay
+[00:10:59] so we'll connect these automatically get
+[00:11:00] rid of this guy and I can show you so
+[00:11:02] first of all rename this one to be
+[00:11:04] actions Max tokens 4,000 the rol is user
+[00:11:08] the type is text and then this is the
+[00:11:10] The Prompt that I want you to give it
+[00:11:12] it's an act basically an action item
+[00:11:14] extraction prompt so basically look
+[00:11:16] analyze the provide meeting transcript
+[00:11:18] and extract the meeting name date and
+[00:11:21] action items for each of the
+[00:11:23] participants format the output as as
+[00:11:25] follows the meeting the meeting name
+[00:11:27] name and date the part participant's
+[00:11:29] name their actions uh describe and also
+[00:11:32] if there's an basically a a deadline for
+[00:11:35] the meeting include that as well so
+[00:11:36] basically I've asked like give me this I
+[00:11:37] want to know what was the meeting when
+[00:11:39] did the meeting happen What were my
+[00:11:42] actions and then what was anybody else's
+[00:11:44] actions so if I said hey Ben could you
+[00:11:45] just sort that out real quick it will
+[00:11:47] then say look Jack you had this to do by
+[00:11:49] this day Ben had that to do by that day
+[00:11:52] so I can I mean it's just like the key
+[00:11:54] information that you need right so
+[00:11:55] essentially that's exactly what we're
+[00:11:57] saying
+[00:11:58] here uh notes start with a meeting name
+[00:12:00] of day use a different Emoji for each
+[00:12:01] use uh blah blah blah list the actions
+[00:12:03] for one person and then guys little
+[00:12:05] prompting engineering hack is some the
+[00:12:07] most powerful influential thing you can
+[00:12:09] do with your prompts is show it what you
+[00:12:11] want give it an actual full stretched
+[00:12:13] out example of the thing that you would
+[00:12:15] like so I've given an example format hey
+[00:12:17] there's Jack's actions there's Sarah's
+[00:12:19] actions and then we need to add three
+[00:12:21] things okay the first thing we need to
+[00:12:22] do is add the meeting so let me come
+[00:12:24] over like so come down and show you so
+[00:12:27] for the meeting what was the meeting
+[00:12:29] called so as we can see on this one uh
+[00:12:32] let me just come off here so you can get
+[00:12:34] a good beautiful look the meeting was
+[00:12:36] called MMA plan the date was the date at
+[00:12:39] which it happened so it's fin night 14th
+[00:12:41] of July at 3:25 and then the transcript
+[00:12:44] is quite simply the text from the text
+[00:12:47] aggregator and then we click okay
+[00:12:51] perfect then what did we do we had a new
+[00:12:54] clo anthropic CL create a prompt come
+[00:12:55] over here I'm going to show I'm going to
+[00:12:58] do this with you step by step just so
+[00:12:59] that you know um because you know it's
+[00:13:02] good to follow button click so right
+[00:13:03] click rename enter in checklist come in
+[00:13:07] Lexa you'll see this Max tokens 4,000
+[00:13:11] incredible message role is going to be
+[00:13:14] user content type is going to be text
+[00:13:18] and then we just give it the prompt that
+[00:13:19] we need so let's check out the
+[00:13:22] prompt let me just delete this and bring
+[00:13:24] it over so the prompt is a sales call
+[00:13:28] analysis B so for this one guys what I
+[00:13:30] basically wanted to do is I gave it like
+[00:13:32] um essentially 10 things like so this is
+[00:13:34] just to show you the power of this
+[00:13:36] automation so say for example your team
+[00:13:38] are running it and you say look you have
+[00:13:40] high standards you want to drive sales
+[00:13:41] you want to drive good customer
+[00:13:42] experience what I'd recommend you do is
+[00:13:44] get a pen of paper or a whiteboard and
+[00:13:45] sit down like look if every call we had
+[00:13:48] in our
+[00:13:49] organization these 10 things happened in
+[00:13:51] this call for this particular thing we
+[00:13:53] would win write them down and be really
+[00:13:55] specific about it so that you'll know
+[00:13:57] that if your team are having calls with
+[00:13:58] this automation which you can now access
+[00:14:00] and use because I'm sh you exactly how
+[00:14:01] to do it you can then get a rag status
+[00:14:03] and well look James had a call with so
+[00:14:05] and so he had eight things that were
+[00:14:07] green one thing that was Amber and one
+[00:14:09] thing that was red James let's work on
+[00:14:11] that red because I'm seeing on every
+[00:14:12] call now and you can work and it gives
+[00:14:14] you it just enables you to systematize
+[00:14:16] your process you can sell this by the
+[00:14:18] way to businesses like this is crazy
+[00:14:20] this is the kind of thing that people
+[00:14:22] think is very difficult to do but with
+[00:14:24] this automation the strategy it's crazy
+[00:14:26] you can't get this through Firefly in
+[00:14:28] the crr so you're almost the glue that
+[00:14:30] connects like this cool automation to
+[00:14:32] whatever the client's using maybe
+[00:14:33] they've got slack maybe the CEO wants a
+[00:14:35] report every day of of the Thousand
+[00:14:37] calls that happened today how many were
+[00:14:39] red Amber green against the N9 and 10
+[00:14:40] requirements guys it's absolutely
+[00:14:43] massive I'm sure you can see the
+[00:14:44] potential cuz Rock if you're watching
+[00:14:45] this find the video you are a rockar
+[00:14:47] you're killing it I'm preaching to the
+[00:14:49] convert essentially so let me give a
+[00:14:50] flavor of this promps obviously these
+[00:14:51] prompts are in the school you are an AI
+[00:14:54] assistant designed to analyze sales
+[00:14:56] calls transcripts and assess the
+[00:14:58] performance of the the sales person your
+[00:15:00] task is to evaluate the transcript oh my
+[00:15:02] goodness so much evaluation even kicked
+[00:15:04] us off that is to evaluate the
+[00:15:06] transcript uh against a performance okay
+[00:15:09] uh for the best practice for sales SCS
+[00:15:10] for each item on the checklist determine
+[00:15:12] whether the salesperson successfully
+[00:15:16] completed the action and provide a brief
+[00:15:18] explanation of your assessment and a
+[00:15:20] checklist and I say basically I want to
+[00:15:21] use green FS red for no orange for sort
+[00:15:25] of you can get as exotic or as creative
+[00:15:27] as you like this is just an example to
+[00:15:29] show you what's possible I always want
+[00:15:31] to do these videos for things that add
+[00:15:33] value and make sense otherwise we won't
+[00:15:34] do it but this is to open your mind to
+[00:15:36] the kinds of things you can do now that
+[00:15:38] you just show up you rock up you have
+[00:15:39] the call everything happens in the back
+[00:15:41] guys is literally that straightforward
+[00:15:43] introduce yourself yes or no did they
+[00:15:45] build rapport did they ask open-ended
+[00:15:47] questions did they listen did they you
+[00:15:48] and and tyus are on your specific kpis
+[00:15:50] like did they mention the holiday blue
+[00:15:53] Tuesday cafe coffee Bonanza opportunity
+[00:15:55] no did they say the word we appreciate
+[00:15:58] you or welcome or whatever it is like
+[00:16:00] you can literally be so specific with
+[00:16:02] this offer an annual membership ask for
+[00:16:03] a commitment summarize blah blah blah
+[00:16:05] then we have the instructions carefully
+[00:16:07] read the transcript evaluate their
+[00:16:08] performance for each item provided your
+[00:16:10] checklist you must output 10 things and
+[00:16:12] I just gave it like I just told you an
+[00:16:15] example like number one introduce
+[00:16:17] yourself and your company Tom clearly
+[00:16:19] introduced himself at Tech Solutions Inc
+[00:16:21] within the first 30 seconds of the call
+[00:16:22] he said hey it's Tom from Tech Solutions
+[00:16:24] how are you doing and just give it
+[00:16:26] examples of the output that you want we
+[00:16:28] can finesse that we can give you some
+[00:16:29] more support if you want to if you want
+[00:16:30] device SN just let me know and I can
+[00:16:31] help you the prompting I I've asked it
+[00:16:34] to give recommendations for improvement
+[00:16:35] so team managers I I used to manage a
+[00:16:38] contact center uh in British gas and it
+[00:16:40] was a really cool job I love love
+[00:16:42] working with the people one of the most
+[00:16:43] timec consuming things was sitting there
+[00:16:46] going through the calls and hearing the
+[00:16:47] same calls again and again software like
+[00:16:49] this guys would have been like like you
+[00:16:51] could legitimately make business six or
+[00:16:53] seven figures especially the contact
+[00:16:55] center sizes that I worked in like this
+[00:16:57] is genuinely revolutionary
+[00:16:59] and it used to be only available for the
+[00:17:00] large SAS companies it's in your hands
+[00:17:02] now you can anyone with the laptop and
+[00:17:05] enough coffees can take over the game
+[00:17:06] here recommendations for improvement and
+[00:17:08] important based your analysis solely on
+[00:17:10] the content of the transcript provided
+[00:17:12] do not make assumptions about
+[00:17:14] information not present in the
+[00:17:17] transcript and know what do we do guys
+[00:17:19] well we need to give it a transcript
+[00:17:20] right so let's do that so where is the
+[00:17:22] transcript it's simply the tools from
+[00:17:25] the text aggregator I click on that then
+[00:17:28] I click okay
+[00:17:29] all right now we align it let's save the
+[00:17:32] Automation and let's add it now now this
+[00:17:34] is bit where you can go wherever you
+[00:17:35] want it can go into your notion it could
+[00:17:36] go into your slack it could go into
+[00:17:38] Google doc it could even go to a text
+[00:17:41] message you pretty much pick whatever
+[00:17:42] you want remember the triggers and the
+[00:17:45] outputs can be very configurable you'll
+[00:17:47] learn different ones you can do whatever
+[00:17:48] you want for Simplicity sake I'm just
+[00:17:51] going to add it to uh our Google Drive
+[00:17:53] uh for Google doc so I come here I just
+[00:17:55] type in Google doc C here so I'm just
+[00:17:58] going to say hey
+[00:17:59] like I want to insert a paragraph to a
+[00:18:02] document like so it's found the
+[00:18:04] connection if not it open up you can
+[00:18:06] sign in and whatnot you pick the
+[00:18:07] document ID like so I'm going to go for
+[00:18:09] I believe mine's called action list
+[00:18:12] incredible and then append the text I
+[00:18:14] don't need to add two things the first
+[00:18:15] one is the text response from the
+[00:18:18] actions and the second one is the text
+[00:18:20] response from the checklist then we
+[00:18:22] click okay then we align then we save I
+[00:18:26] come back over to this I'm going to zoom
+[00:18:29] out a little bit my goodness this is
+[00:18:30] beautiful I love it I love it when the
+[00:18:32] plan comes together we get rid of that
+[00:18:34] we come back over now and guys what
+[00:18:35] we're going to do we're going to run a
+[00:18:37] whole automation so this works
+[00:18:38] effectively you've had your callt with
+[00:18:40] Jimmy meu limited you had a great time
+[00:18:42] you've smashed it and you want to see
+[00:18:44] how your performance was and you know
+[00:18:45] your actions are let's go run once now
+[00:18:47] the call I did here by the way was an
+[00:18:48] MMA call I was just like I was like
+[00:18:50] improvising man I was like you going to
+[00:18:52] get this done get that done blah blah
+[00:18:53] blah then look fireflies have grabbed
+[00:18:55] the transcript we've iterated it we've
+[00:18:57] put it through a text aggregated meaning
+[00:18:59] we've got one very long TCH stream input
+[00:19:01] to analyze we've created the actions
+[00:19:04] we've created the checklist performance
+[00:19:06] and now we've added it to the Google Doc
+[00:19:08] so I come over now we should see
+[00:19:10] something like an action list and a
+[00:19:12] performance review and would you believe
+[00:19:13] it we do meeting MMA plan the date July
+[00:19:17] the 14th Jack Roberts actions create a
+[00:19:20] social media strategy by 21st of July
+[00:19:22] consider how many people need to run V
+[00:19:23] gy work with previous students Ben's
+[00:19:25] actions I basically in the call I was
+[00:19:27] like Ben could you just check with the
+[00:19:29] local Council about blah blah blah like
+[00:19:31] how easily is that missed but not
+[00:19:33] anymore not with this oration because
+[00:19:34] you can kill it now event a sales
+[00:19:36] annalysis did Jack Jack did not
+[00:19:38] introduce the company Jack did not build
+[00:19:40] report I think I might be F my
+[00:19:41] performance through here to be honest
+[00:19:42] with you I didn't ask open any questions
+[00:19:44] M it was just like me going hey guys
+[00:19:46] could we just like get that done please
+[00:19:48] and so obviously I'm going to absolutely
+[00:19:49] fail it we mention it now did I share
+[00:19:50] brief success story now did I offer an
+[00:19:52] anual membership now did I mention
+[00:19:54] deadlines I did okay I got two greens
+[00:19:56] good two two greens is starting place
+[00:19:57] right we can only go up from here
+[00:19:59] and then it gives you an overall summary
+[00:20:00] and it basically told me look this is
+[00:20:02] more of a team meeting or briefing than
+[00:20:04] a sales call Jack focuses on presenting
+[00:20:06] a strategy for growing an MMA gym we
+[00:20:09] love our MMA gyms come on let's go and
+[00:20:11] outlining specific items and action will
+[00:20:12] blah blah blah recommendation
+[00:20:13] Improvement if this is intended to be a
+[00:20:15] soul core Jack should probably start by
+[00:20:17] introducing himself and his company I
+[00:20:18] should mention guys you can add like
+[00:20:20] things like uh coaching steps we can
+[00:20:21] upload things like your company
+[00:20:23] documentation your sales guidelines uh
+[00:20:25] and essentially get like if you want to
+[00:20:27] a new document per cool or you could get
+[00:20:31] that to go here and then what we could
+[00:20:33] do is had like a feedback bot that would
+[00:20:35] essentially take that summary and add it
+[00:20:37] to a specific employees so what we could
+[00:20:40] do literally is say for example here I
+[00:20:42] would add I would duplicate these now
+[00:20:44] check this out right I'll show you this
+[00:20:45] very quick this wasn't even I didn't
+[00:20:47] even tend to show you this guys this is
+[00:20:48] how on the cuff I am right now dude you
+[00:20:50] give me two coffees man I tell you
+[00:20:51] anything's possible it's ridiculous now
+[00:20:53] look check this out say this is the
+[00:20:56] paragraph but look right what we could
+[00:20:58] do do is add like let's say you've got
+[00:21:01] 10 people taking
+[00:21:02] calls this could be Jack's calls this
+[00:21:05] could be Ben's calls so look if I right
+[00:21:06] click on this I click on set up a filter
+[00:21:09] I could say Ben right and what I would
+[00:21:11] do is condition let me come over here so
+[00:21:13] you can get a good look at this right
+[00:21:14] check this out this is really this is
+[00:21:16] really crazy look ban and we'll give ban
+[00:21:18] an emoji cuz it's good to have like a
+[00:21:19] visual distinctive ban is going to be a
+[00:21:21] thunder the condition is that if I come
+[00:21:25] down to the Firefly here who's me was it
+[00:21:28] so was Jack Roberts's meeting my meeting
+[00:21:30] so my name's there but it would be Ben
+[00:21:31] so I'd say hey if condition okay
+[00:21:34] contains case
+[00:21:36] insensitive Ben like
+[00:21:40] so then it will just go
+[00:21:43] to the Ben document and so what we
+[00:21:45] actually have is a performance review
+[00:21:47] plan for every single member of the team
+[00:21:50] and then based on who had the call they
+[00:21:52] get the you know the analysis part says
+[00:21:53] look Ben we read for your call this is
+[00:21:55] what we think it goes down guys this is
+[00:21:57] literally such a powerful Automation in
+[00:22:00] such a short video but guys I really
+[00:22:02] hope you enjoyed it I love hanging out
+[00:22:03] with you man let me know if you got any
+[00:22:04] requests for automations Down Below in
+[00:22:06] any case I have a wonderful weekend and
+[00:22:07] I look forward to seeing you in my next
+[00:22:09] video

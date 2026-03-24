@@ -1,0 +1,689 @@
+{
+    "name": "Canva Build Together 💪",
+    "flow": [
+        {
+            "id": 1,
+            "module": "util:FunctionIncrement",
+            "version": 1,
+            "parameters": {
+                "reset": "scenario"
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "reset": {
+                            "label": "Never"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "reset",
+                        "type": "select",
+                        "label": "Reset a value",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "run",
+                                "execution",
+                                "scenario"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "canva:exportDesign",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 2461230
+            },
+            "mapper": {
+                "format": {
+                    "type": "png",
+                    "pages": "{{1.i}}",
+                    "width": "1000",
+                    "height": "1000",
+                    "lossless": false,
+                    "as_single_image": false
+                },
+                "folderId": "/",
+                "design_id": "DAGNXYm8Y_U"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "expect": {
+                        "format": {
+                            "nested": {
+                                "type": {
+                                    "mode": "chose",
+                                    "label": "PNG"
+                                },
+                                "lossless": {
+                                    "mode": "chose"
+                                },
+                                "as_single_image": {
+                                    "mode": "chose"
+                                }
+                            }
+                        },
+                        "folderId": {
+                            "mode": "chose",
+                            "path": [
+                                "/"
+                            ],
+                            "nested": [
+                                {
+                                    "name": "design_id",
+                                    "type": "select",
+                                    "label": "Design ID",
+                                    "options": "rpc://canva/1/listItems?type=design",
+                                    "required": true
+                                }
+                            ]
+                        },
+                        "design_id": {
+                            "mode": "chose",
+                            "label": "Hormozi Quotes (100m offers)"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "canva"
+                            },
+                            "label": "My Canva connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:canva",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "folderId",
+                        "type": "folder",
+                        "label": "Folder ID",
+                        "required": true
+                    },
+                    {
+                        "name": "format",
+                        "spec": [
+                            {
+                                "name": "type",
+                                "type": "select",
+                                "label": "Type",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        "pdf",
+                                        "jpg",
+                                        "png",
+                                        "pptx",
+                                        "gif",
+                                        "mp4"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "lossless",
+                                "type": "boolean",
+                                "label": "Lossless"
+                            },
+                            {
+                                "name": "as_single_image",
+                                "type": "boolean",
+                                "label": "Export as a single image"
+                            },
+                            {
+                                "name": "height",
+                                "type": "integer",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "width",
+                                "type": "integer",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "pages",
+                                "type": "text",
+                                "label": "Pages"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Export Format",
+                        "required": true
+                    },
+                    {
+                        "name": "design_id",
+                        "type": "select",
+                        "label": "Design ID",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "dropbox:uploadLargeFile",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 1427849
+            },
+            "mapper": {
+                "path": "/Magoo3",
+                "filename": "{{1.i}}.png",
+                "data": "{{2.data}}",
+                "overwrite": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Dropbox connection (itsssssjack@outlook.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "path": {
+                            "mode": "chose"
+                        },
+                        "overwrite": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "path",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "filename",
+                        "type": "filename",
+                        "label": "File Name",
+                        "required": true
+                    },
+                    {
+                        "name": "data",
+                        "type": "buffer",
+                        "label": "Data",
+                        "required": true
+                    },
+                    {
+                        "name": "overwrite",
+                        "type": "boolean",
+                        "label": "Overwrite an existing file",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "module": "dropbox:makeApiCall",
+            "version": 5,
+            "parameters": {
+                "__IMTCONN__": 1427849
+            },
+            "mapper": {
+                "type": "api",
+                "method": "POST",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": "{\"path\":\"{{4.path_lower}}\"}",
+                "disablePathRoot": false,
+                "url": "/2/files/get_temporary_link"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Dropbox connection (itsssssjack@outlook.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "dropbox"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "type": {
+                            "label": "https://api.dropboxapi.com"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "qs": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:dropbox",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "type",
+                        "type": "select",
+                        "label": "Dropbox API Endpoint",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "api",
+                                "content"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "type": "array",
+                        "label": "Headers",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "qs",
+                        "type": "array",
+                        "label": "Query String",
+                        "spec": [
+                            {
+                                "name": "key",
+                                "type": "text",
+                                "label": "Key"
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    },
+                    {
+                        "name": "disablePathRoot",
+                        "type": "boolean",
+                        "label": "Disable Dropbox API Path Root",
+                        "required": true
+                    },
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "module": "openai-gpt-3:analyzeImages",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "prompt": "You are an Instagram caption expert with 10 years of experience crafting engaging, high-performing post copy for top brands. Use your expertise to generate on an optimised caption to accompany the following:\n\n\nYou must consult the tone of voice guidelines in all of the responses you create. You must write by those guidelines. Before you write any text, thoroughly read through and understand the tone of voice file.\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nInstructions\n\n\nYour captions should follow these guidelines:\n- Grab attention in the first sentence with curiosity, emotion, questions, or a bold statement \n- Use this caption formula: Hook, Context, Details/Story, Lesson/Insight, CTA, Hashtags\n- Make the caption a punchy one-liner\n- Naturally integrate 1-2 keywords the audience might use to find the post\n- If you are given an article, do not write about it in first person. Use they, them and their names\n- Otherwise, use first person pronouns, where appropriate\n- Include a mix of 1-4 branded, community, niche and popular hashtags. Put key hashtags early so visible in caption preview \n- Never place two emojis next to eachother. \n- Make the short caption intriguing and relevant\n- Where appropriate, include a CTA encouraging likes, comments, saves, or click-throughs. Craft it as an engaging question to boost response. Tap into FOMO, incentives, value or urgency\n- Maintain a distinctive brand voice and personality throughout that's consistent with\n- Before finalizing, fact-check any claims and proofread each caption for spelling, grammar and brand style consistency.\n- Do not make it cringe\n- You must only every use emoji’s at the End of sentences. Here is a good example of the kind of one liner you must generate: Pioneering a safer AI future at the #AISeoulSummit with UK & South Korea 🤖 #Innovation #GlobalProgress\n\n\nWhen creating a response you must include a short 1-2 sentence caption here, with 1-2 relevant emojis and 2-3 key hashtags only. Make the opening line attention-grabbing.\n\n\nAdditional GUIDELINES:\n0. Do not include anything other than the desired output\n2. Clear and concise, using everyday words instead of jargon. Aim for <20 words per sentence\n2. Inclusive, transparent and positive. Use active voice and choose words thoughtfully \n3. Explanatory, providing context for technical concepts in plain language\n4. Sparing but strategic with emojis to add personality and clarity \n5. Focused on what matters most to readers, prioritizing key information upfront\n6. Positive and ambitious, celebrating successes without putting down others\n7. Transparent about who is responsible for actions using active voice  \n8. Inclusive by avoiding colloquialisms or idioms that may not translate across cultures\n9. Varied in sentence length for natural rhythm, but mostly concise and scannable\n10. Broken up with subheadings and bullets for longer passages\n11. Please provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. \n\n\nDo not use * or # in your response. Use plain text, emoji’s and line breaks.\n\n\n\n\nExample output:\nParliament in action: a defining vote on the Rwanda migration policy awaits. Wind of change or political storm? #RwandaBill #UKPolitics 🌬️🏛️\n—\nDecisions at the crossroads: as Parliament votes on the contentious Rwanda migrant relocation bill, the nation watches with bated breath. Reports reveal potential replicas with countries like Armenia hanging in the balance, resting on Rwanda's outcome.\nWith 534 Channel crossings in a single day, this bill navigates the tricky waters between UK policy and the call for human dignity.\nAmendments from the House of Lords have been met with government pushback, all under the scrutiny of a critical public eye.\nCan the UK's policies align with international laws and provide true safety for asylum seekers? Will Labour's alternative targeting criminal gangs prove more effective?\nWatch this space. What are your thoughts on this pivotal moment in migration policy? ⚖️🗳️\n#RwandaPolicy #AsylumSeekers #MigrationDebate #UKParliament #HumanDignity #InternationalLaw #ModernSlavery #GlobalMigration #ChannelCrossings #UKGovernment #PoliticalEditorial #EthicalPolicy #PublicAccountability #LegislativeChallenge #LawAndOrder #NationalSecurity #SafeHarbours #VoteOutcome",
+                "images": [
+                    {
+                        "imageUploadType": "url",
+                        "imageUrl": "{{5.body.link}}"
+                    }
+                ],
+                "model": "gpt-4o",
+                "max_tokens": "0",
+                "temperature": "1",
+                "top_p": "1",
+                "n_completions": "1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1200,
+                    "y": 0,
+                    "name": "Vision Caption 👀"
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "images": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "imageUploadType": {
+                                        "mode": "chose",
+                                        "label": "Image URL"
+                                    }
+                                }
+                            ]
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "gpt-4o"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "prompt",
+                        "type": "text",
+                        "label": "Prompt",
+                        "required": true
+                    },
+                    {
+                        "name": "images",
+                        "type": "array",
+                        "label": "Images",
+                        "required": true,
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "imageUploadType",
+                                    "type": "select",
+                                    "label": "How would you like to specify an image?",
+                                    "options": [
+                                        {
+                                            "label": "Image URL",
+                                            "value": "url",
+                                            "nested": [
+                                                {
+                                                    "help": "Public URL of the image. For example, `https://getmyimage.com/myimage.png`.",
+                                                    "mode": "edit",
+                                                    "name": "imageUrl",
+                                                    "type": "url",
+                                                    "label": "Image URL",
+                                                    "mappable": {
+                                                        "help": "Public URL of the image. For example, `https://getmyimage.com/myimage.png`."
+                                                    },
+                                                    "required": true
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Image File",
+                                            "value": "imageFile",
+                                            "nested": [
+                                                {
+                                                    "help": "Binary data of the image. For example, you can retrieve the binary data of your image using the __HTTP: Get a file__ module.",
+                                                    "name": "imageFileData",
+                                                    "type": "buffer",
+                                                    "label": "Image File",
+                                                    "required": true,
+                                                    "semantic": "file:data"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Image",
+                            "name": "value"
+                        }
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "n_completions",
+                        "type": "number",
+                        "label": "Number"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "instagram-business:CreatePostPhoto",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1454622
+            },
+            "mapper": {
+                "accountId": "17841464088334301",
+                "image_url": "{{5.body.link}}",
+                "caption": "{{9.result}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1500,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Facebook connection (Jack Roberts)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "facebook"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "accountId": {
+                            "mode": "chose",
+                            "label": "Mmapodast1 Connected Page (@mmapodast1)"
+                        },
+                        "user_tags": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:facebook",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "accountId",
+                        "type": "select",
+                        "label": "Page",
+                        "required": true
+                    },
+                    {
+                        "name": "image_url",
+                        "type": "url",
+                        "label": "Photo URL",
+                        "required": true
+                    },
+                    {
+                        "name": "caption",
+                        "type": "text",
+                        "label": "Caption"
+                    },
+                    {
+                        "name": "user_tags",
+                        "type": "array",
+                        "label": "User Tags",
+                        "spec": [
+                            {
+                                "name": "username",
+                                "type": "text",
+                                "label": "Username",
+                                "required": true,
+                                "validate": {
+                                    "pattern": "^(?!@)"
+                                }
+                            },
+                            {
+                                "name": "x",
+                                "type": "number",
+                                "label": "X position",
+                                "required": true,
+                                "validate": {
+                                    "max": 1,
+                                    "min": 0
+                                }
+                            },
+                            {
+                                "name": "y",
+                                "type": "number",
+                                "label": "Y position",
+                                "required": true,
+                                "validate": {
+                                    "max": 1,
+                                    "min": 0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "location_id",
+                        "type": "text",
+                        "label": "Location ID"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

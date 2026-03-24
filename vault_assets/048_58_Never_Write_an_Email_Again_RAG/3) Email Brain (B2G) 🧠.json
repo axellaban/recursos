@@ -1,0 +1,1855 @@
+{
+    "name": "3) Email Brain (B2G) 🧠",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-email:TriggerNewEmail",
+            "version": 2,
+            "parameters": {
+                "from": "",
+                "text": "",
+                "folder": "INBOX",
+                "account": 3684960,
+                "subject": "",
+                "criteria": "UNSEEN",
+                "markSeen": false,
+                "maxResults": 50,
+                "searchType": "simple"
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -154,
+                    "y": -206
+                },
+                "restore": {
+                    "parameters": {
+                        "folder": {
+                            "path": [
+                                "INBOX"
+                            ]
+                        },
+                        "account": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            },
+                            "label": "My Google Restricted connection (jack@aiautomationswithjack.com)"
+                        },
+                        "criteria": {
+                            "label": "Only Unread emails"
+                        },
+                        "searchType": {
+                            "label": "Simple filter"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "searchType",
+                        "type": "select",
+                        "label": "Filter type",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "simple",
+                                "gmail"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "markSeen",
+                        "type": "boolean",
+                        "label": "Mark email message(s) as read when fetched"
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "uinteger",
+                        "label": "Maximum number of results",
+                        "required": true
+                    },
+                    {
+                        "name": "folder",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "criteria",
+                        "type": "select",
+                        "label": "Criteria",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "ALL",
+                                "SEEN",
+                                "UNSEEN"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "email",
+                        "label": "Sender email address"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "text",
+                        "type": "text",
+                        "label": "Search phrase"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "openai-gpt-3:CreateCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "model": "chatgpt-4o-latest",
+                "top_p": "1",
+                "select": "chat",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "You are an AI assistant tasked with generating an effective search term based on the content of a newly received email. You will be provided with both the email's subject line and body text. Your goal is to create a concise and specific search term that accurately reflects the key topics discussed in the email.\n\n**Instructions:**\n\n1. **Analyze the Email Content:**\n   - Review both the subject line and the body of the email.\n   - Identify the main topics, key phrases, and any industry-specific terminology.\n\n2. **Generate a Search Term:**\n   - Combine the identified key topics into a single, concise search term.\n   - Ensure the search term is specific enough to retrieve relevant information from the vector database.\n   - Avoid using overly broad or vague terms that may yield irrelevant results.\n\n3. **Format the Response:**\n   - Provide the search term in JSON format as shown below.\n\n**Please respond in JSON format as demonstrated:**\n\n{\n  \"search_term\": \"\"\n}\n\n---\n\n**Example Response:**\n\n{\n  \"search_term\": \"sponsorship opportunity Tech Innovators Conference 2025 AI Automations Jack sponsorship benefits exposure networking\"\n}\n\n---\n\nEmail Subject: {{1.subject}}\nEmail Body: \n{{1.text}}",
+                        "imageDetail": "auto"
+                    }
+                ],
+                "max_tokens": "0",
+                "temperature": "1",
+                "n_completions": "1",
+                "response_format": "json_object",
+                "parseJSONResponse": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 151,
+                    "y": 10,
+                    "name": "Captain Search"
+                },
+                "restore": {
+                    "expect": {
+                        "stop": {
+                            "mode": "chose"
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "chatgpt-4o-latest (system)"
+                        },
+                        "select": {
+                            "label": "Create a Chat Completion (GPT and o1 models)"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    },
+                                    "imageDetail": {
+                                        "mode": "chose",
+                                        "label": "Auto"
+                                    },
+                                    "imageInputType": {
+                                        "mode": "chose",
+                                        "label": "Empty"
+                                    }
+                                }
+                            ]
+                        },
+                        "logit_bias": {
+                            "mode": "chose"
+                        },
+                        "response_format": {
+                            "mode": "chose",
+                            "label": "JSON Object"
+                        },
+                        "parseJSONResponse": {
+                            "mode": "chose"
+                        },
+                        "additionalParameters": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            },
+                            "label": "My OpenAI connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Select Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "chat",
+                                "prompt"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "n_completions",
+                        "type": "number",
+                        "label": "Number"
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "logit_bias",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "token",
+                                    "type": "text",
+                                    "label": "Token ID",
+                                    "required": true
+                                },
+                                {
+                                    "name": "probability",
+                                    "type": "number",
+                                    "label": "Probability",
+                                    "required": true,
+                                    "validate": {
+                                        "max": 100,
+                                        "min": -100
+                                    }
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Token Probability"
+                        },
+                        "type": "array",
+                        "label": "Token Probability"
+                    },
+                    {
+                        "name": "seed",
+                        "type": "integer",
+                        "label": "Seed"
+                    },
+                    {
+                        "name": "stop",
+                        "spec": {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Stop Sequence"
+                        },
+                        "type": "array",
+                        "label": "Stop Sequences",
+                        "validate": {
+                            "maxItems": 4
+                        }
+                    },
+                    {
+                        "name": "additionalParameters",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Parameter Name",
+                                    "required": true
+                                },
+                                {
+                                    "name": "type",
+                                    "type": "select",
+                                    "label": "Input Type",
+                                    "options": [
+                                        {
+                                            "label": "Text",
+                                            "value": "text",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "text",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Number",
+                                            "value": "number",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "number",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Boolean",
+                                            "value": "boolean",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "boolean",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "date",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "date",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Any",
+                                            "value": "any",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "any",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Input Parameter"
+                        },
+                        "type": "array",
+                        "label": "Other Input Parameters"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "uinteger",
+                        "label": "Max Completion Tokens"
+                    },
+                    {
+                        "name": "messages",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": {
+                                        "store": [
+                                            {
+                                                "label": "System",
+                                                "value": "system",
+                                                "nested": [
+                                                    {
+                                                        "help": "Text content of the message on behalf of the selected __Role__.",
+                                                        "name": "content",
+                                                        "type": "text",
+                                                        "label": "Text Content"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "User",
+                                                "value": "user",
+                                                "nested": [
+                                                    {
+                                                        "help": "Text content of the message on behalf of the selected __Role__.",
+                                                        "name": "content",
+                                                        "type": "text",
+                                                        "label": "Text Content"
+                                                    },
+                                                    {
+                                                        "name": "imageInputType",
+                                                        "type": "select",
+                                                        "label": "Image Input Type",
+                                                        "options": [
+                                                            {
+                                                                "label": "URL",
+                                                                "value": "url",
+                                                                "nested": [
+                                                                    {
+                                                                        "help": "Make sure to use a publically accessible URL.\nYou can test if your image is publically accessible by opening the link in an incognito tab.",
+                                                                        "name": "imageUrl",
+                                                                        "type": "url",
+                                                                        "label": "Image URL"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "label": "Image File",
+                                                                "value": "file",
+                                                                "nested": [
+                                                                    {
+                                                                        "name": "imageFile",
+                                                                        "spec": [
+                                                                            {
+                                                                                "help": "Accepted extensions: `.jpg`, `.jpeg`, `.png`, `.webp` and `.gif`.",
+                                                                                "name": "imageFilename",
+                                                                                "type": "filename",
+                                                                                "label": "Image Filename",
+                                                                                "semantic": "file:name",
+                                                                                "extension": [
+                                                                                    "jpg",
+                                                                                    "jpeg",
+                                                                                    "png",
+                                                                                    "webp",
+                                                                                    "gif"
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "name": "imageData",
+                                                                                "type": "buffer",
+                                                                                "label": "Image Data",
+                                                                                "semantic": "file:data"
+                                                                            }
+                                                                        ],
+                                                                        "type": "collection",
+                                                                        "label": "Image"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "mappable": false
+                                                    },
+                                                    {
+                                                        "name": "imageDetail",
+                                                        "type": "select",
+                                                        "label": "Image Detail",
+                                                        "options": [
+                                                            {
+                                                                "label": "Auto",
+                                                                "value": "auto",
+                                                                "default": true
+                                                            },
+                                                            {
+                                                                "label": "High",
+                                                                "value": "high"
+                                                            },
+                                                            {
+                                                                "label": "Low",
+                                                                "value": "low"
+                                                            }
+                                                        ],
+                                                        "advanced": true
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "Assistant",
+                                                "value": "assistant",
+                                                "nested": [
+                                                    {
+                                                        "help": "Text content of the message on behalf of the selected __Role__.",
+                                                        "name": "content",
+                                                        "type": "text",
+                                                        "label": "Text Content"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message"
+                        },
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    },
+                    {
+                        "name": "response_format",
+                        "type": "select",
+                        "label": "Response Format",
+                        "validate": {
+                            "enum": [
+                                "text",
+                                "json_object"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "parseJSONResponse",
+                        "type": "boolean",
+                        "label": "Parse JSON Response",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "result",
+                        "type": "any",
+                        "label": "Result"
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "object",
+                        "type": "text",
+                        "label": "Object"
+                    },
+                    {
+                        "name": "created",
+                        "type": "date",
+                        "label": "Created"
+                    },
+                    {
+                        "name": "model",
+                        "type": "text",
+                        "label": "Model"
+                    },
+                    {
+                        "name": "choices",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "text",
+                                    "type": "text",
+                                    "label": "Text"
+                                },
+                                {
+                                    "name": "index",
+                                    "type": "number",
+                                    "label": "Index"
+                                },
+                                {
+                                    "name": "logprobs",
+                                    "type": "text",
+                                    "label": "Log Probs"
+                                },
+                                {
+                                    "name": "finish_reason",
+                                    "type": "text",
+                                    "label": "Finish Reason"
+                                },
+                                {
+                                    "name": "message",
+                                    "spec": [
+                                        {
+                                            "name": "role",
+                                            "type": "text",
+                                            "label": "Role"
+                                        },
+                                        {
+                                            "name": "content",
+                                            "type": "text",
+                                            "label": "Content"
+                                        },
+                                        {
+                                            "name": "refusal",
+                                            "type": "text",
+                                            "label": "Refusal"
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Message"
+                                }
+                            ],
+                            "type": "collection"
+                        },
+                        "type": "array",
+                        "label": "Choices"
+                    },
+                    {
+                        "name": "usage",
+                        "spec": [
+                            {
+                                "name": "prompt_tokens",
+                                "type": "number",
+                                "label": "Prompt Tokens"
+                            },
+                            {
+                                "name": "completion_tokens",
+                                "type": "text",
+                                "label": "Completion Tokens"
+                            },
+                            {
+                                "name": "total_tokens",
+                                "type": "number",
+                                "label": "Total Tokens"
+                            },
+                            {
+                                "name": "prompt_tokens_details",
+                                "spec": [
+                                    {
+                                        "name": "cached_tokens",
+                                        "type": "uinteger",
+                                        "label": "Cached Tokens"
+                                    },
+                                    {
+                                        "name": "text_tokens",
+                                        "type": "uinteger",
+                                        "label": "Text Tokens"
+                                    },
+                                    {
+                                        "name": "image_tokens",
+                                        "type": "uinteger",
+                                        "label": "Image Tokens"
+                                    },
+                                    {
+                                        "name": "audio_tokens",
+                                        "type": "uinteger",
+                                        "label": "Audio Tokens"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Prompt Tokens Details"
+                            },
+                            {
+                                "name": "completion_tokens_details",
+                                "spec": [
+                                    {
+                                        "name": "reasoning_tokens",
+                                        "type": "uinteger",
+                                        "label": "Reasoning Tokens"
+                                    },
+                                    {
+                                        "name": "text_tokens",
+                                        "type": "uinteger",
+                                        "label": "Text Tokens"
+                                    },
+                                    {
+                                        "name": "audio_tokens",
+                                        "type": "uinteger",
+                                        "label": "Audio Tokens"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Completion Tokens Details"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Usage"
+                    },
+                    {
+                        "name": "system_fingerprint",
+                        "type": "text",
+                        "label": "System Fingerprint"
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 3,
+            "module": "openai-gpt-3:makeApiCall",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "url": "/v1/embeddings",
+                "body": "{\n  \"input\": \"{{2.result}}\",\n  \"model\": \"text-embedding-3-small\",\n  \"encoding_format\": \"float\"\n}",
+                "method": "POST",
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 508,
+                    "y": 14,
+                    "name": "Embeddings 🔥"
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            },
+                            "label": "My OpenAI connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "text",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "PATCH",
+                                "DELETE"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Key"
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "text",
+                                    "label": "Value"
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Header"
+                        },
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Key"
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "text",
+                                    "label": "Value"
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Query String"
+                        },
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "body",
+                        "type": "any",
+                        "label": "Body"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "pinecone:searchIds",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 3685410
+            },
+            "mapper": {
+                "limit": "7",
+                "vector": "{{3.body.data[].embedding}}",
+                "sparseVector": {},
+                "includeMetadata": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 883,
+                    "y": -159
+                },
+                "restore": {
+                    "expect": {
+                        "vector": {
+                            "mode": "edit"
+                        },
+                        "filterType": {
+                            "label": "Empty"
+                        },
+                        "sparseVector": {
+                            "nested": {
+                                "values": {
+                                    "mode": "chose"
+                                },
+                                "indices": {
+                                    "mode": "chose"
+                                }
+                            }
+                        },
+                        "includeValues": {
+                            "mode": "chose"
+                        },
+                        "includeMetadata": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "pinecone"
+                            },
+                            "label": "My Pinecone connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:pinecone",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "vector",
+                        "spec": {
+                            "name": "value",
+                            "type": "number",
+                            "label": "Value"
+                        },
+                        "type": "array",
+                        "label": "Vector"
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "Vector ID"
+                    },
+                    {
+                        "name": "namespace",
+                        "type": "text",
+                        "label": "Namespace"
+                    },
+                    {
+                        "name": "filterType",
+                        "type": "select",
+                        "label": "Filter Type",
+                        "validate": {
+                            "enum": [
+                                "simple",
+                                "custom"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "includeValues",
+                        "type": "boolean",
+                        "label": "Include Values"
+                    },
+                    {
+                        "name": "includeMetadata",
+                        "type": "boolean",
+                        "label": "Include Metadata"
+                    },
+                    {
+                        "name": "sparseVector",
+                        "spec": [
+                            {
+                                "name": "indices",
+                                "spec": {
+                                    "name": "value",
+                                    "type": "integer",
+                                    "label": "Index"
+                                },
+                                "type": "array",
+                                "label": "Indices"
+                            },
+                            {
+                                "name": "values",
+                                "spec": {
+                                    "name": "value",
+                                    "type": "number",
+                                    "label": "Value"
+                                },
+                                "type": "array",
+                                "label": "Values"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Sparse Vector"
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    },
+                    {
+                        "name": "vector",
+                        "spec": {
+                            "name": "value",
+                            "type": "number",
+                            "label": "Value"
+                        },
+                        "type": "array",
+                        "label": "Vector"
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "Vector ID"
+                    },
+                    {
+                        "name": "namespace",
+                        "type": "text",
+                        "label": "Namespace"
+                    },
+                    {
+                        "name": "filterType",
+                        "type": "select",
+                        "label": "Filter Type",
+                        "validate": {
+                            "enum": [
+                                "simple",
+                                "custom"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "includeValues",
+                        "type": "boolean",
+                        "label": "Include Values"
+                    },
+                    {
+                        "name": "includeMetadata",
+                        "type": "boolean",
+                        "label": "Include Metadata"
+                    },
+                    {
+                        "name": "sparseVector",
+                        "spec": [
+                            {
+                                "name": "indices",
+                                "spec": {
+                                    "name": "value",
+                                    "type": "integer",
+                                    "label": "Index"
+                                },
+                                "type": "array",
+                                "label": "Indices"
+                            },
+                            {
+                                "name": "values",
+                                "spec": {
+                                    "name": "value",
+                                    "type": "number",
+                                    "label": "Value"
+                                },
+                                "type": "array",
+                                "label": "Values"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Sparse Vector"
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "module": "builtin:BasicAggregator",
+            "version": 1,
+            "parameters": {
+                "feeder": 4
+            },
+            "mapper": {
+                "id": "{{4.id}}",
+                "metadata": "{{4.metadata}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1172,
+                    "y": 4
+                },
+                "restore": {
+                    "extra": {
+                        "feeder": {
+                            "label": "Pinecone - Query Vectors [4]"
+                        },
+                        "target": {
+                            "label": "Custom"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "id": 6,
+            "module": "builtin:BasicFeeder",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "array": "Email 1:\n{{5.array[1].metadata.content}}\n\nEmail 2:\n{{5.array[2].metadata.content}}\n\nEmail 3:\n{{5.array[3].metadata.content}}\n\nEmail 4:\n{{5.array[4].metadata.content}}\n\nEmail 5:\n{{5.array[5].metadata.content}}\n\nEmail 6:\n{{5.array[6].metadata.content}}\n\nEmail 7:\n{{5.array[7].metadata.content}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1443,
+                    "y": -3
+                },
+                "restore": {
+                    "expect": {
+                        "array": {
+                            "mode": "edit"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "mode": "edit",
+                        "name": "array",
+                        "spec": [],
+                        "type": "array",
+                        "label": "Array"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "openai-gpt-3:CreateCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "model": "gpt-4o",
+                "top_p": "1",
+                "select": "chat",
+                "messages": [
+                    {
+                        "role": "user",
+                        "content": "You are a highly efficient AI Email Assistant designed to create professional and contextually relevant HTML-formatted email responses in the tone of voice/style specified by the sender. You have access to up to 10 relevant emails that provide context and additional information about the subject matter. Some of these emails may be from the sender, while others may be from different sources related to the topic.\n\n**Your Task:**\nGenerate an appropriate HTML email response to the provided inquiry by:\n1. Identifying the context and key points from the email to respond to.\n2. Utilizing relevant information from the up to 10 contextual emails.\n3. Adhering strictly to the specified tone of voice/style of the sender.\n\n**You will be provided with the following three inputs:**\n\n1. **Email to Respond To:**\n    ```\nFrom: {{1.from.name}}{{1.from.address}}\nWhen: {{1.date}}\nSubject: {{1.subject}}\nBody: {{1.text}}\n    ```\n\n2. **Relevant Emails for Context:**\n    ```\n {{6.value}}\n    ```\n    *(Up to 10 emails. Some may be from the sender, others may not.)*\n\n3. **Tone of Voice/Style:**\n    ```\ncasual, informal. brief but friendly and ppolite.\n\nSay heyy when responding.\n\nThanks when finishing the email\n\n**Guidelines:**\n\n- **Understand the Inquiry:**\n  - Carefully read the email to respond to and identify the main inquiry or request.\n  \n- **Leverage Contextual Emails:**\n  - Extract relevant information, recurring themes, or specific language patterns from the contextual emails to inform your response.\n  \n- **Maintain Tone Consistency:**\n  - Ensure that the response matches the specified tone of voice/style. Pay attention to language choice, formality, and overall demeanor.\n  \n- **HTML Formatting:**\n  - Structure the email using appropriate HTML tags to ensure it is well-formatted and visually appealing.\n  - Include elements such as paragraphs (`<p>`), bold text (`<strong>`), italics (`<em>`), and line breaks (`<br>`) as needed.\n  \n- **Professionalism and Clarity:**\n  - Ensure the response is clear, concise, and free of grammatical errors.\n  - Address the sender by name if available, and include a polite closing.\n\n- **Avoid Unnecessary Information:**\n  - Do not include signatures, disclaimers, or irrelevant links unless they are part of the response context.\n\n**Output Format:**\n\n**Respond in HTML format to mirror the style shown below:**\n------\n\nOutput must be in html.\n\nInclude no other information that the text\n\nFinish email with the below html signature:\n\n<div style=\"font-family: Arial, sans-serif; padding: 20px 0; border-left: 3px solid #3498db; padding-left: 10px;\">\n    <div style=\"margin-bottom: 5px;\">\n        <span style=\"font-size: 16px; font-weight: bold; color: #2c3e50;\">Jack Roberts</span>\n    </div>\n    <div style=\"font-size: 14px; color: #7f8c8d;\">\n        🤖 AI Automations by Jack\n    </div>\n    <div style=\"font-size: 14px; color: #7f8c8d; margin-top: 5px;\">\n        📱 <a href=\"tel:+44 7700 900123\" style=\"color: #3498db; text-decoration: none;\">+44 7700 900123</a>\n    </div>\n    <div style=\"font-size: 14px; margin-top: 5px;\">\n        🚀 <a href=\"https://www.skool.com/ai-automations-by-jack-4235/about\" style=\"color: #3498db; text-decoration: none;\">Community</a>\n    </div>\n</div>",
+                        "imageDetail": "auto"
+                    }
+                ],
+                "max_tokens": "0",
+                "temperature": "1",
+                "n_completions": "1",
+                "response_format": "text"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1761,
+                    "y": -243,
+                    "name": "Email Brain 🧠"
+                },
+                "restore": {
+                    "expect": {
+                        "stop": {
+                            "mode": "chose"
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "gpt-4o (system)"
+                        },
+                        "select": {
+                            "label": "Create a Chat Completion (GPT and o1 models)"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    },
+                                    "imageDetail": {
+                                        "mode": "chose",
+                                        "label": "Auto"
+                                    },
+                                    "imageInputType": {
+                                        "mode": "chose",
+                                        "label": "Empty"
+                                    }
+                                }
+                            ]
+                        },
+                        "logit_bias": {
+                            "mode": "chose"
+                        },
+                        "response_format": {
+                            "mode": "chose",
+                            "label": "Text"
+                        },
+                        "additionalParameters": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            },
+                            "label": "My OpenAI connection"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Select Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "chat",
+                                "prompt"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 2,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "n_completions",
+                        "type": "number",
+                        "label": "Number"
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "logit_bias",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "token",
+                                    "type": "text",
+                                    "label": "Token ID",
+                                    "required": true
+                                },
+                                {
+                                    "name": "probability",
+                                    "type": "number",
+                                    "label": "Probability",
+                                    "required": true,
+                                    "validate": {
+                                        "max": 100,
+                                        "min": -100
+                                    }
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Token Probability"
+                        },
+                        "type": "array",
+                        "label": "Token Probability"
+                    },
+                    {
+                        "name": "seed",
+                        "type": "integer",
+                        "label": "Seed"
+                    },
+                    {
+                        "name": "stop",
+                        "spec": {
+                            "name": "value",
+                            "type": "text",
+                            "label": "Stop Sequence"
+                        },
+                        "type": "array",
+                        "label": "Stop Sequences",
+                        "validate": {
+                            "maxItems": 4
+                        }
+                    },
+                    {
+                        "name": "additionalParameters",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Parameter Name",
+                                    "required": true
+                                },
+                                {
+                                    "name": "type",
+                                    "type": "select",
+                                    "label": "Input Type",
+                                    "options": [
+                                        {
+                                            "label": "Text",
+                                            "value": "text",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "text",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ],
+                                            "default": true
+                                        },
+                                        {
+                                            "label": "Number",
+                                            "value": "number",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "number",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Boolean",
+                                            "value": "boolean",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "boolean",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "date",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "date",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Any",
+                                            "value": "any",
+                                            "nested": [
+                                                {
+                                                    "name": "value",
+                                                    "type": "any",
+                                                    "label": "Parameter Value"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Input Parameter"
+                        },
+                        "type": "array",
+                        "label": "Other Input Parameters"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "uinteger",
+                        "label": "Max Completion Tokens"
+                    },
+                    {
+                        "name": "messages",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "select",
+                                    "label": "Role",
+                                    "options": {
+                                        "store": [
+                                            {
+                                                "label": "System",
+                                                "value": "system",
+                                                "nested": [
+                                                    {
+                                                        "help": "Text content of the message on behalf of the selected __Role__.",
+                                                        "name": "content",
+                                                        "type": "text",
+                                                        "label": "Text Content"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "User",
+                                                "value": "user",
+                                                "nested": [
+                                                    {
+                                                        "help": "Text content of the message on behalf of the selected __Role__.",
+                                                        "name": "content",
+                                                        "type": "text",
+                                                        "label": "Text Content"
+                                                    },
+                                                    {
+                                                        "name": "imageInputType",
+                                                        "type": "select",
+                                                        "label": "Image Input Type",
+                                                        "options": [
+                                                            {
+                                                                "label": "URL",
+                                                                "value": "url",
+                                                                "nested": [
+                                                                    {
+                                                                        "help": "Make sure to use a publically accessible URL.\nYou can test if your image is publically accessible by opening the link in an incognito tab.",
+                                                                        "name": "imageUrl",
+                                                                        "type": "url",
+                                                                        "label": "Image URL"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "label": "Image File",
+                                                                "value": "file",
+                                                                "nested": [
+                                                                    {
+                                                                        "name": "imageFile",
+                                                                        "spec": [
+                                                                            {
+                                                                                "help": "Accepted extensions: `.jpg`, `.jpeg`, `.png`, `.webp` and `.gif`.",
+                                                                                "name": "imageFilename",
+                                                                                "type": "filename",
+                                                                                "label": "Image Filename",
+                                                                                "semantic": "file:name",
+                                                                                "extension": [
+                                                                                    "jpg",
+                                                                                    "jpeg",
+                                                                                    "png",
+                                                                                    "webp",
+                                                                                    "gif"
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "name": "imageData",
+                                                                                "type": "buffer",
+                                                                                "label": "Image Data",
+                                                                                "semantic": "file:data"
+                                                                            }
+                                                                        ],
+                                                                        "type": "collection",
+                                                                        "label": "Image"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "mappable": false
+                                                    },
+                                                    {
+                                                        "name": "imageDetail",
+                                                        "type": "select",
+                                                        "label": "Image Detail",
+                                                        "options": [
+                                                            {
+                                                                "label": "Auto",
+                                                                "value": "auto",
+                                                                "default": true
+                                                            },
+                                                            {
+                                                                "label": "High",
+                                                                "value": "high"
+                                                            },
+                                                            {
+                                                                "label": "Low",
+                                                                "value": "low"
+                                                            }
+                                                        ],
+                                                        "advanced": true
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "label": "Assistant",
+                                                "value": "assistant",
+                                                "nested": [
+                                                    {
+                                                        "help": "Text content of the message on behalf of the selected __Role__.",
+                                                        "name": "content",
+                                                        "type": "text",
+                                                        "label": "Text Content"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    "required": true
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Message"
+                        },
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true
+                    },
+                    {
+                        "name": "response_format",
+                        "type": "select",
+                        "label": "Response Format",
+                        "validate": {
+                            "enum": [
+                                "text",
+                                "json_object"
+                            ]
+                        }
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "result",
+                        "type": "any",
+                        "label": "Result"
+                    },
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "object",
+                        "type": "text",
+                        "label": "Object"
+                    },
+                    {
+                        "name": "created",
+                        "type": "date",
+                        "label": "Created"
+                    },
+                    {
+                        "name": "model",
+                        "type": "text",
+                        "label": "Model"
+                    },
+                    {
+                        "name": "choices",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "text",
+                                    "type": "text",
+                                    "label": "Text"
+                                },
+                                {
+                                    "name": "index",
+                                    "type": "number",
+                                    "label": "Index"
+                                },
+                                {
+                                    "name": "logprobs",
+                                    "type": "text",
+                                    "label": "Log Probs"
+                                },
+                                {
+                                    "name": "finish_reason",
+                                    "type": "text",
+                                    "label": "Finish Reason"
+                                },
+                                {
+                                    "name": "message",
+                                    "spec": [
+                                        {
+                                            "name": "role",
+                                            "type": "text",
+                                            "label": "Role"
+                                        },
+                                        {
+                                            "name": "content",
+                                            "type": "text",
+                                            "label": "Content"
+                                        },
+                                        {
+                                            "name": "refusal",
+                                            "type": "text",
+                                            "label": "Refusal"
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Message"
+                                }
+                            ],
+                            "type": "collection"
+                        },
+                        "type": "array",
+                        "label": "Choices"
+                    },
+                    {
+                        "name": "usage",
+                        "spec": [
+                            {
+                                "name": "prompt_tokens",
+                                "type": "number",
+                                "label": "Prompt Tokens"
+                            },
+                            {
+                                "name": "completion_tokens",
+                                "type": "text",
+                                "label": "Completion Tokens"
+                            },
+                            {
+                                "name": "total_tokens",
+                                "type": "number",
+                                "label": "Total Tokens"
+                            },
+                            {
+                                "name": "prompt_tokens_details",
+                                "spec": [
+                                    {
+                                        "name": "cached_tokens",
+                                        "type": "uinteger",
+                                        "label": "Cached Tokens"
+                                    },
+                                    {
+                                        "name": "text_tokens",
+                                        "type": "uinteger",
+                                        "label": "Text Tokens"
+                                    },
+                                    {
+                                        "name": "image_tokens",
+                                        "type": "uinteger",
+                                        "label": "Image Tokens"
+                                    },
+                                    {
+                                        "name": "audio_tokens",
+                                        "type": "uinteger",
+                                        "label": "Audio Tokens"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Prompt Tokens Details"
+                            },
+                            {
+                                "name": "completion_tokens_details",
+                                "spec": [
+                                    {
+                                        "name": "reasoning_tokens",
+                                        "type": "uinteger",
+                                        "label": "Reasoning Tokens"
+                                    },
+                                    {
+                                        "name": "text_tokens",
+                                        "type": "uinteger",
+                                        "label": "Text Tokens"
+                                    },
+                                    {
+                                        "name": "audio_tokens",
+                                        "type": "uinteger",
+                                        "label": "Audio Tokens"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Completion Tokens Details"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Usage"
+                    },
+                    {
+                        "name": "system_fingerprint",
+                        "type": "text",
+                        "label": "System Fingerprint"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "google-email:ActionCreateDraft",
+            "version": 2,
+            "parameters": {
+                "account": 3684960
+            },
+            "mapper": {
+                "cc": [],
+                "to": [
+                    "{{1.from.address}}"
+                ],
+                "bcc": [],
+                "html": "{{7.result}}",
+                "folder": "[Gmail]/Drafts",
+                "subject": "{{1.subject}}",
+                "attachments": []
+            },
+            "metadata": {
+                "designer": {
+                    "x": 2053,
+                    "y": -49
+                },
+                "restore": {
+                    "expect": {
+                        "cc": {
+                            "mode": "chose"
+                        },
+                        "to": {
+                            "mode": "chose",
+                            "items": [
+                                null
+                            ]
+                        },
+                        "bcc": {
+                            "mode": "chose"
+                        },
+                        "folder": {
+                            "mode": "chose",
+                            "path": [
+                                "Drafts"
+                            ]
+                        },
+                        "attachments": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "account": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            },
+                            "label": "My Google Restricted connection (jack@aiautomationswithjack.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "account",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "folder",
+                        "type": "folder",
+                        "label": "Folder",
+                        "required": true
+                    },
+                    {
+                        "name": "to",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        },
+                        "type": "array",
+                        "label": "To"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "text",
+                        "label": "Subject"
+                    },
+                    {
+                        "name": "html",
+                        "type": "text",
+                        "label": "Content"
+                    },
+                    {
+                        "name": "attachments",
+                        "spec": [
+                            {
+                                "name": "fileName",
+                                "type": "filename",
+                                "label": "File name",
+                                "required": true,
+                                "semantic": "file:name"
+                            },
+                            {
+                                "name": "data",
+                                "type": "buffer",
+                                "label": "Data",
+                                "required": true,
+                                "semantic": "file:data"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Attachments"
+                    },
+                    {
+                        "name": "cc",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        },
+                        "type": "array",
+                        "label": "Copy recipient"
+                    },
+                    {
+                        "name": "bcc",
+                        "spec": {
+                            "name": "value",
+                            "type": "email",
+                            "label": "Email address",
+                            "required": true
+                        },
+                        "type": "array",
+                        "label": "Blind copy recipient"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

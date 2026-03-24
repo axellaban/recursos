@@ -1,0 +1,1168 @@
+[00:00:00] in this video I'm going to show exactly
+[00:00:01] how to build an AI web app that will
+[00:00:02] sell for you literally on autopilot you
+[00:00:04] can design it in any way you want to on
+[00:00:06] a website and under an hour we're going
+[00:00:09] to build a WhatsApp style chat where the
+[00:00:11] AI bot itself is trained on the entire
+[00:00:14] business and has live access to every
+[00:00:17] single one of your skew items how many
+[00:00:19] you have the product description any
+[00:00:21] information that we want to and then in
+[00:00:23] livetime based on what the user wants
+[00:00:26] this AI think of it like an AI brand for
+[00:00:28] any business whether you want to sell
+[00:00:29] that business to make money or just have
+[00:00:31] it on your own website it knows every
+[00:00:33] page of your website it knows all the
+[00:00:34] products you've got if you update the
+[00:00:35] products in lifetime in your CRM it will
+[00:00:38] know about it and it can say hey bro I'm
+[00:00:40] sorry we don't have any in that size
+[00:00:41] anymore but we can recommend ABC so it
+[00:00:44] can dynamically suggest products to your
+[00:00:46] users you're going to find out exactly
+[00:00:48] how to build this uh in under an hour
+[00:00:50] and I'm going to show you how to do it
+[00:00:51] step by step now look before we jump in
+[00:00:54] I have one recommendation if you haven't
+[00:00:55] seen this last video which is how to
+[00:00:57] build an AI web app that can do anything
+[00:01:00] thing go and watch that video first this
+[00:01:02] video Builds on the principles of the
+[00:01:04] last video so if you haven't seen the
+[00:01:05] last video this one won't make as much
+[00:01:07] sense for you it's a cool watch it's
+[00:01:09] lots of fun we have a coffee we have a
+[00:01:10] great time so go watch that video first
+[00:01:12] and then we can jump into this one
+[00:01:14] together if you just watch that one
+[00:01:15] welcome back now that in terms of me my
+[00:01:17] YouTube channel and what we do here my
+[00:01:19] channel my school Community we're about
+[00:01:20] three things we're about the latest AI
+[00:01:22] we are about incredible automations most
+[00:01:25] importantly we all about the stuff that
+[00:01:27] actually works so if you haven't already
+[00:01:29] grab that that coffee and let's jump
+[00:01:31] straight in I'd like to if I may start
+[00:01:33] by what you need to run this automation
+[00:01:34] now the great news is not that much
+[00:01:36] stuff it's really really simple so need
+[00:01:38] a couple of things the first one is the
+[00:01:40] software in which we're making this
+[00:01:41] video which is make.com now make.com no
+[00:01:44] code develop at all you basically put
+[00:01:46] these things together they connect
+[00:01:48] together and Magic starts to happen or
+[00:01:49] at least it does in Jack Roberts YouTube
+[00:01:51] channel because we love this sort of
+[00:01:52] stuff you going access to air table air
+[00:01:55] table think of it like Google Sheets on
+[00:01:57] steroids it's been doing its Trend
+[00:01:58] baloney sandwiches it's way more
+[00:02:00] configurable than Google Sheets it's
+[00:02:02] just so easy to use although you could
+[00:02:04] use Google Sheets if you want to I'm
+[00:02:06] always going to rec the stuff that I
+[00:02:07] find to work best for me an air table
+[00:02:09] very easy to use super super cool and
+[00:02:11] will'll get you flying and by the way
+[00:02:13] you can sub air table for free like a th
+[00:02:16] uh searches th000 it the table and same
+[00:02:18] with me you get like lots of free stuff
+[00:02:20] I think you get a month free with one of
+[00:02:21] the links Down Below in the description
+[00:02:23] but again I'll put the links down there
+[00:02:24] so you can click the buttons and get
+[00:02:26] started now the other thing we need is
+[00:02:27] an AI brain this could be chat GP PT it
+[00:02:30] could be clawed but we're going to want
+[00:02:32] access to a GPT model I'll show you
+[00:02:34] exactly how we use this and we'll
+[00:02:35] leverage that if you're using chat GPT
+[00:02:38] you're going to want to head over to
+[00:02:39] platform. open.com again I'll put the
+[00:02:40] links down below and you basically buy
+[00:02:42] like a couple of bucks in credits
+[00:02:44] instead of using chat GPT directly and
+[00:02:46] then guys the other thing that you're
+[00:02:47] going to want is access to this website
+[00:02:50] called card.com now if you've seen my
+[00:02:51] last video you know exactly what this is
+[00:02:53] It's essentially guys like a website
+[00:02:55] builder that you can get like you can
+[00:02:57] build on it right like 25 websites um
+[00:03:00] for $47 per anom it's like $380 per
+[00:03:04] month or something I get my calculate
+[00:03:05] and check that out but it is
+[00:03:07] unbelievable it's super configurable you
+[00:03:10] can build any websites that you want to
+[00:03:12] uh it's just got so much stuff like you
+[00:03:14] can come into it like here for example
+[00:03:15] pick any website you want to build it
+[00:03:17] customize it uh build your website on it
+[00:03:19] and if you have your own website already
+[00:03:22] we're going to be using HTML using chat
+[00:03:24] GPT now
+[00:03:26] HTML is the code that we're going to be
+[00:03:28] using and you can basically just embed
+[00:03:30] that in anything that you want to so for
+[00:03:32] for instance here on card for example
+[00:03:34] and I'll show you how you build this in
+[00:03:35] video you come down you can add in this
+[00:03:38] section here come down click embed and
+[00:03:41] basically guys you see this code we're
+[00:03:43] going to use chat GPT or claw to create
+[00:03:45] code for any application we want we
+[00:03:47] paste it in here we publish it
+[00:03:50] live and then we get to see this cool
+[00:03:53] interactive chat button guys as you'll
+[00:03:54] know from the last video this applies
+[00:03:56] for literally any application on the
+[00:03:59] planet so very very cool but before we
+[00:04:00] get started I I guess I'll show you
+[00:04:02] first of all how this thing actually
+[00:04:04] works so cool let's check it out as a
+[00:04:06] four instance so we have this here
+[00:04:09] now what's going to happen we've got we
+[00:04:12] bookended it with this called Web hooks
+[00:04:14] um so what's going to happen is I'll
+[00:04:17] come over to this we start okay so I'm
+[00:04:19] going to say something like
+[00:04:20] hey my guy I am looking
+[00:04:25] for some
+[00:04:27] trainers cuz imagine just being to
+[00:04:29] trainers we like did how does this fit
+[00:04:31] we guys we could feed this with customer
+[00:04:33] feedback imagine that imagine what we
+[00:04:35] add on here and I know I'm showing a
+[00:04:36] demo but I can't stop myself going into
+[00:04:38] detail here imagine we had a table here
+[00:04:40] a column here that said every single
+[00:04:42] customer feedback review so it's like
+[00:04:44] dude I you know I want size X but you
+[00:04:47] know I'm not sure how it will fit well
+[00:04:48] Jack I can tell you actually you know
+[00:04:49] based on you know you can analyze
+[00:04:52] reviews and say dude this will fit
+[00:04:53] because of ab and C like you can't get
+[00:04:56] that on a website like you buy anything
+[00:04:58] it's always like you have to scroll down
+[00:05:00] and read the reviews you could cut out
+[00:05:02] like how many minutes of the purchasing
+[00:05:04] experience to have a genie you know a
+[00:05:06] kicks Genie cuz this you know kicks it's
+[00:05:08] like you know it's like trainers
+[00:05:10] whatever like to ask actually answer the
+[00:05:11] questions guys is insanity so said hey
+[00:05:14] I'm looking for some trainers boom is
+[00:05:16] loading this really cool little loading
+[00:05:17] animation and he's going to come back
+[00:05:19] and give us an answer now let me show
+[00:05:20] you what's happening here like hey there
+[00:05:22] thanks for reaching out I'd love to help
+[00:05:23] you find the perfect trainers can you
+[00:05:24] tell me what activities you'll be using
+[00:05:26] Trainers for do you have any brand
+[00:05:27] preferences or specific features you're
+[00:05:30] looking for this will help me narrow
+[00:05:31] down the best options for you so what's
+[00:05:34] happened there basically web hook has
+[00:05:36] grabbed the information look see this
+[00:05:38] guys it's it's basically pulled through
+[00:05:40] the content right then we've got air
+[00:05:42] table which has searched all our
+[00:05:43] database to get all the information for
+[00:05:45] um uh for our products we've separated
+[00:05:47] that out with an aggregator and text
+[00:05:49] array aggregator and a text aggregator
+[00:05:51] don't worry about that sounds
+[00:05:52] complicated actually marvelously simple
+[00:05:55] and then we've got our system brand it's
+[00:05:56] got our prompt and essentially what we
+[00:05:58] do is we feed that all information and
+[00:06:00] then we just say hey send that straight
+[00:06:02] back to the website and that's what's
+[00:06:03] happened so look I run this one again
+[00:06:06] now in reality guys this will be running
+[00:06:08] constantly so you won't need to do this
+[00:06:09] I'm just doing this for the purposes of
+[00:06:11] the demonstration so let's just say for
+[00:06:13] example I say hey uh I am looking for
+[00:06:17] something uh stylish uh in white if
+[00:06:22] possible boom I take that in there the
+[00:06:24] genie is now thinking and doing
+[00:06:25] different bits and pieces and let's see
+[00:06:27] what the genie comes back with now I've
+[00:06:29] done this is a proof of concept because
+[00:06:31] I wanted to build on my last video and
+[00:06:32] show you that you could actually
+[00:06:35] use you know the information you got in
+[00:06:37] a DAT to that so hey thanks for sharing
+[00:06:39] style preference here are a few stylish
+[00:06:40] white trainers that I think you love the
+[00:06:42] Adidas nmd R1 boost Cushing technology
+[00:06:45] for ultimate comfort and endry return so
+[00:06:47] I just said hey um now obviously we want
+[00:06:49] to improve on the formatting of this
+[00:06:51] because the formatting has not been
+[00:06:52] excellent but I Whi this together in
+[00:06:53] like 35 minutes so you could you can
+[00:06:55] just imagine how you would set this AR
+[00:06:57] okay um please
+[00:07:02] recommend the most
+[00:07:05] stylish of them all I would like your
+[00:07:09] favorite
+[00:07:10] recommendation so for example one of the
+[00:07:12] things I would do now based on this is
+[00:07:13] I'd say hey only give me one
+[00:07:15] recommendation and then in the code I'd
+[00:07:17] say hey make sure that all of the links
+[00:07:19] are
+[00:07:20] hyperlinks I'd like your favorite one
+[00:07:24] recommendation
+[00:07:25] okay like so so then if I come back over
+[00:07:28] to our thing here we'll run this one
+[00:07:30] again again this will all be happening
+[00:07:31] automatically in the background oops for
+[00:07:34] up that one run once now I've be running
+[00:07:36] the background
+[00:07:37] perfectly let's go back over to the
+[00:07:39] conversation and I go hey but awesome
+[00:07:41] please recommend of them all I would
+[00:07:43] like your favorite one recommendation
+[00:07:45] hey there if I had to pick what the most
+[00:07:47] stylish it would be X and here guys it's
+[00:07:50] giv us a link and let's just check out
+[00:07:53] what that link looks
+[00:07:54] like so guys what I did and look at this
+[00:07:57] guys it's then giving you product link
+[00:07:58] to go directly to go and purchase that
+[00:08:00] product how crazy is that cuz if you
+[00:08:02] look one of the things that I did in the
+[00:08:04] tasks things here is I added like a URL
+[00:08:06] to each thing so not only it can then
+[00:08:08] basically imagine you got your product
+[00:08:10] and the customers trying to figure it
+[00:08:12] out it can so do go and buy this product
+[00:08:14] here based on what you want one of the
+[00:08:16] other things that we can do and I had
+[00:08:17] this before is that you can actually
+[00:08:18] upload images if you want a separate
+[00:08:20] video on that I can give you one of that
+[00:08:21] as well where we can say hey I pulled
+[00:08:23] down a few different Stu we can get this
+[00:08:25] guys I didn't want this video to hours
+[00:08:27] but I could do one of the things that I
+[00:08:28] did in my experimentation is I actually
+[00:08:30] had it connect to the Internet so it
+[00:08:31] added what's called a perplexity like
+[00:08:33] more perplexity which I basically said
+[00:08:35] look here's user input I had a GPT
+[00:08:37] module that said look decide whether or
+[00:08:39] not you need to Google something and if
+[00:08:41] it did it would actually go onto the
+[00:08:42] internet and find like the most relevant
+[00:08:44] like trainers to help them find out
+[00:08:46] what's best for them so I could say hey
+[00:08:48] show me a picture of your favorite
+[00:08:49] trainers and then guys what we can do is
+[00:08:51] get it to recommend trainers based on
+[00:08:54] that image like the interactivity on
+[00:08:56] this is insane but I want to show you
+[00:08:58] the concept and you you can build on the
+[00:09:00] shoulders of this automation to build it
+[00:09:01] for any website any application it is
+[00:09:04] literally like insane now if you just
+[00:09:06] want to upload this and not fast round
+[00:09:08] with developing it as always guys all
+[00:09:10] you ever need to do is come down here to
+[00:09:11] the buttons click on import blueprint
+[00:09:14] we're going to choose a Json file you
+[00:09:15] select that Json file and then you click
+[00:09:17] save and then automatically the
+[00:09:19] automation will prepopulate and that's
+[00:09:20] for every automation that I do on
+[00:09:22] YouTube channel U including all ones
+[00:09:24] that I don't so I do lots of automations
+[00:09:26] aren't available on YouTube channel the
+[00:09:28] community got loads of other cool stuff
+[00:09:29] from there master classes level unlocks
+[00:09:31] free lifetime membership like loads of
+[00:09:33] software loads of really cool uh
+[00:09:34] features in bells and whistles and for
+[00:09:36] the purpose of this video guys I'm going
+[00:09:38] to build it with you from scratch so you
+[00:09:39] get the concept of it now I won't repeat
+[00:09:41] all the stuff we did in the last video
+[00:09:43] just out of respect for your time but
+[00:09:44] I'll just go through some of the key
+[00:09:45] Basics so you can follow along and build
+[00:09:47] this really really cool automation for
+[00:09:50] your business so let's start with what
+[00:09:51] we need first of all the first thing we
+[00:09:52] want to get is a web hug okay so let's
+[00:09:55] start with a web hook like so I'm going
+[00:09:57] to go for the custom web hook
+[00:09:59] instant and then let's create a new web
+[00:10:01] hook so what should we call this one
+[00:10:03] instead of trainers let's go for
+[00:10:05] something like I don't know tank tops
+[00:10:08] and the reason I say tank tops by way he
+[00:10:09] cuz I'm wearing one cuz we got that
+[00:10:10] beautiful lead seat of the moment but
+[00:10:13] it's also like I think there's a
+[00:10:14] national shortage of tank tops like I'm
+[00:10:17] not joking I went to a super busy store
+[00:10:19] and like seriously like I they had two
+[00:10:22] tank tops I said dude I think there a
+[00:10:23] shortage and she said dude Jack I have
+[00:10:25] no idea what you're talking about I said
+[00:10:27] okay I then know we'll have to see about
+[00:10:28] that so here we go okay okay we got tank
+[00:10:29] tops so basically we're going to give a
+[00:10:31] prompt this could be either to clae it
+[00:10:33] could be to chat GPT last video did clae
+[00:10:35] because it has this artifacts window
+[00:10:37] shows you what it's developing but we're
+[00:10:38] going to use trat GPT on this video and
+[00:10:40] then going sip of this water and then
+[00:10:41] we're going to dive straight
+[00:10:43] in by the way it's got Stanley Stanley
+[00:10:46] Cup recently I recommend that honestly
+[00:10:49] guys like what's cool you can clean it
+[00:10:50] and like it's just yeah it's very very
+[00:10:52] very cool so we're going to say like hey
+[00:10:54] I would like you to
+[00:10:58] develop HTML code for a
+[00:11:01] website that does the
+[00:11:03] following okay and then we say number
+[00:11:05] one okay um we're going to say basically
+[00:11:10] we want to describe it okay so it's a
+[00:11:12] WhatsApp style chat like the
+[00:11:16] attached image now what I'd recommend
+[00:11:19] you do guys is like find something you
+[00:11:20] think is cool right find something you
+[00:11:22] think is like amazing and just be like
+[00:11:26] dude like copy this just copy the style
+[00:11:28] of this like I think think it's like one
+[00:11:29] of the best ways to do it um and then
+[00:11:32] what you can also do if you will if
+[00:11:33] you're building this for your business
+[00:11:34] obviously I'm just kind of giving you
+[00:11:35] the bare bounds of it out of respect for
+[00:11:37] your time so you can kick with it is
+[00:11:39] what you can do is give it to trat gbt
+[00:11:41] or Claud and say hey describe all of the
+[00:11:43] UI that you see in this so it will then
+[00:11:47] basically one GPT one chat conversation
+[00:11:50] gives you all the features that you want
+[00:11:51] and then you copy and paste the features
+[00:11:52] as requirements for this but I'm kind of
+[00:11:54] speedr running it with you here what up
+[00:11:55] T chat uh like attached image one is
+[00:11:58] user submit Quest
+[00:12:00] question on the
+[00:12:02] website this then sends a post
+[00:12:06] request to this web hook now what's web
+[00:12:09] hook well we come back it's right here
+[00:12:12] copy address to clipboard now when you
+[00:12:13] first add a web hook guys it will need
+[00:12:15] to determine a data structure completely
+[00:12:17] fine we come back over boom and then
+[00:12:19] we'll say a response web
+[00:12:22] hook we'll send the answer
+[00:12:26] back uh make that answer
+[00:12:31] the response and then we'll just say
+[00:12:33] look uh add a loading
+[00:12:36] animation whilst you're waiting for
+[00:12:44] response and then we'll just keep it as
+[00:12:46] simple short as simple as sweet as that
+[00:12:48] and then we go boom then chat GPT 40 is
+[00:12:50] going to do some cool magic in the
+[00:12:51] background while we're waiting for that
+[00:12:53] to happen guys let's go over now to
+[00:12:56] card.com and uh design this new website
+[00:12:58] good
+[00:12:59] again guys I'll put description down
+[00:13:01] below so you can pip and pop and just
+[00:13:02] get rocking and rolling having a good
+[00:13:04] time okay so guys we're going to pick a
+[00:13:05] new design let's go with a tried and
+[00:13:08] tested classic let's go for this one
+[00:13:10] here it's good design it's Sleek it's
+[00:13:12] dark it works really decent we got on
+[00:13:13] image so just other chy image we got
+[00:13:15] some sneakers as my American friends
+[00:13:18] would say we upload that and then let's
+[00:13:20] go ahead and add in our beautiful code
+[00:13:23] down here we come down and once we've
+[00:13:25] got the code we click on the no code bit
+[00:13:27] we come down and we paste it in then we
+[00:13:29] click done now what should we call this
+[00:13:31] one let's call it Bobby tanks honest guy
+[00:13:36] I tell you guys if anyone want to go
+[00:13:37] ahead and make Bobby tanks I will be
+[00:13:39] your first customer I will really be
+[00:13:41] your first customer Bobby tanks Bobby
+[00:13:43] tanks come down here anyway I picked a
+[00:13:46] random one it's checking it cool doesn't
+[00:13:48] matter hey the Bobby tanks name lives on
+[00:13:50] in Pride we love that Gate's loading
+[00:13:52] it's done we open up into new window and
+[00:13:53] let's see the code looks like and guys
+[00:13:55] look at this so immediately what do I
+[00:13:57] think well it's a little bit too too
+[00:13:59] short to the left uh so we want to
+[00:14:01] increase it but again you can play
+[00:14:03] around with designs you can change the
+[00:14:05] colors you can do anything to this this
+[00:14:07] is mainly just a principle to show you
+[00:14:08] how it works so for example one of the
+[00:14:09] things might chat GPT is let's increase
+[00:14:11] the height here uh and VAR things so
+[00:14:15] let's test first of all that we can get
+[00:14:18] um the information into me so to do that
+[00:14:20] we're just going to give it a really
+[00:14:21] quick message like hey
+[00:14:24] Bobby send sorry something went wrong
+[00:14:27] please try again let's go back over
+[00:14:29] successfully determined okay that's
+[00:14:31] great news all first thing we always do
+[00:14:33] guys is just test that the web hod can
+[00:14:34] receive it so let's run this one module
+[00:14:36] once uh let's refresh Bobby tags we come
+[00:14:39] down
+[00:14:40] hello
+[00:14:42] Bobby we come back here and then Wai for
+[00:14:45] the custom web hook to kick off and see
+[00:14:47] if that works properly so let's just
+[00:14:48] test if it can work one more time so go
+[00:14:50] to hello Bobby hit enter something went
+[00:14:52] wrong oh my goodness we come back over
+[00:14:55] to make and it's not sent the
+[00:14:57] information over which is cool so what
+[00:14:59] do we do we just then go back over to
+[00:15:01] chat GPT and we and then we say hey
+[00:15:04] please update the
+[00:15:06] code with the following
+[00:15:10] improvements okay number one is the
+[00:15:16] information is not sending to the web
+[00:15:20] hook and we get the
+[00:15:22] response some sorry something wrong
+[00:15:24] please try again number two increase the
+[00:15:28] height of the title
+[00:15:31] section and call it Bobby
+[00:15:35] tanks okay we like that uh number three
+[00:15:38] is ADD speech bubbles excuse me speech
+[00:15:41] with two oh my goodness speech bubbles
+[00:15:44] to each um message and then finally uh I
+[00:15:48] always say like send the full HTML here
+[00:15:52] so that I can copy and paste it then hit
+[00:15:56] enter now you'll find as always you need
+[00:15:57] to iterate with this it's like a back
+[00:15:59] and forth but you keep incrementally
+[00:16:01] making progress on it and then it starts
+[00:16:03] to develop it so what happens after you
+[00:16:05] may be saying Jack we get that
+[00:16:07] information well look there's a couple
+[00:16:09] things that we need to do you'll see
+[00:16:11] from the first design we've got here we
+[00:16:12] search records and air table and then we
+[00:16:15] segment the information out once we've
+[00:16:16] physically gotten that so I come back
+[00:16:18] over to chat TBT for example it's now
+[00:16:20] doing all the beautiful changes for us
+[00:16:22] in the background um I'm going to wait
+[00:16:24] till that does first and then we can
+[00:16:25] build the ad table together soon as we
+[00:16:26] can get the information there and back
+[00:16:28] we're going to be absolutely sorted and
+[00:16:29] I think I applications of this are
+[00:16:33] insane I really do like you could build
+[00:16:35] a functional app in like 20 minutes
+[00:16:38] imagine what you can do in 2 hours 3
+[00:16:40] hours like to get to the point where you
+[00:16:45] have a shopping GPT that is personalized
+[00:16:47] that remembers who you are which we can
+[00:16:49] do um and I mean you can just imagine
+[00:16:52] the kinds of things that you could do
+[00:16:53] with this it's it's Preposterous like
+[00:16:56] the like most I've never seen a business
+[00:16:58] even has this like that's how crazy this
+[00:17:01] is we come back over to the website so
+[00:17:03] we can actually do some code update we
+[00:17:05] click on the Ed we scroll down we scroll
+[00:17:07] all this we get rid of it we enter this
+[00:17:09] we come down beautiful we click done and
+[00:17:12] then we save them publish
+[00:17:14] changes excellent and then we open up in
+[00:17:17] a new window if we so choose to Bobby
+[00:17:20] Tanks Cool all right so say now we come
+[00:17:22] back over to make and we just run once
+[00:17:25] okay we come here we come back to Bobby
+[00:17:27] tanks and I say hey Bobby
+[00:17:29] who is
+[00:17:30] Bobby we will find out and has that been
+[00:17:34] picked up and look at that guys is fite
+[00:17:37] who Bobby is cool well there's a couple
+[00:17:38] things we need to change now we want to
+[00:17:39] increase the width of this and we want
+[00:17:42] this to be to the right and that to be
+[00:17:43] to the left uh and so on and so forth so
+[00:17:46] let's give check to the feedback and
+[00:17:48] then we're going to build the a table
+[00:17:49] together okay so first of all uh further
+[00:17:54] improvements number one add loading
+[00:17:57] animation
+[00:17:59] when
+[00:18:00] waiting for
+[00:18:02] a response to align the um users message
+[00:18:10] to the
+[00:18:12] right and the ai's message to the left
+[00:18:16] number three um choose a
+[00:18:20] different add a different
+[00:18:23] color for the AI
+[00:18:26] message and then as before just give it
+[00:18:29] this bit the bottom send the full HTML
+[00:18:30] here so I can copy and paste it uh and
+[00:18:33] then I'll just write here like when you
+[00:18:35] receive the web response
+[00:18:41] back displ that to
+[00:18:44] user as the AI reply cool boom now what
+[00:18:49] do we do guys now we need to go over to
+[00:18:51] air table and make a new air table so
+[00:18:53] let's do that for instance I'm going to
+[00:18:54] duplicate this and we going to head over
+[00:18:55] to airtable.com
+[00:19:00] we come down to the bottom we click on
+[00:19:01] create we'll do start from scratch and
+[00:19:04] then what we'll do guys is we'll just
+[00:19:06] call this one Bobby tanks like so and a
+[00:19:10] little bit of T do they have tank top
+[00:19:12] emojis I've never seen oh they do what
+[00:19:14] dud even apples got the tank up down
+[00:19:16] wild I love it okay awesome that's great
+[00:19:19] now we need to do guys is build up the
+[00:19:20] CRM for this and once we've done that we
+[00:19:23] can start to search Bobby tanks
+[00:19:24] repository and get some incredible help
+[00:19:26] for everybody that needs it crazy thing
+[00:19:28] guys I finished recording this video but
+[00:19:29] the second half of the video did not
+[00:19:31] save so I'm back here again re-recording
+[00:19:33] it for your viewing pleasure now where
+[00:19:35] we were at was looking at this air table
+[00:19:38] now look at this so I've prepopulated
+[00:19:40] this with the information from before
+[00:19:42] but when you're building this for your
+[00:19:43] specific use case I just want you to
+[00:19:44] list as much detail as you feel
+[00:19:46] comfortable with for the output that you
+[00:19:48] want for example if you want to pull the
+[00:19:51] product name the product description how
+[00:19:53] many you have left you have the URL
+[00:19:55] where you can buy that product we could
+[00:19:57] have every single customer review that's
+[00:20:00] occurred for that product we could have
+[00:20:03] you know descriptive for the product
+[00:20:04] basically as much data as you want the
+[00:20:06] better because we'll pull it down we'll
+[00:20:07] assess it and then we can use the AI to
+[00:20:09] best and for make good decision making
+[00:20:11] so I'll show you briefly how you would
+[00:20:12] make this so basically you come up to a
+[00:20:14] table you create a new table in a new
+[00:20:17] window uh I'm just going to show you
+[00:20:18] briefly just so you can get a sense of
+[00:20:20] how I did this I'm on table two here for
+[00:20:23] example basically double click call it
+[00:20:25] like product name like so single line
+[00:20:28] text is fine
+[00:20:29] double click on this guy you could say
+[00:20:31] um I don't know how many left uh either
+[00:20:35] long text or single line text is usually
+[00:20:37] fine um that's fine and then a sign e
+[00:20:40] that basically on air table you select
+[00:20:41] what you want to call it and you can
+[00:20:42] select the functionality it could be
+[00:20:44] things like tick boxes or names so as
+[00:20:45] long as you're ticking these long text
+[00:20:47] or single line text it's generally fine
+[00:20:50] and then just name it what you want to
+[00:20:51] by right clicking edit
+[00:20:52] field test test one two 3 boom beautiful
+[00:20:56] and that's essentially all you need to
+[00:20:58] to do when creating something in air
+[00:21:00] table now I'm going to come back to
+[00:21:01] table one all I did for just for the
+[00:21:03] ease of your convenience is I just copy
+[00:21:04] and pasted everything I had from the
+[00:21:06] last air table so you can see we got the
+[00:21:07] product name we've got a description of
+[00:21:09] the product let's Zoom that out and have
+[00:21:11] a good look uh classic design with
+[00:21:13] modern Comfort featuring a visible air
+[00:21:14] cushion unit 92 left here's URL XYZ
+[00:21:18] incredible so let's come over to the
+[00:21:20] design now you can see this is design I
+[00:21:22] built on the footage that is last God
+[00:21:24] Rest the all the footage that is last we
+[00:21:25] do miss you now check this out so what
+[00:21:27] we need to do next guys
+[00:21:29] is essentially we're going to have the
+[00:21:30] information what we want to do is pull
+[00:21:33] down all of the information from that
+[00:21:35] air table so I want you to do is come
+[00:21:37] down here add another module search for
+[00:21:39] air table and then click on search
+[00:21:41] records okay now we're going to find the
+[00:21:44] base that we created which is Bobby
+[00:21:45] tanks I believe excellent okay sounds
+[00:21:48] great come down uh the table is table
+[00:21:51] one obviously have multiple tables for
+[00:21:53] multiple automations we can change that
+[00:21:55] and then pick the things that we want it
+[00:21:56] to bring down don't bring down the stuff
+[00:21:58] that you don't think you're going to
+[00:21:59] need it's just extra characters that we
+[00:22:00] don't need product name the description
+[00:22:03] the quantity left and URL is fine and
+[00:22:05] then limit so that's the maximum number
+[00:22:07] of items that it will return uh we're
+[00:22:09] just going to say 100 even though in
+[00:22:11] reality we only have 30 so just make
+[00:22:14] sure that's greater than what you need
+[00:22:15] all right now look I'm going to right
+[00:22:16] click on this and run this module only
+[00:22:18] and this will pull down as you can see
+[00:22:20] here guys all of the information on all
+[00:22:23] the bundles we have so essentially what
+[00:22:25] that's done is pulled the information
+[00:22:26] from our CR in this case air table to
+[00:22:28] our automation which means we can now
+[00:22:30] use that as a data source when we're
+[00:22:32] having the conversations with our
+[00:22:33] beautiful customers now what we need to
+[00:22:35] do guys essentially is instead of having
+[00:22:37] like you know 30 bundles we want to get
+[00:22:40] you 30 little machine 30 bullets we want
+[00:22:42] to get it into one single output and we
+[00:22:45] want one single output because then we
+[00:22:47] can basically give all that to chat GPT
+[00:22:49] so the way we're going to do that is
+[00:22:50] going to come down here we're going to
+[00:22:51] search for an array uh
+[00:22:54] aggregator we're going to click on again
+[00:22:56] the things that we want which is
+[00:22:57] quantity left description product name
+[00:22:59] URL The Source module is simply the air
+[00:23:02] table that's excellent and then we're
+[00:23:04] going to click on this guy and all
+[00:23:06] you're going to do is type in text
+[00:23:08] aggregator Source module is going to be
+[00:23:10] the array aggregator and have a text
+[00:23:13] we're going to come down here for
+[00:23:14] example PR name description quantity
+[00:23:16] left URL and uh URL cool so what I want
+[00:23:20] you to do is this now this is the cool
+[00:23:21] bit I want you to follow number
+[00:23:23] one array zero product name okay so
+[00:23:29] um I'd say product name like so boom and
+[00:23:33] then the next one we want is
+[00:23:37] description
+[00:23:39] oops
+[00:23:41] description beautiful and add a little
+[00:23:43] zero in between you'll see why in a
+[00:23:45] second okay oh my goodness if I spelled
+[00:23:47] description wrong oh my I Need You know
+[00:23:48] guys I need to have more
+[00:23:52] coffee okay next one quantity
+[00:23:59] quantity my gosh too many too many T's
+[00:24:02] and everything going in there zebra and
+[00:24:03] the fin at the bottom um actually we
+[00:24:06] quantity left twice we just want the URL
+[00:24:08] correct sweet add zero in there and then
+[00:24:11] just have product URL amazing okay sweet
+[00:24:16] then guys copy all of that come down a
+[00:24:18] couple type in two let me Spring it over
+[00:24:20] here so you can see and then for number
+[00:24:22] two you simply just go one one oops
+[00:24:29] and then finally do it a third time and
+[00:24:32] what this will do guys is bring down the
+[00:24:34] first result the second result the third
+[00:24:35] result etc etc etc cool now copy all of
+[00:24:40] that then I want you head over to chat
+[00:24:43] GPT in chat GPT just simply say in fact
+[00:24:46] we will create a new window of course
+[00:24:48] just say hey complete this
+[00:24:53] sequence and say the
+[00:24:56] next in the sequence
+[00:25:02] is and then what we want to do guys is
+[00:25:04] just give it uh number four and then
+[00:25:07] again just change this one to
+[00:25:09] three cuz remember number one is
+[00:25:10] actually
+[00:25:12] zero and then what we say is complete
+[00:25:14] the sequence up to 30 or as many as you
+[00:25:17] would physically need again you can have
+[00:25:19] too many or over EG whatever you want so
+[00:25:21] tap that in and then essentially this
+[00:25:23] chat gbt will give us dis spell then f
+[00:25:24] up to 30 um of this array so we can just
+[00:25:28] simply pip and pop and put it into our
+[00:25:31] beautiful automation I also updated the
+[00:25:34] um what you call look now the code so
+[00:25:37] we've got this crazy thing here the
+[00:25:38] Bobby tanks looking pretty short so we
+[00:25:40] need to increase the height of Bobby
+[00:25:41] tanks um which is excellent and again
+[00:25:43] it's just itative back and forth guys to
+[00:25:45] mold into the best one that you can um
+[00:25:47] and once you've got the code you've got
+[00:25:48] the code so pretty much disguise your
+[00:25:50] limit with this automation which is
+[00:25:52] excellent so let's come back over to
+[00:25:53] chat GPT let's grab all the code it's
+[00:25:56] just completely finishing that for us
+[00:25:57] now once we've done that we're going to
+[00:26:00] add it into the Automation and then once
+[00:26:02] there's in automation guys as you can
+[00:26:04] see we just have our business brain and
+[00:26:06] then we're going to find the information
+[00:26:07] straight back to chat GPT sorry straight
+[00:26:09] back to our website and then we have a
+[00:26:11] full conversation and the only bit I
+[00:26:13] need to show you is how you build memory
+[00:26:15] into the conversation window there so
+[00:26:17] the last automation I showed you was
+[00:26:19] like a kind of Boom you shoot it off and
+[00:26:20] then the input comes in this one's
+[00:26:22] conversational now so you'll be able to
+[00:26:24] reference live data and also have a
+[00:26:26] conversation with memory which is really
+[00:26:29] really really cool so chat GPT beautiful
+[00:26:32] copy all of that and we going to come
+[00:26:34] back over now to our text aggregator uh
+[00:26:37] we're going to come down here and then
+[00:26:39] let's just enter all that stuff in as
+[00:26:41] you can see I just copy and pasted it in
+[00:26:43] and look at that and then let's just get
+[00:26:45] rid of that there beautiful then we
+[00:26:47] click okay the next thing we want to do
+[00:26:49] guys then is ADD our um our business
+[00:26:52] brand so to speak so we come down to
+[00:26:54] here let's come down to create a
+[00:26:57] completion now guys
+[00:26:59] if you just want to access a live
+[00:27:00] database create completion is fine if
+[00:27:02] you want to feed it your business data
+[00:27:04] if you want to download all the articles
+[00:27:06] on your website and build a knowledge
+[00:27:07] base for it I've got another video on my
+[00:27:09] channel that shows you exactly how to do
+[00:27:10] that it's covered in details in the
+[00:27:11] community we can use something called
+[00:27:13] appify to describe your whole website
+[00:27:14] and build the brain if you want to give
+[00:27:16] it that data instead of createit
+[00:27:18] completion what I want you to do is
+[00:27:21] message an assistant the reason I'm
+[00:27:24] asking you to message an assistant is
+[00:27:26] because of this have I move to platform.
+[00:27:29] open.com assistance if I click on this
+[00:27:32] one for instance I can come down I can
+[00:27:35] activate file search so basically the
+[00:27:36] same thing you give it a name you give
+[00:27:38] it instructions you select a model you
+[00:27:40] enable file search and look at this guys
+[00:27:42] I can add files when I add files I can
+[00:27:44] upload hey here's our turn of voice hey
+[00:27:47] uh here's all the information about our
+[00:27:48] product hey here's all the XYZ and you
+[00:27:50] basically give it instructions about
+[00:27:52] when to reference different pieces of
+[00:27:54] information so that actually not only
+[00:27:57] has it got access to live data space it
+[00:27:58] can search at will at its own discretion
+[00:28:01] into your this kind of repository
+[00:28:02] information you've got to enrich that
+[00:28:04] the conversation is incredible is
+[00:28:06] possible um and again you're limited
+[00:28:09] only by imagination with this and I hope
+[00:28:10] that really comes across guys just how
+[00:28:12] powerful this is so look I come back now
+[00:28:14] again you do that in essenti you guys
+[00:28:15] you click on assistant and once youve
+[00:28:16] made it it'll appear here you select it
+[00:28:18] and then just follow the same um prompt
+[00:28:20] I'm doing right now but that selection
+[00:28:23] so just to keep this one simple I'm just
+[00:28:24] going to reference a live database we're
+[00:28:26] going to right click we're going to
+[00:28:27] rename it because you know guys
+[00:28:28] we are nothing without our formalities
+[00:28:31] so let's get a little brand and we'll
+[00:28:32] put this one AI business brain and we'll
+[00:28:36] just buck end it with a couple emojis
+[00:28:38] excellent uh click on him uh the model
+[00:28:41] course stt 40 uh Max tokens zero so we
+[00:28:44] can max out at the top and then we've
+[00:28:46] got add message first we're going to do
+[00:28:47] is going to put users a role and then we
+[00:28:49] got the message content so the prompt
+[00:28:51] that I'm going to give it and again guys
+[00:28:53] uh you can build this in any way you
+[00:28:54] want to you just really got to think
+[00:28:56] about what I encourage you to do when
+[00:28:57] design this is think about your customer
+[00:28:59] Journey the better you understand your
+[00:29:01] customers the better this can be because
+[00:29:03] chat gbt will only execute on the
+[00:29:05] information you give it if you know for
+[00:29:07] example that every customer that lands
+[00:29:09] on our website or 90% of them wants one
+[00:29:11] of these five things what I want you to
+[00:29:13] do is specify them say hey 90% of
+[00:29:16] queries will fall into one of five
+[00:29:17] buckets your first job is to identify
+[00:29:20] are they trying to buy something are
+[00:29:21] they trying to return something of a
+[00:29:22] general inquiry and then within that
+[00:29:24] give it specific guidance about how
+[00:29:26] you'd like it to behave and then also
+[00:29:28] give it examples of what good looks like
+[00:29:29] and give it examples of what bad looks
+[00:29:31] like if you want to go a step further
+[00:29:32] what you can also do is add a router
+[00:29:35] okay like this and actually essentially
+[00:29:39] what you can do is have chat gbt here
+[00:29:42] which is like your kind of um you're
+[00:29:44] classifying GPT that says look I'm my
+[00:29:48] job this guy's job then is to say my job
+[00:29:50] is to determine the use case of the user
+[00:29:53] they want to chat about a they General
+[00:29:54] query they want to buy and based on what
+[00:29:56] they want I'll send it down one of five
+[00:29:58] different routs right so this could be a
+[00:30:01] GPT that's specific on dealing with
+[00:30:03] query X this is a GPT specific on
+[00:30:05] dealing with query y so they talk to a
+[00:30:08] different model and then we have a
+[00:30:09] little fullback that says hey if they
+[00:30:10] don't want that we can send them back
+[00:30:12] but you can see how you can get really
+[00:30:14] deep you can't like there's a billion
+[00:30:16] different applications and you get a
+[00:30:17] billion different ways but I just set
+[00:30:18] out to say that there's a million ways
+[00:30:20] you can do it I'm just showing you very
+[00:30:22] high level simplistic one and you can
+[00:30:23] build on the shoulders of this
+[00:30:24] automation to make it something
+[00:30:25] incredible for your use case so so
+[00:30:28] you're highly knowledable and friendly
+[00:30:29] chatbot named trainers Guru I'm going to
+[00:30:31] use trainers just because of a data is
+[00:30:34] trainers so we got tanks and trainers
+[00:30:35] but in the spirit we know it's right
+[00:30:37] tank tops so you have access to all the
+[00:30:39] product data including availability you
+[00:30:41] have access to the conversation with the
+[00:30:42] history us it below your goal is to
+[00:30:44] provide personal recommendation based on
+[00:30:46] user preferences activities and style
+[00:30:48] here's how you proceed so talk about
+[00:30:49] grouting the user understanding their
+[00:30:50] needs I give it an example you're going
+[00:30:52] to provide recommendations answer
+[00:30:54] questions we give it some examples of
+[00:30:55] what good looks like what bad looks like
+[00:30:57] and then we tell how to end the
+[00:30:58] conversation uh blah blah blah lots of
+[00:31:01] stuff include line breaks new paragraphs
+[00:31:03] and then we add in this thing here for
+[00:31:04] the conversation and then what the
+[00:31:06] product and stock information is so look
+[00:31:09] I come back up now to the top I'm going
+[00:31:11] to copy this
+[00:31:12] prompt I click on AI business brame I'm
+[00:31:15] going to come down and message content
+[00:31:17] and I just enter that in now all of this
+[00:31:20] stuff here doesn't make sense does it
+[00:31:22] cuz look now this is from the previous
+[00:31:24] automation that I did and it probably
+[00:31:25] wasn't that much sense so I can get rid
+[00:31:26] of all this and and um show you how you
+[00:31:30] do this okay now look what we need to
+[00:31:32] add in is the conversation so what we
+[00:31:36] need to do now is go back to chat GPT uh
+[00:31:39] which is over here I believe Okay cool
+[00:31:42] so look I'm going to say hey I would
+[00:31:45] like you to amend the HTML code so that
+[00:31:50] every time the user sends a
+[00:31:54] message the entire
+[00:31:56] conversation is is sent to the web hook
+[00:32:00] okay also increase the height of the
+[00:32:05] chat
+[00:32:07] window keep everything else the same uh
+[00:32:12] and then maybe something like uh paste
+[00:32:14] the full HTML so that I can simply copy
+[00:32:20] and paste it into the
+[00:32:25] application and then I'm going to say um
+[00:32:28] previous
+[00:32:30] HTML I'm pasting this in this one guys
+[00:32:32] just because I had a new chat window
+[00:32:35] because I had to redo it today today was
+[00:32:37] supposed to be edit and publish but you
+[00:32:38] know what happened guys for some reason
+[00:32:40] OBS which is a software I Ed to record
+[00:32:42] things it didn't want to record my
+[00:32:44] screen so it's just me yapping and like
+[00:32:45] the screen was like static so I was like
+[00:32:47] I only realized halfway through the edit
+[00:32:49] cuz I had to do it in two clips anyway
+[00:32:51] my my beautiful dog go to the vet um
+[00:32:53] yesterday halfway in the video and um
+[00:32:56] yeah it was wild absolutely well you can
+[00:32:58] imagine like I'm ding my coffee this
+[00:33:00] morning I'm like oh my gosh I've got to
+[00:33:02] re-record this afternoon but it's always
+[00:33:04] usually better of the second time so you
+[00:33:06] guys you're getting a premium experience
+[00:33:07] man you're getting the second way around
+[00:33:08] so I'll bu this a few times now when you
+[00:33:10] watch this which is pretty cool so we've
+[00:33:12] done this now essentially the way we
+[00:33:14] build in memory with the system is that
+[00:33:17] it remembers and the way we do that is
+[00:33:18] we and actually fun of that's I've have
+[00:33:20] the models usually remember so we send
+[00:33:22] all of the conversation up to date there
+[00:33:25] you go and it's it'll know what's
+[00:33:27] happened so far so what have the context
+[00:33:29] to respond to you and you can have
+[00:33:30] infinite Loop of conversations with it
+[00:33:33] with which is excellent and it's a cool
+[00:33:35] proxy for memory so that's just loading
+[00:33:37] it right now get slipper as delicious
+[00:33:38] flat
+[00:33:41] white superb and we've also improved the
+[00:33:44] UI of it a little bit as well excellent
+[00:33:46] looks like it's finished so we're just
+[00:33:47] going to Simply copy that we going to
+[00:33:49] head back over to our website of choice
+[00:33:51] um which is over here we're going to
+[00:33:53] delete the old stuff paste in the new
+[00:33:55] stuff click done click save click
+[00:33:58] publish let that roll up a little bit
+[00:34:01] amazing and then we open up a new one uh
+[00:34:04] incredible okay look so that's not quite
+[00:34:07] worked there so we can fix that in a
+[00:34:09] second and there you go you added that
+[00:34:11] bit in there we'll remove that in a
+[00:34:12] moment so let's go to our automation
+[00:34:15] okay let's click and save and click on
+[00:34:18] run
+[00:34:19] once okay uh now let's come over here um
+[00:34:23] and what I'm going to do is says like
+[00:34:25] hey do you
+[00:34:26] sell trainers enter something went wrong
+[00:34:30] please try again no problem and what
+[00:34:32] happened here guys hey did you sell
+[00:34:34] trainers Genie cool now check this out
+[00:34:36] I'm going to run it again now if I say
+[00:34:38] something like what went wrong all I'm
+[00:34:41] trying to prove is when I check it it's
+[00:34:43] got the full conversation history so
+[00:34:45] look
+[00:34:48] send and I come back I check see this
+[00:34:52] guys hey you trainers sorry so please
+[00:34:54] try again what went wrong Genie how
+[00:34:57] Cool's that right so actually what's
+[00:34:58] happened here
+[00:35:00] guys is that it's bought and ported over
+[00:35:03] the full conversation okay which is
+[00:35:05] excellent and exactly what we want so
+[00:35:09] now what do we do well we come over here
+[00:35:11] and essentially what we need to do now
+[00:35:12] guys with G4 system is do two things we
+[00:35:15] need to give it the data the live data
+[00:35:17] from our air table and then we also want
+[00:35:19] to give it the full conversational
+[00:35:20] history so how do we give it the
+[00:35:21] conversation now look if I bring over
+[00:35:23] here I'll click on AI business break uh
+[00:35:26] excuse me and by the way guys this can
+[00:35:28] apply for any business you could
+[00:35:30] possibly imagine so actually to be fair
+[00:35:33] I think it's loaded up the full
+[00:35:35] conversation like that the last time I
+[00:35:37] did it it gave it in a slightly
+[00:35:38] different format so actually this is
+[00:35:40] really cool it's basically just what is
+[00:35:42] happening here is the way that it's been
+[00:35:44] coded it just sends the full
+[00:35:45] conversation so actually that's really
+[00:35:48] cool that will serve our purposes fine
+[00:35:50] uh there's just a couple ways to do it
+[00:35:51] and a in the last uh automation it was
+[00:35:53] slightly done slightly differently so
+[00:35:55] that's conversation and what we want to
+[00:35:56] do is come down and we give it the
+[00:35:59] data like
+[00:36:01] so and the data guys is quite
+[00:36:05] simply the text from the text aggregator
+[00:36:08] because you can see guys look at the
+[00:36:10] output there you go how cool is that see
+[00:36:14] beautiful right beautiful yeah guess
+[00:36:16] that's exactly what I like to see and
+[00:36:17] let's just rename him again for
+[00:36:19] consistency sake right for consistency s
+[00:36:22] get this guy business brain come over
+[00:36:25] rename business brain sweet oh my
+[00:36:28] goodness oh my goodness man I tell you
+[00:36:30] what sometimes I swear make loves to
+[00:36:33] like just play with you a little but I
+[00:36:34] think there's someone behind the sces I
+[00:36:36] need to check with M make HQ actually
+[00:36:38] they kind of like pressing the buttons
+[00:36:40] um just when I'm recording videos of
+[00:36:43] course just when I'm recording videos
+[00:36:45] business brain little brain love it and
+[00:36:47] then the next I want to do guys is just
+[00:36:49] add the web hook response we click on
+[00:36:50] plus click on web hooks click on web
+[00:36:53] hook
+[00:36:54] response and what do we put in the body
+[00:36:56] guys nothing other than simply the
+[00:36:59] result from the business brain then we
+[00:37:01] click okay all right now you ready for
+[00:37:02] this going to line it all like
+[00:37:05] so oh my goodness this a wants to get
+[00:37:07] involved the remember Guys these are
+[00:37:09] just what I built last time so I'm
+[00:37:10] actually is going to e these off and get
+[00:37:11] the RM because we built it again from
+[00:37:13] the top now look I click on run once so
+[00:37:15] let's give it a full test guys and going
+[00:37:16] say hey do you sell trainers question
+[00:37:20] mark boom wa see what happen it's
+[00:37:21] loading it's coming back sorry something
+[00:37:24] went wrong please try again so let's go
+[00:37:26] check out the automation see what
+[00:37:27] happened did we get a response from the
+[00:37:29] web hog hey there yes we do so what we
+[00:37:31] now happened is that it didn't actually
+[00:37:33] receive the information and there
+[00:37:35] something wrong with the code so all we
+[00:37:37] do we come back to chat gbt and we say
+[00:37:39] hey uh we need you to
+[00:37:42] do two things okay number one you need
+[00:37:46] to increase the height of the uh chat
+[00:37:53] window whe before uh messages sent
+[00:37:57] number two uh we are getting
+[00:38:00] response error
+[00:38:03] response something went
+[00:38:07] wrong um the web Hook is
+[00:38:13] firing fitting it's also fitting as well
+[00:38:15] firing correctly uh for
+[00:38:20] context this is how the this is
+[00:38:24] the this is an example
+[00:38:28] of the type of um text sent in the web
+[00:38:35] hook and then I'll just put like PL the
+[00:38:37] plain text or something just as a quick
+[00:38:38] for
+[00:38:40] instance um I'm mainly saying that just
+[00:38:42] to say like look it's not like got like
+[00:38:43] Curly brackets and stuff uh and then I'm
+[00:38:45] just going to copy and paste my last
+[00:38:47] famous my famous line which is bit of a
+[00:38:48] catros at the moment which is quite
+[00:38:50] simply uh please Place default HTML the
+[00:38:53] reason I say that guys is that sometimes
+[00:38:56] it doesn't sometimes it just well like
+[00:38:57] like pay a specific bit now ideally it's
+[00:39:00] most effective and your token us to be
+[00:39:01] better if you just work on specific
+[00:39:03] Parts but it's just easy to do it for
+[00:39:04] and now we've got the full code we
+[00:39:06] simply copy it we scroll down and then
+[00:39:08] we head back over then to the website to
+[00:39:10] repeat the process so come over to our
+[00:39:13] beautiful Bobby tanks website again guys
+[00:39:15] seriously we need someone needs to make
+[00:39:17] this Bobby tanks um that's the funny
+[00:39:20] thing about like going Niche is like
+[00:39:23] everybody thinks that you can be too
+[00:39:26] Niche but you really can't and let's try
+[00:39:27] this one again saying Hey do you sell
+[00:39:31] trainers to Bobby tanks we send it over
+[00:39:33] and see what comes back are we going to
+[00:39:34] get a message back what the deal is hey
+[00:39:36] there yes we do sell trainers I'd love
+[00:39:38] to help you find the perfect pack could
+[00:39:39] you let me know which activities you'll
+[00:39:41] be using Trainers for do you have any
+[00:39:43] brand preferences for specific features
+[00:39:45] that you're looking for incredible okay
+[00:39:48] now what happens well we now need to
+[00:39:51] test that it's picking up conversational
+[00:39:53] so if I just say I don't know like
+[00:39:56] hey sure uh I'd like your best
+[00:40:01] recommendation on
+[00:40:03] anything Air Force One what do you
+[00:40:08] think boom now look if I send this one
+[00:40:11] over we'll see what happens hey sure I'd
+[00:40:13] like your best recommendation anything
+[00:40:15] hey short unfortunately the N fos one is
+[00:40:16] currently sell out stock is that true
+[00:40:20] well let's see we can find Air Force One
+[00:40:22] guys look at this Air Force One out
+[00:40:25] stock it's reading it perfectly yeah
+[00:40:27] that's exactly what I'm I'm not
+[00:40:28] surprised cuz that's exactly what I Cod
+[00:40:30] it to be so I can recommend some other
+[00:40:32] great options for you are there any
+[00:40:34] features activity you're looking for and
+[00:40:35] a new pair of trainers this will help me
+[00:40:37] suggest um I am open
+[00:40:40] share anything like
+[00:40:43] those explanation Market come back run
+[00:40:46] this one once let me come back here
+[00:40:48] enter that one in see what it comes back
+[00:40:50] give it a second and see what it
+[00:40:52] recommends I'm curious
+[00:40:55] now all right cool so recommended this
+[00:40:57] one here Air Force One is at stock but
+[00:40:59] the night dra one Innovative thing and
+[00:41:01] it's giv us a link now as I said before
+[00:41:03] guys one of the things I would do
+[00:41:04] immediately is I would I'd make it a URL
+[00:41:08] friendly and look at that we click the
+[00:41:09] link and all of a sudden we've got this
+[00:41:11] up and running and that is literally
+[00:41:13] simple as it goes and then if I come
+[00:41:14] back over to the automation guys check
+[00:41:15] this out if I come over to the inputs
+[00:41:17] now the business brain I should see the
+[00:41:19] full chat that it's had so come in
+[00:41:21] messages collection messages long string
+[00:41:24] there's the input and if I come down
+[00:41:26] guys it should show me the full
+[00:41:28] conversation so have a look at this look
+[00:41:31] at this guys you ready this it shows
+[00:41:32] from the beginning hey do you sell
+[00:41:33] trainers yes could you let me activities
+[00:41:36] hey sure unfortunately and so it knows
+[00:41:37] the full context of what's been said
+[00:41:40] what needs to be said in the future so
+[00:41:41] guys you can play with this you can make
+[00:41:43] the formatting in the UI incredible
+[00:41:45] because ultimately it's just HTML code
+[00:41:48] and you continue to improve that as you
+[00:41:49] go along so guys I really hope you find
+[00:41:51] this video interesting in any case you
+[00:41:53] have a wonderful wonderful weekend and
+[00:41:55] I'll see you in my next video yeah

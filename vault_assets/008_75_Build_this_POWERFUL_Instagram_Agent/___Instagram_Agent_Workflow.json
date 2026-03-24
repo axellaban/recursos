@@ -1,0 +1,379 @@
+{
+  "name": "🔥 Instagram Agent Workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        180,
+        260
+      ],
+      "id": "a0b4cf32-3a80-4931-b9d6-89df3267bbc5",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://rss.app/feeds/tYZvhyoYQPdq5GyV.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        420,
+        260
+      ],
+      "id": "00744a8f-6794-49a8-977a-c7a3101dfbd3",
+      "name": "RSS Read"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.title }}{{ $json.link }}{{ $json.pubDate }}{{ $json.contentSnippet }}",
+        "options": {
+          "systemMessage": "You are a helpful assistant.\n\nI create content about AI tools, automation and AI news.\n\nYou will be given an article title, link and snippet.\n\nIf this contains something that I could create a piece of interesting shortform content on I would like you to do further research on the topic and add write a short script outline in 50 words or less.\n\nCheck the database see if it exisits already. If it doesn't, don't add another one.\n\nConsult the hooks tab and choose one which would be most appropriate and add a hook.\n\nIf it is not interesting new or fit my niche, then please disregard it."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        720,
+        260
+      ],
+      "id": "7a3f56c3-44f3-46f8-8b16-51d393369133",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "=claude-3-7-sonnet-20250219",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        620,
+        500
+      ],
+      "id": "7ff850d2-79a4-401c-82d7-a28813350e02",
+      "name": "Anthropic Chat Model1",
+      "credentials": {
+        "anthropicApi": {
+          "id": "fGKXx4d2Qv5CUq9Y",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "138bAsN_LXP4T7ztWnCV_0JaG-VFj55Ewu2CCofZwHyY",
+          "mode": "list",
+          "cachedResultName": "🔥 RSS News Update",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/138bAsN_LXP4T7ztWnCV_0JaG-VFj55Ewu2CCofZwHyY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "📈 Content",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/138bAsN_LXP4T7ztWnCV_0JaG-VFj55Ewu2CCofZwHyY/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "🔮 Short Overview": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('___Short_Overview', ``, 'string') }}",
+            "🪝 Hook": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('___Hook', ``, 'string') }}",
+            "🔥 Script": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('___Script', ``, 'string') }}",
+            "Article URL": "="
+          },
+          "matchingColumns": [
+            "Article URL"
+          ],
+          "schema": [
+            {
+              "id": "Article URL",
+              "displayName": "Article URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "🔮 Short Overview",
+              "displayName": "🔮 Short Overview",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "🪝 Hook",
+              "displayName": "🪝 Hook",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "🔥 Script",
+              "displayName": "🔥 Script",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Article_URL",
+              "displayName": "Article_URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "___Short_Overview",
+              "displayName": "___Short_Overview",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "___Hook",
+              "displayName": "___Hook",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "___Script",
+              "displayName": "___Script",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        820,
+        680
+      ],
+      "id": "b5b83768-f44f-4b75-86bc-2532dbe430da",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YwVdpEHJQpAEY722",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Perplexity Online Search",
+        "method": "POST",
+        "url": "https://api.perplexity.ai/chat/completions",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization",
+              "valueProvider": "fieldValue",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"llama-3.1-sonar-small-128k-online\",\n  \"messages\": [\n    {\n      \"content\": \"{placeholder}\",\n      \"role\": \"user\"\n    }\n  ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1020,
+        680
+      ],
+      "id": "49e72cf4-a218-4c5c-b8a1-d0eecefce94f",
+      "name": "Perplexity"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "138bAsN_LXP4T7ztWnCV_0JaG-VFj55Ewu2CCofZwHyY",
+          "mode": "list",
+          "cachedResultName": "🔥 RSS News Update",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/138bAsN_LXP4T7ztWnCV_0JaG-VFj55Ewu2CCofZwHyY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "📈 Content",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/138bAsN_LXP4T7ztWnCV_0JaG-VFj55Ewu2CCofZwHyY/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        1180,
+        620
+      ],
+      "id": "2a542ca0-8c91-4f4b-9507-effd03e1cd87",
+      "name": "Shorts Database",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YwVdpEHJQpAEY722",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "138bAsN_LXP4T7ztWnCV_0JaG-VFj55Ewu2CCofZwHyY",
+          "mode": "list",
+          "cachedResultName": "🔥 RSS News Update",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/138bAsN_LXP4T7ztWnCV_0JaG-VFj55Ewu2CCofZwHyY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1588876662,
+          "mode": "list",
+          "cachedResultName": "🪝 Hooks",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/138bAsN_LXP4T7ztWnCV_0JaG-VFj55Ewu2CCofZwHyY/edit#gid=1588876662"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        1340,
+        580
+      ],
+      "id": "03ba5fff-ce13-40f3-9a1e-2f82ca1a6624",
+      "name": "Read Hooks",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YwVdpEHJQpAEY722",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "RSS Read",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Anthropic Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Perplexity": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Shorts Database": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Hooks": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "87096e9f-6551-4175-8813-4c55240a319d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "y7mEGuPzyfPaMgBA",
+  "tags": []
+}

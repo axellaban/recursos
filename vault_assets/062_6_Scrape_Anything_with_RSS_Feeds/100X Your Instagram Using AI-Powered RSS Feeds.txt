@@ -1,0 +1,556 @@
+[00:00:00] in this video I'm going to show you how
+[00:00:01] to make an AI powered social media
+[00:00:03] system for Instagram Facebook or
+[00:00:05] whatever platform you like using
+[00:00:06] something called RSS which basically
+[00:00:09] means whenever anybody tweets or an
+[00:00:11] article is published or there's news on
+[00:00:13] your particular topic our system will
+[00:00:15] take that text verbatim per character
+[00:00:18] we'll then grab that file pass it out
+[00:00:21] run it through our custom gpts for your
+[00:00:23] platform Instagram LinkedIn Facebook
+[00:00:25] whatever You' like create a bespoke
+[00:00:27] image for it and then post it on your
+[00:00:29] social media platform automatically now
+[00:00:31] the really cool thing about this
+[00:00:32] automation is the fact that it is
+[00:00:35] literally 100% autopilot so you do not
+[00:00:37] even need to touch a keyboard during the
+[00:00:40] whole automation we set it up we let it
+[00:00:42] run and everything's taken care of RSS
+[00:00:44] this module here basically stands for
+[00:00:46] really simple syndication so essentially
+[00:00:48] whenever a website publishes a piece of
+[00:00:50] content I've got AI news here for
+[00:00:52] example every part of that content in
+[00:00:54] terms of what it says who wrote it all
+[00:00:57] in chronological order gets stored in a
+[00:01:00] file and what we're saying here is we're
+[00:01:01] going to take that file for our
+[00:01:03] Automation and I've experimented with
+[00:01:04] different ways to get RSS feeds but just
+[00:01:07] cutting straight to the chase for you I
+[00:01:08] found this website rssa to be the most
+[00:01:11] beginner friendly that you can use a
+[00:01:13] side hack for you if you're on a website
+[00:01:14] you can actually install this chme
+[00:01:15] extension called get RSS feed URL
+[00:01:18] basically you get on a website if it has
+[00:01:20] an RSS feed you click it and it will
+[00:01:22] actually show you on the page there AI
+[00:01:23] news feed copy URL copy URL and all you
+[00:01:26] would do is come back to our integration
+[00:01:27] and enter it in but for the purpose of
+[00:01:29] this I I want to start with this other
+[00:01:30] platform so we come over to
+[00:01:32] rssa and then we come over to click sign
+[00:01:34] up once we do that we just enter some
+[00:01:36] information once you log in you should
+[00:01:37] be able to see a page that looks
+[00:01:38] somewhat similar to this so what I'm
+[00:01:40] going to show you if you haven't seen
+[00:01:41] RSS feeds before or maybe you have I
+[00:01:43] think it's going to surprise you so I
+[00:01:45] want you to come down here on the left
+[00:01:46] to new feed okay so there's lots of
+[00:01:48] stuff we can do so check these websites
+[00:01:50] out you've got Instagram RSS feed means
+[00:01:52] anyone on Instagram that you follow the
+[00:01:54] post you can take the text same for
+[00:01:56] Twitter LinkedIn Facebook um so many
+[00:01:59] many different options so these are
+[00:02:01] pre-established RSS feeds you can also
+[00:02:04] search by newsletters so for example
+[00:02:06] we've got all these different
+[00:02:07] newsletters executive leadership Insider
+[00:02:09] some of the dad beginning got Dev for
+[00:02:11] example you can search for it so a
+[00:02:13] really popular one is tldr so if we
+[00:02:15] search for that great tldr pops up so
+[00:02:18] you can get the content from those
+[00:02:20] newsletters like the second they're
+[00:02:22] published just by using RSS feeds and
+[00:02:24] the other way the other one I really
+[00:02:25] want to call out here is topics so in
+[00:02:27] topics for example look at this small
+[00:02:29] business marketing advertising Elon mus
+[00:02:32] Donald Trump I mean like honestly sit
+[00:02:34] down have a look through this and find
+[00:02:35] the thing that's going to be relevant
+[00:02:37] for your nation and in this video
+[00:02:38] because we're an AI automation Channel
+[00:02:40] we're going to look at artificial
+[00:02:41] intelligence so we're type in artificial
+[00:02:43] and there should be an auto correct
+[00:02:44] excellent artificial intelligence
+[00:02:46] perfect and I know I am going to get to
+[00:02:48] this automation very quickly I just want
+[00:02:50] to make sure that you get all the key
+[00:02:52] details from the RSS bit because I think
+[00:02:53] it'll just open so many doors for you so
+[00:02:56] here we've got all the AI news that we
+[00:03:00] could ever possibly want appearing in
+[00:03:02] this feed which is just phenomenal i'
+[00:03:04] quickly draw attention to this part here
+[00:03:06] in settings if you click on settings you
+[00:03:07] can do some different things so you can
+[00:03:09] change the rep post you just untick this
+[00:03:11] use Global feed settings let's say that
+[00:03:13] you're building an automation you don't
+[00:03:14] want too many data points you can ruse
+[00:03:16] number of posts you can specify whether
+[00:03:18] it has to have an image in it we've got
+[00:03:19] things on title tags here description
+[00:03:22] tags date tags Etc the really cool thing
+[00:03:24] that I love here is when it comes on to
+[00:03:26] filters now to use filters you need to
+[00:03:28] buy the developer subscription which is
+[00:03:30] around $20 a month but if you're using
+[00:03:32] the free version you can get lots of
+[00:03:33] cool stuff and I think you can develop
+[00:03:35] workarounds in your make.com automations
+[00:03:37] or zapia so there are ways around it but
+[00:03:39] if you want to use these epic filters
+[00:03:40] you'll need to buy it for like $20 but
+[00:03:42] in filters guys this is I think where
+[00:03:45] you take it to another level maybe you
+[00:03:46] start off on the free plan and if it
+[00:03:48] works for you upgrade but check this out
+[00:03:50] right we can whitel list and Blacklist
+[00:03:52] keywords so for example you see here it
+[00:03:54] says Los Angeles is using AP AI in a
+[00:03:57] pilot program to try and predict
+[00:03:58] homelessness let's just just said you
+[00:04:00] know what in our newsletter we don't
+[00:04:01] want to hear anything about homelessness
+[00:04:03] so what we do will we come on The
+[00:04:05] Blacklist and we put
+[00:04:07] homelessness add and what happens you
+[00:04:10] see that block domain it's completely
+[00:04:13] removed it means we'll never see it and
+[00:04:15] a white list would be the opposite which
+[00:04:16] is essentially only include you know
+[00:04:18] articles that have that word in so if I
+[00:04:20] just say stocks for example now if this
+[00:04:22] works this thing here on the right
+[00:04:24] should be there and these other ones
+[00:04:26] should disappear so we add that in there
+[00:04:28] and you go AI stocks cuz everything that
+[00:04:30] doesn't include the key wordss we
+[00:04:31] specified disappears I think that's
+[00:04:34] pretty cool the other thing I just want
+[00:04:35] to draw your attention to as well is
+[00:04:38] this replace and remove tags so say for
+[00:04:40] example you've got Jeff Bo excuse me
+[00:04:42] Jeff boar Jeff bazas is 100 million
+[00:04:45] Google 100 billion blah blah blah let's
+[00:04:47] just say we've got a different name for
+[00:04:49] Jeff I mean you could do this with any
+[00:04:50] word that you want to let's just say
+[00:04:52] whenever we
+[00:04:53] mention
+[00:04:56] Jeff Bezos we want to call him
+[00:05:00] Jeffy boy apply to title apply to
+[00:05:02] description so you can specify if you
+[00:05:04] just want to headline the bottom you see
+[00:05:05] Jeffy boy's $100 million Google 100 blah
+[00:05:08] blah blah how epic is that so not only
+[00:05:11] guys are we actually pulling the data as
+[00:05:14] it's live we can change and specify
+[00:05:16] things in a title and in description
+[00:05:18] this is absolutely huge and this works
+[00:05:20] reliably which means that the our
+[00:05:22] starting point of this automation is
+[00:05:23] going to be epic so let's build this one
+[00:05:25] together and create a new scenario now
+[00:05:26] if you're part of the school Community
+[00:05:28] every single automation that I do on
+[00:05:29] this channel is on that with loads of
+[00:05:31] other bells and whistles and all you do
+[00:05:33] is you come down here click more import
+[00:05:35] blueprint choose the file RS and
+[00:05:38] Instagram flow enter it save and look
+[00:05:41] how much time that saves you with the
+[00:05:42] number of automations we've got it's
+[00:05:43] such a huge time save so but for the
+[00:05:46] purpose of this I'm also going to show
+[00:05:47] you how to do it and build it from
+[00:05:48] scratch because I think you going to
+[00:05:49] learn a lot from that so the first thing
+[00:05:50] you want to do is add our RSS rigid
+[00:05:52] great so we come over here this
+[00:05:53] beautiful purple button type in RSS it
+[00:05:56] looks familiar so you've got two options
+[00:05:57] here you've got retrieve RSS feed items
+[00:06:00] and watch RSS feed items the top one
+[00:06:03] will trigger when something's published
+[00:06:05] and the bottom one just pulls what
+[00:06:07] already exists so for the purposes of
+[00:06:09] this because we have to wait for trigger
+[00:06:11] we're going to go with retrieve but if
+[00:06:12] you wanted it to fire when it happens
+[00:06:14] just click on watch instead and I'll
+[00:06:16] just show you if you do click on watch
+[00:06:18] or you do URL and the number of the
+[00:06:21] actual articles that you want based on
+[00:06:22] your automation but for this one we're
+[00:06:24] just going to retrieve because I think
+[00:06:26] it's just going to be easier for the
+[00:06:28] video just out of respect for your time
+[00:06:29] time so retrieve RSS feed items let's
+[00:06:32] enter a URL well how do we get the URL
+[00:06:35] well we come back over here and you'll
+[00:06:37] see once you've created it and saved it
+[00:06:39] your feed is ready and at the top we've
+[00:06:41] got the actual XMR so what we do is we
+[00:06:43] copy that we come back over to make and
+[00:06:46] we enter it perfect now you can specify
+[00:06:48] date from date two a maximum number of
+[00:06:50] returned items for the purpose of this
+[00:06:52] automation I'm just going to say two um
+[00:06:54] but obviously you can configure it
+[00:06:55] however you like we're going to click
+[00:06:57] okay uh let's right click on this and
+[00:06:59] then run this module only and if it's
+[00:07:01] done its job properly we should see the
+[00:07:04] two things the Los Angeles and AI stocks
+[00:07:07] so we come over we clip the top Los
+[00:07:10] Angeles is using AI in a pilot program
+[00:07:11] trying to predict and down here if we
+[00:07:14] look AI stocks data stocks Target X way
+[00:07:17] the way I spending and this also allows
+[00:07:18] you to change the title of the article
+[00:07:20] into your automation so for example if I
+[00:07:22] come back over to the filter and you see
+[00:07:25] the second one we've got here it says AI
+[00:07:27] stocks data stocks if I come down down
+[00:07:29] here and I say Hey whenever you see AI
+[00:07:32] stocks I want you to change that to Jack
+[00:07:36] Roberts perfect that's cool right that
+[00:07:39] feed's changed then we come back over to
+[00:07:41] integration if we rerun this module
+[00:07:43] again click on this we should see Jack
+[00:07:46] Roberts listed in the title and there
+[00:07:49] you go look Jack Roberts data stocks
+[00:07:51] isn't that really cool I think that's
+[00:07:52] epic so now we've got that set up what
+[00:07:54] do we need to do next well we need to
+[00:07:56] get the URL right because we need to get
+[00:07:57] the text from this web page so what I
+[00:07:59] want you to add next is come here come
+[00:08:01] down and type in HTTP and you'll see
+[00:08:03] here get a file downloads a file from a
+[00:08:06] given URL perfect so we click on that
+[00:08:08] and then well what URL do we want well
+[00:08:10] it's flashing again if it pulses that
+[00:08:12] shows you it's the one that you're using
+[00:08:13] we click there and then we click okay
+[00:08:15] perfect so the next thing we do well you
+[00:08:17] might have guessed it we're going to run
+[00:08:18] the automation so we're going to run
+[00:08:20] this module only and then give it a test
+[00:08:22] URL which is the uh article we just
+[00:08:24] looked at and then that post is a
+[00:08:26] positive cool so we click on this what's
+[00:08:28] the output we've got data we've got all
+[00:08:31] this stuff going on here look at all
+[00:08:32] this gobl look how crazy that is so this
+[00:08:34] is all in HTML well how do we get from
+[00:08:36] HTML to text I hear you ask well really
+[00:08:39] easily we just add a passer so we type
+[00:08:41] in here and move this over so you can
+[00:08:42] get a good look at it it's text passer
+[00:08:45] so what we want to look down here for is
+[00:08:46] HTML HTML to text it's like the third
+[00:08:48] most popular option and then we click
+[00:08:50] that and then what we're going to say to
+[00:08:51] this is hey you I want you to take it
+[00:08:53] from this module and just put it into
+[00:08:55] text for us it's really simple so we
+[00:08:57] click here and let's see we've got all
+[00:08:58] the data here which is an HTML which is
+[00:09:00] awesome we click on that we click okay
+[00:09:04] and it's sorted and I will just say by
+[00:09:05] the way there are some circumstances
+[00:09:06] where you may just want the HTML for
+[00:09:08] certain things so if that's the case for
+[00:09:10] you just ignore this text passing uh
+[00:09:13] step the reason why I'm adding it in
+[00:09:15] here is because I'm going to post on
+[00:09:16] Instagram so we don't really need it so
+[00:09:18] let's test the module to do that let's
+[00:09:20] grab the HTML data from this output so
+[00:09:22] we come down to data and we've got all
+[00:09:24] of this so let's scroll all the way down
+[00:09:25] and copy it okay scroll down to the
+[00:09:27] bottom copy the HTML file come over come
+[00:09:29] here run this module only let enter the
+[00:09:32] data this can be quite timec consuming
+[00:09:34] to do because the because the files are
+[00:09:35] very long but I just did it in this case
+[00:09:37] just to show you that it works come down
+[00:09:39] text and look at that we've got
+[00:09:40] literally all the text from the website
+[00:09:42] a significant amount of detail so what
+[00:09:44] do we do now then Okay so we've got the
+[00:09:46] trigger set up with the RSS feed link to
+[00:09:48] whatever we want it could be a tweet
+[00:09:49] could be anything we've got it to AI
+[00:09:51] we've grabbed the file we've got it from
+[00:09:53] HTML now it's in text well now we want
+[00:09:54] to think about how we take that text
+[00:09:56] into something epic so let's come over
+[00:09:57] to my school community and grab the
+[00:09:59] Instagram agent and what this agent is
+[00:10:00] going to do is take all that text into
+[00:10:02] something really really delicious that
+[00:10:04] will hopefully do very well for us so we
+[00:10:05] click over here and we've got two
+[00:10:06] options here something short Snappy or
+[00:10:08] something that's long so I think we go
+[00:10:10] for the long one in this case but
+[00:10:11] obviously you can configure it as you
+[00:10:12] like so looking at agents so we've got
+[00:10:14] the contacts right you're an Instagram
+[00:10:16] caption expert with 10 years of
+[00:10:17] experience crafting engaging High
+[00:10:19] performing post cop top brand we've
+[00:10:20] given it instructions and this is all
+[00:10:22] basically trained on all the right
+[00:10:23] Frameworks we need in terms of HW value
+[00:10:25] ad Insight hashtag it's got all the
+[00:10:27] things that we need notes on Brown voice
+[00:10:29] as well as really specific details so
+[00:10:31] what we do is we basically copy this
+[00:10:33] whole agent text you going head over to
+[00:10:34] platform. open.com you'll need the chat
+[00:10:36] gbt plus membership for $20 and to
+[00:10:39] deposit a couple of API credits to do
+[00:10:41] that all you do is click on apis and
+[00:10:43] then deposit $5 but what we want to go
+[00:10:45] here is to assistants we want to create
+[00:10:48] a new assistant and we'll call this one
+[00:10:52] Instagram but and then just for our
+[00:10:54] reference I'll just put Build Together
+[00:10:57] okay um and then let's add the merge
+[00:10:59] just to brighten up our wonderful
+[00:11:00] weekend and we'll add a little Diamond
+[00:11:02] emergy just because of how viable it's
+[00:11:04] going to be coup the text in and then
+[00:11:05] all we do here is let's just enter your
+[00:11:06] nich right let's say for the niche of
+[00:11:11] artificial intelligence now and I very
+[00:11:14] briefly want to give you a little hack
+[00:11:15] here so some people in our community
+[00:11:17] have asked how do you make this sound
+[00:11:20] more like you
+[00:11:21] well obviously this is a really cool
+[00:11:23] automation right and we're going to
+[00:11:24] build up the rest of in a second but
+[00:11:26] essentially one of the things that we
+[00:11:27] can do here if you come back over to the
+[00:11:29] platform is we can add if you come down
+[00:11:31] here you can actually add files to it
+[00:11:33] okay so what I would recommend that you
+[00:11:35] do here is add files with just lots of
+[00:11:38] your turn of voice so let's just say
+[00:11:40] that you are an expert in wine right if
+[00:11:42] you've got unique documents and data you
+[00:11:44] think is super valuable add that in
+[00:11:45] there make it really unique to you and
+[00:11:47] make it sound like you on add new module
+[00:11:49] we're going to find one over here so
+[00:11:51] let's go message an assistant excellent
+[00:11:55] and then what do we do well we're going
+[00:11:56] to find our brandly new created in
+[00:11:59] Instagram bot we can have assistant
+[00:12:00] Instagram bot Build Together what's the
+[00:12:02] message well the message is the output
+[00:12:04] from our wonderful text pass at the top
+[00:12:06] so perfect and that's it and that's
+[00:12:10] that's our cool Instagram bar right how
+[00:12:11] cool is that so we click okay and now
+[00:12:13] the next we want to do is we need to get
+[00:12:14] a cool image because it is going to be
+[00:12:16] Instagram after all right so we probably
+[00:12:17] do need an image isn't there add new
+[00:12:19] Module come down let's go to just type
+[00:12:22] in Dary open eye here show more generate
+[00:12:25] an
+[00:12:26] image excellent okay what do we do
+[00:12:30] what's the model we want let's go for
+[00:12:31] doly 3 now just save time I'm going to
+[00:12:33] grab my doly 3 promp blueprint so first
+[00:12:35] of all we need to specify the size so
+[00:12:36] let's check our Instagram cool Square
+[00:12:38] photo pixels right let's do that first
+[00:12:41] of all copy that and then we say
+[00:12:42] dimensions and then enter and all we say
+[00:12:44] is
+[00:12:46] Dimensions 1080 x 1080 Ace I know we
+[00:12:49] pick a sty that we want um so let's go
+[00:12:53] for futurism that sounds cool so we copy
+[00:12:56] the text excellent set just add
+[00:12:57] instruction based on Blow text create an
+[00:12:59] image of the futurism style which
+[00:13:00] emphasizes technology and dynamic motion
+[00:13:03] and then we have the text and it may
+[00:13:04] look familiar again we basically want to
+[00:13:06] go from the result of our Instagram GPT
+[00:13:09] and then we hit result and then we click
+[00:13:11] okay and we're very close to completing
+[00:13:13] this so what do we do next well we need
+[00:13:15] to connect Instagram a little hack for
+[00:13:17] you guys as well is the Instagram
+[00:13:19] Facebook Twitter LinkedIn what they
+[00:13:21] require from the automations can be
+[00:13:22] different some require a file and some
+[00:13:24] only really need URLs it really depends
+[00:13:26] on the platform you're using so I'm
+[00:13:28] going to fit Instagram excellent okay so
+[00:13:29] you got Instagram for business and
+[00:13:31] Instagram the regular Instagram we can
+[00:13:33] get media we can download medium and we
+[00:13:34] can get things from an album media but
+[00:13:37] what if you're going to post just click
+[00:13:38] on this Instagram for business excellent
+[00:13:41] and what do we do we want to create a
+[00:13:42] photo post so we click that once you've
+[00:13:45] done that if you're not verified what
+[00:13:47] will happen is it will actually prompt
+[00:13:49] you to go and connect it and it's really
+[00:13:51] straightforward to do the page that I'm
+[00:13:53] going to be using is the MMA podcast
+[00:13:55] page which is something my friend
+[00:13:57] started up cuz we love Ching about MMA
+[00:13:59] all things that make so for example if I
+[00:14:00] open up Instagram got our Instagram page
+[00:14:02] so what do we do we come over here and
+[00:14:04] but I should have picked a better one
+[00:14:05] for like AI post right but I just think
+[00:14:07] it makes it a lot easier so we need to
+[00:14:09] photo URL and all that stuff so let's
+[00:14:11] run the whole thing together okay so
+[00:14:12] we'll click run once I'm just going to
+[00:14:14] set this as one just to make it easy
+[00:14:16] excellent run ones RSS feed it's grab
+[00:14:19] the article got to a file HTML to text
+[00:14:21] has been done so now running through our
+[00:14:24] specialist Instagram GPT and just so we
+[00:14:27] have an idea what it's going to be
+[00:14:28] talking about the article it's grabbed
+[00:14:29] here is Taylor Swift album leaks big AI
+[00:14:32] problem interesting okay cool that's
+[00:14:35] interesting so we're expecting some kind
+[00:14:36] of post on that so we'll come down let's
+[00:14:38] check it out let's see what it is ever
+[00:14:40] wondered how close II is to mimicking
+[00:14:42] your favorite stars with the unexpected
+[00:14:44] League of Taylor Swift the tortured
+[00:14:46] poets Department blah blah blah and look
+[00:14:47] at that guys right at the end we've got
+[00:14:50] the captions the cool thing about
+[00:14:51] trainer Instagram agent is that like it
+[00:14:53] uses a blend of like some like captions
+[00:14:55] with quite small audiences and some with
+[00:14:57] large so it's a blend of like community
+[00:14:59] in different ones that's now starting to
+[00:15:01] post on Instagram which is excellent so
+[00:15:04] then we just let it roll in the
+[00:15:05] background let's align these for the
+[00:15:06] sake of it and it hasn't gone through
+[00:15:08] and it hasn't gone through because we
+[00:15:09] haven't connected anything to it so what
+[00:15:11] do we do we click on it we've got this
+[00:15:13] connection over here go 30 what we're
+[00:15:15] looking for con to data URL cool I much
+[00:15:18] prefer the ones with URL it just makes
+[00:15:19] it a little bit easier and now we've got
+[00:15:21] the caption right so let's go ahead to
+[00:15:22] get the caption from this which is the
+[00:15:24] result perfect click okay so it's all
+[00:15:27] done so let's run it away from the top
+[00:15:29] and I think these automations are at
+[00:15:31] best when it's not necessarily taking
+[00:15:33] something and letting AI give its
+[00:15:35] thoughts I think the really unique thing
+[00:15:36] here is how you train your own GPT on
+[00:15:39] your own turnone of voice your own
+[00:15:41] insights your unique perspectives and
+[00:15:43] you overlay that with the news so we get
+[00:15:46] the most relevant you know literally it
+[00:15:49] could not be fresher off the price I
+[00:15:50] mean this article launches and within
+[00:15:52] maybe less than like 30 seconds you've
+[00:15:55] got a post on it I mean how incredible
+[00:15:56] is that but it isn't just generic AI
+[00:15:58] stuff but you can train these gpts to be
+[00:16:01] speaking more like you to be thinking
+[00:16:02] more like you if you've got like own
+[00:16:04] data on how things are done that can all
+[00:16:06] be added in like this is like super
+[00:16:09] super super autopilot and I can do
+[00:16:11] videos in the future if you like on how
+[00:16:12] you do that with the gpts if that's
+[00:16:13] helpful but essentially a lot of it is
+[00:16:15] in the playground optimizing it and
+[00:16:17] seeing it until they can't tell the
+[00:16:19] difference okay it's done so that's
+[00:16:20] complete how do we know it's complete
+[00:16:22] well if we go over to Instagram and we
+[00:16:23] see a post about Taylor Swift we know
+[00:16:25] that it's worked right so I come back
+[00:16:27] over I'm going to refresh the
+[00:16:29] page let's come down and there we go
+[00:16:33] look at that in the exact style that we
+[00:16:36] wanted and just to show that that's
+[00:16:38] style that we specified right I mean
+[00:16:40] that's literally spot on so check this
+[00:16:42] out you smoke s you smoke than eight
+[00:16:45] seven bars of chocolate could AI write a
+[00:16:47] hit like Taylor Swift two Quicky Snappy
+[00:16:50] cheeky hashtags of the top when the
+[00:16:52] torture post minded leaked fans and
+[00:16:53] Skeptics clashed of authenticity with
+[00:16:56] some swearing it was ai's work and by
+[00:16:58] the way guys I always want to show you
+[00:17:00] the result I I just think it's so
+[00:17:01] important so you get a real sense of
+[00:17:03] what the output quality is actually like
+[00:17:05] and we're only ever going to share stuff
+[00:17:06] that works in this channel that's really
+[00:17:07] really important so we've got all this
+[00:17:09] stuff down here what's your take
+[00:17:10] exciting Innovation or step too far in
+[00:17:12] the realm of AI Genera music so we
+[00:17:14] actually got we've got engagement right
+[00:17:15] we're saying hey guys engage with talk
+[00:17:17] to us and look at the relevance of these
+[00:17:19] hashtags music industry AI challenge
+[00:17:21] swifties swifties I think is going to be
+[00:17:23] quite big let me just pull this up
+[00:17:24] actually cuz it's as important that it's
+[00:17:26] effective as it is actually amazing
+[00:17:28] automations and I feel like the future
+[00:17:30] is where we combine incredible
+[00:17:32] automations with the stuff that works
+[00:17:34] and that's what I want this channel to
+[00:17:36] all be about it's those two things and
+[00:17:38] the latest AI we got down pop music s
+[00:17:40] right in 19 seconds done so that's it
+[00:17:42] guys if you followed along with that
+[00:17:44] which I'm sure you did cuz I'm sure
+[00:17:45] you're a superstar you just built an Alp
+[00:17:47] Automation and that's pretty incredible
+[00:17:49] and I just said like these agents at
+[00:17:51] just the beginning this is something
+[00:17:52] that we want to improve on a regular
+[00:17:54] basis so this is the version one of the
+[00:17:56] bar but over time weeks months we're
+[00:17:57] going to keep upgrading These Bars and
+[00:17:59] then we'll link it in with our other
+[00:18:00] systems to make something really really
+[00:18:02] amazing I hope you enjoyed the video but
+[00:18:03] in any case have a wonderful weekend and
+[00:18:05] I'll see you next time

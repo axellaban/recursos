@@ -1,0 +1,503 @@
+[00:00:00] 99% of businesses are missing out on
+[00:00:02] WhatsApp agents, which means zero
+[00:00:04] competition and huge upside if you act
+[00:00:07] now. Since selling my last tech startup,
+[00:00:09] I have helped thousands of businesses
+[00:00:11] make money with simple AI operating
+[00:00:13] systems. And in this video, I'm going to
+[00:00:15] show you can build a very simple
+[00:00:17] WhatsApp sales and support agent using
+[00:00:19] NA10 with no technical headaches and no
+[00:00:22] coding experience required. So, let me
+[00:00:24] just show you how this actually works.
+[00:00:26] It's all built in the beautiful NA10. So
+[00:00:28] let me execute this workflow and send
+[00:00:30] the message. So I'm going to send
+[00:00:31] something right here which is in fact
+[00:00:33] this just recorded my intro. So I'm
+[00:00:34] going to send this one off. You'll see
+[00:00:36] this is triggered. The way this works
+[00:00:37] guys is customer send us a message. It
+[00:00:39] goes through here and then we have an AI
+[00:00:41] agent. Now what's really really cool
+[00:00:43] here is we can give this agent any tool
+[00:00:45] we want to right. We can give him things
+[00:00:47] like access to Google calendar and send
+[00:00:50] emails. It can do anything. It can
+[00:00:52] update databases. But the purpose of
+[00:00:54] this video, by the end of it, I want you
+[00:00:56] to have something that works, an
+[00:00:58] WhatsApp agent that works. And then you
+[00:01:00] can come in and learn deeper and more
+[00:01:02] complicated and exciting use cases just
+[00:01:04] like we cover inside the community. So
+[00:01:06] here's the message I sent. If I come
+[00:01:07] over here, I'll show you. You can see
+[00:01:09] right here, I sent a message. And if I
+[00:01:11] come down here, you can see the message
+[00:01:13] I sent over here was there you go. Hey
+[00:01:15] there, goose. Which is the largest
+[00:01:16] country in the world since my last text
+[00:01:18] cut off? Okay, that's decent. And then
+[00:01:20] we can see the response. So the response
+[00:01:22] it's given us is if I come up and
+[00:01:23] actually open my WhatsApp right now it
+[00:01:25] says hey there the largest country in
+[00:01:26] the world is Russia and there you can
+[00:01:28] see it's given us a big and beautiful
+[00:01:30] response and guys that is literally how
+[00:01:32] simple it is we just get a web hook it
+[00:01:34] sends information the agent does some
+[00:01:36] magic stuff and this is where you would
+[00:01:38] prompt it you would give it information
+[00:01:39] about your business you can have it with
+[00:01:41] an objective to set up a meeting or
+[00:01:43] whatever it is and the reason we use
+[00:01:44] WhatsApp is cuz it has a 98%
+[00:01:47] open rate unbelievable benefits for your
+[00:01:50] business This will sell for you on
+[00:01:52] autopilot. It will manage any queries.
+[00:01:54] It can access databases. And we're going
+[00:01:55] to build this whole thing together uh in
+[00:01:57] this exact same video. So, let me just
+[00:01:59] remove this and delete it very quickly.
+[00:02:01] Of course, if you're in the community,
+[00:02:02] you want to grab this. You just
+[00:02:03] literally uh come over to the classroom,
+[00:02:04] you scroll down, you grab it over here,
+[00:02:06] and on the left hand side, you will see
+[00:02:07] this WhatsApp sales agent. All we want
+[00:02:09] to do is come down, click on this,
+[00:02:10] download the uh JSON right here, you
+[00:02:12] come back to any tent, you click upload
+[00:02:14] from file, and then the entire thing
+[00:02:15] will populate for you automatically. So,
+[00:02:17] let's actually come over and build this
+[00:02:19] one together. So, we're going to use
+[00:02:20] some very simple technology to do this.
+[00:02:23] The first thing we need to do is head
+[00:02:24] over to unipile.com. And the great thing
+[00:02:26] about Unipile is you can actually get a
+[00:02:27] 7-day free trial. I'm not affiliated
+[00:02:29] with them in any way. It's just a great
+[00:02:31] way to get started and build your
+[00:02:33] WhatsApp agents to help you just
+[00:02:34] automate, systematize, and supercharge
+[00:02:36] your business. So, you're going to click
+[00:02:37] on create an account, and you're going
+[00:02:39] to be asked uh who who you want to
+[00:02:40] connect cuz you can click different
+[00:02:41] platforms. I want you to select
+[00:02:43] WhatsApp. So, I have deleted everything
+[00:02:45] from this page so you and I can do this
+[00:02:47] together. Okay? So you won't be able to
+[00:02:49] see this thing here because my editor is
+[00:02:51] blurred out because he's a chief blur
+[00:02:52] officer of the JR universe, but
+[00:02:54] effectively that's your unique Uniile
+[00:02:56] address that we'll need. So the first
+[00:02:58] thing I want to do is add an account. So
+[00:03:00] to do that, come over here to connect an
+[00:03:01] account like so. Click on WhatsApp and
+[00:03:04] then you'll see a QR code again, which
+[00:03:06] is bloody to see this, but you have 60
+[00:03:08] seconds to do it. So it's almost like
+[00:03:09] we're under pressure. It's high octane.
+[00:03:10] Lots of stuff happening. Uh so you come
+[00:03:12] over to WhatsApp. You're going to come
+[00:03:13] down, you click on link accounts. That's
+[00:03:15] the bottom right hand side. Click on
+[00:03:17] settings and then you'll see linked
+[00:03:18] accounts. You click on linked devices.
+[00:03:20] You basically hold it up like this. It
+[00:03:22] will take a photo of it and you do it.
+[00:03:24] Now, what I recommend that you do, and
+[00:03:25] one of the cool things about this, guys,
+[00:03:26] is we don't have to fuff around with the
+[00:03:29] meta API or any of that nonsense because
+[00:03:31] it is an absolute nightmare to get set
+[00:03:34] up. Can you do it? Yes. But it's just
+[00:03:35] going to take you so much time and
+[00:03:36] hassle. So, this is successfully added.
+[00:03:39] What I would recommend that you do, by
+[00:03:40] the way, is get a WhatsApp account, a
+[00:03:42] brand new fresh number uh for
+[00:03:45] specifically this. Uh, you can also just
+[00:03:46] download WhatsApp Business and use that
+[00:03:48] if you want to. That's how freaking cool
+[00:03:49] this is because you can just use two
+[00:03:51] different numbers on the same phone with
+[00:03:52] WhatsApp business. Beautiful. So now
+[00:03:54] we're here guys. Now we want to create a
+[00:03:55] web hook. And this web hook's basically
+[00:03:57] just going to be whenever you get any
+[00:03:59] message, we're going to get it through
+[00:04:00] to our scenario. So effectively what we
+[00:04:02] want to do. So you come through to web
+[00:04:03] hooks. I want you to click on create a
+[00:04:05] web hook in the top rightand corner. I'm
+[00:04:07] going to click on messaging like so. I'm
+[00:04:09] going to call this one JR Universe which
+[00:04:12] is really cool. And click on continue.
+[00:04:13] And then you can select the scenario
+[00:04:15] that triggers the thing. And obviously
+[00:04:17] you can get very complicated with this.
+[00:04:18] I just want to get you something to get
+[00:04:20] started because we're about the things
+[00:04:21] that actually work here. So on new
+[00:04:22] message, click continue. And then all
+[00:04:24] accounts is fine. Then click continue
+[00:04:26] right here. Beautiful. And it's asking
+[00:04:27] for a call back URL. Effectively all we
+[00:04:30] do now, we come to any time. We come
+[00:04:32] here. We click on this ad first step.
+[00:04:34] I'm going to zoom out cuz it's zooming
+[00:04:35] out a little bit. And you're going to
+[00:04:36] click on web hook like so. All right.
+[00:04:38] Then change this get to post like so.
+[00:04:42] And all you can do guys is click this
+[00:04:43] once. That's it. That's pretty cool,
+[00:04:45] right? That's pretty straightforward. If
+[00:04:46] you come over and just paste it in here,
+[00:04:48] please. And then click on create web
+[00:04:49] hook. That has successfully created,
+[00:04:52] which is cool. So, if I come here, and
+[00:04:54] by the way, if you want to test this,
+[00:04:55] one thing you can do is just message
+[00:04:57] yourself on WhatsApp, which is a really
+[00:04:59] cool feature. So, I'm going to come up
+[00:05:00] and do that right now and open a window
+[00:05:02] to show you this. Okay. So, you can see
+[00:05:04] I've got messaging myself there. There I
+[00:05:06] am in my tank top having a good time.
+[00:05:07] So, if I'm just going to say, "Hey, test
+[00:05:09] 1 2 3." And I send that off. Cool. But
+[00:05:11] obviously if you got a message from
+[00:05:13] somebody it would work in the exact same
+[00:05:14] way. And guys look if I just search here
+[00:05:15] test you can see the message test one
+[00:05:17] two three which is cool. So what we want
+[00:05:19] to do is you want to pin two pieces of
+[00:05:21] information. And to do that we're going
+[00:05:22] to use a set node. Dead straightforward.
+[00:05:24] Come down here to set. And what this let
+[00:05:25] us do is just map things over. Okay. So
+[00:05:27] you click on this you have message like
+[00:05:30] so. And then second one I want to put
+[00:05:32] ID. And then all you're going to do on
+[00:05:33] the left hand side guys is just search
+[00:05:34] for the message that you sent. And you
+[00:05:36] see I've got the message. I bring that
+[00:05:38] over to the message which is great. And
+[00:05:39] then we've got the ID. And when I search
+[00:05:41] ID, guys, you'll see a chat ID. You
+[00:05:43] won't see this cuz it's blurred right
+[00:05:44] now, but you can grab that chat ID and
+[00:05:45] then bring it over. Cool. Then once
+[00:05:47] that's done, what I'm going to do, guys,
+[00:05:48] is pin this data, which means we don't
+[00:05:50] have to keep texting back. And then I
+[00:05:51] can execute the workflow. And then both
+[00:05:53] the chat ID is going to be visible there
+[00:05:54] if I double click. And as you can see,
+[00:05:55] message and ID in freaking credible.
+[00:05:58] Now, this is pretty much where you can
+[00:05:59] do whatever you want to. And I'm going
+[00:06:00] to be doing specific courses on this
+[00:06:02] inside the community to help with your
+[00:06:04] business, for sales, and for support.
+[00:06:05] But effectively the bottom line here is
+[00:06:07] if once you get it into NAM, you can do
+[00:06:09] anything you want. You don't need to
+[00:06:11] hire expensive agencies. You don't need
+[00:06:13] to use a billion different headaches
+[00:06:14] with technical stuff. It's dead
+[00:06:15] straightforward. So I want you to just
+[00:06:17] come here, click the magic words for AI
+[00:06:18] agent. Bam. This guy pops in. He is
+[00:06:21] ready to rock and freaking roll right
+[00:06:23] now. Come down to chat model. Now
+[00:06:25] typically speaking, we never ignore the
+[00:06:28] fact that it's AI responding. Okay?
+[00:06:30] We're always upfront and honest about
+[00:06:31] that. We never ever ever want to mislead
+[00:06:33] anybody. So what you can do sometimes
+[00:06:35] here if you wish to make this sound kind
+[00:06:37] of realistic little hack by the way is
+[00:06:38] add a time I think it's a wait node and
+[00:06:41] you can just say look I want you to wait
+[00:06:43] insert random amount of minutes so don't
+[00:06:44] make it formulate like every 5 minutes
+[00:06:46] but we can randomize this function but
+[00:06:47] add a wait node in the middle so it's
+[00:06:49] like okay he's waiting a second cuz
+[00:06:50] there's nothing worse than a need that's
+[00:06:52] just like texting you back like within
+[00:06:53] seconds right we all know that doesn't
+[00:06:55] work so we come down to chat model I'm
+[00:06:57] going to give this guy GBT4 mini you
+[00:06:59] could give it more something more
+[00:07:00] powerful actually since time isn't
+[00:07:02] important remember with AI We're always
+[00:07:04] trading off on quality, speed, and
+[00:07:06] price. Now, price is coming down
+[00:07:08] generally speaking, which is great. And
+[00:07:10] also speed goes up over time, which is
+[00:07:11] awesome. So, we got a cool model. He's
+[00:07:12] kicking ass. We want to give it a
+[00:07:14] memory. Really important. Now, we can go
+[00:07:15] complicated. Again, I'm going to go
+[00:07:17] simple for you. Simple memory, which is
+[00:07:20] okay, that's quite funny actually. Um,
+[00:07:21] and then what we can do is have this
+[00:07:23] context window length, which is, hey,
+[00:07:25] how many goes of this conversation do
+[00:07:27] you want me to remember? I put 50. There
+[00:07:29] is fancy stuff that we can do by the way
+[00:07:31] guys to just go back and grab all the
+[00:07:32] search history in WhatsApp. The reason
+[00:07:34] why we don't need to do that is I am
+[00:07:36] just assuming this is a brand new
+[00:07:37] customer messaging you uh and you can
+[00:07:39] just grab the information. Again, super
+[00:07:40] simple. I want this to get working for
+[00:07:42] you. Uh so you can get started.
+[00:07:44] Fantastic. So it's got a memory. It's
+[00:07:45] got that. And then we're going to give a
+[00:07:46] really simple prompt just for the
+[00:07:48] purpose of demonstration. I'm going to
+[00:07:49] say hey you are a WhatsApp agent. You
+[00:07:52] will liaz with a customer. You'll be
+[00:07:54] very very helpful and answer questions
+[00:07:56] and you're going to do one core
+[00:07:57] objective which is if they wish you're
+[00:08:00] going to book a 15minute discovery call
+[00:08:02] with Jack. Once you've answered all
+[00:08:04] their questions you can gently encourage
+[00:08:06] and ask us questions be ply be friendly
+[00:08:08] and be helpful. Beautiful. And then I'm
+[00:08:10] going to say something like this. You'll
+[00:08:12] have access to a Google calendar node
+[00:08:13] and that will enable you to book
+[00:08:14] appointments. How cool is that? Sweet.
+[00:08:17] So we've given that information. Now we
+[00:08:19] need to give it the prompt. So to do
+[00:08:20] that we click on this button. Click on
+[00:08:22] define below, which is basically just
+[00:08:23] the agent like what are you giving the
+[00:08:25] agent to respond to, right? And all we
+[00:08:26] do is we come over and we grab this
+[00:08:29] message and drop it in there like so.
+[00:08:31] So, we need to give it access to the
+[00:08:32] ability to debug that. So, click on
+[00:08:34] tools. I mean, I'm just showing this as
+[00:08:36] one example, right? But if we come down
+[00:08:37] here to Google Calendar, by the way, if
+[00:08:39] you've not connected Google, I'm going
+[00:08:40] to put a link uh somewhere on screen
+[00:08:41] right now where you can follow my
+[00:08:43] tutorial. It's 3 minutes inside a
+[00:08:44] different video so you can get set up
+[00:08:46] and you're ready to cook and kick some
+[00:08:47] ass. So, we're going to come down here
+[00:08:48] to calendar. I believe we're typing
+[00:08:50] calendar Google console and fantastic.
+[00:08:52] Now let's actually configure this
+[00:08:54] together. So you select your account
+[00:08:55] here which you'll have done if you
+[00:08:56] follow that tutorial. Tool description
+[00:08:58] set automatically event create. We
+[00:09:00] select the calendar which is going to be
+[00:09:02] the jacket AI automations with Jack. And
+[00:09:04] in between now and this is the create
+[00:09:06] event. So we don't need to specify the
+[00:09:08] end or the start. So we're actually just
+[00:09:09] going to let this guy do those two
+[00:09:11] things. Beautiful. Now add field. So, we
+[00:09:14] come down and we need to pretty much
+[00:09:16] specify who we're inviting. And we just
+[00:09:18] let the AI do that. All right. So,
+[00:09:20] that's really cool. And what we need to
+[00:09:22] do is just tell the AI what the time is
+[00:09:24] cuz it will not doesn't know that
+[00:09:26] automatically. So, we double click on
+[00:09:27] the agent and then you're going to
+[00:09:28] scroll down and then you're going to
+[00:09:29] say, "Hey, time is two curly brackets."
+[00:09:31] So, you hold shift curly curly a little
+[00:09:33] bit of a cheeky thing here. Type in now.
+[00:09:36] That's all we do. So, you can just copy
+[00:09:38] that. You're ready to rock and roll.
+[00:09:39] Beautiful. Come off. Now guys, the final
+[00:09:41] step here is basically just sending the
+[00:09:44] information straight back over there.
+[00:09:46] Okay, so beautiful guys. So I want you
+[00:09:48] to come over here and I want you to copy
+[00:09:50] this text. This is what we call the curl
+[00:09:52] request. Not that the bicep curls we all
+[00:09:54] know and love. This just lets us import
+[00:09:55] it and it will do it. So what I need to
+[00:09:57] do first, okay, is you see it says
+[00:09:59] insert unipal. I want you to come back
+[00:10:01] over to Uniipal very quickly. And then
+[00:10:03] you see the top left here above my free
+[00:10:04] trial. Copy that to clipboard, please.
+[00:10:06] And then you're going to come back over
+[00:10:08] to your scenario and just replace where
+[00:10:10] it says input unip. So it should be
+[00:10:12] sandwiched between two um kind of
+[00:10:14] slashes. All right. Then all we're going
+[00:10:15] to do is a classic and C. Come straight
+[00:10:18] back over to any time. Now this is a
+[00:10:20] cool thing. You've probably seen it but
+[00:10:21] if you haven't you'll love it. HTTP
+[00:10:23] request. Bam. Then guys import the curl.
+[00:10:25] We click here. We hit enter. Import. And
+[00:10:28] then we're ready to rock and roll. And
+[00:10:29] then first of all just make sure we
+[00:10:30] change this import unipol. I'll change
+[00:10:32] it in a second which is decent. Now guys
+[00:10:34] authorization. So, how does it know that
+[00:10:36] we're authorized? Well, we need to
+[00:10:37] change that. So, you're going to get rid
+[00:10:39] of your
+[00:10:41] API key. Bam. And then we head back over
+[00:10:43] to Uniile. And then, guys, on the left
+[00:10:45] hand side, I just want to click on
+[00:10:46] access tokens real quick. And just
+[00:10:48] generate a brand new token. I'll do it
+[00:10:49] right here right now. I'm going to give
+[00:10:51] it all these beautiful levels of access.
+[00:10:53] You can set the expiration date. I'm
+[00:10:54] going to set mine for 7 days. And we'll
+[00:10:56] call this one test one, two, three. And
+[00:10:58] I'll just delete this once we're
+[00:10:59] finished. Great. And it says keep your
+[00:11:01] token safe. You just copy this to the
+[00:11:02] clipboard. Little hack by the way, if
+[00:11:04] you want to test the API token works,
+[00:11:06] you can just again copy this code and
+[00:11:07] throw it in there. You come back over to
+[00:11:09] NHM and then you literally guys control
+[00:11:11] and V and just import it perfectly. And
+[00:11:14] then the last thing I need you to do is
+[00:11:15] replace this with message ID. So before
+[00:11:17] I do that, I'm going to delete this. So
+[00:11:19] I've just exit the workflow. No session
+[00:11:21] found in the memory. So we double click
+[00:11:22] on the memory. And then what we do guys
+[00:11:24] in the session key, if I come down here
+[00:11:25] and define below, you're going to come
+[00:11:27] over and grab your ID and drop it in
+[00:11:29] there. So you can see JSON ID. Now it
+[00:11:30] knows whenever I get a message from this
+[00:11:32] number I access the memory from that
+[00:11:34] individual call. So the next thing we're
+[00:11:35] going to do is just execute workflow
+[00:11:37] that will work. It will give some kind
+[00:11:38] of nonsense response which is totally
+[00:11:39] cool and fine. Fantastic. Then we can
+[00:11:41] connect these two together and very
+[00:11:43] easily grab it. We could have just input
+[00:11:44] a JSON but I want to help you to show
+[00:11:45] you it's easy with drag and drop. We
+[00:11:47] double click and as you can see we've
+[00:11:48] got the information. So we come down
+[00:11:50] here and where it says text. I want you
+[00:11:52] to get rid of that. I want you to grab
+[00:11:53] the output throw in there and then
+[00:11:55] you're now ready to rock and roll. So,
+[00:11:57] I'm going to quickly update my API key
+[00:11:59] and my Unipile ID and then we can test
+[00:12:01] this together. And just as a reminder,
+[00:12:02] guys, you see down here in chats and
+[00:12:04] messages, if it's not showing up, you
+[00:12:05] can just grab that message and bring it
+[00:12:07] over like that and it should show you
+[00:12:09] that it's completely green and ready to
+[00:12:10] rock and roll. Then we can click off
+[00:12:12] now. We're ready to go. So, let's
+[00:12:13] actually trigger this all together. So,
+[00:12:15] let's unpin and let's send myself a
+[00:12:17] message. So, guys, in this scenario,
+[00:12:18] when you click on this, I just want you
+[00:12:20] to make sure that if you have this edit
+[00:12:21] field, we want to make sure we get the
+[00:12:23] chat ID. So to do this, we're going to
+[00:12:25] come over here on the left hand side and
+[00:12:27] grab this chat ID, which is right there.
+[00:12:29] So let's come down and put it between
+[00:12:31] these two things here. Beautiful. Now
+[00:12:33] we're going to be ready to rock and
+[00:12:34] roll. So then if we can actually give
+[00:12:35] this a test. If I exit workflow, come
+[00:12:37] back over and send a message. So hey
+[00:12:39] dude, what is 29 + 29? Bam. We come back
+[00:12:42] over, we can see the agent working in
+[00:12:43] the background. It's using model. It's
+[00:12:45] access chat memory. Then it's sent off
+[00:12:47] successfully. If I come back over, we
+[00:12:48] can see, hey, 29 + 29 equals 58. So now
+[00:12:51] let's test that it remembers. So again,
+[00:12:53] execute workflow. Obviously, when you're
+[00:12:54] live, it'll do automatically. Bro, what
+[00:12:56] did I just ask you? Okay, come back
+[00:12:58] over. He's working. It'll access his
+[00:13:00] memory so he knows. You ask him what 29
+[00:13:02] plus. So it has context, guys. And by
+[00:13:04] the way, it can store information
+[00:13:05] dynamically in spreadsheets. It can do
+[00:13:07] anything. So let's say, dude, can I book
+[00:13:09] an appointment in with Jack? Do you
+[00:13:10] offer appointments? Right, come over,
+[00:13:12] test the workflow. Come back over here.
+[00:13:14] It's going to say yes. And then I'm
+[00:13:15] going to give my email address, and
+[00:13:16] we're going to see if he can schedule
+[00:13:17] appointment in. Now, obviously, we
+[00:13:19] programmed him to be proactive about
+[00:13:20] this. So you can develop the script for
+[00:13:22] that. Beautiful. So it's asked for
+[00:13:23] when's best and when's the email. So I'm
+[00:13:25] going to say how about uh 6th of
+[00:13:28] September. And why don't we say oh my
+[00:13:30] gosh, if I could type that'd be
+[00:13:31] fantastic, right? 10th I don't know 10
+[00:13:33] p.m. UK time. Email is all right. Okay.
+[00:13:36] Add some more information. Come over
+[00:13:38] here. We're going to exit the workflow.
+[00:13:39] Come back here and we're going to hit
+[00:13:41] enter like so. Now obviously with your
+[00:13:42] calendar guys, we can set certain
+[00:13:43] availability. We can connect to
+[00:13:45] Calendarly. We can do anything we want
+[00:13:46] to. So he says he's created calendar.
+[00:13:48] He's now thinking this is really
+[00:13:50] freaking cool. Did I mention by the way
+[00:13:51] we can actually get this to program and
+[00:13:53] reach out dynamically? If you want a
+[00:13:55] video on that, let me know down below. I
+[00:13:56] come back over. Excellent. Your 15minute
+[00:13:59] discovery call Jack is all booked on the
+[00:14:00] 6th of What? Guys, there's only one way
+[00:14:02] to find out. Should we actually go to
+[00:14:04] Gmail right now and see if this has
+[00:14:06] happened? And guys, you can see right
+[00:14:07] here, it has now created appointment at
+[00:14:09] 11:00. It hasn't added a title in
+[00:14:10] because we didn't specify that. But if I
+[00:14:12] come down here, guys, you can see this.
+[00:14:13] Check this out, right? I come down. I'll
+[00:14:15] click on add attendee. We'll let the
+[00:14:16] individual specify that. Now, check this
+[00:14:18] out. I can add one more field and I can
+[00:14:20] description. Bam. So, now it's going to
+[00:14:22] go live with a description. I can come
+[00:14:23] down here. I can say something like, and
+[00:14:25] with these buttons, guys, you can
+[00:14:26] specify the name of it. So, it's ready
+[00:14:28] to absolutely rock and roll. And now
+[00:14:30] we've got that down. I want to show you
+[00:14:31] something that's going to get you ahead
+[00:14:32] of 99% of other businesses. And you can
+[00:14:35] learn that by watching this video right

@@ -1,0 +1,1618 @@
+[00:00:00] Anti-gravity has changed everything
+[00:00:01] about building beautiful full stack
+[00:00:04] apps. I've personally built software
+[00:00:06] businesses to over $50,000 a month. And
+[00:00:08] whilst most tutorials are just theory,
+[00:00:10] I'm going to show you my exact system
+[00:00:12] for building and deploying beautiful
+[00:00:14] full stack apps with integrated AI
+[00:00:17] systems that don't fall apart like a $2
+[00:00:19] suitcase the second the customer uses
+[00:00:21] it. So, you can build anything without
+[00:00:23] making any costly mistakes and make more
+[00:00:25] money without knowing any coding. And if
+[00:00:28] you don't know who I am, my name is Jack
+[00:00:29] Roberts. I built and sold my last tech
+[00:00:31] startup with over 60,000 customers. And
+[00:00:34] now I run a 7 figure AI automation
+[00:00:36] business. So if you haven't already,
+[00:00:38] grab that coffee and let's dive straight
+[00:00:40] in. So let's talk about building
+[00:00:42] beautiful UI dashboards and apps with no
+[00:00:44] code. And of course, we're going to be
+[00:00:46] using Google's anti-gravity to do this.
+[00:00:48] Now, most vibe coded apps, it's
+[00:00:49] important that you know this, are
+[00:00:51] broken. They either look really bad,
+[00:00:52] they don't work, or they don't really
+[00:00:54] solve a problem. But we're going to
+[00:00:56] cover a primma system and it's going to
+[00:00:58] be full stack. Now I can see the
+[00:00:59] suspicion like well what really is full
+[00:01:01] stack because a lot of people use it but
+[00:01:02] not everybody understands it. Well, it's
+[00:01:04] basically having a front end which is
+[00:01:06] everything to do with what the customer
+[00:01:07] interacts with and also the back end
+[00:01:09] which is the databases and everything
+[00:01:11] that makes the app functional. Ease way
+[00:01:13] to understand it is the front end is
+[00:01:14] about making it beautiful and the back
+[00:01:16] end is all about functional. My previous
+[00:01:18] tech startup, we used to look at hiring
+[00:01:20] front-end developers and back-end
+[00:01:21] developers, and we would look for full
+[00:01:23] stack developers that could actually
+[00:01:25] work across the entire breadth of the
+[00:01:26] app. But the cool news for you is that
+[00:01:28] the recent anti-gravity now does both of
+[00:01:30] those things in one simple application,
+[00:01:33] which is why this is so game-changing.
+[00:01:35] Now, as you know, Microsoft Word we
+[00:01:36] would use to create documents, right?
+[00:01:38] Excel for spreadsheets, anti-gravity is
+[00:01:40] for building software in a very easy
+[00:01:42] way. Now, full stack app, we're going to
+[00:01:44] build one, but what is it going to
+[00:01:45] include in this video? Well, we're going
+[00:01:47] to include a beautiful front end. We
+[00:01:49] want flawless automations that work
+[00:01:51] without us thinking about it. We're
+[00:01:53] going to have a connection to a database
+[00:01:54] where we can store all the information.
+[00:01:55] And we're also going to deploy this very
+[00:01:57] easily. So, if you wanted online could
+[00:01:59] do that very quickly. Now, I've always
+[00:02:00] found the best way to do it is to build
+[00:02:02] one together. So, let's build together
+[00:02:03] now a beautiful dashboard and app. And
+[00:02:05] what we're going to build in this video,
+[00:02:06] and again, this could apply to anything,
+[00:02:07] but when you learn the skills of how to
+[00:02:09] build this, you can apply it to any idea
+[00:02:10] you've got at all. So, it's really cool.
+[00:02:12] We're going to build an ideas operating
+[00:02:13] system. We're going to have a live
+[00:02:14] dashboard with our metrics for our
+[00:02:16] social, so YouTube, Instagram. We're
+[00:02:17] going to have full context on our
+[00:02:19] content so I can chat to any of my
+[00:02:21] videos or any outliers. We are going to
+[00:02:22] scrape the internet for viral outliers
+[00:02:24] using Reddit. And then we're also going
+[00:02:25] to be able to update our own notion
+[00:02:27] database with actions very easily. And
+[00:02:29] then finally, of course, we're going to
+[00:02:30] connect this to a beautiful database.
+[00:02:32] And the framework that we'll use to
+[00:02:33] build this full stack app will apply to
+[00:02:35] any kind of application, dashboard,
+[00:02:37] website, anything you want to build an
+[00:02:38] anti-gravity. And I'll link it down
+[00:02:40] below so you can grab that and follow
+[00:02:41] along with the video. and it'll work for
+[00:02:43] anything that you want to build. So, the
+[00:02:44] first to do is open up a brand new
+[00:02:45] folder within anti-gravity. And I'm
+[00:02:47] going to call this one, I think we'll
+[00:02:49] call this one something like personal
+[00:02:51] OS. Beautiful. Okay. The name convention
+[00:02:53] doesn't matter too much. Now, what we're
+[00:02:55] going to follow in building this is
+[00:02:56] going to be my anti-gravity blast
+[00:02:58] system. It's a very very simple fivestep
+[00:03:00] framework. I spent weeks building this
+[00:03:02] and refining it to make the best
+[00:03:04] possible prompt to anti-gravity. You can
+[00:03:05] just copy and follow along with it. But
+[00:03:07] effectively what we're doing here is we
+[00:03:08] are referring to anti-gravity as a
+[00:03:10] systems pilot and its mission is to
+[00:03:11] build deterministic self-healing
+[00:03:13] automations in anti-gravity using the
+[00:03:15] blast framework which is a blueprint how
+[00:03:17] we connect things to other things
+[00:03:18] architect stylize and trigger protocol
+[00:03:20] and then we're going to use a three
+[00:03:22] layer architecture which is really cool.
+[00:03:23] So all you literally do guys with this
+[00:03:24] is come down and I'll update this over
+[00:03:26] time so it's very very cool. Then head
+[00:03:27] over to anti-gravity. And what we need
+[00:03:29] to do first of all is make sure that
+[00:03:31] we've got the planning mode enabled,
+[00:03:32] which is really key. And we've got
+[00:03:33] Gemini's most powerful model. And all
+[00:03:35] you do is you literally paste this in
+[00:03:36] here. And what this will happen to
+[00:03:38] anti-gravity now, it will create the
+[00:03:39] appropriate file structure. And then
+[00:03:41] basically it will take us through a
+[00:03:42] very, very simple five-step process to
+[00:03:44] building any fourstep act we want to. So
+[00:03:46] we don't have to think about it. And
+[00:03:48] this will avoid so many of the mistakes
+[00:03:50] and the pitfalls. So the first step of
+[00:03:51] our fivestep framework stands for
+[00:03:53] blueprint. This essentially is the
+[00:03:55] logic. And what we're doing here is
+[00:03:56] explain to anti-gravity in natural
+[00:03:58] language the exact things that we want.
+[00:04:00] So this includes data, the source of
+[00:04:02] truth, everything that it needs to do
+[00:04:03] that. Now of all the points in the
+[00:04:05] process, this is the most important
+[00:04:06] because the problem that we solve is way
+[00:04:08] more important than how we actually
+[00:04:10] solve the problem. So essentially what
+[00:04:11] are we going to be covering? Well, five
+[00:04:12] basic questions you need to know the
+[00:04:14] answer to before you build any false
+[00:04:15] stack app. First one is northstar. So
+[00:04:17] what is the desired outcome? This is
+[00:04:18] always really good on problem to get. I
+[00:04:20] wanted to do X. What is the thing that
+[00:04:21] you want? And it can fill in the gaps if
+[00:04:23] we're not clear. We want to know what
+[00:04:24] the external services that we're going
+[00:04:26] to connect to. So what are all of the
+[00:04:27] integrations that exist within the app?
+[00:04:29] Want to know a source of truth. So where
+[00:04:30] does a primary data live? The delivery
+[00:04:32] payload. So how and where should the
+[00:04:34] final result be delivered? And then
+[00:04:35] behavior rules. So how should the system
+[00:04:37] act? Terms specific logical constraints
+[00:04:39] etc etc. And if it isn't clear it will
+[00:04:40] ask us clarificated questions. So this
+[00:04:42] is all about the blueprint division and
+[00:04:44] the logic. So if we come back over then
+[00:04:45] to anti-gravity as you can see now this
+[00:04:47] is just initializing all the documents
+[00:04:49] which is awesome. And what's great I'll
+[00:04:50] just call it here is that anti-gravity.
+[00:04:52] One of the reason I love this as an
+[00:04:53] agentic first kind of building platform
+[00:04:55] is it's already created the blast
+[00:04:56] implementation tasks for us and as it
+[00:04:58] ticks everything off it can come down
+[00:05:00] and it will basically complete that. So
+[00:05:01] you can see it's progress. So we've
+[00:05:03] given anti-gravity a really clear
+[00:05:05] structured framework and honestly
+[00:05:07] whatever I build now on anti-gravity I
+[00:05:09] use this framework because it just makes
+[00:05:10] it so much easier. So you can see it's
+[00:05:11] created gemini project map. It's c the
+[00:05:14] delivery structure which is architecture
+[00:05:15] tools and as you can see we've got our
+[00:05:17] tools that can live there with our
+[00:05:18] architecture and we even got our Gemini
+[00:05:20] MD which has everything. that's going to
+[00:05:21] be its core reference document for the
+[00:05:23] entire thing. Now, what we need to do is
+[00:05:24] basically answer those discovery
+[00:05:26] questions. So, we can basically just yap
+[00:05:27] all the stuff we want into here. So,
+[00:05:29] north star, I want a full stack idea
+[00:05:30] operating system that's going to let me
+[00:05:32] think inside a beautiful chatbot,
+[00:05:33] discover what's trending, save some
+[00:05:34] ideas into permanent system and see real
+[00:05:36] performance metrics. We then describe
+[00:05:38] all the integrations. So, I want one
+[00:05:39] thing to do for the chat interface. We
+[00:05:41] can use puppy for that. We want to build
+[00:05:42] a scrape from Reddit. We want to use
+[00:05:44] superbase for our database or back end.
+[00:05:46] I want notion so that I can actually
+[00:05:47] sync things up using the MCP which is
+[00:05:49] going to be cool. I'm going to put here
+[00:05:50] using the notion MCP available which is
+[00:05:54] cool. Also superbase we'll just say
+[00:05:56] again here using the superbase MCP
+[00:05:58] available which I'll touch on in a
+[00:06:00] second which make perfect sense for you.
+[00:06:01] And if you're not familiar with MCP by
+[00:06:02] the way just stands for model context
+[00:06:04] protocol. It's just a way for
+[00:06:06] anti-gravity to connect to anything. And
+[00:06:08] when you connect things via MCPS in this
+[00:06:09] MCP store essentially when it connects
+[00:06:11] to notion it can create pages amend
+[00:06:13] things. When it connects to superbase it
+[00:06:14] can do anything. I'll get on to that
+[00:06:16] shortly when we get to that point but
+[00:06:17] it's super cool. Then we have soft
+[00:06:18] source of truth which is going to be
+[00:06:19] superb. And then we got the delivery
+[00:06:21] which is going to be the ideation tab,
+[00:06:22] an ideas tab, a metrics tab and then I
+[00:06:24] want you to be able to save ideas and
+[00:06:25] then we give it some behavior rules
+[00:06:27] about how we want it to be and then we
+[00:06:28] just send that off which is really
+[00:06:29] freaking cool. So this is now kind of
+[00:06:31] designed for us the general idea of
+[00:06:32] blueprint. So once it's completed that
+[00:06:34] we'll then go on to phase 1b and at this
+[00:06:36] point I also want to start to get a bit
+[00:06:37] of a design reference for anti-gravity.
+[00:06:39] So I'm in my community here. I'm going
+[00:06:41] to get some of these resources to have a
+[00:06:42] quick look. So, these are some really
+[00:06:44] beautiful websites you can check out to
+[00:06:45] see what kind of design thing you want,
+[00:06:47] the brand guidelines, that kind of
+[00:06:48] thing. So, let's have a look at some of
+[00:06:49] these and then get a little bit of a
+[00:06:51] mood board together of what we'd love
+[00:06:52] our design to look like and fonts and
+[00:06:54] things like that. So, to do that,
+[00:06:55] literally come back to anti-gravity and
+[00:06:57] what you do is right click and open a
+[00:06:59] folder. And I want you to call this one
+[00:07:00] sort of design inspiration. Let's just
+[00:07:02] open this one together. We go. Right
+[00:07:03] click, new folder, and call this one
+[00:07:05] design inspo. Sweet. And then going to
+[00:07:07] come back over and just basically drop
+[00:07:08] all those files in there. So, for
+[00:07:09] example, on dribble, all you do is type
+[00:07:11] in the name of the thing that you want,
+[00:07:12] like dashboard. You can look down and
+[00:07:13] have a look. So, I like the idea of this
+[00:07:15] dark mode thing here. I think it's
+[00:07:16] really cool. I like the way they lay
+[00:07:17] things out. And I also like the idea of
+[00:07:19] this one here, which is really sweet.
+[00:07:20] So, we've got all the information there.
+[00:07:21] So, we're going to save those two
+[00:07:22] images. And then what we can do is grab
+[00:07:23] those two images and bring them over
+[00:07:25] into anti-gravity is our inspo. And then
+[00:07:27] we're just going to highlight them both
+[00:07:28] like so. So, command and click. And then
+[00:07:30] let's drag them into our inspo section
+[00:07:33] here, which is design inspo. Great.
+[00:07:34] Beautiful. And we can throw it in there.
+[00:07:36] And then also let's add another file for
+[00:07:38] like design guidelines. So if we can
+[00:07:39] just click on this new file here and
+[00:07:40] we'll call this one design guidelines
+[00:07:42] which is awesome. And then let's grab
+[00:07:44] this and also bring this over into
+[00:07:45] design inspo and click on move. And then
+[00:07:47] here you can drop in your design
+[00:07:48] guidelines or you can use a tool to look
+[00:07:50] at other different brands to see what
+[00:07:51] you like. I've got the brand guidelines
+[00:07:52] here for Collido which is our kind of
+[00:07:54] speechto text startup as you can see. So
+[00:07:56] I'm going to add them down below but if
+[00:07:57] you want a good reference point for what
+[00:07:58] brand guidelines should look like I'll
+[00:07:59] also put a link for this down below so
+[00:08:01] you can check it out and use it if you
+[00:08:02] like to. But we're just going to control
+[00:08:03] A. I'm going to copy all this
+[00:08:04] information like so. And then let's go
+[00:08:05] over to anti-gravity and drop in our
+[00:08:07] design guidelines. So we come over here
+[00:08:09] and just drop in all the prompts. So it
+[00:08:10] knows exactly the kind of reference that
+[00:08:11] I want. And then what we can do here as
+[00:08:12] well, anti-gravity is say hey. And we
+[00:08:14] can say use the and then you do an at
+[00:08:16] sign which will basically pull up
+[00:08:17] anything. I can type in the name of the
+[00:08:18] file which is really cool. So we've got
+[00:08:20] design inspo is what we want. Right? So
+[00:08:21] design inspo and you can see it's
+[00:08:22] actually found it there. It's got three
+[00:08:24] files in it for the dashboard design.
+[00:08:26] Cool. And I'm going to hit enter on that
+[00:08:27] and then click on accept all for the
+[00:08:29] changes. And of course, you can come
+[00:08:30] through to the implementation plan to
+[00:08:31] see exactly what it plans to do and how
+[00:08:34] it plans to progress and also its task
+[00:08:35] list to see how it's actually
+[00:08:37] progressing. So you know exactly where
+[00:08:38] it is step by step as it always goes
+[00:08:40] down. And I should also say again this
+[00:08:41] framework will work if you want to build
+[00:08:42] animated websites which is on content on
+[00:08:44] dashboards anything you could possibly
+[00:08:46] imagine. Full scale apps is the exact
+[00:08:48] same thing. So we're going to give it
+[00:08:49] the we're going to agree to this which
+[00:08:50] is cool. So that's all working for us
+[00:08:52] nicely in the background. I remember
+[00:08:53] with my first tech startup, the most
+[00:08:55] important thing I found was resonance
+[00:08:57] with the customer, which is to make sure
+[00:08:58] you got a validated demand for the thing
+[00:09:00] that you're building. And the biggest
+[00:09:01] coolest concept that I always try to
+[00:09:03] bleed into this content cuz I want to
+[00:09:04] share what worked for me is with a
+[00:09:06] minimal viable product, which is
+[00:09:07] basically spending as little money as
+[00:09:09] possible and as little time as possible
+[00:09:10] to validate that person that you're
+[00:09:12] trying to target actually wants to buy
+[00:09:13] your thing. You'll save yourself so many
+[00:09:15] things. It's like one of the best books
+[00:09:16] I've read as an entrepreneur when I got
+[00:09:18] started was a lean startup. It should be
+[00:09:19] like mandatory reading. It's so freaking
+[00:09:21] cool. And now anti-gravity understands
+[00:09:22] everything about our project, our
+[00:09:23] desires, our source of truth, what we
+[00:09:25] want to do. The next thing that we need
+[00:09:27] to do then is give it access to
+[00:09:28] everything. And that's why the second
+[00:09:29] step in our blast framework stands for
+[00:09:32] links. So link is just connectivity. So
+[00:09:34] it's basically testing all the API
+[00:09:35] connections, environment credentials,
+[00:09:36] and then doing a handshake. In other
+[00:09:38] words, making sure it can actually
+[00:09:40] connect and communicate with all of them
+[00:09:42] before it goes ahead and actually builds
+[00:09:43] the thing for us. So what I recommend
+[00:09:44] that you do with any project that's
+[00:09:46] getting larger and literally I tried to
+[00:09:47] make this a little bit complicated just
+[00:09:48] to show you how easy it actually is is
+[00:09:50] we want an integrations list. So here
+[00:09:52] are all the things that we're going to
+[00:09:53] need to make our personal operating
+[00:09:55] system for ideas and our content. We've
+[00:09:56] got Reddit and YouTube. Now anti-gravity
+[00:09:58] should itself be able to scrape Reddit
+[00:10:00] just create scripted for us and also
+[00:10:02] YouTube I'm pretty sure but if not we
+[00:10:04] can do an API with that. Then we have
+[00:10:05] MCP. So since we've got a big beautiful
+[00:10:07] tick on those guys we can move over to
+[00:10:08] the MCP section. So let's go with an
+[00:10:10] anti-gra now and take a look at this.
+[00:10:11] Now the first question I always ask with
+[00:10:13] any integration is do they got an MCP
+[00:10:16] for that? Because if they do it makes
+[00:10:17] our life so much easier. You check your
+[00:10:18] MCPS these dots up here. Come down to
+[00:10:20] MCP servers. Now anti-gravity has an
+[00:10:23] inbuilt store of about 20 different
+[00:10:24] MCPS. You know there's things in here
+[00:10:26] for example like notion which is a great
+[00:10:28] one. You type in notion. You click on
+[00:10:29] notion. It pops up here which is great.
+[00:10:31] You click on configure and then all you
+[00:10:33] do is click on notion token like so.
+[00:10:35] This will open up a brand new page. All
+[00:10:36] you're going to do here is create a
+[00:10:37] brand new integration. Come down. Give
+[00:10:39] it a name like personal OS. We click the
+[00:10:41] workspace internal is fine and click on
+[00:10:43] save. This will now create a brand new
+[00:10:45] integration for us which is awesome. And
+[00:10:46] what it'll do is give us a token. All
+[00:10:48] we're going to do then once we've done
+[00:10:49] that is click on configure integration
+[00:10:51] settings. You're going to show this.
+[00:10:53] You're going to copy that. Going to come
+[00:10:54] back over to anti-gravity and enter it
+[00:10:56] into your notion API token list. And
+[00:10:58] then crucially the way that notion works
+[00:10:59] as I always say is that you have to
+[00:11:00] enable it on the page. So say for
+[00:11:02] example we want to create a brand new
+[00:11:03] page which I'll do over here. I've got a
+[00:11:05] new page here. I'm just call this one
+[00:11:06] Jack's content ideas. Okay. So what you
+[00:11:09] do is you click on the butts here.
+[00:11:10] You're going to come down here to
+[00:11:11] connections and as you can see if I type
+[00:11:12] in personal OS it's now connected.
+[00:11:14] That's how you do it. But I'm going to
+[00:11:15] connect it to my typical one which is
+[00:11:16] this anti-gravity one here. And now
+[00:11:18] essentially what this means is
+[00:11:19] anti-gravity has full access to this
+[00:11:20] notion. It can create pages. It can
+[00:11:22] edit. It can do anything you want to. So
+[00:11:23] step one as always is there an MCP for
+[00:11:25] that. I also did a post covering this
+[00:11:27] MCP marketplace which I'll show you
+[00:11:29] which is a really cool place to grab
+[00:11:30] this. I'll put this link down below for
+[00:11:31] you as well. So if you're looking for
+[00:11:33] inspiration of what can I connect check
+[00:11:34] it out here and you can look down there.
+[00:11:35] The other thing you can do is just go to
+[00:11:36] Gemini or track GBT and say hey what is
+[00:11:39] the MCP config for this and you can find
+[00:11:41] it like that. So we've enabled notion
+[00:11:43] which is awesome and by the way you can
+[00:11:44] see all of this if you click on manage
+[00:11:46] MCP servers and it will load up now and
+[00:11:47] it'll show all of the MCP servers that
+[00:11:49] are live. So I've got Fireflies NAN
+[00:11:51] notion pine cone superbase and versal
+[00:11:53] which is cool. So we also want the
+[00:11:54] superbase one which is great. So let's
+[00:11:56] just check if it's natively integrated
+[00:11:57] and it is awesome. So I'll show you how
+[00:11:59] you connect that real quick. You click
+[00:12:00] on this once again it's configure and
+[00:12:02] it's looking for an access token. You
+[00:12:03] just click on superb base access token
+[00:12:05] like so. Opens up a page like this. All
+[00:12:06] you're going to do is just generate a
+[00:12:07] new token. Call this whatever you want
+[00:12:09] to. Expires and we'll say it expires 1
+[00:12:10] hour. We'll put it on the clock. And
+[00:12:12] obviously it means it just stops working
+[00:12:13] after an hour and then we'll get a code.
+[00:12:14] And literally all you do is come down
+[00:12:16] here. Basically you can just copy the
+[00:12:17] code right here from this picture here.
+[00:12:18] Come back over to anti-gravity and enter
+[00:12:20] it in and then superbase will be fully
+[00:12:22] enabled. Little hack by the way with
+[00:12:23] your MCP servers is you don't want the
+[00:12:24] total number of tools to go too far
+[00:12:26] above 50 just for the context window.
+[00:12:28] Now if you're looking for an MCP that
+[00:12:30] does not exist. So, for example, I have
+[00:12:32] Fireflies here, right? That basically
+[00:12:33] grabs all of my meeting transcripts,
+[00:12:35] lets me find what my actions were, loads
+[00:12:36] of cool stuff. And if I type in here,
+[00:12:38] what you'll see is it doesn't exist. But
+[00:12:40] there's a way around that. And I'll show
+[00:12:41] you this is how it works for anything.
+[00:12:43] So, for example, if I just shoot over to
+[00:12:45] Gemini, and I'm going to show you what
+[00:12:46] all these apps do in a second, by the
+[00:12:47] way, just so you can use them. I might
+[00:12:48] say something like, "Hey, dude, what is
+[00:12:50] the M?" Just say MCP config, right? The
+[00:12:53] MCP configuration the and fire flies.
+[00:12:56] That's it. Okay. Okay. And what it will
+[00:12:58] do is just give you the code that you
+[00:13:00] can now enter into anti-gravity, meaning
+[00:13:02] you can connect to literally everything.
+[00:13:04] At some point, anti-gravity will make it
+[00:13:05] really easy with a click and
+[00:13:06] installation. But until that point, you
+[00:13:08] can just ask AI to find it for you. You
+[00:13:09] can see it's right there. So, all you
+[00:13:11] literally do is you copy this, for
+[00:13:12] example, then you head back over to
+[00:13:13] anti-gravity and essentially you come
+[00:13:15] back to the agent and you say something
+[00:13:16] like, "Hey, dude, add the blow to my MCP
+[00:13:19] config." Cuz that's the name of the
+[00:13:20] file. Okay? You pop that in and you see
+[00:13:22] it says your API key there. You will
+[00:13:24] just go over to the service. So, for
+[00:13:25] example, an example of Fireflies. I'll
+[00:13:27] show what that looks like just so I just
+[00:13:28] want to make sure that you all the
+[00:13:29] details so you can really follow along
+[00:13:30] across this. So in the case of Firefly
+[00:13:32] for example, settings, developer
+[00:13:33] settings, grab your API key, head back
+[00:13:35] over, replace this API key here, and
+[00:13:37] then all you do is click on view raw
+[00:13:38] config. You'll have all the data there.
+[00:13:40] Just arr come down here and I'm just
+[00:13:43] going to say add it to the below, enter
+[00:13:46] in all the information, and then
+[00:13:47] anti-gravity will give you the updated
+[00:13:48] MCB config. You come over here, you
+[00:13:50] control A, you delete all of it, you
+[00:13:52] paste, and then you come down, you click
+[00:13:53] file, click save, and then once you've
+[00:13:54] done that and you head over to your MCB
+[00:13:56] config, MCB servers, you'll actually
+[00:13:58] then see it enabled once you've hit the
+[00:14:00] refresh button. So I'm going to say
+[00:14:01] don't save cuz I deleted everything
+[00:14:02] here. But once you hit this refresh
+[00:14:03] button, any tools that you just added
+[00:14:04] will be there invisible. And this
+[00:14:06] basically is to connect anti-gravity to
+[00:14:07] anything. And so now we've covered every
+[00:14:09] integration. I now want to show you how
+[00:14:10] you actually integrate an API with
+[00:14:13] anti-gravity. And the example we're
+[00:14:14] going to use in this video is going to
+[00:14:15] be Poppy AI, which is a really cool
+[00:14:17] software and actually used by loads and
+[00:14:18] loads of top creators as you'll see how
+[00:14:20] we're going to integrate it. So you're
+[00:14:21] going to head over, we're going to log
+[00:14:22] into this one. And obviously you can
+[00:14:23] build anything in anti-gravity. This
+[00:14:25] does make it very easy. So what we're
+[00:14:26] going to do on the left hand side is
+[00:14:27] essentially we can copy and paste any
+[00:14:29] knowledge. So what I kind of want to do
+[00:14:30] here very easily, I'd think of Poppy as
+[00:14:33] it's like Canva plus AI in many respects
+[00:14:36] that and it's best explained by an
+[00:14:37] example. So for example, I'm on my
+[00:14:38] YouTube channel here. What I want to be
+[00:14:39] able to do with our new AI system is
+[00:14:41] actually understand everything about my
+[00:14:43] videos, my intros, any context. And I
+[00:14:45] can do this with any video, right? So I
+[00:14:46] can literally right click on this one
+[00:14:48] here. So say I copy clean link. I head
+[00:14:49] over to copy and I can control V and
+[00:14:51] paste it in. Right? So let me show what
+[00:14:52] I mean with this. So let's come over
+[00:14:53] here and let's build this one out
+[00:14:54] together and then connect it to
+[00:14:55] anti-gravity. So let's come down and
+[00:14:57] create a group. So a group is a series
+[00:14:58] of things that we're going to be using.
+[00:15:00] So in this instance, what I want is one
+[00:15:02] group of let's say my last five videos.
+[00:15:05] So come down here. Let's copy this one
+[00:15:06] here. And what we can do with this is
+[00:15:08] drop all in like so. And then you can
+[00:15:10] actually then chat with these as an AI
+[00:15:12] about the entire transcript. If you drop
+[00:15:14] in short form content, one of the things
+[00:15:16] it can do at the moment is actually
+[00:15:17] understand frame by frame what's going
+[00:15:18] on. So I think like one of the biggest
+[00:15:20] short form creators on the planet uses
+[00:15:21] this as I understand to build like all
+[00:15:23] scripts. So that's like one of the
+[00:15:24] coolest use cases for this is like
+[00:15:26] building out like content ideas and
+[00:15:27] scripts. And since we're building out a
+[00:15:28] personal OS, this is going to be so
+[00:15:30] sick. So I've got down here animated
+[00:15:32] websites. Really cool. So basically any
+[00:15:34] information that you want to you can
+[00:15:35] simply come down here come and grab.
+[00:15:36] There we go. Beautiful. And you can drop
+[00:15:38] in text or anything you want to. So
+[00:15:39] we're going to call this one here for
+[00:15:40] for instance. I'm going to call this one
+[00:15:42] Jacks. Okay. Videos. Awesome. And then
+[00:15:44] what we should do is connect this to an
+[00:15:46] AI. So once we've added in everything to
+[00:15:48] power our personal OS. Let's come side
+[00:15:50] and add in now a model. So cool thing
+[00:15:52] about this is we can actually pick any
+[00:15:53] the models we want to. So I think we
+[00:15:55] should go ahead with the wonderful claw
+[00:15:57] 4.5. Let's connect these two together
+[00:15:59] real quick. Beautiful. So you can pick
+[00:16:01] the model down here. I think we'll go
+[00:16:02] with one of 4.5 is fine. So let's ask a
+[00:16:04] question. Hey dude, give me the intros
+[00:16:07] for all of my videos. Bam. Just like
+[00:16:11] that. And we'll see what this can do. So
+[00:16:12] this should be able to understand the
+[00:16:13] intros of all 12 videos. If it does
+[00:16:14] that, it'd be very very freaking cool.
+[00:16:16] So I'll track the interesting videos.
+[00:16:17] However, beautiful $10,000 websites. And
+[00:16:20] you can see that's the intro. Once I 10
+[00:16:21] do these five things immediately. That's
+[00:16:23] the intro. So now we can essentially
+[00:16:24] just like nobug LM chat to all these
+[00:16:26] things in a beautiful interface and get
+[00:16:28] some a stuff. Now, the second thing I
+[00:16:29] want to add into this actually is going
+[00:16:31] to be what I would call the hooks
+[00:16:33] generator. So, when you're creating
+[00:16:34] short form content at all, one of the
+[00:16:36] most important things just like YouTube,
+[00:16:37] the intro is going to be the hooks. So,
+[00:16:39] let's come down, add another one. And I
+[00:16:40] think what I want to call this one is
+[00:16:42] very simply, we call this one viral
+[00:16:44] hooks. And then why don't we head over
+[00:16:45] to YouTube and grab some examples of
+[00:16:46] that. So, we got a cool video here by
+[00:16:48] Callaway. Why don't we copy this? And
+[00:16:49] again, you could basically, if you think
+[00:16:51] of this as your brain, just grab all the
+[00:16:52] resources that you want to fill out this
+[00:16:54] stuff. So, we're going to drop this one
+[00:16:55] down here. And then I'm also going to
+[00:16:56] add in a file as well. So, let's upload
+[00:16:58] something. And you can do that by
+[00:16:59] clicking document on the left hand side.
+[00:17:01] And just click on drop files here or
+[00:17:02] just upload from device. And one of the
+[00:17:03] ones I've had here is this 1,00 barrel
+[00:17:05] hooks by PBL, which is cool, which is
+[00:17:07] basically just hooks to everything.
+[00:17:09] These are viral tested, so these all
+[00:17:10] work on all platforms, which should be
+[00:17:12] pretty handy for the personal OS that
+[00:17:13] we're building. So, we've added that in.
+[00:17:14] As you can see, we've put it there. Now,
+[00:17:16] what's cool is we're going to want to
+[00:17:17] give the AI something to note. So, if I
+[00:17:19] come down here and I give it a note,
+[00:17:20] say, "Hey, at any time you are asked uh
+[00:17:22] for a hook, grab three examples from
+[00:17:26] this." and adapt them to the topic at
+[00:17:31] hand. And we'll say provide the initial
+[00:17:33] example and the one you created. Cool.
+[00:17:37] And then I think let's give this as well
+[00:17:38] a little bit of a note. Just say, hey,
+[00:17:40] use this for best practices on creating
+[00:17:44] hooks for short for content. Cool.
+[00:17:47] Sweet. I think it's really So now we've
+[00:17:48] got our two resources. What we can do is
+[00:17:50] now connect these ones together. So we
+[00:17:51] also just want to make sure that it
+[00:17:52] works before we actually validate it and
+[00:17:54] throw it into our scenario. So this ones
+[00:17:56] up together. Beautiful. And we've gotten
+[00:17:58] all of the information out from this
+[00:17:59] chat window, which is cool. And great.
+[00:18:00] You know, you can ask it these kinds of
+[00:18:02] questions. Let's ask a question like,
+[00:18:03] "Hey, create me, I don't know, three
+[00:18:06] hooks for my video on AI design
+[00:18:10] masterass for short form content." Make
+[00:18:13] sure this one works. And when we're
+[00:18:14] happy with it, then we can actually
+[00:18:15] connect it into anti-gravity to complete
+[00:18:17] the full step, which is going to be
+[00:18:18] crazy. And then if we come down and take
+[00:18:20] a look at this, we've got different
+[00:18:21] options here. So this one here is okay.
+[00:18:24] Everyone told you to learn Figma and
+[00:18:25] high expense designers, but here's the
+[00:18:26] thing. And the inspiration is everyone
+[00:18:27] tells you to do insert action, but no
+[00:18:29] one tells you to do it. Cool. Then we
+[00:18:30] got this one here. This design system
+[00:18:31] cost $10,000 and this one 10K. And then
+[00:18:33] here's the original inspiration and blah
+[00:18:34] blah blah. You're not about to design.
+[00:18:36] You're not uncreative. And it gives you
+[00:18:37] the examples. Awesome. Very, very, very
+[00:18:39] cool. So now we got this set up.
+[00:18:40] Question is, how the hell do we actually
+[00:18:41] access it into our wonderful
+[00:18:43] anti-gravity? Well, let's come down here
+[00:18:44] and click on So we can do a chatbot. So
+[00:18:47] if we did a chatbot and called this one
+[00:18:49] social OS, whatever it is, and create
+[00:18:50] chatbot description, I'm just add a
+[00:18:52] random description. You could use this
+[00:18:54] as a chatbot, right? Which is cool. So I
+[00:18:56] can view this chatbot, blah blah blah,
+[00:18:57] have it in a window, have conversations
+[00:18:58] with it, and just chat with our stuff.
+[00:19:01] But what I would prefer to do, and I
+[00:19:02] think it's going to take this a million
+[00:19:03] times better, is actually connect it
+[00:19:05] now. So we're going to click on this.
+[00:19:06] We're going to head over here, and we
+[00:19:07] click on API. And what's cool is we're
+[00:19:09] looking for post, which is cool, and
+[00:19:10] it's given us all the information that
+[00:19:12] we need down here, which is a chat link
+[00:19:13] as well as the request body preview. So
+[00:19:15] we feed these two things to
+[00:19:16] anti-gravity. It'll know exactly what
+[00:19:17] it's doing. And again, knowing how to do
+[00:19:19] this with this API, you can use it for
+[00:19:20] anything. And it means that you are
+[00:19:22] essentially unstoppable with
+[00:19:23] anti-gravity. So, we're going to copy
+[00:19:24] this one. Let's scroll down now and head
+[00:19:26] back to anti-gravity. And then we're
+[00:19:27] going to give it now all of the
+[00:19:28] information it needs to essentially know
+[00:19:30] what we're connecting to. Cool. So,
+[00:19:31] anti-gravity. So, let's give it. And of
+[00:19:33] course, we're going to use our speech to
+[00:19:34] text glider to kick some butt with this
+[00:19:35] stuff. Hey dude, you have a notion and a
+[00:19:38] superbase MCP. So, use both of those
+[00:19:40] credentials to access and do the updates
+[00:19:42] with those two things. With notion, for
+[00:19:43] example, I want the ability to add
+[00:19:45] things to my to-do list. Now, for Poppy,
+[00:19:48] um, this is going to be the brain behind
+[00:19:49] the chatbot. I want you to build a
+[00:19:50] beautiful and gorgeous WhatsApp style
+[00:19:52] chat interface. And whenever I send a
+[00:19:54] message, you're going to send that
+[00:19:55] message to the Poppy endpoint, which I
+[00:19:57] will provide for you down below. And
+[00:19:59] then for Reddit to scrape, I expect you
+[00:20:01] to build a scraper that can pull for me,
+[00:20:03] let's say, the top 10 posts from the r/
+[00:20:06] singularity subreddit and the r/natn
+[00:20:10] subreddit. In addition to that, when it
+[00:20:11] comes down to YouTube, I expect you to
+[00:20:13] be able to grab my current subscriber
+[00:20:15] numbers and the same for Instagram. If
+[00:20:17] you are unable to do this, please let me
+[00:20:18] know. And then guys, we just post in our
+[00:20:20] Poppy information like that. So I'm
+[00:20:22] gonna say Poppy API, which is cool. And
+[00:20:24] we enter the creds. So we've added in
+[00:20:26] that. Let's come back and just make sure
+[00:20:27] we get the body request preview, which
+[00:20:29] is this. I'm going to come back over and
+[00:20:31] then paste that there. And then we are
+[00:20:33] ready to rock and roll. Beautiful. And
+[00:20:34] just like that, it's validated all five
+[00:20:36] connections. We've got the Poppy API.
+[00:20:38] Awesome. Notion MCP, Superbase MCP,
+[00:20:40] Instagram's connected as well as
+[00:20:42] YouTube's now ready to rock and roll and
+[00:20:44] proceed with the next step. So we're
+[00:20:45] going to say, hey, go ahead with a big
+[00:20:47] exclamation mark. Perfect. And now
+[00:20:49] anti-gravity has got all the links and
+[00:20:50] connects it needs to make the app
+[00:20:52] possible. That takes us very nicely on
+[00:20:54] to the third step of our blast framework
+[00:20:56] which stands for architecture. So this
+[00:20:58] is actually the bit now where
+[00:20:59] anti-gravity goes and builds us the
+[00:21:01] thing to get it production ready. It's
+[00:21:03] validated that it can access all the
+[00:21:05] endpoints. Now it's ready to build our
+[00:21:06] beautiful application. And within phase
+[00:21:08] three we've got a couple of things. So
+[00:21:09] we're going to operate within a three
+[00:21:11] layer architecture that separates
+[00:21:12] concerns to maximize reliability. LLMs
+[00:21:15] are probabilistic whereas business logic
+[00:21:17] must be deterministic in a sense that if
+[00:21:19] you ask a language model the same
+[00:21:20] question 100 times you get 100 different
+[00:21:22] answers. But when we're building our
+[00:21:23] dashboard we need them to behave in a
+[00:21:25] very predictable deterministic way. And
+[00:21:27] this is how we accomplish this with an
+[00:21:29] anti-gravity. So lay one is the
+[00:21:31] architecture which is technical SOPs
+[00:21:32] written in markdown define goals inputs
+[00:21:34] tool logic and edge cases. And the
+[00:21:36] golden rule if the logic changes we must
+[00:21:38] update the SOP before updating any of
+[00:21:40] the code. Then we've got navigation
+[00:21:41] which is the decision-making. So this is
+[00:21:43] your reasoning layer. You root between
+[00:21:45] the SOPs and the tools. You do not try
+[00:21:47] to perform complex tasks yourself. You
+[00:21:49] call execution tools in the right order.
+[00:21:51] And finally under the tools is
+[00:21:52] deterministic Python scripts atomic and
+[00:21:55] testable and environment variables that
+[00:21:56] are stored inv. So with that in mind,
+[00:21:58] let's go ahead now and check on
+[00:21:59] anti-gravity. See how it is getting on
+[00:22:01] in our environment. So it's already
+[00:22:02] working in the background and building
+[00:22:04] everything within phase 3 architecture,
+[00:22:05] which is great. And I love that
+[00:22:06] anti-gravity has built this kind of
+[00:22:08] artifact for us to clearly check how
+[00:22:10] it's getting on with all of our
+[00:22:11] prescribed actions. Beautiful. And then
+[00:22:13] once Gemini has completed building it,
+[00:22:14] we can now check it out for ourselves to
+[00:22:16] make sure that it's functional. Then we
+[00:22:17] can move on to design steps. And one of
+[00:22:19] the things I want to call out as well is
+[00:22:20] that you want to be aware of what's
+[00:22:21] called context rot. So if you imagine
+[00:22:24] the context window, these models is say
+[00:22:26] 200,000 tokens. The first 100,000 tokens
+[00:22:29] can do anything. It's like you at 9:00
+[00:22:30] in the morning, you're ready to rock and
+[00:22:31] roll. You're kicking butt. But the
+[00:22:32] second 100,000 is like when it's like
+[00:22:34] 11:55. You've not eaten in 6 hours. So
+[00:22:36] once it's done a task, come over and
+[00:22:38] click this plus button and get a brand
+[00:22:40] new chat. and it'll be a lot more
+[00:22:41] effective when it does that. So, that
+[00:22:42] out of the way, let's go check now the
+[00:22:44] local host. Let's go check out what it
+[00:22:45] looks like. So, we can literally just
+[00:22:46] copy this or hit the button, but we're
+[00:22:48] going to head over now to a random
+[00:22:49] website and check this one out. So, look
+[00:22:51] host 3000. So, this is actually
+[00:22:53] captured, if you think about it, Glido's
+[00:22:54] branding down to a te. So, for instance,
+[00:22:56] if I show you Glido, can you see the
+[00:22:58] black and the white and the kind of like
+[00:23:00] the way this all fits together? Your
+[00:23:02] river logos, those cool things. There's
+[00:23:03] me yapping on the video talking about
+[00:23:05] Glider having a good time in the studio.
+[00:23:07] So, you get that. It's actually covered
+[00:23:08] the brief perfectly which is really
+[00:23:10] freaking cool and it's quite
+[00:23:11] minimalistic and edgy. So let's check
+[00:23:13] now the chat window works. So again
+[00:23:15] we're talking to Poppy. So let's ask it
+[00:23:17] a question about my video for example.
+[00:23:18] So why don't we ask it a question about
+[00:23:20] the new bull? Let's ask a random
+[00:23:22] question about Gemini. Hey dude, could
+[00:23:23] you give me a random fact about
+[00:23:26] anti-gravity that people may not know
+[00:23:28] based on the videos that you have. Okay.
+[00:23:30] Bam. We send that one off. Let's have a
+[00:23:31] look. I've got a random profile photo
+[00:23:33] which is funny. We can maybe add that as
+[00:23:35] a feature like, "Hey, let me upload my
+[00:23:37] own photo so I can get myself that." In
+[00:23:38] fact, let's do that right now while
+[00:23:39] we're here. Let's come back over and
+[00:23:41] just say, "Hey dude, I would love you to
+[00:23:42] add the feature for me to upload my own
+[00:23:44] photo as my profile photo in my chat
+[00:23:46] window." And then let's actually just
+[00:23:47] save that photo in Superbase. Thank you.
+[00:23:49] Okay, beautiful. Send that one off and
+[00:23:51] it can do that. And again, this why
+[00:23:52] superbase is so cool. It's like
+[00:23:54] Microsoft Excel on storage. Hey, yeah,
+[00:23:56] I'm here. Here's a random fact people
+[00:23:58] don't know and craft product agent
+[00:23:59] simultaneously. Well, most people use
+[00:24:00] like a single chatbot. You can actually
+[00:24:01] have five, six, seven agents. Then if I
+[00:24:03] open up my discovery section, check this
+[00:24:04] out guys. I now have all the top posts
+[00:24:06] from Nitn as I requested. That's now
+[00:24:08] doing cuz it's doing some work in the
+[00:24:09] background. It'll open the browser and
+[00:24:10] do various different things which is
+[00:24:11] cool. So my own UI agency automation. So
+[00:24:13] if I was making N content, for example,
+[00:24:15] I could use this to do this. And again,
+[00:24:16] this can scrape any subreddit. So Reddit
+[00:24:19] is supposed to be the front page of the
+[00:24:20] internet. It's a great place to get
+[00:24:21] ideas. So you get the idea. I could
+[00:24:22] filter by new, by heart. I could do
+[00:24:24] anything. I didn't need to do any API
+[00:24:26] connections for this at all. I just told
+[00:24:27] anti grabby to do it and it did it. So
+[00:24:29] let's see if this takes me to the
+[00:24:30] article. I click on the link and we'll
+[00:24:31] see if this opens up in Reddit and it
+[00:24:33] does indeed. There you go. There's the
+[00:24:34] image. So, it's actually visually
+[00:24:36] engaging. And what I can do now is
+[00:24:37] actually save this. You see? So, if I
+[00:24:38] come on to save, I have nothing. So, I
+[00:24:40] want the ability to save various
+[00:24:41] different things I like. I come to
+[00:24:43] discovery. Let's come back and let's say
+[00:24:44] that I really want to save this one
+[00:24:46] here. So, I click save, which is cool.
+[00:24:47] It said it's saved. Awesome. If I come
+[00:24:49] over to save now, do I see it? I do.
+[00:24:51] It's a trend. Very cool. So, if I
+[00:24:52] refresh it now, am I going to physically
+[00:24:54] see it? And I do. And it's literally
+[00:24:56] saved it now because it's in our
+[00:24:57] Superbase. And how freaking incredible
+[00:24:58] is that? And then we got the metrics
+[00:24:59] down below. and performance which has my
+[00:25:01] YouTube channel and then also my
+[00:25:03] Instagram which is freaking amazing. So
+[00:25:04] from a functionality point of view this
+[00:25:06] is hitting the mark on everything I
+[00:25:08] said. Now you can imagine how you can
+[00:25:10] build this up. I basically just
+[00:25:11] described something followed the
+[00:25:13] fivestep blast framework and it's built
+[00:25:14] it. So you can see whatever the thing is
+[00:25:16] you're trying to build you can do this
+[00:25:17] now and crucially guys it's now
+[00:25:18] connected to Superbase with all our
+[00:25:20] databases. So let me show you exactly
+[00:25:21] what's happening in Superbase. The way I
+[00:25:23] want you to think about Superbase is
+[00:25:24] like Microsoft Excel kind of on
+[00:25:26] steroids. What we need with any
+[00:25:27] fullstack app is a comprehensive
+[00:25:29] backend. An alternative to this is what
+[00:25:31] we call Firebase, which is cool. You can
+[00:25:34] use either. I personally I just really
+[00:25:35] like Superbase. I like its interface.
+[00:25:37] Now, it can look a little bit
+[00:25:38] intimidating to get started. But don't
+[00:25:40] let that put you off. So, if I come over
+[00:25:42] down here to projects, we got stock 500,
+[00:25:43] which is the one that is built in. But
+[00:25:45] bear in mind, because I given access to
+[00:25:47] anti-gravity MCP, I haven't had to touch
+[00:25:49] a single thing in Superbase. So,
+[00:25:51] technically speaking, this entire thing
+[00:25:53] could be in Japanese. It wouldn't make a
+[00:25:55] single difference to us because we
+[00:25:56] haven't had to mess around with it for
+[00:25:57] the purpose of this. You come down side
+[00:25:59] to database on the left hand side and
+[00:26:00] you can see all these different schema
+[00:26:02] visualizers, YouTube trends. It's got
+[00:26:03] all this beautiful stuff and you can
+[00:26:05] actually physically see this if you
+[00:26:06] click into tables. That said, Superbase
+[00:26:08] is a skill that's worth investing into.
+[00:26:10] Now, I'm a big believer in keeping the
+[00:26:12] number of technologies that you learn
+[00:26:14] very small. I like few few platforms
+[00:26:16] stretch their maximum potential and
+[00:26:18] realistically you need you need a
+[00:26:20] database, right? You need a place to
+[00:26:21] store customers that are buying your
+[00:26:23] stuff or your data or the things that
+[00:26:24] we're saving in our applications. We
+[00:26:26] need a database. So we have to be
+[00:26:27] familiar with a database. And I think
+[00:26:29] the the actual MCP integration to get
+[00:26:31] with anti-gravity is a beautiful and
+[00:26:33] wonderful way to actually start this
+[00:26:35] out. Now this itself has said hey I've
+[00:26:37] now done the changes which is cool. It's
+[00:26:38] got a backend create an advertised
+[00:26:40] bucket. Now Superbase doesn't just store
+[00:26:42] data numbers. And this is the cool thing
+[00:26:44] right? You know, let's say you and I run
+[00:26:45] a business together and let's say we
+[00:26:47] have a subscription business for our
+[00:26:48] whatever app, right? I don't know, our
+[00:26:50] coffee app or something. We can actually
+[00:26:52] query superbase or like this will do it
+[00:26:54] for us in what's called SQL which
+[00:26:55] basically you and I speak English table
+[00:26:57] speak SQL and it can give you stuff like
+[00:26:59] averages like hey how many what's the
+[00:27:01] average trend line? What's our churn
+[00:27:03] rate? What's our ARO? You can ask it all
+[00:27:05] these kinds of great questions. So this
+[00:27:06] is now saying that it's done. So why
+[00:27:08] don't we head back over now to the local
+[00:27:09] host and check out to see what that
+[00:27:11] physically looks like. So let's go over
+[00:27:12] to our local host which I think is on
+[00:27:14] this one. So, if I was to refresh this
+[00:27:15] page, do we now have the ability to
+[00:27:17] upload profile photos? So, we come over
+[00:27:18] to the website and we don't actually
+[00:27:19] quite see that ability. So, let's
+[00:27:21] actually ask it now to create a setting
+[00:27:22] section for us. Cool. So, just come over
+[00:27:24] and say, "Hey, create a setting section
+[00:27:25] and let me display that on the sidebar."
+[00:27:27] And then the other feature I want to add
+[00:27:28] actually thinking about it is I want the
+[00:27:29] ability to get the article content from
+[00:27:32] let's say that subreddit. So, I also
+[00:27:34] would love the ability to have a copy
+[00:27:35] button for the article content from the
+[00:27:38] subreddit. And also in the save section,
+[00:27:40] I'd like the saved view of the Reddit
+[00:27:43] article to look just like it does in the
+[00:27:45] scrape section for me, please. Now, one
+[00:27:47] of the reasons why I'm asking it to do
+[00:27:48] that is cuz if I want to feed that into,
+[00:27:49] let's say, our YouTube AI superpower
+[00:27:51] agent that we built in Poppy AI, it
+[00:27:53] wouldn't it be great if I could say,
+[00:27:54] "Hey, here's the article. Give me some
+[00:27:56] ideas that would fit my YouTube channel
+[00:27:58] or like based on my content style or
+[00:28:00] explain this my tone of voice." You get
+[00:28:01] the idea. And the thing I want to call
+[00:28:02] out here as well, just accept all and
+[00:28:04] come back over here for a second. The
+[00:28:05] thing with this Poppy thing is really
+[00:28:06] freaking cool, right? Because you can
+[00:28:08] also do it with text. So for example,
+[00:28:10] you could get loads of research from
+[00:28:11] let's say Gemini does a big research
+[00:28:13] report and you can drop it in. So for
+[00:28:14] instance, if I'm on Glider website, I
+[00:28:16] could copy all the text and I come over
+[00:28:17] to Poppy and I just controlV. This is
+[00:28:19] now the text about Glad. So I could I
+[00:28:21] might like just say down here and just
+[00:28:23] like if I drop this into the viral hook
+[00:28:24] section. We wouldn't keep it in the
+[00:28:25] viral hook section. You get the idea.
+[00:28:26] But the point is that you could have it
+[00:28:28] there if you physically wanted to,
+[00:28:29] right? Which is cool. Now it can speak
+[00:28:31] about everything. The other thing I may
+[00:28:32] want to do just to make this really
+[00:28:34] freaking cool actually. So, let me come
+[00:28:35] ahead and delete this one. Is we can add
+[00:28:37] in a prompt, which is really cool. So,
+[00:28:39] let's come over here and just move the
+[00:28:40] Jack's videos over here real quick. And
+[00:28:42] then let's add something in so we can
+[00:28:43] record as our voice for example. Yep,
+[00:28:44] we're happy with that. Let's click on
+[00:28:46] this. Hey, dude. One of the things I'd
+[00:28:47] like you to do if you're asked any
+[00:28:48] questions about Jack's content, Jack's
+[00:28:51] video, I'd like you to use the Jack's
+[00:28:52] videos tab. And then, if you've got
+[00:28:54] asked any questions about hooks or short
+[00:28:56] form content, I'd like you to use the
+[00:28:57] viral hooks tab. Awesome. So, now I have
+[00:28:59] this audio, which is really cool. And
+[00:29:01] this can serve as a prompt for the
+[00:29:02] model. So, we're going to come down here
+[00:29:04] and then why don't we just grab this and
+[00:29:05] connect it and then we have something
+[00:29:07] here. Hey, read this and knowing exactly
+[00:29:10] what to consult when looking at
+[00:29:11] information. Okay, beautiful. And just
+[00:29:13] like that, it looks like it has
+[00:29:15] completed and it's checking. So, let's
+[00:29:16] come over now and check on our local
+[00:29:18] host. So, this is the one that it's
+[00:29:20] using to build out all the things. But
+[00:29:21] if I come over to our vision local host
+[00:29:23] and see if that has been updated and
+[00:29:24] guys, we this got Jackarot's profile
+[00:29:26] down at the bottom, which is cool. So,
+[00:29:27] if I click on settings, which is cool.
+[00:29:29] Here's a profile photo. I don't know who
+[00:29:30] this guy is. Who knows who this guy is,
+[00:29:32] dude. What's he doing on the Jack
+[00:29:33] Robbers YouTube channel? So, just come
+[00:29:34] down here and click on this photo. All
+[00:29:35] right, I've selected my profile photo.
+[00:29:37] See if this uploads real quick. And we
+[00:29:39] should be ready to rock and roll. And
+[00:29:40] there we go. I'm now live and ready and
+[00:29:42] cool and having a good time, which is
+[00:29:43] decent. So, if I click off this, if I
+[00:29:45] click on performance, come thinking. I'm
+[00:29:46] going to say, "Hey there, what is my
+[00:29:48] latest video?" Random question. Send
+[00:29:50] that one off. And you can see it is now
+[00:29:52] reflected there also. And you can also
+[00:29:53] amend it there. But you get the idea how
+[00:29:55] this is customizable, right? So, when we
+[00:29:56] build this out for a custom dashboard to
+[00:29:58] sign in, you can do a million things.
+[00:29:59] And so now we've got the functionality
+[00:30:00] that we're happy with in whatever
+[00:30:02] fullstrap act that we've got, right?
+[00:30:03] We've got a front end, we've got a back
+[00:30:05] end, we've got a database, we've got
+[00:30:07] logic and automation which we built in
+[00:30:09] this in this process. The next step, the
+[00:30:11] fourth step in our blast framework
+[00:30:13] stands for stylize. And this is the bit
+[00:30:15] where we take the design and the front
+[00:30:16] end from this to this. And to do this, I
+[00:30:19] like doing something called UI sniping.
+[00:30:21] And the idea of UI sniping, I'm going to
+[00:30:23] publish this post up from the community.
+[00:30:24] So helpful. So we got this 21st step
+[00:30:26] thing. And then my buddy, my main man
+[00:30:28] Max has dropped us with all of these
+[00:30:30] beautiful examples of things that you
+[00:30:32] can use. So the idea is we go to these
+[00:30:34] libraries, these components, and we find
+[00:30:36] things that we think look really cool.
+[00:30:38] Like this is a great one, 21st. And on
+[00:30:40] the left hand side, you'll see you can
+[00:30:42] basically search for anything. So I've
+[00:30:43] got borders here. I can do shide
+[00:30:45] borders, we got border beam, we've got
+[00:30:47] stuff for clients. Honestly, it's like
+[00:30:49] being a kid in a candy store. That's how
+[00:30:50] it sort of feels. So you got all this
+[00:30:52] cool stuff. if you've got footers and
+[00:30:53] you literally just pick the thing that
+[00:30:55] you want to have and then go and grab
+[00:30:56] it. AI chat is a really cool one and
+[00:30:58] essentially what we do I mean this is
+[00:30:59] actually really nice to be honest with
+[00:31:01] you. I really like this one and send
+[00:31:02] that one off. What does it do? Okay,
+[00:31:03] it's just like a basic chat. See most of
+[00:31:05] the internet are not reinventing these
+[00:31:07] components you know they're kind of like
+[00:31:09] just using existing things that are
+[00:31:10] already there. So you can pick all the
+[00:31:12] stuff that you want on the left hand
+[00:31:13] side and just go through all the
+[00:31:14] different components. This is another
+[00:31:16] example. I mean this is a really cool
+[00:31:17] disc website actually. I love how they
+[00:31:18] do this. So go around have a quick look.
+[00:31:20] I'll put some links down below so you
+[00:31:21] can just click the buttons and find the
+[00:31:22] stuff that you like. And this is really
+[00:31:24] cool. One I want to put on your radar as
+[00:31:25] well is actually code pen. They're
+[00:31:27] really cool. So if I type in I think it
+[00:31:29] was chat. This one is really cool. It's
+[00:31:31] like a convers. Okay, this one's really
+[00:31:32] nice. So this is a cool daily UI one. So
+[00:31:35] for example, you could come on something
+[00:31:36] like this and say hey blah blah blah. So
+[00:31:38] say we liked this design as a for
+[00:31:40] instance. What I could do is come back
+[00:31:41] over to anti-gravity which is chilling
+[00:31:44] out down here on my screen. I'm going to
+[00:31:46] say awesome dude. Now let's move to
+[00:31:47] phase four to stylization. I want to do
+[00:31:50] a full restylization guide and I would
+[00:31:52] like you to add to completely remodel
+[00:31:55] the chat window with again keep the
+[00:31:57] avatars but add the below code to do it
+[00:31:59] up and then I also want to improve the
+[00:32:01] features and the design of the entire
+[00:32:03] app generally. Okay. So I've given it
+[00:32:05] like a hey do like a general thing but
+[00:32:07] then what I'm going to do as well is
+[00:32:08] come over and grab some of the code then
+[00:32:10] from this and all we're going to do is
+[00:32:12] just copy this and we just paste in the
+[00:32:14] code. Bam. That's one. Just copy this
+[00:32:16] one. Come back over here. This is two.
+[00:32:18] And then come back over, grab this. And
+[00:32:20] this is three. So huge, huge shout out
+[00:32:23] to the individual sharing this code.
+[00:32:24] Let's give them their props. Come down
+[00:32:26] and find out who it was. But you
+[00:32:27] basically get the idea here. There you
+[00:32:28] go. They're on the suffer funk. What an
+[00:32:30] absolute legend. Cool person. So you get
+[00:32:32] the idea now. You basically UI snipe. So
+[00:32:33] then what we essentially do is look at
+[00:32:35] our application, think, cool, well, what
+[00:32:36] do I kind of want to change? Well, I
+[00:32:38] maybe I want a little bit of contrast on
+[00:32:39] this page. So then you do step by step.
+[00:32:41] You say screenshot. You like, cool, I
+[00:32:42] want to add more contrast on this. and
+[00:32:44] you just step by step step, excuse me, I
+[00:32:46] get emotional thinking about this stuff.
+[00:32:47] Go down and improve it. It is very
+[00:32:50] minimalistic and it follows some really
+[00:32:52] nice basic stuff which I think is really
+[00:32:54] tasty. But effectively, you're connected
+[00:32:55] now to the database connected to
+[00:32:57] everything. And now it's just about
+[00:32:58] making my design look fantastic. And
+[00:33:00] just like that, we've got this beautiful
+[00:33:01] design back from anti-gravity. Look at
+[00:33:03] this. We have these little individual
+[00:33:04] conversation starters. I could say I
+[00:33:06] want to brainstorm hooks. I can click on
+[00:33:08] send. I can embarrass different things.
+[00:33:09] And look at that highlight, guys. Look
+[00:33:11] at that attention to detail. And again,
+[00:33:12] we can UI snipe and change every bit of
+[00:33:14] detail. If we wanted to move it in
+[00:33:16] anyway, we can just tell anti-gravity.
+[00:33:18] I'll click send on this. You can see
+[00:33:19] it's bumping. He's having a good thing.
+[00:33:20] And of course, I can then come down and
+[00:33:22] check out everything on the left like
+[00:33:24] discovery where I can basically go ahead
+[00:33:25] and scrape and get various different
+[00:33:27] things. I've got all the things I have
+[00:33:28] in the save section. I've got my
+[00:33:30] performance. I've got essentially
+[00:33:31] everything that I want him, which is
+[00:33:33] awesome. There you go. Look at this
+[00:33:34] trend coming back, discovery popping
+[00:33:35] back, everything that we need. And of
+[00:33:37] course, all this is going back over to
+[00:33:38] Poppy, our beautiful AI brain engine,
+[00:33:40] which of course you can just chat on
+[00:33:42] Poppy. It's very, very cool if you want
+[00:33:43] to. So, once we've completed all the
+[00:33:45] design components and we're very happy
+[00:33:46] with the look and feel. We've grabbed
+[00:33:48] different components from different
+[00:33:49] websites, and we think it's amazing,
+[00:33:51] leads us very nicely onto the fifth step
+[00:33:53] of our five-step framework, which stands
+[00:33:55] for deploy. Now, why would we use
+[00:33:57] deployments? Well, there's a couple of
+[00:33:58] different ideas based on your use case.
+[00:34:00] So for instance, if we just want to use
+[00:34:02] this IMLA host as our own personal
+[00:34:05] ideiation operating system, we don't
+[00:34:07] really need to deploy it anywhere. But
+[00:34:09] maybe you want to have it with your team
+[00:34:11] or maybe you're selling it to customers
+[00:34:12] or maybe have clients. There are many
+[00:34:14] different reasons. But the other thing
+[00:34:15] that sits within deploy which is really
+[00:34:17] interesting is the scraper. So we could
+[00:34:19] have if we wanted to what if we want the
+[00:34:20] scraper to run every single day in the
+[00:34:22] background. What if we're scraping
+[00:34:24] YouTube and Instagram and Reddit and
+[00:34:25] LinkedIn and Instagram and many
+[00:34:27] different sources or we're scraping
+[00:34:28] leads, but we don't want to have to keep
+[00:34:30] re-triggering it. All that is solved in
+[00:34:32] the fifth step. And as you can see in
+[00:34:33] phase five, we've got cloud transfer. So
+[00:34:35] where are we sending to? Automation. So
+[00:34:37] setting up automation triggers,
+[00:34:38] documentation, and then we've got of
+[00:34:40] course operating principles which we
+[00:34:41] gave to anti-gravity at the beginning,
+[00:34:43] which is the data first rule, selfing,
+[00:34:44] repair loop, deliverables for
+[00:34:46] intermediates, and of course the file
+[00:34:47] struct that we gave it. So what we're
+[00:34:49] going to use for this is something
+[00:34:50] called modal. So, what I propose that we
+[00:34:52] do with this is just as a for instance,
+[00:34:54] you can see how we've got this discovery
+[00:34:56] thing here and we're running the
+[00:34:57] scraper. What I would like to do is set
+[00:34:59] it up so that the scraper runs every
+[00:35:01] single day automatically and that the
+[00:35:04] images and assets here just stay static
+[00:35:06] and then when something new is added, it
+[00:35:08] adds and when it isn't, we can remove
+[00:35:10] it. So, how would we actually physically
+[00:35:11] do that? I mean, what if we're at the
+[00:35:12] gym or our laptop's closed? Well, let me
+[00:35:14] show you. What we're going to do is we
+[00:35:15] need a platform to host on and we're
+[00:35:16] going to be using modal.com which is a
+[00:35:18] really great as I say it's AI
+[00:35:19] infrastructure the developers love. What
+[00:35:21] I really love is this on the homepage. I
+[00:35:24] keep clicking this button and this does
+[00:35:25] crazy stuff. But look if you head over
+[00:35:26] to the dashboard now it's very very
+[00:35:27] cool. Now check this out. What I want to
+[00:35:29] do is click on quick start guide like
+[00:35:30] so. Right. And what you're going to do
+[00:35:31] here basically is you're going to come
+[00:35:33] and copy this and then going to head
+[00:35:35] over to anti-gravity and we're going to
+[00:35:36] create a brand new chat window and we're
+[00:35:38] going to have a cool conversation here.
+[00:35:39] Cool. So what I'm going to say to it is
+[00:35:40] a block which is hey there dude happy
+[00:35:42] with the design? We can now move on to
+[00:35:43] phase five. What I would like to happen
+[00:35:45] now is the Reddit scraper to scrape once
+[00:35:47] a day. I want to write a script for
+[00:35:49] that. And when it's done it scraping, I
+[00:35:51] want you to save all of the information
+[00:35:53] within Superbase so that you don't have
+[00:35:54] to rescrape it. Then when it rescrapes
+[00:35:56] and refires, if there are new top
+[00:35:58] articles, add them. And if there are no
+[00:36:00] new top articles or it's the same
+[00:36:02] article, don't create duplicates. Just
+[00:36:03] leave it as it is. And on top of that, I
+[00:36:05] want the ability to delete and remove.
+[00:36:07] And I want this to run every day. And I
+[00:36:09] expect this to run on modal with the
+[00:36:10] below code. Awesome. All right, I'm
+[00:36:12] going to come down and then we're going
+[00:36:13] to enter in that code and then we
+[00:36:14] basically send it off and then
+[00:36:15] anti-gravity can start working its
+[00:36:17] magic. And after you've given
+[00:36:18] anti-gravity that code, it will actually
+[00:36:19] open up modal.com and a token flip. And
+[00:36:21] all you do is going to come down and
+[00:36:22] click authorize. And if for whatever
+[00:36:24] reason it doesn't do this, just tell
+[00:36:25] anti-gravity, hey, usually you open up
+[00:36:27] and I just click a one click on a browse
+[00:36:29] to my tokens. Do that, please. And then
+[00:36:31] when you head over to modal, you can
+[00:36:32] actually see that it's there and ready
+[00:36:33] to run in the next 4 hours and 43
+[00:36:36] minutes. And then we come back and say,
+[00:36:37] "Hey, dude, that's all complete.
+[00:36:38] Fantastic. And now it's done." Now
+[00:36:40] obviously if you wanted to publish this
+[00:36:41] online to Versell we can do that. Now
+[00:36:44] Versell is very very cool. Essentially
+[00:36:46] the way that it works is we publish the
+[00:36:47] thing to GitHub okay and then from
+[00:36:49] GitHub we then publish it to Vel. So
+[00:36:51] what do GitHub we come over we click on
+[00:36:52] new cuz GitHub is just a place that
+[00:36:54] takes all that cool code that you built
+[00:36:56] and then puts it online. So I can come
+[00:36:57] down here and I could call this one
+[00:36:58] something like let's call this one like
+[00:37:00] personal OS. Now if it's just for your
+[00:37:02] personal use, you don't need to do this.
+[00:37:03] But if you're building an app, this is
+[00:37:04] what it is. And we give it a description
+[00:37:06] like personal OS which is cool. Come
+[00:37:07] down and create repository. I'm going to
+[00:37:09] make it public for the time being, but
+[00:37:10] then I can make it private afterwards
+[00:37:11] cuz we connect via token. Then all you
+[00:37:12] do is come down and click this copy,
+[00:37:14] come back over and say, "Hey dude, I'd
+[00:37:16] like you to commit all the files to
+[00:37:17] GitHub and do any changes or checks or
+[00:37:19] anything like that to make sure that it
+[00:37:21] is fully hosted on GitHub and is all
+[00:37:23] sorted out. Okay, beautiful. Send one
+[00:37:25] off. We accept all and then we're going
+[00:37:26] to give it the GitHub link like so,
+[00:37:28] which is awesome." And then bring in
+[00:37:30] we'll just full screen this guy right
+[00:37:31] here. Wonderful. And if by magic it's
+[00:37:33] done it, which is great. And all we now
+[00:37:34] do is click this button like so. And
+[00:37:36] what's happened? Well, if I come up
+[00:37:37] here, you can see basically it's now
+[00:37:39] these are all of our wonderful files
+[00:37:41] that exist. And then what we need to do
+[00:37:42] is head over to Visel. Now, Visell is
+[00:37:44] just somewhere where we host the stuff.
+[00:37:46] So, you just connect this to GitHub. And
+[00:37:48] remember, GitHub is just a place where
+[00:37:50] we store files. That's all it is. It's
+[00:37:51] called a repo repository. Sounds a bit
+[00:37:54] fancy when you first learn it, but
+[00:37:55] honestly, it's just a place where they
+[00:37:56] put documents. There's nothing more
+[00:37:57] complicated to it than that. Like TMP
+[00:37:59] most people like, what the hell does
+[00:38:01] that mean? You know, it's honestly it's
+[00:38:02] it's just all coden files. That's all it
+[00:38:03] is. So, look, we're over here now. All
+[00:38:05] you're going to do is click on add new.
+[00:38:06] add new project and you're going to see
+[00:38:07] personal OS. So we click on import which
+[00:38:09] is cool. Now this typically dynamically
+[00:38:12] identifies the framework presets so you
+[00:38:14] don't need to worry about this. I'll
+[00:38:15] also show you by the way how you get a
+[00:38:17] personal domain if you want to. Super
+[00:38:18] cool. And all we do is just click on
+[00:38:20] well we got environment variables which
+[00:38:21] is cool which actually we don't even
+[00:38:23] need to mess around with. And we click
+[00:38:24] deploy. So this is a great opportunity
+[00:38:26] to explain environment variables. So
+[00:38:28] let's say that you deploy an app that
+[00:38:30] needs chat GPT or Gemini or Claude in it
+[00:38:33] or maybe it connects to Superbase and
+[00:38:35] loads of things. You might be wondering,
+[00:38:36] well, how do I connect to this in a way
+[00:38:39] that doesn't expose me? Well, the idea
+[00:38:41] is that we can use these environment
+[00:38:42] variables. So we hardcode those into VUL
+[00:38:44] so they're not publicly exposed ever,
+[00:38:46] which means that they're secure, which
+[00:38:48] is super cool. So what we're going to do
+[00:38:49] now, as you can see, we click on this,
+[00:38:50] we open up, and it says 404 not found.
+[00:38:52] And I'm so glad this happened cuz I can
+[00:38:54] show you how you troubleshoot. So check
+[00:38:55] this out. You right click, you go to
+[00:38:56] inspect, right? You can see all the code
+[00:38:58] and what's happened here. So you have
+[00:38:58] this little X. We click on this guy and
+[00:39:00] let's have a look. So fail to live
+[00:39:01] resource the server responded with
+[00:39:02] status four or four. Oh my goodness. All
+[00:39:04] we're going to do is control 5 come
+[00:39:06] over. And actually I think the reason
+[00:39:07] why this has failed is because we
+[00:39:09] haven't configured our environment
+[00:39:11] variables. I think that's exactly what's
+[00:39:13] happened here. So let me show you
+[00:39:14] something really cool. Okay. Come down
+[00:39:15] here options. Click on clipboard. Now
+[00:39:17] I'm going to head over to anti-gravity.
+[00:39:18] I'm going to paste in this. And I want
+[00:39:19] you to come to these dots and I want you
+[00:39:21] to go to MCP servers and I want you to
+[00:39:22] type in the cell which should be
+[00:39:24] available there. Okay. You don't see it.
+[00:39:26] That's cool. So, just like I showed you
+[00:39:28] before, you're going to head over to
+[00:39:29] JGBT or Gemini. We'll do that right now.
+[00:39:31] And then we just say something like,
+[00:39:32] "Hey there, man. What is the MCP config
+[00:39:34] for Versell?" Sweet. And then Gemini
+[00:39:36] will give us the MCP config for Vel. And
+[00:39:39] just like before, you're going to head
+[00:39:40] over to Vel. You're going to go and grab
+[00:39:42] your API token if you haven't got that
+[00:39:43] already. So, let's come ahead and grab
+[00:39:45] that. So, the address is
+[00:39:47] val.com/account/settings/
+[00:39:50] tokens. And all you do is create a brand
+[00:39:51] new token. Just call this one something
+[00:39:52] like blah blah blah blah. Actually,
+[00:39:53] oops, not in the scope. We don't need
+[00:39:54] that. Click all this stuff. I come down
+[00:39:56] to full account and expiration date.
+[00:39:57] However comfortable you are with the
+[00:39:59] expiration date, I'll just put a day for
+[00:40:00] example. Click on create and then you've
+[00:40:02] got the access token. Then you copy it.
+[00:40:03] Put that to one side. Beautiful. I'll
+[00:40:05] just delete this right now. It's always
+[00:40:06] best practice to delete all all these
+[00:40:08] codes. But you can see I've got one in
+[00:40:09] there from earlier. And then on Gemini,
+[00:40:11] you can see, have we got the Vessel? We
+[00:40:13] do. Cool. So this is the endpoint, which
+[00:40:15] is cool. So we do copy this. And just
+[00:40:17] like I showed you earlier in the video,
+[00:40:18] we're going to do the exact same
+[00:40:19] process. Okay, I did it earlier, which
+[00:40:21] is why you can see at the moment I have
+[00:40:23] Vel right here, which is cool. But
+[00:40:25] here's one thing you're going to find
+[00:40:26] out, guys. It's got 150 different
+[00:40:28] configurations, which is obscene. So,
+[00:40:31] just in the ones that I use, I use
+[00:40:32] Vellless Projects. I use number six. I
+[00:40:35] use 12, 13, 14, 15. And then I also use
+[00:40:38] I think that might be all of them
+[00:40:40] actually. There 146, 147, 148, 149.
+[00:40:43] These are the ones that I find helpful.
+[00:40:44] The way that I came to the
+[00:40:45] determination, by the way, I basically
+[00:40:46] worked it through his AI about all the
+[00:40:47] stuff I expect to do and it reduced it.
+[00:40:49] Cuz if you don't reduce that down, like
+[00:40:51] it's going to like you're going to run
+[00:40:52] into a lot of problems cuz 100 is where
+[00:40:53] you want to be. we need to enable it,
+[00:40:56] which we have. And I'm going to just
+[00:40:57] disenable
+[00:40:59] motion for a second, which is cool. So,
+[00:41:01] I'm going to come back over to manage
+[00:41:02] MCP servers. Let's go back to the agent.
+[00:41:04] And I'm going to say, "Hey, dude, it's
+[00:41:05] failed." And I believe that's because it
+[00:41:07] doesn't have the environmental variables
+[00:41:08] configured. You have access to a VEL
+[00:41:11] MCP. I would like you to use that MCP to
+[00:41:13] put in all of those environmental
+[00:41:15] variables for me and fix it. Awesome.
+[00:41:16] And what I'm going to do is just send
+[00:41:17] that one off and let it work as
+[00:41:18] background. And honestly, the VLE MCP is
+[00:41:21] wonderful because you it can really do
+[00:41:23] so much for you though, which is so
+[00:41:25] awesome. Like all the environmental
+[00:41:26] variables like copying this API key,
+[00:41:27] that AP, it's like a FAF and it just
+[00:41:29] enables it to just run forward and do it
+[00:41:31] wonderful things. As you can see now,
+[00:41:32] MCP tools, VLE project, it's like I'm
+[00:41:34] going to find the project and it knows
+[00:41:36] the project because we just put it to
+[00:41:38] GitHub. Right now, whenever I make any
+[00:41:39] changes to this ever, what will happen
+[00:41:41] is this will update GitHub and then
+[00:41:43] because Vel is just a mirror of GitHub.
+[00:41:45] It's like kind of like the expression of
+[00:41:46] G. That's the code. This is what the
+[00:41:48] code gives you. That's what it that's
+[00:41:49] all it is. So when we update the code,
+[00:41:50] the cell changes instantaneously, which
+[00:41:52] is cool. And just like that, it has now
+[00:41:53] officially completed it. So I've added
+[00:41:55] the missing environment variables to for
+[00:41:57] Superbase, which is awesome. To make
+[00:41:59] sure these changes take effect, I pushed
+[00:42:00] a small update repository to
+[00:42:01] automatically trigger a new deployment
+[00:42:03] to Vel. Wait a moment and then come
+[00:42:04] check it out. All right, cool. Well,
+[00:42:05] let's go back and we'll wait a moment.
+[00:42:07] Let's click on it and see if it's now
+[00:42:08] loaded. And just like that, guys,
+[00:42:10] anti-gravity has now pushed this live to
+[00:42:12] Vel for us because it's connected via
+[00:42:15] MCP. So, all I can do is click on this
+[00:42:17] now as you can see. And now we have the
+[00:42:19] beautiful app, the personal operating
+[00:42:20] system.app. And I can change the domain
+[00:42:22] for this or do anything I want to. I've
+[00:42:24] got discovery. I've got my save stuff
+[00:42:25] which connected to my superbase. I've
+[00:42:27] got my performance. Of course, haven't
+[00:42:28] saved anything yet with the refresh
+[00:42:30] superbase. I've got everything that I
+[00:42:31] want in the app, which is freaking
+[00:42:33] crazy. I've even got this progress
+[00:42:34] target to 100,000 subscribers and also
+[00:42:36] Instagram, which is freaking awesome.
+[00:42:38] So, how do I change the domain with
+[00:42:40] this? Well, one of the things that you
+[00:42:41] can do with this, right, you continue
+[00:42:42] down to your dashboard here. Let's have
+[00:42:43] a quick look. And then what we can do
+[00:42:45] here is have basically this is where you
+[00:42:46] can edit your entire app. It has all
+[00:42:48] these different functions. It has your
+[00:42:49] deployments, your analytics, speed
+[00:42:51] insights. You can check everything
+[00:42:53] that's happening here. You can even
+[00:42:54] manage storage. It's kind of think of
+[00:42:56] this like your WordPress interface
+[00:42:57] basically. We can manage anything that
+[00:42:59] you need to. But specifically for us, we
+[00:43:00] want to click on this domains thing here
+[00:43:02] because this is where you can manage
+[00:43:03] domains. And all you do is come down and
+[00:43:05] buy domain. And you can say, "Hey, I
+[00:43:06] like uh let's just say glidoiscool.com,
+[00:43:09] right? Glidos speech to text. We love
+[00:43:11] it. Glidiscool.com. I don't know, $3.99,
+[00:43:14] whatever you want to buy. We can
+[00:43:14] literally come down here, we can add it.
+[00:43:16] And by the way, this is the exact same
+[00:43:17] process. You proceed down to the
+[00:43:18] checkout, you purchase it, and then you
+[00:43:20] can enable it. It's the same thing that
+[00:43:21] I did when I purchased scalewithted.com,
+[00:43:23] which I built with anti-gravity, GitHub,
+[00:43:25] and Versel. This exact website, guys, is
+[00:43:28] all built. And if I make any changes,
+[00:43:29] anti-gravity, this reflects like how
+[00:43:31] freaking cool is that? And it's the same
+[00:43:32] thing with I think it's ideas with Jack.
+[00:43:34] You can see it's Versel redirects to
+[00:43:36] ideas with Jack. Really simple. Very,
+[00:43:38] very, very cool. And then we've also got
+[00:43:39] the thing now running for us on Modal
+[00:43:41] which will fire off the automation for
+[00:43:43] us instantaneously. And so now we've
+[00:43:44] covered exactly how to build these full
+[00:43:46] stack apps in anti-gravity if you want
+[00:43:48] to take it one step further and learn
+[00:43:50] the exact systems that I use to scale my
+[00:43:52] own business and I've helped hundreds of
+[00:43:53] businesses do it. You want to know the
+[00:43:54] systems, the blueprints, all the
+[00:43:56] technology because what I share on
+[00:43:57] YouTube is just a fraction of what I
+[00:43:59] have inside my community. So, if you
+[00:44:01] want to take to X next level, you can do
+[00:44:02] that by clicking the link at the top of
+[00:44:04] the description.

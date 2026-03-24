@@ -1,0 +1,1321 @@
+[00:00:00] in this video I'm going to show you how
+[00:00:01] to create a 100% automated mid Journey
+[00:00:04] content approval system that will take a
+[00:00:06] recent article or piece of news run it
+[00:00:09] through a system create a viral post for
+[00:00:11] that bring it through to an approval
+[00:00:13] dashboard and you remember on Mid
+[00:00:15] Journey when you get an image you get
+[00:00:16] like 1 2 3 4 you get to select if you
+[00:00:19] like image 1 2 3 4 or maybe you just
+[00:00:22] want to reroll you hit roll that will
+[00:00:24] then send the image again but if you
+[00:00:25] like image 1 2 3 4 that will then go
+[00:00:28] ahead create that image for you run it
+[00:00:30] through our series of Proms and at the
+[00:00:32] end of it you have the entire thing that
+[00:00:33] will then populate an incredible
+[00:00:35] document with a viral post for your
+[00:00:37] specific social media platform and this
+[00:00:39] just means that you can get incredibly
+[00:00:40] epic personalized images all automated
+[00:00:43] from one single dashboard and if you
+[00:00:45] don't know who I am my name is Jack and
+[00:00:46] this YouTube channel is all about
+[00:00:48] incredible AI it's about The Cutting
+[00:00:50] Edge of the automations and most
+[00:00:52] importantly it's about the stuff that
+[00:00:54] actually works with all that in mind
+[00:00:56] let's grab that coffee mine's right here
+[00:00:58] and let's really jump in if this this is
+[00:01:00] a video that you're watching for the
+[00:01:01] first time and you haven't seen my last
+[00:01:03] video here on how to get incredible midg
+[00:01:05] images that video I'd encourage you to
+[00:01:07] go and watch that first that video will
+[00:01:08] show you step by step how to set the mid
+[00:01:11] Journey automation up all the tools that
+[00:01:13] you need it's a really great video and
+[00:01:15] basically this video is following that
+[00:01:18] that's like the level one this video is
+[00:01:20] a level two and we'll show you actually
+[00:01:21] now we've got all the connections in how
+[00:01:23] do we create something that's an
+[00:01:24] automated approval system so go ahead
+[00:01:26] and watch that one we're going to be
+[00:01:28] waiting here for you when you come back
+[00:01:30] and when you are back grab that coffee
+[00:01:32] and let's jump straight in so if you
+[00:01:33] just joined us again welcome back now
+[00:01:35] the only thing you need for this
+[00:01:37] automation that wasn't covered in that
+[00:01:39] last video is access to something called
+[00:01:42] air table and it's super easy to set up
+[00:01:45] I'll show you exactly how to do that now
+[00:01:47] you've got everything you need I'm going
+[00:01:48] to first of all show you how this works
+[00:01:50] step by step so you can see so I'm going
+[00:01:52] to run the whole automation once and
+[00:01:54] then I'll explain exactly how you can do
+[00:01:56] the same thing so we've got just for
+[00:01:58] your context four parts to this we've
+[00:02:00] got the first leg of the journey the
+[00:02:03] first leg of the journey has a trigger
+[00:02:04] which connects to RSS it grabs the
+[00:02:06] latest article we grab the file it does
+[00:02:09] the passing it goes for LinkedIn agent
+[00:02:11] creates a VAR post for us sends it over
+[00:02:14] to our called Google doc which is great
+[00:02:16] you can get anywhere you want to then it
+[00:02:18] creates an image this then grabs the
+[00:02:21] image and what that does is send the URL
+[00:02:24] of that image to our dashboard so then
+[00:02:26] we can click on the image take a look at
+[00:02:28] it and we can say do I like 1 2 three or
+[00:02:31] four or do I just want to roll the whole
+[00:02:33] thing so we then decide look I want
+[00:02:35] image X and you kind of come in and you
+[00:02:36] select that once that then happens it
+[00:02:39] goes through to this automation which is
+[00:02:41] looking for a change then sends it down
+[00:02:43] a router basically based on what you
+[00:02:45] want is it a roll is it up scale one up
+[00:02:47] scale two up scale three or up scale
+[00:02:49] four and then that goes to the fourth
+[00:02:51] and final part where it then grabs that
+[00:02:53] new image and sends it over to our
+[00:02:56] awesome document sounds a bit more
+[00:02:58] complicated than it is but I promise you
+[00:02:59] I'll show you exactly how to do
+[00:03:01] everything step by step so you you'll
+[00:03:03] have no unanswered questions by the end
+[00:03:05] of this so let's set run Once on This
+[00:03:08] we're going to wait for new data we're
+[00:03:10] going to come over to the left and then
+[00:03:11] I'm going to hit run once awesome so now
+[00:03:13] it's grabed something in the RSS feed
+[00:03:15] we've taken that file it's been passed
+[00:03:17] it's running through our LinkedIn GPT
+[00:03:19] assistant which is excellent and now
+[00:03:21] it's going to go through to the mid
+[00:03:23] Journey bot to find and create for us a
+[00:03:25] specific promt and I should say by the
+[00:03:27] way guys all the proms all the Brew
+[00:03:29] plums everything that you need to run
+[00:03:30] this automation is available uh Down
+[00:03:33] Below in the school Community it's all
+[00:03:34] available in our classroom uh you can
+[00:03:36] access everything you need to including
+[00:03:38] the agent for creating the mid Journey
+[00:03:40] prompts and basically everything you
+[00:03:42] need uh for this automation as well as
+[00:03:44] the ability to upload it which is always
+[00:03:45] good so this is completed that's done
+[00:03:48] that now it's going to come through to
+[00:03:50] this web hook for us and then once this
+[00:03:51] is complete we should see in the mid
+[00:03:53] Journey another thing come through so
+[00:03:55] just to make this simple I'm just going
+[00:03:57] to delete these amazing and then we're
+[00:04:00] going to come back here great and
+[00:04:02] obviously at any time as you remember
+[00:04:03] from the last video we can see the
+[00:04:06] progress happening in real time so we
+[00:04:08] know that that's working and I'd
+[00:04:09] encourage you to have that uh always
+[00:04:11] loaded up in the background so this is
+[00:04:13] all loading up and now we're going to
+[00:04:15] wait for it to be caught by the web Hub
+[00:04:16] and when it does that we can then go
+[00:04:18] through our approval system uh in our in
+[00:04:20] our dashboard which will be excellent
+[00:04:22] and obviously with this sort of stuff
+[00:04:23] guys the capabilities of mid journey is
+[00:04:26] just insane I mean the number of things
+[00:04:28] you can do is crazy now look it's Gra
+[00:04:29] grab that it's come through to the air
+[00:04:31] table I now go over to the air table and
+[00:04:34] look awesome so I click on this URL
+[00:04:37] let's see what it is so we've got crypto
+[00:04:39] crypto crypto crypto it all looks pretty
+[00:04:41] good if I go over to my document I
+[00:04:43] should see a post there awesome great
+[00:04:46] there we go got all this cool
+[00:04:47] information perfect so we come back over
+[00:04:50] now to this let's just say for the
+[00:04:52] purpos of this I quite like the look of
+[00:04:54] image one great so I come back over I
+[00:04:57] look at my decision and I say I want
+[00:04:59] image one and I come back over to our
+[00:05:01] scenario okay let's just Auto align this
+[00:05:04] come here I'm going to run this once
+[00:05:07] come here and then we'll run this
+[00:05:10] excellent so look at this it's filtered
+[00:05:12] and cuz I select upscale one it's gone
+[00:05:14] straight to the top then I come here
+[00:05:16] it's grabed that and then sent it to
+[00:05:18] Google doc so I come to the Google Doc I
+[00:05:20] should see my image appearing at the
+[00:05:21] bottom and there we go guys that's it
+[00:05:24] now I could have rerun that I could have
+[00:05:26] said no redo the whole automation again
+[00:05:28] and it would have done
+[00:05:30] exactly that so that's everything that's
+[00:05:32] been completed and guys essentially what
+[00:05:33] this enables you to do is have full
+[00:05:35] autonomous control of the images that
+[00:05:37] mid Journey creates in your automations
+[00:05:40] I I actually think this is phenomenally
+[00:05:43] cool it's like a step up from the last
+[00:05:45] video but once you've got the mid
+[00:05:46] Journey bit integrated if you want that
+[00:05:48] full control and you don't just want to
+[00:05:49] go with one image this really is the
+[00:05:52] next level so we're now going to build
+[00:05:54] this all from scratch obviously if you
+[00:05:56] po the community all you ever need to do
+[00:05:58] is come down click more input the
+[00:06:00] blueprint and all these things will just
+[00:06:01] appear and I'll save you a ton of time
+[00:06:03] but I'm going to build it from scratch
+[00:06:04] for you so you can also see how this
+[00:06:06] process works from the beginning to the
+[00:06:08] end so I want to start by just outlining
+[00:06:10] the chess board for you for this
+[00:06:11] automation to give you a little bit of
+[00:06:13] context and I touched on it briefly
+[00:06:14] before you've got page one which is
+[00:06:18] creates the post and creates the image
+[00:06:21] you have automation 2 which basically
+[00:06:24] grabs that image and sends it to our air
+[00:06:27] table you've got part three which is the
+[00:06:30] air table you have part four which is
+[00:06:34] the basically the decision you've made
+[00:06:36] either do you want to roll or upscale
+[00:06:38] and then part five is the grabbing of
+[00:06:40] that image and upscaling it sounds a
+[00:06:41] little bit complicated but I promise you
+[00:06:43] it will make perfect sense when I run
+[00:06:45] through this with you okay so let's head
+[00:06:47] over to make.com and build this
+[00:06:48] automation from scratch so I'm going to
+[00:06:51] call this one
+[00:06:53] new
+[00:06:55] level and we're going to give it a
+[00:06:57] little Emoji let's give it a level hard
+[00:07:00] and we're going to say one out of four
+[00:07:02] cool so let's name it and we can keep
+[00:07:04] track of it so for the purposes of this
+[00:07:06] automation I'm going to run it off an
+[00:07:07] RSS feed today let's give it a different
+[00:07:11] RSS feed okay again the last video If
+[00:07:13] this all sound like what's an RSS feed
+[00:07:15] go check out that last video and it'll
+[00:07:16] explain everything for you but you know
+[00:07:18] in reality guys you can use any RSS feed
+[00:07:21] that you want to so let's grab a topic
+[00:07:22] let's do something a little bit
+[00:07:23] different today shall we let's go for
+[00:07:25] something in the fashion space as you
+[00:07:27] can tell I'm in the jungle I've got the
+[00:07:29] the jungle behind me with this top so
+[00:07:30] I'm feeling very very jungle like all
+[00:07:33] right does this look cool you know what
+[00:07:36] yeah let's just go for it let's say feed
+[00:07:38] um and let's copy it awesome so we come
+[00:07:40] over we're going to do RSS for this one
+[00:07:42] but again it could be any trigger you
+[00:07:44] want so I've built this so it's
+[00:07:45] configurable for you I just want to
+[00:07:46] build it in a way that just gives you
+[00:07:47] the most amount of options possible for
+[00:07:49] your use cases so look let's go for
+[00:07:52] retrieve RSS feed items we're going to
+[00:07:55] hit the URL and as I always say you can
+[00:07:58] retrieve which is hey bring back every
+[00:08:00] the last 10 15 20 100 records or watch
+[00:08:03] for which is as soon as something posts
+[00:08:05] Bring It Down based on what you want to
+[00:08:07] do you can go for either one of them a
+[00:08:09] lot of people go for retrieve and they
+[00:08:11] just run this automation every like
+[00:08:13] eight hours like bring me the last 10
+[00:08:15] every 8 hours for the purposes of this
+[00:08:17] I've gone with and I'll show you here
+[00:08:19] just just to make it really easy for you
+[00:08:21] come back down here I've gone for for
+[00:08:24] retrieve just to make this automation
+[00:08:25] easier but if you want to watch and do
+[00:08:27] high volume that's also an option
+[00:08:29] excellent so retrieve ours items we
+[00:08:32] enter the URL that we just copied from
+[00:08:35] over here we come back by the way links
+[00:08:37] for everything is going to be down below
+[00:08:39] for you so you can just click and click
+[00:08:40] and go Max number of return items just
+[00:08:42] one cuz I want to make this automation
+[00:08:44] friendly cool so then let's run this
+[00:08:46] module once this may feel a bit like
+[00:08:49] deja vu if you've just seen it in the
+[00:08:50] last video but it's always good to
+[00:08:52] refresh your memory I think it's always
+[00:08:54] good get that muscle memory built up
+[00:08:56] cool so we grabbed that then we come
+[00:08:58] here the next thing we want to do do of
+[00:09:00] course is to download the file right so
+[00:09:02] let's do
+[00:09:04] HTML excuse me get a file HTTP click on
+[00:09:07] this come over here grab the URL click
+[00:09:12] okay perfect once we've done that we're
+[00:09:13] going to come over here and we're going
+[00:09:15] to do for
+[00:09:16] HTML to text cool so we know this right
+[00:09:20] we've got the RSS feed item loads of
+[00:09:22] website gole to we've got the HTTP geta
+[00:09:24] file which is going to grab all of the
+[00:09:27] text from that page but it's going to in
+[00:09:29] HTTP which is of no use to us so we come
+[00:09:32] on HTML we come over and then we hit
+[00:09:34] data and then we click okay and let's
+[00:09:36] just run this whole thing once okay I
+[00:09:38] know it's okay transform is fine we've
+[00:09:40] grabbed the article we've got all the
+[00:09:42] information from that URL and we've just
+[00:09:43] converted it into text so if I click
+[00:09:45] here I should see a long string of
+[00:09:49] information yeah wow there's a lot of
+[00:09:51] information that isn't it like look at
+[00:09:53] this I think it's cuz like it's a news
+[00:09:54] article with an incredible amount of
+[00:09:56] stuff on there okay cool perfect now
+[00:09:59] last video I did a LinkedIn bot this one
+[00:10:01] I'm going to do a Twitter bot now if
+[00:10:02] you're unfamiliar with how to build that
+[00:10:05] um you just head over to platform
+[00:10:07] open.com assistant and once you're there
+[00:10:10] you're going to click on create um the
+[00:10:12] best place to get all the information
+[00:10:14] for this is well in my school Community
+[00:10:16] if you come over the classroom if I come
+[00:10:18] down to prompts and agents and then I
+[00:10:21] can see Twitter on the left and then
+[00:10:23] this is our generation 3 Model we click
+[00:10:25] on that um and this is all the all the
+[00:10:27] data we need and then we come back over
+[00:10:29] we paste it in we say hey act as an INF
+[00:10:31] tour expert in insert industry I'm doing
+[00:10:33] fashion today so I put fashion there
+[00:10:35] you'll be provided with a piece of
+[00:10:36] content this could be an article summary
+[00:10:38] LinkedIn post so it'll be verti whatever
+[00:10:40] you need prompt please read the
+[00:10:41] following content and then it's got all
+[00:10:43] our all the explainers in there and all
+[00:10:44] the examples and stuff awesome and then
+[00:10:46] we'll call this Twitter build to
+[00:10:50] together and of course do we want a
+[00:10:52] little let's put a little diamond on
+[00:10:54] there for for good measure AC CPD for is
+[00:10:57] okay for the purposes of this excellent
+[00:10:59] okay cool and then let's go back over
+[00:11:01] now to our Automation and you click on
+[00:11:03] assistant and to find it and if you're
+[00:11:05] not seeing it there guys just come up
+[00:11:06] here and hit the refresh icon cuz you
+[00:11:08] just created it it just may need to
+[00:11:10] refresh its list to make sure it gets it
+[00:11:12] awesome then we click on message and
+[00:11:14] then let's scroll over so you can see
+[00:11:16] and the message you want is the HTML to
+[00:11:18] text excellent and then we're going to
+[00:11:20] click okay perfect now let's rename this
+[00:11:23] for example we're going to rename this
+[00:11:25] one Twitter agent and I think Twitter
+[00:11:28] agent needs a little bit of a bird you
+[00:11:30] know I've not really fully adopted the X
+[00:11:31] thing yet I think what do they say the x
+[00:11:34] is like excrements is what they call
+[00:11:35] them right would you call them tell me
+[00:11:37] down below would you call them
+[00:11:38] excrements or tweets tell me I don't
+[00:11:40] know i' would love to know what you're
+[00:11:41] calling X in the moment let me know in
+[00:11:42] the comments and so the next thing we
+[00:11:43] need now is to create the prompt for Mid
+[00:11:45] Journey so we're going to zip back over
+[00:11:47] now to my classroom uh we're going to
+[00:11:49] come down to image and video and using
+[00:11:53] mid Journey make perfect there's the
+[00:11:55] guide there's all the stuff we need and
+[00:11:56] then click on this mid Journey prompt
+[00:11:58] awesome and I've just come back to the
+[00:12:00] drive version of it just so you can get
+[00:12:01] a good visual look of what it does so
+[00:12:03] essentially as you remember from the
+[00:12:04] last video it takes a text and it has
+[00:12:06] this um format of subject action setting
+[00:12:08] additional details and we give it some
+[00:12:10] prompts about what an example input and
+[00:12:12] output text would be uh and some
+[00:12:14] basically some of the details so we have
+[00:12:15] the subject the action the setting the
+[00:12:17] additional details we copy all of this
+[00:12:20] like so copy all come back over and then
+[00:12:23] we go over to our make scenario cool and
+[00:12:25] then we click on this and then we're
+[00:12:27] going to go for message
+[00:12:30] and assistant and if you remember guys
+[00:12:31] I'm using message and assistant just
+[00:12:33] because I plan to be using this across
+[00:12:35] multiple different automations it'll
+[00:12:37] just save me some time in doing that so
+[00:12:38] click on this click on Mid
+[00:12:42] Journey bot and I know that like I'm not
+[00:12:44] explaining every single detail as as I
+[00:12:47] would do normally and I'm only doing
+[00:12:49] that because this video really it's
+[00:12:51] first of its kind where it just follows
+[00:12:52] on from the last video so if you really
+[00:12:55] need to watch that last video and this
+[00:12:56] will make it just a lot easier just so
+[00:12:58] people have seen it they can kind of
+[00:12:59] jump in and run with this it's like a
+[00:13:01] part to it cool so we got the mid
+[00:13:02] Journey bot we select that and if you
+[00:13:05] haven't made him as just a gentle
+[00:13:06] reminder come over here create a new one
+[00:13:09] enter the prompt give it a name mid
+[00:13:13] Journey bot with a load of teas on it
+[00:13:16] and then that will just save cool so we
+[00:13:19] select our mid Journey prompt and then
+[00:13:20] the message that we're going to give it
+[00:13:22] is from the Twitter agent and we're
+[00:13:24] doing that just because it's going to be
+[00:13:26] a bit easier and less tokens and then we
+[00:13:29] click okay awesome awesome awesome so
+[00:13:32] what is next well as you might have
+[00:13:33] guessed we're going to add it to the
+[00:13:35] Google Doc so this part of the
+[00:13:36] automation should look exactly the same
+[00:13:39] as the last one so come down here click
+[00:13:43] add excuse me if type in paragraph
+[00:13:45] insert a paragraph to a document awesome
+[00:13:48] we click on that we select the document
+[00:13:50] that we want I've corrected one it said
+[00:13:51] mid Journey cool and we select the
+[00:13:53] document mid Journey Automation and then
+[00:13:54] appended text come down and we want the
+[00:13:57] result from the Twitter agent awesome
+[00:13:59] and then we click okay great and then we
+[00:14:02] do one final more here great sweet this
+[00:14:05] is going to be our user API and of
+[00:14:08] course we just come down to imagine
+[00:14:10] perfect and then we enter all the stuff
+[00:14:13] that we now before we do that we now
+[00:14:15] need to create the second part of our
+[00:14:17] scenario and of course to this we need
+[00:14:18] to create a new web hook so let's open
+[00:14:20] up a new browser in me.com and one of
+[00:14:23] the reasons why I'm rebuilding this from
+[00:14:24] scratch is I thought it just be easier
+[00:14:26] to follow than taking the previous one
+[00:14:27] and butchering it around a little bit
+[00:14:29] all right cool so what was what do we
+[00:14:31] call this one new level one out of four
+[00:14:32] so copy new level one out of four we
+[00:14:34] come over here new level you might have
+[00:14:37] guess this one two out of four okay
+[00:14:39] perfect so now that's done this person's
+[00:14:41] very rudely interrupting our
+[00:14:43] conversation they need to they need to
+[00:14:44] stay with that I'm trying to get really
+[00:14:45] big on like leaving phans out the room
+[00:14:47] when like you're spending time with
+[00:14:48] friends and stuff I do think it's so
+[00:14:49] important cool so that's done we now to
+[00:14:52] create a web hook click on this one web
+[00:14:55] hook and what we're looking for of
+[00:14:56] course is custom web hook great so let's
+[00:14:59] add a new web hook we'll call this one
+[00:15:01] new level 2 out4 great and that is
+[00:15:05] decent and then all we do is we copy the
+[00:15:08] address to the clipboard then we come
+[00:15:10] back okay web hook type post data once
+[00:15:15] generation is complete we don't want to
+[00:15:17] we don't want a million updates on
+[00:15:18] what's going on post data once
+[00:15:20] generation is complete web hook URL in
+[00:15:22] other words great I've got the image
+[00:15:24] where do you want me to send it to we
+[00:15:25] want you to send it to that and then
+[00:15:27] we've got the prompt to generate the
+[00:15:28] image which is just going to be the
+[00:15:31] output from the mid Journey B assistant
+[00:15:34] now we hit result and then we click okay
+[00:15:37] now we bought quite a lot we should
+[00:15:39] definitely test this so we're going to
+[00:15:40] Auto align it we're going to save so now
+[00:15:42] that's done I'm going to come on here
+[00:15:44] now when you're testing your web hook
+[00:15:45] guys run the web hook first and then
+[00:15:47] come back and start your scenario just
+[00:15:49] so the web Hook's actively looking in
+[00:15:51] reality it'll be looking 24/7 these web
+[00:15:53] hooks guys they don't sleep at anything
+[00:15:55] it's incredible so run ones that's going
+[00:15:57] to wait for data now the only thing that
+[00:15:58] has that web hook address is this
+[00:16:00] scenario so nothing should be pinging it
+[00:16:02] off let's click run ones let's see how
+[00:16:04] we get RSS feeds grabb the article out
+[00:16:07] of curiosity what is it on four female
+[00:16:09] fashion icons look for something okay
+[00:16:12] cool that's going to be an interesting
+[00:16:13] one to see actually I like how we should
+[00:16:15] definitely change the industry up every
+[00:16:16] single time we do one of these
+[00:16:17] automations just to work our way around
+[00:16:20] and if we look at here right look that
+[00:16:22] has failed why is that failed so
+[00:16:25] apparently this is failed because the
+[00:16:26] request is too large for GPT 4 Turbo
+[00:16:29] great so let's have at this HTML to text
+[00:16:31] and let's have a look at the long string
+[00:16:33] this is preposterously long this is
+[00:16:36] absolutely insane so what that tells me
+[00:16:41] is that the RSS feed that we've got is
+[00:16:44] giving us an article that is just insane
+[00:16:46] so for example if I just come back over
+[00:16:49] over here for example okay let's look at
+[00:16:51] the URL it gave us okay it's one of
+[00:16:53] those websites that like never ever ever
+[00:16:56] ever ever ever ever I mean look at this
+[00:17:00] I could be here for 20 minutes so what
+[00:17:02] do we need to do we need to go back over
+[00:17:03] to RSS and I want to include this by the
+[00:17:05] way just so that if you get this issue
+[00:17:07] it's like my goodness why is this
+[00:17:08] failing you know exactly why so what I'm
+[00:17:10] going to do is you see this I'm going to
+[00:17:12] come over now to
+[00:17:14] settings excuse me where is it's on
+[00:17:16] filters all right Qui now hercampus.com
+[00:17:20] I'm going to come down and Blacklist
+[00:17:21] them I'm sorry her campus.com I'm sure
+[00:17:23] you're great guys you know what we want
+[00:17:25] only the best in these automations so
+[00:17:27] you're gone you're out of here and I
+[00:17:29] double check that it is actually Bann
+[00:17:30] and it is perfect come back over now the
+[00:17:33] filters are going to be baked in
+[00:17:34] automatically to the XML so we don't
+[00:17:36] need to recopy the text it will just
+[00:17:38] know what our filters are so let's come
+[00:17:39] back over to our image and then let's
+[00:17:41] run this whole thing again okay cool and
+[00:17:46] now we'll see if it's managed to fail a
+[00:17:47] second time it definitely shouldn't do
+[00:17:49] so but this is the kind of problem
+[00:17:50] shooting you've got to do when you run
+[00:17:52] through this and figure out why it's not
+[00:17:53] working and you know you build up a list
+[00:17:55] and improve your RSS feeds if you're
+[00:17:57] just grabing a normal article maybe you
+[00:17:59] wouldn't even need to do that but I
+[00:18:00] really want to include these in so you
+[00:18:01] get a realistic view of how you
+[00:18:03] troubleshoot and overcome those problems
+[00:18:04] scenario two they should be grabbing the
+[00:18:06] web hook for us just want to make sure
+[00:18:08] the status is okay and cool it has right
+[00:18:10] sweet it's giv us a
+[00:18:12] prompt awesome awesome awesome great now
+[00:18:17] that's done the next thing we need to do
+[00:18:19] now is just to recap okay what have we
+[00:18:22] done viral article or trigger we've
+[00:18:24] grabbed the article we've created a
+[00:18:25] viral tweet off the back of it we've
+[00:18:27] then created a prompt off the back of
+[00:18:29] that to get a good image we've added the
+[00:18:30] Tweet to a document that's stored away
+[00:18:32] that's locked away everything now from
+[00:18:34] this point on is giving you
+[00:18:35] configurability on your images this has
+[00:18:39] created the image for us so then here
+[00:18:42] we've grabbed the image which is great
+[00:18:43] and it's this feature of posting the web
+[00:18:45] hook and grabbing it so what we now need
+[00:18:47] to do is build your ability to audit and
+[00:18:50] monitor what essentially you want to
+[00:18:52] manage okay so to do that we're going to
+[00:18:54] head over to
+[00:18:55] airtable.com now when we're here we're
+[00:18:57] going to create a brand new page
+[00:18:59] together so come down to bottom left and
+[00:19:01] click on a page start from scratch
+[00:19:03] select a workspace we'll just go
+[00:19:05] building customers it's irrelevant for
+[00:19:06] our purposes and then what is the
+[00:19:09] nomenclature for these designs they're
+[00:19:12] new levels right so let's keep this one
+[00:19:15] up shall we we'll call this one mid
+[00:19:18] Journey new
+[00:19:20] level all right and of course it's got
+[00:19:24] to be purple has to be purple can't be
+[00:19:25] anything but purple and a little star on
+[00:19:28] there Ace Okay cool so we need a couple
+[00:19:30] of fields here right now this is where
+[00:19:31] it gets really CAU so the first field I
+[00:19:33] want you to add here guys is going to be
+[00:19:36] URL approval it remembers it remembers
+[00:19:38] and then you come down search for
+[00:19:41] URL awesome perfect excellent so that's
+[00:19:44] where the URL is going to go the second
+[00:19:46] one I want you to add is something
+[00:19:47] called hash so each image that's
+[00:19:50] produced has a unique hash so for
+[00:19:53] example if I come back here to show you
+[00:19:55] this how do we know what the hash like
+[00:19:57] this is the image right but like how do
+[00:19:59] we know what that physically looks like
+[00:20:01] that's a really tough one to know and
+[00:20:02] just out of curiosity Let's test out
+[00:20:04] what the result is so we've got the
+[00:20:06] thing here let's open up a page and see
+[00:20:08] what image it gave
+[00:20:11] us perfect guys look at that that is Z
+[00:20:15] all day I'm amazed at how good that is
+[00:20:19] like you imagine throwing out a tweet
+[00:20:20] with that image You' have thought dude
+[00:20:21] like that's ridiculous so you might look
+[00:20:23] at this and say I like number four I
+[00:20:25] think that looks most like Zenia or
+[00:20:26] whatever like it's ridicul it's just
+[00:20:28] absolute insanity and the style that
+[00:20:31] I've made in mid Journey prom by the way
+[00:20:32] is more of an iPhone natural organic
+[00:20:34] style but you can dial up Dial It Down
+[00:20:36] based on whatever you want to do so
+[00:20:38] we'll we'll say goodbye to Z Den for the
+[00:20:39] moment goodness me can you imagine my
+[00:20:41] wife walks in at that moment I'm looking
+[00:20:42] at these these suspect images sorry here
+[00:20:45] campus we broke up we're no longer we're
+[00:20:46] no longer working together at the moment
+[00:20:48] cool so we've got this now let's get
+[00:20:50] back to our table a little bit all right
+[00:20:51] so we've got the URL approval we've got
+[00:20:53] the hash which is specific to the image
+[00:20:55] the next thing we're going to need here
+[00:20:57] and bring the status over here here
+[00:20:59] click on the status one um and then
+[00:21:01] let's just edit the field now we want
+[00:21:04] five options okay we
+[00:21:06] want one 2
+[00:21:10] 3
+[00:21:11] four it's not five it's Roll and Roll
+[00:21:15] and then
+[00:21:17] save cool so basically every time now do
+[00:21:20] you want to in fact let me come back and
+[00:21:22] just bring that image up again I know we
+[00:21:23] say goodbye to Zena but we need to bring
+[00:21:25] her back bring her back just to just to
+[00:21:27] cover this all right cool so let's have
+[00:21:30] a look okay look let me duplicate this
+[00:21:32] so we can get a new tab
+[00:21:34] open all right cool so basically just
+[00:21:36] just for your reference top left is goes
+[00:21:38] one two three four so top left top right
+[00:21:42] to bottom left to bottom right this will
+[00:21:43] basically say look I want image one
+[00:21:44] image two image three image four or roll
+[00:21:46] we'll reshake the M up to do something
+[00:21:48] different cool then what we need to add
+[00:21:51] is two crucial tabs so right click on
+[00:21:53] this one edit field and I want you to
+[00:21:56] click on user and type in created time
+[00:22:01] and then here created time save that
+[00:22:04] awesome and open a new one and again uh
+[00:22:07] we're looking for last modified time and
+[00:22:10] on the field name last modified time and
+[00:22:14] again guys as always the reason we do
+[00:22:15] that is cuz if we've got like 20
+[00:22:17] different URLs and we're looking at URL
+[00:22:19] 7 last modified time will help us to
+[00:22:21] know great Jack is talking about or you
+[00:22:23] and I are talking about URL 7 now we
+[00:22:25] need to start populating that stuff into
+[00:22:27] our table so we click on ADD
+[00:22:29] we look for lukee that's very St we look
+[00:22:31] excuse me air table look for air table
+[00:22:34] and we're going to look for create a
+[00:22:37] record cool all right then let's find
+[00:22:39] out the records we're creating the base
+[00:22:41] is going to be what did we say mid
+[00:22:43] Journey new level excellent and then
+[00:22:45] it's going to pop all our Fields once we
+[00:22:47] select the table which is beautiful and
+[00:22:49] we love that we love that very much URL
+[00:22:51] approval we click on this and look at
+[00:22:54] this okay you're looking for result URL
+[00:22:58] there there you go B got it the hash
+[00:23:01] really important is Hash it's not
+[00:23:03] account hash it's hash and that's all we
+[00:23:05] need from that automation then we click
+[00:23:07] okay perfect now leave that here for one
+[00:23:11] second then enter another Tab and we're
+[00:23:14] going to call this one new level you
+[00:23:17] might guess it it's three out four okay
+[00:23:20] that's cool we love that we think that's
+[00:23:21] great now this one is where we're going
+[00:23:23] to be
+[00:23:24] building this and if you don't know by
+[00:23:26] the way guys if you hold like control
+[00:23:29] you can actually select anything you
+[00:23:32] want you then can contrl C come over
+[00:23:35] here into any you want and contrl V and
+[00:23:39] bring the whole thing over but you know
+[00:23:40] what that's cheating we're going to get
+[00:23:42] rid of it we don't we want to build this
+[00:23:43] from from scratch right so control and
+[00:23:45] then get rid of them okay cool right so
+[00:23:48] we come back here then new level so what
+[00:23:49] do we do we're looking for a table and
+[00:23:52] we're looking for watches records so now
+[00:23:54] we're saying look again just res
+[00:23:57] summarizing you found something new
+[00:23:59] you've created a viral tweet post from
+[00:24:00] it and you've asked to create an image
+[00:24:03] we've grabbed that image and we've
+[00:24:05] thrown it into this table we'll look at
+[00:24:08] the table we decide what do we want do
+[00:24:10] we want one do we want image one image
+[00:24:12] two image three image four or roll then
+[00:24:16] based on what happens there this one
+[00:24:18] kicks in so I'm just going to rerun the
+[00:24:20] whole thing together just so you get a
+[00:24:22] good sense of it we come on here we
+[00:24:23] click run once we let that roll we come
+[00:24:26] to the level one and we hit run once
+[00:24:29] and we can go through the whole process
+[00:24:30] together and what we will see is we will
+[00:24:32] see a hash appear we'll see a URL
+[00:24:35] appear and we will also see a new tweet
+[00:24:39] appear as well on top of that so let's
+[00:24:41] go through and wait for this all to join
+[00:24:43] up here excellent excellent that's done
+[00:24:45] we're now waiting for the web hog and
+[00:24:47] bear in mind guys at any time you can
+[00:24:49] come over to this dashboard here um and
+[00:24:53] essentially user api. API on the main
+[00:24:54] dashboard will show you the progress of
+[00:24:56] how things are going if for any reason
+[00:24:58] ever fails you can click on details and
+[00:25:00] it'll explain to you why or why not that
+[00:25:04] has happened excellent so now we wait
+[00:25:06] patiently for the thing to come across
+[00:25:07] and we can see how that's progressing
+[00:25:08] nicely it's coming over here quite
+[00:25:10] well I by the way I'm really excited to
+[00:25:13] see how the image gen is going to
+[00:25:14] progress over the next over this year I
+[00:25:16] think it's going to be huge especially
+[00:25:18] videos I'm going to be doing some videos
+[00:25:19] soon on video generation so you're going
+[00:25:22] to want to watch out for that and it's a
+[00:25:24] quick ask by the way if you find this
+[00:25:25] interesting or you like this content
+[00:25:27] could you do me a favorite and like
+[00:25:28] comment or like and push all the buttons
+[00:25:30] down below it shows YouTube that you
+[00:25:32] like this kind of content I really
+[00:25:33] appreciate it and it helps with Mother
+[00:25:35] algorithm who can be very very harsh
+[00:25:38] sometimes so cool air table's done and
+[00:25:41] then we come over here and look at this
+[00:25:42] guys it's created for us we've got the
+[00:25:44] URL approval and got the hash the hash
+[00:25:46] it's going to be handy in a minute and
+[00:25:47] you'll see why so I click on URL and
+[00:25:49] there we go more images of Zenia cool so
+[00:25:52] you can say look what do we like which
+[00:25:53] is the one that we want do you want to
+[00:25:54] reroll make our decisions and sort of go
+[00:25:57] from there excellent so everything's
+[00:25:59] working perfectly in this automation
+[00:26:00] right cool and we've got the statuses
+[00:26:02] now before I show you the statuses I now
+[00:26:04] need to show you how we build this whole
+[00:26:06] thing up so we've got air table we've
+[00:26:08] got watch records you might have guessed
+[00:26:10] this bit we're basically going through
+[00:26:11] and selecting everything that we
+[00:26:13] selected before table is table
+[00:26:16] one okay and we come down what's the
+[00:26:18] trigger field well the trigger field is
+[00:26:21] last modified time in other words don't
+[00:26:23] look at what's just been created look at
+[00:26:25] what I've approved come down limit 10's
+[00:26:27] fine label field it's going to be status
+[00:26:30] and then we click okay excellent so here
+[00:26:33] I want to add a router so let's see we
+[00:26:35] just go flow control this lovely little
+[00:26:37] green guy here routa and bring him up
+[00:26:40] nice Okay cool so then this bit here it
+[00:26:43] takes about like a minute to do but it's
+[00:26:45] worth doing I want to add a filter here
+[00:26:47] okay and the reason for that is if I've
+[00:26:49] not actually said anything I want to
+[00:26:53] make I don't want it to work do you know
+[00:26:54] what I mean like let's just say that I
+[00:26:56] don't know something's added in this
+[00:26:57] automation could start running directly
+[00:26:58] so we need to say look whoa whoa whoa
+[00:27:00] hang on a sec unless you see number 1 2
+[00:27:02] 3 4 or reroll go no further you shall
+[00:27:05] not pass so how do we get Gandalf in
+[00:27:07] this filter well basically we right
+[00:27:08] click we click on set up a
+[00:27:10] filter we're going to call this one
+[00:27:13] approved okay now the condition is
+[00:27:17] status here almost whistling slightly
+[00:27:20] there status okay is case contains case
+[00:27:26] insensitive one and then click and or
+[00:27:31] rule okay so what and or rule says is
+[00:27:34] like either it contains one or it
+[00:27:36] contains two or it contains three or
+[00:27:39] four or roll not and if you had and and
+[00:27:43] it'd be like you need level one I want
+[00:27:44] you to satisfy this condition and this
+[00:27:47] condition before you approve so the
+[00:27:48] second one is again status come down
+[00:27:51] contains case insensitive to now you
+[00:27:54] could do is equal to as a matter of
+[00:27:56] practice I always go case in sensitive
+[00:27:58] cuz I feel like it's broad enough just
+[00:28:00] to accomplish and not get you know
+[00:28:02] caught up in some nonsense rules Andor
+[00:28:05] come down to three again status and
+[00:28:09] or you might see where this is going
+[00:28:11] status and it's four cool I accept for
+[00:28:15] here we need to change equal to let's
+[00:28:16] just do contains case in sensitive come
+[00:28:18] down
+[00:28:20] here contains case in sensitive and just
+[00:28:22] double check these by the way oh my
+[00:28:24] goodness like it can if you don't double
+[00:28:25] check you SLP the right one uh it can
+[00:28:27] come back to buy you okay and then
+[00:28:29] finally contains case insensitive and
+[00:28:31] I'm just going to put the word re into
+[00:28:33] it okay and then select Okay cool so
+[00:28:36] unless it satisfies all those conditions
+[00:28:38] it isn't coming past so we we've gandal
+[00:28:40] it okay excellent nice cool then what do
+[00:28:44] we need well what we're going to build
+[00:28:46] next okay is basically a sequence of
+[00:28:49] like five options right so we have five
+[00:28:51] different Pathways like an upscale one
+[00:28:53] up scale two up scale three up scale
+[00:28:55] four and a reroll and by the way it
+[00:28:57] really Anno me that the reroll came in
+[00:28:59] second I was like God that's so annoying
+[00:29:01] but we're going to we're going to avoid
+[00:29:02] that mistake in this F okay so the first
+[00:29:03] one we're going to do here is going to
+[00:29:04] be the roll okay now the reroll
+[00:29:08] functions differently than the other
+[00:29:11] four so essentially we've got four
+[00:29:13] levels right level one level two we've
+[00:29:16] got the table we've got level three and
+[00:29:19] then this level four we've not built yet
+[00:29:21] now level four is the bit where we just
+[00:29:22] post it straight into our document okay
+[00:29:27] now if you decided look I want to roll
+[00:29:30] we actually need to send it back to this
+[00:29:33] guy because we say look retry the last
+[00:29:36] step that's what we're saying at level
+[00:29:37] three it's almost like a Gateway right
+[00:29:40] if I don't agree you need to go back
+[00:29:42] retry again and come back for approval
+[00:29:44] if I do agree you can progress the level
+[00:29:46] four that's a good way to think about it
+[00:29:47] so the reroll is a unique one okay so I
+[00:29:50] click on this I click on user
+[00:29:53] API I click on reroll okay the hash now
+[00:29:58] you remember I said the hash would be
+[00:29:59] important this is where it comes into
+[00:30:01] play so we got the hash there cool so
+[00:30:02] what do we do we click on it you come
+[00:30:04] over we select hash now the web hook URL
+[00:30:08] this is going to be posted to is the web
+[00:30:10] hook URL from level two so click on
+[00:30:13] level two and grab it so level three can
+[00:30:16] either post to level four or back to
+[00:30:18] level two so we copy I hope that makes
+[00:30:21] good sense um cuz essentially we're just
+[00:30:23] replaying the last step just think of
+[00:30:24] the rollers go back and replay the last
+[00:30:26] step we come here but in case if you
+[00:30:27] follow it'll work perfectly so you come
+[00:30:29] in send that back down to level two bro
+[00:30:31] retry again the web up type of course
+[00:30:34] just let us know when it's complete then
+[00:30:36] click okay and we're done now this one
+[00:30:40] now I love to rename these ones so call
+[00:30:42] this one roll and what is what's better
+[00:30:44] than reroll I think we need some dice I
+[00:30:46] I've never used a dice imergy really too
+[00:30:48] much so cool reroll perfect now we're
+[00:30:51] going to add a filter in here but let's
+[00:30:52] do the other ones together first okay so
+[00:30:54] let's get rid of this misbehavior module
+[00:30:56] we're going to click on Plus now we're
+[00:30:59] going to look for user API one more time
+[00:31:02] click on show more and then we're going
+[00:31:04] to go for upscale okay so the hash of
+[00:31:07] the test needs to be upscaled it's
+[00:31:09] exactly the same thing it's the hash
+[00:31:11] here the position of the image that
+[00:31:13] needs to be upscaled it's going to be
+[00:31:15] one and the web hook where we're going
+[00:31:17] to post it to so we come on then to
+[00:31:20] create level four automation which I
+[00:31:22] just named briefly click on here click
+[00:31:24] on web hugs click on the second one here
+[00:31:29] custom web hook choose a hook so I'm
+[00:31:31] going to add a new hook I'm going to
+[00:31:33] call this
+[00:31:35] one new level four and then let's give
+[00:31:39] it a lovely blue heart and then we click
+[00:31:42] okay then I want you to copy the address
+[00:31:44] of our fourth and final Automation and
+[00:31:46] come back and then enter it in here cool
+[00:31:49] and then click okay that's cool right so
+[00:31:52] right click on this let's just call this
+[00:31:54] one upscale one and then give it an
+[00:31:57] emoji so it's beautiful to look at with
+[00:31:59] a fire cool and then just for your time
+[00:32:02] out respect for your time I just clone
+[00:32:04] it bring him in Clone him come down oops
+[00:32:10] it's misbehave man they love misbehaving
+[00:32:12] sometimes don't they but you might have
+[00:32:14] guessed this is going we're just going
+[00:32:15] to clone him a couple of times just to
+[00:32:19] save us all right let's zoom out a tiny
+[00:32:21] bit so we can get him sweet and then
+[00:32:23] let's just hit this beautiful Auto align
+[00:32:25] button now let's just rename them
+[00:32:28] upscale two new
+[00:32:31] Emoji actually we can't do heart can't
+[00:32:33] do the heart because um that's the name
+[00:32:36] of our that's our naming convention for
+[00:32:38] the automations right upscale
+[00:32:42] three by the way I be down below your
+[00:32:45] most interesting use case for this like
+[00:32:47] how you plan on using this going forward
+[00:32:49] in your automations actually CU it's
+[00:32:51] such a big game changer from darly if
+[00:32:53] you think about it yeah let's just give
+[00:32:55] this one a beautiful tadar Meri nice and
+[00:32:58] now we just need to click in position is
+[00:33:01] two and just match up the ones that we
+[00:33:04] need click on this guy so for the third
+[00:33:07] one's going to be three and then for the
+[00:33:09] fourth one it's going to be four you've
+[00:33:11] done it you've nailed it now we're just
+[00:33:12] going to add a couple of filters okay so
+[00:33:14] we're going to right click setup
+[00:33:17] filter this one's going to be reroll
+[00:33:19] with our dice Emoji what's the condition
+[00:33:22] well the condition is that the status
+[00:33:25] okay contains case in sensitive
+[00:33:30] re boom this one here setup filter this
+[00:33:34] one's going to be upscale one the
+[00:33:36] condition is that the status is equal to
+[00:33:39] excuse me contains case
+[00:33:42] insensitive one awesome click on this
+[00:33:45] one excuse me um sorry excuse me bring
+[00:33:47] this one over here click on this filter
+[00:33:50] this is going to be uh upscale two
+[00:33:54] condition is that the status
+[00:33:58] contains contains case insensitive two
+[00:34:03] okay cool I know you might have guessed
+[00:34:04] the last two what we're going to do but
+[00:34:06] we're going to go through it together I
+[00:34:07] really want to make this a step by step
+[00:34:08] as humanly possible for you um up scale
+[00:34:12] three um condition is status contains
+[00:34:16] case
+[00:34:17] insensitive three cool and then this guy
+[00:34:21] here finally last but by no means least
+[00:34:23] number four we do love you upscale four
+[00:34:29] condition is that the status contains
+[00:34:32] case in
+[00:34:34] sensitive
+[00:34:36] four perfect now whenever you got
+[00:34:38] filters guys I the first thing I want
+[00:34:40] you to think is test you think of the
+[00:34:41] word filter you think of the word test
+[00:34:44] awesome now that's done let's run
+[00:34:46] through the whole automation from the
+[00:34:47] beginning okay so we're on here let's
+[00:34:50] run once we come back to level one we
+[00:34:53] run the whole thing from the beginning
+[00:34:56] now it's most likely to be the Dana once
+[00:34:58] again and we'll change it at the end for
+[00:34:59] some diversity cuz we we love to get
+[00:35:01] different topics in here um cuz it's
+[00:35:03] just pulling the most latest article
+[00:35:05] from the RSS feed isn't from that
+[00:35:07] website that gave us like a billion
+[00:35:09] words or something like I never get the
+[00:35:11] those websites are just endless Scrolls
+[00:35:13] of data endless endless Scrolls of data
+[00:35:15] insane cool M joury Bots created is now
+[00:35:18] been added to the Google Doc so let's
+[00:35:20] just check on our Google doc do we have
+[00:35:21] a new Trent we do okay well Zen is no
+[00:35:25] longer on top anymore that's good to
+[00:35:26] know so level one's complete so now sent
+[00:35:29] it through let's go to our dashboard.
+[00:35:31] user AI here we go it's in progress this
+[00:35:34] is cool I don't know who this person is
+[00:35:35] by the way I'm really curious to know
+[00:35:37] about that and now we can see the the
+[00:35:39] problem that we gave her we've got the
+[00:35:41] individual what she's wearing we've got
+[00:35:44] the color we've basically got all the
+[00:35:45] different Style Guidelines that we'
+[00:35:47] specified which is Ace and now we're
+[00:35:49] just going to wait for it to come to
+[00:35:49] this web hook now that's just going to
+[00:35:52] give us a second and we'll just wait for
+[00:35:53] that for a moment to load and I'm going
+[00:35:55] to keep yapping on the background until
+[00:35:56] the progress is compl complete so we can
+[00:35:58] see all of this happen in real
+[00:36:02] time awesome okay the progress is almost
+[00:36:05] complete so let's go back over that's
+[00:36:07] grabbed it and now it's sh through to
+[00:36:09] air table so we come back over to air
+[00:36:11] Table and there we go we see it it's
+[00:36:14] finally there we've got it so let's copy
+[00:36:17] the link let's get over let's check out
+[00:36:20] what the link is like and see what we
+[00:36:22] think wow they're beautiful images by
+[00:36:24] the way I mean can you you imagine
+[00:36:26] posting that on like any social media
+[00:36:28] platforms insane by the way oh and just
+[00:36:30] a very very quick tip by the way the mid
+[00:36:34] Journey specific guidelines that I've
+[00:36:36] given this okay I've made the dimensions
+[00:36:39] like that if you ever wanted to change
+[00:36:41] that go into the mid Journey prompt that
+[00:36:43] I gave
+[00:36:44] you um in my school Community or in the
+[00:36:46] link or if you're making your own just
+[00:36:48] change the aspect ratios okay so the
+[00:36:50] aspect ratios align with what you want
+[00:36:52] to do so for example I'm just going to
+[00:36:53] show this very very quickly just so
+[00:36:55] you've got it okay image and video
+[00:36:59] using mid journey and make okay mid
+[00:37:01] Journey prompt so you see this you see
+[00:37:03] how I've specified here 16 to9 you would
+[00:37:07] just change that to something else I've
+[00:37:09] also built um this really handy thing so
+[00:37:11] if I come down
+[00:37:12] to image and video I come down to Mid
+[00:37:15] Journey promp blueprint I've just listed
+[00:37:17] down all the aspect ratios that you can
+[00:37:19] get and then also how they overlay to
+[00:37:22] the different platforms that you need so
+[00:37:23] you can basically look at that and say
+[00:37:24] great I want this but I just want to
+[00:37:25] give you that FYI cuz if you give
+[00:37:27] something a formatted image it isn't the
+[00:37:29] right size it will fail uh sometimes so
+[00:37:32] just always worth bearing in mind okay
+[00:37:34] cool so we've looked at that and what do
+[00:37:36] you think what do you think guys what
+[00:37:37] should we go for I think they're all
+[00:37:39] beautiful images I think number one just
+[00:37:41] gives me a lot of style and Pizazz and I
+[00:37:43] quite like the look of it so what I'm
+[00:37:45] going to say is status one so let's come
+[00:37:47] in here click on this I want level one
+[00:37:50] okay so I'm going to come here I'm going
+[00:37:53] to go to our third image here and I'm
+[00:37:54] going to hit run once now if this how do
+[00:37:57] we know this has worked it will pass the
+[00:37:58] approval filter and it will only run the
+[00:38:01] first one if you didn't have filters on
+[00:38:03] this by the way guys it would fire all
+[00:38:04] five of them off so what do we do we hit
+[00:38:06] run once and this one should get a
+[00:38:09] one perfect ah look it slipped through
+[00:38:13] the scale for for three as well so we
+[00:38:15] need to check out what's happened there
+[00:38:16] right cuz it's not that's not correct
+[00:38:18] not equal to you see you see where I
+[00:38:21] filtered I've been caught out by the
+[00:38:22] filters and I was the one that gave the
+[00:38:24] warning I feel like I need to I need to
+[00:38:26] put the microphone down that's not right
+[00:38:28] contains case ins sensitive okay but
+[00:38:30] this is why we do it with filters guys
+[00:38:31] cuz it can just get like a bit bunkers
+[00:38:34] sometimes when that stuff happens so
+[00:38:36] let's rerun the whole thing again from
+[00:38:37] the top all right rerun this guy Perfect
+[00:38:39] come over here let's run this in the
+[00:38:42] background we're going to do it a second
+[00:38:43] time and then this time all being well
+[00:38:46] we'll actually be able to grab it and
+[00:38:47] the filter will hold up to its rigor
+[00:38:50] that's so funny the filter failed but it
+[00:38:52] just it's why you got to test it and
+[00:38:54] like you know you want as few a few
+[00:38:55] points of failure as humanly possible
+[00:38:58] that's now grabbing the web HW which is
+[00:39:00] beautiful we can see the progress
+[00:39:02] happening in the background now this
+[00:39:04] one's waiting so if you ever see waiting
+[00:39:06] it could be for different reasons it
+[00:39:07] could be that they're very busy there's
+[00:39:08] a queue but if you leave it it should go
+[00:39:11] through to progress and hit green
+[00:39:13] eventually if you if you if you wait a
+[00:39:16] lot it will come um but I find the speed
+[00:39:18] to be really cool actually with mid
+[00:39:19] Journey which is beautiful really really
+[00:39:21] cool cool so waiting for this now to
+[00:39:23] come through let's check out how the
+[00:39:24] progress is coming along nicely nice is
+[00:39:27] what we like to see and it'll come
+[00:39:29] through here you know I'll also just say
+[00:39:31] I've been looking at the mid Journey
+[00:39:32] images a lot recently and dude they're
+[00:39:34] really really Next Level I can't wait
+[00:39:36] till the next Generation comes out I my
+[00:39:38] it's going to be it's already pretty
+[00:39:40] indistinguishable from real life so the
+[00:39:42] next level is going to be something
+[00:39:43] completely different it's done perfect
+[00:39:45] we come in add did a record do I see a
+[00:39:47] new record of course I do I see great
+[00:39:49] record here let's check it out let's
+[00:39:51] come on let's copy the list let's come
+[00:39:53] over let's say goodbye to that one look
+[00:39:55] at the new one and you see how different
+[00:39:58] that is by the way that's insane wow
+[00:40:00] okay some really beautiful images let's
+[00:40:02] say that we like number one we think
+[00:40:04] number one is the one so what do we do
+[00:40:06] we come over here run once on new level
+[00:40:09] cuz I'm saying now wait hold on a second
+[00:40:10] for this one okay then we've got this so
+[00:40:13] we come over here we come off that we
+[00:40:16] said you know what I'm happy with that
+[00:40:18] post that as number one we hit number
+[00:40:20] one we come over here we run this module
+[00:40:22] once and it should just give us this one
+[00:40:25] and guys it has it has of course it has
+[00:40:27] we come back here and it's grab the web
+[00:40:29] hug so we click on this we come down to
+[00:40:32] result we got this URL if I enter this I
+[00:40:36] should see this image upscaled I put it
+[00:40:38] into chat I put enter and there's the
+[00:40:40] image entirely upscaled so the final
+[00:40:43] part of this automation is kick on plus
+[00:40:47] it's coming over it's coming on
+[00:40:50] word so not word it's St isn't it we
+[00:40:53] want to scroll down a little bit want to
+[00:40:56] insert an image to a
+[00:40:58] document all right click a
+[00:41:03] document you're right there Ling so my
+[00:41:05] dog is um scratched himself in the
+[00:41:06] background bless him he's he's like a
+[00:41:08] puppy still it's insane M automation
+[00:41:11] click okay cool all right
+[00:41:13] sweet now we come let we come down a bit
+[00:41:16] needs the image URL and all we're going
+[00:41:17] to click on is URL now here you see I've
+[00:41:20] selected URL but sometimes guys it will
+[00:41:22] not work that way and you'll basically
+[00:41:24] say instead result will look like this
+[00:41:27] and it'll have Su next to you and You'
+[00:41:28] be banging your head against the wall
+[00:41:29] you be like how why is this not working
+[00:41:31] and you won't be able to do anything
+[00:41:33] with it unless you do something like
+[00:41:34] this okay so this is what you would do
+[00:41:35] okay I've just come here to this agent
+[00:41:36] now look do this so it's this curly
+[00:41:39] bracket this curly bracket one. result.
+[00:41:42] URL and even if you're unable to see
+[00:41:46] this URL under res which happened to me
+[00:41:49] it basically has collection you can't do
+[00:41:51] it this will enable you to pull it out
+[00:41:53] so that will save you like a billion
+[00:41:55] hours of figuring that out just a little
+[00:41:56] tip hopefully it doesn't happen for you
+[00:41:58] but it could and if it does that's how
+[00:41:59] you fix it I couldn't find that answer
+[00:42:01] anywhere online but you know man vet
+[00:42:03] robits YouTube channel we got you
+[00:42:04] covered man we work you covered in every
+[00:42:06] angle and we're done guys we're
+[00:42:08] literally complete so the only thing
+[00:42:10] left to do now is to run the entire
+[00:42:13] thing over again now I think for the
+[00:42:15] sake of doing something a little cool
+[00:42:17] and fruity we should change our RSS feed
+[00:42:19] out what do you think let's do that
+[00:42:21] let's just change our RSS feed out
+[00:42:23] okay RSS I really wish he interactive
+[00:42:26] might do live at some point I don't know
+[00:42:27] how how I'd feel about that it'd be
+[00:42:29] pretty cool so let's come down let's
+[00:42:31] have a look at topics let's go for
+[00:42:34] something in you know what man I quite
+[00:42:37] the idea of doing something in YouTube
+[00:42:39] in the spirit of being on YouTube let's
+[00:42:40] do something YouTube related seedman
+[00:42:42] condemns the rest YouTube journalist
+[00:42:44] Felix Gerald actually do you know what
+[00:42:46] I've just immediately changed my mind
+[00:42:48] I'm going to go for something like um
+[00:42:49] photography because I'm just thinking
+[00:42:50] like YouTube like that's going to be a
+[00:42:52] funny one right okay cool Northern
+[00:42:55] Lights that is perfect click on Save
+[00:42:56] feed click on copy let's go over to
+[00:42:58] level one our automation let's scroll
+[00:43:00] over let's go to RSS feeds let's enter
+[00:43:02] the URL click okay now let's set this up
+[00:43:06] perfectly come down here let's run once
+[00:43:08] and by the way guys air table is very
+[00:43:10] robust I could delete absolutely
+[00:43:11] everything in here like so and if you've
+[00:43:15] got clients it's a lot easier for them
+[00:43:16] to use air tables and Google Sheets I
+[00:43:18] have done Google Sheets videos just
+[00:43:20] click run once come here that's running
+[00:43:22] the background because a lot of people
+[00:43:23] love Google Sheets and they want to run
+[00:43:25] the automation on that but in my person
+[00:43:27] personal opinion air table is a lot more
+[00:43:28] robust there are other options and I can
+[00:43:30] explore those options if you like and
+[00:43:32] show you the different softwares but
+[00:43:34] it's just a great way to get starting
+[00:43:35] robust the Twitter agent is complete the
+[00:43:38] mid Journey Bots crafting our prompts
+[00:43:40] which is pretty cool pretty exciting and
+[00:43:42] then we're going to able to get started
+[00:43:43] when it goes to Google dogs okay cool
+[00:43:45] that's complete we come back over we're
+[00:43:46] now waiting for the web hook let's give
+[00:43:47] it a little check it is in progress
+[00:43:50] it'll be done very very shortly
+[00:43:52] excellent that's complete now we come
+[00:43:54] back over to create a record we head
+[00:43:56] over to the record and it's appeared
+[00:43:59] almost by magicon would say let's take a
+[00:44:01] look at the image let's copy that let's
+[00:44:03] come back over and see what we've
+[00:44:06] created wow so this article I'm guessing
+[00:44:09] is about how you capture the northern
+[00:44:10] lights on your Fone I um I got married
+[00:44:12] in Iceland and we we just about saw the
+[00:44:15] the Northern Lights it was so so sick
+[00:44:18] wow I mean guys this is gorgeous I
+[00:44:20] absolutely love that so we go bottom
+[00:44:22] left and by the way these images are
+[00:44:23] designed for iPhones so say we look at
+[00:44:25] that let's test the reroll functionality
+[00:44:27] should we test the roll functionality
+[00:44:29] let's say you know what nice but I want
+[00:44:31] to roll so to test to reroll we're just
+[00:44:33] going to come back over here run this
+[00:44:34] once in reality this will be running
+[00:44:37] 24/7 so we say access denied let's click
+[00:44:39] on Roll we come back to our third
+[00:44:41] scenario and we run it once and this
+[00:44:44] should go to our reroll oh what's
+[00:44:47] happened there status roll and nothing's
+[00:44:50] happened so why is nothing happened well
+[00:44:52] let's take a quick look to see what we
+[00:44:53] set up in our roll section as you can
+[00:44:55] see guys we didn't best find the status
+[00:44:58] so we click on status roll and then we
+[00:45:00] come back all right cool so what I
+[00:45:02] propose we do is we come back over now
+[00:45:03] to our journey thing here let's go back
+[00:45:05] to nothing and then let's go back to
+[00:45:07] reroll and then let's try that one one
+[00:45:09] more time and we hit run once cool and
+[00:45:12] look at that guys it's gone straight for
+[00:45:13] the reroll which means if we come back
+[00:45:15] to scenario 2 this web hug will grab it
+[00:45:17] and we can see that in the dashboard
+[00:45:19] that we rerolled it # reroll that's what
+[00:45:21] we' love to see so then we're going to
+[00:45:23] see a second batch of images it's going
+[00:45:25] to be cool to see if it can beat these
+[00:45:26] four actually cuz those four are
+[00:45:27] gorgeous so that's now working in the
+[00:45:29] background progressing through quite
+[00:45:31] nicely it's what we love to see that bar
+[00:45:33] go in the right direction and by the way
+[00:45:35] guys another cool way to stay in touch
+[00:45:36] is by newsletter I've launched one
+[00:45:38] recently but like some really high value
+[00:45:39] short shop not wasting your time tips so
+[00:45:42] if you want to stay in touch that way
+[00:45:43] too um there should be a link Down Below
+[00:45:44] in the description just click the button
+[00:45:45] and you'll be able to keep in touch with
+[00:45:47] me there too so let's have a look then
+[00:45:49] so we come over to Mid Journey Air table
+[00:45:51] and we've got a new one cool so we click
+[00:45:53] on this let's copy it and then let's
+[00:45:56] replace these ones what we think and
+[00:45:58] that top left one guys that just might
+[00:46:00] win AI photographer the year I
+[00:46:01] absolutely love that one cool so we come
+[00:46:03] back over now and I think you might
+[00:46:05] guess what we're going to give it right
+[00:46:06] we're going to give it level one but
+[00:46:07] before we do that let's come to our last
+[00:46:09] one just click on modules not set up no
+[00:46:12] way is it not set up let's scroll down I
+[00:46:14] think it's okay right run this one
+[00:46:16] once come back over we to come here to
+[00:46:20] our mid Journey thing and then I'm going
+[00:46:22] to say status is level one thank you
+[00:46:24] very much we come back over here we
+[00:46:26] click run once it should go through to
+[00:46:27] here it's upscaled and now this has
+[00:46:30] grabbed it adding to Google Document and
+[00:46:33] we should now see the document this
+[00:46:35] image do we see it and there we go guys
+[00:46:39] it's there and you've just completed the
+[00:46:41] mid Journey approval system the last
+[00:46:44] thing I want to say in this video too
+[00:46:45] it's really important is if you want to
+[00:46:46] be able to DM me directly you want to be
+[00:46:48] able to get Live support with different
+[00:46:51] individuals join master classes and take
+[00:46:53] you know this incredible skill set to
+[00:46:54] your level I'd really encourage you to
+[00:46:56] join our school Community down below un
+[00:46:58] lock in the price set today I genuinely
+[00:47:00] would love to have you over there and
+[00:47:02] join this incredible Community we've got
+[00:47:03] of like honestly amazing people I would
+[00:47:05] love to see you down there but in any
+[00:47:07] case guys have a wonderful weekend and
+[00:47:09] I'll see you in the next video

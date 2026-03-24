@@ -1,0 +1,1016 @@
+[00:00:00] hey there guys in this video I'm going
+[00:00:01] to show you exactly how you can automate
+[00:00:02] the creation of client proposals from a
+[00:00:04] simple conversation you have with them
+[00:00:06] ending up with a unique document that
+[00:00:08] includes their logo on what you
+[00:00:10] discussed what they want to do when for
+[00:00:12] the pricing next steps on top of that
+[00:00:14] I'm also going to show you how you can
+[00:00:15] go to step further than that and
+[00:00:17] customize PDFs that are just like canva
+[00:00:19] where we can C unique and specific
+[00:00:21] Graphics in any style we want to I'm
+[00:00:23] going to show you the simple then I'm
+[00:00:25] going to show you the complex you can
+[00:00:26] automate these proposals to any docum
+[00:00:28] for your client from any conversation
+[00:00:29] you have of them on G me whatever
+[00:00:31] whatever the platform is so you can
+[00:00:33] absolutely crush it as always my name is
+[00:00:34] Jack my school Community my YouTube
+[00:00:36] channel we're about three things we're
+[00:00:37] about the latest dayi we are about
+[00:00:39] incredible automations but most
+[00:00:41] importantly we are about the stuff that
+[00:00:43] actually works if you haven't already
+[00:00:45] get the Christmas jumper ready if
+[00:00:47] December grab the coffee and let's dive
+[00:00:49] straight in and as always all the
+[00:00:50] blueprints resources and agent so this
+[00:00:52] full automation is available in school
+[00:00:54] community so all you ever have to do is
+[00:00:55] Click more click on import blueprint you
+[00:00:58] choose the file you select the file and
+[00:00:59] entire automation popets for you
+[00:01:01] automatically and in this video we're
+[00:01:02] going to do it step by step so let me
+[00:01:04] start though by showing you how this
+[00:01:06] automation actually works and how all
+[00:01:08] triggers so what will happen is every
+[00:01:11] time we have a client so we're going to
+[00:01:12] have a database together using a table
+[00:01:15] where essentially we add a client email
+[00:01:18] we have their name their second name and
+[00:01:20] then also their business logo if you
+[00:01:22] wish to automate that within the
+[00:01:24] proposal document so when you have a
+[00:01:25] conversational Prospect or you do you
+[00:01:27] have your proposal automation here and
+[00:01:29] this is going to be your central
+[00:01:30] database for managing your client you
+[00:01:33] need this anyway because you're going to
+[00:01:34] want to see a r of who's signed up who's
+[00:01:36] dropped out to maximize your conversions
+[00:01:38] and also help you do other automations
+[00:01:40] and we can use this for million things
+[00:01:42] so we create an air table with an email
+[00:01:44] their name their surname we can add a
+[00:01:46] business logo by creating a file that
+[00:01:48] says if you canot to edit field you
+[00:01:50] select attachment and what's really cool
+[00:01:52] here guys is when you select attachment
+[00:01:54] like so and you delete this you can
+[00:01:56] actually just add a URL to it like
+[00:01:59] that's essentially how work can URL
+[00:02:00] upload their file a really easy quick
+[00:02:02] way to do that is if you're on Google
+[00:02:04] you type in their business their logo
+[00:02:05] and I'll show you in fact like here I've
+[00:02:07] got my's logo I can rightclick I can
+[00:02:09] actually copy image address and if I put
+[00:02:11] that into the search bar I'll get that
+[00:02:13] logo so we can add that in so we can
+[00:02:15] make that personalized effects which
+[00:02:16] going to be awesome the business time
+[00:02:17] then after that you don't need to worry
+[00:02:19] about anything else okay then we're
+[00:02:20] going to have meeting status so once
+[00:02:21] your meeting is complete what you ever
+[00:02:23] do is come here you can say scheduled
+[00:02:25] you could say it's cancelled or complete
+[00:02:27] so you know exactly where you stand with
+[00:02:29] your clients once that's happened guys
+[00:02:31] it triggers the automation so how do the
+[00:02:33] automation work first of all the air
+[00:02:35] table says Hey the meeting's been
+[00:02:37] complete we've got a filter here now
+[00:02:39] what this will do this firefli thing
+[00:02:40] here okay is it will pull down the
+[00:02:43] client's email which means it will only
+[00:02:45] pull down the last meeting you had with
+[00:02:48] that client right so for for instance in
+[00:02:51] our table here we know we had meeting
+[00:02:54] with Jack a automations of jack.com
+[00:02:56] awesome so what this automation then
+[00:02:57] does guys it's a great I want you to go
+[00:02:59] and pull the ENT transcript from that
+[00:03:01] meeting it pulls the transcript down
+[00:03:03] then we iterate and Aggregate and what
+[00:03:05] we do guys we'll have the entire
+[00:03:07] conversation these two little modules
+[00:03:09] just help us grab all the field from the
+[00:03:11] conversation and get it in one very
+[00:03:13] simple text output then we've got these
+[00:03:16] three little AI Brands the first one
+[00:03:17] says hey give me a very crisp summary of
+[00:03:19] what we discussed oh and by the way when
+[00:03:21] you're using fireflies basically the way
+[00:03:23] that it works is it will join the
+[00:03:25] meeting with you as a notetaker listen
+[00:03:27] to the entire conversation and send a
+[00:03:28] summary of what happened on that call to
+[00:03:30] both you and and the recipients but in
+[00:03:33] the proposal document we also just want
+[00:03:35] a quick summary look here's everything
+[00:03:36] that we said and discuss the second one
+[00:03:39] is what they want and then the third one
+[00:03:41] is when they want it for um and then we
+[00:03:44] can hardcode information like pricing
+[00:03:47] and we can add more complicated nuan
+[00:03:48] automations based on your particular use
+[00:03:50] cases and circumstances you'll be able
+[00:03:52] to see from this core model exactly how
+[00:03:54] you can build it for your own business
+[00:03:56] whether you want to sell back to
+[00:03:58] businesses as an agency or you just want
+[00:03:59] to supercharge your own proposal
+[00:04:01] generation the end result is they get a
+[00:04:03] very cool PDF that they can then make
+[00:04:06] decisions off then we do this thing here
+[00:04:08] which is creating a document from a
+[00:04:10] template so for example if I come over
+[00:04:13] and show you what that template looks
+[00:04:15] like is I built this here so we have an
+[00:04:17] image a client name client business and
+[00:04:19] you can basically add as many or as few
+[00:04:22] titles to your proposal documentation as
+[00:04:24] possible and then all of a suddenly this
+[00:04:26] will be populated by this guy and so on
+[00:04:29] so and so so forth so we build up the
+[00:04:30] document that we want we add the
+[00:04:32] information hard code there so pricing
+[00:04:33] is the same a purchase link to buy the
+[00:04:36] things this is just a random one I use
+[00:04:37] for instance on stripe so they can get
+[00:04:39] started wish list for Santa how flipping
+[00:04:41] relevant is that and then what happens
+[00:04:43] guys after that on the automation is it
+[00:04:46] then downloads it as a PDF and then we
+[00:04:48] create it as a draft and then it's
+[00:04:50] available for us basically send out uh
+[00:04:51] to whoever we want so that's Automotion
+[00:04:53] sell we're going to build this one
+[00:04:54] together and then once that's done I'm
+[00:04:55] going to show you how you can use
+[00:04:57] something more creative as a visual as a
+[00:04:59] slap more advanced Step at the end of
+[00:05:01] the video so with fast if cheer in mind
+[00:05:04] let's begin and jump straight in now the
+[00:05:06] first thing you want to do guys
+[00:05:08] obviously is over to airtable.com and
+[00:05:10] build this so I'm going to very quickly
+[00:05:12] show you Whistle Stop tour we load
+[00:05:14] airtable.com we come down to the bottom
+[00:05:15] left click on create we go start from
+[00:05:18] scratch we name it like Build Together
+[00:05:21] Santa and then just that respect for
+[00:05:23] your time I'm just going to whis through
+[00:05:24] and just talk through the stuff that you
+[00:05:26] would use so the first one I've got his
+[00:05:28] client email so line text the second one
+[00:05:31] is first name and obviously you can
+[00:05:33] right click insert right insert left and
+[00:05:36] that will just create a new field and
+[00:05:38] it's very simple it's like Google Sheets
+[00:05:39] on steroids we love it their first name
+[00:05:42] their second name their business Logan
+[00:05:44] their business name and then meeting
+[00:05:47] status which is going to be a sort of
+[00:05:49] single select I said complete scheduled
+[00:05:51] canceled um once we've done that
+[00:05:53] basically how this all works guys is
+[00:05:56] every Prospect we have we enter these
+[00:05:57] four simple pieces of information and
+[00:05:59] then we have a meeting status update
+[00:06:02] then I want you to add in proposal which
+[00:06:03] is going to be a PDF which means that we
+[00:06:05] can add that back into air table if you
+[00:06:07] wish that's an option and then we've got
+[00:06:09] outcome which could be declined and
+[00:06:11] progress accepted not reviewed that
+[00:06:13] really is for you to keep track of
+[00:06:14] what's happening and what you think and
+[00:06:16] then finally guys we're going to add a
+[00:06:19] created time module and the last
+[00:06:21] modified time module and that will
+[00:06:23] enable laws to basically understand uh
+[00:06:26] for the automation to understand what's
+[00:06:28] changed in what so let's do the very
+[00:06:30] first one together so automation
+[00:06:31] proposals and I'll put in bracket over
+[00:06:33] here build together now this is flipping
+[00:06:36] epic because proposal generation is one
+[00:06:37] of a timec consuming aspects out there
+[00:06:39] so we can automate that it's flipping
+[00:06:40] crazy so first step we are going to go
+[00:06:42] for a table like so going to for watch
+[00:06:44] records phenomenal and then we're going
+[00:06:46] to find the base that we connected if
+[00:06:48] you not sure how to connect that we've
+[00:06:49] got really loaded amazing beginner
+[00:06:50] tutorials to get you started in the
+[00:06:52] community basically there two ways you
+[00:06:54] can connect things proposal automation
+[00:06:56] awesome and that's a which means you
+[00:06:58] basically open new window
+[00:07:00] inside it table is table one which is
+[00:07:02] Ace and then I'll add some information
+[00:07:04] for us trigger field basically it's like
+[00:07:07] to trigger it because it's watching
+[00:07:08] Always either needs to be the modifi
+[00:07:10] last modified time or create time but we
+[00:07:12] want last modified time uh for a few
+[00:07:14] different reasons we come down and then
+[00:07:16] we click label field so we'll just say
+[00:07:18] for argument sake we will put it as
+[00:07:20] client email come down click okay and
+[00:07:23] then we'll say hey do that from now one
+[00:07:25] all right awesome the reason we do from
+[00:07:27] that one as well is if we don't like the
+[00:07:30] summary whatever we can just repopulate
+[00:07:32] it one more time which is a cool little
+[00:07:33] feature so look and then guys we're
+[00:07:35] going to do fireflies okay so the way
+[00:07:37] this works is we're going to have a
+[00:07:38] fireflies and I believe the correct one
+[00:07:40] that we're looking for here if I just
+[00:07:42] double check yeah it is list transcripts
+[00:07:44] as I thought so there's a few ways we
+[00:07:46] can do this guys so on the previous
+[00:07:48] video one of the things I showed you and
+[00:07:50] I'll show you how you connect it first
+[00:07:51] of all in fact let me show you how you
+[00:07:52] connect it first of all then we can come
+[00:07:53] back to that so look I then come over to
+[00:07:55] fireflies so when you land in fireflies
+[00:07:57] it's very cool cuz it sends a meing
+[00:07:59] descriptions to everybody so you create
+[00:08:00] account and you basically then link that
+[00:08:02] to your email and anytime you're on a
+[00:08:05] call fireflies will join and take notes
+[00:08:07] one of the things we need to do is get
+[00:08:09] an API key so to do that I want you to
+[00:08:10] come to Integrations of the left hand
+[00:08:12] side okay and then just type in API I I
+[00:08:15] think it's fireflies you got to type in
+[00:08:17] so then you've got fireflies API we
+[00:08:18] click on it and you'll see at the bottom
+[00:08:20] right guys you have API key just simply
+[00:08:22] copy that key and then head back over to
+[00:08:24] make and then we can link it together
+[00:08:26] and once you've done that you'll have
+[00:08:27] your connection and you'll see this now
+[00:08:30] at this stage and what I first of all
+[00:08:31] want to do is run this module once so
+[00:08:33] that we can actually uh get the
+[00:08:35] information and data from it okay
+[00:08:37] nothing's happened so let's go back over
+[00:08:38] and change a piece of information let's
+[00:08:40] say that my name today is I don't know
+[00:08:43] Dan there we go cool all right we come
+[00:08:45] back over and then this should work
+[00:08:47] perfectly cool and it's brought down all
+[00:08:50] of the information all right how Coes
+[00:08:52] that sweet so the fireflies AI what we
+[00:08:54] want to do is we say look I want you to
+[00:08:56] pull down the transcript with this
+[00:08:59] participants email so if back come down
+[00:09:01] here and we're try to find client email
+[00:09:03] which means it will pull down every
+[00:09:05] transcript if you wish of that client's
+[00:09:07] email but it's only really the one call
+[00:09:08] that we're interested in so we're going
+[00:09:10] to set limit here for one now two things
+[00:09:12] we very quickly want to do with this is
+[00:09:14] add a select filter so we're going to
+[00:09:15] call this one approved the first
+[00:09:17] condition that we're looking for is that
+[00:09:19] the meeting
+[00:09:20] status contains case and sensitive
+[00:09:24] complete in other words that will stop
+[00:09:26] the scenario fing firing off when we've
+[00:09:28] added some data but the not yet happened
+[00:09:30] which is awesome we click okay and then
+[00:09:32] it also want you to add a few other
+[00:09:33] things I want you to add the fact that
+[00:09:36] um let's see here
+[00:09:38] proposal uh does not exist and on top of
+[00:09:42] that let's also say that outcome does
+[00:09:45] not exist so that basically means that
+[00:09:47] if you go back to update either the
+[00:09:49] proposal document or give an update on
+[00:09:51] the outcome the scenario will not run
+[00:09:53] again because that's happened okay so
+[00:09:55] that protects us from future times we
+[00:09:57] make adjustments in the air table from
+[00:09:59] far off so we've got fireflies AI we've
+[00:10:01] got list transcript let's run the
+[00:10:03] scenario one more time to do that I'm
+[00:10:04] just going to come here and I'm going to
+[00:10:06] say d d and then we'll see if we can
+[00:10:09] pull down the conversation I had with it
+[00:10:10] earlier so we hit run once that's gone
+[00:10:13] through as you can see Mee St is
+[00:10:15] complete proposal what's it and by the
+[00:10:16] way if you're wondering how you this
+[00:10:17] cool snow Emer guys basically right
+[00:10:19] click and it won't show me because the
+[00:10:21] sow is running and then you can click
+[00:10:22] Let It Snow it's very cool soone sh that
+[00:10:24] in the community I thought it was
+[00:10:25] flipping epic so then we can have a look
+[00:10:26] at the transcripts and as you can see
+[00:10:28] here I had here our sample core between
+[00:10:30] myself and I basically put a lot of
+[00:10:33] gobble theg in it to be honest let's see
+[00:10:35] what I said blah blah blah yeah literal
+[00:10:36] blah blah blah test test one two three
+[00:10:38] what else did I say Roland I can tell
+[00:10:40] you you have a vinary practice um you
+[00:10:43] like to scale that b practice over time
+[00:10:45] and basically brings in guys like all of
+[00:10:47] the conversations that you had and it's
+[00:10:49] cool because I'll get an email now
+[00:10:50] summarizing this fictitious flipping
+[00:10:51] conversation with Roland about his veter
+[00:10:53] practice and stuff but how cool is that
+[00:10:55] so only this is a really flipping cool
+[00:10:57] system that basically means the person
+[00:10:58] on the call gets the email it's really
+[00:11:01] really really really cool so the next
+[00:11:03] thing we want to do guys is we want to
+[00:11:04] take all of these sentences in this
+[00:11:06] array and we want to get into one very
+[00:11:09] very simple single output so the
+[00:11:11] question is how do we do that well we're
+[00:11:12] going to use an iterator okay so we're
+[00:11:14] going to come down we're going iterate
+[00:11:15] like so we are going to map that's fine
+[00:11:18] and all we're going to do is we're going
+[00:11:19] to select sentences so here we go
+[00:11:22] beautiful now once that's done guys
+[00:11:24] we're going to use a text aggregator
+[00:11:27] okay text aggregator The Source module
+[00:11:29] of course is the iterator and then
+[00:11:32] what's the text is just simply put this
+[00:11:33] in which is Speaker name so that we know
+[00:11:36] exactly who said what let's see if we
+[00:11:39] can find speaker name in
+[00:11:41] sentences actually I think it's going to
+[00:11:43] be here right isn't it under this one
+[00:11:44] excuse me it's right here speaker name
+[00:11:46] beautiful and then we've got the text
+[00:11:49] which is going to be here beautiful and
+[00:11:51] then we're going to click okay and I'm
+[00:11:53] going to run this one more time so you
+[00:11:54] can see the beautiful output for
+[00:11:55] yourself in HD what name should we go
+[00:11:57] for how about Chris Chris Pringle Chris
+[00:12:01] I say Pringle because like I've just
+[00:12:02] bought some Pringles actually from um
+[00:12:04] from Asda I you know when you pop them
+[00:12:06] you can't stop them I find like it's the
+[00:12:08] one like food that when I whip it up
+[00:12:10] like I bought some like I'm stopping my
+[00:12:13] cup now but like I finished it in three
+[00:12:15] days and I was like I don't know how ien
+[00:12:17] it's just crazy to me like I have to I I
+[00:12:19] was tempted to throw the away at you cuz
+[00:12:20] I was like this can't be good but it's
+[00:12:22] Christmas so who knows right cool so
+[00:12:23] here's our input and then we got one
+[00:12:25] long thing one long text string for the
+[00:12:28] output really easy really flipping great
+[00:12:30] the as will pick it up awesome so what's
+[00:12:33] the next thing that we need to do then
+[00:12:34] well if we take a look we've now got
+[00:12:36] these three beautiful modules what we
+[00:12:39] discussed what you'd like and when for
+[00:12:41] but before that guys what we really need
+[00:12:42] to do is head over to drive.google.com
+[00:12:44] and basically you're going to get a
+[00:12:46] document and let me show you what that
+[00:12:48] document looks like all right so we're
+[00:12:50] going to add an image in the way you can
+[00:12:52] add an image you can control V you can
+[00:12:54] insert add an image at the top now what
+[00:12:56] I think is really cool here oops we
+[00:12:58] don't want that
+[00:12:59] is when you come to customize it you can
+[00:13:02] then change this image for the logo so
+[00:13:04] you know design however you want to I
+[00:13:05] quite like this one I'll put a link down
+[00:13:07] below description if you to grab this
+[00:13:08] templat you can use it for yourself uh
+[00:13:10] if you like this one the font makes a
+[00:13:12] big difference on perceived quality by
+[00:13:13] the way for instance now what we're
+[00:13:15] going to do is we're going to decide
+[00:13:17] every variable we've got what we
+[00:13:18] hardcode which is every client gets this
+[00:13:20] and then we've got what we customize the
+[00:13:22] higher the customizability the more
+[00:13:24] variability you'll get I would recommend
+[00:13:26] a nice beautiful marriage of hardcoding
+[00:13:29] information hard code as much as you
+[00:13:30] think will actually be relevant and then
+[00:13:32] we can flare up so this image let's just
+[00:13:35] get it to be the client image I flip and
+[00:13:36] love it sweet so let's have a look that
+[00:13:38] client name client business and what I
+[00:13:40] want you to do guys when you write this
+[00:13:41] is add two curly brackets at the
+[00:13:43] beginning and the end for anything that
+[00:13:45] you want to come from the scenario so
+[00:13:47] for example what's going to change for
+[00:13:48] us the client and client business cool
+[00:13:50] I'll say hey and then we again to curly
+[00:13:52] bracket client name blah blah blah BL
+[00:13:55] and that will be the code right and then
+[00:13:56] this will appear and make and I'll show
+[00:13:57] you what it looks like so if I come back
+[00:13:58] to previous scenario so check this out
+[00:14:00] right create document from template
+[00:14:02] client name client business what we
+[00:14:04] discuss project outcomes and again
+[00:14:06] client name client business what we
+[00:14:08] discussed project outcomes so basically
+[00:14:11] just design this however you want all
+[00:14:13] still a template for me it's yours it
+[00:14:14] don't worry about it and then you can
+[00:14:16] kind of decide what you want it to be
+[00:14:18] and here I've hardcoded stuff like our
+[00:14:19] quely fees 20K paid in advance blah blah
+[00:14:22] blah what happens next uh click here
+[00:14:25] Yours Faithfully with my logo at the
+[00:14:26] bottom and again just add images and
+[00:14:28] you'll get a like this then just simply
+[00:14:31] save the document you're solid you're
+[00:14:33] ready to go you don't need to do
+[00:14:35] anything else than that it is literally
+[00:14:37] that simple okay so what I'm going to do
+[00:14:39] is I'm going to come back over to our
+[00:14:40] scenario and now we're going to create
+[00:14:41] three modules to create the text for
+[00:14:44] that so the first one we can use CL use
+[00:14:45] track gbt um it doesn't really make a
+[00:14:48] difference I'm just going to pick track
+[00:14:49] gbt cuz it's green and I guess Green's
+[00:14:51] more Christmas Co orange isn't it so
+[00:14:54] correctly completion phenomenal come
+[00:14:56] down here let's have a quick
+[00:14:58] look excellent maybe I should get some
+[00:15:00] Christmas juny Christmas tunes in the
+[00:15:02] background maybe that's um maybe that's
+[00:15:04] what we should do okay cool I like this
+[00:15:07] um let's have a look I actually have a
+[00:15:09] cooler Christmas jumper than this but
+[00:15:10] it's disappeared from my wardrobe I
+[00:15:12] don't know who's taking it uh use a text
+[00:15:15] content all right so let's look at the
+[00:15:16] prompt we're going to use for this one
+[00:15:17] again all the prompts downlo in the
+[00:15:19] community you can grab it'll come
+[00:15:20] pre-built in the automation for you as
+[00:15:22] well as all the updates when we do them
+[00:15:24] uh so we come down here let's take a
+[00:15:25] look so I've sort of said look You' got
+[00:15:28] to kind of give it the context in which
+[00:15:30] it will actually be perceiving it
+[00:15:31] because it'll say hey great like hey
+[00:15:33] client said XYZ but like you'd never
+[00:15:35] write like that so I like to be specific
+[00:15:37] on the on the context so I'll show you
+[00:15:39] here right it's Bic you'll be provided
+[00:15:41] with a
+[00:15:42] transcript of the conversation between
+[00:15:44] Jack from totic smarttech which fake
+[00:15:46] flipping name and AI automation agency
+[00:15:49] and a prospective client based on the
+[00:15:51] transcript output a summary in the
+[00:15:53] following format summary paragraph begin
+[00:15:55] with a sentence it starts with we
+[00:15:56] discussed da da da da summarizing the
+[00:15:58] main topics of the conversation and then
+[00:15:59] highlights use emojis to highlight each
+[00:16:01] key Point again just change this for
+[00:16:03] your own personal preferences style
+[00:16:04] branding whatever you want right and
+[00:16:06] then I give it an example output we
+[00:16:08] discussed a website strategy and support
+[00:16:10] focusing on web design Improvement blah
+[00:16:11] blah blah blah blah highlights da da da
+[00:16:13] all this sort of stuff and then
+[00:16:14] instructions like don't refer to the
+[00:16:16] client as my client maintain anonymity
+[00:16:18] by using placehold names if necessary
+[00:16:20] and then a text okay so I'm going to
+[00:16:21] copy this prompt um I'm going to come
+[00:16:24] over to our beautiful thing here text
+[00:16:26] content we just paste that in and all
+[00:16:28] we're looking for guys is the text from
+[00:16:30] the text aggregator which is the entire
+[00:16:33] conversation okay Max tokens set zero so
+[00:16:37] it defaults for us at the maximum then
+[00:16:39] we click okay and what are we going to
+[00:16:41] call this one well we call this one
+[00:16:43] something really simple which was what
+[00:16:45] you'd like all right cool so come down
+[00:16:47] here oh my goodness let's rename him and
+[00:16:50] what I think is really good if you can
+[00:16:52] guys is um just so it's easier for you
+[00:16:56] like just copy this so you like ah okay
+[00:16:59] that's what that's to do with okay what
+[00:17:01] you'd like awesome come down beautiful
+[00:17:03] and then we're just going to copy this
+[00:17:06] twice cuz we're feeling nice beautiful
+[00:17:09] and then what's the next one that we
+[00:17:10] need well the next one we need is what
+[00:17:12] we discussed and when for cool sweet so
+[00:17:14] let's have a look what we got we've got
+[00:17:16] what you discussed right here so again
+[00:17:18] anything you want to generate just come
+[00:17:20] back over I'm going to rename this one
+[00:17:22] it doesn't really matter which one CU we
+[00:17:23] all some content
+[00:17:25] oops come over right click
+[00:17:29] what we discussed and the other one I
+[00:17:31] added in as well is when for so that's
+[00:17:33] like kind of just based on the
+[00:17:34] conversation like when that they want
+[00:17:36] this flipping automation right um sorry
+[00:17:38] I'm opening everything except for the
+[00:17:40] automation that we need here okay come
+[00:17:42] down rename um let have a
+[00:17:46] look wonderful and then the other two
+[00:17:48] prompts guys are fairly similar in a
+[00:17:50] slightly different way so what we
+[00:17:51] discussed pretty much the exact same
+[00:17:53] thing if I come down to the text I'll
+[00:17:55] show what that looks
+[00:17:56] like wait for it to Lo for us light cube
+[00:17:58] is waiting sometimes again same thing
+[00:18:00] begin with the summary give us some
+[00:18:02] highlights here are some example outputs
+[00:18:03] cool beautiful I come over and basically
+[00:18:05] just saying to it like very succinctly
+[00:18:08] just give me the tldr of what we
+[00:18:10] discussed you may not think that's
+[00:18:11] relevant I I'm just including it as if
+[00:18:13] for instance realistically develop the
+[00:18:15] stuff that you think is important um so
+[00:18:18] if I if I were building this with you
+[00:18:20] and then we just have this text here
+[00:18:22] some of the key things that you really
+[00:18:23] want to make sure you do and OB we've
+[00:18:25] got the one for prompt uh as I can show
+[00:18:27] you here it's very very straight forward
+[00:18:29] the one for prompt is literally um Bas
+[00:18:32] on conversation one is a client want
+[00:18:34] delivery that's it you provide a
+[00:18:36] conversation en show the outp does not
+[00:18:37] refer to the client blah blah blah um
+[00:18:39] let us know when the when they want the
+[00:18:41] completion simple as that like no more F
+[00:18:44] or PA or trap above that come over so
+[00:18:47] listen thing about it if I want to
+[00:18:48] commit this I want it to be slick I want
+[00:18:50] it to be automated I want it to look
+[00:18:51] decent I want it to look fresh um you
+[00:18:53] may want to add a delay so it doesn't
+[00:18:54] look like it just C up a production line
+[00:18:56] but being prompt and and decent I think
+[00:18:57] is really cool going to come down get
+[00:18:59] rid all this stuff put this in and then
+[00:19:00] check on the transcript so what's
+[00:19:03] important to cover in The Proposal
+[00:19:04] document one it's like what are you
+[00:19:05] going to do first of all it's why like
+[00:19:08] the question we always ask ourselves
+[00:19:09] before we do anything is why like what's
+[00:19:11] the value what's the benefit give me a
+[00:19:13] crisp summary of what we covered give me
+[00:19:15] crisp summary of what I get why I want
+[00:19:18] this how much it costs what the terms
+[00:19:19] are and crucially one next step never
+[00:19:23] give them I need to do this this this
+[00:19:24] this and this the cardinal rule one
+[00:19:27] communication one step we can get them
+[00:19:29] to do a million steps but we can't get
+[00:19:31] them to do million things at the same
+[00:19:32] time it has to be step by step by step
+[00:19:35] it's got to be done that way so you
+[00:19:37] build that as many of these modules as
+[00:19:38] you want to that's the next step once
+[00:19:40] that's complete guys what I want you to
+[00:19:42] do next is to build a template so going
+[00:19:45] to for create a
+[00:19:48] template from okay it probably would
+[00:19:51] have been easy to just Google darks
+[00:19:52] right okay create a document from a
+[00:19:55] template and you might have guessed it
+[00:19:57] we just basically pick the template that
+[00:19:58] we chose before I'm going drink out my
+[00:20:00] beautiful teal
+[00:20:02] document excuse me my beautiful teal
+[00:20:05] water Bott not beautiful teal document
+[00:20:06] you imagine tasty documents and now
+[00:20:08] we've got all the information so let's
+[00:20:10] start with the client name what is the
+[00:20:11] client name well we've got it over here
+[00:20:13] in the air table right so let's have a
+[00:20:15] look client name is uh best name cool
+[00:20:19] client business name
+[00:20:21] is um singer Enterprises what we
+[00:20:24] discussed is simply going to be from the
+[00:20:26] what we discuss module the project
+[00:20:28] outcomes are going to be from the what
+[00:20:29] you like module and the one4 is from the
+[00:20:31] one4 module and then image URL so you
+[00:20:34] know how like in this document we've got
+[00:20:36] guys we got this image and that image
+[00:20:37] that one's our logo so it basically goes
+[00:20:39] down sequentially so the first one's the
+[00:20:41] first image second third and it can be
+[00:20:42] varying different sizes so what we would
+[00:20:44] do in this example here is we click on
+[00:20:46] it and then you can see from the air
+[00:20:48] table if I come down to I believe it is
+[00:20:51] business logo open that up and look at
+[00:20:54] this guys just put the URL that's all
+[00:20:56] you need all right new document location
+[00:20:58] we'll just put that anyway you want to
+[00:20:59] you can save it in proposals dos if you
+[00:21:01] want to it doesn't really matter like so
+[00:21:03] and then title could just simply
+[00:21:06] be um let's have a look maybe we just
+[00:21:08] call it like the client's email address
+[00:21:11] I think would be a really nice one um
+[00:21:13] singer Enterprise and then why don't we
+[00:21:15] have the data on it as well that's anle
+[00:21:18] and then we click okay now what's the
+[00:21:20] next thing we need to do download it as
+[00:21:22] a PDF why cuz prf are pretty flipping
+[00:21:24] cool I'm a little better right so Google
+[00:21:25] Docs download a document and then we
+[00:21:28] give it is the file ID so document ID
+[00:21:30] will prepopulate from the last one so we
+[00:21:32] just C map and then we come over
+[00:21:33] document ID and then we type guys we
+[00:21:35] just save it as PDF this will save you
+[00:21:37] any credits by using any external
+[00:21:38] services and it's just all within the
+[00:21:40] scenario and then we come down and then
+[00:21:41] we click okay and you are almost ready
+[00:21:43] to go so the next thing what to do is
+[00:21:44] there a Gmail manle now so let's come to
+[00:21:47] Gmail like so we're going to click on
+[00:21:49] create a draft give that a beautiful
+[00:21:51] second refresh the tokens as always and
+[00:21:53] then guys what we can do is start to
+[00:21:54] fill out the recipient information so I
+[00:21:56] pop this to save as a draft to get
+[00:21:58] started then obviously once you're
+[00:21:59] comfortable with it and you scale this
+[00:22:00] up you can like send it directly so
+[00:22:02] we'll pick the folder which is going to
+[00:22:03] be drafts if this will ever load for us
+[00:22:06] awesome to recipient now let's just grab
+[00:22:08] all the data so who's it going to it's
+[00:22:10] going to client email um what is the
+[00:22:12] subject so I would then give that what I
+[00:22:15] think is really cool is have like a
+[00:22:16] naming convention for the things you
+[00:22:17] discuss so for example I sample call I
+[00:22:21] just say
+[00:22:22] proposal and then that content of the
+[00:22:25] email so I've got some code that I used
+[00:22:27] for an email I think looks pretty sick
+[00:22:28] so I'll just show you here for example
+[00:22:30] I'll show what that looks like in fact
+[00:22:31] if I come over to beautify you can see
+[00:22:33] this so you can design up guys the HTML
+[00:22:35] see what it looks like meeting summary
+[00:22:37] blah blah blah best regards a
+[00:22:38] automations whatever you want to design
+[00:22:40] it however you sort of fancy uh we come
+[00:22:42] over so get the code but the
+[00:22:45] fundamentally important part of
+[00:22:48] it um as you'll see on the scenario
+[00:22:50] we've got which is over here um is that
+[00:22:53] we we basically want to customize only a
+[00:22:54] couple of things so it's a very very
+[00:22:56] static email with the exception of
+[00:22:59] the first name okay come down remove the
+[00:23:01] first name to kind of do what you wish
+[00:23:03] with that so let's go down to a table
+[00:23:05] and first name one of the things I kind
+[00:23:06] of played around with is getting all
+[00:23:09] this information from the call like
+[00:23:10] their name their email their surname um
+[00:23:14] the reason why I decided against the
+[00:23:16] reason why I want an air table step is a
+[00:23:17] because it's a good CRM for you to use
+[00:23:19] anyway but also it just means that the
+[00:23:22] automation is significantly more robust
+[00:23:24] because if you have a call where like it
+[00:23:26] just doesn't come up or it's not evident
+[00:23:28] from the context you're kind of like
+[00:23:30] scrambled and I think you having a CRM
+[00:23:31] to manage them is better anyway and also
+[00:23:34] this doesn't have to be air table it can
+[00:23:37] be any TR you want to I just think this
+[00:23:38] is a neat a very neat solution I just
+[00:23:41] wanted to bring you behind a curtain on
+[00:23:42] my thought process because initially I
+[00:23:43] was like they we'll grab everything from
+[00:23:45] the call but uh it's also really
+[00:23:48] important that our automations are
+[00:23:49] robust and we PRI Sol on things at work
+[00:23:51] and this is the stuff that really really
+[00:23:53] works so we've got this beautiful old
+[00:23:54] email and at the bottom guys I've got
+[00:23:56] these participants so why the hell have
+[00:23:57] I done that so I've done that because
+[00:23:59] you may wish to send this to multiple
+[00:24:01] individuals and if that's the case what
+[00:24:03] we can do is add in the participants
+[00:24:05] like so okay so you just click on this
+[00:24:07] petitions button uh let's copy this come
+[00:24:11] down a few times oops does not want to
+[00:24:14] do that right oh my goodness all right
+[00:24:17] now it does now it's now it's behaving
+[00:24:19] wasn't behaving before um so we come
+[00:24:22] down call that
+[00:24:23] zero let's copy come down call that one
+[00:24:27] are you in the Christmas mood by the way
+[00:24:29] I kind of like part of me feels that
+[00:24:31] it's still like the 5th of December like
+[00:24:34] I I was supposed to be like like going
+[00:24:36] like really like super Leisure mode but
+[00:24:38] actually what's ended up happening is
+[00:24:40] like I've had like for somehow I've just
+[00:24:41] ended up getting like infinitely more
+[00:24:43] busy which is crazy so we've got these
+[00:24:45] participants coming down like zero to
+[00:24:47] five which means that like up to five
+[00:24:49] you add added a million if you want to
+[00:24:51] this is just so it's in email we come
+[00:24:53] down and then we've got attachments
+[00:24:54] we're going to add an attachment and it
+[00:24:55] will look at that guys by Magic it's
+[00:24:57] bought over the Google Document flipping
+[00:24:59] epic we click okay and guys we're going
+[00:25:02] to save it cuz we're not Savages what
+[00:25:04] value must not be empty let's check what
+[00:25:07] is it upset with what is it upset with
+[00:25:10] not upset with anything it's trying to
+[00:25:11] psych us out I'm trying to psych us out
+[00:25:13] a little bit all right so we save it we
+[00:25:15] aut to align it now let's run this
+[00:25:16] module once nothing will happen because
+[00:25:18] no changes have happened as you'll see
+[00:25:19] so we need to go and change one thing so
+[00:25:21] we'll call this one
+[00:25:23] now uh
+[00:25:26] MacDonald MC yeah Donald vets all right
+[00:25:32] beautiful I think we're ready to go now
+[00:25:33] so let's come down um and let's have a
+[00:25:37] look at the beautiful Automation and
+[00:25:38] it's running through beautiful we got
+[00:25:40] this stuff going down there air tables
+[00:25:41] grabbed it Firefly has grabbed the
+[00:25:43] transcript again it just grabb the
+[00:25:44] latest transcript that we had uh it's
+[00:25:46] done when it's full it's now creating
+[00:25:47] the document then it's going to download
+[00:25:48] the document and then we'll to see his
+[00:25:50] beautiful PDF in a Gmail and then I can
+[00:25:52] show you the more advanced cool kind of
+[00:25:54] like next level version of that okay so
+[00:25:57] Gmail's done it and is the entire
+[00:25:58] automation complete you would just have
+[00:26:00] it running down pretty much however
+[00:26:02] often you want it depends how many
+[00:26:03] meetings you're having really so let's
+[00:26:05] go over to the email and check out what
+[00:26:06] we've got do I'm just pull the PDF and
+[00:26:07] here we go we got McDonald's email what
+[00:26:09] we discussed we discussed selling
+[00:26:11] scaling aent practice with a focus on
+[00:26:13] SEO uh social media marketing paid ads
+[00:26:15] and Automation and completion by April
+[00:26:17] guys you didn't see this but like I bet
+[00:26:19] this is like verbatim What I fli and
+[00:26:21] said like SE enhancement social media
+[00:26:23] marketing paid advertising what was one
+[00:26:24] of the other things that I said in the
+[00:26:26] meeting um yeah but that was that was
+[00:26:29] essentially it yeah April May was a big
+[00:26:30] one what you'd like business automation
+[00:26:33] timeing for goals when they want to do
+[00:26:34] it pricing and what next we can purchase
+[00:26:36] here awesome I'll check that out Jack
+[00:26:38] thank you very much I look like got one
+[00:26:39] click in a buy that's simple this
+[00:26:41] happened automatically with their logo I
+[00:26:43] mean it's flipping crazy like it's
+[00:26:45] absolutely ridiculous and we the whole
+[00:26:46] and obviously you can design this in any
+[00:26:47] way you want to like it's just basically
+[00:26:48] summarized everything as a proposal like
+[00:26:50] I I really think that's flipping crazy
+[00:26:52] so now we've got that nailed down let's
+[00:26:54] go to the advanced section now for the
+[00:26:56] advanced section we need plasted so you
+[00:26:58] remember remember a video I did which is
+[00:26:59] adding text to Instagram post if you've
+[00:27:01] not seen that oh my goodness have you've
+[00:27:03] not seen that all right I've even pull
+[00:27:04] my YouTube channel up cuz I feel like I
+[00:27:05] need to show you this let me have a look
+[00:27:06] where is it it is this one here
+[00:27:08] unlimited video how to automate viral
+[00:27:10] videos of yourself insan and it is
+[00:27:13] insane and this I show you how you can
+[00:27:15] have like an thir of yourself into a 5c
+[00:27:18] clip I even show you
+[00:27:19] me there we go I was in LA look at that
+[00:27:22] that's me and we can also add text over
+[00:27:25] that now the tool we use to do that is
+[00:27:27] pled and this is an example of stuff you
+[00:27:28] can do bar cool video by the way you
+[00:27:29] haven't seen it and we're using the same
+[00:27:31] tool here for plastic so head over to
+[00:27:32] plastic. app like so and let me just in
+[00:27:34] fact let me go back I'm going to take a
+[00:27:35] back of step to show you plastic. app
+[00:27:38] add a new project all right add new
+[00:27:40] project we're going to call this one uh
+[00:27:42] proposal we're going to go for API we go
+[00:27:45] for make and then we click on this
+[00:27:46] beautiful create project button like so
+[00:27:49] and what think of this is like think of
+[00:27:51] this is like Cana basically guys it's
+[00:27:53] kind of like a cross between Cana and
+[00:27:56] some crazy automation thing want add
+[00:27:58] template now traditionally PDFs are
+[00:28:01] document sized so I like this 1080 X
+[00:28:03] 1920 so basically pick any of these
+[00:28:06] things that you like and like you can
+[00:28:07] see the reason why this is more advanced
+[00:28:09] than the standard guys is because this
+[00:28:11] one if you think about it lets you add
+[00:28:13] all the beautiful animations versus um
+[00:28:17] where is it on my uh desktop right now
+[00:28:19] this is more documental this is more
+[00:28:22] creative So based on where you want to
+[00:28:23] get to this will have a very small cost
+[00:28:25] associated with it but it's flipping F
+[00:28:27] flipping cool so let's say for example
+[00:28:29] we like the look of this one my fitness
+[00:28:31] year 2022 we click create this then will
+[00:28:34] load up for us now guys look at this we
+[00:28:36] can add anything I can add a text layer
+[00:28:38] look at this I want text right I like it
+[00:28:39] this big I'm going to I want the opacity
+[00:28:42] to be up or down I want to like change
+[00:28:44] the position I want to change you know
+[00:28:46] the color I come down I mess with the
+[00:28:47] color I can do all this crazy stuff with
+[00:28:48] it right you see my text here blah blah
+[00:28:51] blah so you can add all of the elements
+[00:28:52] in that you want to add a shape layer
+[00:28:54] add a picture layer add browse frame
+[00:28:56] barcodes whatever you want all right so
+[00:28:59] here we've got my fitness year 2022 so
+[00:29:01] basically design this as you want to
+[00:29:02] like you see this here use a photo what
+[00:29:05] if I made that their logo right or what
+[00:29:08] if I made
+[00:29:09] fitletics their logo do you know what I
+[00:29:11] mean I could do anything so you design
+[00:29:13] it as you want to and when you've done
+[00:29:14] that we'll put this
+[00:29:17] as
+[00:29:18] Santa PDF all right so basically you
+[00:29:22] grab it you mess with the text you click
+[00:29:24] save beautiful all right now we're going
+[00:29:27] to create a new scenario in our
+[00:29:28] beautiful scenario again we'll call this
+[00:29:29] one
+[00:29:31] Santa PDF we're doing the exact same
+[00:29:34] thing and what we'll probably do guys as
+[00:29:36] well is we'll just steal everything from
+[00:29:39] here it's they first part the automation
+[00:29:41] to exactly the same you control C come
+[00:29:43] back over boom how Cool's that all right
+[00:29:46] sweet so I'm going to remove it for time
+[00:29:48] being just because it's going to be easy
+[00:29:49] to run but we'll be adding this in
+[00:29:51] shortly after can I delete these it
+[00:29:54] would would it even let me delete them
+[00:29:55] okay yeah it does now awesome all right
+[00:29:57] so come down we go for plased we're
+[00:30:00] going to go for create a PDF like so
+[00:30:03] beautiful connected to your plastic
+[00:30:05] connection and then we can choose we're
+[00:30:07] looking for once say Santa hasn't
+[00:30:09] appeared just yet let me just refresh
+[00:30:10] that of course I've correct new
+[00:30:11] connection I can template and I see
+[00:30:13] Santa's PDF and then guys we come down
+[00:30:15] and we're going to click and look at all
+[00:30:16] this stuff guys this is all the stuff
+[00:30:18] that we saw in the last image so I open
+[00:30:20] this back up now I click on edit is a
+[00:30:22] for instance look at this right username
+[00:30:24] so that is Andy Andy 94 look I come back
+[00:30:26] over them let's see what we've got
+[00:30:28] uh let's see I come down to let's have a
+[00:30:31] look where is user
+[00:30:33] image I mean all these things align
+[00:30:36] perfectly right so for example if I come
+[00:30:37] over and I grab even this guy I bring
+[00:30:40] him over this is just to show exactly
+[00:30:41] how this works and bring it over
+[00:30:45] here sweet and I can just start feeding
+[00:30:48] all this information so check this out
+[00:30:50] what's user image well let's just get if
+[00:30:51] I run this one once let's get some
+[00:30:54] information down here beautiful I come
+[00:30:56] over here right check this out this is
+[00:30:58] crazy okay I need to add a new
+[00:31:00] connection one second there we go it's
+[00:31:03] right there actually beautiful and then
+[00:31:05] I should get my Santa Clause sign its
+[00:31:07] PDF beautiful we flipp and love it come
+[00:31:09] down what's the image well let's just
+[00:31:11] give it the link to the uh down here I
+[00:31:14] think it would be on the business logo
+[00:31:16] so we can say look so now maybe we can
+[00:31:18] get a photo of them individually get
+[00:31:19] them saved if you're a client you're
+[00:31:21] familiar with or you can get my logo
+[00:31:22] whatever you want then let's see we've
+[00:31:24] got value three value two value one and
+[00:31:26] you can name all these things so like if
+[00:31:28] I come back over guys like check this
+[00:31:30] out value one is workouts 178 so if I
+[00:31:34] come back over and I say cool value one
+[00:31:37] let's say we want 100 let's say value
+[00:31:40] two is 100 let's say value one is 100
+[00:31:43] percenter and we can just start changing
+[00:31:45] all this stuff username we'll call it
+[00:31:47] big big Santa okay sweet and going to
+[00:31:51] click okay now check this out guys ones
+[00:31:54] and this is going to generate for us a
+[00:31:55] PDF so look I run this one once
+[00:31:57] nothing's happened why has nothing
+[00:31:59] happened because we' not doing things we
+[00:32:01] this on Chris kingle uh Elfie boy Elfie
+[00:32:05] I don't know why don't don't judge my
+[00:32:07] names don't judge my names we come over
+[00:32:09] running it air table's kicked off it's
+[00:32:12] find some cool stuff and you can't see
+[00:32:14] but it's running around actually because
+[00:32:15] pl's like covered in snow at the moment
+[00:32:17] but when this is done guys we'll get the
+[00:32:19] PDF ranks to flip and check this out
+[00:32:21] check this out PDF URL are you ready are
+[00:32:23] you ready for this okay now check this
+[00:32:25] up I'm going to come over I enter it in
+[00:32:28] properly we should see look at this guys
+[00:32:31] big Santa 100 100 100 and McDonald's
+[00:32:35] logo that's how flipping epic this is
+[00:32:38] and guys all you ever have to do right
+[00:32:40] is just design this once to your perfect
+[00:32:44] specifications and it's done and then
+[00:32:46] all you ever do guys is you just combine
+[00:32:48] these scenarios so look you see I've got
+[00:32:50] this stuff I just
+[00:32:52] copy these right I come back over I
+[00:32:56] paste them I I unlink I zoom in cuz I'm
+[00:32:59] not crazy and then
+[00:33:01] boom and then of course we delete that
+[00:33:04] we don't need that guy anymore we bring
+[00:33:06] it over here and all we do guys is we
+[00:33:08] come back to our first scenario we just
+[00:33:10] copy this guy we come over we paste him
+[00:33:14] and that's how you get the advanced
+[00:33:15] version that's how you basically get
+[00:33:16] canva sorted out and I'm going to save
+[00:33:18] this one as well uh I'll put this in the
+[00:33:20] community also for you but guys I'll
+[00:33:22] also sort that out before I send you but
+[00:33:23] hopefully you can see just how flip and
+[00:33:25] epic this is and in case guys I hope you
+[00:33:27] have an aw awesome Christmas an amazing
+[00:33:29] New Year I'll probably get a video up
+[00:33:31] between now and the end of the year
+[00:33:32] because I'm going to be in chill mode
+[00:33:33] but I'm going to be like thinking and
+[00:33:35] doing some cool stuff so yeah I'll see
+[00:33:37] you then have a great week and I'll
+[00:33:38] catch you in my next one

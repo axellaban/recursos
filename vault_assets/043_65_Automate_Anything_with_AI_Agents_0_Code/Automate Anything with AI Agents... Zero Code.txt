@@ -1,0 +1,2213 @@
+[00:00:00] hey do me a favor B me an appointment
+[00:00:01] with Matthew next Tuesday uh let's call
+[00:00:04] the appointment MacBook review and just
+[00:00:06] the agenda is going to be about buying
+[00:00:07] MacBooks and whether or not we should go
+[00:00:09] with Windows or Mac um yeah that's
+[00:00:11] everything thanks guys I just sent a
+[00:00:13] voice note to my VA my agentic VA you're
+[00:00:16] going to see right now how exactly how
+[00:00:17] this works this is just one of many
+[00:00:19] capabilities that we can do with this
+[00:00:20] and you're going to see right now it's
+[00:00:22] going to go down it's booked an
+[00:00:23] appointment and if I check right here
+[00:00:24] look at this guys your appointment has
+[00:00:26] been successfully scheduled it's about a
+[00:00:28] Macbook review here's the agenda uh here
+[00:00:30] the date the time and who's actually
+[00:00:31] going to be attending uh and everything
+[00:00:33] like that and what this has done guys is
+[00:00:34] gone to Google meets and bug me an
+[00:00:35] appointment with Matthew and knows who
+[00:00:37] Matthew is it's got all of that data and
+[00:00:39] it'll do millions of tasks like this for
+[00:00:40] you completely automatically now in this
+[00:00:43] video I'm going to show exactly how you
+[00:00:44] can build a completely no code AI agent
+[00:00:49] system I'm going to show you exactly how
+[00:00:51] you do it step by step so if you follow
+[00:00:52] this video from now all the way to the
+[00:00:54] end you'll have a working system that
+[00:00:56] can do really epic stuff for you just
+[00:00:58] like that now I want to start and
+[00:01:00] basically do four thing I want to give
+[00:01:01] you an overview of what it does I want
+[00:01:02] to show you triggers we can do and for
+[00:01:04] that we're going to do WhatsApp we're
+[00:01:05] going to do telegram we're going Tri
+[00:01:08] slack uh I'm going to show you the
+[00:01:09] automation itself which is this
+[00:01:11] beautiful thing that we saw right here
+[00:01:13] and all these different brains we've got
+[00:01:14] and different functionality the one that
+[00:01:16] I built for example can do things like
+[00:01:18] it can check if you've got calendar
+[00:01:19] appointments it can check uh it can make
+[00:01:21] calendar appointments like that it can
+[00:01:23] add things to your to-do list it can
+[00:01:25] also research for things online and
+[00:01:27] retrieve data and information and what
+[00:01:29] it can also do is save information and
+[00:01:31] actually improve itself over time as it
+[00:01:34] learns more about what you want so get
+[00:01:36] on chat gb01 has limited memory with
+[00:01:39] this we're going to have infinite memory
+[00:01:41] essentially using a rag system as well
+[00:01:43] which I'll also show you towards the end
+[00:01:45] of the video which is going to be really
+[00:01:46] flipping cool so let's start with a
+[00:01:48] little bit of an overview because I
+[00:01:49] think it's really important so feel free
+[00:01:50] to skip this I'll time stamp it uh so
+[00:01:52] you can go directly where you want to
+[00:01:54] but I think OV in context is really
+[00:01:56] important so what are the key features
+[00:01:58] and by the way I you can tell right now
+[00:02:00] I'm just going to become the flu this
+[00:02:01] week so I'm just this is why this video
+[00:02:02] took a couple days to come out oh of
+[00:02:04] course if you haven't already grab the
+[00:02:05] coffee cuz this one's going to be crazy
+[00:02:07] so key features with this one it's all
+[00:02:09] built in me.com all right so you don't
+[00:02:11] need to use any other tools we'll need
+[00:02:13] to use stuff for triggers like telegram
+[00:02:14] or WhatsApp and we're going to use air
+[00:02:16] table as storage and if you want to add
+[00:02:18] a memory component to it we're going to
+[00:02:20] want to add in either one of these two
+[00:02:22] things which is pine cone and air table
+[00:02:24] I'll show you how you do that step by
+[00:02:25] step but the actual agent side of it is
+[00:02:27] only Built using one software which is
+[00:02:30] me.com which is going to be super simple
+[00:02:32] and anybody can follow along with it
+[00:02:34] second of all it's modular which means
+[00:02:36] you can add as many agents as you like
+[00:02:40] to this system and I want to just show
+[00:02:41] you this kind of visual representation
+[00:02:43] what way how this sort of physically
+[00:02:45] looks we've got a director at the top
+[00:02:47] okay and you can see on the left here
+[00:02:48] right we have a trigger someone sends a
+[00:02:50] message we have a director and here's
+[00:02:53] effective job and you can get multi
+[00:02:55] multi layers by this like a really
+[00:02:56] simple one will have two layers like a
+[00:02:58] director and an agent but but you could
+[00:03:00] have director manager agent based on the
+[00:03:02] complexity of it like if you have 50
+[00:03:04] different tools that might be organized
+[00:03:07] into four teams or 12 or 13 with four
+[00:03:09] managers and then those managers
+[00:03:11] themselves as you can see here need a
+[00:03:13] director so basically what will happen
+[00:03:15] is you'll send a message and we'll have
+[00:03:17] you know the I guess I think the
+[00:03:18] technical term for this is a classifying
+[00:03:20] agent but it doesn't sound anywhere
+[00:03:22] nearly as cool as director and I like to
+[00:03:24] use the language of director and manager
+[00:03:26] because it's a more closely I guess it
+[00:03:29] just helps you I understand what we're
+[00:03:30] talking about here is these kind of
+[00:03:31] Agents can be used to you know sell to
+[00:03:33] businesses to make bank or they can just
+[00:03:35] automate every single aspect of your
+[00:03:37] life like the 4-Hour Work Week will
+[00:03:39] arrive with this technology the director
+[00:03:42] gets the classifying agent and he may
+[00:03:44] say to him say look I want to do I want
+[00:03:46] to book an appointment with Todd I want
+[00:03:48] to I don't know call my barber to book
+[00:03:51] an appointment next Tuesday which by the
+[00:03:52] way I'll touch on that later um and what
+[00:03:54] this guy will do is he will look based
+[00:03:55] on this query which of the four managers
+[00:03:58] is best suited to handle each aspect of
+[00:04:01] it and by the way this system guys if it
+[00:04:03] thinks it needs to get to multiple
+[00:04:04] managers it will do that for you so we
+[00:04:06] may get down to this guy you know red
+[00:04:08] and pink or pink and black or whatever
+[00:04:10] then once the manager gets it it then
+[00:04:12] delegates that to the agents to perform
+[00:04:14] the tasks and then we get an update so
+[00:04:16] that's a kind of macro level view of it
+[00:04:17] and it's extremely modular and that's
+[00:04:19] what I really like about it and we can
+[00:04:21] build it out so for example in this
+[00:04:22] instance here guys this is our director
+[00:04:25] and he's deciding which of these
+[00:04:26] multiple Pathways do I want to send it
+[00:04:28] to do I want to send it to the
+[00:04:29] productivity agent has these three
+[00:04:32] productivity tools checking calendars
+[00:04:34] bucking calendars adding things to our
+[00:04:35] to-do list don't want to send it down to
+[00:04:37] this guy who's going to research things
+[00:04:38] and just general respond or going to
+[00:04:40] build out on memory and i' I've picked
+[00:04:42] three just to keep it very simple I
+[00:04:44] could have built something significantly
+[00:04:46] larger but I also wanted to show you how
+[00:04:48] you build it step by step so you know
+[00:04:49] exactly how you're doing that and then
+[00:04:50] we can trigger it by WhatsApp I'm going
+[00:04:52] to show you can trigger it by tegram
+[00:04:54] which I prefer telegram by the way I
+[00:04:55] will explain why I prefer Telegram and
+[00:04:57] also you can tregg it by slack so you
+[00:04:59] Bey on that just hey boom let's do X XYZ
+[00:05:01] and it's cool the other thing is it can
+[00:05:03] execute multiple agents one request like
+[00:05:04] I said so you could do the productivity
+[00:05:06] and the knowledge base and lots of
+[00:05:08] things in between that now in this video
+[00:05:09] I'll show you to build it all step by
+[00:05:11] step follow it along it will make sense
+[00:05:13] if you do follow this video by the end
+[00:05:15] of it you will have a working agent that
+[00:05:17] you can use for anything you want to
+[00:05:18] we're going to have multiple triggers um
+[00:05:20] I'm going to show you how you build the
+[00:05:21] agent system on make and we're also
+[00:05:23] going to cover this rag system where we
+[00:05:25] can retrieve and store this incredible
+[00:05:26] knowledge and also you're going to find
+[00:05:28] out how to do things like updating
+[00:05:29] notion with an a Automation and Gil
+[00:05:31] calendar I just picked these as examples
+[00:05:33] the potential for this is literally
+[00:05:35] insane it will it should be the living
+[00:05:37] breathing digital extension of you this
+[00:05:39] whole system so for me I never have to
+[00:05:41] write create email pointments anymore or
+[00:05:43] I have to manually like jot something
+[00:05:45] down on my notes to add to notion I can
+[00:05:46] just speak it and it will happen which I
+[00:05:48] think is freaking really really cool so
+[00:05:50] why build this this is the year of the
+[00:05:53] AI agent um some have called it you of
+[00:05:55] the robot I think it's usually agent
+[00:05:57] then robot but this year for AI agents
+[00:06:00] is going to be freaking insane this is
+[00:06:02] really the next evolution of where we're
+[00:06:04] heading these kind of systems that can
+[00:06:06] think through problems for us and then
+[00:06:08] take actions for us that is a growth era
+[00:06:10] is only going to get bigger sign more
+[00:06:12] and more significantly and what's really
+[00:06:14] cool about what we use here guys with
+[00:06:15] this no Code system on me.com is
+[00:06:17] essentially what we're doing is we're
+[00:06:18] building system logic but then we're
+[00:06:20] also equipping it with tools do you know
+[00:06:23] what I mean and if you can think about
+[00:06:24] anything in your life that you want to
+[00:06:26] accomplish or automate or just solve all
+[00:06:28] we have to do is build it into a an
+[00:06:31] intelligent system that makes sense and
+[00:06:33] these AI agents will go forth and
+[00:06:34] developers forers like this is literally
+[00:06:37] as far front in The Cutting egg as I
+[00:06:38] could possibly imagine like I I think
+[00:06:39] it's absolutely insane there's no better
+[00:06:41] time to understand about how AI agents
+[00:06:43] work and have fun with a cool system
+[00:06:45] like this to get started and build your
+[00:06:47] first system it is insanely profitable
+[00:06:50] to sell so many businesses require use
+[00:06:52] cases like this if you can think like an
+[00:06:54] AI architect and intelligent design you
+[00:06:56] will absolutely crush it um this is I
+[00:06:59] like the ex create your life back
+[00:07:01] because if you think of those repetitive
+[00:07:02] boring stuff that you do either you have
+[00:07:04] someone like me who you know builds this
+[00:07:05] for our community you could just
+[00:07:06] download and use it or other people in
+[00:07:08] our community or you build your own you
+[00:07:10] can basically start to automate away all
+[00:07:12] those annoying tasks and replace what
+[00:07:14] you'd otherwise pay people to do which I
+[00:07:15] think it's freaking crazy and obviously
+[00:07:17] also it's fun it is just really fun and
+[00:07:19] it's infinitely customizable anything
+[00:07:21] you could possibly imagine you can
+[00:07:23] automate once we get it into Mech which
+[00:07:25] I think is really fliping epic now the
+[00:07:27] vision for this is I want to create a
+[00:07:29] weapon inside our community which is on
+[00:07:31] school.com if you don't know just like
+[00:07:32] latest AI credible automations and
+[00:07:35] importantly the stuff that works so in
+[00:07:36] the classroom the way I'm going to build
+[00:07:38] this out is quite modulous so that
+[00:07:39] everybody when have a competition in the
+[00:07:40] community everyone's going to build out
+[00:07:42] their own AI agent part of this like for
+[00:07:44] different use cases like one that we're
+[00:07:45] going to do for instance is going to be
+[00:07:47] something that can actually call
+[00:07:48] businesses for you and book appointments
+[00:07:50] and all you'd simply do is just add it
+[00:07:52] to your automation because it's super
+[00:07:53] modulous so imagine like a Weaponry of
+[00:07:55] like 50 60 different agents that you can
+[00:07:57] pick and choose from and add to it so
+[00:07:58] that's basically what inside the
+[00:07:59] community then over time we'll get
+[00:08:01] better systems use more tools as we can
+[00:08:03] accomplish more things and ultimately
+[00:08:05] this is just version 1.0 now with all
+[00:08:08] that beautiful Preamble in mind let's
+[00:08:10] get started and build it and of course
+[00:08:12] if you are in the community if you do
+[00:08:13] want to have the entire blueprint all
+[00:08:14] you do is simply come down here you
+[00:08:16] click on this button here more input
+[00:08:17] blueprint choose the file you upload the
+[00:08:19] file click save and then the entire
+[00:08:21] automation will populate for you
+[00:08:23] automatically and in this one we're
+[00:08:24] going to build all together so I'm going
+[00:08:25] to start off by showing you the uh
+[00:08:28] basically the triers right so for the
+[00:08:30] triggers we're going to be using first
+[00:08:32] of all we're going to use telegram now
+[00:08:34] the reason I really like telegram by the
+[00:08:35] way guys is because
+[00:08:37] fundamentally what telegram will do for
+[00:08:39] us it's first of all it's just a way
+[00:08:41] better API I found with WhatsApp it's so
+[00:08:43] there's so many rings and Hoops you have
+[00:08:45] to jump through just very quickly you're
+[00:08:46] my familiar with telegram it is huge in
+[00:08:48] Russia by the way uh it's simple private
+[00:08:50] synced they're really big in privacy you
+[00:08:52] can like delete all the messages as
+[00:08:54] quickly as you want to um it's way more
+[00:08:56] customizable and you'll find out when I
+[00:08:58] show you the interc corrections make.com
+[00:09:00] the stuff it can do is really freaking
+[00:09:02] incredible so the first step here guys
+[00:09:03] if you'd like to use telegram is to
+[00:09:04] download telegram you can also get a
+[00:09:06] desktop app as well which I think is
+[00:09:07] pretty cool now what we're going to do
+[00:09:09] is create a channel which is really
+[00:09:11] flipping epic and you see how easy this
+[00:09:12] is compared to things like WhatsApp
+[00:09:14] which I'll also show you in a second it
+[00:09:15] will blow your mind so what I want you
+[00:09:17] to do is start a chat with what we call
+[00:09:19] the bot father so you're going to search
+[00:09:21] for bot father in Telegram and click on
+[00:09:23] this guy here so once you find bot
+[00:09:24] farther basically can for Slash new bot
+[00:09:27] like this create a new bot like that all
+[00:09:29] right great right what are we going to
+[00:09:30] call it let's call it something like Dr
+[00:09:33] Peppa I don't know 7676 like this
+[00:09:36] awesome let's choose username for this
+[00:09:38] your bar it must end in B Okay cool so
+[00:09:40] let's give it Dr
+[00:09:41] Peppa bot incredible and just like that
+[00:09:44] guys the bar has essentially been
+[00:09:46] created and so you can chat with Dr pppa
+[00:09:48] 7676 spot by clicking this if I click on
+[00:09:51] that right there now we can message him
+[00:09:52] and have a good old conversation but
+[00:09:54] look now we've got this HTTP API token
+[00:09:57] so you can copy this as a for instance
+[00:09:59] and come back to telegram here uh watch
+[00:10:01] update as the module you want but we'll
+[00:10:03] just again do this from scratch say hey
+[00:10:04] it's
+[00:10:05] telegram all right beautiful and let's
+[00:10:08] just go for Watch updates create a web
+[00:10:12] hook and then we'll ask for a new
+[00:10:14] connection so we'll go token we we go
+[00:10:15] for basically that token that it just
+[00:10:17] gave you click on save like that and
+[00:10:20] give that a moment once that's loaded up
+[00:10:22] we're ready to go and then whenever we
+[00:10:24] Dr Pepper bot gets a message this will
+[00:10:25] trigger the entire scenario click on
+[00:10:27] Save that's awesome and then we click on
+[00:10:30] okay now check this out I click on run
+[00:10:31] ones and if I just click on start okay
+[00:10:33] it's run here me just one more time come
+[00:10:35] back I'll say hey like so enter and look
+[00:10:39] at this guys I come down to messages and
+[00:10:41] the text right there is hey which I
+[00:10:43] think is pretty flipping cool there you
+[00:10:44] go that's how you get it now the next
+[00:10:46] thing we to do is how do we send
+[00:10:47] messages back to us from that thing so
+[00:10:50] come back here come to telegram one more
+[00:10:52] time click on telegram bot and I'm going
+[00:10:54] to say here like
+[00:10:55] send we can send audio files send
+[00:10:57] messages whatever you want to send text
+[00:10:59] message or reply now you need to find a
+[00:11:02] chat ID so here's how you find out what
+[00:11:03] your own unique chat ID is then guys go
+[00:11:05] into the search bar for telegram and
+[00:11:07] type in raw data bar and once you see
+[00:11:09] this and click Start you will then be
+[00:11:11] able to get what your UniQue Ideas so
+[00:11:12] look if I click Start here for example
+[00:11:14] it will then message me what my unique
+[00:11:15] ID they get my chat ID and my first name
+[00:11:18] I just want you to copy that chat ID and
+[00:11:20] then come back and here guys for example
+[00:11:21] I'm going to say hey the Dr P and now we
+[00:11:25] type in the chat ID which is the number
+[00:11:27] that you just got all right cool now
+[00:11:28] look if I run a s i once I come to Dr
+[00:11:30] Peppa and I
+[00:11:32] say test test 1 2 3 and then we get this
+[00:11:35] message back from Dr Peppa hey Dr P so
+[00:11:38] you've now officially Linked UP Telegram
+[00:11:40] and now we can use it to send messages
+[00:11:42] and receive it with the make.com you can
+[00:11:43] also trigger this automation guys with
+[00:11:44] slack if you wish to uh simp by coming
+[00:11:46] over here clicking this button when to
+[00:11:48] type in slack we are going to go for
+[00:11:50] watch private Channel messages like so
+[00:11:52] you just simply add the connection at
+[00:11:54] the top left once you've done that you
+[00:11:56] can just put search from a list which is
+[00:11:58] cool pick the private Channel that you
+[00:11:59] want to set the limit for messages um
+[00:12:02] from now on is fine click run once okay
+[00:12:05] nothing's happened which is great but if
+[00:12:06] you head over to slack and send a
+[00:12:07] message that will then appear within
+[00:12:08] make and so guys to use WhatsApp as a
+[00:12:10] trigger for your automation we're going
+[00:12:12] to use a third party called Notifier
+[00:12:14] what's abl so the very first thing you
+[00:12:16] do is you're going to basically use this
+[00:12:18] URL here I'll po Link in the description
+[00:12:19] below and what it's going to basically
+[00:12:21] ask you to do is install this into
+[00:12:23] me.com so we click on in this install
+[00:12:25] button right here and once that's loaded
+[00:12:27] we're going to be able to see this
+[00:12:28] itself within me
+[00:12:29] now one of the things you can do on your
+[00:12:31] phone is ADD WhatsApp business um which
+[00:12:33] you can do and get a second number to do
+[00:12:35] that you're going to enter information
+[00:12:36] on this page right here you're going to
+[00:12:38] head over to API key and then you're
+[00:12:39] going to copy your API key here and one
+[00:12:42] of the things that you'll do on this
+[00:12:43] page itself when you verify your number
+[00:12:45] is you'll send yourself a message and
+[00:12:47] then you verify that with the code on
+[00:12:48] your WhatsApp I did this creating a
+[00:12:51] WhatsApp business account so I can have
+[00:12:52] my personal and my business version on
+[00:12:54] my phone using a second number so guys
+[00:12:56] the first thing I'm going to do is add
+[00:12:58] the API connection so we're going to
+[00:12:59] find for Notifier and you can just put
+[00:13:01] send a WhatsApp message first of all
+[00:13:03] guys come down to connections click on
+[00:13:04] ADD basically let's call this one build
+[00:13:08] um together and then right here guys
+[00:13:10] enter the API key that you got from your
+[00:13:13] API section in your dashboard over here
+[00:13:15] so I've just done that it's now loading
+[00:13:16] up now we're going to send ourselves a
+[00:13:18] message since I'm in the UK we need to
+[00:13:19] do the plus 44 and then the number and
+[00:13:22] the message is going to be yo yo yo yo
+[00:13:24] yo and then I'm going to add this number
+[00:13:25] in and then send it and as you can see
+[00:13:27] the message has been successfully sent
+[00:13:28] so that's just check that's gone through
+[00:13:30] and as you can see right here guys
+[00:13:31] message from AI Jack yo yo yo yo yo yo
+[00:13:33] yo yo yo how cool is that really
+[00:13:34] flipping cool so what we're going to do
+[00:13:36] is reply to this message and then what
+[00:13:37] we're going to do guys is get rid of
+[00:13:39] this module obviously we use that if we
+[00:13:40] want to send messages we're going to go
+[00:13:42] for again Notifier like so beautiful and
+[00:13:46] this one guys is going to be notified
+[00:13:48] bar listen to an incoming message and
+[00:13:50] then uh we're going to pick one of the
+[00:13:52] hooks in fact We'll add one again ref
+[00:13:53] fresh this is absolutely fine Build
+[00:13:55] Together is cool and then we're going to
+[00:13:57] send ourselves a message so click okay
+[00:13:59] beautiful now run this module once come
+[00:14:01] back over I'm going to say hey there uh
+[00:14:03] begin the scenario where we at right now
+[00:14:06] we can see that hey there begin the
+[00:14:08] scenario and just like that we can get
+[00:14:10] full messages triggered from WhatsApp
+[00:14:12] the only caveat is that you can't really
+[00:14:14] do audio files using this at the moment
+[00:14:15] but you will be able to use text awesome
+[00:14:17] guys now I've shown you exactly how you
+[00:14:18] can set up telegram I'm now going to go
+[00:14:20] through and build the ultimation with
+[00:14:22] you now again I've just picked a couple
+[00:14:24] as an example but I really think it will
+[00:14:25] underscore how powerful this thing is so
+[00:14:28] we've got beautiful telegram bot which
+[00:14:30] is we've sent a message now what we're
+[00:14:33] going to do is we're going to build out
+[00:14:34] the scenario and then we're going to
+[00:14:36] duplicate it and the reason we're going
+[00:14:37] to do that is scen first part of the
+[00:14:39] scenario is going to be if we get audio
+[00:14:41] messages and then we build the whole
+[00:14:42] scenario and then once we've done that
+[00:14:43] if we just want to do for text message
+[00:14:45] we can do that we can also get it to
+[00:14:46] respond to us in voice in our own turn
+[00:14:49] of voice if you want to I mean there's a
+[00:14:50] million things we can do and you'll see
+[00:14:52] so the very first thing I want you to do
+[00:14:53] is come down here and click we'll we'll
+[00:14:54] build this out for voice message just
+[00:14:56] because I think it's a little bit easier
+[00:14:57] for us to use so to do that guys we add
+[00:14:59] a new module click on telegram bar and
+[00:15:01] all you're going to do is download a
+[00:15:02] file which is really cool and it'll have
+[00:15:04] a file ID okay now check the start I'm
+[00:15:06] going to run this module once which come
+[00:15:08] off fa click okay uh that's fine let me
+[00:15:10] just unlink these for a moment run this
+[00:15:12] one let's go over to telegram let's give
+[00:15:14] it a little voice message like yo yo yo
+[00:15:17] test test one two 3 we come off that and
+[00:15:20] as you can see we've now got the message
+[00:15:21] and it will pulled through the voice
+[00:15:23] file look how flipping cool that is all
+[00:15:24] right we connect these two together and
+[00:15:26] then we just download the message it we
+[00:15:28] got from telegram there you come down to
+[00:15:29] file ID which you will find very very
+[00:15:31] easily if you come over here if you come
+[00:15:33] to message come down to attachment and
+[00:15:35] then you've got file ID right there
+[00:15:36] beautiful perfect and then guys we're
+[00:15:38] going to add whisper and what this will
+[00:15:40] do is this will quite
+[00:15:42] simply yeah just transcribe it for us of
+[00:15:44] course beautiful come down and then this
+[00:15:47] would this should pull through the file
+[00:15:49] automatically for us prompt to be hey
+[00:15:52] let's just say
+[00:15:54] transcribe
+[00:15:56] this cool response format doesn't need
+[00:15:58] to be Json I'm happy with text in this
+[00:16:00] instance we'll click okay and then let's
+[00:16:02] just of course just rename this just so
+[00:16:04] we are on top of all our beautiful name
+[00:16:07] because these scenarios are going to get
+[00:16:08] this is going to get a fairly juicy
+[00:16:09] scenario guys to be honest with you so
+[00:16:11] if we have like a pen um I I'll have a
+[00:16:14] pencil I'll have a pencil I don't mind
+[00:16:16] that transcribe click okay cool so let's
+[00:16:18] just run this one more time click on run
+[00:16:20] the module once the valley can't be
+[00:16:22] empty let's see exactly what the problem
+[00:16:23] is here I I think it's just FL red
+[00:16:25] herrings to be honest with you that's
+[00:16:27] done come with telegram
+[00:16:30] hey test test one two 3 can you
+[00:16:32] transcribe this message we come off and
+[00:16:35] right there guys we can see and has this
+[00:16:37] been transcribed hey test test 1 2 3 can
+[00:16:40] you transcribe this message how flipping
+[00:16:41] cool is that awesome now what we will do
+[00:16:44] in this scenario guys is we will add a
+[00:16:46] rout in here and if it's a voice file
+[00:16:48] we'll send it up in this route and if
+[00:16:50] it's a text file or anything else or
+[00:16:52] even video for example we can send it
+[00:16:54] down something slightly different but
+[00:16:55] I'm just going to build it with the
+[00:16:56] voice first to keep it nice and simple
+[00:16:58] and then we can do something slightly
+[00:16:59] different obviously if you just want to
+[00:17:00] do text you can just avoid these two
+[00:17:03] parts of the Automation and so the next
+[00:17:04] thing I want to do here guys is create a
+[00:17:05] record of the entire conversation that
+[00:17:07] we've had with this agent so that we can
+[00:17:09] use that to give it context to then
+[00:17:11] training agent in the future for things
+[00:17:12] like hey you know he's spoken a lot
+[00:17:14] about this coffee shop he likes it will
+[00:17:16] then have that context in the future
+[00:17:17] conversation so it feels and I think
+[00:17:19] that is experientially what improves um
+[00:17:21] the conversation because it has that
+[00:17:23] information that knowledge so for
+[00:17:25] example we're going to build this which
+[00:17:26] is a query a response a really simple
+[00:17:29] air table thing so let me come over to
+[00:17:31] air table and build that with you real
+[00:17:32] quickly air table by the way it's like
+[00:17:34] this free software up to certain number
+[00:17:36] of record it's like Google Sheets on
+[00:17:38] storage um I flipping really like it
+[00:17:40] this is optional you don't have to do
+[00:17:42] this I just think this is really
+[00:17:43] flipping cool makes sense so come down
+[00:17:45] here to create uh start from scratch
+[00:17:47] we'll call this one here we'll call this
+[00:17:48] one night
+[00:17:50] rider Night Rider
+[00:17:53] knowledge I don't even know if it's got
+[00:17:54] a capital R but we'll call that right
+[00:17:56] and let's go for a uh a little car as as
+[00:17:58] well okay there we go night R just give
+[00:18:00] a real fast car beautiful and we'll make
+[00:18:03] that nice and gray Okay cool so the
+[00:18:05] first thing we want here is going to be
+[00:18:07] message okay top left and let's add a
+[00:18:11] little speech bubble beautiful and then
+[00:18:13] the second one here is just going to be
+[00:18:15] you might have guessed it actually
+[00:18:19] reply beautiful let's put a little robot
+[00:18:21] there just for know who's replied like
+[00:18:22] that and then we click okay that's
+[00:18:24] pretty much as complicated as it gets
+[00:18:26] but let's just add one date we created
+[00:18:27] so come right here to us it
+[00:18:32] uh type in create time and up here we'll
+[00:18:35] do create a Time beautiful and then the
+[00:18:37] next one guys onto status uh we're just
+[00:18:39] going look for last modified time then
+[00:18:42] click save like so and then let's just
+[00:18:44] make sure we rename that last modified
+[00:18:46] time also beautiful so that then give us
+[00:18:48] records about actually not just when
+[00:18:50] what did we say but when did we say it
+[00:18:52] so stuff that we said four years ago
+[00:18:54] about our opinions on coffee for
+[00:18:56] instance may be slightly less relevant
+[00:18:57] than what it's said today so this is a
+[00:18:59] really easy short shot way for us to
+[00:19:01] start capturing information if you don't
+[00:19:02] want to get down rag or if you do it
+[00:19:04] gives us some cool optionality cool so
+[00:19:06] what do we do then guys we'll come back
+[00:19:07] over to our really cool Automation and
+[00:19:09] what we're going to do is come down here
+[00:19:11] we're then going to add in air table
+[00:19:12] like so uh let's go for air table
+[00:19:15] beautiful create a record phenomenal
+[00:19:19] give that a hot second fail to load data
+[00:19:22] don't you worry about it we're looking
+[00:19:24] for Night Rider so you type in Night
+[00:19:26] Rider
+[00:19:29] night R knowledge cool beautiful that's
+[00:19:31] fine give that a second uh and then we
+[00:19:34] click on okay once again just let that
+[00:19:37] light up a little bit cool table is
+[00:19:39] going to be table one and for table one
+[00:19:41] guys actually what I suggest we do is
+[00:19:43] name these better let's call this one uh
+[00:19:46] chat
+[00:19:47] history and then we're going to add
+[00:19:49] other tables in here for various
+[00:19:51] different things which you'll see in a
+[00:19:53] moment so we come back over here it's
+[00:19:55] not actually table one anymore let's
+[00:19:56] refresh and give that its proper name
+[00:20:00] okay maybe I just need to reset this a
+[00:20:02] little bit come down to improvements
+[00:20:04] come back over to night9 of knowledge
+[00:20:06] okay beautiful chat history phenomenal
+[00:20:09] all right so what we're going to do
+[00:20:10] first of all is the message and that is
+[00:20:12] simply going to be guys this text
+[00:20:14] message here which is really flipping
+[00:20:15] cool beautiful then I'm going to click
+[00:20:17] on okay nice so that is going to cly
+[00:20:20] record basically like add add that
+[00:20:22] message to the um basically that's just
+[00:20:25] going to add a message to um the ad
+[00:20:28] table now we're only going to do this
+[00:20:30] once so what we're going to do at the
+[00:20:31] moment is unlink this guy and leave it
+[00:20:33] at the bottom and we're going to do this
+[00:20:35] basically when we have a reply so we're
+[00:20:37] going to add into this thing a what we
+[00:20:39] asked it and B what the reply was and
+[00:20:41] we're going to throw that in at the end
+[00:20:42] of the ultimation now the other thing
+[00:20:44] that we're going to be doing here okay
+[00:20:46] is adding this now we're going to for
+[00:20:48] going to air t one more time this one
+[00:20:51] though is about pulling through all the
+[00:20:52] chat history of every conversation that
+[00:20:54] we've had now you don't have an existing
+[00:20:56] chat history yet because you've not had
+[00:20:57] the conversation yet but you'll find it
+[00:20:59] really really helpful okay so we're
+[00:21:00] going to come down here for instance and
+[00:21:02] I'm going to use one that I used
+[00:21:03] previously but you're just going to use
+[00:21:04] the exact same base that you just
+[00:21:07] created again this is just so I can show
+[00:21:09] you exactly what that looks like so we
+[00:21:11] come down to knowledge base which is the
+[00:21:12] one that I created earlier the knowledge
+[00:21:14] base is the previous one awesome table
+[00:21:17] is just going to be chat history don't
+[00:21:19] worry about the formula and then we're
+[00:21:21] going to come down here we'll go for
+[00:21:22] query we want the response we come down
+[00:21:24] to the formula uh don't worry about that
+[00:21:26] limit I don't mind we can have like the
+[00:21:28] past 100 for context I think that's
+[00:21:29] absolutely fine then we're going to
+[00:21:31] click on I believe just I said then we
+[00:21:33] click okay now check this out if I run
+[00:21:36] this module once look what happens look
+[00:21:39] at all these bundles this is basically
+[00:21:40] all 25 conversations I've had with it
+[00:21:43] pretty cool right so when I'm talking to
+[00:21:44] it knows what we've just spoken about
+[00:21:46] but the problem is Guys these a 25
+[00:21:48] bundles so we need to find a way of
+[00:21:49] getting these 25 bundles of information
+[00:21:52] into one really simple clear piece of
+[00:21:54] text that we can use and to do that
+[00:21:56] we're going to use two very cool little
+[00:21:57] modules very simply we're going to start
+[00:21:59] off with an array aggregator like so and
+[00:22:03] all this is going to do guys is take all
+[00:22:05] of that beautiful piece of information
+[00:22:07] uh from Air table and we're going to
+[00:22:08] want the query the response and when it
+[00:22:11] was created like that and we click okay
+[00:22:13] and then we're going to add a second one
+[00:22:15] which is going to be a text aggregator
+[00:22:17] like so and that's going to convert all
+[00:22:19] all basically all those different
+[00:22:21] Aggregates into one simple output for us
+[00:22:23] and we select the uh text aggregated
+[00:22:26] there all right now call check the out
+[00:22:27] come down we've got an array we've got
+[00:22:29] all these beautiful things Crea time
+[00:22:30] query and response so we can come down
+[00:22:34] here like so beautiful click okay for a
+[00:22:36] moment all right sweet so what we're
+[00:22:38] going to do is I'm just going to zoom
+[00:22:40] out a tiny bit I'm going to unlink these
+[00:22:42] I'm going to grab this bring it over
+[00:22:44] here that basically means that this will
+[00:22:46] be the start of the scenario just for a
+[00:22:47] moment I'm going to run this module once
+[00:22:49] that's absolutely fine and we'll see
+[00:22:51] what it does so cool this Ram pulled
+[00:22:53] through every conversation we've ever
+[00:22:54] had the array
+[00:22:56] aggregator basically got all this beauti
+[00:22:58] full look all these bundles guys and
+[00:23:00] it's put it all into an array you see
+[00:23:04] just put everything into an array and
+[00:23:06] now we've got the text
+[00:23:07] aggregator and if I check this one here
+[00:23:09] for example it's pulled through uh the
+[00:23:12] first one okay you can see hey did me
+[00:23:14] favor blah blah blah all right cool and
+[00:23:16] in fact guys if you can just add this
+[00:23:17] text here which is message sent on
+[00:23:18] message and response we can copy this
+[00:23:21] and actually what I did to save a
+[00:23:23] significant amount of time is I just did
+[00:23:24] the first three like so it come down and
+[00:23:28] again so we get 1 2 3 basically and then
+[00:23:30] just get to chat gbt and say hey repeat
+[00:23:32] the scenario up to 50 so like this copy
+[00:23:35] all over then have chat gbt you'll look
+[00:23:36] something like this hey repeat it up to
+[00:23:38] 50 uh and then we'll just do the exact
+[00:23:40] same thing for us all the way down there
+[00:23:41] for us now we copy it we come back over
+[00:23:42] to our beautiful scenario we can delete
+[00:23:44] that and then let's just get rid of all
+[00:23:46] this stuff like this there we
+[00:23:49] go sweet and we click okay and basically
+[00:23:53] guys while that's done then it'll pull
+[00:23:54] down the last 50 messages uh for contact
+[00:23:56] obviously you can go high that if you
+[00:23:57] want to but this is just just so you
+[00:23:59] know and the reason why I'm earing 50 is
+[00:24:01] because eventually we'll create the
+[00:24:02] previous chat conversation into its
+[00:24:05] knowledge base itself so this is really
+[00:24:06] just more contextual thing awesome so
+[00:24:09] what have we done we've triggered the
+[00:24:10] module in telegram incredible we
+[00:24:12] downloaded the file we transcribed it we
+[00:24:14] have then basically gone down and
+[00:24:16] grabbed all the previous chat history
+[00:24:17] that we've had with it so it has some
+[00:24:19] good context so what do we need to do
+[00:24:21] next well the next thing we want to do
+[00:24:22] guys is ADD our director or manager now
+[00:24:24] if you remember in this conversation I
+[00:24:26] showed you here for instance when I when
+[00:24:28] we this beginning of the video we can
+[00:24:30] have multiple layers of this if we wish
+[00:24:31] to based on the number of tools we've
+[00:24:33] got if we're just using four or five we
+[00:24:36] can use a structure that looks like this
+[00:24:37] if we're using 20 40 50 100 multiple 100
+[00:24:41] then we can start to get more
+[00:24:42] complicated in terms of the managers and
+[00:24:43] things that happen Okay so we're just
+[00:24:45] going to do something really simple is
+[00:24:47] we're going to have a manager and we're
+[00:24:48] going to have little all these little
+[00:24:49] mini sub agents that sit underneath that
+[00:24:51] manager for us now I've used a
+[00:24:53] particular template to do this of course
+[00:24:54] that's all available in the community as
+[00:24:55] well so you can just grabb that if you
+[00:24:57] like and essentially what it looks like
+[00:24:58] is this we give it a role uh the name of
+[00:25:00] the role is primary objective we also
+[00:25:02] give it context about the environment
+[00:25:04] within which this particular agent is
+[00:25:05] operating um we give it really specific
+[00:25:08] things on the task so the goal
+[00:25:09] constraints uh the style how would' like
+[00:25:11] it an the output format whether need to
+[00:25:13] be jaed or not uh collaboration in terms
+[00:25:15] of who they are within the system and
+[00:25:17] who they're sending things to examples
+[00:25:19] what good response looks like examples a
+[00:25:21] bad response by the cas little hack like
+[00:25:23] when it comes to prompting this bad
+[00:25:24] example good example thing will save
+[00:25:26] your skin like so many more times and
+[00:25:28] then final requirements about what you
+[00:25:29] want to do with blah blah blah cool and
+[00:25:31] then here's like just more information
+[00:25:32] about how this all works um and some
+[00:25:34] specific examples so when you're
+[00:25:35] creating an agent feel free just to grab
+[00:25:37] this and basically say to it hey based
+[00:25:39] on this template uh this entire document
+[00:25:41] Nine Pages create me a agent that will
+[00:25:43] do ABC And1 will be able to help you
+[00:25:45] with that so let's start off with the
+[00:25:48] first one that we've got which is a
+[00:25:49] level one manager so what we will do in
+[00:25:51] this scenario here guys is we're going
+[00:25:52] to come over add a new module uh we're
+[00:25:55] going to go for chat GPT or your
+[00:25:56] language model of choice go for create a
+[00:26:00] completion beautiful okay great give
+[00:26:03] that a second to load up model I'm happy
+[00:26:05] with just gb4 system for the moment
+[00:26:07] obviously you can use open rout to use
+[00:26:08] deep seek if you haven't seen that video
+[00:26:10] it's like you know 97% cheaper from some
+[00:26:13] other comparables add message now first
+[00:26:15] all I want you to do guys is come down
+[00:26:17] is going to be assistant and text
+[00:26:18] content so in the text content part for
+[00:26:20] the assistant guys we're going to give
+[00:26:21] it a prompt that looks a little bit
+[00:26:22] something like this basically we say it
+[00:26:24] hits an agent router its responsibility
+[00:26:26] is to understand and determine which
+[00:26:29] agents we want it to activate next okay
+[00:26:33] so it's going to evaluate your query and
+[00:26:36] decide if it should be handled by the
+[00:26:37] productivity agent for to-do list task
+[00:26:39] check and creating meetings the memory
+[00:26:41] agent for storing and recalling
+[00:26:42] information or the general agent uh
+[00:26:45] which is request about productivity and
+[00:26:47] memory and things like this then we got
+[00:26:49] context and background blah blah blah
+[00:26:51] explain all this different stuff again
+[00:26:53] just follows all the template okay now
+[00:26:55] the really key thing about this guys
+[00:26:57] that I want you to really just just
+[00:26:58] think about and bear in mind here is
+[00:27:00] that essentially we're going to ask it
+[00:27:02] to give us a text output now based on
+[00:27:04] that text output we will root it down
+[00:27:06] one of three different systems and those
+[00:27:08] three systems are going to be either as
+[00:27:09] you can see in the previous one I've got
+[00:27:11] here it's going to be productivity agent
+[00:27:13] it's going to give it to the general
+[00:27:16] agent or it's going to give it to the
+[00:27:17] memory agent that's and it can also send
+[00:27:20] it down multiples if I say hey you know
+[00:27:22] correct me to-do list but I also want
+[00:27:24] you just to research and see if there's
+[00:27:25] other thing's happening based on how
+[00:27:27] complex equ get it will be able to do
+[00:27:29] that remember its only job in the world
+[00:27:31] is to Simply as a classifying agent
+[00:27:34] decide which pathway it goes down and
+[00:27:37] then we just add a little filter in it
+[00:27:38] says look do not allow anything to come
+[00:27:41] down this route unless that has this
+[00:27:42] word in the output okay so look if I
+[00:27:44] come back over now to our scenario and
+[00:27:47] you can see what we're using to trigger
+[00:27:48] it so that's that's its assistant prompt
+[00:27:51] and then on top of that when we just
+[00:27:52] give it the user question which is hey
+[00:27:54] this is what the user said what do you
+[00:27:55] think about it so look I come down text
+[00:27:58] you know user here's a content right so
+[00:28:00] check this out I come back over them I'm
+[00:28:02] going to come down add a new message
+[00:28:04] here R is going to be user and the text
+[00:28:06] content guys is just what we transcribed
+[00:28:08] here like that okay come down like this
+[00:28:10] and then we'll click okay and we'll call
+[00:28:13] this one classifying agent or like level
+[00:28:17] one manager uh what should a what should
+[00:28:20] what's befitting a level one manager you
+[00:28:22] thinking an emoji nothing too crazy
+[00:28:25] let's go
+[00:28:26] for let's go for a top hat maybe he's a
+[00:28:29] really Posh level one manager okay level
+[00:28:31] one manager okay sweet cool I like that
+[00:28:33] right so let's give him a little test
+[00:28:35] from uh let's just say hey I would like
+[00:28:39] uh
+[00:28:40] to buy apples add that to my Todo
+[00:28:45] list this should then output something
+[00:28:48] that sounds like productivity you ready
+[00:28:51] agent productivity don't worry about
+[00:28:53] this being non balj so it doesn't matter
+[00:28:55] come down here like it productivity if
+[00:28:58] ask me a question like um let's run this
+[00:29:01] one more time for example if I say
+[00:29:03] hey what time does Disneyland close this
+[00:29:08] should say something like General
+[00:29:09] because it's something that's required
+[00:29:11] for a general understanding get down a
+[00:29:13] general route then if I said something
+[00:29:15] like
+[00:29:17] um remember to call me Dr Doom in the
+[00:29:22] future that's a memory requirement so
+[00:29:24] that shouldn't output something like
+[00:29:26] memory there you go so what you do is
+[00:29:28] you have you need to architecturally
+[00:29:30] think about what your system looks like
+[00:29:33] okay basically again I've done three
+[00:29:35] I've done one which is productivity
+[00:29:37] we'll do a couple of cool things I've
+[00:29:38] done one which is memory which is going
+[00:29:40] to be adding it to its knowledge base
+[00:29:42] which is like its system instructions
+[00:29:44] and the third one that I've chose the
+[00:29:45] third agent I picked here is general
+[00:29:48] which is its ability to answer general
+[00:29:49] questions about anything in the world or
+[00:29:52] do research so I've said look give it to
+[00:29:54] one of those two of those or three of
+[00:29:56] those things based what the query is is
+[00:29:58] when you're building out this framework
+[00:29:59] you can say look grab a shet of paper
+[00:30:01] right and just like write down like how
+[00:30:03] you'd love this system to work and my
+[00:30:05] vision here is we just add on new agents
+[00:30:07] we just add on new levels and we get
+[00:30:08] more and more complex as we go so that's
+[00:30:10] essentially all we're doing here right
+[00:30:12] so come back over then to this scenario
+[00:30:14] so what do we do we're adding a router
+[00:30:16] like so beautiful and then add one more
+[00:30:20] cool and now we're going to have three
+[00:30:21] different systems based on that so the
+[00:30:24] first one here is going to be
+[00:30:25] productivity Okay so productivity nice
+[00:30:29] one the condition is the fact that the
+[00:30:31] result from a level one manager
+[00:30:34] contains case insensitive the word
+[00:30:40] productivity beautiful this one here
+[00:30:43] again is going to be I believe we called
+[00:30:45] it General didn't we let me just check
+[00:30:46] what we called that one yeah General
+[00:30:48] screen okay General beautiful condition
+[00:30:51] is that the output contains case in
+[00:30:55] sensitive the word General phenomenal
+[00:30:58] and then this one here is going to be
+[00:31:01] memory and again you might have guessed
+[00:31:03] it that this one here contains case
+[00:31:06] insensitive memory beautiful that's it
+[00:31:10] that's all it literally is and then
+[00:31:11] it'll go down to one of these three
+[00:31:12] paths based on what the output is so now
+[00:31:14] let's fill out the productivity agent
+[00:31:15] bit together here so the productivity
+[00:31:17] agent for example is the exact same
+[00:31:19] concept except for the product
+[00:31:21] productivity agent himself has three
+[00:31:23] different Roots what's Route One route
+[00:31:25] one here okay is the test testing
+[00:31:28] basically see does does an appointment
+[00:31:30] exist that's its job to find out check
+[00:31:32] my calendar does an appointment exist
+[00:31:34] the second one here is the ability to
+[00:31:36] add a to-do list to notion for me and
+[00:31:38] the third one here is to physically
+[00:31:39] create an appointment so his job if I
+[00:31:42] come down and show you in his assistant
+[00:31:44] instructions and we come down and have a
+[00:31:45] look at it for
+[00:31:46] example and again this is just like
+[00:31:48] you'll see how this works and you can
+[00:31:50] apply to like a billion different things
+[00:31:52] role definition Your Role is a
+[00:31:54] productivity agent you're specializing
+[00:31:55] and blah blah blah look um if I come
+[00:31:58] down here check I only check the
+[00:32:00] existing meetings let's have a quick
+[00:32:01] look uh contacts and background there
+[00:32:04] you go so basically it'll give us one or
+[00:32:05] three outputs notion check or create
+[00:32:08] based on that when you receive a user
+[00:32:10] request decide which of the following
+[00:32:11] respond to provide check the user only
+[00:32:13] wants to check existing meetings create
+[00:32:16] the user wants to create a schedule a
+[00:32:17] new meeting uh and notion the user wants
+[00:32:20] to add a new item to the do list that's
+[00:32:22] it and we say look this is how I want
+[00:32:24] the output to be and we give it loads of
+[00:32:25] other Co informations so we give it this
+[00:32:27] prompt using the framework that we used
+[00:32:29] earlier like so and we come back over to
+[00:32:32] our beautiful scenario here and again
+[00:32:34] what do we do we go for CH GPT let's go
+[00:32:37] down to credit
+[00:32:38] completion give this a hot
+[00:32:41] minute okay beautiful model gb4 system
+[00:32:44] is fine Max tokens let's just go for
+[00:32:46] zero to defaults to the maximum although
+[00:32:48] we won't really need that many to be
+[00:32:49] fair excellent can message first one is
+[00:32:53] going to be the role is going to be
+[00:32:54] again an assistant and the assistant
+[00:32:56] information is all here which is cool
+[00:32:58] and then we click on this one more time
+[00:33:00] all right sweet and then we're going to
+[00:33:02] scroll down a moment come down to RW
+[00:33:04] then we come down to user text content
+[00:33:07] is again just quite simply the message
+[00:33:09] from this module here like so okay come
+[00:33:12] down then we're going to come down click
+[00:33:14] okay and then we'll rename this one
+[00:33:16] we'll call this one
+[00:33:18] productivity
+[00:33:23] agent yeah I really wasn't well this
+[00:33:25] week it was ridiculous actually I was
+[00:33:27] like uh who's got time to get ill the
+[00:33:29] beginning of 2025 is absolutely Absolut
+[00:33:31] wildness I did find an automation for it
+[00:33:33] and I will share that in a different
+[00:33:34] video so now look we've got productivity
+[00:33:36] agent now it's again do the same thing
+[00:33:38] again with the router like so and what
+[00:33:41] the rout will let us do guys again just
+[00:33:42] send it down different Pathways first
+[00:33:44] pathway is I believe and I'm just check
+[00:33:46] this for reference we have check notion
+[00:33:51] and
+[00:33:52] create cool all right sweet I'm just
+[00:33:54] going to do create and check just out of
+[00:33:56] respect for your so and notion at
+[00:33:58] respect for your time but you'll kind of
+[00:33:59] understand why so look if I come down
+[00:34:01] here and I say this one is
+[00:34:03] notion so this is going to be the route
+[00:34:04] it goes down
+[00:34:06] if it wants to create something for
+[00:34:08] to-do list so come down here again come
+[00:34:11] down contains case and sensitive notion
+[00:34:14] which is cool so let me just delete that
+[00:34:16] it' be the exact same process uh let me
+[00:34:19] just uh unlink that okay cool and delete
+[00:34:21] this guy that's notion and then this one
+[00:34:23] here we will call create and the
+[00:34:26] condition again is that the output from
+[00:34:28] the productivity agent contains case
+[00:34:30] insensitive create phenomenal Okay cool
+[00:34:33] so let's start off with we with shall we
+[00:34:35] by doing notion and then we will do the
+[00:34:37] Google Calendar uh part so if I have a
+[00:34:39] quick look at the notion module really
+[00:34:40] really cool we have this guy here which
+[00:34:43] actually really isn't a sheduling agent
+[00:34:45] he is a notion agent cool all right so
+[00:34:49] then we need to add a notion agent and
+[00:34:51] his prompt basically is to take the
+[00:34:53] user's query and and turn it into a line
+[00:34:56] that we could add into to-do list and
+[00:34:57] ocean that's essentially his job as you
+[00:35:00] can see you're a minimal to-do list
+[00:35:01] generator you'll get something I just
+[00:35:03] want some text and an emoji do not
+[00:35:05] output any additional text or
+[00:35:06] explanation that's literally it it's
+[00:35:08] like it's that flipping simple which I
+[00:35:10] think is crazy so again come down to uh
+[00:35:13] chat GPT we come down to create a
+[00:35:15] completion we come over here like so all
+[00:35:19] right give this guy a moment give model
+[00:35:21] again give T4 is
+[00:35:26] fine beautiful get that Lo up for a
+[00:35:28] second messages roll is going to be
+[00:35:30] assistant text content is there
+[00:35:33] beautiful we going to come down here we
+[00:35:35] go roll again we'll just call this one
+[00:35:37] the user text content once again is just
+[00:35:40] simply the output from uh the
+[00:35:42] transcription like that cool then we're
+[00:35:44] going tohe click okay going to right
+[00:35:46] click on this guy call this one notion
+[00:35:49] okay then we click okay now does this
+[00:35:52] work well let's flip and test out and
+[00:35:54] see roll this whole sario ones let's set
+[00:35:56] up Telegram and I say said something
+[00:35:58] like hey dude do me a favor add to the
+[00:36:01] fact add to my to-do list of fact I need
+[00:36:02] to go and buy a water balll tomorrow
+[00:36:04] thanks cool all right it's gone down
+[00:36:07] it's picked up the message so we should
+[00:36:09] see a couple of things happen now it
+[00:36:10] should go straight to notion and it's
+[00:36:11] exactly what it's done and what is the
+[00:36:13] output if we come down to choices here
+[00:36:16] we go message buy water ball tomorrow
+[00:36:19] with a beautiful drip that's really cool
+[00:36:21] cool next thing we need to do then is
+[00:36:22] add in notion right so come over here
+[00:36:24] going to add in notion now the one we're
+[00:36:27] looking for for here if I remember
+[00:36:29] correctly just so I get the right one
+[00:36:30] it's append page content Okay cool so
+[00:36:33] you can do a lot with this actually
+[00:36:34] again I've just kepts it really flipping
+[00:36:36] simple append page content like
+[00:36:39] so all right cool then it will look for
+[00:36:41] a page ID so how do you get a page ID
+[00:36:43] well if you head over to notion so on
+[00:36:44] notion guys come down to bottom left
+[00:36:46] click on settings come down here to
+[00:36:48] connections on the bottom left hand side
+[00:36:51] and you see these things that exist here
+[00:36:53] okay I need you to go and create one of
+[00:36:55] these things so to do that we're going
+[00:36:56] to go add or manage con actions which
+[00:36:58] should be down here developer manage
+[00:37:00] Integrations you're then going to create
+[00:37:01] a new integration and you can call that
+[00:37:04] me.com or whatever once you've done that
+[00:37:06] you'll then basically be able to connect
+[00:37:07] it then when you come back over to the
+[00:37:09] desire page that you want in noan you're
+[00:37:11] going to come off this you click on this
+[00:37:13] thing at the top here um and you're
+[00:37:15] going to scroll down to connections and
+[00:37:18] you're going to basically whatever you
+[00:37:19] just created you're going to be able to
+[00:37:21] find here if I called it make maker or
+[00:37:24] whatever you can select that and then it
+[00:37:26] will then enable you to add to notion so
+[00:37:29] create the connection then select it in
+[00:37:31] the connections and need to do that on a
+[00:37:32] page by Page basis otherwise you're not
+[00:37:35] going to be able to update create or do
+[00:37:36] whatever you want to now look I'm going
+[00:37:38] to come back over to our beautiful
+[00:37:40] scenario okay I've already created it
+[00:37:42] that's fine content objects what do we
+[00:37:44] want to do type um and again just select
+[00:37:47] it could be headings you can build the
+[00:37:49] as complicated as you physically want to
+[00:37:51] to automate anything again I'm just kind
+[00:37:53] of just saying like look here I'm just
+[00:37:55] going to do a um have a look at to-do
+[00:37:58] list which is cool and then what we're
+[00:38:00] going to do is text that's fine type
+[00:38:02] text and here's a content is this going
+[00:38:05] to click okay that's it run the scenario
+[00:38:07] once come back over grab
+[00:38:09] telegram hey do me a favor next Tuesday
+[00:38:11] when I'm out remind me to pick up my
+[00:38:13] phone and subscribe to the Jack robits
+[00:38:15] YouTube channel make sure that's on my
+[00:38:16] to-do list boom we've done we're only
+[00:38:18] going to ask at things of the very
+[00:38:19] utmost importance for SN through it's
+[00:38:22] now supposedly added to notion so if we
+[00:38:24] head over and add to notion let's see
+[00:38:25] what it says and this guys subscribe to
+[00:38:28] Jack Robins on YouTube with a phone and
+[00:38:30] and and almost it's got Stars that's
+[00:38:31] just how important call this is cool so
+[00:38:33] you've now just basically added that
+[00:38:35] functionality and then we're just going
+[00:38:36] to do the same thing now for Google
+[00:38:38] which is really cool so how do we do
+[00:38:40] that well look it's actually not that
+[00:38:41] crazy so we've got this information here
+[00:38:44] now in terms of creating appointments
+[00:38:47] guys one of the really cool things that
+[00:38:48] we can do and I I think when it comes to
+[00:38:50] memory I'd say front load that work so
+[00:38:53] for example in one of the previous
+[00:38:55] databases I had if I just open up and
+[00:38:57] show you that that an air table a quick
+[00:38:58] for instance so like I come back over
+[00:39:01] let me just show what that looks like
+[00:39:02] okay look knowledge base look I had on
+[00:39:06] email contacts here all these fake email
+[00:39:08] contacts so essentially what I do when I
+[00:39:10] want to create an appointment is
+[00:39:11] effectively in the scenario I pull
+[00:39:14] through that information we can either
+[00:39:16] hard code that into a scenario or we can
+[00:39:18] just pull it through from Air table
+[00:39:20] which basically just means that as we
+[00:39:22] add that in the future what we can
+[00:39:24] effectively do guys is build out like a
+[00:39:26] load of core these are fake uh emails
+[00:39:28] obviously like core information here my
+[00:39:30] email contacts here's my XYZ numbers any
+[00:39:32] information you ever want to recall when
+[00:39:34] chatting to your personal assistant you
+[00:39:36] can then store an air table and then
+[00:39:38] when you update it in the air table they
+[00:39:40] will update in the scenario because the
+[00:39:43] scenario is pulling the information from
+[00:39:45] the air table that's different than the
+[00:39:47] rag system which I'll touch on later for
+[00:39:49] a few different reasons but this is just
+[00:39:51] it's not significantly complex or long
+[00:39:55] information that we will retrieve on a
+[00:39:56] regular basis I think we' favor our
+[00:39:58] table so what I'm going to do is I've
+[00:40:00] got this information here basically you
+[00:40:01] can create a new tab for whatever one
+[00:40:03] could be email contacts one could be
+[00:40:05] favorite places to eat me whatever you
+[00:40:07] want like it really is crazy start from
+[00:40:09] scratch call it whatever you want to
+[00:40:10] blah blah blah blah and then you just
+[00:40:12] build out the email contact list and all
+[00:40:13] we're going to do guys just to save us
+[00:40:15] some time is just copy these three crl C
+[00:40:18] crl + V bring them over like so that's
+[00:40:22] cool right and then let's just delete
+[00:40:23] this guy bring him over cool except for
+[00:40:25] this time instead of the chat history
+[00:40:28] what we're going to be looking for is
+[00:40:30] going to be uh email contacts like so
+[00:40:32] and it's the exact same thing but then
+[00:40:33] we scroll down a little bit here and
+[00:40:35] then we just say hey name email and
+[00:40:38] status is fine actually we don't need
+[00:40:39] that either we just click okay that's
+[00:40:41] flipping then basically all right cool
+[00:40:43] then we're going need to write some code
+[00:40:44] for an agent and the agent here is the
+[00:40:46] calendar primer D let's see what this
+[00:40:49] one does again all built using the same
+[00:40:52] templates what this guy is going to do
+[00:40:54] is going to get all the information from
+[00:40:56] um you know basically that we gave it
+[00:40:57] from Air table give it users query and
+[00:40:59] then it's going to understand they
+[00:41:01] correct some things and this is specific
+[00:41:03] to how Google Calendar works so look pre
+[00:41:06] please read the user's request to create
+[00:41:07] a meeting and output six fields in Json
+[00:41:10] format start day end day attendees blank
+[00:41:14] if not provided duration use 60 if this
+[00:41:17] what I'm saying the cool thing about
+[00:41:18] agent guys is like the more you use them
+[00:41:19] in systems the more you kind of figure
+[00:41:21] out where it fails Okay cool so like if
+[00:41:23] you don't specify this then use this and
+[00:41:25] we're trying to make it as foolproof is
+[00:41:27] humanly possible we give a time a
+[00:41:29] description please enter like this
+[00:41:31] here's an example output what it looks
+[00:41:33] like and blah blah blah blah then all
+[00:41:34] again all this information about the
+[00:41:36] array at the end of it on top of that as
+[00:41:38] well cool sweet so we going copy all
+[00:41:41] this oh the other cool thing I encourage
+[00:41:42] to add when it comes to creating Google
+[00:41:44] calar invites is just say hey for FYI
+[00:41:47] today's date is now because sometimes
+[00:41:50] you be like dude just like you effects
+[00:41:51] Tuesday just do this thing it's like
+[00:41:54] what the hell day is it right now it
+[00:41:55] doesn't know unless you're using like um
+[00:41:57] modeled internet access cool so we get
+[00:42:00] the prompt we come over again you might
+[00:42:02] have guessed what this looks like right
+[00:42:03] and I'm just for Simplicity sake I'm
+[00:42:04] just going to clone this guy and bring
+[00:42:06] him
+[00:42:06] over okay cool come over here let's come
+[00:42:10] down to our system
+[00:42:14] prompt all right so we get rid of this
+[00:42:16] guy and enter this information now of
+[00:42:18] course lots of stuff that doesn't make
+[00:42:20] any sense cool beautiful and the way you
+[00:42:23] add the date by the way is you come over
+[00:42:25] here and you should be able to go to I
+[00:42:27] think it's this one here where is
+[00:42:30] it calendar there you go now see
+[00:42:34] beautiful that basically means it
+[00:42:35] whatever thata is now it will have that
+[00:42:37] information for us now we need to get
+[00:42:38] the email contract uh contact do that
+[00:42:40] I'm just going to click okay for a
+[00:42:41] moment again we're going to call this
+[00:42:43] one here calendar
+[00:42:47] primer okay sweet uh and of course guys
+[00:42:51] we need our calendar Emoji as well for
+[00:42:54] good measure freaking beautiful cool so
+[00:42:57] let's we only need to run this part the
+[00:42:58] automation so let's grab this ah before
+[00:43:01] I do that I just need
+[00:43:03] to uh link this Sac religious I know oh
+[00:43:06] my goodness what am I doing bring him
+[00:43:08] over here cool let's just unlink these
+[00:43:10] guys as well sweet and let's see what
+[00:43:13] this brings down it should bring down
+[00:43:14] all the emails for us in the text
+[00:43:17] aggregator and has it done
+[00:43:19] that it has not done that and I wonder
+[00:43:22] why I think it's cuz the array ah okay
+[00:43:25] we did not update the array oh my
+[00:43:28] goodness no we want corrected time query
+[00:43:30] response oh did we not change this one
+[00:43:33] over yeah I swear we Chang this one over
+[00:43:34] yeah em contacts that's absolutely fine
+[00:43:36] yeah email contact that's fine come over
+[00:43:38] to Ray aggregator email name okay we
+[00:43:40] didn't bring the right information in
+[00:43:42] okay now the world makes sense once
+[00:43:43] again come down here run this one anyway
+[00:43:46] come back and do we have something now
+[00:43:48] that resembles a billion
+[00:43:50] emails no okay that's absolutely fine
+[00:43:53] let's have a quick look that's cuz it's
+[00:43:55] the very aggregator yeah it has been
+[00:43:57] given that as an input and then on the
+[00:43:59] output it's just not yeah it's giving us
+[00:44:01] all right information that's cool which
+[00:44:03] means there's something going on with
+[00:44:04] the text
+[00:44:05] aggregator okay so the text
+[00:44:09] aggregator basically okay cool let me
+[00:44:12] just get rid of these cool we just we
+[00:44:15] just need to configure this come on
+[00:44:17] array let's have a
+[00:44:20] look we don't need created just
+[00:44:23] name email that's all we
+[00:44:26] need so name is going to be William
+[00:44:28] Martin email is going to be this guy and
+[00:44:32] just like before guys we're just going
+[00:44:34] to repeat that uh as we did before like
+[00:44:36] so with up to basically however many you
+[00:44:40] think is okay copy these over to chat
+[00:44:41] GPT all right beautiful then we've got
+[00:44:43] that from chat gbt we just post it all
+[00:44:45] in here get rid of the notes and the
+[00:44:47] extra bits and pieces all right swing
+[00:44:50] all the way up top get rid of that come
+[00:44:52] down click okay run this module one by
+[00:44:54] time that's absolutely fine and
+[00:44:56] eventually now we should see a list of
+[00:44:58] all our phenomenal email addresses cool
+[00:45:01] flipping sick all right cool so let's
+[00:45:04] bring this over here then bring that guy
+[00:45:06] over there beautiful connect these
+[00:45:09] together then we've got the calendar
+[00:45:11] primer phenomenal click on the calendar
+[00:45:13] primer it's got his prompt that we gave
+[00:45:16] it which is cool so come over give that
+[00:45:18] a second to load up beautiful okay it's
+[00:45:21] got all the information about what I
+[00:45:22] want it to do we got the text content so
+[00:45:24] say hey user uh information
+[00:45:29] or I should say user request okay
+[00:45:31] beautiful which actually is going to be
+[00:45:36] this over here and bring it over so you
+[00:45:37] can get a good look at
+[00:45:39] it where is this guy all right cool
+[00:45:42] phenomenal and then just say email
+[00:45:45] addresses and I think actually yeah the
+[00:45:48] email addresses we can just put here to
+[00:45:49] be fair in the assistant section which
+[00:45:52] is going to be the appp from text uh
+[00:45:54] from the text aggregator click okay
+[00:45:57] sweet now guys check this out I'm going
+[00:45:58] to run the scenario once phenomenal
+[00:45:59] let's go over to our
+[00:46:01] telegram hey do me a favor bought me an
+[00:46:03] appointment tomorrow at 2 p.m. for an
+[00:46:05] hour with James we're going to be
+[00:46:07] talking about coffee thanks done nice
+[00:46:11] this runs off it should now of course go
+[00:46:13] down this route instead of notion which
+[00:46:14] is phenomenal it's picked up with that
+[00:46:16] perfect and what is it output there we
+[00:46:18] go guys look at this time duration now I
+[00:46:22] don't like the look of this so that
+[00:46:23] means we just need to specify that the
+[00:46:24] output's Json and we want it to pass it
+[00:46:27] that's not complete that's fine come
+[00:46:29] down to show advaned settings give that
+[00:46:31] but it's basically picked up on all
+[00:46:33] information and the cool thing about it
+[00:46:34] doing it by passing the Json guys is the
+[00:46:36] fact that now we can use that for
+[00:46:38] different fields in the Google Calendar
+[00:46:40] modual so response format is Json yes I
+[00:46:42] want you to pass it come down we're
+[00:46:44] going to click okay we'll just run that
+[00:46:46] one more time come back over but we
+[00:46:49] meeting tomorrow at 1 till 2 with James
+[00:46:51] the agenda is about coffee thank
+[00:46:53] you sweet come back down there we go
+[00:46:56] give this a beautiful hot
+[00:47:00] second phenomenal and let me just change
+[00:47:03] this one this one's going to be uh
+[00:47:06] calendar isn't it actually what was the
+[00:47:08] specific cuz I deleted it I need to just
+[00:47:10] come back and get this one I think it
+[00:47:14] was create Okay cool so cool
+[00:47:17] one corre meeting condition is the fact
+[00:47:20] that result contains case
+[00:47:24] insensitive
+[00:47:25] create beautiful and have we got
+[00:47:28] different objects here I think we
+[00:47:31] do sweet phenomenal then guys you might
+[00:47:35] have guessed it we just need to add the
+[00:47:36] Google Calendar module so let's do that
+[00:47:38] for example so just um I think I'm just
+[00:47:40] trible check what the name of it was cuz
+[00:47:42] sometimes they have lot of funky crazy
+[00:47:43] names and stuff so this one is going to
+[00:47:45] be Google Calendar create an event which
+[00:47:47] is pretty flipping sick come down
+[00:47:50] here CR
+[00:47:52] event actually first of all we want
+[00:47:55] Google Calendar right here beautiful for
+[00:47:57] create an
+[00:47:59] event phenomenal and then guys we just
+[00:48:02] quite simply dis steal the stuff so like
+[00:48:04] I've got you connect to your account
+[00:48:05] really easily event name again any
+[00:48:08] specific thing we can specify here so
+[00:48:10] start start date oops come over here now
+[00:48:12] look how cool this is guys start date
+[00:48:14] boom end date boom duration 60 go down
+[00:48:20] advanced settings we can do so much
+[00:48:21] crazy stuff with this actually
+[00:48:23] description um Venda is about coffee
+[00:48:26] location times you know all this crazy
+[00:48:28] stuff basically just fill out this
+[00:48:30] information with the outputs that you
+[00:48:31] get from the chat gbt module and I'll
+[00:48:32] call this one our event again you could
+[00:48:34] just say hey create an event name based
+[00:48:36] on this information as well but this is
+[00:48:37] just a quick for instance come down
+[00:48:39] click okay excellent then the next thing
+[00:48:42] we want to do there guys is basically
+[00:48:44] just have this chat GPT module which
+[00:48:47] event is going to be like the responder
+[00:48:48] module that's just going to tell us
+[00:48:50] exactly what's happened and for that let
+[00:48:51] me just show what that looks like so you
+[00:48:53] can see your friendly chat B assistant
+[00:48:55] you'll receive this information
+[00:48:57] uh when it's been confirmed just let
+[00:48:59] them know keep it friendly not clear and
+[00:49:00] then we just have the output from that
+[00:49:03] now the cool thing about this guys is um
+[00:49:06] I actually have the guy the in fact I'm
+[00:49:09] not going to duplicate that because it's
+[00:49:11] um got Jason on it we actually know that
+[00:49:14] it's worked because we feed it the
+[00:49:16] outputs from the Google Calendar that
+[00:49:18] way that we know that okay you know when
+[00:49:20] you get the message that it isn't just
+[00:49:22] saying hey that's done we know that it's
+[00:49:23] worked because you need to get the
+[00:49:24] output from Google Calendar in order to
+[00:49:26] do that which I think is really cool so
+[00:49:28] come down GB 40 um latest is
+[00:49:32] fine that's cool give that a hot second
+[00:49:34] to
+[00:49:37] load beautiful roll assistant give it
+[00:49:40] this text content um I'm going to say
+[00:49:42] hey this is what you're going to get
+[00:49:44] this is the information you're going to
+[00:49:44] get okay the start date and we can say
+[00:49:46] look let's have a look at the start date
+[00:49:48] from here basically you can kind of just
+[00:49:50] fill this out based on all the
+[00:49:52] information that you get but we don't
+[00:49:53] need to put it into the assistant part
+[00:49:54] excuse me we're going to do that to the
+[00:49:55] message part so come here roll is going
+[00:49:57] to be user and let's just see what
+[00:49:59] prompts we use for this guy uh where are
+[00:50:00] we at now we're right here phenomenal
+[00:50:03] get this guy loaded
+[00:50:09] up and very simple guys we've got the
+[00:50:12] user question which is going to be again
+[00:50:15] the same thing here and then we've got
+[00:50:17] all this different data here so when
+[00:50:19] it's created when it's started so let's
+[00:50:21] have a look
+[00:50:23] created start uh where is I going to be
+[00:50:27] there you go when it starts and when it
+[00:50:29] ends
+[00:50:31] cool beautiful demo click okay cool and
+[00:50:35] this one's just going to be message
+[00:50:42] primer phenomenal cool so let's give
+[00:50:45] this one a quick little twirl again run
+[00:50:47] this one once and then let's give it a
+[00:50:48] full systems check hey there do me a
+[00:50:51] favor BG me an appointment with James
+[00:50:53] tomorrow for an hour from 12: to 1 p.m.
+[00:50:56] we're going to be talking about water
+[00:50:57] bottles we're going to talking about
+[00:50:58] coffee and why it is snowing outside
+[00:51:01] thank you bam it's done the scenario is
+[00:51:03] triggered it's gun down is it going to
+[00:51:05] go down the right route let's see what's
+[00:51:06] happened gone on productivity gone on
+[00:51:08] air table it's creating a calendar on
+[00:51:10] Google and then it's priming a message
+[00:51:12] so do we get some information back we
+[00:51:14] won't yet because we've not treed it up
+[00:51:16] we will do in a second come back down
+[00:51:18] and there you go guys look at this
+[00:51:20] attendees James 1 hour uh 12 till 1 and
+[00:51:22] by the way guys I gave it information
+[00:51:24] right so if I say talet from James it
+[00:51:26] has james' email so it will invite James
+[00:51:29] I've also said if you don't find the
+[00:51:30] email just invite myself so you can kind
+[00:51:32] of work up these night logical Loops
+[00:51:34] then the final thing we're going to do
+[00:51:35] guys is just we need to send a message
+[00:51:37] back now to close the loop in its
+[00:51:38] entirety so for that come down to
+[00:51:40] telegram bot uh send a text message or
+[00:51:42] reply enter your chat ID and then for
+[00:51:45] text you're just going to put the result
+[00:51:48] here okay pass mode mark down that's all
+[00:51:51] I want to do is pass pass mode is
+[00:51:53] markdown and then I'm going to rename
+[00:51:54] this one send
+[00:51:56] Jack a
+[00:52:00] message beautiful and then of course
+[00:52:03] we're just going to duplicate this guy
+[00:52:05] bring him over and we're going to
+[00:52:06] connect this guy to here and then just
+[00:52:08] replace the output but before we do that
+[00:52:09] let me just unpin and complete notion
+[00:52:12] over here if I come back over here for
+[00:52:13] instance on the notion guy we've got the
+[00:52:16] exact same process which is it's
+[00:52:18] basically just a prompt that says hey
+[00:52:19] I've done it it's complete it's just a
+[00:52:21] final message primer that we're going to
+[00:52:22] send back over to ourselves we come back
+[00:52:24] over your friends du list agent blah
+[00:52:26] blah blah blah blah blah it's literally
+[00:52:29] that simple and then we give it the user
+[00:52:30] text so this one's just saying this is
+[00:52:32] what we've done so we're going to come
+[00:52:33] back over let's just create a new uh CHT
+[00:52:36] module again create a completion cool
+[00:52:38] add message R is going to be assistant
+[00:52:40] type this SC in your friend do list
+[00:52:42] agent short shot sh blah blah blah blah
+[00:52:44] it's all cool then we add a message this
+[00:52:46] one here is going to be the user and I
+[00:52:47] think the prompt we have for that one
+[00:52:48] was really
+[00:52:49] straightforward we'll come over and grab
+[00:52:51] that guy
+[00:52:58] yeah we'll just give it the user text uh
+[00:53:00] from this guy over here let's have AOW
+[00:53:03] perfect and again once again guys you
+[00:53:05] can just link that back to the output of
+[00:53:06] notion really really simple that's fine
+[00:53:09] and then we send a message and then do
+[00:53:11] you remember that thing I showed you
+[00:53:12] before that we built over here to update
+[00:53:15] the whole conversation well we're going
+[00:53:17] to add that on at the end right there
+[00:53:18] create a record and then what we're
+[00:53:20] going to do guys here is we've got the
+[00:53:21] message that we gave initially um which
+[00:53:24] is going to be over here let's come over
+[00:53:27] message is going to be this
+[00:53:29] transcription and the reply in this
+[00:53:31] instance is going to be from this guy
+[00:53:34] here 28 beautiful we just say this one
+[00:53:38] here reply to
+[00:53:42] Jack so basically if it goes down this
+[00:53:45] route it will be the exact same thing
+[00:53:46] then we copy this guy so basically at
+[00:53:48] the end of every conversation we have a
+[00:53:50] record of what was asked and what was
+[00:53:52] said and we can use that data for every
+[00:53:53] want to click on this one more time
+[00:53:56] again it's not number five it is quite
+[00:53:59] simply there we go it's going to be this
+[00:54:02] is the information where is it right now
+[00:54:05] text phenomenal and then the reply
+[00:54:08] is the message primer beautiful cool so
+[00:54:12] let's run this module all again one more
+[00:54:14] time let's have a quick look and of
+[00:54:16] course on the send message we just need
+[00:54:17] to change that to
+[00:54:19] V28 so we come here and then we want
+[00:54:22] this one right here check Perfect all
+[00:54:24] right beautiful so let's create a new
+[00:54:25] let's run this one more time and get an
+[00:54:27] appointment set
+[00:54:29] up do me a favor bum me an appointment
+[00:54:31] tomorrow from 2: till 4:00 p.m. with
+[00:54:34] Matthew we're going to be talking about
+[00:54:35] coffee and hair thank you what a random
+[00:54:39] conversation to have right but look I
+[00:54:40] come back over here if I leave telegram
+[00:54:42] open now you can see in the background
+[00:54:44] it's cycling around it's doing its thing
+[00:54:45] it will book an appointment there we go
+[00:54:48] date time duration what we're talking
+[00:54:50] about easy peasy 11 squeezy and
+[00:54:53] basically guys that's the entire that's
+[00:54:54] exactly how this works so now that's
+[00:54:56] done let's just quickly then add in the
+[00:54:58] next part to this automation which is
+[00:55:00] going to be over here which is going to
+[00:55:03] be the uh its ability to memorize things
+[00:55:06] so then guys let's add in the let's go
+[00:55:09] down I think the general section we
+[00:55:10] could so let's got another CHT module
+[00:55:12] here cool now this is more complicated
+[00:55:15] with memory I'm going to show you
+[00:55:16] without memory and then we'll add memory
+[00:55:17] in at the end once that's complete okay
+[00:55:19] so complete complete a create a chat
+[00:55:21] completion excellent Okay cool so
+[00:55:24] essentially what we're going to say to
+[00:55:26] this guy is can you answer the question
+[00:55:28] or not if you can answer the question
+[00:55:31] just simply reply if you're unable to
+[00:55:33] answer the question what I want you to
+[00:55:35] then go and do is I'm going and
+[00:55:37] basically go and research online and
+[00:55:39] then um we'll reply reply to them
+[00:55:41] afterwards so come now Max completion
+[00:55:42] tokens is going to be zero add a message
+[00:55:45] roll is going to be assistant so we give
+[00:55:46] it this beautiful prompt right here and
+[00:55:48] you can see the tldr of it is output a
+[00:55:50] single word reply or research research
+[00:55:52] is I need to go online to find out like
+[00:55:54] hey when does my favorite coffee shop
+[00:55:55] open and reply would be something like
+[00:55:57] just something that it would know either
+[00:55:58] from the memory it's pulled down or just
+[00:56:00] generally speaking already know that
+[00:56:02] information so we come down and we're
+[00:56:04] going to click on okay and we'll call
+[00:56:06] this one General
+[00:56:12] agent excellent cool and then off that
+[00:56:14] guys we're going to have a router module
+[00:56:16] like
+[00:56:18] so Ace okay first one on the rout then
+[00:56:22] is going to be um reply and that is
+[00:56:26] condition is that the general agent has
+[00:56:28] said to us something text contains uh
+[00:56:31] let's a look at SEC contains case
+[00:56:35] insensitive reply and then this one here
+[00:56:39] is going to be
+[00:56:40] research condition is the result
+[00:56:43] contains case
+[00:56:46] insensitive
+[00:56:48] research sweet now once that's done if
+[00:56:52] it goes down the research route we're
+[00:56:53] going to go for plexity AI which is
+[00:56:54] really cool was called prompt it which
+[00:56:56] is read uses question carefully look at
+[00:56:58] reputable authoritative sources most
+[00:57:00] update information all this sort of
+[00:57:01] stuff and then we have the user query if
+[00:57:04] it goes down the research route and of
+[00:57:06] course let's just add some books to This
+[00:57:08] research just to make sure that it's
+[00:57:10] it's on brand and it's looking correct
+[00:57:12] awesome come down here
+[00:57:14] perplexity here we go create chat
+[00:57:16] completion if you haven't connected
+[00:57:17] perplexity you just go to perplexity
+[00:57:19] tocom and you create an API um basically
+[00:57:21] you just deposit like $5 and it's like
+[00:57:23] really freaking cheap and it'll last for
+[00:57:25] a very long time
+[00:57:27] um come down content all right sweet so
+[00:57:29] content is simply this the user query we
+[00:57:32] come down and again we give it it from
+[00:57:34] text which is phenomenal role is going
+[00:57:35] to be user excellent and then we just
+[00:57:38] say okay and pretty much that is it then
+[00:57:41] we come back over it we've got responder
+[00:57:44] prompt here which again as you might
+[00:57:45] guess it's exactly the same thing as
+[00:57:47] before so we come down and it says hey
+[00:57:49] this is what the question is this is
+[00:57:50] what the user said blah blah blah blah
+[00:57:52] all that kind of information uh and it
+[00:57:54] just says like we specified it using all
+[00:57:56] the same prompting as before about what
+[00:57:57] its job is how it will um respond and
+[00:58:00] then we give it us a question chat
+[00:58:02] history and also um the information from
+[00:58:05] um perplex itself which I think is
+[00:58:08] pretty flipping cool so we come back
+[00:58:09] over and again we just do the same thing
+[00:58:12] and I'm just going to um clone this guy
+[00:58:15] just for argument sake to make it really
+[00:58:17] simple come down here for this message
+[00:58:19] primer there we go and we give it the
+[00:58:21] prompt so just notice the context of
+[00:58:23] like what's happened here's what they've
+[00:58:24] said here's what we found in terms of
+[00:58:27] research as you can see that's fine come
+[00:58:30] down and then we've got user question
+[00:58:32] which is good we'll say um chat
+[00:58:37] history the chat history is we oops come
+[00:58:40] over here for
+[00:58:41] example come down where's our chat
+[00:58:44] history be some oops yeah we definitely
+[00:58:47] don't want to better save this actually
+[00:58:49] okay we'll save that that's fine come
+[00:58:51] over here then let's have a look and
+[00:58:53] find that chat history that we had
+[00:58:56] can you imagine like you build this up
+[00:58:58] for like two hours and then you just hit
+[00:58:59] backspace and everything's gone like
+[00:59:01] believe me it's happened it's happened
+[00:59:03] to many great
+[00:59:06] people Okay cool so chat history which
+[00:59:11] you will find very briefly now if I
+[00:59:13] remember and here's the thing the longer
+[00:59:15] these messages get it's actually really
+[00:59:17] funny how how quickly this happens so
+[00:59:19] let's come down it is here perfect and
+[00:59:22] then we'll just
+[00:59:23] say research boom and then the research
+[00:59:26] is quite simply going to come down to
+[00:59:27] choices message content excellent guys
+[00:59:31] that is literally it and then we can
+[00:59:33] just do the same thing with this copy
+[00:59:35] and paste those guys come down because
+[00:59:37] it's it's the same end to every scenario
+[00:59:39] by the way so it doesn't really make a
+[00:59:40] difference in each case we're sending as
+[00:59:42] a message and we're adding the
+[00:59:43] conversation to a table the only
+[00:59:46] difference is we need to click on it and
+[00:59:47] change the source module so inste of 25
+[00:59:49] here we just have the result from
+[00:59:51] message primer and we obviously include
+[00:59:53] our chat ID and of course we just need
+[00:59:54] to update the air table with the reply
+[00:59:57] of the new message primer cool all right
+[00:59:59] sweet now let's run one once excellent
+[01:00:01] go to telegram let's ask it something
+[01:00:03] that it wouldn't necessarily know unless
+[01:00:05] I had to research it hey do me a favor
+[01:00:08] actually find out what time leads Kirk
+[01:00:11] gate market closes next
+[01:00:15] Friday okay cool let's see what happens
+[01:00:17] then it comes down it's going straight
+[01:00:19] to to manager manager deemed it's a
+[01:00:21] general question it's deemed also that
+[01:00:23] it's a research it requires research
+[01:00:24] because it doesn't know what the answer
+[01:00:25] is
+[01:00:26] boom it's done that now let's click on
+[01:00:27] this and find out if we got response
+[01:00:29] back Le Cate Market will close 5:30 p.m.
+[01:00:32] next Friday it's open 8: till 5:30 guys
+[01:00:35] that's freaking crazy and also really
+[01:00:37] cool if I show you now um uh it's not
+[01:00:40] this one is it it's the one that we
+[01:00:41] built ourselves but we come over here
+[01:00:43] guys we can see look at this these C
+[01:00:44] gate market closes blah blah blah and
+[01:00:46] it's got all the conversation that we
+[01:00:47] had with it in our flipping air table
+[01:00:49] which I think is freaking crazy cool and
+[01:00:51] then guys it's the same thing um for
+[01:00:54] this one if it doesn't need research
+[01:00:56] look at it just duplicate it come over
+[01:00:59] um let's just delete this guy perfect
+[01:01:01] and it's the same thing except for in
+[01:01:03] this instance we've just not got we
+[01:01:05] don't need any research and it's as
+[01:01:07] simple as that now when we add memory in
+[01:01:09] we'll basically add in all the stuff
+[01:01:10] there that in the datab based rag system
+[01:01:12] so it can kind of pull on all that
+[01:01:14] custom instructions come down delete
+[01:01:16] this beautiful perfect safe scenario and
+[01:01:20] then we're just going to Auto align it
+[01:01:22] now guys if you just want something
+[01:01:23] basic this is enough to get you flying
+[01:01:25] get you started I'm now going to cover
+[01:01:27] memory and if you've not seen any of my
+[01:01:29] videos on rag systems I'll put a link on
+[01:01:31] the screen now if you to go and check
+[01:01:32] that out I think you'll find it very
+[01:01:34] helpful um that's a great starting point
+[01:01:36] now if you're going to build out a
+[01:01:39] knowledge base for it I show you step by
+[01:01:42] step exactly how to do that in that
+[01:01:44] video and what that will enable you to
+[01:01:45] do guys is get any information from any
+[01:01:47] data you want to every video you've ever
+[01:01:48] done on YouTube um your life's work
+[01:01:51] every email conversation you've ever had
+[01:01:53] and upload it to this Vector database
+[01:01:55] they we can then draw down and use in
+[01:01:57] this particular automation for ourselves
+[01:01:59] now in this one and if you follow the
+[01:02:01] video that I put on screen you'll know
+[01:02:02] how to do that the reason I'm not
+[01:02:04] repeating it now is because that would
+[01:02:05] take like an hour to do that and it's
+[01:02:07] covered in a lot of detail there just
+[01:02:09] out of respect for your time if you want
+[01:02:10] to go and preload it with additional
+[01:02:12] data go and follow that resource then
+[01:02:14] I'll show you how you can do it with
+[01:02:15] this one here so the system we're going
+[01:02:17] to use here is retrieval so a pulling
+[01:02:19] information back from our rag database
+[01:02:22] and then this one here is going to be
+[01:02:23] creating and updating things so the next
+[01:02:25] one I want add before I show this is
+[01:02:27] this memory agent here so the memory
+[01:02:29] agent is basically looking for
+[01:02:31] information um it could be stuff like
+[01:02:33] hey just remember that I really like
+[01:02:34] this particular thing or I I really like
+[01:02:36] this coffee taste and it's looking as a
+[01:02:39] knowledge extractor agent that basically
+[01:02:41] it's going to get some interesting
+[01:02:42] information and what it's going to
+[01:02:43] physically do is create an output that
+[01:02:46] describes things like this short
+[01:02:48] descriptive overview a brief title on
+[01:02:50] what the content's about step-by-step
+[01:02:52] intructions key points and stuff like
+[01:02:54] this okay and of course all with feeding
+[01:02:56] it wise is just to use user text and a
+[01:02:58] chat history so look I'm going to come
+[01:03:00] back over here for time sake I'm just
+[01:03:02] going to duplicate this guy bring him in
+[01:03:04] here delete this guy and we'll call this
+[01:03:07] guy right here Dr memory call this one
+[01:03:10] memory
+[01:03:13] aent if you're wondering why are we
+[01:03:15] doing this instead of what it it's
+[01:03:16] because by using a rag system which
+[01:03:18] would call retrieval augmented
+[01:03:20] generation essentially what that means
+[01:03:22] is that it can have like near in it
+[01:03:25] could have a million ion pieces of
+[01:03:26] information stored away and instead of
+[01:03:28] like adding a million pieces of
+[01:03:29] information to every time we ask it a
+[01:03:31] question it will just create a unique
+[01:03:33] key and say look well which of these in
+[01:03:34] this mystical bookshelf of a million
+[01:03:36] drawers is most relevant to me and it'll
+[01:03:38] grab this one this one and this one
+[01:03:40] which means we have fast responsive
+[01:03:42] times and on top of that it can
+[01:03:43] reference any amount of information that
+[01:03:45] we want to so we've got memory agent
+[01:03:47] we're going to give it a little brain
+[01:03:48] because of course it's a big beautiful
+[01:03:50] phenomenal brand we like that excellent
+[01:03:52] and then let's give it some prompting so
+[01:03:55] we I've just give it a template so look
+[01:03:56] when I tell you to remember something
+[01:03:58] just create a template for me and then
+[01:03:59] we're going to upload that template to
+[01:04:01] our super memory database which we can
+[01:04:03] then pull down for whatever we like and
+[01:04:06] I've put again all the proms in the
+[01:04:07] school Community you can just literally
+[01:04:08] grab and go and bounce and have a good
+[01:04:10] time come down to add message roll is
+[01:04:12] going to be user text content once again
+[01:04:15] is going to be um the output that we had
+[01:04:18] let just find out here transcription so
+[01:04:20] just say hey uh
+[01:04:23] user message is that and then we're
+[01:04:27] going to say here is chat
+[01:04:33] history phenomenal is going to be this
+[01:04:35] text aggregate here click okay perfect
+[01:04:38] all right swe now what do we physically
+[01:04:40] need to do so if you follow the other
+[01:04:42] video you will have created an account
+[01:04:43] on Pine count again I explained it all
+[01:04:45] in brilliant detail everything that you
+[01:04:47] need to do I'd really encourage you to
+[01:04:49] do that because if you can use rag guys
+[01:04:51] you can do anything you want to so you
+[01:04:53] should be familiar with how to do that
+[01:04:55] now I'll show you step by step how we
+[01:04:56] add this in here okay so we've got
+[01:05:00] basically um this tool section here to
+[01:05:02] set multiple variables so what this is
+[01:05:04] going to do for us okay if I come down
+[01:05:06] here again I'll put the links down below
+[01:05:08] so you can just use this one set
+[01:05:10] multiple variables here beautiful and
+[01:05:13] we're just going to put here Json what
+[01:05:16] this will do is just scrape out all the
+[01:05:17] kind of like weird and wacky wonderful
+[01:05:20] um different like you know apostrophes
+[01:05:22] and random stuff that basically means it
+[01:05:24] can then be sanitized and plans for us
+[01:05:26] to
+[01:05:27] upload then we're going to do an
+[01:05:29] embedding so again you'll be familiar
+[01:05:31] exactly what this looks like so I'm
+[01:05:33] going to create an open ey connection
+[01:05:34] and API call so let's just again down
+[01:05:36] here come down to open AI
+[01:05:41] whoops type in API
+[01:05:44] call Beautiful URL is this one here V
+[01:05:47] one/ eddings method is going to be post
+[01:05:49] content type application Json that's
+[01:05:51] awesome and then in the body guys I want
+[01:05:52] to type in this particular piece of code
+[01:05:55] and and instead of Json string we're
+[01:05:57] just going to put this Json thing here
+[01:05:59] then we're going to click okay now what
+[01:06:00] this will do guys is create an embedding
+[01:06:02] so it's basically turning that
+[01:06:05] information that document into a unique
+[01:06:08] very long code very long number that it
+[01:06:10] is B imagine turning it interpreting
+[01:06:12] into a unique key that represents that
+[01:06:15] text information and then we're going to
+[01:06:16] come over to Pine con which is going to
+[01:06:18] be where we store everything again
+[01:06:20] you'll know how to create an account by
+[01:06:21] following that video again we're going
+[01:06:22] to click on upsert vector vector ID we
+[01:06:25] need a unique ID for this which is
+[01:06:27] absolutely fine and for that I'm just
+[01:06:28] going to put the date at which it was
+[01:06:30] created that we had the message on from
+[01:06:32] telegram come down to values add values
+[01:06:34] here I want you to click on this map
+[01:06:35] button here click on this come down to
+[01:06:38] body embeddings but just before we
+[01:06:40] continue with pine guys come over to
+[01:06:41] embedding just run this module once and
+[01:06:43] just put some gobble theg into it for
+[01:06:45] example like
+[01:06:46] so okay cool and then we'll have a
+[01:06:49] unique output which is fine let me just
+[01:06:51] clown this guy bring him over delete
+[01:06:53] this guy I've done that just so that we
+[01:06:55] can see what the embeddings value looks
+[01:06:56] like cool so we got Vector ID once again
+[01:06:59] um you can just give it something random
+[01:07:01] here so I wonder if it has like a unique
+[01:07:02] ID here we can just literally just use
+[01:07:04] for a
+[01:07:05] second X request ID that's fine come
+[01:07:08] down to values make sure that's embedded
+[01:07:10] click on this here uh minimize this guy
+[01:07:13] actually know is this is the one that we
+[01:07:14] need here what you're looking for guys
+[01:07:16] is 41 body. data uh there we go body
+[01:07:20] data uh embedding right there once
+[01:07:23] you've got that it's beautiful it's
+[01:07:24] ready to rock and roll thank then guys
+[01:07:25] come down to metadata here first one's
+[01:07:27] going to be content type is going to be
+[01:07:30] string and the value is going to be
+[01:07:33] that's basically what are we including
+[01:07:34] what's the information that we're adding
+[01:07:36] there okay so going to come down I
+[01:07:37] believe that will be in let's have a
+[01:07:40] look uh where is it now the memory agent
+[01:07:43] result and of course guys we can go to
+[01:07:44] add different things like titles if we
+[01:07:46] wish to but just keep it simple I'm just
+[01:07:47] going to leave that as it is and click
+[01:07:48] okay beautiful so what this has done is
+[01:07:50] create a unique code this has then added
+[01:07:53] it to our pine cone database which is
+[01:07:55] excellent and again you'll know exactly
+[01:07:57] how to connect it based on our previous
+[01:07:58] video the next thing you want to do guys
+[01:07:59] is add another responder module learn
+[01:08:01] which is basically just confirming what
+[01:08:02] it's done it's added into our memory
+[01:08:04] this one's really simple really
+[01:08:05] straightforward and what this
+[01:08:06] essentially means is now whenever we
+[01:08:08] want to add some information to our
+[01:08:11] system I will be able to go ahead and do
+[01:08:13] that so you can see guys The Prompt for
+[01:08:14] this one is basically it's just
+[01:08:15] confirming it's added to the memory your
+[01:08:16] only task is to acknowledge the new
+[01:08:18] memory entry update confirm what was
+[01:08:20] saved don't provide any blah blah blah
+[01:08:21] blah loads of really cool information
+[01:08:24] and then on the user ction as I'll show
+[01:08:26] you right here we just come down here
+[01:08:28] and we just give it again use a question
+[01:08:29] chat history and exactly what they
+[01:08:31] updated and once you've created that
+[01:08:32] module and added it in we just need to
+[01:08:33] make sure we align up all the
+[01:08:35] information so I'll just do that very
+[01:08:36] quickly come down again so we just
+[01:08:38] select the user user question so come
+[01:08:40] down oops oh my goodness again can you
+[01:08:43] imagine I just something about the Mac
+[01:08:45] the Mac is like fineing against me today
+[01:08:47] for some reason it's got it's got its
+[01:08:48] own ideas and it's uh it's kicking off
+[01:08:51] in a significant way all right come down
+[01:08:52] use a
+[01:08:53] question let's have a quick look and
+[01:08:55] find out where his question was all the
+[01:08:58] way down here at the bottom beautiful
+[01:09:00] then we've got chat history which is
+[01:09:02] here on the text aggregator awesome and
+[01:09:04] then what you updated is quite simply
+[01:09:06] going to be guys the output from the
+[01:09:08] memory agent then we click okay and then
+[01:09:11] once again just copy and paste these two
+[01:09:14] down and we go we come here and then we
+[01:09:16] connect it flipping phenomenal and then
+[01:09:18] just link up the things by change
+[01:09:19] information again so the text then
+[01:09:21] becomes the result from the responder
+[01:09:24] module and then the table we then just
+[01:09:26] change that to once again the responder
+[01:09:28] module then we click okay so let's let's
+[01:09:31] test this one one more time click on run
+[01:09:32] once come down here hey so I'm launching
+[01:09:35] an AI agency and one of the things I
+[01:09:37] want you to remember whenever I talk
+[01:09:38] about an AI agency that I'm going to be
+[01:09:39] launching an incredibly phenomenal one
+[01:09:42] and we're going to have yellow branding
+[01:09:43] on everything we do and we love the
+[01:09:45] emoji of a rocket so make sure that the
+[01:09:47] rocket emoji is in every piece of
+[01:09:48] communication when I talk about an AI
+[01:09:50] agency just make sure you save that to
+[01:09:52] your memory boom complete gobble theg
+[01:09:55] about
+[01:09:55] I've actually is it go I think it's
+[01:09:57] completely true this what happens has it
+[01:09:58] gone down the memory section and doesn't
+[01:10:00] know where it's going to go has it
+[01:10:02] recognized its information we've had the
+[01:10:04] memory agent the embedding it's added to
+[01:10:06] Pine count it's sent us a message back
+[01:10:08] and it's created an air table let's just
+[01:10:09] validate all that stuff's happened hey
+[01:10:11] there I've successfully saved your air
+[01:10:12] agency launch branding communication
+[01:10:13] guidelines in memory here's a quick
+[01:10:15] summary for you incredibly phenomenal L
+[01:10:17] to Colo all those sort of cool stuff
+[01:10:20] that's Ace first of all can we see it in
+[01:10:22] our chat
+[01:10:23] base uh it will be in this one right
+[01:10:26] here when it beautiful it has it's added
+[01:10:28] in incredible guys and just like that
+[01:10:30] now we've got the function to add new
+[01:10:32] information to our memory so finally the
+[01:10:34] last thing we want to do in this
+[01:10:35] automation is bring this over and then
+[01:10:37] we just want the ability to retrieve
+[01:10:39] information from our rag database and to
+[01:10:41] do that guys we're going to use this
+[01:10:42] information here and again it's very
+[01:10:44] similar to our previous prompt its job
+[01:10:46] here basically is to take the user
+[01:10:48] question turn that into a unique key
+[01:10:51] that we can then query gamestart
+[01:10:53] database to bring back information for
+[01:10:56] us and then guys when it comes to
+[01:10:57] actually physically drawing back on that
+[01:10:59] memory what you want to do is just copy
+[01:11:01] the information you got from the second
+[01:11:02] scenario anoly built on that video and
+[01:11:05] import it very briefly what we're doing
+[01:11:07] here guys is we have the search module
+[01:11:10] so essentially what that's going to do
+[01:11:11] is take the users's query and then
+[01:11:13] create an embedding against that Forest
+[01:11:15] as you can see once that leads up again
+[01:11:17] all the PRS re Down Below in school
+[01:11:19] Community what the text content what the
+[01:11:21] guidelines are and essentially what we
+[01:11:23] want it to produce off the back of that
+[01:11:25] and then what the user's question is
+[01:11:26] that we're doing that against then we're
+[01:11:28] going to create an embeding using the
+[01:11:29] API we're going to query the vectors
+[01:11:32] with that as well guys we're going to
+[01:11:33] use an array aggregator module again all
+[01:11:36] we're looking for here is Vector ID and
+[01:11:38] the metadata so we can pull down the
+[01:11:40] information that we need which is
+[01:11:41] awesome we click okay and then we're
+[01:11:44] going to iterate that which is basically
+[01:11:46] then just taking all this information so
+[01:11:47] again piece of information one again as
+[01:11:49] you can see on the array down here once
+[01:11:51] you've run this W of months you'll be
+[01:11:52] able to see this individual data and you
+[01:11:54] can select all the stuff that you want
+[01:11:56] there which is really cool and
+[01:11:57] straightforward and when you query the
+[01:11:58] vectors you can decide how many things
+[01:12:00] you want to bring down 3 four five based
+[01:12:02] on how much data you'd like to bring
+[01:12:04] down from the whole system then we click
+[01:12:06] okay and then once we've got that
+[01:12:07] information from the iterator what we
+[01:12:09] can then do is add it into the general
+[01:12:11] agent for its own particular knowledge
+[01:12:13] base so we can come here for example
+[01:12:16] let's let this load up beautiful and
+[01:12:18] then we'll looking to give it some
+[01:12:20] additional information from that whole
+[01:12:22] scenario which is Ace uh let's come down
+[01:12:24] to add message we need to give it the
+[01:12:26] user information as well which is fine
+[01:12:28] user question and also um the uh
+[01:12:31] research so say hey user
+[01:12:37] question here and of course what we're
+[01:12:39] going to do guys is quite simply come
+[01:12:41] here click on that come down and find
+[01:12:44] user question which would be right here
+[01:12:46] and then I'll just say uh chat
+[01:12:51] history boom and then sort of memory and
+[01:12:55] the memory is very simply just going to
+[01:12:57] come back from this guy here which is
+[01:13:00] the general agent so come down here
+[01:13:02] click okay actually see it excuse me
+[01:13:05] come down beautiful give this a hot
+[01:13:08] second and now we just want the value
+[01:13:10] from the Itor flipping awesome perfect
+[01:13:12] then we click okay so let's test this R
+[01:13:14] out really quickly click on run once hey
+[01:13:16] there find out what time Nando opens in
+[01:13:19] Birmingham city center tomorrow after
+[01:13:21] yeah just me what time it opens cool
+[01:13:23] we've asked a random question it's gone
+[01:13:25] to the system it should then send it
+[01:13:26] down through to the search amazing it's
+[01:13:28] gone through to Pine con it's quered it
+[01:13:30] to find all the information which is
+[01:13:31] phenomenal and if I check the iterator
+[01:13:33] we should have lots of crazy information
+[01:13:35] there you go look at all this data it's
+[01:13:36] pulled back flipping crazy comes down
+[01:13:39] let's see what it decides it needs to do
+[01:13:40] I'm assuming at this point it knows it
+[01:13:42] needs to go research but this one didn't
+[01:13:44] fire off because I put the filter wrong
+[01:13:46] contains case and sensitive beautiful
+[01:13:48] and then just make sure this one's got
+[01:13:49] contains case and sensitive all right
+[01:13:51] sweet let's run this one more time come
+[01:13:53] back down all right hey tell me what
+[01:13:56] time nandez opens tomorrow morning in
+[01:13:57] Birmingham City Center thank you now we
+[01:14:00] don't have information about nandez
+[01:14:01] Birmingham city center but when would
+[01:14:03] you use this well you might use this for
+[01:14:05] things like you know anything you save
+[01:14:06] your information about any business
+[01:14:08] information like how many clients hey
+[01:14:09] could you tell me what our Q4
+[01:14:10] performance was last year how do we do
+[01:14:12] with this how do we do with that any
+[01:14:13] kind of question you could possibly
+[01:14:15] imagine and now it's going to be able to
+[01:14:16] save that information for you as well on
+[01:14:18] top of that it's done its research let's
+[01:14:20] find out what it says Hey nandos opens
+[01:14:22] it this time in the morning I didn't
+[01:14:23] know it realized it opened up early this
+[01:14:25] morning actually that's crazy but in any
+[01:14:27] case guys that is the system from
+[01:14:29] beginning to end you can see just how
+[01:14:31] modular this thing is the rag database
+[01:14:33] system is a little bit more complex but
+[01:14:36] if you follow the other video I covered
+[01:14:37] that in step by step that should be
+[01:14:39] super easy and guys congratulations
+[01:14:40] you've developed your first hopefully no
+[01:14:42] code AI agent if you found this video
+[01:14:45] interesting consider let me know what
+[01:14:46] your thoughts are down below in the
+[01:14:47] comment section in any case I hope you
+[01:14:49] have a wonderful week and I'll catch you
+[01:14:51] in my next video

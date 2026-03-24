@@ -1,0 +1,1038 @@
+[00:00:00] You can build a fully automated
+[00:00:01] onboarding system that runs 24/7 without
+[00:00:04] paying for any developers if you know
+[00:00:06] how to structure it the right way. I'm
+[00:00:08] going to show you behind the scenes of
+[00:00:10] the exact system I used in my last tech
+[00:00:12] startup that saved me tens of thousands
+[00:00:14] of dollars and has helped my clients
+[00:00:16] save hundreds of thousands without
+[00:00:18] lifting a finger. We'll look at user
+[00:00:20] dashboards and signups, admin
+[00:00:22] dashboards, welcome sequences, and
+[00:00:24] everything that you need. And by the end
+[00:00:25] of this video, you'll have a full
+[00:00:26] onboarding system that you can deploy in
+[00:00:28] your business or that clients will pay
+[00:00:30] thousands for. But to do that, we have
+[00:00:32] to understand what an onboarding that
+[00:00:33] actually [music] prints revenue actually
+[00:00:35] is. So to do this, we need only five
+[00:00:37] things. I know you're thinking, look,
+[00:00:39] Joe, the Infinity Gauntlet has six
+[00:00:40] stones. I'll get to that point later.
+[00:00:42] First of all, we need uh one of the five
+[00:00:44] things we need is a gorgeous website. We
+[00:00:46] need onboarding questions. So they land
+[00:00:48] on our website. We ask them some great
+[00:00:49] questions about the client. We give them
+[00:00:51] a personalized dashboard that they can
+[00:00:52] log into at any time to track the
+[00:00:55] progress of anything. Then they get a
+[00:00:57] series of onboarding emails, nurture
+[00:00:58] sequences, get them used to the product
+[00:01:00] of the service, an upsell if you wish
+[00:01:02] to. And the five is an admin dashboard
+[00:01:04] for you to personally use so that you
+[00:01:06] can influence the things that they see.
+[00:01:08] Now, what does a client see? The client
+[00:01:10] sees a website, they see a dashboard,
+[00:01:13] and then they get emails. That is the
+[00:01:14] client's interface with us and our
+[00:01:16] business. But how does that work? Well,
+[00:01:20] we have the customer dashboard and all
+[00:01:22] the information in that customer
+[00:01:24] dashboard is linked to a database. And a
+[00:01:26] database is the big and beautiful
+[00:01:28] superbase. Really cool. And then we have
+[00:01:31] our admin dashboard that gives us a
+[00:01:33] tople overview of all of the customers
+[00:01:35] and all the customer dashboards. And you
+[00:01:37] might have guessed it, that is also
+[00:01:39] connected to Superbase. Some say is a
+[00:01:42] dastardly devilish plan, but effectively
+[00:01:44] that is the whole process and how it all
+[00:01:46] connects together. and we're going to be
+[00:01:47] using some of the latest technology that
+[00:01:48] just came out to make this possible.
+[00:01:50] Now, step one, of course, is to build
+[00:01:51] the beautiful front end, right? The
+[00:01:53] beautiful dashboard with the sign in.
+[00:01:54] So, to do that, we're going to head over
+[00:01:55] to Claude and give it to get an SOP. Hey
+[00:01:57] there. I would like you to design for me
+[00:01:59] and give me an SOP for the following
+[00:02:02] project. The project is a design of a
+[00:02:04] gorgeous, beautiful dashboard with a
+[00:02:06] login section. And that dashboard is
+[00:02:08] basically going to do a couple of
+[00:02:09] things. In the signup process, we're
+[00:02:11] going to ask the customer eight
+[00:02:12] questions. I would then like the answers
+[00:02:14] to those questions to be sent to
+[00:02:16] Superbase. I'll provide you the
+[00:02:17] credentials for that later. And then
+[00:02:18] once they land in there, I would like
+[00:02:20] eight different sections based on those
+[00:02:22] questions with lots of interactivity and
+[00:02:25] charts and um lots of things that they
+[00:02:27] can update and will look great. Okay,
+[00:02:28] really random quite quite a lot of wild
+[00:02:30] things in there, but I'm keeping it
+[00:02:32] quite high level. I think what we'll do
+[00:02:33] for this video as an example is the AI
+[00:02:36] audit. So uh again I'll just say this is
+[00:02:38] for an AI audit system where the client
+[00:02:40] would answer the questions and then
+[00:02:42] basically in the dashboard once they
+[00:02:43] sign in they're going to be able to see
+[00:02:44] their progress and their scores against
+[00:02:46] those questions. Cool. So now we hit
+[00:02:48] enter with that. So it's going to design
+[00:02:49] an SOP and then obviously the platform
+[00:02:51] we're going to be using guys uh Google
+[00:02:53] on grab today is going to be a
+[00:02:55] studio.com. Beautiful. So open this up
+[00:02:58] for a moment and then we'll get this.
+[00:02:59] And guys where are my manners? I was
+[00:03:01] going to say if you haven't got this
+[00:03:02] coffee grab that coffee cuz we're about
+[00:03:04] to dive in and make some magic happen.
+[00:03:06] So, we've got everything that we need
+[00:03:08] here. We're going to get the SOP from
+[00:03:09] Claude, feed it to it, and then once we
+[00:03:11] get one that we're happy with, that's
+[00:03:12] cool. So, also, let's head over to
+[00:03:15] dribble.com to get a view of a cool
+[00:03:18] dashboard. And in fact, guys, what I
+[00:03:20] might do is grab the one that we saw
+[00:03:21] earlier, but let's just find something
+[00:03:22] that's really cool. Again, we want to
+[00:03:24] ask questions and make it look really
+[00:03:25] cool and decent. So, why don't we use as
+[00:03:29] a kind of gorgeous website, you know,
+[00:03:31] something like what looks really cool to
+[00:03:33] you here? I think that the good thing
+[00:03:34] about dribble is there's so many
+[00:03:35] different designs that you can actually
+[00:03:37] lean on and just find out one that you
+[00:03:38] like. So, we've got a nice dashboard
+[00:03:39] there. I think we'll go for a true and a
+[00:03:41] tried and tested classic. Let's go for
+[00:03:43] something simplistic like this one here.
+[00:03:45] All right. Cool. So, say we like the
+[00:03:46] idea of this one. We think this is cool.
+[00:03:48] Let's just screenshot it. Beautiful.
+[00:03:51] Come over here. We don't want to record.
+[00:03:52] We want to simply copy this. Awesome. Uh
+[00:03:55] I'm going to say paste this one in
+[00:03:57] there. Fantastic. And then let's go over
+[00:03:59] to Claude. Get this thing. Okay. Okay,
+[00:04:01] it's building an SOP document for us.
+[00:04:03] That is very handy. So, just give us a
+[00:04:04] hot second to complete and then we'll be
+[00:04:06] ready to rock and roll. If you didn't
+[00:04:08] catch my last video, by the way, on how
+[00:04:09] you build these systems out, I'll put a
+[00:04:11] link on screen so you can check that.
+[00:04:12] That's using Google's anti-gravity. It's
+[00:04:14] using all the different systems and
+[00:04:16] exactly how you get set up step by step.
+[00:04:18] So, one of the reasons why we're doing
+[00:04:19] this is you can ask if you're building
+[00:04:21] in these softwares the model to think
+[00:04:23] and it'll do that itself. But I always
+[00:04:25] find it's better to go to a different
+[00:04:26] model, ask it to create a cool
+[00:04:27] structured plan, give it very specific
+[00:04:29] task, and then we bring that over. And
+[00:04:30] beautiful, just like that guys, it has
+[00:04:32] given us a fantastic audit document. And
+[00:04:34] do has Claude gone to detail? It has
+[00:04:37] gone so into detail. So I'm just going
+[00:04:39] to copy this for the purposes of this
+[00:04:40] video. Let's come over to this and just
+[00:04:42] say boom. All right. And then we're just
+[00:04:45] going to send this one. Ask it to build.
+[00:04:46] And then once you've given the prompt,
+[00:04:47] guys, to AI Studio, you can just bounce
+[00:04:50] back with it a little bit to get it to
+[00:04:51] the point where you're really happy with
+[00:04:52] the design. All I've really said to this
+[00:04:54] is make it TDAI and then make it all set
+[00:04:56] up. So if I have my work email, so if I
+[00:04:58] just say hey test.com,
+[00:05:00] we can come through and test this Jack
+[00:05:03] Roberts and let's have a run the
+[00:05:04] password. Start the audit now and then
+[00:05:07] how clearly is your organization. So we
+[00:05:09] have these questions. We can answer some
+[00:05:10] bits and pieces. This is actually really
+[00:05:12] cool. You know what I mean? We can see
+[00:05:13] the questions, some interactive ones.
+[00:05:16] You just pick all the stuff that you
+[00:05:17] want to have this. Pick this and then we
+[00:05:20] are ready to go. So we've got our order
+[00:05:22] all finished and then off the back of
+[00:05:23] that we now have a progress dashboard
+[00:05:27] which is very very cool and we can sign
+[00:05:29] out and do lots of different things. So
+[00:05:30] beautiful. We have now officially
+[00:05:32] designed a front-end dashboard for the
+[00:05:34] user. So what is the next thing that we
+[00:05:36] need to do? Well, we want to kind of
+[00:05:37] personalize the dashboard, right? So
+[00:05:39] let's give some feedback on the
+[00:05:40] dashboard itself. So this is where we
+[00:05:41] improve it. So I might say something
+[00:05:43] like hey dude I'd like you to improve
+[00:05:44] the dashboard. I would like you to
+[00:05:47] generate some first of all change the
+[00:05:49] questions so that the user is giving
+[00:05:50] some information about their business
+[00:05:52] and the desired transformation. So store
+[00:05:54] that information I'll provide all the
+[00:05:56] questions I want you to ask. Then after
+[00:05:58] that also for the purpose of
+[00:05:59] demonstration just have a generate all
+[00:06:02] random answers one that gives me a
+[00:06:03] default answer so I can test the app out
+[00:06:05] and we'll remove that later. And then in
+[00:06:07] the actual app itself I just want a bit
+[00:06:09] more graphs and just make that look
+[00:06:10] great. Beautiful. So I'm going to put
+[00:06:11] that in there guys. Get it to amend
+[00:06:13] that. And the reason I'm doing that
+[00:06:14] obviously just so we can blitz through
+[00:06:16] the tutorial. You can see with sample
+[00:06:17] data and then we're going to have some
+[00:06:19] text and then we're going to be able to
+[00:06:20] give some custom feedback which is
+[00:06:22] really really cool. And then what we
+[00:06:23] want to do guys is build the admin
+[00:06:25] dashboard and we need to connect this to
+[00:06:28] superbase. So while this is working in
+[00:06:29] the background let's head over to the
+[00:06:31] beautiful Superbase. So let's come over
+[00:06:34] and load that up. Superbase is just
+[00:06:36] think of it as Microsoft Excel. It's
+[00:06:38] been hitting the gym and it's on
+[00:06:40] steroids. It's basically like a great
+[00:06:43] very configurable database that can do
+[00:06:46] lots of cool stuff. You can add many
+[00:06:48] different things in there. You can
+[00:06:49] pretty much do anything that you want
+[00:06:50] to. It's very, very, very, very cool.
+[00:06:52] So, we can have databases. You can
+[00:06:54] create one absolutely free, which is
+[00:06:55] really cool. And if I come back over
+[00:06:57] here, I'm going to create a brand new
+[00:06:58] one here with you right now. As I click
+[00:06:59] on new project, organizations content.
+[00:07:01] That's cool. So, we're going to upgrade
+[00:07:02] this one to pro. And then in addition to
+[00:07:04] this, guys, what we want to do is pretty
+[00:07:06] much just improve the content of the web
+[00:07:08] page. So, for example, we're going to
+[00:07:09] want a stronger hook. There's many
+[00:07:10] different kinds of hooks we can use like
+[00:07:12] a value proposition hook, a little bit
+[00:07:14] of an explainer there. We need the start
+[00:07:16] free audit, but we're missing a lot of
+[00:07:18] stuff in here, right? We are missing
+[00:07:19] proof of what we do. We're missing the
+[00:07:21] value proposition, why they should even
+[00:07:23] take this audit to begin with. So, we
+[00:07:25] can build that up by just giving it a
+[00:07:26] prompt, which sounds something like, I'd
+[00:07:28] like you to redesign the website in line
+[00:07:29] with the below principles for best
+[00:07:31] homepage best practices. I'm going to
+[00:07:33] say, use dummy testimonials if you need
+[00:07:36] to just to get this web page live. Okay?
+[00:07:38] here. But then obviously you can just
+[00:07:39] filter that with your own specific
+[00:07:41] stuff. And typically speaking guys, the
+[00:07:42] web pages need to do a couple of things.
+[00:07:44] We need something to hook them in and
+[00:07:45] explain what it is in simple language. I
+[00:07:47] should be able to see it and get the
+[00:07:49] actual proof. We need to communicate the
+[00:07:51] value proposition. So what it is that
+[00:07:53] they're getting out of it. Then we need
+[00:07:54] to show testimonials to prove that we
+[00:07:56] know what we're talking about. And
+[00:07:58] underneath that we have a very clear
+[00:07:59] CTA, which in our case is going to be
+[00:08:01] the free audit, which we want to give a
+[00:08:03] very cool name. What I'll do, guys, I'll
+[00:08:04] also put down a prompt and a system down
+[00:08:06] below that you can grab in the
+[00:08:07] description to help you um build out a
+[00:08:09] web page like this that actually
+[00:08:10] converts. So, are you frustrated the AI
+[00:08:12] investments aren't yielding the ROI you
+[00:08:14] expected? Answer eight simple questions
+[00:08:16] come from the visible bottleneck, slow
+[00:08:17] down your business, and get a
+[00:08:18] personalized road map in under 2
+[00:08:19] minutes. Sounds very cool. 100% free
+[00:08:21] audit. And the idea with this, typically
+[00:08:23] speaking, guys, is that people more
+[00:08:24] likely to do the audit than they are
+[00:08:25] just to buy product. So, let's go
+[00:08:27] through this and and some information.
+[00:08:28] So, email, work email address, blah blah
+[00:08:30] blah blah blah blah.com, first name,
+[00:08:33] company name, password, see my results.
+[00:08:36] Obviously, we need to change that. But
+[00:08:37] then we got loads of different answers
+[00:08:38] here. So, we're just going to magic fill
+[00:08:40] this for the test, which is cool. And
+[00:08:42] then finish order. And oh my goodness,
+[00:08:45] dude. If I had glasses right now, they'd
+[00:08:46] be falling off my face. This is crazy.
+[00:08:49] So, look at this, guys. This is actually
+[00:08:52] ridiculous. I mean, look at the
+[00:08:54] beautiful animation and this website. So
+[00:08:56] what we need to do is connect it to um
+[00:08:58] actual superbase like I showed you.
+[00:09:00] Okay. So we need to give it two pieces
+[00:09:01] of information. So we're going to come
+[00:09:02] over to our beautiful superbase. Come
+[00:09:04] down to project settings and what we're
+[00:09:06] looking for is our public key which I
+[00:09:08] believe is in API keys and I think it's
+[00:09:10] legacy and non service ro API keys.
+[00:09:12] You're going to copy this and you're
+[00:09:14] going to copy the URL. So you're going
+[00:09:16] to come back over to our scenario. I'm
+[00:09:19] going to say excellent. I would now like
+[00:09:21] you to connect this to superbase. Here
+[00:09:23] is the relevant information to make the
+[00:09:24] connection. Okay. Okay. And then we
+[00:09:25] paste in. And then I'm going to come
+[00:09:27] back over here, grab this. And then you
+[00:09:29] paste that in also. And once we put that
+[00:09:31] information in, we basically then say,
+[00:09:32] give me SQL code to create the relevant
+[00:09:35] table in Superbase with the right naming
+[00:09:38] conventions so I can connect that on my
+[00:09:39] side. Bam. Cool guys. And then we've got
+[00:09:41] SQL. So SQL can feel really intimidating
+[00:09:45] at first glance. You know, I speak
+[00:09:47] English, you might speak French or
+[00:09:48] Italian. Tables, they speak SQL. So what
+[00:09:52] we do with SQL is we head over to
+[00:09:54] Superbase and on the left hand side
+[00:09:56] you're going to see SQL editor which is
+[00:09:58] just chat with me baby in table
+[00:10:00] language. You come over here going to
+[00:10:02] paste that in and then click on run and
+[00:10:04] it should say success no rows returned
+[00:10:06] or something along those lines.
+[00:10:07] Beautiful which means it's done that. So
+[00:10:09] the AI has basically said look I'm
+[00:10:10] getting all this information from the
+[00:10:12] our customers right I'm getting names
+[00:10:13] I'm getting email addresses I'm asking
+[00:10:14] these questions go ahead and make me a
+[00:10:17] table with all the stuff in that we
+[00:10:19] need. So if I actually come over then to
+[00:10:20] on the left hand side tables and I
+[00:10:22] appreciate this might be new things to
+[00:10:24] some of you but I just want you to
+[00:10:25] really have a look and understand how
+[00:10:26] this works and you can see the tables
+[00:10:29] that's been created and it's got all the
+[00:10:30] information like user ID, passwords,
+[00:10:33] emails, all that sort of stuff. So let's
+[00:10:35] come back over over here for example.
+[00:10:37] Hey dude, I just want to double check
+[00:10:38] that you are actually saving the email
+[00:10:41] and password in Superbase when you
+[00:10:43] create the account. Beautiful. Come down
+[00:10:45] and just confirm that. Fantastic. Well
+[00:10:46] that's checking the background guys.
+[00:10:48] What I now want to do is the third step,
+[00:10:50] which is be getting them into our email
+[00:10:51] sequence. So, there's many different
+[00:10:53] ways that you can physically do this. I
+[00:10:55] really like go highlevel for this sort
+[00:10:57] of stuff. So, what I like to do is I
+[00:10:59] like to we're going to head over to go
+[00:11:00] highle.com right now. Open that guy up
+[00:11:02] real quick. And then you want to go
+[00:11:03] ahead and log into your app or create a
+[00:11:05] new account. And one of the reasons we
+[00:11:06] love go highle is because you can do
+[00:11:08] like a billion things from there. You
+[00:11:10] can text people. You can effectively
+[00:11:12] automate anything. It is like a Willy
+[00:11:14] Wonkers emporium of epic stuff that you
+[00:11:16] can do. So, come down. account. Let's
+[00:11:17] just sign in real quick. And then when
+[00:11:19] you're logged into this account, I want
+[00:11:20] you to come on the left hand side down
+[00:11:21] here to automation. I'm going to create
+[00:11:23] a brand new automation over here. So,
+[00:11:25] let's come over and grab this cuz what I
+[00:11:26] want to happen, guys, is once it's
+[00:11:28] created, let's click on create a
+[00:11:29] workflow. And we'll start this from
+[00:11:31] scratch. That's fine. I want it to send
+[00:11:33] over the information to our CRM or
+[00:11:35] whatever we want to. And we're going to
+[00:11:37] enable autosave, which is great. So,
+[00:11:39] let's start by adding a trigger. I'm
+[00:11:40] going to add in a web hook, which is
+[00:11:42] just a really simple way of how we can
+[00:11:44] send information across the internet.
+[00:11:45] Okay, so inbound web hook is very very
+[00:11:47] cool. And then we are going to copy this
+[00:11:50] which is fine. Now check this out. If I
+[00:11:52] say fetch sample request, nothing's
+[00:11:54] going to come up just yet. Okay, so we
+[00:11:55] need to send some information over. So
+[00:11:56] we're going to come back over to our
+[00:11:58] wonderful Snor. And I'm going to say
+[00:12:00] this. Once the individual has created an
+[00:12:02] account, I want you to send over their
+[00:12:04] name, their email, first name, second
+[00:12:06] name before they begin the order over to
+[00:12:09] our CRM. This is the web hook URL that
+[00:12:11] you're going to send that information
+[00:12:12] to. Okay, beautiful. And then we're
+[00:12:14] going to put this here and just make
+[00:12:15] sure we got web hook, not web hook,
+[00:12:17] which I think is hilarious. And then
+[00:12:18] when this is finished, just checking one
+[00:12:20] or two things. What this will then mean,
+[00:12:22] guys, is that the second one actually
+[00:12:24] now creates a landing page. They're
+[00:12:25] added into our CRM. And if we wanted to,
+[00:12:27] we could also add in all of those audit
+[00:12:30] questions as well to our CRM database.
+[00:12:32] We would just decide when in the process
+[00:12:34] we want to do this. I'm just going to
+[00:12:35] send over the email address just because
+[00:12:37] it's a lot easier and simple. Obviously,
+[00:12:39] you can get numbers. You can add it in
+[00:12:40] any point you want to. So, that's done.
+[00:12:42] And then I'm going to send this off over
+[00:12:43] here. So now they've landed on our
+[00:12:44] website. They've been intrigued because
+[00:12:46] we spoke about their problem. They think
+[00:12:48] it's interesting. They are going to take
+[00:12:50] our audit which is ahead of our full
+[00:12:52] product. Once that's happened, we're
+[00:12:53] going to grab their information. It's
+[00:12:54] going to go over to our fantastic CRM
+[00:12:57] and go high level. And once it lands in
+[00:12:59] our CRM and go high level, we can then
+[00:13:00] begin all of our onboarding sequences.
+[00:13:02] Email on day one, email on day three, on
+[00:13:05] day seven to nurture them. So again,
+[00:13:07] this is great because we can nurture
+[00:13:08] them now. And it's say for example I
+[00:13:10] watch a piece your content or I find out
+[00:13:11] about you. I do an audit because you're
+[00:13:13] solving one of my problems which is
+[00:13:15] awesome but then I get testimonials. I
+[00:13:17] get actual value in the emails which is
+[00:13:19] what I try to do. Well I say try to do I
+[00:13:22] really pride myself on doing on my
+[00:13:23] newsletter Ideas with Jack which is big
+[00:13:25] ideas every week is that I get in there
+[00:13:27] I I just add value. That's basically all
+[00:13:28] I try to do with no ask at all. That's
+[00:13:30] very cool because for you when you're
+[00:13:31] selling a product though, you get them
+[00:13:33] on this thing, you can nurture them, add
+[00:13:34] loads of value and then eventually help
+[00:13:36] with any other kind of upselles or
+[00:13:38] whatever you've got or you want to pimp
+[00:13:39] and pop. So this is now complete. So
+[00:13:41] let's actually test this one together.
+[00:13:43] We load up. We are going to refresh this
+[00:13:45] right here. So let's fill out the
+[00:13:47] information. I'll say Dr. Jack
+[00:13:48] atoutlook.com.
+[00:13:51] Full name can be Jack. Company can be
+[00:13:53] Dr. Pepper. Massive. I've not had Dr.
+[00:13:56] Pepper in ages, guys. Honestly, where is
+[00:13:58] Dr. pepper in the UK and the Middle East
+[00:14:00] these days. And then we've got a random
+[00:14:01] password. I click on obviously we change
+[00:14:04] the results to see my results. You
+[00:14:05] wouldn't necessarily do that just yet.
+[00:14:06] Book see my results. And then we've got
+[00:14:09] all the stuff here. And obviously we can
+[00:14:10] just magic fill this and go through to
+[00:14:12] the dashboard. Then crucially, let's
+[00:14:14] head over now to go high level and see
+[00:14:16] that we've got that information. So if I
+[00:14:17] click on look at this guys, it's pulled
+[00:14:20] through all the data and again we can
+[00:14:22] fetch all that key information and bring
+[00:14:23] it straight into our CRM. And you can
+[00:14:25] see drjackler.com
+[00:14:27] saved the trigger. Fantastic. The next
+[00:14:29] thing we want to do is create contacts,
+[00:14:30] which is awesome. So, click on that one.
+[00:14:32] So, email or phone is required. All
+[00:14:34] selected fields. Cool. So, we add field
+[00:14:35] and what we do is add in some names. So,
+[00:14:37] we're going to come down here and we're
+[00:14:38] going to find email. And then what we do
+[00:14:40] is just find the thing for email. So,
+[00:14:42] this is the field inbound web. Okay. Let
+[00:14:44] me just explain. You're telling here in
+[00:14:46] the automation to create a contact.
+[00:14:48] Awesome. Then go high level says great.
+[00:14:50] To create a contact, we need to know
+[00:14:51] some information about them, right? We
+[00:14:53] need to know their name and their email.
+[00:14:54] So what you're doing here is selecting a
+[00:14:56] field like email and then here on the
+[00:14:58] right you're selecting well where are
+[00:15:00] you getting that email from? So the only
+[00:15:01] thing we're getting it from really is
+[00:15:02] the inbound web hook trigger and what
+[00:15:04] we're looking for really is email and
+[00:15:06] that's it. And then you can select their
+[00:15:08] name which would be quite handy right so
+[00:15:09] let's grab their name which is going to
+[00:15:10] be first name and then once again we
+[00:15:12] click on this we click on inbound web
+[00:15:14] trigger and then we click on name.
+[00:15:16] Great. And now basically this means guys
+[00:15:18] we're going to get their first name and
+[00:15:19] their email on everything and we save
+[00:15:21] the action. Really freaking cool. And
+[00:15:23] then we can publish it just like that.
+[00:15:25] And then what we would do after this
+[00:15:26] guys is we would add in a new email. So
+[00:15:28] in here for example we could say email
+[00:15:29] which is send email. Fantastic. Then you
+[00:15:33] can basically say well who am I sending
+[00:15:34] the email to. It will send it to that
+[00:15:36] contact automatically which is freaking
+[00:15:38] amazing. You can set the subject which
+[00:15:40] is going to be something like welcome
+[00:15:42] and then you can have a selection
+[00:15:43] templates any templates that you've got
+[00:15:44] whatever you want to. And then you can
+[00:15:46] click on save action. Now what's really
+[00:15:47] cool here is you can then add in wait
+[00:15:49] notes and you do that by coming down and
+[00:15:51] clicking wait. And you can say how long
+[00:15:53] do you want it to wait? We can say well
+[00:15:54] we're going to wait now three days.
+[00:15:56] Sweet. And click on save. And then we
+[00:15:58] may want to come down and want to send
+[00:16:00] another email. So send email. Beautiful.
+[00:16:02] And then you fill that out which is
+[00:16:03] great. And then obviously we'll come
+[00:16:04] down here and we'll sub name is fine.
+[00:16:06] Subject is going to be you know five
+[00:16:08] ways to win. And then you can give out
+[00:16:11] obviously the email. Write that out
+[00:16:12] beautifully. Save actions. And then you
+[00:16:14] have a fully customized builtout
+[00:16:16] sequence. And one cool hack is have your
+[00:16:18] CTA in the PS. people don't mind being I
+[00:16:21] say sold to but having a page like PS
+[00:16:23] we're running this workshop or PS you
+[00:16:25] can get this thing here and once you
+[00:16:26] click save done so automatically now
+[00:16:29] whenever someone gets added to this list
+[00:16:30] they're going to get an email sequence
+[00:16:31] and you built that in seconds using go
+[00:16:32] high level which is freaking amazing
+[00:16:34] then after a bit period of time guys
+[00:16:35] you're just going to play around with it
+[00:16:37] make sure that looks with it you like we
+[00:16:38] would probably change a little bit of
+[00:16:39] this text cuz it's a little bit too much
+[00:16:41] to get over with want to be shorter so
+[00:16:42] probably are you frustrated that your AI
+[00:16:44] you know you're not making money with AI
+[00:16:46] even though blah blah blah so then we
+[00:16:47] come through and we're going to refresh
+[00:16:48] this and go through the journey very
+[00:16:49] quickly. So get your AI score. Let's
+[00:16:51] give it a hello@outlook.com.
+[00:16:54] Full name is this. Company name can be
+[00:16:56] this and then a password minimum of six
+[00:16:58] characters. And click on see my results.
+[00:17:00] It's now processing. Again, we would
+[00:17:02] want to change that to find out account
+[00:17:04] created. Please verify email before
+[00:17:06] logging in. So what's cool here is now
+[00:17:08] actually required an account
+[00:17:09] verification email. Now, if you actually
+[00:17:11] head over to Civerbase, one of the
+[00:17:14] things that you can do in project
+[00:17:15] settings, if you come down, I believe on
+[00:17:17] the left hand side, it's under
+[00:17:18] authentication on user signups, allow us
+[00:17:21] to sign up, and you have this confirm
+[00:17:23] email. So, you can actually require them
+[00:17:25] to either confirm their email or not.
+[00:17:27] And that would basically mean that you
+[00:17:28] would only get people with a validated
+[00:17:29] email. Really important because
+[00:17:31] sometimes with automations, they just
+[00:17:32] give you whatever. So, I'm going to turn
+[00:17:34] off for the purposes of this, but just
+[00:17:35] so you know, that's like how you would
+[00:17:37] physically do that. So, let's refresh
+[00:17:39] it. Great. Now let's give another one.
+[00:17:41] So blah blah blah at uh outlook.com
+[00:17:43] information information and this is our
+[00:17:45] password and we click on see my results
+[00:17:46] and then this should go through happily
+[00:17:48] daisy do. So now we got the information
+[00:17:50] on this and we click on magic fill
+[00:17:53] finish the audit real quick and then
+[00:17:54] this should take us through to our
+[00:17:56] beautiful dashboard and it has now look
+[00:17:58] at this maturity tier adopter. Look at
+[00:18:01] this guys this is absolutely freaking
+[00:18:04] crazy. Honestly I'm so so so impressed
+[00:18:06] with this. So we've basically completed
+[00:18:09] now everything for the user. Then they
+[00:18:10] of course they would enter or go highle
+[00:18:12] funnel where they would get the
+[00:18:13] different emails and sorted out but then
+[00:18:15] it brings them to next problem right
+[00:18:17] because it's great they've got a
+[00:18:18] dashboard but you sat in your beautiful
+[00:18:21] chair with your wonderful where's my
+[00:18:22] coffee at delicious today we got Joe and
+[00:18:25] the juice coffee and you're thinking
+[00:18:27] well I don't have any visibility of this
+[00:18:29] stuff. Well you kind of do if you went
+[00:18:31] into this and you checked out tables but
+[00:18:33] let's be honest we didn't do this to
+[00:18:35] watch spreadsheets all day. We want
+[00:18:36] something visually engaging and
+[00:18:37] interactive. The next step is to create
+[00:18:39] our beautiful admin dashboard for us to
+[00:18:42] see. Now, to do that, what we're going
+[00:18:43] to do is download this onto our laptop.
+[00:18:45] So, the first thing is going to come
+[00:18:46] over here to the download app, which is
+[00:18:48] fine. And we'll call this one today AI
+[00:18:51] uh dashboard like so. Fantastic. And
+[00:18:54] we're going to download this here. And
+[00:18:55] we've got it as a zip. So, we can click
+[00:18:56] on that. And then that will open up for
+[00:18:58] us. And then we've got, if we click
+[00:19:00] here, all of the things. So the next
+[00:19:02] thing that we do then is head over to
+[00:19:04] cursor or you could do the S code or you
+[00:19:06] could do anti-gravity whichever platform
+[00:19:08] that you like if you not built this
+[00:19:09] before. Basically all you do is install
+[00:19:11] node.js if you're using cursor and then
+[00:19:14] you download cursor.com and then you
+[00:19:16] head over to basically you can just then
+[00:19:19] download which I'll show you in a
+[00:19:20] second. So we're going to open up the
+[00:19:21] beautiful cursor and when you do so it
+[00:19:24] will look a little bit something like
+[00:19:26] this. And this is something that I
+[00:19:27] played around a little bit earlier. So
+[00:19:28] you're going to come down here to file
+[00:19:29] and you're going to come on the left to
+[00:19:30] open folder and open the thing that you
+[00:19:32] just downloaded. So if I come down here
+[00:19:34] to downloads and I have here Teddy AI
+[00:19:36] dashboard I click on that. Now what this
+[00:19:38] will do is open up the same thing for
+[00:19:40] us. Now you'll see an interface that
+[00:19:42] looks like this. This is the inbuilt
+[00:19:44] cursor chat which is fine but we want to
+[00:19:46] use claude code. So if you want to
+[00:19:49] install cloud code you have to open up
+[00:19:50] your terminal. Your terminal looks like
+[00:19:52] this. You'll enter in a command. I'll
+[00:19:54] put a link down below so you can follow
+[00:19:55] that to get it installed. But what we're
+[00:19:57] going to do now is click on show
+[00:19:58] terminal and we're going to type in the
+[00:19:59] words claude. Okay. And this will then
+[00:20:02] open up Claude for us, which is great.
+[00:20:04] So this lets us now use Claude 4.5. So
+[00:20:06] right click on this and panel position
+[00:20:09] assign to the right. Okay. Cool. And
+[00:20:11] then I'm going to right click on this.
+[00:20:12] I'm going to put actually I think it's
+[00:20:14] command L just gets rid of that. Or we
+[00:20:16] can click this and then remove it. Close
+[00:20:17] chat. Cool. So now what we want to do is
+[00:20:20] get the same thing but on our homepage
+[00:20:23] now. Okay. So, I'm going to say
+[00:20:24] something like, "Hey there, dude. Open
+[00:20:25] up this application for me in my local
+[00:20:27] host." Enter that in. And then it's
+[00:20:29] going to open up. And then the next
+[00:20:30] thing that we're going to want to do,
+[00:20:31] guys, is to basically create an admin
+[00:20:35] dashboard attached to this, which is
+[00:20:36] very, very cool. So, we'll give this a
+[00:20:38] hot second to open. And what it will do
+[00:20:39] then is ask for some permissions most
+[00:20:41] likely, and then we can see this in our
+[00:20:42] local host and use it. Then, once we've
+[00:20:45] done this, we're actually then going and
+[00:20:47] basically publish this online and do
+[00:20:49] anything we want to with it, which is
+[00:20:50] very, very cool. So, we're going to
+[00:20:51] enter this form and click the okay to do
+[00:20:52] that. So give this a hot second and then
+[00:20:54] just like this you can see in the
+[00:20:56] browser in between it's actually opened
+[00:20:57] up a fake browser for local host which
+[00:20:59] is fine and then you can see we've got
+[00:21:01] all of the questions out which is
+[00:21:02] fantastic and one of the important
+[00:21:03] things that's going on here guys you can
+[00:21:04] see with the app is that dependencies
+[00:21:06] aren't installed yet let me install them
+[00:21:08] first and start the new dev server so
+[00:21:10] this is basically saying some of the
+[00:21:11] things that we were using on you know
+[00:21:14] the online studio.ai AI uh from Google
+[00:21:17] didn't really bring in all the
+[00:21:18] dependencies. So, we actually need to
+[00:21:19] bring them now into project files. And
+[00:21:21] this is really important because when we
+[00:21:23] want to publish that online, we're going
+[00:21:25] to need them, right? We're going to need
+[00:21:26] them to actually actually have this
+[00:21:27] functional in the website for us.
+[00:21:29] Beautiful. So, now it's pushed it on to
+[00:21:30] localhost 3001. So, if I just open that
+[00:21:32] up, you can see that it is there rocking
+[00:21:34] and rolling, having a good time. So, the
+[00:21:36] next thing we need to do then is
+[00:21:37] actually get the admin dashboard. So,
+[00:21:39] here's the thing. Now, I would like you
+[00:21:41] to create for me an admin dashboard via
+[00:21:44] an admin login. So, if I sign in as an
+[00:21:46] admin, I would like the ability to see
+[00:21:49] every single user and everything, all
+[00:21:52] their information. I want the ability to
+[00:21:54] change that information in a super
+[00:21:55] master view. And then I would like the
+[00:21:57] ability once I publish that to then
+[00:21:58] reflect in Superbase, which in turn will
+[00:22:00] reflect on the users dashboard. And then
+[00:22:02] Claude's going to think of an excellent
+[00:22:03] strategy. And then using the same
+[00:22:04] technology, we'll have an admin access.
+[00:22:05] It gives us super overview and then
+[00:22:07] we'll have the users that can log in at
+[00:22:09] the same time. So then guys, after
+[00:22:10] Claude's done a little bit of thinking,
+[00:22:11] it's got this thing here, which is cool.
+[00:22:12] So let's have a quick look at what it's
+[00:22:14] saying to us. So, we got a couple of
+[00:22:15] questions to answer here. So, what user
+[00:22:18] information should the admin be able to
+[00:22:19] edit? The profile info, I think that's
+[00:22:21] fair. Absolutely. Business context,
+[00:22:23] industry, yep. Audit responses and
+[00:22:25] scores. Yep. Action items. Yeah, I think
+[00:22:27] that's fine. So, we click on uh next to
+[00:22:29] do this, which I believe we just come
+[00:22:30] down and hit enter. How should the admin
+[00:22:32] changes work when the published to
+[00:22:34] superbase? Immediate real-time actions.
+[00:22:35] I think we'll do immediate obviously you
+[00:22:37] may want to do draft mode based on how
+[00:22:38] you want to do things. What views
+[00:22:40] features should the admin dashboard
+[00:22:41] include? Let's have a look. I think we
+[00:22:42] want this. We want all of the key
+[00:22:45] details. And bear in mind, guys, you can
+[00:22:48] just update this with an NAN workflow
+[00:22:50] that triggers certain things if you had
+[00:22:51] a business. And I'll touch that in just
+[00:22:52] a second. So, should the ad to correct
+[00:22:54] delete users? Yep, I think that's cool.
+[00:22:56] And then we click submit answers. Okay.
+[00:22:57] So, key distinction to know here. In my
+[00:23:00] last startup, for example, we had a
+[00:23:01] series of automations. So, we would have
+[00:23:03] this connected to something and when
+[00:23:04] those automations triggered, they would
+[00:23:06] update the thing in the dashboard. I can
+[00:23:09] show you that in a separate video. It's
+[00:23:10] pretty straightforward to build. It's
+[00:23:11] basically you just build a superb base
+[00:23:13] node in N8 or make and then that in
+[00:23:16] turns update the dashboard. What this is
+[00:23:18] is a level above this because what we're
+[00:23:20] building here is the ability for you as
+[00:23:22] the individual to come in and leave
+[00:23:25] comments on things or provide updates on
+[00:23:27] things or ask questions. So you've got a
+[00:23:29] beautiful admin panel yourself which is
+[00:23:32] usually super expensive to business to
+[00:23:34] build but you get to do this using this
+[00:23:35] technology. So Claude's confirmed that
+[00:23:36] we need to create the admin user. So
+[00:23:38] what we're going to do is just copy
+[00:23:39] this. Um there we go. Let's copy this.
+[00:23:41] I'm going to post this straight into
+[00:23:42] Superbase. So, I've loaded up the
+[00:23:44] Superbase. We're going to come over here
+[00:23:45] to SQL to give it this code real quick.
+[00:23:48] And then let's post this in. Fantastic.
+[00:23:51] And then hit run. Error failed. So, just
+[00:23:53] bring this error and come back. So,
+[00:23:54] since that didn't work, we can go to the
+[00:23:55] second one, which is going to come under
+[00:23:56] authentication. And we're going to add a
+[00:23:58] user here. Okay. So, come down and add
+[00:24:00] user. Uh create new user, which lets us
+[00:24:02] do this automatically. So, we're going
+[00:24:04] to come down and we'll enter in the
+[00:24:06] information. And then let's give the
+[00:24:08] password right there. Uh, so this just
+[00:24:10] lets us create a user within the system
+[00:24:12] itself. Okay, so save that and then it
+[00:24:14] should appear automatically for us. Once
+[00:24:16] we refresh this, we should see
+[00:24:17] adminadmin.com. Beautiful. And then
+[00:24:20] we're going to come back over, grab this
+[00:24:21] code right here, and then come back over
+[00:24:23] and let's go back to the SQL editor. Get
+[00:24:25] rid of this. Enter this information in,
+[00:24:27] and then click on run. And so we have a
+[00:24:29] syntax error. So let's just fix this by
+[00:24:30] copying it and coming back over. So I'm
+[00:24:32] going to come back and give it this code
+[00:24:33] and just hit run selected. And then this
+[00:24:36] should work for us beautifully. Success.
+[00:24:37] No, no return. So what is this doing?
+[00:24:39] We're basically saying that this is
+[00:24:41] going to be set as admin. So then if we
+[00:24:44] come back over to localhost over here.
+[00:24:46] So let's find out what this one
+[00:24:47] localhost 3001.
+[00:24:49] Beautiful. All right, let's open this
+[00:24:51] guy up and log in with our admin
+[00:24:53] account. So come down here. I'm going to
+[00:24:54] log in over here. Fantastic. And we got
+[00:24:56] adminadmin.com
+[00:24:58] and then our fortified very difficult to
+[00:25:01] understand password to process. We're
+[00:25:03] going to save this one. We logged in and
+[00:25:05] now we've got some kind of admin
+[00:25:06] dashboard which is great, but we're not
+[00:25:08] really seeing any users in there. So
+[00:25:09] click on manage users and let's see what
+[00:25:10] we've got here. And we've just got this
+[00:25:12] here. So at the moment there's no
+[00:25:13] visibility of the users. So we now need
+[00:25:15] to go back into our basically called
+[00:25:17] code and check this. So I'm going to
+[00:25:18] give a bit of a prompt. Hey there bro. I
+[00:25:20] was able to sign in but when I check the
+[00:25:22] users it's not pulling down the
+[00:25:23] information from the database so that I
+[00:25:25] can actually see every single user.
+[00:25:26] Please fix this so that it's fully
+[00:25:28] integrated and I can have the control
+[00:25:29] and edit things for the user level.
+[00:25:31] Beautiful. And we hit that one in and
+[00:25:32] that'll cl work its magic in the
+[00:25:33] background. So then what club's actually
+[00:25:34] done and this is one of the great
+[00:25:35] reasons why editing in this kind of
+[00:25:37] environment is good is he's got fixed
+[00:25:38] admin permission and it's posted all
+[00:25:40] this code here for us which is great. So
+[00:25:42] what we're going to do is come down and
+[00:25:43] copy all of this like so and then head
+[00:25:45] back over to our beautiful superbase.
+[00:25:48] Get rid of this and then we're just
+[00:25:50] going to enter in this code like so and
+[00:25:52] then click on run. Fantastic. Yes, we're
+[00:25:54] going to run this query. We happy we're
+[00:25:57] happy with those things and as you can
+[00:25:58] see we've got all these IDs that have
+[00:26:00] appeared down below which is great. So
+[00:26:01] it's going to come down. We're going to
+[00:26:02] screenshot these as confirmation that
+[00:26:04] we've completed that. And then when
+[00:26:06] you're talking with Claude about your
+[00:26:07] specific project, you can open up the
+[00:26:09] access, which I'm going to do right now
+[00:26:10] in a new beautiful incognito window so
+[00:26:12] we can see what this looks like. I
+[00:26:14] believe it's local host 3001. We'll log
+[00:26:16] into our admin dashboard. And look at
+[00:26:19] this guys. This is amazing. So I can log
+[00:26:22] out. For example, this is normal thing.
+[00:26:23] I come down here. I can log in. Uh we'll
+[00:26:25] give it our specific credentials.
+[00:26:27] Beautiful. Enter our password. Log in.
+[00:26:29] And we're ready to rock and roll. And
+[00:26:31] we've got our admin level access. Now,
+[00:26:32] this is where it gets crazy because I
+[00:26:34] can see average health scores. I can see
+[00:26:36] all the data. This is all aggregate from
+[00:26:38] what they entered in Superbase. Then I
+[00:26:40] can come down here to view all users. I
+[00:26:41] can see what they're all doing. I can
+[00:26:43] have a look. Let's say we're looking at
+[00:26:44] all these guys that we've created. So,
+[00:26:46] Dr. Pepper Massive is one of our initial
+[00:26:48] ones. We can see what the status is. All
+[00:26:49] the information, guys, that is connected
+[00:26:51] to Superbase. How freaking cool is this?
+[00:26:53] I can create users. It's like a new
+[00:26:55] front end basically for Superbase. And
+[00:26:57] you can make this as epic as you want
+[00:26:58] to. Then I'm going to come down. Let's
+[00:27:00] say I want to look at this guy. I can
+[00:27:02] view I can actually get get a admin
+[00:27:04] level view now of everything that
+[00:27:06] they're doing. So this is everything
+[00:27:07] that they're seeing now. How freaking
+[00:27:09] cool is this? I can click on to team
+[00:27:11] literacy see what they're doing. I can
+[00:27:12] even add an action item like hey you're
+[00:27:14] looking great today with a smiley face.
+[00:27:17] Beautiful. Come down, hit add. That's
+[00:27:19] pretty fantastic. Going to come back up
+[00:27:20] here back to dashboard and let's just
+[00:27:22] say that I want to exit admin view. And
+[00:27:23] let's say I want to go back in there. So
+[00:27:25] if I just refresh the whole page which
+[00:27:27] is awesome. come back over to view all
+[00:27:29] users again and you can configure this
+[00:27:30] in any way that you want to. So if we
+[00:27:32] come back over let's take a good look at
+[00:27:33] what we've got here. So we have our
+[00:27:35] beautiful wonderful guy over here on
+[00:27:37] hellooutlook.com. We can view him and we
+[00:27:39] can just see all the comments that we
+[00:27:41] left him. Right. I'm not sure which one.
+[00:27:42] I think it was team literacy. Yeah. How
+[00:27:44] you looking great today. So it's now
+[00:27:45] saving that dynamically and you've got
+[00:27:46] this full admin thing. What's really
+[00:27:48] important with superbase is that we've
+[00:27:49] still got rowle security in which is an
+[00:27:52] additional security measure. Now, this
+[00:27:54] might take a little bit of back and
+[00:27:55] forth between you and Claude Code and
+[00:27:58] Superbase. And you all you do is enter
+[00:28:00] in the SQL that it gives you. It will
+[00:28:02] then make the changes and then you're
+[00:28:03] just testing it, testing it, testing it
+[00:28:05] to get it perfect. Now, if it's an
+[00:28:07] internal app, you don't necessarily
+[00:28:08] always need role level security enabled.
+[00:28:10] But I highly recommend you do it so that
+[00:28:12] it's protected and other people can't
+[00:28:14] randomly query superb and just grab all
+[00:28:16] the information, which is why this is so
+[00:28:18] cool. And the next step once we're happy
+[00:28:20] with this is to publish it online. And
+[00:28:21] to do that, we're going to say great
+[00:28:23] work. I would now like to publish this
+[00:28:25] onto GitHub. Let me know everything that
+[00:28:26] you need to do that. Fantastic. And then
+[00:28:28] what will happen is Claude K will take
+[00:28:30] us through the steps of publishing on
+[00:28:31] GitHub. And then once it's live on
+[00:28:33] GitHub, this repo, we can then push it
+[00:28:34] to Vel, get it live, and have our
+[00:28:37] beautiful dashboard ready to rock and
+[00:28:38] roll. So now Claude's made some changes.
+[00:28:40] We're going to head over to GitHub. Now
+[00:28:41] it's ready to be published. So we're
+[00:28:42] going to come here. We are going to
+[00:28:43] click on new repository like so. And
+[00:28:46] we're going to call this one Teddy AI
+[00:28:47] dashboard. R Teddy AI dashboard.
+[00:28:50] Beautiful. That's perfect.
+[00:28:53] Fantastic. Going to come down, leave all
+[00:28:54] this sort of stuff on. It's fine. And
+[00:28:56] click on CL create reper. I'm going to
+[00:28:58] keep it public for the moment, but I'm
+[00:28:59] going to privatize it later. And then
+[00:29:01] we've got this thing here, which is the
+[00:29:02] git. So, we're going to copy this and
+[00:29:04] head back over to cloud code. And then
+[00:29:06] we're going to give it this right here.
+[00:29:07] And we come all the way down to the
+[00:29:08] bottom and paste that in. And then once
+[00:29:10] you've asked it and authorized it, it
+[00:29:11] will then say, do you want me to use
+[00:29:12] this extension? We just simply allow
+[00:29:14] that. And then we click copy and
+[00:29:15] continue to GitHub. We then continue.
+[00:29:17] So, it's asking for an authorization
+[00:29:18] code. So, let's come back over to Claude
+[00:29:20] and we can see we've got our onetime
+[00:29:22] code here. Let's come back over and then
+[00:29:24] paste that in. Fantastic. And then click
+[00:29:26] continue. Beautiful. We're happy with
+[00:29:28] that. Authorize Visual Code Studio.
+[00:29:29] That's absolutely fine. Enter in our
+[00:29:31] password and then click confirm. So once
+[00:29:33] that's done, guys, you actually refresh
+[00:29:34] it and you'll see that everything is now
+[00:29:36] here and ready to go. And then we're
+[00:29:37] ready for the final step to get this
+[00:29:38] thing live. So to do that, we're going
+[00:29:40] to head over to the beautiful vessel.com
+[00:29:42] which let us take our things from our
+[00:29:44] repo and post it there directly. So we
+[00:29:46] click on add new and click on project
+[00:29:48] and then we should see the Teddy AI
+[00:29:50] dashboard here on the left. Beautiful.
+[00:29:52] And then we click on import and then
+[00:29:54] give it Teddy dashboard slash cool cuz I
+[00:29:57] think it's pretty cool. Then we come
+[00:29:59] down click on deploy and then when this
+[00:30:01] is deployed it'll be visible on a
+[00:30:02] website. We can change the domain and
+[00:30:04] then start taking over the world which
+[00:30:06] is really cool. And just like that guys
+[00:30:08] it is fully live. So if I open this up
+[00:30:10] in a new tab I should see this. It's
+[00:30:11] Teddy dashboard cool versus app. And now
+[00:30:14] we can do and the whole thing is live
+[00:30:15] and ready to go. Then if you wanted to
+[00:30:16] give it a cool domain, what would you do
+[00:30:18] is click on this add domain thing, guys.
+[00:30:19] And then if you refresh the page, you
+[00:30:21] can click on buy domain and then we can
+[00:30:23] enter do like hello whitejumperman.com.
+[00:30:27] Obviously, one of the best, most
+[00:30:28] prestigious domains on the planet, $125.
+[00:30:31] We click on this, you can literally buy
+[00:30:33] it, you proceed to check out, purchase
+[00:30:35] it, and then all you do when you come
+[00:30:36] back is you just activate it. You
+[00:30:38] purchase it, and then once you're done,
+[00:30:39] you just come back over, you activate
+[00:30:41] it, and then that will be brand new and
+[00:30:42] ready to go. So now learning how to
+[00:30:44] build these fully profitable onboarding
+[00:30:45] systems and admin dashboards is amazing.
+[00:30:48] But if you want to take this to the next
+[00:30:49] level and you can use the full power of
+[00:30:51] NA10, you need to know how to use their
+[00:30:53] MCP, which you can learn by watching
+[00:30:55] this video right

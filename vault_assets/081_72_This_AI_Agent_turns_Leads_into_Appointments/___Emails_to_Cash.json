@@ -1,0 +1,871 @@
+{
+  "name": "📈 Emails to Cash",
+  "nodes": [
+    {
+      "parameters": {
+        "inputText": "={{ $json.text }}",
+        "categories": {
+          "categories": [
+            {
+              "category": "⭐️ Sponsorships",
+              "description": "Businesses wanting me to do a sponsored video on my youtube channel"
+            },
+            {
+              "category": "👀 Other "
+            },
+            {
+              "category": "👋 Customer Query",
+              "description": "A member of my skool community who is asking questions; they may wish to join or have membership questions"
+            },
+            {
+              "category": "📈 Business Enquires ",
+              "description": "Emails for potential clients, businesses that want to work with me, freelancers or anything of that nature"
+            },
+            {
+              "category": "📉  Spam or Automated Messages",
+              "description": "Any automatic replies, any emails from 'no-reply', confirmation emails and all of the like. These are non-value emails "
+            },
+            {
+              "category": "📚 Skool",
+              "description": "Sales from Skool, new subscribers or members"
+            },
+            {
+              "category": "🔥 Personal",
+              "description": "Anything of a non-business nature, for example personal life or selling a house, "
+            },
+            {
+              "category": "🧾 Invoices & Receipts",
+              "description": "invoices and receipts, any kind of bill"
+            },
+            {
+              "category": "💷 Income",
+              "description": "Anything around getting paid or commissions that isn't a new skiool member"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.textClassifier",
+      "typeVersion": 1,
+      "position": [
+        60,
+        640
+      ],
+      "id": "6b618837-d2af-46e5-b020-40084904451d",
+      "name": "Text Classifier"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        60,
+        880
+      ],
+      "id": "6013ef95-6008-4aaa-a255-4dd3b3079bf2",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "kXt5gjG6MUHYlXxJ",
+          "name": "OpenAi account 7"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "labelIds": [
+          "Label_7279187741576592274"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        340,
+        1180
+      ],
+      "id": "b2ec6d5c-6286-478b-be36-91a626bc5cb6",
+      "name": "🧾 Invoice & Receipts",
+      "webhookId": "ddc4bce0-1c4f-4c10-bc56-5acce4c63606",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "labelIds": [
+          "Label_9215444777243988535"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        460,
+        1040
+      ],
+      "id": "8fea6522-f1f2-41e0-adfb-fbe73751d9b5",
+      "name": "🔥 Personal",
+      "webhookId": "ddc4bce0-1c4f-4c10-bc56-5acce4c63606",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "labelIds": [
+          "Label_2621433167561053995"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        560,
+        880
+      ],
+      "id": "4be40944-ed2d-4711-8609-fe718046f5a1",
+      "name": "📚 Skool",
+      "webhookId": "ddc4bce0-1c4f-4c10-bc56-5acce4c63606",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "labelIds": [
+          "Label_7836250468425075613"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        680,
+        720
+      ],
+      "id": "a6965042-e303-4271-b6aa-ca37ee3470aa",
+      "name": "📉 Spam or low priority",
+      "webhookId": "ddc4bce0-1c4f-4c10-bc56-5acce4c63606",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "labelIds": [
+          "Label_6645766865136305696"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        700,
+        540
+      ],
+      "id": "c599e320-deff-4bb8-bed5-70c13027fa90",
+      "name": "📈 Business Enquires ",
+      "webhookId": "ddc4bce0-1c4f-4c10-bc56-5acce4c63606",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "labelIds": [
+          "Label_4513408332744255728"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        580,
+        380
+      ],
+      "id": "1da1332b-d4bc-43de-8ba9-0e23d15829a3",
+      "name": "👋 Customer Query",
+      "webhookId": "ddc4bce0-1c4f-4c10-bc56-5acce4c63606",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "labelIds": [
+          "Label_7479540386686675434"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        480,
+        220
+      ],
+      "id": "6c089899-da2a-4cb5-a624-996affe2ffa7",
+      "name": "👀 Other",
+      "webhookId": "ddc4bce0-1c4f-4c10-bc56-5acce4c63606",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Gmail Trigger').item.json.id }}",
+        "labelIds": [
+          "Label_5482534176768459702"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        380,
+        80
+      ],
+      "id": "735e17b4-7e15-41dd-a572-19667cf15b33",
+      "name": "⭐️ Sponsorships",
+      "webhookId": "ddc4bce0-1c4f-4c10-bc56-5acce4c63606",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": false,
+        "filters": {},
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -140,
+        640
+      ],
+      "id": "fc9fb48c-f550-4e46-b055-a270971eea28",
+      "name": "Gmail Trigger",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🤖 Classification Agent\n",
+        "height": 1320,
+        "width": 1420,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -260,
+        40
+      ],
+      "typeVersion": 1,
+      "id": "aa066d69-ee8a-4cd9-9cfe-c6330f50b5d0",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "57ff0ac1-4951-4eb9-8858-8fe3128d71c8",
+              "name": "Email ID",
+              "value": "={{ $('Gmail Trigger').item.json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "a79f9ce2-02b4-43e6-afd3-757667b4356c",
+              "name": "Email Body",
+              "value": "={{ $('Gmail Trigger').item.json.text }}",
+              "type": "string"
+            },
+            {
+              "id": "c560bb99-92e9-4ddc-a508-a2125aba4cc5",
+              "name": "Subject",
+              "value": "={{ $('Gmail Trigger').item.json.subject }}",
+              "type": "string"
+            },
+            {
+              "id": "28af0b53-3c18-4833-bc03-e37ac58da46c",
+              "name": "Date ",
+              "value": "={{ $('Gmail Trigger').item.json.date }}",
+              "type": "string"
+            },
+            {
+              "id": "b2d46c84-b23d-4bc0-bff6-2e6cf971dee2",
+              "name": "Who sent the email",
+              "value": "={{ $('Gmail Trigger').item.json.from.value[0].address }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1620,
+        540
+      ],
+      "id": "ed22608b-8b8f-4081-86a0-d89d51c861d5",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=The date is: {{ $now }}\n\nEmail ID:  {{ $json['Email ID'] }}\nEmail body: {{ $json['Email Body'] }}\nSubject: {{ $json.Subject }}\nDate: {{ $json['Date '] }}",
+        "options": {
+          "systemMessage": " 📧 AI Email Assistant Prompt 📧\nOverview\nThis document outlines the responsibilities and protocols for an AI email assistant managing Jack Roberts' communications.\nCore Responsibilities\n1. Email Analysis\nReview incoming emails thoroughly\nCheck previous email threads with the sender for complete context\nIdentify key points, requests, and urgency level\nCross-reference with Jack's calendar for scheduling-related matters\n2. Response Evaluation\nDetermine if a response is needed based on these criteria:\nSkip automated notifications, marketing emails, and newsletters\nPrioritize client inquiries, partnership opportunities, and personal messages\nFlag urgent matters that require Jack's immediate attention\nIgnore automated requests from platforms like LinkedIn\n3. Research Protocol\nWhen additional information is needed:\nUse Perplexity to gather relevant background information\nAccess Jack's knowledge database for consistent messaging\nReference past interactions with the sender\nVerify any claims or information mentioned in the email\n4. Scheduling Protocol\nFor meeting requests:\nQualify the requester's needs against Jack's criteria\nCheck Jack's calendar for availability\nVerify if the meeting aligns with Jack's priorities\nPropose suitable time slots based on Jack's preferences\nInclude clear next steps in the response\n5. Response Generation\nCreate responses that:\nMatch Jack's tone of voice (reference Pinecone database)\nAddress all points in the original email\nInclude relevant context from previous conversations\nMaintain professional yet approachable language\nFollow the approved HTML template\nEmail Template Specifications\nDesign Guidelines\nFont: Avenir (with Arial as fallback)\nMaximum width: 600px\nColor scheme:\nText: #333\nDividers: #ddd\nInclude Jack's current signature block\nResponse Structure\nGreeting\nPersonalized to recipient\nMatch formality to relationship context\nBody\nClear acknowledgment of received message\nStructured paragraphs addressing each point\nActionable next steps when applicable\nClosing\nProfessional sign-off\nComplete signature block\nRelevant contact information\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <style>\n        .email-container {\n            max-width: 600px;\n            margin: 20px auto;\n            font-family: Avenir, Arial, sans-serif;\n            line-height: 1.6;\n            color: #333;\n            font-size: 16px;\n        }\n        .email-signature {\n            margin-top: 30px;\n            border-top: 1px solid #ddd;\n            padding-top: 20px;\n        }\n        b {\n            color: #333;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"email-container\">\n        [Email Content]\n        \n        <div class=\"email-signature\">\n            <p><b>Jack Roberts</b><br>\n            AI Automations by Jack<br>\n            0777 777 7777</p>\n        </div>\n    </div>\n</body>\n</html>\n\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        1860,
+        540
+      ],
+      "id": "3eaf5b14-304b-4bc1-82b4-2e10f740f560",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1660,
+        1000
+      ],
+      "id": "bfbca2c6-82d8-4004-954f-be1464f04176",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "kXt5gjG6MUHYlXxJ",
+          "name": "OpenAi account 7"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "filters": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        2560,
+        1040
+      ],
+      "id": "4ec5bde5-d5a5-4070-b3ba-8d807dd1c41d",
+      "name": "Gmail",
+      "webhookId": "d6766003-a176-464b-87ce-e215e4e55e62",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "reply",
+        "messageId": "={{ $('Edit Fields').item.json['Email ID'] }}",
+        "message": "={{ $fromAI(\"Body\", \"The body of the email\") }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        2460,
+        1040
+      ],
+      "id": "4fc3c322-e20f-4e3d-8af9-15813e9037da",
+      "name": "Gmail1",
+      "webhookId": "10cfdd43-8d6d-4fe9-9563-110e9d62ecad",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "VARz8tBAjDobMUh6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "calendar": {
+          "__rl": true,
+          "value": "jack@aiautomationswithjack.com",
+          "mode": "list",
+          "cachedResultName": "jack@aiautomationswithjack.com"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        2240,
+        1040
+      ],
+      "id": "37a930ab-dbf5-47ac-b628-d8968d150c8e",
+      "name": "Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "1QWn1sJt0hVNu991",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "jack@aiautomationswithjack.com",
+          "mode": "list",
+          "cachedResultName": "jack@aiautomationswithjack.com"
+        },
+        "additionalFields": {
+          "attendees": [
+            "={{ $('Gmail Trigger').item.json.from.value[0].address }}"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        2100,
+        1040
+      ],
+      "id": "2d527a3f-5963-4213-a073-53128f5a0dd5",
+      "name": "Google Calendar1",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "1QWn1sJt0hVNu991",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Perplexity Online Search",
+        "method": "POST",
+        "url": "https://api.perplexity.ai/chat/completions",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization",
+              "valueProvider": "fieldValue",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"llama-3.1-sonar-small-128k-online\",\n  \"messages\": [\n    {\n      \"content\": \"{placeholder}\",\n      \"role\": \"user\"\n    }\n  ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1920,
+        1000
+      ],
+      "id": "025435c3-9d8e-4651-826d-749a219a3e84",
+      "name": "Perplexity"
+    },
+    {
+      "parameters": {
+        "content": "# 🤖 AI Agent ",
+        "height": 780,
+        "width": 1300
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        400
+      ],
+      "id": "e00c2035-ef88-44f9-a589-b5030cc573cb",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "name": "VectorStore",
+        "description": "Vector database with information"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        3100,
+        560
+      ],
+      "id": "39f89cb0-9777-4131-9e86-7d51299b16af",
+      "name": "Vector Store Tool"
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "n8n",
+          "mode": "list",
+          "cachedResultName": "n8n"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        3040,
+        740
+      ],
+      "id": "8be7a32d-c0bb-422d-a938-daed6718ba70",
+      "name": "Pinecone Vector Store1",
+      "credentials": {
+        "pineconeApi": {
+          "id": "r7v5WglCWZEhdNFl",
+          "name": "PineconeApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.1,
+      "position": [
+        3180,
+        920
+      ],
+      "id": "ae68a15d-f91b-498e-a14d-cb8f7e9a0332",
+      "name": "Embeddings OpenAI1",
+      "credentials": {
+        "openAiApi": {
+          "id": "iDlCBwOewuXIWcZ5",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        3440,
+        700
+      ],
+      "id": "03e62651-66cd-451e-99fb-5918ed97d070",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "iDlCBwOewuXIWcZ5",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 👀 Retrieval ",
+        "height": 720,
+        "width": 740,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2900,
+        380
+      ],
+      "id": "77e746f4-c4f1-4b83-a113-72f21adacb33",
+      "name": "Sticky Note2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Text Classifier": {
+      "main": [
+        [
+          {
+            "node": "⭐️ Sponsorships",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "👀 Other",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "👋 Customer Query",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "📈 Business Enquires ",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "📉 Spam or low priority",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "📚 Skool",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "🔥 Personal",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "🧾 Invoice & Receipts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Text Classifier",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Text Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📈 Business Enquires ": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Calendar1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        []
+      ]
+    },
+    "Perplexity": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store1": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Vector Store Tool",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Vector Store Tool",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector Store Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "a03aaffd-b77c-4f92-bf60-b6082e5d9b00",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "Rgby8vdzFigRp9Pd",
+  "tags": []
+}

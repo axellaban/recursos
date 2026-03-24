@@ -1,0 +1,1188 @@
+[00:00:00] This AI agent can replace your entire
+[00:00:02] secretary. I'm going to show you a live
+[00:00:04] build of exactly how this works. And
+[00:00:06] then we're going to build this together,
+[00:00:08] step by step, completely from scratch,
+[00:00:10] even if you don't know how to code or
+[00:00:12] you've never used N8 or Lovable before.
+[00:00:14] So, how does this work? This is epic.
+[00:00:17] So, essentially what happens is whenever
+[00:00:19] you get an email, this AI agent is going
+[00:00:22] to classify it into one of nine
+[00:00:24] categories or whatever the categories
+[00:00:26] are for you. Okay? could be
+[00:00:27] sponsorships, could be customer query,
+[00:00:29] could be whatever. Then effectively all
+[00:00:30] the emails in our inbox get a
+[00:00:32] classification. Then we have this
+[00:00:34] beautiful response agent that will draft
+[00:00:37] a response to that email directly based
+[00:00:40] in your tone of voice using everything.
+[00:00:42] It will search for all previous messages
+[00:00:45] from that individual to get context and
+[00:00:47] it searches a custom knowledge base. So
+[00:00:50] for example, let's say that you and I
+[00:00:52] get sponsorship inquiries. We could say,
+[00:00:53] "Hey, um, we could talk to Iron Man and
+[00:00:56] say, "Look, could you just update my
+[00:00:57] sponsorship rates to be $10,000?" Iron
+[00:01:00] Man will do that for us automatically
+[00:01:02] and it will go in this database. And
+[00:01:03] then in this scenario, guys, this will
+[00:01:05] check your knowledge base and all
+[00:01:07] previous emails and create a draft
+[00:01:09] response. But it doesn't stop there.
+[00:01:10] Once that's happened, if we have a
+[00:01:13] second agent, which I call the
+[00:01:14] criticality agent. Now, if you're a
+[00:01:16] business owner, you're an entrepreneur,
+[00:01:17] or you're talking to that group of
+[00:01:18] people, one of the challenges, number
+[00:01:19] one is responding to emails, which
+[00:01:21] you've solved. The second is what if I
+[00:01:23] get something really important? What if
+[00:01:24] I get something that's time critical?
+[00:01:26] Well, the criticality agent will
+[00:01:28] actually send you a text message saying,
+[00:01:30] "Hey, Jack, this is a really important
+[00:01:32] thing." I'm going to pull up right now.
+[00:01:33] As you can see right there, I don't know
+[00:01:34] if you can see this on screen or not.
+[00:01:36] This is a message I got saying, "Hey,
+[00:01:37] this is urgent. I've determined this to
+[00:01:39] be critical." Meaning you get text
+[00:01:41] messages when it's really important. So,
+[00:01:43] this all happens. And then, not only
+[00:01:44] that, we've actually got the Iron Man
+[00:01:46] secretary itself. So, if we're actually
+[00:01:48] going to replace your secretary, we want
+[00:01:50] some kind of portal to actually have a
+[00:01:52] conversation with, right? We want to be
+[00:01:53] able to ask it questions about our
+[00:01:55] emails. We want to be able to draft
+[00:01:56] emails and also we want it to be able to
+[00:01:58] save key information. So, enough
+[00:02:01] yapping. Let's actually see how this
+[00:02:02] works. So, I'm going to speak to our AI
+[00:02:04] secretary. And by the way, everything
+[00:02:05] you see, I'm going to show you exactly
+[00:02:06] how you pull this together step by step.
+[00:02:08] So, I'm going to come down and I'm going
+[00:02:10] to trigger the workflow from the web
+[00:02:12] hook. Web hook just being a fancy word
+[00:02:14] for how we connect things to things.
+[00:02:15] Cool. So let's give it an instruction to
+[00:02:19] um update something. So what you can
+[00:02:21] also is add a password. So for what that
+[00:02:23] basically means is if if anybody managed
+[00:02:25] to get hold of your link, they couldn't
+[00:02:27] possibly use it. So I've not added it in
+[00:02:28] there at the moment, but what we're
+[00:02:29] going to do is run through this one
+[00:02:30] together. So let's execute from web
+[00:02:32] hook, go over and give it a command. So
+[00:02:34] let's actually ask it to save a key
+[00:02:37] piece of information. So for example,
+[00:02:39] hey dude, could you do me a favor? just
+[00:02:41] add to your knowledge base that whenever
+[00:02:43] I get queries to do live speaking events
+[00:02:46] that my rate is $50,000. Bam. So, the
+[00:02:50] way this would work is any information
+[00:02:51] you get that you want your secretary to
+[00:02:53] know. Like it could be documents, could
+[00:02:55] be chats with clients, it could just be
+[00:02:57] random piece of information, you just
+[00:02:58] talk to Iron Man and Iron Man will add
+[00:03:00] that to your custom database. So, he
+[00:03:01] said, "I've done it." Well, let's check
+[00:03:02] if that's true. We go over to Jack's
+[00:03:04] knowledge base and look at this and
+[00:03:06] their live speaking events. Um, $50,000.
+[00:03:10] Well, that's cool, but how do we know
+[00:03:11] that's actually worked? And what if we
+[00:03:13] got an email asking about that, right?
+[00:03:14] So, let's draft an email together right
+[00:03:16] now. All right, guys. Cool. So, look,
+[00:03:17] I've sent an email here, live speaking
+[00:03:18] event. Hey there, I'd like to book you
+[00:03:20] for a live speaking event up until
+[00:03:21] December. Could you let me know your
+[00:03:22] rates, please? Cool. So, let's just say
+[00:03:23] that someone sent us that email. We come
+[00:03:25] over to our scenario here and what I'm
+[00:03:26] going to do, I'm going to unpin this
+[00:03:27] data, which basically lets it receive
+[00:03:29] new and fresh information. So, let's
+[00:03:31] unpin everything and then let's run the
+[00:03:33] whole thing together. Okay. And
+[00:03:34] obviously for you, this will run
+[00:03:35] automatically. So, I click on execute
+[00:03:37] workflow trigger. This is getting the
+[00:03:38] email. It's deciding look what is this
+[00:03:40] category and it's decided it's a
+[00:03:42] business inquiry. Awesome. So now
+[00:03:44] response agent is doing what? It's
+[00:03:45] checking all information any any
+[00:03:47] previous contacts we've had. It's
+[00:03:48] checked our knowledge base and obviously
+[00:03:50] it's powered by chat GPT and it's
+[00:03:52] created a draft response and then we
+[00:03:54] head over to the criticality agent. The
+[00:03:56] criticality agent has determined that
+[00:03:57] this is high value enough that we should
+[00:03:59] get a text message. Okay. So I'm going
+[00:04:01] to wait for this one to come through on
+[00:04:02] my phone and I'll show you that in live
+[00:04:03] in real time. There you go. You can see
+[00:04:05] check this out. Um, what's really funny
+[00:04:07] here, it says like, "Hey, broki, import
+[00:04:09] an email for you." And you can see right
+[00:04:10] there. I don't know if you can see it on
+[00:04:12] screen, but basically, um, I'll put a
+[00:04:14] screenshot up if you can't see it. So,
+[00:04:15] I've got a text message now because it's
+[00:04:17] such a high value client, right? But
+[00:04:18] what's really interesting here is if we
+[00:04:20] now head over to our inbox, we should
+[00:04:22] see a draft response for that. So, let's
+[00:04:23] go check it out real quick. And if I
+[00:04:24] open this up, check this out, guys.
+[00:04:26] Automatically, thank you for your
+[00:04:27] interest live speaking event. The rate
+[00:04:28] for speed engagements is $50,000. So
+[00:04:31] guys, all you will ever do is basically
+[00:04:33] open your Gmail, go through your drafts,
+[00:04:35] and just respond to it and click send.
+[00:04:36] And obviously, we integrate things like
+[00:04:37] tone of voice. The way we're sending
+[00:04:39] text messages, by the way, is using go
+[00:04:41] high level, which I strongly recommend
+[00:04:42] because it's such a freaking sick
+[00:04:44] platform, and it does many things. And
+[00:04:45] the way this works is, as you can see in
+[00:04:48] our scenario over here, we just give it
+[00:04:50] the ability to send out a request, a
+[00:04:52] HTTP request, which is gobblegook for
+[00:04:54] send information over there, please. And
+[00:04:56] then what happens in go high level is we
+[00:04:58] grab that information. We um grab our
+[00:05:01] contact information and then we just
+[00:05:03] send a message and look I said hey broki
+[00:05:04] is an important email for you. I
+[00:05:06] specified the data piece your AI is like
+[00:05:09] I need to think of a cooler name that is
+[00:05:10] really important. Cool. So what we're
+[00:05:12] going to do guys is build this
+[00:05:13] realistically um across three levels to
+[00:05:17] keep it as simple as possible. Challenge
+[00:05:18] yourself as go through but this is going
+[00:05:20] to be a complete game changer for you
+[00:05:21] and save you so much time. So, first of
+[00:05:23] all, we head over to N8, which is our no
+[00:05:25] code platform builder of choice. Just
+[00:05:26] lets us connect anything to anything.
+[00:05:28] So, let's sign in and create a scenario.
+[00:05:29] All right, guys. So, I've created a
+[00:05:30] workflow. Now, the first one I want to
+[00:05:32] build together, I suggest to keep this
+[00:05:34] as cool as possible is going to be this
+[00:05:36] email classification agent. Then, we're
+[00:05:38] going to add the response and then we're
+[00:05:40] going to add in the criticality after
+[00:05:42] that. So, how does this work? Well, the
+[00:05:44] first thing that we want to do is the
+[00:05:46] trigger, which is going to be Gmail. So,
+[00:05:47] come in here. I just simply type in
+[00:05:48] Gmail and on message received. So in
+[00:05:50] other words, hey, whenever you get an
+[00:05:52] email
+[00:05:53] trigger. Okay. Uh we want to take off
+[00:05:55] the simplify and just click on fetch
+[00:05:57] test event. Cool. So no Gmail data
+[00:05:59] found. Let's just make sure we connect
+[00:06:01] to the right account. Cool. So I've just
+[00:06:02] run it. I sent a fake uh email over
+[00:06:04] which has a subject and body and now
+[00:06:05] we've got it which is really cool. So
+[00:06:07] the next thing I want to do is add in a
+[00:06:09] classification agent. So we can
+[00:06:11] basically determine by tabs what the
+[00:06:13] conversation's about, which helps you
+[00:06:14] with what to prioritize. So to do that
+[00:06:16] guys, we're going to click on this guy
+[00:06:17] here. I'm going to click on text
+[00:06:19] classifier. How cool is that? So, we're
+[00:06:21] going to basically add in text that we
+[00:06:23] want it to classify. So, what we want to
+[00:06:24] do is find out realistically what the
+[00:06:26] subject is. So, let's come over here on
+[00:06:28] the left hand side and find it. And I
+[00:06:30] should if I just type CR+ F body just to
+[00:06:32] find out just to save us some time of
+[00:06:34] what we sent over. Okay, it's right
+[00:06:36] there. So, this is the text it's going
+[00:06:38] to classify. So, basically saying read
+[00:06:39] the email and decide what it's about.
+[00:06:41] Then, we just simply add categories. So,
+[00:06:43] category could be something like, you
+[00:06:44] know, I'd encourage you to think about
+[00:06:46] what are the most important categories
+[00:06:47] for you. So, I'm just going to add a
+[00:06:48] couple here. I am a big believer in um
+[00:06:51] the way that something looks should be
+[00:06:52] really important because it saves you
+[00:06:53] time. So if I do sponsorships
+[00:06:58] and then hey anybody who wants to work
+[00:07:00] with me or hire me for something cool
+[00:07:02] and so basically go down here and add as
+[00:07:04] many characters as you want to. Another
+[00:07:05] one might be uh if I do like a Dow going
+[00:07:08] down, I'd put spam or low priority.
+[00:07:14] Any automated emails, anything that's
+[00:07:16] kind of low priority, doesn't require a
+[00:07:19] decision, or just spam.
+[00:07:22] Cool. So, you can go down here and pick
+[00:07:23] this up. And I'll add one third the
+[00:07:24] category just for simplicity sake. And
+[00:07:26] then I'll add like a lovely beautiful
+[00:07:28] thing here. And I'll say customer and
+[00:07:31] I'll say, "Hey, any email to do with a
+[00:07:33] customer? any questions, any queries,
+[00:07:36] any feedback, things like that. So,
+[00:07:38] basically, think of all the different
+[00:07:39] categories that you would like in this
+[00:07:40] one. In my own personal one, the ones
+[00:07:42] that I have are sponsorships, other
+[00:07:45] customer queries, business inquiries,
+[00:07:46] spam or automated messages, anything to
+[00:07:48] do with school, which is a platform
+[00:07:49] where I uh teach people how to leverage
+[00:07:51] AI into income, personal invoices,
+[00:07:53] receipts, and anything income like
+[00:07:55] commissions and stuff like that. U
+[00:07:57] that's mine. Everyone's got different
+[00:07:58] ones. Just copy and paste those if you
+[00:08:00] would like. Cool. So, that's done. So,
+[00:08:01] what we're going to do now is we're
+[00:08:03] going to pin, which basically means with
+[00:08:05] just the data that's come in, we're just
+[00:08:06] going to hold it there so we don't have
+[00:08:07] to keep on refiring emails like mad men.
+[00:08:09] And then if I just click play on this,
+[00:08:12] um, oh, we need to add a model. Excuse
+[00:08:14] me. So, we come down here to OpenAI,
+[00:08:16] which is here. Fantastic. And then we
+[00:08:17] just pick the model we want to connect.
+[00:08:19] So, GBT 4.1 Mini is fine. If you don't
+[00:08:21] have an API key, by the way, you grab it
+[00:08:23] over here. platform.opai.com/assistance.
+[00:08:25] So, you just log in real quick. You just
+[00:08:27] come over to the API key section, create
+[00:08:29] a new secret key, give it a name like
+[00:08:30] blah blah blah blah. Create secret key.
+[00:08:33] Uh, and then just copy the actual key
+[00:08:34] and you'll be ready to go. I'm going to
+[00:08:35] delete this guy because we don't really
+[00:08:37] need him. Um, I give it a random name
+[00:08:38] there. It's always good best practice to
+[00:08:40] kind of name it thing so you don't
+[00:08:41] forget. And by the way, if you haven't
+[00:08:43] um connected Gmail before, I'll put a
+[00:08:45] link down below to a video that shows
+[00:08:46] you how to connect Gmail just so that
+[00:08:47] you can do that um out of respect for
+[00:08:49] your time. Cool. So now text classifier.
+[00:08:51] Let's hit play and see what it does. And
+[00:08:52] it's determined that this is a
+[00:08:54] sponsorship query because I'm asking
+[00:08:55] about live events, which is really,
+[00:08:57] really cool. Beautiful. So, what do we
+[00:08:58] do now, guys? Well, we've now got
+[00:09:00] classification, which means in Gmail, if
+[00:09:01] I show you this right now, for example,
+[00:09:03] anytime that we get uh an email, it will
+[00:09:05] now classify it for us. So, we know
+[00:09:06] that's two sponsorships, that's spam,
+[00:09:08] that's not. Now, the next thing we want
+[00:09:09] to do realistically is have an agent to
+[00:09:11] draft a response for us, which is really
+[00:09:13] cool. So, let's do first things first,
+[00:09:15] which is going to be aesthetics. So,
+[00:09:16] let's click on add in an AI agent. Bring
+[00:09:19] this guy over here, which is cool. Let's
+[00:09:20] add a note. And I'm just gonna bring
+[00:09:23] this over just I mean I'm I'm a sickler
+[00:09:26] for this stuff guys. I can't pull myself
+[00:09:28] back. Some say it's too much but I I'd
+[00:09:29] say not nearly enough. So classifying
+[00:09:32] agent.
+[00:09:33] All right. Cool. So let's give a little
+[00:09:34] robot emoji. Beautiful. Okay. He's
+[00:09:36] having a great time. Nice. Okay. Cool.
+[00:09:39] So what do we do now? We've got an agent
+[00:09:41] here. And what we can do guys is
+[00:09:42] determine the things that we think
+[00:09:44] justify a draft response. So I would say
+[00:09:46] that anything to do with the customer
+[00:09:47] deserves a response. Anything to do with
+[00:09:49] sponsorships deserve a response. spam or
+[00:09:51] low priority? Probably not. I mean, you
+[00:09:53] can if you want to, but I I've just had
+[00:09:54] an agent respond to the important stuff.
+[00:09:56] So, let's first of all power them up
+[00:09:58] with the correct chat model. So, we'll
+[00:09:59] give this one open AI. Uh I know chat
+[00:10:01] GBD5 recently came out at the time of
+[00:10:03] recording. I recommend GB GPT 4.1 Mini
+[00:10:05] for the time being. It's just easier. Uh
+[00:10:07] and also, it's it's cheaper for
+[00:10:09] performance. People aren't seeing the
+[00:10:10] performance improvement they wanted,
+[00:10:11] which is cool. All right, cool. So, what
+[00:10:13] do we do next? Well, we need to give
+[00:10:14] this guy a series of tools. So, let me
+[00:10:17] show you the prompt that we're going to
+[00:10:18] be using for this. Okay. And this guy is
+[00:10:21] the response agent. So I'm just going to
+[00:10:22] come over and I'm going to copy his nice
+[00:10:24] little building there. Okay. So what is
+[00:10:26] the prompt that we want to give this
+[00:10:28] guy? So first of all, we've got to give
+[00:10:29] it information, right? So for example,
+[00:10:32] if I come over to the agent, we kind of
+[00:10:35] want to feed it um like what's the stuff
+[00:10:37] it needs to make a decision. So we come
+[00:10:38] down here. The prompt is going to be
+[00:10:40] defined below and then let's just give
+[00:10:42] it all the data we think is relevant,
+[00:10:44] right? So what kind of relevant
+[00:10:46] information? Well, who it's from is
+[00:10:47] important, I'd say. Um, so we can
+[00:10:50] actually search if we've had previous
+[00:10:51] conversations. Uh, the thing the subject
+[00:10:53] line is pretty darn important. And then
+[00:10:56] probably also, um, let's see if we can
+[00:10:59] have a look as well. We just want the
+[00:11:01] body, right? So, let's find out where
+[00:11:02] they've put the body, which is text over
+[00:11:04] here. Cool. So, we give it who it's
+[00:11:06] from, what it's about, and the text.
+[00:11:08] Pretty freaking simple. All right. Then,
+[00:11:10] we want to do is give it a system
+[00:11:11] message, which is here's how I want you
+[00:11:13] to handle things. So, the prompt I want
+[00:11:15] you to use for that, uh, let's have a
+[00:11:16] quick look and pull this guy up. It
+[00:11:18] looks complicated. It's not exactly
+[00:11:19] complicated. Effectively, we're just
+[00:11:20] telling it what to do. So, we're giving
+[00:11:22] it instructions about how to use the
+[00:11:24] tools that it's got. So, we say, "Hey,
+[00:11:26] you're going to have access to a
+[00:11:27] database. Check database. Um, I for your
+[00:11:30] memories, how I want you to do it. I
+[00:11:31] want you to reply as a draft to
+[00:11:33] everything, how I want you to talk and
+[00:11:35] my tone of voice, guardrails about
+[00:11:36] hallucinations, and at the bottom, uh,
+[00:11:38] dates, which is fairly straightforward
+[00:11:40] and obvious. So, we come over here, and
+[00:11:42] then we're going to come down here to
+[00:11:43] system message and give him this
+[00:11:45] prompt." Beautiful. Now, we want to give
+[00:11:47] them access to some tools. And one of
+[00:11:49] those tools is the ability to which I
+[00:11:51] think is the lynch pin of this
+[00:11:52] automation, which is this knowledge
+[00:11:54] base. And the reason why this is so
+[00:11:56] important is because I want to give you
+[00:11:58] the ability to dynamically update what
+[00:12:01] the current meta is, your sponsorship
+[00:12:03] rates change or the way that your
+[00:12:05] business changes or key information
+[00:12:06] changes. This database holds everything.
+[00:12:08] So, I can chat to it, which we'll come
+[00:12:10] on to later in the video over here, and
+[00:12:12] he'll dynamically change it or update
+[00:12:14] it. And this solves the dynamic problem
+[00:12:16] which is how do you keep it up to date
+[00:12:17] and fresh? All you do you chat to AIAC
+[00:12:19] Jarvis and you sort it out. So what we
+[00:12:21] need to do is head over to airtable.com
+[00:12:23] and create a new sheet like this one.
+[00:12:26] And then all you do is create one table
+[00:12:28] that says knowledge and then one that's
+[00:12:31] date and then one that's last modified
+[00:12:32] time. And that's it. And then you want
+[00:12:35] to create to connect it over. The way
+[00:12:37] that you do that, I'll just show you
+[00:12:38] that very briefly just so if you haven't
+[00:12:39] connected air tableable before you come
+[00:12:42] to airable.com, click on your name, come
+[00:12:44] down to build a hub, okay, and then
+[00:12:47] create token and you just give it a name
+[00:12:49] like name. Okay, and then you add you
+[00:12:51] select all these scopes and then you
+[00:12:53] give um add all resources. That just
+[00:12:56] gives it resources to everything. If
+[00:12:57] you're comfortable with that, then
+[00:12:58] create token and then you copy it and
+[00:12:59] then come back over and it's that sort
+[00:13:01] of simple. So this one is Jack's
+[00:13:03] knowledge base. So for example, what
+[00:13:04] we're going to do then in our scenario
+[00:13:06] is give it the ability to pull
+[00:13:07] information from Jack's knowledge base.
+[00:13:09] So come over to tool, click on air table
+[00:13:12] and effectively what we want to do is to
+[00:13:14] let's have a look is get is fine. Let's
+[00:13:18] have a look. Actually I think it's
+[00:13:19] search is the one that we want. So then
+[00:13:21] we pick the thing that we like which is
+[00:13:23] going to be Jack's knowledge base which
+[00:13:25] should have a big beautiful brain.
+[00:13:26] Perfect. And then from the list is just
+[00:13:28] going to be table one which is fine. And
+[00:13:30] then I've just put return all the
+[00:13:31] records. So it just kind of pulls
+[00:13:33] everything that we need there, which is
+[00:13:34] really cool. So now this gives it the
+[00:13:36] ability to grab all the information from
+[00:13:37] our Air Table. The next thing I wanted
+[00:13:39] to do is to be able to search our Gmail.
+[00:13:42] Now, interestingly, one of the kind of
+[00:13:44] quirks I found when I was building this
+[00:13:47] was that if you let it basically go on
+[00:13:49] and pull everything back, it will be
+[00:13:51] there for 16 years trying to do it. So
+[00:13:53] what I want you to do is throttle it
+[00:13:55] slightly. And I'll show what I mean by
+[00:13:56] that. So resource here is going to be
+[00:13:59] operation is going to be get many. In
+[00:14:00] other words, get loads of stuff. Limit.
+[00:14:03] I'm going to put uh 10. Um you can
+[00:14:06] increase that if you want to. Simplify
+[00:14:08] is fine, but realistically what I want
+[00:14:10] here. If I come down to filter and I can
+[00:14:13] type in the sender. And so it won't pull
+[00:14:15] back like a billion emails from random
+[00:14:17] people. And I can say I only want you to
+[00:14:19] really reference emails I've gotten from
+[00:14:22] this person here. Right. So if I come
+[00:14:24] down to where is the from? There you go.
+[00:14:27] So now this is going to pull down the
+[00:14:28] last 10 emails I had from that person.
+[00:14:30] Maybe is it maybe I don't want emails
+[00:14:32] from six years ago. Maybe it's just not
+[00:14:33] relevant anymore. So I can I can kind of
+[00:14:34] throttle it that way, which is really
+[00:14:36] nice. Um and that's cool. And literally
+[00:14:39] that's it. And then we click off and
+[00:14:40] it's going to get messages. And then of
+[00:14:41] course the thing we need to do is to
+[00:14:44] create a draft message. I don't want it
+[00:14:45] to create a new thread. I just want it
+[00:14:46] to reply in there so I can just bing
+[00:14:48] bing bing send it all off and stuff. And
+[00:14:49] believe guys, I was paying someone to do
+[00:14:51] this. So this has genuinely saved me
+[00:14:53] time and it's it's a real you know how
+[00:14:55] your time is very very valuable. So I'm
+[00:14:57] a massive believer in this automation.
+[00:14:59] So we click on Gmail consume tool. This
+[00:15:01] one here is going to be now let me just
+[00:15:04] check this one is draft operation is
+[00:15:06] going to be create subject. What we need
+[00:15:09] to do is give it the exact same subject
+[00:15:11] that we received on the left. So let's
+[00:15:14] find out where that is which is here.
+[00:15:16] Okay. Email tech. I like HTML just so
+[00:15:18] it's better formatted. Message. We'll
+[00:15:20] let the AI take the reigns on that. Then
+[00:15:21] on add options, click on thread ID and
+[00:15:24] come down here and you want to grab this
+[00:15:28] thread ID and just bring him over here
+[00:15:30] like so. And then that will basically
+[00:15:31] work perfectly for us. And that should
+[00:15:33] enable him to go and do that. And
+[00:15:35] beautiful. So now once you hit this
+[00:15:37] active button, you get an email. It gets
+[00:15:39] classified and then the agent will
+[00:15:40] create a draft response for that which
+[00:15:42] is really cool. Now, the next level to
+[00:15:45] this that I want to add on is going to
+[00:15:46] be it's the criticality agent, which is
+[00:15:49] the ability to get a text message um or
+[00:15:51] an alert based on certain uh criteria.
+[00:15:53] So, to do that, what do we actually
+[00:15:55] physically need to do? Well, we need an
+[00:15:56] agent like so. And we need to send off
+[00:15:58] this HTTP request, which is really
+[00:16:00] interesting. But the first thing we need
+[00:16:02] to do, and I'm just going to copy uh
+[00:16:04] this uh little border here uh because I
+[00:16:06] think it's looks cool as hell. So, we're
+[00:16:09] going to add an AI agent. So come in AI
+[00:16:11] agent.
+[00:16:12] Beautiful. Fantastic. Like this. And
+[00:16:14] bring him over here, which is fantastic.
+[00:16:16] So, how do we actually send this stuff
+[00:16:19] over? And by the way, if you want the
+[00:16:20] blueprints for this, in other words,
+[00:16:21] like just be able to copy and paste and
+[00:16:23] upload everything. If you come over to
+[00:16:24] the school community, uh once you go
+[00:16:26] over to classroom, you'll see, by the
+[00:16:28] way, we've got tools and things to take
+[00:16:30] you from never spelling AI all the way
+[00:16:32] up to kind of building different things.
+[00:16:33] You come down to every AI automation and
+[00:16:35] you'll see on the left hand side and
+[00:16:36] basically all you do is you come down,
+[00:16:38] you can just download these things,
+[00:16:39] upload it and then it just saves you
+[00:16:40] like all the time. Um, so what we do
+[00:16:42] with criticality agent is we need to go
+[00:16:44] to go high level. So let's head over to
+[00:16:46] go high level real quick. So I'm here in
+[00:16:48] go high level. Let me just duplicate and
+[00:16:49] pop out of here. Now one of the really
+[00:16:51] cool things about go high level, okay,
+[00:16:54] is the fact that let me skip this
+[00:16:56] feedback for now. Is the fact that it
+[00:16:58] can connect to so many different things
+[00:16:59] which is so sick. So what the first
+[00:17:01] thing you need to do if you haven't
+[00:17:02] already in go high level is you need to
+[00:17:04] add a phone number based on your
+[00:17:06] jurisdiction and on the left hand side
+[00:17:08] guys under contacts here just go down
+[00:17:11] and add yourself okay add yourself and
+[00:17:13] add your number. So as you can see you
+[00:17:15] come down here you click on the plus
+[00:17:16] button give your name give your number
+[00:17:18] and now you're going to be saved as a
+[00:17:20] contact which is cool. And then what we
+[00:17:21] want to do here guys is go over to
+[00:17:23] automations on the left hand side which
+[00:17:25] is great. And then in automations come
+[00:17:27] over and click on create the beautiful
+[00:17:29] workflow and we'll start from scratch
+[00:17:30] which is great. Now the way we're going
+[00:17:32] to send information from N8 over to go
+[00:17:34] high level is using a web hook. So we
+[00:17:38] click on add new trigger. We click on
+[00:17:40] web hook and inbound web hook. How cool
+[00:17:43] is that? And what you want to do is you
+[00:17:44] just click on it like so. Okay.
+[00:17:46] Brilliant. And then what we're going to
+[00:17:47] do guys is we're actually going to head
+[00:17:49] over now to chat GBT to save us some
+[00:17:51] time. So I head over to chat GBT5. Hey,
+[00:17:53] I'd like you to correct me a curl
+[00:17:55] request sending information to this web
+[00:17:57] hook. I'd also like you to include three
+[00:17:59] pieces of data. Subject, who it's from,
+[00:18:02] and summary. Bam. Why have I done this?
+[00:18:05] Because what we can then do is this is
+[00:18:07] going to give us a call request, which
+[00:18:08] is fancy words for input it in, and it
+[00:18:10] just populates. Um, which will save us
+[00:18:12] loads of time. So check this out. All
+[00:18:13] you do then is you copy this. That's it.
+[00:18:16] come over to NAM. Now check this out. I
+[00:18:19] come down to tools. Okay. I type in HTTP
+[00:18:22] request tool. I click on import curl.
+[00:18:24] That's it. Okay. And then I just paste
+[00:18:26] this in. And what this does just
+[00:18:28] populates everything for us
+[00:18:30] automatically. And it basically means
+[00:18:31] that we can send information now um over
+[00:18:34] to NA10, which is really freaking cool.
+[00:18:36] So uh we need to execute proof nodes in
+[00:18:38] a second just to prove and see how that
+[00:18:40] one works. Let me come over and just pin
+[00:18:42] this data real quick. Uh we don't need
+[00:18:43] to do that one. All right. Cool. So, let
+[00:18:45] me unlink and let me execute the
+[00:18:48] workflow. All right, cool. So, the
+[00:18:49] agent's working. He's going to create a
+[00:18:50] draft response for us so we can see how
+[00:18:52] that works in real time. Give that a
+[00:18:54] second. It's gone and found all the
+[00:18:55] contact history. So, it knows uh all
+[00:18:57] this beautiful information. I click on
+[00:18:59] him. What's he said? There you go.
+[00:19:00] Speaking engagement, $50,000. Well done,
+[00:19:02] AI agent. You crushed it. So, we're
+[00:19:04] going to pin this guy, which is great.
+[00:19:06] And bring him over. So, we can connect
+[00:19:08] it a little bit now, which is great.
+[00:19:09] Then, if I click on this guy, you can
+[00:19:11] see we've got all this information. So
+[00:19:13] we want to hardcode this stuff because
+[00:19:15] um as it's been said the agents are not
+[00:19:17] deterministic they are probabilistic in
+[00:19:19] other words they decide it's like next
+[00:19:20] token token sequence generation. So
+[00:19:22] whenever we get chance to actually
+[00:19:24] hardcode information we should do
+[00:19:26] reduces error rates and makes things
+[00:19:27] more robust. So what we can actually do
+[00:19:29] is come over here and find out the
+[00:19:32] information directly from Gmail. So we
+[00:19:35] know for a fact that is going to be
+[00:19:36] correct 100% of the time. This is who
+[00:19:38] it's from and what is the subject? We
+[00:19:40] know we know the subject because we can
+[00:19:42] grab it here and then we click on this
+[00:19:43] popular AI thing right here which is hey
+[00:19:46] dude just kind of summarize it for me.
+[00:19:47] So this is what the agent is going to be
+[00:19:48] doing is summarizing it which is really
+[00:19:49] cool. So now what this does is gives us
+[00:19:52] the ability to send information over to
+[00:19:54] go high level. So let's head over now to
+[00:19:57] uh go high level and you can see we've
+[00:19:59] got this trigger. So we need to send a
+[00:20:01] test request over there. So how do we do
+[00:20:03] that? Let's come back over and copy our
+[00:20:05] call request. Let's head over to NATM.
+[00:20:07] Let's just add a random
+[00:20:10] uh HTTP request. Click on curl and then
+[00:20:12] just enter this in like so. Okay. Now,
+[00:20:14] the reason I've done this is just for
+[00:20:16] testing purposes. I'm just want to prove
+[00:20:18] I can get the connection between NA10
+[00:20:20] and get high level. So, check this out.
+[00:20:22] I click on uh let's see if it's got some
+[00:20:24] fake data. Okay, it has. All right,
+[00:20:26] cool. So, check this out. I click on
+[00:20:28] play. It's worked. It's sent off. Cool.
+[00:20:30] Now, if I come over to go high level,
+[00:20:32] guys, um I click on save trigger. I
+[00:20:34] click on fetch sample requests. This
+[00:20:36] should actually show us where we've got.
+[00:20:38] Look at this. It's It's found it. We
+[00:20:39] know that it's got that. You see? Look
+[00:20:41] at this information. This is great. It's
+[00:20:42] actually pulled everything over, which
+[00:20:43] is cool. Brief summary. Send
+[00:20:45] example.com. Save trigger. Great. So,
+[00:20:46] what is the thing that we need to do? I
+[00:20:48] want you to click on the plus here and
+[00:20:49] click on find contact and then add field
+[00:20:52] and type in number. Uh I believe it's
+[00:20:55] this one actually. Let's have a quick
+[00:20:57] look. Ah, phone. And then enter in your
+[00:20:59] phone number. Then you click on save
+[00:21:01] action. Okay. So, what that basically
+[00:21:02] means is it's going to find you and do
+[00:21:04] that. Then what I want you to do is come
+[00:21:06] off, delete this guy. Uh, delete this
+[00:21:07] action. Yeah, we don't need you. Thank
+[00:21:08] you, bro. Add one here. And this is just
+[00:21:11] going to be SMS and click on send SMS.
+[00:21:14] Okay. Now, the way that go high level
+[00:21:15] works is, and by the way, if you don't
+[00:21:17] want to do phone numbers, you can skip
+[00:21:18] this part. But effectively, it finds a
+[00:21:20] contact and all the information
+[00:21:22] associated with that contact and then
+[00:21:23] just fires it to that. So, you can't
+[00:21:24] hardcode this stuff in. Now, what we
+[00:21:26] want to do is say, "Hey, broki." And
+[00:21:29] we'll say something like import an email
+[00:21:30] here for you, right? And then we kind of
+[00:21:32] want to give it the information. So you
+[00:21:33] click on this custom values, then you
+[00:21:35] click on inbound web hook trigger. And
+[00:21:37] then we want to have the subject. Cool.
+[00:21:38] And then we just do the same thing
+[00:21:39] again. We want who it's from. Cool. And
+[00:21:42] then we also want to know the headers.
+[00:21:44] Uh where's the headers actually? Come
+[00:21:45] back up here. Excuse me. The summary.
+[00:21:47] All right. Thanks very much. Your
+[00:21:49] friendly neighborhood Iron Man or
+[00:21:51] something along those lines. Right.
+[00:21:53] Cool. And then we save action. Decent.
+[00:21:55] And then what we can do is publish this.
+[00:21:58] Right. So if we now test this, I should
+[00:22:00] get a text message. Right. So let's just
+[00:22:03] make sure that it works. Come over to
+[00:22:04] our enter workflow. Click on play. All
+[00:22:06] right. Cool. So let's just see if I get
+[00:22:07] this text message now. Right, that is
+[00:22:09] sent off. So we will see what we get.
+[00:22:12] Let's see if it pops up. Beautiful. And
+[00:22:14] just like that. Hey broki, important
+[00:22:15] email here for you. Subject line, your
+[00:22:17] friendly neighborhood iron man.
+[00:22:19] Beautiful. So now we know the two have
+[00:22:20] connected and it's working properly,
+[00:22:22] which is good for really cool freaking
+[00:22:23] news. Ace. So what do we need to do now
+[00:22:25] then? Right. So let's come over and
+[00:22:26] delete this guy, which is cool. We want
+[00:22:28] to give it the ability to do more tools.
+[00:22:29] So what we can fortunately do is just
+[00:22:31] copy and paste actually uh this guy. We
+[00:22:33] want the ability to search a table
+[00:22:35] definitely. We also want to give it the
+[00:22:37] ability to get all the messages from
+[00:22:38] Gmail. Again, it will use this as
+[00:22:40] additional context to make sure it's
+[00:22:41] doing the right thing which is
+[00:22:42] fantastic. Uh and it's not really
+[00:22:44] drafting anything. It's just sending
+[00:22:46] stuff off. So it's cool. And then we
+[00:22:47] just give it a call chat model which
+[00:22:48] again is going to be open AI. Uh
+[00:22:51] fantastic. Come down here. And this one
+[00:22:52] is cool. And then we've got critical
+[00:22:54] criticality agent all set up. We just
+[00:22:56] need to give it a prompt. Now for the
+[00:22:58] prompt is an interesting one. Okay. So,
+[00:22:59] for this one, I kind of went uh down a
+[00:23:01] slightly interesting direction here. So,
+[00:23:03] so first of all though, let's give it
+[00:23:05] the system prompt real quick. System
+[00:23:07] message expression uh full screen. Come
+[00:23:10] down here. Enter this guy in. You're a
+[00:23:12] criticality agent. Your job is to
+[00:23:13] receive information from emails and
+[00:23:14] determine whether or not they are
+[00:23:15] important or critical. In other words,
+[00:23:17] something that wants to be prioritized.
+[00:23:18] I've kind of specified monetary value
+[00:23:20] and keywords. Like if it says urgent or
+[00:23:22] important or whatever it is, it will
+[00:23:24] then tell me. So basically use this to
+[00:23:26] think about like are there specific
+[00:23:28] senders like if you get an email from so
+[00:23:30] and so you want to text on that or what
+[00:23:31] are the kind of requirements and you can
+[00:23:32] build that out for yourself. Then we
+[00:23:34] want to give it the prompt. So again
+[00:23:37] let's just give it the exact same
+[00:23:38] information. It also needs to know again
+[00:23:40] like who is it from? It needs to know
+[00:23:41] who it's from. Absolutely. It needs to
+[00:23:43] know um the subject line. Of course it
+[00:23:47] does. And also probably needs to know
+[00:23:48] let's have a quick look the actual
+[00:23:50] information. Uh let's pull it down here
+[00:23:52] and the text. Now, this is red because
+[00:23:55] I've pinned a previous module, but
+[00:23:56] that's not something you need to worry
+[00:23:57] about now. It will work fine once I
+[00:23:58] unpin this. Cool. And then, guys, you've
+[00:24:01] completed the first step or the first
+[00:24:03] two steps actually. You've got the
+[00:24:05] classifying agent, the response agent,
+[00:24:07] and then the criticality agent, which is
+[00:24:09] code for really cool freaking good news.
+[00:24:11] So, the next thing we need to do now
+[00:24:13] really is let's think about it. We've
+[00:24:14] got the classification, we're responding
+[00:24:16] and creating draft emails, and we're
+[00:24:18] basically learning whether or not it's
+[00:24:19] critical, and we've got our database.
+[00:24:21] The last step is to essentially create
+[00:24:24] now an interface and power that up. So
+[00:24:27] how does that work? Well, what kind of
+[00:24:29] tools do I want to give it? As you can
+[00:24:31] see in this one here, um what I'm going
+[00:24:33] to give it is a couple of tools. I'm
+[00:24:34] going to give it to build search
+[00:24:35] internet, get my messages, create
+[00:24:36] messages for me, search memories, and
+[00:24:38] create memories, which is code for
+[00:24:40] really cool, right? So let's copy uh
+[00:24:42] this Iron Man and bring him over to our
+[00:24:44] workflow like so. Beautiful. All right,
+[00:24:47] cool. I'm actually not going to cheat.
+[00:24:48] I'm going to delete all these guys and
+[00:24:50] we're going to build it together from
+[00:24:51] scratch. Okay. And obviously we can't
+[00:24:52] have two yellows because we are known as
+[00:24:54] what is not savages. Uh white is now I
+[00:24:57] can't go for white. This is craziness.
+[00:24:58] Um let's just go for a nice little um
+[00:25:01] green. All right. Cool. So first thing
+[00:25:03] we're going to do is web hook. Now this
+[00:25:04] is how we are going to connect it to
+[00:25:06] lovable. So come down to web hook. Click
+[00:25:09] change this to post and click on it.
+[00:25:11] That's it. Instead of respond
+[00:25:13] immediately just put uh using the
+[00:25:14] respond to web hook node. That's it.
+[00:25:16] Okay. and bring it over here. All right.
+[00:25:19] Now, what do we want to do next? We want
+[00:25:21] to add in AI agents. So, come down here
+[00:25:22] and add an AI agent, which is cool. And
+[00:25:24] we're going to give him lots of
+[00:25:26] information, which is pretty decent. So,
+[00:25:28] the first thing we want to want to do
+[00:25:29] though is kind of get the information
+[00:25:30] over to the web hook. So, to do that, we
+[00:25:32] are going to head over to the beautiful
+[00:25:34] lovable.dev,
+[00:25:36] not love. Watch love on Netflix. Maybe
+[00:25:39] after this video. Maybe after this
+[00:25:40] video, that's what we'll do. And then
+[00:25:41] we're going to give it a prompt to
+[00:25:42] basically create something. So, with
+[00:25:44] this, you can specify the dashboard. A
+[00:25:46] little hack if you're not familiar of
+[00:25:47] course is to go over to CodePam which is
+[00:25:49] a free repository of cool code. You can
+[00:25:51] actually search for things here like
+[00:25:53] chat or whatever you want and you can
+[00:25:56] see code like this and you basically
+[00:25:57] copy all of this, copy all of this, copy
+[00:25:59] all of this commercial, put it in your
+[00:26:01] prompt and it'll design it for you
+[00:26:02] automatically. Cool little feature you
+[00:26:03] can do with lovable as well by the way
+[00:26:05] guys is actually remix things. So you
+[00:26:06] can come down here like to this one here
+[00:26:08] and click on remix and also from like
+[00:26:10] other um applications which basically
+[00:26:13] lets you take this as a fundamental
+[00:26:14] thing and then add it in and change it
+[00:26:16] which is really freaking cool. What you
+[00:26:18] may not also know as well is you can
+[00:26:20] actually add these different logos in.
+[00:26:21] You can see how mine's got Iron Man
+[00:26:23] mask. What you can do with lovable is if
+[00:26:25] you come over to like a Google or
+[00:26:25] something and you say Iron Man profile
+[00:26:27] photo or whatever it is um you can
+[00:26:30] actually copy a URL um that you and you
+[00:26:34] can basically give it that URL and it'll
+[00:26:35] pull it directly from that web address
+[00:26:36] and that can be like the logo of your
+[00:26:38] thing. So you basically give it a cool
+[00:26:39] prompt but the crucial thing that I want
+[00:26:41] you to do here I'm just going to pin
+[00:26:42] this for a second and come over to our
+[00:26:43] new lovable design once you give it a
+[00:26:45] text here. Let me just load this one up.
+[00:26:47] Okay, which is cool. So, we've given it
+[00:26:48] a name, give it loads of cool prompting,
+[00:26:49] and a beautiful fantasmagoricish
+[00:26:51] background, which is ace. Again, you can
+[00:26:53] use that on code pan. I've got, if you
+[00:26:55] want to go deeper on this stuff, by the
+[00:26:56] way, uh, in the actual community itself,
+[00:26:58] I've got lots of stuff on advanced
+[00:26:59] technology going through all the
+[00:27:01] principles of how you build this stuff
+[00:27:02] up on app builders. Really, really,
+[00:27:03] really freaking cool. So, um, how do we
+[00:27:06] then do this then? So, what you
+[00:27:07] basically need to do first of all is
+[00:27:08] specify the web hook. So, you'd say
+[00:27:11] something like, I want you to create a
+[00:27:12] chat style interface and send the
+[00:27:13] information to this web hook, right? So
+[00:27:16] I'm going to say here send your
+[00:27:18] information to this web hook. All right.
+[00:27:20] Cool. And then come over to your any10
+[00:27:21] scenario again. Click on this and click
+[00:27:23] on copy. Beautiful. All right. And then
+[00:27:27] just type the thing here. And then
+[00:27:28] essentially now this will update it and
+[00:27:30] change it to that. If you're building
+[00:27:31] this for the first time, you can give it
+[00:27:32] a really specific prompt. What I'll do,
+[00:27:34] I'll put down below in the description a
+[00:27:36] full prompt that you can use. You just
+[00:27:37] input this into lovable and it will
+[00:27:39] create this exact style which is really
+[00:27:41] freaking cool. So it's updated it. Now
+[00:27:43] how do we know it works? We need to
+[00:27:45] check that it connects. So, we click on
+[00:27:46] listen for test event. Come back over to
+[00:27:49] here and we say, "Hey,
+[00:27:51] I received a message. Is that true?"
+[00:27:53] Let's have a quick look. Um,
+[00:27:56] oh, that's it. One second. Let's come
+[00:27:58] down here to
+[00:28:00] respond immediately. Listen to test
+[00:28:01] event. Come back over one more time.
+[00:28:04] Hey, come back over here. And that's
+[00:28:06] saying it's got it, which is really
+[00:28:08] cool. So, we then connect these
+[00:28:09] together. So, we now we know that
+[00:28:11] Lovable is connected to Anitan. Once we
+[00:28:13] achieve that milestone, we can affect
+[00:28:15] anything we want to. We click on the web
+[00:28:16] hook. We change it from respond
+[00:28:17] immediately to using the respond to web
+[00:28:21] hook node which we'll add in right now.
+[00:28:23] We click at the end. This is the what we
+[00:28:24] call the web hook sandwich over in J
+[00:28:26] universe responds to web hook and we
+[00:28:29] want that to do with the first incoming
+[00:28:30] item. That is absolutely fine. Cool. So,
+[00:28:33] let's power up our agent. First of all,
+[00:28:34] he needs a brain. He needs something to
+[00:28:36] think about, right? So, let's give him
+[00:28:37] open AI. Uh, come over here. Beautiful.
+[00:28:40] Come down here. That's cool. That's
+[00:28:41] decent. We don't mind that. Then let's
+[00:28:43] give them some tools. So, some tools we
+[00:28:44] want to be able to do is we want to be
+[00:28:46] able to create drafts and messages. So,
+[00:28:49] let's come over here and duplicate these
+[00:28:52] guys cuz we can just kind of steal them
+[00:28:55] a little bit. Uh, I'm sure the purple
+[00:28:57] square won't mind too much. We come
+[00:28:58] over. This lets us get all the
+[00:29:00] information. However, what I want you to
+[00:29:02] do on this one is if I come down here,
+[00:29:04] we can get rid of sender. And we can
+[00:29:06] just get many and pop the limit to 30. I
+[00:29:09] think it's fine. Cool. Sweet. And then
+[00:29:12] when it build to create a draft. So we
+[00:29:13] come down here. In fact, we'll build
+[00:29:14] this one together because I think it's
+[00:29:15] slightly different. So come down to
+[00:29:16] Gmail. Again, this is going to give our
+[00:29:18] agent the ability to just create drafts
+[00:29:20] as we wish. So two, I'll let it specify
+[00:29:23] subject. I'll let it specify HTML is
+[00:29:25] fine. That's also fine. Uh, and then we
+[00:29:27] want to do appendandy any attribution,
+[00:29:29] which means that we don't want to
+[00:29:30] include it. Uh, and I think this is
+[00:29:33] fine. We then want it to be a draft
+[00:29:35] instead. So I think it's message, it's
+[00:29:37] draft. Okay, cool. And create. And
+[00:29:40] that's it. That's basically it. How cool
+[00:29:42] is that? Cool. And then we're going to
+[00:29:43] give it the ability to search internet.
+[00:29:44] So for that, we're going to use Tavi.
+[00:29:48] Oh, I believe we need a HTTP request for
+[00:29:49] that. Cool. So to do that, we just come
+[00:29:51] over here. Let me just grab it and show
+[00:29:52] what that looks like. Tavly, by the way,
+[00:29:54] is just something that lets you reach
+[00:29:55] over and search the internet if it kind
+[00:29:56] of feels like it needs to. So I'll show
+[00:29:59] what that looks like. Basically, you
+[00:30:01] connect them together. You head over to,
+[00:30:03] if you haven't already, um, I'll show
+[00:30:04] you right now,
+[00:30:06] Tavly, which is cool. Come over to all
+[00:30:09] come to tavly the web access agents you
+[00:30:12] basically log in like so give it a
+[00:30:15] second you can sign in with Google or
+[00:30:16] whatever and once you've signed in guys
+[00:30:17] you'll get this beautiful thing here so
+[00:30:18] you can just simply copy your API keys
+[00:30:20] or create a new one if you wish and then
+[00:30:22] come over to your N8N scenario which is
+[00:30:25] over here for me I believe no it is this
+[00:30:29] guy all right cool then once you're here
+[00:30:30] you click on tool you click on HTTP
+[00:30:32] request tool which is great um and what
+[00:30:35] you'll do just name it taby you click on
+[00:30:36] it and give it the
+[00:30:38] Use this to search the internet for
+[00:30:40] research. Um this is URL authentication
+[00:30:43] and then using the hit field headers
+[00:30:45] below type in authorization and then put
+[00:30:47] your AP I key uh under value provided
+[00:30:49] and then under authorization using the
+[00:30:51] field below type in the value there. And
+[00:30:53] then specify body you got query by model
+[00:30:55] and is required blah blah blah and then
+[00:30:57] you are ready to rock and roll. And that
+[00:30:58] basically gives it the ability to search
+[00:31:00] the internet which is really freaking
+[00:31:02] cool. And then what we can also do is
+[00:31:03] come down here and give it the ability
+[00:31:05] to check our calendar. Right? So this
+[00:31:06] coming to calendar and so now we can ask
+[00:31:07] it to hey what events have I got right
+[00:31:09] again this can then search down we want
+[00:31:11] to event create or event get many uh we
+[00:31:14] can pick our calendar which is going to
+[00:31:15] be this one for me which is cool limit
+[00:31:17] 50 any after now but before a week or we
+[00:31:20] can even just like get rid of that and
+[00:31:22] just let the AI model define that which
+[00:31:23] is cool so that will now get calendars
+[00:31:25] for us we can also get it to create
+[00:31:27] calendars for basically you can just add
+[00:31:28] as many of these incredible things as
+[00:31:30] you want to but crucially the one for us
+[00:31:32] that we're really interested in is the
+[00:31:34] air table right the ability to search
+[00:31:36] and add information to air table. So if
+[00:31:38] I come down here, let me copy this guy
+[00:31:39] and then paste him down here. Bring him
+[00:31:41] over. This one's going to ability to
+[00:31:43] search air table and then we want to
+[00:31:45] give him the ability to create memories.
+[00:31:47] Okay. So we come down here, click on
+[00:31:49] this guy. Let's duplicate. Beautiful.
+[00:31:52] Come over here and bring him in. Except
+[00:31:54] for he ain't going to be searching. This
+[00:31:56] guy is going to be creating. Creating or
+[00:31:59] updating. We call that upserting, which
+[00:32:01] is to update and or insert. Which means
+[00:32:03] that let's say we've got one memory,
+[00:32:05] okay, here that is about our rates for
+[00:32:09] live events. Then it could be sort of
+[00:32:10] like well I don't need to create a new
+[00:32:12] memory cuz that now creates a conflict
+[00:32:13] in data. So instead what we say is it
+[00:32:16] just changes it, erases it and updates
+[00:32:18] it which is a really cool little model
+[00:32:19] which is why we use upsert instead. Um
+[00:32:22] column to match on ID is fine. Um so if
+[00:32:25] I just execute previous nodes real
+[00:32:27] quick, this won't work. Yes, ID using
+[00:32:30] match. Yeah, that's absolutely fine.
+[00:32:31] Cool. And then we basically want to let
+[00:32:33] it to change knowledge. So we'll test
+[00:32:34] this in a moment. Come down. And I think
+[00:32:37] we are ready to go. I need to give it a
+[00:32:39] prompt. So the prompt we're going to
+[00:32:40] give it is this one here. Let me come
+[00:32:42] over and show you this. You're an a
+[00:32:44] you're an email receptionist. Uh we just
+[00:32:47] call responsibility, right? Capture
+[00:32:48] information. It manages memory. Does
+[00:32:50] query responses tools. Air table memory
+[00:32:52] management. Uh best practice about how
+[00:32:54] we want it to do different things. Uh
+[00:32:56] emails for context. Memory creation
+[00:32:58] guidelines. Example formats. loads of
+[00:33:00] really cool and interesting things and
+[00:33:02] we're specific on that and we give it
+[00:33:03] loads of specifics. Uh if you're
+[00:33:05] uploading the blueprint, all this stuff
+[00:33:06] will just be be prepopulated for you. So
+[00:33:10] we come over into our scenario, we give
+[00:33:11] it the prompt which tells it all the
+[00:33:12] tools we want it to use and how we want
+[00:33:14] it to use uh the tools. So come down
+[00:33:16] here to system message. There we go. And
+[00:33:19] we pop all that in there. And then we
+[00:33:20] need to give it the defined below. So
+[00:33:24] can we see the web hook? Not quite yet.
+[00:33:25] So what we need to do then is fire the
+[00:33:27] web hook off. Right? So, come here. Give
+[00:33:29] this a hot second. Come back over to our
+[00:33:31] scenario and we're just going to say
+[00:33:34] yo. All right, cool. And then we come on
+[00:33:37] to the agent and I can come down and get
+[00:33:39] my yo message which is on the left. So,
+[00:33:41] let's find out where that is
+[00:33:44] there. You can see on the left message
+[00:33:46] yo. And we bring that one over. Really
+[00:33:48] cool. And then let's also give it some
+[00:33:49] memory, guys. So, you know, it doesn't
+[00:33:51] have amnesia. Add simple memory. And
+[00:33:53] then we kind of want to specify what the
+[00:33:55] memory is. So, click on define below.
+[00:33:56] So, how does it know what the memory is?
+[00:33:58] Click on web hook and then type in this
+[00:33:59] one here which is JSON body date code so
+[00:34:01] it will remember everything. It's
+[00:34:02] shortterm memory from that conversation.
+[00:34:04] Uh and in context window length we'll
+[00:34:06] make that 25. I don't know why you
+[00:34:08] wouldn't. You may as well make it quite
+[00:34:09] high. Okay. So it looks like a lot but
+[00:34:11] it is a lot because it does a lot of
+[00:34:12] really cool stuff and you built it all.
+[00:34:14] So you're freaking rockstar. So we've
+[00:34:15] come over. I've refreshed this. It wants
+[00:34:17] a password. By the way um how we can
+[00:34:20] basically deny access if they don't use
+[00:34:21] a password. So again just for argument
+[00:34:23] sake I'm just going to put test all the
+[00:34:24] way through here. Come over and
+[00:34:25] reactivate this. So, let's execute the
+[00:34:27] web hook thing. All right, cool. So,
+[00:34:30] let's now test this one out. So, I'm
+[00:34:32] going to say, "Hey, dude. I'd like you
+[00:34:33] to create a memory." Just for future
+[00:34:35] reference, whenever anybody emails me
+[00:34:37] about coffee, I insist on, in fact,
+[00:34:41] whenever anybody emails me about tea, I
+[00:34:43] insist that we only drink coffee. Thank
+[00:34:46] you. Emails and instructions of critical
+[00:34:48] importance. So, I've sent that one over.
+[00:34:50] Before I do that, let's make sure this
+[00:34:52] is actually waiting for a test event. It
+[00:34:54] is. We come over. We send it off. Now
+[00:34:56] Iron Man's working in the background.
+[00:34:58] Got it. Just to confirm, you want me to
+[00:34:59] correct memory. So whenever you receive
+[00:35:00] MLS about to respond to filming state,
+[00:35:02] the drinking coffee. Is that correct?
+[00:35:03] Come back over one sec. Let me um
+[00:35:06] execute workflow real quick and we'll
+[00:35:08] say that's right, my man. Okay, so he's
+[00:35:11] actually coming back and clarifying with
+[00:35:12] us and checking this stuff. So let's
+[00:35:14] just see what it says. What's Iron Man
+[00:35:15] wanting? It's done. Now why is that so
+[00:35:18] freaking cool? That is so freaking cool
+[00:35:20] because now we've guys, we've given it a
+[00:35:22] memory. So it can actually remember and
+[00:35:25] say dude, can I just clarify on that?
+[00:35:26] Like do you mean this or do you mean
+[00:35:28] this? Now how do I know that works? Do
+[00:35:30] you know guys, I'm not even going to
+[00:35:32] check our database over here. I'm not
+[00:35:34] even going to we're not even going to
+[00:35:35] check. What we're going to do instead is
+[00:35:37] we're just going to test the whole
+[00:35:38] scenario together over here. Okay. So
+[00:35:41] how do we do that? Let's first of all
+[00:35:43] start by writing an email to ourselves.
+[00:35:45] All right, guys. So here we go. Let's
+[00:35:46] chat about our potential partner
+[00:35:47] tomorrow over lunch. 4:00. Let's grab
+[00:35:49] lunch. I know a great place where we can
+[00:35:51] drink tea. Thanks, Ben. All right,
+[00:35:52] whatever. This is a crazy example, but
+[00:35:54] I'm just doing it to illustrate. Okay,
+[00:35:55] so we send this one off. We come back
+[00:35:57] over to our scenario. Let's click on
+[00:35:58] exit from Gmail trigger. Let's see what
+[00:36:00] happens. It's classifying. All right,
+[00:36:02] has it got it? All right, let's have a
+[00:36:03] look. AI agent, it's draft and reply.
+[00:36:06] Let's what's going on here. It's
+[00:36:07] searched different things. Okay,
+[00:36:08] interestingly, it sent a message on the
+[00:36:10] criticality agent. I wonder why. Uh,
+[00:36:13] it's because it's at lunch tomorrow at 4
+[00:36:14] p.m. So, because it's so soon, it's now
+[00:36:17] sending me a message, which I think is
+[00:36:19] really freaking cool. But let's actually
+[00:36:20] check now the draft it created right in
+[00:36:22] Gmail to see has it picked up on the
+[00:36:25] fact that I only drink coffee. Again,
+[00:36:26] crazy example, but you illustrate the
+[00:36:28] point. And guys, check this out. Hi Ben,
+[00:36:30] thanks for reaching out about the
+[00:36:31] partnership. I'm glad you're in
+[00:36:32] exploring Lynch 4pm. I appreciate the
+[00:36:34] invite, but I only drink coffee, not
+[00:36:37] tea. So guys, you've created this insane
+[00:36:39] thing now linked to lovable, which is
+[00:36:41] absolutely outrageous. So now the next
+[00:36:43] step is to automate your lead generation
+[00:36:45] which you can do by watching this video
+[00:36:46] on

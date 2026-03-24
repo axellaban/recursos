@@ -1,0 +1,650 @@
+0:00
+AI has just changed content creation forever. Anti-gravity can now create
+0:05
+beautiful animations, product demos, and even edit your videos completely on
+0:10
+autopilot. This is using Remotion, a new skill that just launched, and it will change everything. And in this video,
+0:17
+I'm going to show you how you create something so good that you would actually use it. And not only that, I'm
+0:22
+also going to show you hidden capabilities that 99% of users don't even know exists. So, you can edit
+0:29
+videos with AI, saving you time and supercharging your business. And if you don't know who I am, my name is Jack
+0:35
+Roberts. I built and sold my last tech startup with over 60,000 customers. And now I run a 7 figureure AI automation
+0:42
+business. So, if you haven't already, grab that coffee and let's dive straight in. And after playing with this tool for
+0:48
+a bit, the stuff that I'm going to show in this video is going to blow your mind. For example, this right here, this interactive dashboard created by
+0:55
+Remotion. It did it in the exact brand guidelines that I wanted to from my specific website and it did it in one
+1:02
+prompt. Look how similar this is. And by the way, this is dynamically updated by
+1:07
+what exists over here. For example, if I change this from 85,300 to something
+1:12
+like 100,000 and I come back over to the dashboard, watch this. It's going to change now to 100,000 instantaneously.
+1:19
+So, you have dynamic updates. Not only that, I gave it a video for my notebook LM video. And not only did it cut it, it
+1:25
+also added these exact captions specifically over using the exact same
+1:30
+GLO brand guidelines. It cut it out specifically. And on top of that, it also audio enhanced it. So listen to
+1:35
+this. Using it skills because it wouldn't that is crazy. So it did a complete audio enhancement. Added
+1:41
+subtitles in. I gave it one prompt. I'm going to show you everything in this video. And then you're also going to how you can pull down these assets from your
+1:47
+website. How AI can read it. Pull down images. pull on anything from your web page and create these videos for
+1:53
+literally whatever you wanted to. So video with voice, let's talk about that
+1:59
+specifically remotion which is the engine that makes all of this popular. So what is Remotion? Well, the TLDDR of
+2:07
+it is that you can make videos programmatically. What does that actually mean? And why is this so
+2:14
+powerful? Well, if you think of it like this, what they've effectively done is every frame of a video asset, so to
+2:21
+speak, is code. And the idea is that when every frame is code, we can use programming to create functions, loops,
+2:29
+conditionals to automate and scale video production, video editing, graphics,
+2:34
+animations using AI. That's why this is so big. You can effectively compose with
+2:40
+code, which is a very kind of artistic terminology. We were composing with code. You can export in many formats
+2:46
+which is really awesome. And just to give you a view of this business, you can see they are absolutely blowing up right now. Hence one of the reasons why
+2:52
+we're talking about it, the fact that these skills are available and we can now connect it to environments like
+2:58
+anti-gravity and cursor and using a terminal. I want to call this out that the market for this is huge. Look at
+3:04
+Submagic. They did 1 million ARR within 3 months. They are a video editing tool. Uh, you had this company here, AI video,
+3:10
+a million a year, $5 million a year in annually recurring revenue from an AI adm $6 million a year with Crayo. You
+3:17
+get the picture. So, what we're going to do is give Claude, which is the AI model we're going to be using within
+3:23
+anti-gravity, Claude code, this remotion skill. And we're going to be doing that within anti-gravity. And so, let's cover
+3:29
+absolutely everything that you can do with Remotion so you understand the full capabilities. And I'm going to show you
+3:34
+how you can use Remotion for your business, for your personal life across three levels of difficulty. Starting
+3:41
+with number one, which is going to be video editing and enhancing. And to do this, I'm going to go ahead and grab a
+3:46
+really cool asset. And I'm going to put a link down below in the description so you can go ahead and grab this because this is going to be really gamechanging
+3:52
+for you. So, let's come up to Remotion Anti-gravity. And what we're going to come and have a look at, and these are just some examples of the crazy stuff
+3:58
+you can do is let's take a look at this magic setup. So, you you'll find a link for this down below the video. So, make
+4:04
+videos programmatically. First thing we need to do is go ahead and install it. And there's a couple things that you need to do. Number one is install it
+4:10
+here. So, here, if you haven't downloaded Node.js, just go ahead and do that. But you can pretty much just copy
+4:15
+and paste this and throw it into anti-gravity. Okay. So, what we're going to do is literally copy this and then we're going to head over to
+4:21
+anti-gravity. But before we do that, I want to highlight what you can actually do with this. So, what can it generate? So, you know, it's skills. We've got
+4:27
+video, motion, and graphics. So, intro, outro animations, explainer videos, product demos, social media video ads,
+4:33
+animated infographics, logo reveals, connected typography. And when I made this video, I wanted to be something
+4:38
+that you would actually use. I found a lot of the examples, they just don't look good. Like the text is like this
+4:44
+big and the rest of the image, it's not it's if it's not something you'd actually use, I I don't think there's any point talking about it. There is
+4:50
+some stuff you can build with this that is incredible. So, web design and development, landing pages, marketing sites, dashboards, admin panels, loads
+4:56
+of really cool things. Then a suite of UI and UX assets, component libraries, design systems, loading animations,
+5:03
+excuse me, I'm breaking up even thinking about this. Navigation patterns, form designs, data visualizations, you get
+5:09
+the idea, right? Automation tools, content, loads of cool stuff. So, you can look at this for inspiration in building it. So, let's go ahead and
+5:15
+install it. So, all we're going to do is come down and grab this and head over to our code editor of choice. We're going
+5:20
+to be using the wonderful, beautiful anti-gravity. And so, here we are within the wonderful, beautiful anti-gravity.
+5:27
+And I want to show you one additional function with anti-gravity about how you can run claude code outside of the chat
+5:33
+window within anti-gravity. And what I'm going to do is show you how you can use claude code within anti-gravity. So we
+5:38
+can do it here by just chatting to remote and saying hey. Occasionally though sometimes anti-gravity you may
+5:44
+find that the agent spins up and does something a bit random which is really cool. So I just want to show you another technique that you can use. So on the
+5:50
+left hand side and this is great to know by the way. Come down to extensions and do me a favor. Type in Claude and you'll
+5:57
+see Claude will pop up here which is awesome, right? And you're going to install that. Now, if you have the Claude desktop app, that should connect
+6:04
+automatically. Then check this out. If I just double click in the middle here, you'll see the Mystical Wonderful Claude
+6:10
+thing pop up. So, I can click on this guy like so. And I can say, "Hey, Claude, what's up?" All right. Now,
+6:15
+we're dealing and talking with Claude. And you can basically edit automatically, do loads of cool things, and Claude is talking to us. If you ever
+6:22
+get any friction with the chat panel, bring code up here. Okay. So, all you're going to do is basically say, "Hey, I'd
+6:28
+like you to do this. Excuse me. To do this and then throw all the stuff in. Make sure it's all done." And then hit
+6:33
+enter and then let anti-gravity work its magic to make sure all this different stuff is basically updated and you can
+6:39
+use it. And it's very, very cool. So, you can see it's validating, hey, I've got Node.js installed, which is awesome. Now, it's checking the git, which is
+6:45
+fantastic. Once that's done, we'll be able to rock and roll and start using this really cool software. And a secondary little hack for you as well.
+6:51
+If you click on this claude thing here to open up Claude Coder here, one of the things that you can do is if you want to connect Claude to your MCP servers if
+6:58
+you ever have issues here is if you click on this, you click on MCP servers. And by the way, MCP stands for model
+7:04
+context protocol. What it just basically is is how we connect anti-gravity to the outside world. How we connect it to your
+7:11
+Gmail and Nan and Zapia and any tool you want to. What you can do is click on MCP servers. You can click on manage MCP
+7:18
+servers and obviously you can add any that you want to right and when you're in this you can see which I just uh
+7:23
+basically bring this guy across a little bit so you can see if you click on view raw config you can copy all of that put
+7:28
+it into cloud code and say hey create your own MCP config and that will give Claude the ability to access all of your
+7:35
+MCP servers. Just a little hack I wanted to share with you just so you're ready to rock and roll at all times. These gems are just they're going to be
+7:40
+flowing throughout the video so get ready and hope you hope you're well caffeinated. Cool. So now it's done. It's basically installed everything and
+7:47
+we should be ready to rock and roll. Now, the first thing that I want to do here and the way that I kind of do it is you can create a new folder here on the
+7:52
+on the left hand side called videos or whatever you want to, right? So, if I come down here and I create a new folder and let's call this folder something
+7:58
+like videos to edit. Okay, beautiful. So, we got videos to edit. What I want
+8:03
+you to do is drop an unedited video within that folder. So, let's go and grab one from my desktop. So, I've got
+8:08
+one here which is 21 seconds long. Let's hear what it sounds like. The next thing that we need to do is make sure we're
+8:14
+leveraging 100%. No captions, right? So, this is notebook trim. So, what I'm going to do is click an X on this, right? I'm going to grab
+8:20
+this. I'm going to bring it over and drop it into videos to edit. Okay, cool. So, now it's within videos to edit. And
+8:26
+can we hear it? Which is really cool. Okay. Nice. So, very, very, very decent. So, what I want
+8:32
+to do is basically add captions. So, how do I do that? Well, one of the things that you can do if you've got a specific brand or style, we can make that happen.
+8:39
+And so what we're going to do is head back over to our notion document which is over here. And what I've done for you is listed all like three really cool use
+8:45
+cases that we can do. So if I scroll down, let's have a quick look. Workflow one is automated video caption broadcast
+8:50
+grade output. So we give it the input. What it's going to do is analyze and cut. So it's going to transcribe your
+8:56
+entire video with whisper word level timestamps. So this is going to know intelligently where to cut the video and
+9:03
+where not to cut the video. It's going to pass the transcript. And we've given you all these instructions because I did all the I wanted to go and take some
+9:10
+time to get deep into this to make sure I can give you something that's really freaking sick. It's going to go through and he take two moments. So for example
+9:15
+often times you if I make a mistake does JR make mistakes? Yes, he does sometimes actually 100%. What happens to pass
+9:22
+transcript is it will say oh great that was obviously mistake and it will cut that out for you. It's going to trim the video then it's going to audio process
+9:28
+it using something called which is incredible by the way and you can get started with it for free. So, it's going
+9:33
+to improve your audio output, and I'll show you the difference. Then, what it's going to do is a reotion caption engine, and that's going to be the thing that
+9:39
+adds in the font. The biggest mistake that people make with this stuff, people don't pay enough attention to detail on
+9:45
+the fonts and the size of the fonts, the visual hierarchy, the whites space, how it flows, um, all these different
+9:50
+details. We've got all the typography. So, again, we're going to get some brilliant, beautiful Google fonts. We've
+9:55
+got different spaces. These are just the ones that I found works best for me, um, just having a look at it. And then
+10:02
+basically we've got styling logic. So this has been pulled from my website. I'll show you that in a second. Text
+10:07
+shadow audio cleanup rules. And then we've got the render and the product structure and the execution rules. So what we're going to do is literally copy
+10:13
+this like so. One second. Let me come and grab uh all of this content like that. Come all the way down. Sweet. So
+10:19
+I'm going to do this. I'm going to head back over to anti-gravity which is here. And then what I'm going to do is I'm going to say tag the project file. So do
+10:25
+shift at if you type in I think it's videos to edit. Videos to edit right
+10:30
+there. It's got one file and I'm going to come down and just paste it in. Really, really cool. Okay. And send that off. Fantastic. Now, I want to give you
+10:37
+another bit of uh wisdom. So, I've already pre-selected here my own specific brand guidelines. But check
+10:42
+this out. If I double click on the hole here, I click on club code, which I can open the terminal. I just do this
+10:48
+because I prefer the interface. I might say, "Hey dude, head over to this website and I want you to extract the
+10:54
+brand guidelines terms of the typography. I want you to go ahead and grab the logo for me and anything else
+11:00
+and then create a file on the left hand side called glido visual identity. Okay,
+11:05
+check this out. And I go for https.glido.com. Beautiful. I'm just send that one off.
+11:10
+As you can see, this agent is undergoing some kind of improvement right now. Hence why it's like terminated. So, what
+11:16
+I'm actually going to do is show you right now how you can leverage this claude code thing within anti-gravity if
+11:21
+you ever come into basically if you ever encounter a timer like this. So, we're going to dismiss this. We're going to
+11:26
+come back over and we're going to copy all this information like so. And what we're going to do is just pause this guy for a sec. And you know what's really
+11:31
+cool? Let's open another one. And now we've got two different cool code tabs. And look at this. And I'm going to hit that in like that. And instead of ask
+11:36
+before edits, let's just say edit automatically. Okay. And then send it off. And we can have multiple of these different instances running for us. And
+11:42
+this one can be edit automatically. So we have one cloud agent that's going out and grabbing information. And if you've
+11:47
+got a specific brand or style, I recommend that you do that yourself so that you can make sure that you know um
+11:52
+it basically reflects your brand identity. And then we got the second one here which is going to go ahead and do it. So look at this. Ask us some
+11:58
+questions. What is the path to your video file? We are going to say uh custom path. I'll provide the full path. Do you have an Oronic API key set up?
+12:04
+I'm going to say uh yes. Different variable name. So I want you to do this. You can skip if you want to, but I highly recommend it like so. And I'm
+12:11
+going to give it the information. So let's go ahead and grab our Oronics API key. So to do that, click on Brave. I'm going to head over to orphonic.com.
+12:17
+Again, I use Oronic for like everything. It's really freaking cool. So this is a free account that I made. You get 2 hours of processing completely free.
+12:24
+I've got the paid version, but I highly recommend that you use it. So, have to come down and grab our API key. To do that, you're going to click on the cog.
+12:29
+I believe it is an account settings. And then when you scroll down, you'll have an API key. Now, you can reset it if you want to get a brand new one. For
+12:35
+example, I could do reset API key. Yes, I'm sure 100%. And I get a new one. You're just going to copy that. Then head back over to anti-gravity. And once
+12:41
+here, we're going to finish given information. So, what is a full path to our video? So, a full path to our video is right here. So, you can right click
+12:47
+on that. You come down and you're going to copy path. and you come over and then you're going to go for other and just type in the path there. And then it's
+12:53
+asking for orphonic key. So I'm going to come down and give it the oronic uh key right this just do other and just say
+12:58
+this is the API key and then you're just going to paste in the key that you got from oric and then claude can start
+13:04
+working its magic in the background. Then I come back over to our first Claude environment and you can see the SVG logo is glider geometric icon icon
+13:11
+uses XYZ. So we start to get some brand identity and brand guidelines which is cool. But what we can do if we want to get an even more detailed version of it.
+13:17
+So we're going to say yes, that's fine. Is you can head over to uh let's come over here right now. And here you get again overview. Really cool. Come to
+13:23
+playground. All you have to do is type in glido.com which is our speechtoext
+13:29
+startup just launched in beta. Very very fast I must say. And you can see now once that's done uh we're going to come
+13:35
+down and we can see the branding which is awesome. What this will do is basically attack a website. I say attack. Attack is really a powerful
+13:41
+word, but it'll go onto a website, grab all the information, data for you, and give you everything from it. So, here you can see we've got the logo, we got
+13:47
+the primary colors, we got the fonts. So, you can just copy this for any website, come back and then build videos in those assets. And you can see now,
+13:54
+look at this. It's extracted the video and transcribed it with whisper API. It's analyzing the transcript, identify clean take, and then it's going to
+14:00
+process the audio through oronic. So, often times online for any content, people will forgive bad visuals. They
+14:07
+will never forgive bad audio. So that audio crispness is so so important. So the fact now that we got this workflow
+14:13
+where like we can edit it, we can trim it, we can like do anything and also get beautiful captions at the right moment
+14:20
+is crazy. And I just want to say as well, you can scale this up to I'd say infinite complexity. Uh and by that I
+14:27
+mean that we can build a series of editing rules. We can say hey first of all eliminate all pauses. Secondly, if
+14:33
+there's a double take, remove the first take. And by trial and error, you can build up an editing system and you could
+14:40
+edit a full video with this 100%. But even if you didn't want to, you can still save like 80 to 90% on your
+14:46
+editing time that will completely enhance all the audio. So at the moment, for example, before this, my editor is
+14:51
+grabbing my videos. What he does, he runs it through a right now. This could be set up programmatically, but it doesn't physically need to do this. Like
+14:57
+that's the level we're getting to now. It's really crazy. And at this stage, we can see it's now running the remotion caption project, which is freaking
+15:03
+awesome. And I love this. Like the fact that we can edit videos is so crazy. Like, you know, imagine like how many
+15:10
+more clients video editors could work with now as a result of this. It's so freaking cool, honestly. And what I like
+15:16
+the most is the typography we can do, the colors we can do. And I'm going to show you exactly what that looks like.
+15:22
+Honestly, I hope you buckled in cuz this is about to get crazy. Just want to pull your attention. So, can you see this? Look, this is when I say it's covered
+15:27
+everything. So, look, this has pulled down everything. So, now we've covered exactly and it's almost to a millisecond
+15:33
+here, guys. everything I've said and where it is and it's pulling up the specifics. It's cutting things out. It is really freaking impressive. It's like
+15:40
+video editing software. Like I started off learning Premiere Pro like when I was actually no first it was iMovi
+15:49
+and these other environmental tools include code just keep snatching up and moving into every software imaginable.
+15:54
+And as you can see right now guys it's now rendering the final video to the desktop. Now there's a big divide in the
+16:00
+kind of like coding community about like do I should I just use the terminal or this? You can use a terminal right? You
+16:05
+can use that terminal to do things. In my view though I think visual interface matters for this kind of thing which is
+16:11
+why I prefer to build in these environments. One thing I also want to point attention to as well is that you
+16:16
+can do this for multiple videos simultaneously. So for example, if I have five videos, 10 videos, 50 videos,
+16:22
+I can create so many different just keep on pressing this button basically going through it and each of them will go and
+16:28
+work on a completely separate video. Like that's how we're talking about programmatic. Like this is why it adds scale. You nail the process. Then you
+16:35
+can scale this up using these tools. And so like this, it's now completed. Whisper transcription 74 words with all
+16:41
+time stamps. No edits needed. It's already clean. Fantastic. But I can assure you it does editing quite well.
+16:47
+Leveled normalized. So, it's done or phonics processing and it's deninoised it. So, we can actually listen to the difference and caption engine. Okay,
+16:54
+beautiful. So, to put it on my desktop. So, let's head over to my desktop and check this out. Beautiful. So, now it has officially completed it. So, let's
+17:01
+compare the difference. And as you can see in videos to edit, I've got both the previous and the new one. So, let's
+17:06
+check out the difference. And I want you to pay close attention to the audio difference. You ready? So, now we've covered exactly how to leverage Notebook
+17:11
+LM and combine that with anti-gravity. Okay? So, now we've covered exactly how to leverage Notebook LM and combine that
+17:18
+with anti-gravity. The next thing that we need to do is make sure we're leveraging 100% of anti-gravity's
+17:24
+capabilities by using its skills because you see the difference in audio quality, guys, and the actual transcripts.
+17:31
+I mean, this is literally insane. Like, and that transcription was perfect. Like, genuine. Look at this. It's
+17:38
+outrageous all the way through. Look, it's insane. using its skills because if we're not using the skills, we're not
+17:44
+getting the most out of the platform. But what if I want to edit it, right? Well, check this out. And I've just asked it to increase the text by 40%.
+17:49
+And it will do that for us. Edit it and then put it there. So, what we'll have on the left hand side is a videos to edit folder. Then underneath can be
+17:56
+completed edits. And if it gives you back anything that you don't like, we just say, hey, basically fix it. Now,
+18:01
+the key final step here before I show you the next level is that whenever it's finished, I want you to give it the
+18:07
+following prompt, which is, "Hey, dude. What I'd like you to do is create a system and a standard operating
+18:12
+procedure to replicate this. So if I give you future videos that you'll be able to do the exact same style and be
+18:18
+extremely specific when I trigger this please. Awesome. You can even create a skill to do that as well. So it's very
+18:23
+thing I might even say what I'd like you to do is create for me a skill for this that I can activate that will then
+18:29
+repeat the process. Bam. You basically just say that to it throw it in and then it will go ahead and do that for us. And
+18:34
+what I'll do guys also is I'll just copy this and I'll add this to the notion document so you can make it replicable also. And just so you know where it is
+18:40
+guys is right at the bottom of the page and also this is now complete. So now it's increased it from 140 pixels to
+18:45
+200. So let's check it out and see what it looks like. We've covered exactly how to leverage notebook airline and combine
+18:51
+that with our tight gravity. The next thing that we need and that's it. And guys you can see just how freaking crazy
+18:58
+this is. Now, this is just the beginning because this now takes us very nicely onto the second level. And so now we can
+19:04
+edit any video. We want to enhance the audio with a completely autonomous workflow that could do it for 100 videos
+19:10
+without touching a single keyboard. And we build more on these intelligent systems inside the school community. So
+19:16
+you can check that out if you like. But here's an interesting thing we can do now is that we can give a website to
+19:22
+this skill and effectively have it create for us any kind of video graphic animations, which is exactly what we're
+19:28
+going to do next. And I'm going to tell you this, which is really interesting, is not only can it work effectively, it can pull down any asset from that page.
+19:34
+Okay, we're include code now. I want you to check this out, guys. You see it's 57% used. The second you hit 50%, I want
+19:39
+you to do one thing. And all that is is literally new window. Bam. Why? Because context rot. After you reach 50%, okay,
+19:46
+the first 50% is you and me in the morning. It's 10:00 a.m. Got our coffees. We're best at life. Second 50%
+19:51
+is when it's like 11:50, we're starving, we're tired, we want to go to bed, and we're not eating at 10 hours. The point
+19:57
+is you like refresh the browser. You'll find the performance goes through the roof if you do that. Now, check this out. I'm going to give it a prompt like
+20:03
+this. Well, actually, hold on a second. Should we write the prompt or should we just swing back over to this document here and just grab it from here, which
+20:08
+is the website to design system animation reotion showcase. All we're going to do is give it a website URL.
+20:14
+So, why don't we do it for glido https da uh bum bum glido.com. What it's going
+20:19
+to do is really interesting. So, we are going to analyze and extract the design system. So, typography, colors, icons,
+20:25
+logo, layers, and components. We're going to create a animated motion showcase. So, in the dimensions that we want, the frames per second, we want the
+20:31
+length. We specify change this if you want to. Timeline storyboard intro typography color palette. Blah blah blah blah. Again, this is more just showing
+20:37
+what it could do. What I'm going to do is actually remove this cuz we're not really going to do a storyboard like that. Animation style rules, use spring
+20:43
+light motion, keep it minimal, really cool. And then I'm going to generate the files and then have the output. So, what we're going to do is literally just copy
+20:48
+this right here. Let's come down and grab this. And then we're going to head back over to um anti-gravity. And then
+20:53
+I'm going to say, "Hey dude, I want you to do for me a 15-second video just describing what the product does. And I
+20:58
+want you to sell Maui, not the flights to Maui. I want you to leverage the copy on the page. And I also want you to pull
+21:04
+down every single individual asset like the logos, the logo of the brand, and everything else to create it as per the
+21:10
+below specifications." Cool. And what's ironic here is we're using the tool to get the tool, which is crazy. I'm going
+21:16
+to hit execute immediately, and then Claude Co can start to build that for us in the background. Now, for me, when I'm
+21:21
+looking at tools like remote, what do I think? You know, in the AI space, there's definitely hype for certain
+21:28
+things. And what I want to do in this channel is stay away from that. Like, it's got to be actually functional and
+21:34
+workable. Which is why every example I show in this video is how you can get production level output, something that
+21:40
+you would actually genuinely use. And this stuff is really freaking cool. If you follow these systems, you can do it
+21:45
+for anything. And again, if you're struggling on ideas, let's come back up here. All this stuff you can play around with. This is like being a kid in a
+21:51
+proverbial candy store looking at all this kind of stuff. So I the way you should think now going forward when you
+21:56
+want to do any editing or image or asset creation is can this be done programmatically with anti-gravity with
+22:02
+these tools with remotion using cold code. If it can it might make sense to build up a workflow. And on that point
+22:08
+we've also got all the to-dos now are being updated. So it's downloading all the assets the logos the testimonials.
+22:14
+It is going to create the the theme designer showcase and then when it's done it's going to render the video to the desktop. I just told it to put it on
+22:20
+to desktop because that's where I grab my stuff but in theory it could be anywhere. We could even have a fold on the left hand side. Whatever you sell
+22:25
+the instructions it will follow that for you. Now the other cool thing about it being an anti-gravity is that we can use Gemini, right? And the Gemini model has
+22:32
+access to Nana Banana. We could also connect this to Nano Banana. So we could generate literally like the best images
+22:39
+generated for anything ever and incorporate that in our videos. like it has the ability because when you connect
+22:44
+anti-gravity and claude code to anything, that's when its skills and potentials really go through the roof. And so guys, when it's complete, look at
+22:51
+the breakdown here. Scene one, hero, the glider logo, it's got SFG, the headline, typography, element two, speed
+22:57
+comparison, blah blah blah blah. Well, lots of interesting details. Let's freaking check it out. Let's open it up real quick, which I have got open for us
+23:03
+here. So, it's full screen and see what it made for us. All right, sweet. Five times fast in every app. Love it. The speed difference is Look at that. But
+23:11
+that is freaking gorgeous. Speak naturally. Words appear instantly. Then we've got the logos and they're kind of got this nice soft float to them. Glad
+23:18
+work speed of thought. Try Gladree. Blah blah blah. How freaking cool is that? Now let's say that we had a client. So
+23:23
+Jack, I don't like green. I like blue. Well, let's just actually come back over down to Gravity and say, "Hey dude, love
+23:29
+it. Could you just change the green for a blue?" That would be kind of like similar to the green, but the blue
+23:35
+version of the green. Bam. Send that one off. And we can make edits like this. I could say, "Make me three versions. One
+23:41
+blue, one yellow, one green, and I'll decide." And you'll get three completely different versions. All right, guys. So,
+23:46
+it's done it and it's opened up. Let's see what we've got. Okay, the glide logo works five times faster. It does indeed.
+23:51
+The speed difference is dramatic. We got blue. It changed it to blue. That's freaking I mean, I'm not surprised. This is really freaking cool. But it's just
+23:58
+done this. We just change colors or do anything. There's anything about this aspect that we don't like, we can change it. And we build a system of rules to do
+24:05
+that, which is freaking amazing. So for example, I might say, I love the design style with the green one. What I want
+24:10
+you to do is create a series of system instructions and a skill on the left hand side so that in the future when I
+24:15
+give you a website, I want you to reproduce the exact same thing that you did for me there. Boom. Now, obviously,
+24:21
+I have given you the prompt, but when we codify that as a skill, you can basically crush it and it'll just do this whatever. Now, we have a video
+24:26
+editing skill for X and a video editing skill for Y. So, it's worth you thinking about what are all the asset creations,
+24:33
+animations, video editing that I want to do. codify them in skills and anti-gravity and then let it run rip and
+24:39
+do all of it for you without touching a single button. And so now you understand exactly how to edit any video, do audio
+24:44
+processing, and you also know how to create bespoke animations and graphics that you would actually use and display.
+24:50
+The final step that we want to do here then is learn how to build animated dashboards or graphics for our websites,
+24:57
+for our AI apps that are actually connected to live data. Now, this is
+25:02
+going to absolutely blow your mind. So let's start by heading back over to the notion document and we're going to go down to beautiful use case number three
+25:09
+which is this gorgeous thing here. So website styled interactive dashboard UI. Let's go. And what I've basically said
+25:15
+of this is do mock data first. Now let's look at the goal. So build an interactive dashboard UI that matches the visual language of insert website
+25:21
+URL. We'll connect superbase later but for now design system extraction UI build and real interactivity and mock
+25:28
+data. Deliver a functional responsive UI that looks like the website feels premium. hover over active states,
+25:34
+skeletons, models, charts is architected for an easy superbase swap later. Superbase is kind of like Microsoft
+25:40
+Excel that's been hitting the gym for a few years and it's where we're going to store all of our core data. So for example, we could store the number of
+25:46
+subscribers we have or the number of GitHub stars that we have and we can now have these interactive beautiful dashboards anywhere on our websites on
+25:53
+our apps that are connected to Superbase to our live data that has been designed and developed and animated by this
+26:00
+skill. And but the future is here now. Number one is extract the design system from the website. Typography, colors,
+26:06
+components, spacing and layout. We could use the superbase MCP for this. Uh next
+26:11
+one is to build a dashboard using extracted style. Core components match website. Exactly. Data table, charts,
+26:16
+models, interactive states, and then mock data architecture that I provided for you down below. Again, all you're
+26:21
+doing is copy and pasting. So let's come and do this. Copy it and head back over to anti-gravity. And once we're here,
+26:27
+looks like we're 96% used. So, let's just click on that plus and start a fresh. Cool. I'm going to come down
+26:32
+here, throw this one in here, and we're going to give it the website, which is going to be just do glido.com.
+26:38
+Beautiful. And we come down and hit enter. And now that's complete. We can check out this beautiful glider dashboard that it's built for us. So,
+26:43
+let's give a look. Can we actually full screen this? Oh, we can. Okay. So, let's hit play and see what we've got. Wow.
+26:48
+Oh, that is really cool. Look at that. That's freaking sick. So, what I now want to do now I've got the component I
+26:54
+like. We can decide the things we want. T uses revenue active now, blah blah blah. Very cool. Let's actually just
+26:59
+give it the following prompt, which I think is going to be interesting. So, you'll know from our website design video. So, check this out. We build gorgeous websites. I mean, look at this
+27:06
+interactivity. This will either be the video preceding this or it'll be the next one. I'll let you see. But if it's the next one, you're really going to
+27:12
+want to check out how I do this. But you can see this gorgeous website, right? You hover over things. We've got this wonderful thing that pops up. Um, get a
+27:19
+free critique on your website, which is our lead magnet. Invest in ROI different growth packages. By the way, these testimonials are amazing because they go
+27:25
+left to right. They're gorgeous. And when you scroll down, we got this beautiful animation. Stop burning cash on bad websites. Freaking awesome. Then
+27:31
+at the bottom, you can also come down and create an account. And just look at this interactive form. I show you
+27:37
+exactly how to build this. But the point is, let's say that on this website, we wanted to talk about number of clients we work with. Well, we can build an
+27:43
+interactive dashboard like I've just shown you, integrated onto this website, for example, and the second we get a new
+27:49
+client, we update that in Superbase, and it reflects instantaneously. It could be revenue. It could be number of Instagram
+27:55
+followers, YouTube followers. And we have these gorgeous dynamic dashboards now that are animated that we can sync with data. Do you see how crazy this is?
+28:02
+So, if I come back over to anti-gravity, I'm going to say yes, make all the edits. It's super cool. When that's
+28:08
+done, we're going to have it on a web page and then we're going to connect it to Super. So, you can see exactly how you do this for any build you're doing
+28:13
+for your own business or those of your clients. Beautiful. So, now we've got it. I'm having a look at it and it's going left to right. That's not kind of
+28:19
+what I really wanted. What I wanted to do is more rotate like three-dimensionally. So, let's give it that feedback. And then let's also say
+28:25
+that I want it to be interactive components. If I were to hover over it, it would like kind of change colors and
+28:30
+stuff. So, let's go back to anti-gravity and we'll give it fun prompt. Hey, dude. Sorry, I didn't mean left to right. I kind of want it to be like very small
+28:37
+movements, but almost like it's rotating on an axis, like it's 3D. So, it doesn't go left to right. It kind of like
+28:42
+imagine like the right side seems a bit closer, then the left side seems a bit closer, but only small distinct movements. After that, I would like to
+28:49
+then go ahead and embed this onto a HTML website for me. Beautiful. I'm going to turn that one off and let my
+28:54
+anti-gravity work its magic. Beautiful. So, now it's done it. We've got this thing here. We've got the logo. We've got features and pricing and example
+29:00
+thing. If I scroll down and look at our dashboard, guys, you hover over things. I love that neon glam. So, these numbers
+29:07
+though are not really accurate. We want to connect it now to Superbase. So, what
+29:12
+I'm going to do is literally head straight back over now to anti-gravity. And then we're going to give it the following prompt in anti-gravity. Hey
+29:17
+there dude. I want you to connect to Superbase via the Superbase MCP. And what I'd like you to do is connect that
+29:24
+with the numbers on the front end dashboard. If those numbers don't exist, simply create them for me in the
+29:29
+Superbase MCP. Awesome. And once you've entered in that prompt, it'll then use your Superbase MCP to connect. Now, the
+29:36
+cool thing about anti-gravity is that easy to connect it together. And the way you can grab any MCP you want to is you
+29:41
+can head over to any language model. So, say for example, look, I've got all these code instances, right? But check this out. I can very easily open up a
+29:47
+new one by clicking this. Go and find me what the MCP config is. What would it be? Blah blah blah. Whatever it is, it will then grab it. And then what we can
+29:54
+do is head over to Superbase and grab our key, which is awesome. So, yep, configuration is fantastic. And so, the
+29:59
+URL you go to, guys, is superbase.com/dashboard/account/tokens.
+30:05
+Come down here to generate new token like so. And we'll call this one Jack Roberts 654. All right. And click on
+30:11
+generate new token. I'll just put this to expire within an hour for argument sake. Obviously, as long as you'd like. It's going to generate and you're going
+30:17
+to copy. Then head straight back over to anti-gravity. And then we can say something like, "Hey dude, I want you to connect with the Superbase MCP using the
+30:24
+below token and save this to the clawed MCP file so that I may use this at any
+30:29
+time in the future with all the clawed agents. Awesome. Come down and head that in." Wonderful. And once you've added it
+30:36
+in, guys, it will now add the Superbase MCP for you. So you don't even need to think about the dashboard, touch the dashboard, dream about it. It doesn't.
+30:42
+Now, you'll need to reset Claude to do this. And you just say to Claude, "Hey, give me a prompt so that when I restart
+30:47
+it, I can pick up the conversation where I left." And all you do is just copy the prompt like that, like so. And then
+30:52
+we're going to click up on both of these. And then what we're going to do is shut down anti-gravity and just quit it. Then when we reload, double click,
+30:58
+which is going to be cool, like so. And then again, we're going to click on the Claw thing here. And then once we've got Clawude open, we just come back and we
+31:03
+enter in the prompts, which is cool. And we'll just do the edit automatically for us, please. Bam. And then it should be
+31:09
+ready to rock and roll. Once this is done, we'll have your dynamic, beautiful visual connected to a backend database. And whenever that number changes, your
+31:15
+website will update for you automatically. And this works with any component, any style. We could sit down
+31:20
+here and tell it to change it to blue, to change the numbers, to change the design, the layout, the anything you could possibly want. This is saying to
+31:27
+base setup, we're going to go for the Superbase MCP real quick. That's fine. Let's submit that. Beautiful. And then once it's connected to the MCP via
+31:33
+Superbase, it should now be a direct reflection. So, we've got the website. We can see our graphics. This is exactly
+31:38
+what we built. Very cool. We love this glow. So if I head over to Superbase and you can find the table by on the left
+31:43
+hand side coming down to table editor and you should see the table there and I've got values. So let's just say that
+31:49
+could be hey this is how much revenue we've generated for our clients or this is how many clients we've got. So 100,000. What if it was 200 actually
+31:56
+250,000? Awesome. Then if I come back over to the website here we should see this update now to 250,000 once I refresh the page.
+32:04
+I'm going to come down there and now the remy has become $250,000. Now, knowing how to build beautiful graphics is
+32:10
+amazing, but it won't ever let you reach your potential unless you know how to build beautiful user interfaces that

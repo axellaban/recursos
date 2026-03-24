@@ -1,0 +1,727 @@
+{
+    "name": "Scenario 1 🔮",
+    "flow": [
+        {
+            "id": 1,
+            "module": "google-sheets:watchRows",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 1416296,
+                "mode": "select",
+                "includesHeaders": true,
+                "limit": 2,
+                "valueRenderOption": "FORMATTED_VALUE",
+                "dateTimeRenderOption": "FORMATTED_STRING",
+                "from": "drive",
+                "spreadsheetId": "/18n6H1I7BB21rsLN6--NkosP2gDwern2n4mNnd7TH6C0",
+                "sheetId": "Sheet1",
+                "tableFirstRow": "A1:Z1"
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "Google Connection (itssssjaaaack@gmail.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            }
+                        },
+                        "mode": {
+                            "label": "Search by path"
+                        },
+                        "includesHeaders": {
+                            "label": "Yes"
+                        },
+                        "valueRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted value"
+                        },
+                        "dateTimeRenderOption": {
+                            "mode": "chose",
+                            "label": "Formatted string"
+                        },
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "Create Together Automation 🔮"
+                            ]
+                        },
+                        "sheetId": {
+                            "label": "Sheet1"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "mode",
+                        "type": "select",
+                        "label": "Search Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "select",
+                                "fromAll",
+                                "map"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "includesHeaders",
+                        "type": "select",
+                        "label": "Table contains headers",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                true,
+                                false
+                            ]
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    },
+                    {
+                        "name": "valueRenderOption",
+                        "type": "select",
+                        "label": "Value render option",
+                        "validate": {
+                            "enum": [
+                                "FORMATTED_VALUE",
+                                "UNFORMATTED_VALUE",
+                                "FORMULA"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "dateTimeRenderOption",
+                        "type": "select",
+                        "label": "Date and time render option",
+                        "validate": {
+                            "enum": [
+                                "SERIAL_NUMBER",
+                                "FORMATTED_STRING"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Spreadsheet ID",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet Name",
+                        "required": true
+                    },
+                    {
+                        "name": "tableFirstRow",
+                        "type": "text",
+                        "label": "Row with headers",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "__ROW_NUMBER__",
+                        "label": "Row number",
+                        "type": "number"
+                    },
+                    {
+                        "name": "__SPREADSHEET_ID__",
+                        "label": "Spreadsheet ID",
+                        "type": "text"
+                    },
+                    {
+                        "name": "__SHEET__",
+                        "label": "Sheet",
+                        "type": "text"
+                    },
+                    {
+                        "name": "0",
+                        "label": "Insert Any Article 👇 (A)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "1",
+                        "label": "LinkedIN Post  💼 (B)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "2",
+                        "label": "Post? (C)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "3",
+                        "label": "X 🐥 (D)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "4",
+                        "label": "Post? (E)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "5",
+                        "label": "Facebook 👨‍👩‍👧‍👧 (F)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "6",
+                        "label": "Post? (G)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "7",
+                        "label": "Instagram 👀 (H)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "8",
+                        "label": "Post? (I)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "9",
+                        "label": "(J)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "10",
+                        "label": "(K)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "11",
+                        "label": "(L)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "12",
+                        "label": "(M)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "13",
+                        "label": "(N)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "14",
+                        "label": "(O)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "15",
+                        "label": "(P)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "16",
+                        "label": "(Q)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "17",
+                        "label": "(R)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "18",
+                        "label": "(S)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "19",
+                        "label": "(T)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "20",
+                        "label": "(U)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "21",
+                        "label": "(V)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "22",
+                        "label": "(W)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "23",
+                        "label": "(X)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "24",
+                        "label": "(Y)",
+                        "type": "text"
+                    },
+                    {
+                        "name": "25",
+                        "label": "(Z)",
+                        "type": "text"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "perplexity-ai:createAChatCompletion",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425898
+            },
+            "mapper": {
+                "model": "mistral-7b-instruct",
+                "messages": [
+                    {
+                        "content": "Transcribe this article word for word: {{1.`0`}}",
+                        "role": "user"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Perplexity connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "perplexity-ai"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "model": {
+                            "mode": "chose",
+                            "label": "mistral-7b-instruct"
+                        },
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                {
+                                    "role": {
+                                        "mode": "chose",
+                                        "label": "User"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:perplexity-ai",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "pplx-7b-chat",
+                                "pplx-7b-online",
+                                "llama-2-70b-chat",
+                                "mistral-7b-instruct",
+                                "mixtral-8x7b-instruct",
+                                "sonar-small-chat",
+                                "sonar-medium-chat",
+                                "sonar-small-online",
+                                "sonar-medium-online"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "messages",
+                        "type": "array",
+                        "label": "Messages",
+                        "required": true,
+                        "spec": [
+                            {
+                                "name": "content",
+                                "type": "text",
+                                "label": "Content",
+                                "required": true
+                            },
+                            {
+                                "name": "role",
+                                "type": "select",
+                                "label": "Role",
+                                "options": [
+                                    {
+                                        "label": "User",
+                                        "value": "user"
+                                    },
+                                    {
+                                        "label": "Assistant",
+                                        "value": "assistant"
+                                    },
+                                    {
+                                        "label": "System",
+                                        "value": "system"
+                                    }
+                                ],
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "name": "max_tokens",
+                        "type": "number",
+                        "label": "Max Tokens"
+                    },
+                    {
+                        "name": "temperature",
+                        "type": "number",
+                        "label": "Temperature",
+                        "validate": {
+                            "max": 1.999,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_p",
+                        "type": "number",
+                        "label": "Top P",
+                        "validate": {
+                            "max": 1,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "top_k",
+                        "type": "number",
+                        "label": "Top K",
+                        "validate": {
+                            "max": 2048,
+                            "min": 0
+                        }
+                    },
+                    {
+                        "name": "presence_penalty",
+                        "type": "number",
+                        "label": "Presence Penalty",
+                        "validate": {
+                            "max": 2,
+                            "min": -2
+                        }
+                    },
+                    {
+                        "name": "frequency_penalty",
+                        "type": "number",
+                        "label": "Frequency Penalty",
+                        "validate": {
+                            "min": 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "openai-gpt-3:sendMessageToAssistant",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1425946
+            },
+            "mapper": {
+                "message": "{{2.choices[].message.content}}",
+                "role": "user",
+                "assistantId": "asst_SKEKakTxGEdYTUT0J8QYFZkK"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My OpenAI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "openai-gpt-3"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "assistantId": {
+                            "mode": "chose",
+                            "label": "Linkedin Build Together 🔮 (gpt-4-turbo)"
+                        },
+                        "model": {
+                            "mode": "chose",
+                            "label": "Empty"
+                        },
+                        "fileIds": {
+                            "mode": "chose"
+                        },
+                        "tools": {
+                            "mode": "chose"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:openai-gpt-3",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "message",
+                        "type": "text",
+                        "label": "Message",
+                        "required": true
+                    },
+                    {
+                        "name": "role",
+                        "type": "hidden",
+                        "label": "Role"
+                    },
+                    {
+                        "name": "assistantId",
+                        "type": "select",
+                        "label": "Assistant",
+                        "required": true
+                    },
+                    {
+                        "name": "threadId",
+                        "type": "text",
+                        "label": "Thread ID"
+                    },
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model"
+                    },
+                    {
+                        "name": "fileIds",
+                        "type": "array",
+                        "label": "File IDs",
+                        "validate": {
+                            "maxItems": 10
+                        },
+                        "spec": {
+                            "type": "select",
+                            "label": "File ID",
+                            "options": [],
+                            "name": "value",
+                            "dynamic": true
+                        }
+                    },
+                    {
+                        "name": "tools",
+                        "type": "select",
+                        "label": "Tools",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "retrieval",
+                                "code_interpreter"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "instructions",
+                        "type": "text",
+                        "label": "Instructions"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "google-sheets:updateCell",
+            "version": 2,
+            "parameters": {
+                "__IMTCONN__": 1416296
+            },
+            "mapper": {
+                "select": "list",
+                "cell": "B{{1.`__ROW_NUMBER__`}}",
+                "value": "{{3.result}}",
+                "valueInputOption": "USER_ENTERED",
+                "from": "drive",
+                "spreadsheetId": "/18n6H1I7BB21rsLN6--NkosP2gDwern2n4mNnd7TH6C0",
+                "sheetId": "Sheet1"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 900,
+                    "y": 0
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "Google Connection (itssssjaaaack@gmail.com)",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "select": {
+                            "label": "Select from the list"
+                        },
+                        "valueInputOption": {
+                            "mode": "chose",
+                            "label": "User entered"
+                        },
+                        "from": {
+                            "label": "My Drive"
+                        },
+                        "spreadsheetId": {
+                            "path": [
+                                "Create Together Automation 🔮"
+                            ]
+                        },
+                        "sheetId": {
+                            "label": "Sheet1"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Enter a Spreadsheet and Sheet ID",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "map",
+                                "fromAll",
+                                "list"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "cell",
+                        "type": "text",
+                        "label": "Cell",
+                        "required": true
+                    },
+                    {
+                        "name": "value",
+                        "type": "text",
+                        "label": "Value"
+                    },
+                    {
+                        "name": "valueInputOption",
+                        "type": "select",
+                        "label": "Value input option",
+                        "validate": {
+                            "enum": [
+                                "USER_ENTERED",
+                                "RAW"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "spreadsheetId",
+                        "type": "file",
+                        "label": "Spreadsheet ID",
+                        "required": true
+                    },
+                    {
+                        "name": "sheetId",
+                        "type": "select",
+                        "label": "Sheet Name",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com"
+    }
+}

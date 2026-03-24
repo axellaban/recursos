@@ -1,0 +1,754 @@
+[00:00:00] ever wondered if you could automate your
+[00:00:01] entire social media content game imagine
+[00:00:04] a social media agent that could not only
+[00:00:06] create the content for you but that
+[00:00:08] could then go ahead and actually post it
+[00:00:09] for you directly on the platform so in
+[00:00:12] this video I'm going to show you the
+[00:00:13] step-by-step content generation system
+[00:00:15] that let you create things and post it
+[00:00:16] automatically making growing and posting
+[00:00:19] on social media easier than ever before
+[00:00:21] now to build this we're going to use a
+[00:00:22] couple technologies first of all is
+[00:00:24] Livable.dev that will create our
+[00:00:25] beautiful front-end application here
+[00:00:27] we're going to have our settings we can
+[00:00:29] give it our tone of voice and who our
+[00:00:31] specific target is this means that any
+[00:00:33] social media post that we create whether
+[00:00:35] that be on Instagram Tik Tok YouTube
+[00:00:37] LinkedIn X whatever the specifics are
+[00:00:39] knows how we talk how we communicate and
+[00:00:42] actually who our target customer is
+[00:00:44] which is super relevant in creating our
+[00:00:45] content that also means everything we're
+[00:00:47] unique now where I've built this is the
+[00:00:49] drop anything section so that could be a
+[00:00:52] um any article you want any thoughts
+[00:00:54] like hey do a video on how freaking cool
+[00:00:56] these iPhones are whatever it is doesn't
+[00:00:58] really matter then once this is done you
+[00:01:00] can come down and basically we just say
+[00:01:02] for example I want to know uh dentists
+[00:01:04] who need customers uh in 2025 I don't
+[00:01:09] know something absolutely outrageous and
+[00:01:11] then you basically select the platforms
+[00:01:13] you want to post on so for example if
+[00:01:14] you're Instagram do you want to be a
+[00:01:15] post a real a story whatever that
+[00:01:18] specific things is we can go through
+[00:01:19] some of you can multi select so if I do
+[00:01:20] a Tik Tok video I could also do a real
+[00:01:23] right and then we can update the video
+[00:01:24] URL but for argument sake let's say that
+[00:01:26] we want to do a post on X and I just
+[00:01:28] want to do text only it's not text and
+[00:01:30] image we can then specify whether we
+[00:01:32] want to schedule it and we can pick when
+[00:01:34] we want that post to go live or we can
+[00:01:36] post it immediately then we hit release
+[00:01:38] magic and then that fires off a scenario
+[00:01:39] then we're building everything in the
+[00:01:41] beautiful mega.com so let me go ahead
+[00:01:43] and grab that scenario from beautiful
+[00:01:45] community so I just come over to
+[00:01:47] community to grab the blueprint i'm
+[00:01:48] going to head over to the classroom and
+[00:01:49] this will be under every uh automation
+[00:01:51] and then number five so we come down we
+[00:01:54] just simply download this scenario right
+[00:01:55] here let's come down here and give it a
+[00:01:56] big old download we come over to
+[00:01:58] make.com import blueprint select the
+[00:02:00] file you upload the file and then the
+[00:02:02] whole thing populates automatically now
+[00:02:04] what happens is this little web hook
+[00:02:06] connects liable.com so this will grab
+[00:02:08] all the information that we've got so
+[00:02:09] for example if I come here and I run
+[00:02:10] this module only I come back over to our
+[00:02:13] beautiful scenario and I hit release the
+[00:02:14] magic confetti that's code for this is
+[00:02:17] really cool and now look guys we can see
+[00:02:19] what it's asked here if you see look the
+[00:02:21] content idea is dentist soon customs in
+[00:02:23] 2025 um and then down here we've got
+[00:02:26] let's have a look as you can see it is
+[00:02:28] Twitter text true and then guys based on
+[00:02:31] whichever route we decided uh the first
+[00:02:33] thing that happens comes down to Plexi
+[00:02:36] AI which will ruthlessly research any
+[00:02:38] topic we want to that's basically like
+[00:02:40] internet plus AI to go and say okay go
+[00:02:42] go and enrich this go find like latest
+[00:02:44] trends and the prompt for this is really
+[00:02:46] freaking cool right so basically you can
+[00:02:47] come down here and it's got like an
+[00:02:49] intelligence agent you're a specialized
+[00:02:50] research agent transforms raw content
+[00:02:52] ideas we give it a task we tell it what
+[00:02:54] kind of data it will get and what the
+[00:02:56] inputs basically are um it's research
+[00:02:58] process which is to analyze the input
+[00:03:00] research extensively gather diverse
+[00:03:02] perspectives identify content
+[00:03:03] opportunities and then it will output
+[00:03:05] information by topic overview key
+[00:03:06] findings from the last 30 to 90 days
+[00:03:08] content angles platform specific
+[00:03:10] opportunities competitive intelligence
+[00:03:11] blah blah blah so this is the kind of
+[00:03:13] like intelligence brain of our operation
+[00:03:15] which essentially means that we can
+[00:03:17] enrich it with their internet what's
+[00:03:18] also really cool about this is the drop
+[00:03:21] anything here could be a transcript it
+[00:03:23] could be something that's trending
+[00:03:24] something that's viral we find outliers
+[00:03:26] and then what this will do is enable us
+[00:03:28] to create some really cool unique
+[00:03:29] content now what's really cool is we're
+[00:03:32] posting this with Metricle which is a
+[00:03:34] sponsor of today's video which have
+[00:03:35] graciously agreed to do which is really
+[00:03:36] freaking cool and it basically just
+[00:03:38] enables us to glue everything together
+[00:03:40] and I'm going to run you through the
+[00:03:41] platform in a second as well this is
+[00:03:43] really crazy because once we've actually
+[00:03:45] done the enrichment of data we've got
+[00:03:47] all these different pathways and then
+[00:03:49] based on which pathways have been
+[00:03:51] selected it'll go down so for example
+[00:03:52] we've got these filters if it's come
+[00:03:54] down to Instagram reel it'll go down
+[00:03:56] here this AIA well this basic text will
+[00:03:59] create it so for example we've got this
+[00:04:01] is the Twitter agent creation this is
+[00:04:03] for LinkedIn creation then we've got one
+[00:04:05] for Instagram and then we've got one for
+[00:04:07] short form captions all these different
+[00:04:08] beautiful things and then this will
+[00:04:10] create all the beautiful captions and
+[00:04:12] then whether we want it to post now or
+[00:04:14] to simply schedule it or go down one of
+[00:04:15] these two routes and then that'll post
+[00:04:17] for us automatically on the beautiful
+[00:04:19] phenomenal uh metric and then obviously
+[00:04:21] metrical what's really freaking cool is
+[00:04:22] you can connect everything together so
+[00:04:24] in I've got here my Instagram I've got
+[00:04:26] Twitter I've got uh YouTube I've got all
+[00:04:28] this beautiful stuff and I can see my
+[00:04:29] follower count i can see um my followers
+[00:04:31] how many I'm getting in you got all
+[00:04:32] these beautiful dashboards and it's so
+[00:04:34] freaking easy to connect this and
+[00:04:36] make.com so if you want to build your
+[00:04:38] own front-end social media system you
+[00:04:39] can do that you can also um come in here
+[00:04:41] go into planning section schedule
+[00:04:42] everything in the platform if you want
+[00:04:44] to for the purpose of today's video I'm
+[00:04:46] showing this really sick ass automation
+[00:04:48] they can just kick some butt basically
+[00:04:50] then it will go through one of these
+[00:04:51] fields and then if you want to post it
+[00:04:52] now we'll do or delay later so that's
+[00:04:54] the whole automation let's go now
+[00:04:55] together and build this step by step
+[00:04:57] together and how would we freaking do
+[00:04:59] that well first thing we're going to do
+[00:05:00] is I'm going to get rid of all this
+[00:05:01] beautiful stuff and I've actually guys
+[00:05:03] pulled together for you um a lovable
+[00:05:06] social media agent prompt which is you
+[00:05:08] basically just grab this a poster into
+[00:05:10] Lovable and it will create for you um
+[00:05:13] the exact thing that I made there so
+[00:05:14] you're going to come down is Crl+ A and
+[00:05:16] I'll put this down below for you in the
+[00:05:17] comments section so you can grab it ctrl
+[00:05:19] + C and then come over to Lovable and
+[00:05:21] then in this window here we just paste
+[00:05:23] it in now once you've pasted it in guys
+[00:05:25] there's two things that you need to
+[00:05:26] change the first thing you need to
+[00:05:28] change
+[00:05:29] and I'll pull it up right here so you
+[00:05:30] can see is there the web hook and a
+[00:05:34] password now this is really important so
+[00:05:36] I come over to my beautiful automation
+[00:05:38] in make now first thing I do is web hook
+[00:05:41] cool i'm going to custom web hook which
+[00:05:43] is instantaneous we'll add a new one and
+[00:05:45] we'll call this one let's just say here
+[00:05:47] lovable build together with uh should we
+[00:05:50] give it a big nice blue heart emoji cuz
+[00:05:52] we are not crazy all right password now
+[00:05:55] you can add an API authentication which
+[00:05:57] basically means without this key no one
+[00:05:59] can really access it so we're going to
+[00:06:01] add a brand new key in the value we're
+[00:06:03] going to give here is something like
+[00:06:05] hello 69 is that the worst API key in
+[00:06:08] the world it 100% is um but don't worry
+[00:06:12] about it okay i've just done this for
+[00:06:13] the purpose of this video in reality
+[00:06:14] make it more difficult and actually what
+[00:06:16] it will ask then when you fire something
+[00:06:17] from your front end application like
+[00:06:19] Liverool or Bolt it will ask for that
+[00:06:21] verification code before it will
+[00:06:22] actually process it meaning you're like
+[00:06:23] way less susceptible um to hacks and
+[00:06:26] kind of miscellaneous stuff so this is
+[00:06:27] the API key value we click create now
+[00:06:30] anything that doesn't come attached with
+[00:06:31] that will not be accepted then we click
+[00:06:34] on save now we come over to our prompt
+[00:06:37] right and then we for web insert the web
+[00:06:39] hook and insert the password so the
+[00:06:40] password right here is hello 69 and then
+[00:06:42] the web hook that we want is this guy
+[00:06:44] here so we just copy that to address and
+[00:06:46] then we come back over to the web hook
+[00:06:49] oh my goodness beautiful excellent and
+[00:06:51] then we copy all of it and we come back
+[00:06:53] over to Lovable uh and then you just
+[00:06:55] enter this in and it'll start building
+[00:06:57] it beautifully in the background and by
+[00:06:58] the way this has been created this whole
+[00:06:59] prompt with the whole clear framework
+[00:07:01] for creating really effective um lovable
+[00:07:03] prompts basically what you find when
+[00:07:04] coding vibe coding is you want to get as
+[00:07:07] much of it done up front as possible so
+[00:07:09] you don't have to keep going back and
+[00:07:11] forth and get stuck in these infinite
+[00:07:12] loops of just absolute craziness so now
+[00:07:15] we've done that let me just change this
+[00:07:16] back so when I actually put this link
+[00:07:18] down below you can actually just easily
+[00:07:20] insert it cool so that's now developing
+[00:07:22] for us in the background which is
+[00:07:22] awesome now what do we want to do once
+[00:07:25] we've actually got this web hook well
+[00:07:26] the first thing we want to do right is
+[00:07:28] add in perplexity so we add in here
+[00:07:30] Plexi this will give us our internet
+[00:07:31] search click on the verified one create
+[00:07:34] a chat completion now the model we want
+[00:07:36] to select down here is going to be Sonar
+[00:07:38] Reasoning Pro which is cool and then
+[00:07:40] we're going to add in two messages the
+[00:07:41] first one is going to be uh user message
+[00:07:43] i'm just going to put down here user and
+[00:07:45] I'll just put user
+[00:07:47] ABC cool and the second one is going to
+[00:07:50] be assistant this is like the kind of
+[00:07:52] core instructions for it so come down
+[00:07:53] here and then content just type in a big
+[00:07:55] beautiful prompt and guys basically the
+[00:07:57] only thing this prompt is doing is
+[00:07:59] saying TLDDR is you're going to get some
+[00:08:02] kind of input and it's very generic of
+[00:08:03] what it could be could be a transcript
+[00:08:04] or something could be an idea could be
+[00:08:06] me waffling whatever the thing is turn
+[00:08:08] it find cool research and make it really
+[00:08:10] epic that's the TLDDR of what it is and
+[00:08:12] I read all that before now before we can
+[00:08:14] give it the user input what we need to
+[00:08:16] do is actually test this web hook and
+[00:08:18] for that we need lovable scenario to be
+[00:08:19] up and running and having a great
+[00:08:21] fantastic time beautiful guys and now we
+[00:08:23] check out what Lovable has done and guys
+[00:08:25] this has done the entire thing just from
+[00:08:26] that prompt I gave it look at how
+[00:08:28] similar this is like it's actually crazy
+[00:08:30] so again we what we're going to do we
+[00:08:32] need to send the information out back
+[00:08:33] over to make.com so that we can actually
+[00:08:36] connect things together so what we do is
+[00:08:37] we click on the web hook we click on you
+[00:08:39] can see how it's listening for a test
+[00:08:40] event so we come up to type in um an
+[00:08:44] article content uh settings we'll put
+[00:08:48] tone oops one second let's go down here
+[00:08:50] tone of voice who we Oops
+[00:08:56] so we'll probably make this a little bit
+[00:08:57] larger i need to improve a little bit we
+[00:08:58] got Instagram we can say Instagram post
+[00:09:00] you see how it lets you do one like this
+[00:09:02] is really freaking cool we'll do
+[00:09:03] Instagram real post now or schedule
+[00:09:05] let's just go for post now and release
+[00:09:07] the magic bam and then we get the
+[00:09:08] confetti let's go back over to our agent
+[00:09:11] come around here run the module come
+[00:09:12] back over here release some magic one
+[00:09:14] more time ah okay some random
+[00:09:17] information we'll just put content
+[00:09:20] beautiful and then release magic oh I
+[00:09:22] need to reselect it that's an
+[00:09:23] interesting one on mine you need to do
+[00:09:25] that all right cool that's then done
+[00:09:27] come back over and then we can see guys
+[00:09:29] it's done and what I did for you as well
+[00:09:30] is I set up the input so that it will
+[00:09:34] map exactly to um this so basically when
+[00:09:38] you get the blueprint you can actually
+[00:09:39] just copy and paste both these things in
+[00:09:41] and they will fully work and connect
+[00:09:43] together so what we do then guys now
+[00:09:45] we've got that is we kind of want to
+[00:09:47] build up a routter right so we can then
+[00:09:48] direct it down different things so I'm
+[00:09:50] going to build up one branch of it out
+[00:09:52] of respect for your time and you can
+[00:09:53] apply this to anything so what we'll say
+[00:09:55] in this routter let's say this is going
+[00:09:56] to be Instagram okay so what we want to
+[00:09:58] do first of all we'll say this is going
+[00:10:00] to be and if you can see on the one I
+[00:10:02] built over here guys the way that I
+[00:10:03] broke this routter up is we have one for
+[00:10:07] Instagram res one for Tik Tok reels one
+[00:10:09] for YouTube shorts one for an Instagram
+[00:10:11] story one for Instagram posts uh Twitter
+[00:10:14] or next uh text text and image for
+[00:10:16] Twitter LinkedIn text LinkedIn image and
+[00:10:18] text so that basically whatever the
+[00:10:20] thing is that you want it will be able
+[00:10:21] to go there and do the thing right so
+[00:10:22] let's say for example here we want
+[00:10:25] Instagram image and real or Instagram I
+[00:10:28] don't know image post okay so we come
+[00:10:29] down here what we're going to do first
+[00:10:31] of all is get chat GPT all right come
+[00:10:33] down here come down to create a
+[00:10:36] completion and what we effectively want
+[00:10:38] to do uh let's have a quick look
+[00:10:41] okay amazing so we come down here
+[00:10:43] fantastic pick the model gpt40 minis is
+[00:10:46] okay we'll go with this one here it's
+[00:10:48] okay uh max tokens is going to be zero
+[00:10:52] beautiful and then what we want to do
+[00:10:53] messages come on to messages come on to
+[00:10:55] roll user text content okay so we want
+[00:10:58] the output from perplexity which is
+[00:11:00] going to be choices is going to be uh
+[00:11:03] content right uh and then what we're
+[00:11:06] going to want is um I think we're going
+[00:11:09] to want our tone of voice right so I'm
+[00:11:11] going to put here turn voice
+[00:11:14] is going to be down here so let's find
+[00:11:16] tone of voice beautiful and then we're
+[00:11:17] going to have instead of turn voice the
+[00:11:19] content idea which is going to go there
+[00:11:23] and then target
+[00:11:27] avatar
+[00:11:28] beautiful and then we just want to add
+[00:11:30] in target avatar which is if I can find
+[00:11:33] it down here target audience description
+[00:11:36] cool so now think about this this is now
+[00:11:38] going to ahead and create captions for
+[00:11:39] us based on the research which I'll add
+[00:11:41] over here let's just type this properly
+[00:11:42] cuz we are not savages copy this come
+[00:11:45] down beautiful uh my tone of voice
+[00:11:48] content idea target avatar awesome now
+[00:11:50] we want to give it a big and beautiful
+[00:11:52] prompt so to do that I'm actually I'm
+[00:11:53] going to do Twitter just make a little
+[00:11:55] bit simpler for the purpose of
+[00:11:56] demonstration i'm going to come over
+[00:11:58] then to uh come to the classroom and
+[00:12:00] essentially what you'll do at this point
+[00:12:02] is whether you want to use this one or
+[00:12:03] you want to like kind of build your own
+[00:12:05] X prompt but effectively what we're
+[00:12:06] doing if I come down here to Twitter i'm
+[00:12:09] going to come over here and I'm going to
+[00:12:11] go ahead and grab this prompt basically
+[00:12:13] this prompt guys is just like trying all
+[00:12:15] the kind of like posts that do well on X
+[00:12:17] so all you do is you come down and you
+[00:12:19] copy all information or basically if
+[00:12:21] you're going to create your own just
+[00:12:22] make sure you give it examples of like
+[00:12:23] what great tweets actually physically
+[00:12:25] look like cool so we copy that we come
+[00:12:27] over then to the agent that we're
+[00:12:29] building and then this is going to be ro
+[00:12:31] the user and then what we're going to do
+[00:12:32] guys is give it a assistant thing okay
+[00:12:35] so come on to text content and enter in
+[00:12:37] this thing and then we want to give it a
+[00:12:39] little bit more context about the thing
+[00:12:41] that it's doing so I'll show that prompt
+[00:12:42] is if I come over here for example go
+[00:12:44] down to Twitter Twitter text uh which is
+[00:12:48] this guy right here what we want to do
+[00:12:50] guys is give it some additional
+[00:12:51] information like you are an expert
+[00:12:52] social media content creator
+[00:12:53] specializing in transforming research
+[00:12:55] and raw ideas into high performing
+[00:12:57] platform optimized post to drive
+[00:12:59] engagement build authority and we
+[00:13:00] basically tell it it's going to get
+[00:13:02] research intelligence it's going to
+[00:13:04] craft social media um post we give it
+[00:13:06] some measurements I sort of the process
+[00:13:08] some principles and then we have like
+[00:13:10] the specific agent so it's like have
+[00:13:12] this as like your beginner thing that
+[00:13:14] sets the context and then once you've
+[00:13:16] done that then add in cool now we add in
+[00:13:19] the Twitter and then we add in the one
+[00:13:20] for LinkedIn and then we do the same
+[00:13:22] thing for each individual platform so
+[00:13:23] you have the same hey this is your job
+[00:13:25] this is what you're going to do you're
+[00:13:26] going to do XYZ follow the below
+[00:13:28] guidelines and then it will follow the
+[00:13:29] guidelines for us which is really
+[00:13:30] freaking cool now once that's done guys
+[00:13:32] we click save awesome so what we going
+[00:13:34] to call this one we're going to call
+[00:13:35] this one uh Twitter/X
+[00:13:39] all right and we give it a big bird
+[00:13:40] because we know it's cool beautiful so
+[00:13:42] guys the next thing we want to do is
+[00:13:43] just add in a filter here so I click on
+[00:13:45] this and essentially what I want to do
+[00:13:47] is call this one Twitter and what I want
+[00:13:49] to effectively say here is that if um
+[00:13:52] we'll do Twitter text Twitter text
+[00:13:54] equals true then you go down that result
+[00:13:57] awesome then what we want to do is add
+[00:13:59] in a router and essentially what we're
+[00:14:01] going to do guys is have two different
+[00:14:03] versions version one is if we're posting
+[00:14:06] now which will post directly and version
+[00:14:08] two is if we'reing you can come down you
+[00:14:10] can click the date you can come down
+[00:14:11] pick the time the day whatever you want
+[00:14:13] to just like this it's really freaking
+[00:14:14] cool bam and then release some magic in
+[00:14:16] it so I come back over then to the agent
+[00:14:20] now let's see we're going to add filter
+[00:14:22] one is going to be we'll say post now
+[00:14:25] okay and the condition is very simply if
+[00:14:28] I come over here uh where do we find
+[00:14:30] this now post now equals true beautiful
+[00:14:34] and if it's not true then this is going
+[00:14:36] to be schedule
+[00:14:38] cool and we don't need a condition on
+[00:14:40] that since um if it's not personal it
+[00:14:43] would be schedule cool actually no we do
+[00:14:45] want to add a condition my apologies
+[00:14:46] because if we don't it will fire but it
+[00:14:48] will do both so let's come down and have
+[00:14:52] a look at schedule time equals true
+[00:14:55] beautiful beautiful beautiful cool so
+[00:14:57] what we want to do guys is add in metric
+[00:14:58] now what's really cool metrical has got
+[00:15:00] some really badass integrations all you
+[00:15:01] do is come down you click on metrical
+[00:15:03] very simple and you'll have all these
+[00:15:04] different things here if you haven't
+[00:15:06] connected it guys let me just show you
+[00:15:07] what that looks like in practice so guys
+[00:15:09] once you're on a symmetrical page you
+[00:15:10] click the hamburger menu at the top and
+[00:15:12] you're going to come down to I believe
+[00:15:13] it's account settings and then click on
+[00:15:15] API
+[00:15:17] once you're on API you'll see a rest API
+[00:15:19] token just copy that token guys and then
+[00:15:21] come back over to your scenario then
+[00:15:23] enter it into make and then you'll
+[00:15:24] connect to match call and once you've
+[00:15:25] done that what you can do is lots of
+[00:15:27] stuff like list schedule post publish
+[00:15:28] post list fail post just list things if
+[00:15:30] you want or what you can do is schedule
+[00:15:33] a post which is code for either post or
+[00:15:35] not now what's really freaking cool you
+[00:15:37] pick your brand ID so if you're doing
+[00:15:38] this for multiple businesses you can
+[00:15:40] have scenarios for every business that
+[00:15:41] you've got this is mine now what's
+[00:15:43] really cool is you can pick do I want to
+[00:15:44] publish now schedule or save as draft
+[00:15:46] let's say this one is publish now i
+[00:15:48] click on publish now then all I do guys
+[00:15:50] is I come down I pick the network so
+[00:15:52] this one is going to be X or Twitter
+[00:15:54] that's all based on who you've connected
+[00:15:56] so if I come over here to my homepage to
+[00:15:59] connect it is ridiculously simple you
+[00:16:01] basically come on the left hand side you
+[00:16:03] hit connections it opens a tab in the
+[00:16:05] next window and you just sign in and
+[00:16:06] then it's connected what is really cool
+[00:16:08] about this guys is you can kind of get
+[00:16:10] like a bird's eye view of how all your
+[00:16:12] things are performing like how's my
+[00:16:13] YouTube getting on okay cool so like
+[00:16:15] it's telling me like I need to post more
+[00:16:17] videos this is me posting more videos to
+[00:16:18] do that uh how many views you get your
+[00:16:20] subscribers uh loads of cool stuff like
+[00:16:22] that which is really decent you can just
+[00:16:24] add it all on the left and you've also
+[00:16:25] got this really cool thing where you can
+[00:16:26] check out competitors as well which is
+[00:16:28] really nice once you add those in so you
+[00:16:29] can track um your performance against
+[00:16:31] other people to give you like an overall
+[00:16:33] view but all that to say once you've
+[00:16:34] added it in uh on the left hand side
+[00:16:36] you'll then be able to once you've
+[00:16:38] connected the account you can see your
+[00:16:39] photos here what you'll be able to do is
+[00:16:41] just select it inmeg.com so go over and
+[00:16:43] add those in sign in then we've got post
+[00:16:45] content so what content do we want to
+[00:16:48] post well we want to post the result
+[00:16:51] right really freaking cool now the media
+[00:16:53] you would add in if you want the image
+[00:16:54] post or not and first comment text as
+[00:16:56] well which is really cool so we click on
+[00:16:58] save really cool then what I'll do guys
+[00:17:00] I'm just going to clone this i'm going
+[00:17:02] to delete uh I'm going to bring this one
+[00:17:03] over here i'm going to delete this guy
+[00:17:05] awesome and the only thing I'm going to
+[00:17:07] change there guys is instead of post now
+[00:17:09] I'm changing this to schedule right
+[00:17:11] really cool why is that well because I
+[00:17:13] want to schedule it so publication date
+[00:17:14] we get rid of this and then we come down
+[00:17:16] and then we select the publication date
+[00:17:20] from the description down here which is
+[00:17:21] in schedule time beautiful and then we
+[00:17:23] select the time zone ours is
+[00:17:25] Europe/london
+[00:17:29] awesome that's fantastic and that's
+[00:17:31] decent then we click on save cool and
+[00:17:33] then guys all you do literally for
+[00:17:35] everything else is just work your way
+[00:17:36] down the list so for example as you can
+[00:17:38] see here we have if I come back up the
+[00:17:41] top here Instagram captions right this
+[00:17:43] is for Instagram res now publish this is
+[00:17:46] for Tik Tok person now publish this is
+[00:17:48] for YouTube person out publish and the
+[00:17:49] way that I've done this guys is you can
+[00:17:50] select multi so if I come down to
+[00:17:51] Instagram I click on real i can click on
+[00:17:53] Tik Tok click on video and also YouTube
+[00:17:56] and short and that'll basically have all
+[00:17:57] three things at the same time meaning
+[00:17:59] you can post them automatically so if I
+[00:18:01] come back over down to our beautiful
+[00:18:02] scenario you build all this stuff out so
+[00:18:05] I think what's next to do is actually
+[00:18:06] validate and test the whole function
+[00:18:08] together of the scenario so let's do
+[00:18:10] this let's click on run once what I'm
+[00:18:12] going to do very quickly before we do
+[00:18:13] that is if I come back over here I'm
+[00:18:16] just going to improve the tone of voice
+[00:18:17] so hey dude could you do me a favor dude
+[00:18:19] in the setting section could you just
+[00:18:20] make it so I can put way more tone of
+[00:18:22] voice in there than what is currently
+[00:18:23] available thanks
+[00:18:25] same is also true for target audience
+[00:18:27] beautiful so that'll make those those
+[00:18:28] adaptations and then what we're going to
+[00:18:29] do and why this is so cool is I can give
+[00:18:31] it anything i can give it like an
+[00:18:32] outline let's say I'm on Reddit and my
+[00:18:34] niche is phones i could be on the iPhone
+[00:18:36] subreddit and I can just filter by hot
+[00:18:38] posts this week find the one that's
+[00:18:40] bopping and take it over and in fact
+[00:18:41] let's go do something similar to that so
+[00:18:42] if I come over to Reddit as a for
+[00:18:44] instance right I type in something like
+[00:18:47] housing market i'm in France right now
+[00:18:49] which is why I'm getting these Frenchy
+[00:18:50] stuff um let's go for I don't know
+[00:18:53] something that's got a lot of members in
+[00:18:55] there i don't know like a UK houses or
+[00:18:57] something
+[00:18:59] okay housing UK cool come over here
+[00:19:01] let's say I want to find out so I go for
+[00:19:02] a top uh over the last week
+[00:19:07] let's have a look
+[00:19:09] anyone else disappointed that you can
+[00:19:10] get 460K 400 600K even up north cool so
+[00:19:14] let's just grab this sweet uh and then
+[00:19:16] we can actually run this in the entire
+[00:19:18] scenario so come over to our scenario
+[00:19:19] here this has been done let's say we
+[00:19:21] want to do a post on this i'm going to
+[00:19:23] come down i'm going to select X and I
+[00:19:25] just want to do text cool i want to post
+[00:19:27] now with schedule let's just say that I
+[00:19:29] don't know i want to post this one uh
+[00:19:30] really cool settings turn of voice now
+[00:19:32] in reality guys you what you can do if
+[00:19:34] you want to if I come over to the
+[00:19:35] community I'll just show you this is if
+[00:19:37] for instance uh if I just type in tone
+[00:19:39] of voice um let's have a look okay here
+[00:19:41] we go turn of voice and click assets you
+[00:19:44] can see you can build up these really
+[00:19:45] cool long tone of voice prompts i've got
+[00:19:47] like all the builds for basically you
+[00:19:49] can get things like vocab word choice
+[00:19:50] grant patterns blah blah blah just copy
+[00:19:52] all this sort of stuff once you've built
+[00:19:53] it out and you follow the instructions
+[00:19:54] for that uh and you can come back over
+[00:19:56] there basically guys and where am I at
+[00:19:58] with this let me come over to our
+[00:19:59] scenario and you can dump it all just
+[00:20:01] put hey friendly for the time being
+[00:20:03] right
+[00:20:05] and we could say let's say we're trying
+[00:20:06] to target uh I don't know house buyers
+[00:20:10] cool and then you can save that comes
+[00:20:11] off beautiful x Twitter boom boom boom
+[00:20:14] so guys let's come down and release some
+[00:20:16] magic since we need to make sure we're
+[00:20:17] activating it that's now come off over
+[00:20:19] here let's have a look okay so Plexi
+[00:20:21] fell down the first hurdle let's just
+[00:20:22] see what went on there uh ah okay we
+[00:20:25] didn't give it any of the content that's
+[00:20:26] probably a good uh problem right so we
+[00:20:28] now need to add in the content ID which
+[00:20:31] is very cool and now we've got all the
+[00:20:32] information here decent uh and then
+[00:20:35] let's just figure out why this one
+[00:20:37] failed so we come here to explore it
+[00:20:40] runtime error authorization cool so I
+[00:20:42] need to connect my Plexi now cool so
+[00:20:44] let's just come down here and add in a
+[00:20:45] new connection we need an API key so
+[00:20:46] let's head over to Plexi real quick then
+[00:20:48] guys you on Plexi.a/acount/
+[00:20:51] API/keys and you can create your key
+[00:20:53] here i post like I deposited 10 bucks in
+[00:20:56] this ages ago and I literally have never
+[00:20:58] used it up it's so freaking cost
+[00:21:00] efficient come over and then enter in
+[00:21:02] your API key here click save beautiful
+[00:21:04] so let's do this one more time we're
+[00:21:06] going to run the scenario ace let's come
+[00:21:07] back over to our beautiful lovable thing
+[00:21:09] and again we want to paste this one back
+[00:21:11] in uh come over here beautiful so that's
+[00:21:13] all done let's click on release magic
+[00:21:15] platforms required i need to reselect
+[00:21:17] that X text beautiful post that now
+[00:21:20] fantastic come over to our scenario real
+[00:21:21] quick web hooks grab the information as
+[00:21:23] you can see here's a content idea we
+[00:21:25] picked it if I basically once plexi has
+[00:21:27] done its research it'll then start to
+[00:21:29] filter its way through and then
+[00:21:30] eventually into something we can just
+[00:21:32] post directly onto X which I think is
+[00:21:34] code for pretty cool freaking nudes and
+[00:21:36] metric in this sense guys has a couple
+[00:21:38] of functions one it can kind of bolt on
+[00:21:40] to automations to be something you just
+[00:21:42] select and blast out see now it's
+[00:21:44] recognized it's Twitter it's true so
+[00:21:46] it's gone down this thing our Twitter AI
+[00:21:48] is now generating text which is awesome
+[00:21:50] and then it'll now decide whether it's
+[00:21:51] going to be a post now job or a schedule
+[00:21:53] job which is very very cool and actually
+[00:21:55] on metrical itself if you want to like
+[00:21:56] build up and kind of get all your stuff
+[00:21:58] done you can kind of plan and do all
+[00:22:00] your kind of features here like planning
+[00:22:01] you can actually create posts and stuff
+[00:22:03] so let's say for example I come down
+[00:22:05] here what is really cool on this as well
+[00:22:07] you've got this like generic post with
+[00:22:08] an AI assistant so if you just want to
+[00:22:10] do it on the in the platform you can do
+[00:22:12] so for example if I come down here and I
+[00:22:14] post the exact same thing in there I can
+[00:22:16] choose the batone yes do let's do um
+[00:22:19] let's do descriptive actually pick the
+[00:22:21] language optimize which social media
+[00:22:22] platform let's just do Twitter and then
+[00:22:24] generate text bam and then that will is
+[00:22:27] an agent within metrical you can use to
+[00:22:29] do that kind of stuff so you don't need
+[00:22:30] to use all the prompts if you don't wish
+[00:22:32] to cool so we come back over here this
+[00:22:34] is done and guys this is posted
+[00:22:36] effectively
+[00:22:38] the entire thing directly so if we head
+[00:22:40] over to Twitter now we should see the
+[00:22:41] beautiful thing there so let's go over
+[00:22:43] to Twitter land and see how we've gotten
+[00:22:45] on I click on Twitter I come over let's
+[00:22:47] Check out the JR experience and have a
+[00:22:50] look what we're doing i scroll down
+[00:22:51] there think 500K buys you big art at
+[00:22:53] North only 9.4% of Yorkshire homes sell
+[00:22:55] for over 400K and the average sales
+[00:22:57] attached in South York is 343K are you
+[00:22:59] surprised by how low your budget
+[00:23:01] stretches # property #ousing gas and
+[00:23:05] there we freaking go we got this entire
+[00:23:06] system a little person on any platform
+[00:23:08] you want to however you want to this
+[00:23:09] full system works down to the kind of
+[00:23:11] tea with the details and I demand call
+[00:23:14] and you can see it's now generating its
+[00:23:16] own thing which is really freaking cool
+[00:23:18] and then once we come down here guys and
+[00:23:19] click on use text click on accept cool
+[00:23:21] and since we're posting on Instagram
+[00:23:23] guys we've got our Instagram post
+[00:23:25] amazing now what we need to do is
+[00:23:26] basically change the post state to the
+[00:23:28] future and add an image what you can
+[00:23:29] also click on this and actually add it
+[00:23:31] from Canva from Google Drive bringing
+[00:23:32] all your platforms down together it's a
+[00:23:34] really cool freaking platform and so now
+[00:23:36] we have everything we can build within
+[00:23:37] Metro we can post directly we can
+[00:23:39] schedule posts we can check out
+[00:23:40] competitors check out our data you built
+[00:23:42] the front-end dashboard in Lovable with
+[00:23:44] all the different softwares you can pick
+[00:23:46] and we built the entire thing out in
+[00:23:47] make.com which when you expand it out
+[00:23:49] you've then got all of the different
+[00:23:51] platforms meaning you can run and fire
+[00:23:52] your $10,000 uh marketing agency i hope
+[00:23:55] you find this video helpful if you
+[00:23:56] haven't seen this video on screen about
+[00:23:58] building your $100,000 AI dashboard I
+[00:24:01] strongly recommend you check that one
+[00:24:03] out but in any case have a beautiful
+[00:24:04] week and I'll see you in my next

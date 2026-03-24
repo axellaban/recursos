@@ -1,0 +1,992 @@
+[00:00:00] this AI sales agent turns emails into
+[00:00:02] cash my name is Jack and by the end of
+[00:00:04] this video you're going to have to build
+[00:00:05] this entire system starting with an
+[00:00:07] email classification section it will
+[00:00:09] take your emails and categorize them
+[00:00:11] into many different subjects and the one
+[00:00:12] that we're going to drill down on
+[00:00:14] specifically here is for business
+[00:00:16] inquiries and what this AI agent this
+[00:00:18] really cool AI agent will do it will be
+[00:00:20] able to look at the emails that you've
+[00:00:21] had previously with this individual
+[00:00:23] we're going to hook it up to perplexity
+[00:00:24] for internet search so we can actually
+[00:00:26] find more about the individual that's
+[00:00:29] contacting you what research do we know
+[00:00:30] about that company and then it's going
+[00:00:32] to be able to calendarize things for you
+[00:00:33] so it's going to be able to book
+[00:00:34] appointments with you it knows the
+[00:00:36] context of your conversation it knows
+[00:00:38] about the guidance reach out to your
+[00:00:39] leads and what this all basically means
+[00:00:40] and by the way we've also got this
+[00:00:42] retrieval thing so it knows everything
+[00:00:43] about your company it has a context all
+[00:00:46] this means that you get to sit down on
+[00:00:47] the beach you get to enjoy your
+[00:00:48] beautiful coffee while these leads turn
+[00:00:50] into appointments and it just means that
+[00:00:52] we don't lose the opportunities for
+[00:00:54] customers that really want to work with
+[00:00:55] us and I'll show the entire thing step
+[00:00:57] by step and let's begin this with a
+[00:00:58] quick demonstration to do that I'm up
+[00:01:00] over to the school Community I'm going
+[00:01:02] to shave the whole system and then we're
+[00:01:03] going to build it together from
+[00:01:04] beginning scratch to scratch um okay
+[00:01:06] scratch to scratch I mean step by step
+[00:01:08] oh my goodness how many of these coffees
+[00:01:09] have I had today so we're going to move
+[00:01:11] to the classroom section let's go down
+[00:01:13] to the every AI automation section and
+[00:01:15] then this one is going to be in the
+[00:01:17] agent section right here and all we do
+[00:01:19] is go over we click this button and then
+[00:01:20] we download the entire jsoft and once
+[00:01:22] that's done you head over to the worklow
+[00:01:24] hit these three little magical ellipses
+[00:01:26] buttons and just put on import from file
+[00:01:28] you select the file and just like that
+[00:01:29] guys magically it just sort of appears
+[00:01:31] in your scenario so how does this
+[00:01:33] physically work so the way that this
+[00:01:34] works is you can pick Gmail atlock
+[00:01:36] whichever your kind of Mal boox of
+[00:01:38] choices we're going to get something
+[00:01:39] that triggers it here which is done on
+[00:01:41] an email and it will check your Gmail
+[00:01:43] every 60 seconds once it's done that
+[00:01:45] this classifying agent's job is to take
+[00:01:48] that email and say we look well what the
+[00:01:50] hell is this email about it looks at
+[00:01:52] things like the subject line and the
+[00:01:53] text and the body that kind of stuff and
+[00:01:55] says well look is it a a sponsorship
+[00:01:57] request is it a customer query is it a
+[00:01:59] business query is it spam or low
+[00:02:01] priority you know is it from coffee
+[00:02:03] beans weekly who the hell is getting in
+[00:02:04] touch with us and what is it about now
+[00:02:07] when we think about things to automate
+[00:02:08] our business I think this is probably
+[00:02:10] one of the easiest highest leverage use
+[00:02:13] cases that you could start with and
+[00:02:15] instead of having one AI agent that sits
+[00:02:17] on that inbox is the king I would much
+[00:02:19] prefer to have an army of AI agents a
+[00:02:22] crack team the AI Avengers of the Inbox
+[00:02:25] and each individual use case can have an
+[00:02:27] AI agent that is required some stuff
+[00:02:29] doesn't require us response like spam
+[00:02:30] all their priority unless you want to
+[00:02:31] troll them uh but in this case we're
+[00:02:33] just going to build up one but then you
+[00:02:34] can take the concepts of this and apply
+[00:02:36] to anything you want to now this AI
+[00:02:38] agent we do a little bit of things on
+[00:02:39] defining things and essentially this
+[00:02:41] guy's job and I'll show The Prompt in a
+[00:02:43] second he can then in fact I'll open it
+[00:02:45] right now a very quick look basically we
+[00:02:47] give it information from the previous
+[00:02:48] module we've got all this beautiful
+[00:02:49] system messages which basically outlines
+[00:02:51] everything it is I'll sh when we run
+[00:02:53] into that properly it's got plexity it's
+[00:02:55] got Google and it can check different
+[00:02:56] things so what we're going to do is
+[00:02:57] we're going to send it an email about a
+[00:02:59] fake spons ship request and we can see
+[00:03:01] how this works in practice hey there
+[00:03:02] Jack I love your AI automation agency
+[00:03:05] I'm on the fener and I'd love to cheat
+[00:03:06] to see if we could potentially H some
+[00:03:08] projects best Robert from Leon
+[00:03:10] accountants in leads we send this email
+[00:03:11] we're going to come over here guys and
+[00:03:12] all we do is simply test workflow and
+[00:03:14] check this out guys Gmail trigger work
+[00:03:16] text classifier is it what's again
+[00:03:18] classify as it's going Tois some queries
+[00:03:19] like check this out we got the AI agent
+[00:03:21] is checking with chat GPT it's doing it
+[00:03:23] bits and pieces to find out what on
+[00:03:24] Earth is going on and the cool thing
+[00:03:26] about n8n is when you're running it and
+[00:03:28] you're using these agents you you can
+[00:03:29] see the tools are accessing in real time
+[00:03:31] and just like guys the workflow has been
+[00:03:33] executed successfully so let's see what
+[00:03:35] it's done now one of the things you can
+[00:03:36] do is get it to send you an update on
+[00:03:37] telegram when you get these new
+[00:03:39] inquiries it's completely up to you we
+[00:03:40] can do it as draft but for this one
+[00:03:42] let's just see exactly what's happened
+[00:03:43] so let me just double click into this
+[00:03:45] okay let's have a look at what we've got
+[00:03:46] here okay so it's created an email and
+[00:03:47] response let's go over to Gmail and
+[00:03:49] actually see what's happened there and
+[00:03:50] guys check this out hi Robert thank you
+[00:03:52] for reaching out with your kind words
+[00:03:53] about my a automation agency I'm excited
+[00:03:55] to hear that about you considering hary
+[00:03:56] projects I'd love to have a conversation
+[00:03:58] uh explore how we can put together could
+[00:03:59] just let me know your availability this
+[00:04:01] week I can adjust my schedule to
+[00:04:02] accommodate you looking forward to your
+[00:04:04] response what you'll also need to see
+[00:04:06] guys is the font looks really cool it
+[00:04:07] looks cool because it's an avener font I
+[00:04:09] specified that as well and what you'll
+[00:04:10] also notice is there's no sent by n
+[00:04:13] message after show you how you remove
+[00:04:14] that little pesky thing as well so it's
+[00:04:16] cool it's basically done that so what I
+[00:04:17] want to do next is just say yeah I'm
+[00:04:19] interested okay so we're here say hey
+[00:04:21] man let's see let's do
+[00:04:25] Friday 5:00 p.m. UK Time Boom what we're
+[00:04:29] going to do we're going to send it and
+[00:04:30] let's see if it picks up on that not
+[00:04:31] sent let's come down to test workflow
+[00:04:33] and see if we get the same kind of magic
+[00:04:35] and look guys it's gone down business
+[00:04:36] inquiries it's gone to the AI agent what
+[00:04:38] I don't expect to see here is the create
+[00:04:40] an event thing activated now I also want
+[00:04:42] to just briefly talk about why we're
+[00:04:43] doing this because if you can respond to
+[00:04:45] a lead earlier its chances of converting
+[00:04:48] into a paying customer skyrockets I mean
+[00:04:50] we've all been that scenario right where
+[00:04:51] like you're looking for an appointment
+[00:04:52] to I don't know get your haircut
+[00:04:54] whatever it is and you're calling
+[00:04:55] literal lead by lead by lead by lead and
+[00:04:57] they just don't answer the phone you go
+[00:04:58] on to the next one and it's the same
+[00:05:00] with some kind of services we take
+[00:05:01] customers and prospects for granted the
+[00:05:03] beauty of this system is that getting
+[00:05:05] response quickly now we could have time
+[00:05:07] delays in it to make it sound like it
+[00:05:08] was from a human but fundamentally when
+[00:05:10] when the iron you know you got to strike
+[00:05:11] when the iron's hot now this is all
+[00:05:13] completed let's go and check what the
+[00:05:16] response was and actually if I have an
+[00:05:18] invite now for Friday at 5:00 p.m. and
+[00:05:20] guys look at this hi Robert thank you
+[00:05:21] for coming on meeting I've scheduled the
+[00:05:22] partnership meeting for Friday 5:00 p.m.
+[00:05:24] UK time looking forward to discussions
+[00:05:26] best regards Jack Roberts so let's just
+[00:05:28] check the calendar now and guys as you
+[00:05:30] can see here at 5:00 p.m. we've got the
+[00:05:31] call in that has been suggested with
+[00:05:33] Jack Roberts which is cool it's flipping
+[00:05:35] ripping it's rapping it's having a great
+[00:05:36] time so that's the whole system step by
+[00:05:38] step what I'm going to do is I'm going
+[00:05:39] to delete all this stuff and we're going
+[00:05:40] to build it together so we know that
+[00:05:42] responding in time is really important
+[00:05:44] so in fact do I get rid of our beautiful
+[00:05:46] classified you know we'll go right to
+[00:05:48] the beginning let's just go right to the
+[00:05:50] beginning and all begins with the step
+[00:05:52] so what's the first thing that we're
+[00:05:53] going to do the first thing I'm want to
+[00:05:54] do is go for Gmail and one of the things
+[00:05:55] I didn't mention by the way is that we
+[00:05:57] can get this to be done in alternative
+[00:05:58] voice uh which I think I think is really
+[00:06:00] freaking powerful and I'll touch on that
+[00:06:01] later so the trigger is going to be
+[00:06:03] Gmail on message received and by the way
+[00:06:05] I'm going to put all the links for all
+[00:06:06] the things that you need Down Below in
+[00:06:07] the description we're using n8n because
+[00:06:10] of its AI agent feature um lot of stuff
+[00:06:13] you can build and make and actually make
+[00:06:14] it does make something things a little
+[00:06:15] bit easier but in this case we use na10
+[00:06:18] so we connect the Gmail account if you
+[00:06:19] don't know how to do that I'm going to
+[00:06:20] put a link Down Below in the description
+[00:06:22] of how you connect all your Gmail stuff
+[00:06:24] with a specific time setp just go and
+[00:06:26] watch that one and then come back here
+[00:06:28] and we'll be writing for you well
+[00:06:29] welcome back if you did go a check if
+[00:06:31] not let's just crack on and carry on
+[00:06:32] with this one so we've got our
+[00:06:33] credentials on Gmail we can just set how
+[00:06:35] often we want this to run and then I'm
+[00:06:37] going to untoggle the simplify okay and
+[00:06:39] the first thing I'm going to do is to
+[00:06:40] fetch the test event and this will work
+[00:06:42] in the background for us and voila we've
+[00:06:45] got all this information the reason why
+[00:06:47] we're going to do um an UNS
+[00:06:48] simplification is just because we get
+[00:06:50] more data which I think is quite
+[00:06:51] interesting now the first part of the
+[00:06:52] SAR I want to think of it in three parts
+[00:06:54] okay so part A classify the emails Part
+[00:06:58] B is to get the AI agent to basically
+[00:07:01] decide what it needs to do and then the
+[00:07:03] part C could be it's not that retrievals
+[00:07:05] part C per se that's just a function
+[00:07:07] that it can do within this scenario one
+[00:07:09] of the things that we can do here is
+[00:07:10] I've got this telegram module which we
+[00:07:12] can add on which can send us specific
+[00:07:14] updates we could then actually if we
+[00:07:16] want to give it Specific Instructions to
+[00:07:19] do other and additional things but I
+[00:07:20] don't want to get too complicated that
+[00:07:22] we can lots of other crazy stuff so if I
+[00:07:23] come back over now to the scenario that
+[00:07:25] we've got all right cool what do you
+[00:07:27] want to do that well we basically just
+[00:07:28] click on this little button and I'm just
+[00:07:29] type in text classifier ideally with
+[00:07:32] commas and things like that cool and
+[00:07:34] then we've got text to classify so
+[00:07:36] basically for this guys what I would
+[00:07:37] recommend you do is quite simply just
+[00:07:39] drag this guy and throw him in there
+[00:07:42] beautiful and that's just going to
+[00:07:43] basically we're going to determine what
+[00:07:44] it is based on the body of the email we
+[00:07:46] can do other things like that then we've
+[00:07:47] got categories okay now there a cool
+[00:07:49] thing about categories that's basically
+[00:07:51] think about your inbox and all the
+[00:07:52] queries that you get and bear in mind
+[00:07:54] guys we can self host na1 so none of
+[00:07:56] this stuff needs to be you know anywhere
+[00:07:58] in particular so if you're really
+[00:07:59] concerned about that privacy there's lot
+[00:08:00] of stuff we can do to uh sidestep that
+[00:08:02] so we can pick a category say for
+[00:08:04] example the one that you know categories
+[00:08:05] I've got my inbox could be I don't know
+[00:08:08] we could we could say something like
+[00:08:10] School customer so say a school person
+[00:08:13] you know someone from school has emailed
+[00:08:14] you and said hey like what's up so if I
+[00:08:16] look at my actual categories I've got
+[00:08:17] sponsorships which is cool I don't
+[00:08:19] really do many sponsorships but you know
+[00:08:21] when they when they email they can we
+[00:08:22] have have a conversation about it so I
+[00:08:23] just copy the exact same thing and I'd
+[00:08:25] say sponsorships now often times the AG
+[00:08:29] can understand from the like the actual
+[00:08:32] title I found it's my it's been my
+[00:08:34] experience that putting stuff in
+[00:08:35] description is helpful so I'd say hey
+[00:08:38] basically I don't say hey but you know
+[00:08:40] businesses that want you to sponsor a
+[00:08:43] video okay as a quick for instance right
+[00:08:45] then we can add in a new category and
+[00:08:46] then next category is what well we just
+[00:08:48] say other by the way the way you add
+[00:08:50] categories is you click on labels here
+[00:08:52] click on new label enter label name I
+[00:08:54] don't worry about nesting it's too
+[00:08:55] complicated so just think about how your
+[00:08:58] emails fit into two buckets basically
+[00:09:00] and instead of just actually going do an
+[00:09:01] endless list you can then just have
+[00:09:03] those specifics and we'll have agents
+[00:09:04] that look after each of the individual
+[00:09:06] things so here we've got other and again
+[00:09:08] all we're doing guys is we are just um
+[00:09:11] yeah basically rip and repeat other they
+[00:09:13] just say and you could say doesn't fit
+[00:09:17] into any other category this one's a bad
+[00:09:19] example cuz it's fairly evident but you
+[00:09:20] get the idea and you basically keep on
+[00:09:22] clicking this add category button until
+[00:09:23] you've done all of them and out of
+[00:09:24] respect for your time I've just gone
+[00:09:26] through and completed those and what we
+[00:09:27] want to do is give it a model in other
+[00:09:29] words AI brain so we're just going to
+[00:09:30] use the beautiful and wonderful chat GPT
+[00:09:32] for that and of course if you want to
+[00:09:34] connect that you just head over to
+[00:09:35] platform. open.com which I'll just show
+[00:09:37] you very quickly yes we want to leave
+[00:09:39] site we're okay leaving the site that's
+[00:09:41] cool and once you do that you head over
+[00:09:42] to beautiful API Keys we just grab a key
+[00:09:44] and then you UT it it really is that
+[00:09:46] that straightforward something a little
+[00:09:47] bit more complicated that one's a little
+[00:09:48] bit more straightforward cool oh my
+[00:09:50] goodness guys I can't even believe we
+[00:09:51] haven't even named this one what we
+[00:09:52] going to call this one let's just call
+[00:09:54] this one emails to cash okay emails to
+[00:09:57] cash obviously guys you don't have to
+[00:09:59] send these emails automatically we can
+[00:10:00] have a little approval system and do LS
+[00:10:02] of cool crazy stuff uh but for the
+[00:10:03] purpose of this let's just uh click on
+[00:10:05] this guy cool so we've emailed it we're
+[00:10:07] not Savages we're sorted out now can you
+[00:10:09] see we've got all these beautiful things
+[00:10:11] every single classification that we've
+[00:10:13] had uh has and obviously there's a
+[00:10:15] million different use cases for this so
+[00:10:16] the fact that you can do that now I
+[00:10:18] think is really sweet cool so let's
+[00:10:19] click on sponsorship to get started and
+[00:10:21] we're going to go for Gmail like so and
+[00:10:23] we are looking for add label to message
+[00:10:27] beautiful okay decent so we got the
+[00:10:28] message ID let's just execute the
+[00:10:30] previous n try and grab what that looks
+[00:10:32] like Ace and we're going to grab this ID
+[00:10:35] and throw them into there and then we've
+[00:10:36] got the label IDs and then basically
+[00:10:38] what we do guys is we come down and then
+[00:10:40] we just select the thing that it is so
+[00:10:41] this one of sponsorships so we click on
+[00:10:43] sponsorships decent and then we just
+[00:10:45] click off then let's have a look we got
+[00:10:47] Gmail and what I'd recommend you do just
+[00:10:49] for kind of housekeeping just rename it
+[00:10:51] okay whereas rename uh and again I like
+[00:10:54] to there it' be consistent very
+[00:10:56] consistent okay sponsorships
+[00:10:59] um it's funny a couple years ago you
+[00:11:00] wouldn't have even thought that this was
+[00:11:02] happening right the fact that we don't
+[00:11:03] have to do emails I mean how much busy
+[00:11:05] body stuff are you doing in office these
+[00:11:06] days it's absolutely wild then we've got
+[00:11:09] other and then guys we just repeat the
+[00:11:10] same process I'd recommend you just
+[00:11:12] freaking duplicate this bad boy uh bring
+[00:11:15] him down here and we said you know dude
+[00:11:16] we're just going to hook you up we're
+[00:11:17] going to click on you we're going to
+[00:11:18] we're going to rename you we're going to
+[00:11:20] come down here we're going to give you
+[00:11:21] some eyes cuz you're a little bit
+[00:11:22] curious I'm going to say other I might
+[00:11:25] get a coffee category M actually you
+[00:11:27] coffee related emails coming in click on
+[00:11:29] other and then instead of sponsorships
+[00:11:32] we get rid of this guy and then we just
+[00:11:33] say other so on so on and so forth until
+[00:11:36] you have completed all of them like that
+[00:11:38] and take a second think about the
+[00:11:39] categories it could be anything you want
+[00:11:41] to so once you've done that I'm going to
+[00:11:42] fast forward do all of them and then we
+[00:11:43] can carry on the Automation and there we
+[00:11:45] go guys and what we're going to do if
+[00:11:46] you're not familiar how to add a note by
+[00:11:47] the way all you do is come down here in
+[00:11:49] this oh excuse me it's right here
+[00:11:50] actually isn't it add a little sticky
+[00:11:51] note and we're just going to bring this
+[00:11:53] guy up and the reason I quite like the
+[00:11:55] sticky notes is it's great I'm a really
+[00:11:58] big believer in
+[00:11:59] design and the design makes a huge
+[00:12:01] difference I really do and what we're
+[00:12:02] going to do guys is you're going to come
+[00:12:03] down uh oh my goodness that is not
+[00:12:06] liking at all holy moly right come down
+[00:12:08] here and we could just basically one
+[00:12:10] hash is like a a title and just put
+[00:12:13] classification agent and what you're
+[00:12:15] also learning with this by the way um
+[00:12:18] we'll give this a little robot guy is
+[00:12:20] this system by the way is I think is how
+[00:12:21] you build very complex AI agent Le
+[00:12:23] automations we have a classifying agent
+[00:12:26] it's just that in this case we're using
+[00:12:28] for an email but real it could be for
+[00:12:30] anything like you think about you want
+[00:12:31] to automate you could do law firms you
+[00:12:34] could do accountancy practices you could
+[00:12:36] do anything you could possibly imagine
+[00:12:38] and you just get nicher and nicher and
+[00:12:39] nicher and if you have crisp strong
+[00:12:41] classifying agents that's great if it's
+[00:12:43] particularly complex and this is just a
+[00:12:45] bit more of a tangent but I think it
+[00:12:46] will be of value to some of you if it
+[00:12:48] gets particularly complex what I would
+[00:12:50] recommend that you do instead of having
+[00:12:52] 8 9 12 15 categories have three or four
+[00:12:55] and then each of them have three or four
+[00:12:57] that are specialized in it remember the
+[00:12:58] more laser Focus we can make the agents
+[00:13:00] the better they're going to perform and
+[00:13:01] if you're finding that the prompting
+[00:13:03] just isn't enabling you to get the best
+[00:13:05] results that you want it might be the
+[00:13:07] case the scope is too broad now as the
+[00:13:09] models become more powerful over time um
+[00:13:11] the scope will increase but that's just
+[00:13:13] something to Bear In Mind as a general
+[00:13:14] sort of Direction travel so cool we've
+[00:13:16] got classifying agent now what we would
+[00:13:17] do in this instance and again just think
+[00:13:19] about how you could apply these
+[00:13:20] principles potentially to any use case
+[00:13:22] is we are going to collect the business
+[00:13:23] inquires but before we do that we need
+[00:13:25] to check this this thing flipping works
+[00:13:27] right so let me send an email I'm going
+[00:13:29] to give a sponsorship let's say we want
+[00:13:30] to sponsor I don't know gold chains
+[00:13:33] we're gonna do gold chain and we're
+[00:13:35] gonna offer him 20 quck and we'll see if
+[00:13:38] this can classify what that's about so
+[00:13:39] let me drift that email very quickly
+[00:13:41] okay that's done so let's come down and
+[00:13:42] test the workflow and see what happens
+[00:13:44] it's grabbed it where's we going to put
+[00:13:45] it I we do this guys sponsorships why is
+[00:13:48] we going have sponsorships well let's
+[00:13:49] just double click and see what's up this
+[00:13:51] is decided let's have a look what we've
+[00:13:54] got here no we want we don't want the
+[00:13:55] label ID it's put it spam as La priority
+[00:13:57] that's quite interesting so we'll figure
+[00:13:58] out why that is in a second but look at
+[00:14:00] this hey I want to sponsor a video
+[00:14:02] please make one on gold jins it will be
+[00:14:03] 2020 for the video thank you okay sweet
+[00:14:06] so we just need to change the uh label
+[00:14:08] here to make sure it's adding the right
+[00:14:09] thing and we don't want this guy we just
+[00:14:11] want to change this one to sponsorships
+[00:14:14] cool beautiful so yeah just make sure
+[00:14:15] that we've actually selected the right
+[00:14:17] thing there you go so I I've selected
+[00:14:19] there you go now it will actually
+[00:14:20] classify properly okay that's a good
+[00:14:22] little debug awesome beautiful so now
+[00:14:24] we've got this business in Aquarius
+[00:14:25] thing let's begin the second part of
+[00:14:27] this so for this we're going to put a uh
+[00:14:30] set Fields so quick look edit Fields set
+[00:14:33] module cool and then we're just going to
+[00:14:35] add from the Gmail trigger which is cool
+[00:14:38] and all we can do guys very very simply
+[00:14:40] is we can start to bring things up so
+[00:14:41] bring this one out we just say email ID
+[00:14:44] sweet and then we can come over let's
+[00:14:46] see what else we'd like to get H the
+[00:14:48] text is a key one right so we just put
+[00:14:50] here we'll put
+[00:14:52] email body and we can basically use
+[00:14:55] these variables at any point we want to
+[00:14:57] for the rest of this automation which I
+[00:14:59] I think it's pretty flipping epic when
+[00:15:00] it come over we've got the subject
+[00:15:02] that's probably going to be helpful
+[00:15:03] context isn't it so email
+[00:15:05] subject actually I guess email email
+[00:15:08] what email is a little bit redundant
+[00:15:09] come over the date of it being sent is
+[00:15:12] quite
+[00:15:12] [Music]
+[00:15:14] cool dates and see if there's anything
+[00:15:17] else we would like no I think that's
+[00:15:19] really cool what we might want to do
+[00:15:21] actually is add in the classification
+[00:15:23] that could be quite handy but this one
+[00:15:25] hasn't been up yet that's cool let's
+[00:15:26] just come down here and I think that's
+[00:15:27] fine for now come off and let's just
+[00:15:29] test the step for a moment and it's
+[00:15:31] worked perfectly okay sweet and actually
+[00:15:32] thinking about it we won't need to
+[00:15:34] classify it because we know that if it's
+[00:15:37] here it's only ever going to be a
+[00:15:40] business inquiry cool so we bring this
+[00:15:41] one over as you might have guessed now
+[00:15:43] we're bringing our beautiful friendly
+[00:15:44] neighborhood AI agent so let's bring on
+[00:15:45] this Advanced ai ai agent beautiful I'm
+[00:15:49] going to go for the tools agent which
+[00:15:50] basically just code for it can basically
+[00:15:52] access and deploy multiple tools there
+[00:15:53] are other options like
+[00:15:55] conversational lots of other cool stuff
+[00:15:57] which you get to in different videos If
+[00:15:59] that is of help to you cool and then
+[00:16:01] we're going to do is we got the prompt
+[00:16:02] we need to provide to it but before we
+[00:16:03] do that we are just going to give it a
+[00:16:05] chat model which again is going to be
+[00:16:06] chat GPT oh my goodness let's come down
+[00:16:10] here and grab him there we go chat GPT
+[00:16:12] obviously you can use open rout if you
+[00:16:13] want to use different models or you can
+[00:16:15] connect to deep seep directly we've got
+[00:16:17] videos on the channel cover stuff like
+[00:16:18] that cool cool so we click on this guy
+[00:16:20] that is beautiful and that should be all
+[00:16:21] perfect now to get this information I've
+[00:16:23] just sent a basically test business
+[00:16:26] email for business inquiry so let me
+[00:16:28] just run the scenario once and it should
+[00:16:29] go down the business inquiries list
+[00:16:31] awesome and then we've got the fields as
+[00:16:33] that brought everything out it has Ace
+[00:16:36] and then now if BEC to the agent for
+[00:16:37] instance we can see that we've got all
+[00:16:39] this cool stuff so what is the prompt
+[00:16:41] that we need to give to it so agent
+[00:16:42] tools source for prompt I'm just going
+[00:16:44] to say how going to Define this below
+[00:16:45] what I'm going to say is
+[00:16:47] basically email ID boom and we'll bring
+[00:16:50] this guy over phenomenal and then we
+[00:16:52] come over and then come down and then
+[00:16:54] we're going to say email body so on so
+[00:16:56] on and so forth all the way down so we
+[00:16:58] have the
+[00:16:59] uh specific information that it needs so
+[00:17:01] once you've added in those four things
+[00:17:02] or whichever things you want to bring
+[00:17:04] into this agent the only thing we need
+[00:17:05] to do now is give it a system prompt so
+[00:17:08] for that we're going to click on ADD
+[00:17:09] option and click on system message and
+[00:17:12] here is where we basically give it the
+[00:17:14] magic the the magic that's going to make
+[00:17:16] this guy fly here we have the AI email
+[00:17:18] assistant prompt and I'll put a link
+[00:17:19] down in the description so you can grab
+[00:17:20] that for free basically we start with an
+[00:17:22] overview to say hey this document iin
+[00:17:24] responsibilities and protocols for an
+[00:17:25] email AI email assistant managing Jack
+[00:17:28] Roberts's Communications call
+[00:17:30] responsibility analyzer emails response
+[00:17:32] evaluation the research protocol the
+[00:17:34] shading protocol response generation and
+[00:17:36] then email template specifications so
+[00:17:38] basically how I would like it to reply
+[00:17:41] as in when it does different things and
+[00:17:42] I Mo out line stuff here like greetings
+[00:17:44] body closing blah blah blah all we do
+[00:17:46] basically amend this as you want to if
+[00:17:48] you want to amend this code just copy it
+[00:17:49] and say hey could you change this this
+[00:17:50] to this we can also feed it all of your
+[00:17:52] emails it knows natively how to respond
+[00:17:55] so one of the things you would say is
+[00:17:57] hey you know use the
+[00:17:59] um rag database you have to find like
+[00:18:02] how I'm responding so we can respond to
+[00:18:04] you natively and it just sounds exactly
+[00:18:06] like you which is really important so we
+[00:18:09] come back over I believe it was on this
+[00:18:11] guy actually let's have a look okay
+[00:18:13] we've got him here we're going to
+[00:18:14] basically pop in actually it's this one
+[00:18:16] here isn't it come down here H system
+[00:18:18] message beautiful oh the one thing I'd
+[00:18:20] love you to add as well is
+[00:18:22] the the date is now cuz if it doesn't
+[00:18:26] have access to and it's just this code
+[00:18:28] here isn't I think yeah basically if it
+[00:18:29] doesn't have access to um what date it
+[00:18:32] is I say book it on Friday it's like
+[00:18:34] yeah I'll book it for Friday 2019 you
+[00:18:36] know January whatever it is so you can
+[00:18:37] get a bit a bit fruity cool so what
+[00:18:40] we've got we have got the prompt we've
+[00:18:41] got the system message the only thing we
+[00:18:43] need to do now is to our brother up give
+[00:18:45] him some energy give him some tools give
+[00:18:46] him some weapons to do some different
+[00:18:48] bits and pieces so the first thing we're
+[00:18:50] going to do is give it some tools for
+[00:18:52] let's begin with Gmail the thing that
+[00:18:55] it's going to need to do now again
+[00:18:56] you'll know how to cut this if you go
+[00:18:58] back to the video and get i'll P link
+[00:18:59] Down Below in the description how to
+[00:19:00] connect uh the whole G Drive Suite so
+[00:19:02] you can just plug and play in half some
+[00:19:03] times with it so Gmail tool consume the
+[00:19:06] Gmail API what we want this guy to do is
+[00:19:08] to get many 50 is fine um that's
+[00:19:12] basically it we click half it that's
+[00:19:14] number one done beautiful the next thing
+[00:19:17] I wanted to do on the Gmail side and
+[00:19:19] again we got two two two so the first
+[00:19:20] two is Gmail we want it to be able to um
+[00:19:23] let's have a quick look whereas in our
+[00:19:25] operation is just to basically reply
+[00:19:28] that's it so we can do different fancy
+[00:19:31] things with modules and this is just
+[00:19:32] going to reply in thread we could get it
+[00:19:34] to create a brand new message but it
+[00:19:35] really depends on um what you want to do
+[00:19:37] so this is saying hey what's what
+[00:19:38] message am I replying to we grab email
+[00:19:41] ID and we just bring it over here like
+[00:19:43] so and pretty much that is all we do
+[00:19:44] email type is HTML and in the message
+[00:19:46] I'm just going to use this code here on
+[00:19:48] expression which is basically here we're
+[00:19:50] going to say hey email is body oh my
+[00:19:53] goodness now bear in mind we don't need
+[00:19:55] to specify the subject because it's a
+[00:19:56] reply right so there's no need to
+[00:19:57] actually specify who it's to or what the
+[00:20:00] reply is and here we just sort of say
+[00:20:02] hey the body of the email cool click off
+[00:20:07] it decent and that's pretty much guys
+[00:20:09] all we actually phys to do we got
+[00:20:10] options down below so we can start to do
+[00:20:11] different bits and pieces CC in bcc's if
+[00:20:14] you want to add in different people but
+[00:20:15] I'm just keeping it simple but that's
+[00:20:16] basically how you would add and develop
+[00:20:18] that so here are two Gmail awesome next
+[00:20:21] two we want to add in then is going to
+[00:20:23] be basically the calendar modules right
+[00:20:25] so we come down here to Tool let's just
+[00:20:26] go for Google Calendar
+[00:20:29] phenomenal the first one I wanted to do
+[00:20:31] is to yeah event is fine we want create
+[00:20:34] no we kind of want to get many we want
+[00:20:36] just be able to check the calendars
+[00:20:38] right like um what's happening in the
+[00:20:40] future what's the what's the scenario
+[00:20:42] this is going to bias it to grabbing
+[00:20:44] things within the next week which I
+[00:20:46] think is really cool so it's only going
+[00:20:47] check our availability for the next week
+[00:20:49] which I think is really really fli it
+[00:20:50] epic so that's the first one of getting
+[00:20:52] events and then the next one as you
+[00:20:54] might have guessed why is this guy
+[00:20:55] misbehaving what's his problem ah the
+[00:20:57] calendar okay we set the calend calendar
+[00:20:58] so we just pick our email there we go
+[00:21:01] sometimes it throws it stum is out the
+[00:21:02] pr we're like what the hell is going on
+[00:21:04] with this guy Okay cool so Google
+[00:21:06] Calendar cool second one now is its
+[00:21:08] ability to create uh appointments which
+[00:21:11] is really flipping cool and once again
+[00:21:13] we select the calendar which is going to
+[00:21:14] be this guy beautiful um everything else
+[00:21:16] is absolutely fine and we click off now
+[00:21:18] ah I did say early didn't I that I was
+[00:21:20] going to show you how to get rid of the
+[00:21:21] message has been sent by na10 click on
+[00:21:23] this reply check this out right I'm
+[00:21:25] going to come down click on options and
+[00:21:27] can you see a pend na and attribution
+[00:21:29] you see this big beautiful green toggle
+[00:21:31] well we're going to un toogle it and
+[00:21:32] they're going to click off which
+[00:21:33] basically means they're not going to
+[00:21:34] know that it comes from NN but
+[00:21:36] personally it's an aesthetic thing it's
+[00:21:37] actually super annoying to keep when it
+[00:21:39] keeps saying na10 so we want to be Cris
+[00:21:41] because how it looks is important now
+[00:21:44] the next thing I really want to do here
+[00:21:45] and when I was thinking of this
+[00:21:46] automation one of the sort of
+[00:21:48] Reflections I had was like how do we
+[00:21:50] take it from a zero to how do we take it
+[00:21:51] from good to like exceptional and I
+[00:21:53] think being able to integrate lead
+[00:21:55] enrichment is really powerful and for
+[00:21:57] that we're going to use perplexity okay
+[00:22:00] so the question is how can we get this
+[00:22:02] agent to use perplexity because you'll
+[00:22:03] notice perplexity is not a module in
+[00:22:06] na10 right now so we're going to do an
+[00:22:07] https request to make that a reality do
+[00:22:10] that we click on the tool once more we
+[00:22:12] come on to http request tool guys we
+[00:22:14] come down the first we want to do is
+[00:22:15] send headers and the first header is
+[00:22:17] going to be uh authorization which is
+[00:22:19] cool by models required and just put
+[00:22:21] using the field below and then this is
+[00:22:23] where you're going to enter your API
+[00:22:24] token so it will be beer space and then
+[00:22:27] the API token token that you got from
+[00:22:29] perplexities API section and then we're
+[00:22:31] going to click on send body and just put
+[00:22:33] using Fields below and then we scroll
+[00:22:34] down and click on send body and then
+[00:22:36] it's just going to be using the Json
+[00:22:37] below and then I want you to put this
+[00:22:39] code in I'll put um the code Down Below
+[00:22:40] in the description for you so can just
+[00:22:41] copy and paste and follow this along and
+[00:22:43] then we've got the model that we're
+[00:22:44] using the message the content which has
+[00:22:47] placeholder in for the AI and then we
+[00:22:49] should be flipping ready to rock and
+[00:22:50] roll and once we've done that guys we
+[00:22:52] basically come off like that so why
+[00:22:53] don't we give this a little test just to
+[00:22:55] make sure that it's working I'm just
+[00:22:56] going to copy these without destroy in
+[00:22:58] all of our promps real quick contrl v
+[00:23:00] contrl c let's just get rid of all these
+[00:23:03] guys let's click on the AI agent let's
+[00:23:05] get rid of all this information system
+[00:23:07] message and I'm just going to say hey
+[00:23:09] who
+[00:23:10] was the tallest man in the world and
+[00:23:14] then for system message you can use
+[00:23:17] perplexity to test uh to you know
+[00:23:21] research things online boom so if I hit
+[00:23:25] enter now on this we actually should get
+[00:23:27] the information to test app as a quick
+[00:23:29] for instance it's executing the node
+[00:23:31] let's see if it works out perfectly for
+[00:23:33] us it's using this it's done a https
+[00:23:35] request and we come back over here and
+[00:23:37] they go the to man according to his free
+[00:23:38] Robert wler in fact why don't we say
+[00:23:40] provide sources uh just so that we
+[00:23:45] know that it works also what day is
+[00:23:48] it CU in this model we've not actually
+[00:23:51] specified the date so that's how we know
+[00:23:53] for certain that it's using perplexity
+[00:23:55] like that so this is to proof of concept
+[00:23:57] to make sure that it works give this a
+[00:23:58] second check on it let's have a look let
+[00:24:01] have a look this say when he died and
+[00:24:03] the date is February 12th 2025 dude when
+[00:24:06] did it become middle of February I swear
+[00:24:08] it's middle of January already but who
+[00:24:09] cares so anyway what's the point here
+[00:24:11] the point is if flipping Works which is
+[00:24:13] Ace and since we're not Savages we are
+[00:24:16] going to rename this to be perplexity
+[00:24:17] real quick uh let's call this one
+[00:24:22] perplexity phenomenal okay ace and I
+[00:24:24] think guys that's pretty much everything
+[00:24:26] this entire system needs all we're going
+[00:24:28] to do now bring it over we are going to
+[00:24:31] create a note just like we did before
+[00:24:32] which I'll do very quickly beautiful
+[00:24:33] okay we've got cuz colors matter right
+[00:24:35] color and design matters now the other
+[00:24:37] thing we want to do here potentially and
+[00:24:38] I'll show you in the previous automation
+[00:24:40] so you can check it out is we have this
+[00:24:42] retrieval database system which it
+[00:24:43] sounds really fancy now um out of
+[00:24:46] respect for your time I'm not going to
+[00:24:47] Res show you that again because I
+[00:24:48] covered that in a lot of detail in this
+[00:24:50] video which is going to be on screen
+[00:24:51] somewhere so if you haven't done that go
+[00:24:53] ahead check that out grab it build it or
+[00:24:55] just grab the blueprints from uh my
+[00:24:57] school Community which is I will show
+[00:24:59] you right here actually if I come down
+[00:25:00] to agents in fact cool thing about
+[00:25:02] school by the way you can type in things
+[00:25:03] like rag boom and then everything every
+[00:25:07] single automation about rag is there
+[00:25:09] boom you check this out scroll down
+[00:25:10] what's going on here you download it and
+[00:25:12] you are flipping ready to rock and roll
+[00:25:14] and that's just in the AI agent section
+[00:25:16] right so come on the a agents in the
+[00:25:17] bottom left I click on this guy I
+[00:25:19] download I'm ready to go now what I want
+[00:25:21] to also encourage you to check out here
+[00:25:23] is how do you actually get it to speak
+[00:25:24] in your turn of voice so if I just come
+[00:25:26] down to Assets in fact I think it would
+[00:25:29] be in the resources section right
+[00:25:31] wouldn't it notice the assets is turn
+[00:25:33] ofo guys check this out right we have
+[00:25:35] this segmentation prompt and this Alex
+[00:25:37] hosi Turner voice which I did as a quick
+[00:25:39] for instance so what this will basically
+[00:25:41] do is take any text you've got could be
+[00:25:43] YouTube videos could be emails could be
+[00:25:45] anything and essentially what we're
+[00:25:46] doing here is breaking it down into its
+[00:25:48] constituent elements for example the
+[00:25:50] Cali and word for his grammatical
+[00:25:52] patterns punctuation then we look at
+[00:25:53] things like sentence structure and
+[00:25:55] length rhetorical devices paragraph
+[00:25:57] structure all this sort of stuff down so
+[00:25:59] that actually what happens is is you end
+[00:26:01] up with a beautiful document that is
+[00:26:03] essentially the DNA of your voice now
+[00:26:05] anyone can create AI but can you create
+[00:26:07] AI that sounds like you that's how you
+[00:26:09] start to differentiate and make it from
+[00:26:10] good to great now check out this is for
+[00:26:12] Alex for instance now anyone know list
+[00:26:14] any hor videos You'll resonate some of
+[00:26:15] the stuff like check this out use a mix
+[00:26:17] of simple conversational words like
+[00:26:19] stuff best neat um we can go down to the
+[00:26:21] grammatical patterns for example and
+[00:26:23] this is train on just one of his bugs
+[00:26:25] that's it we gave it more content in in
+[00:26:28] more s it's just like an alpha version
+[00:26:30] of it right so sentence structure and
+[00:26:31] length how he talks all this stuff and
+[00:26:34] what we would do guys is we can put this
+[00:26:36] in this database so that when responding
+[00:26:38] to emails it's got all that information
+[00:26:40] in contact so if you haven't done that
+[00:26:42] go and check that out watch that video
+[00:26:44] and just add that to the database so it
+[00:26:46] basically will copy over now just for
+[00:26:48] Simplicity sake I'm just going to copy
+[00:26:50] this over obviously if you're following
+[00:26:51] that scenario step by step or the video
+[00:26:53] you'll do it this is just out of respect
+[00:26:55] for your time and all we do is grab the
+[00:26:57] tool and then then connect it up and
+[00:26:59] then we're ready to go and of course
+[00:27:00] since we're not Savages I'm also going
+[00:27:01] to copy the uh note over so we can do it
+[00:27:05] one of the things I'm really conscious
+[00:27:06] doing is just getting the right blend of
+[00:27:08] um get the right videos for like the
+[00:27:10] experts but also kind of like if you're
+[00:27:11] new and fresh to it just to make sure
+[00:27:12] you're covered and there are no gaps it
+[00:27:14] has to be the stuff that works and I
+[00:27:15] really want to make sure that we keep it
+[00:27:16] really simple for you um so it's not
+[00:27:18] unnecessarily complex cool so guys
+[00:27:21] you've essentially built the entire
+[00:27:23] thing now the only thing we want to do
+[00:27:24] now is just flip and test this guy work
+[00:27:27] so to do that and send over a fake
+[00:27:29] business inquiry thing and once we've
+[00:27:31] done that we're going to be S ready to
+[00:27:32] rock and roll and just before I send an
+[00:27:33] email guys I just want to cover one
+[00:27:34] thing I didn't mention on the cre
+[00:27:36] calendar thing so if you come down here
+[00:27:38] one things we need to add is attendees
+[00:27:40] okay come down here and an expression
+[00:27:42] just put some code like this and I'm
+[00:27:44] just going to put
+[00:27:46] attendees and just say
+[00:27:50] um who we oops oh my goodness it's all
+[00:27:54] over the place here like let see Emil
+[00:27:58] of the attendee boom beautiful that's
+[00:28:01] perfect so basically now it knows who
+[00:28:03] exactly who to invite to the
+[00:28:04] conversation and guys one of the other
+[00:28:06] options that you've got if you don't
+[00:28:07] want to leave that open to Ai and you
+[00:28:09] want to be a little bit more hardcoded
+[00:28:11] is if you come back down on here and you
+[00:28:13] see you can this Gmail Trigger or edit
+[00:28:15] field trigger whatever you want to just
+[00:28:16] to make sure it's got the right
+[00:28:17] information I can come over here right
+[00:28:20] and I can select the address and bring
+[00:28:22] that in so basically the attendee will
+[00:28:25] always be the person who emailed you
+[00:28:27] that means the AI doesn't even have to
+[00:28:29] think about it it can just do that on
+[00:28:30] autopilot another thing we can do on the
+[00:28:32] edit Field section here is email the
+[00:28:34] email body subject date we probably need
+[00:28:36] to say actually who it's also from so if
+[00:28:38] I come down here and I'll say I don't
+[00:28:39] know let's add an option if I come down
+[00:28:41] to business inquiries where is it going
+[00:28:43] to be it's going to be Gmail trigger we
+[00:28:45] want to include this as who is it
+[00:28:48] from it's going to be here right address
+[00:28:51] so then knows exactly who sent the email
+[00:28:54] um who sent the email cool beautiful and
+[00:28:59] then also if we do the cor event thing
+[00:29:01] if we come down here here can also be uh
+[00:29:04] come on to mapping edit Fields well we
+[00:29:06] need to um reactivate this one again but
+[00:29:08] you get the idea basically you'd be able
+[00:29:09] to select that once it's run through and
+[00:29:11] it would work perfectly for us which is
+[00:29:13] flipping cool and going to come off this
+[00:29:14] now let me send this test email over now
+[00:29:16] of course guys we could also add in this
+[00:29:18] telegram message I say hey Telegram and
+[00:29:20] I'd say look cool what I want you to do
+[00:29:21] is to send a message right here uh to
+[00:29:25] say hey dude tell me what you did how
+[00:29:26] you did it you can see how you can
+[00:29:28] figure this if you want that
+[00:29:29] confirmation uh but in this one we are
+[00:29:31] going to delete this guy get him out of
+[00:29:32] here and let's run through the entire
+[00:29:34] scenario step by step so come down here
+[00:29:35] test workflow it's picked up an email
+[00:29:37] it's classified it is it going business
+[00:29:39] quaries it is look at this look at the
+[00:29:40] action guys it's checking it's checking
+[00:29:42] events it's doing this it's doing that
+[00:29:43] it's do crazy stuff is working with the
+[00:29:45] AI I feel like I'm the rating like a
+[00:29:47] horse race as this guy works in the
+[00:29:48] background and so it's doing LS of cool
+[00:29:50] stuff which I think is Ace then if we
+[00:29:52] come over and check what the AI agent
+[00:29:53] did let's have a look he sheded meeting
+[00:29:55] with Robert Tuesday 4 p.m. by the way I
+[00:29:57] told him theil email that I should have
+[00:29:58] actually said this right hey I love it
+[00:30:00] are you free next week at 4 p.m. is what
+[00:30:02] I said to him and he said that he's
+[00:30:03] built and actually set the email up so
+[00:30:06] let's check out both the email and the
+[00:30:07] calendar now real quick and guys as you
+[00:30:08] can see here look hi Robert thank you
+[00:30:10] for your kind words about my AI
+[00:30:11] automation agency I'm glad to hear you
+[00:30:13] interested in the potential
+[00:30:14] collaboration I'm available for chat on
+[00:30:16] Tuesday next week at 4 p.m. I've
+[00:30:17] schedule meeting and you can find the
+[00:30:19] details here looking forward to our next
+[00:30:20] conversation you can click this open up
+[00:30:22] a calendar and see what the hell's going
+[00:30:23] on but the tldr of you guys is you just
+[00:30:25] built a full end end system it does this
+[00:30:28] tie thing on autopilot for you I think
+[00:30:30] it's flipping epic any case guys I hope
+[00:30:32] you have a wonderful blessed week and
+[00:30:34] I'll catch you in my next video

@@ -1,0 +1,162 @@
+{
+    "name": "🔥 Trigger Call",
+    "flow": [
+        {
+            "id": 1,
+            "module": "paperform:submission",
+            "version": 1,
+            "parameters": {
+                "__IMTHOOK__": 2288249
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -306,
+                    "y": -2
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTHOOK__": {
+                            "label": "My New Submission webhook",
+                            "data": {
+                                "editable": "false"
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTHOOK__",
+                        "type": "hook:paperform",
+                        "label": "Webhook",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "retell-ai:CreatePhoneCall",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 8041383
+            },
+            "mapper": {
+                "from_number": "+17433302187",
+                "to_number": "+14253958002",
+                "override_agent_id": "agent_577b85f42ec63573f268cc6538",
+                "retell_llm_dynamic_variables": [
+                    {
+                        "key": "fname",
+                        "value": "Luther"
+                    },
+                    {
+                        "key": "email",
+                        "value": "jack@jack.com"
+                    },
+                    {
+                        "key": "budget",
+                        "value": "my budget is about 11k a month"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 64,
+                    "y": -2
+                },
+                "restore": {
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "label": "My Retell AI connection",
+                            "data": {
+                                "scoped": "true",
+                                "connection": "retell-ai"
+                            }
+                        }
+                    },
+                    "expect": {
+                        "retell_llm_dynamic_variables": {
+                            "mode": "chose",
+                            "items": [
+                                null,
+                                null,
+                                null
+                            ]
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:retell-ai",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "from_number",
+                        "type": "text",
+                        "label": "From Number",
+                        "required": true
+                    },
+                    {
+                        "name": "to_number",
+                        "type": "text",
+                        "label": "To Number",
+                        "required": true
+                    },
+                    {
+                        "name": "override_agent_id",
+                        "type": "text",
+                        "label": "Override Agent ID"
+                    },
+                    {
+                        "name": "retell_llm_dynamic_variables",
+                        "type": "array",
+                        "label": "Retell LLM Dynamic Variables",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "key",
+                                    "type": "text",
+                                    "label": "Key"
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "text",
+                                    "label": "Value"
+                                }
+                            ],
+                            "type": "collection",
+                            "label": "Parameter",
+                            "name": "value"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

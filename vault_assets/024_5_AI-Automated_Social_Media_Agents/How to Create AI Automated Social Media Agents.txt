@@ -1,0 +1,917 @@
+[00:00:00] in this video I'm going to show how to
+[00:00:01] deploy an AI powered social media agent
+[00:00:03] step by step so all you'd ever have to
+[00:00:05] do is input 'say an article URL that you
+[00:00:09] like what this will then do is create an
+[00:00:11] engaging high quality unique post
+[00:00:14] specific to that platform the utation
+[00:00:16] then checks to see what you think about
+[00:00:17] it so you can edit it within the sheet
+[00:00:19] and if you click approve it will then
+[00:00:21] also go and create a highly specific
+[00:00:24] image based on your preferred style and
+[00:00:26] post automatically to your platform of
+[00:00:28] choice and what makes this automation
+[00:00:30] really powerful is that the only thing
+[00:00:32] you have to do is enter a URL and then
+[00:00:34] click approve if you want to and the
+[00:00:36] reason why the approval thing is great
+[00:00:38] CU let's say you get post that you
+[00:00:39] think's 95% there you can just change
+[00:00:42] one or two things or just a formatting
+[00:00:44] click approve and this will post
+[00:00:46] automatically for you and the ultimation
+[00:00:47] contains two part it's got part A which
+[00:00:49] is the creation part and then we've got
+[00:00:51] the second part here I'm I'll show
+[00:00:52] exactly how to build it but if you want
+[00:00:53] access to all the prompts the agents the
+[00:00:55] blueprints and all the scenarios in the
+[00:00:57] video so you just come here click input
+[00:00:58] blueprint choose the file
+[00:01:00] click this one here upload it click save
+[00:01:03] and it'll generate the automations for
+[00:01:04] you automatically so I'm going to start
+[00:01:06] by showing you this Automation in
+[00:01:07] practice so you can see that it actually
+[00:01:08] works so I propose let's look at some
+[00:01:11] open AI NS for example so we'll get a
+[00:01:13] random blog and we'll go through it
+[00:01:14] together I don't know let's go for this
+[00:01:16] article here okay great so all we're
+[00:01:18] going to do is going to copy the URL
+[00:01:19] we're going to come back over to your
+[00:01:20] future agent insert any article click
+[00:01:23] enter perfect and the reason I want to
+[00:01:26] sort of run it through is just so you
+[00:01:27] can see in practice how this actually
+[00:01:28] works so we hit run once obviously in
+[00:01:31] reality this will run in the background
+[00:01:32] so what happens this Google sheet is
+[00:01:34] found that Something's Happened
+[00:01:36] perplexity AI is taking that URL and all
+[00:01:38] plexi does is it just transcribes it
+[00:01:40] word for word to get a carbon copy this
+[00:01:42] then goes through to our LinkedIn agent
+[00:01:44] to basically take that cool copy and
+[00:01:47] create something amazing that will do
+[00:01:48] very very well on LinkedIn with all the
+[00:01:50] hashtags and everything else that you
+[00:01:51] need and this works for any example but
+[00:01:52] if I looked up LinkedIn i t this agent
+[00:01:54] here it's got all the data it's trained
+[00:01:55] on multiple examples of what works well
+[00:01:57] but this would work for any of the
+[00:01:58] platforms and you can use any agent you
+[00:02:00] like so now our LinkedIn agent is
+[00:02:01] working the background what I really
+[00:02:03] love about this automation is the fact
+[00:02:04] that you can do the editing for it
+[00:02:06] afterwards and the other cool thing is
+[00:02:07] it's just all within one sheet right so
+[00:02:09] you don't have to go between different
+[00:02:11] applications and it gets really epic
+[00:02:12] when you can add the images afterwards
+[00:02:14] as well and just like that is populate
+[00:02:15] the entire article into this thing so we
+[00:02:17] can read through it see if we want to
+[00:02:18] make any amendments but let's say you
+[00:02:20] know what that's perfect let's post it
+[00:02:22] all we then do is we come over here we
+[00:02:24] click this and we say you know what yes
+[00:02:27] that's approved and then we go to the
+[00:02:28] second part of the automation which is
+[00:02:29] this wonderful thing and I'll explain
+[00:02:30] this all in detail and show you how to
+[00:02:31] do it then all we do is click this run
+[00:02:33] once but in reality this will be running
+[00:02:35] in the background and I respect for your
+[00:02:36] time I'll just show the output and then
+[00:02:37] I'll show you exactly how you build this
+[00:02:39] so we come over to our LinkedIn feed uh
+[00:02:41] okay so we've got me head of doooo
+[00:02:42] Dynamics that's not actually what I do
+[00:02:44] but I made this like fake profile just
+[00:02:46] to show you guys how it works there you
+[00:02:48] go perfect just posted okay so to run
+[00:02:50] this you only need three things you need
+[00:02:53] meg.com obviously you're going to need
+[00:02:55] access to perplexity which you should
+[00:02:57] probably already have now um if you've
+[00:02:59] seen a couple of these videos videos so
+[00:03:00] on perplexity you basically buy API
+[00:03:02] credits it's $5 you know and you can get
+[00:03:04] like a load of stuff all you do is
+[00:03:05] perplex a create an account come down uh
+[00:03:08] and then you'll see uh down below here
+[00:03:09] you can get by API CES of course you'll
+[00:03:11] also need Google Sheets for this and
+[00:03:13] then thirdly you'll need uh access to
+[00:03:15] open API if you go to platform.
+[00:03:18] open.com you can buy uh you know credits
+[00:03:21] for your API like $5 $10 whatever you
+[00:03:23] like but you do need the subscription
+[00:03:25] which is like $20 a month and then
+[00:03:26] you'll be ready to go so the first thing
+[00:03:27] you want to do is create a new Google
+[00:03:29] sheet this is going to be really
+[00:03:30] important so we're going to call this
+[00:03:33] create
+[00:03:35] together
+[00:03:37] Automation and then we'll give it a
+[00:03:38] little emoji for a little bit of flare
+[00:03:40] we'll give it the Mystic ball one of the
+[00:03:42] best emojis out there and then what you
+[00:03:43] want to do is enter these headings in
+[00:03:45] over here and then we can just align
+[00:03:47] these up to make it nice and tidy and
+[00:03:48] then I've added in the approvals where
+[00:03:49] you click it you go approved and not
+[00:03:51] approved if you want a link for this
+[00:03:52] sheet I'll put it down below in the
+[00:03:53] description for you as well so you can
+[00:03:54] just grab that a little tip for you I'd
+[00:03:56] recommend you copy and paste the other
+[00:03:57] roll up loading it if it becomes a CSV
+[00:04:00] sometimes it really doesn't like that so
+[00:04:01] just bear that in mind when you do
+[00:04:02] upload it as you can tell if it's an
+[00:04:03] issue we've probably seen it so where do
+[00:04:05] we start well what we want to do is we
+[00:04:07] want to watch for when a row is created
+[00:04:10] so all we do for that is we're going to
+[00:04:11] find Google Sheets we're going to go for
+[00:04:13] watch new rows which is trigger when a
+[00:04:15] new row is added perfect so we select
+[00:04:17] that if you're not connected you'll be
+[00:04:18] prompted to do so here on the right hand
+[00:04:19] side and then all you're going to do is
+[00:04:21] search by path my drive click here to
+[00:04:23] choose file I've selected our beautiful
+[00:04:26] create together automation perfect table
+[00:04:29] contains headed yes roow headers yes
+[00:04:31] blah blah blah sheet name we're going to
+[00:04:33] put that sheet one you don't need to
+[00:04:34] worry about multi- sheets at the moment
+[00:04:36] and then we're going to click okay
+[00:04:37] essentially what's going to happen now
+[00:04:38] is anytime any new rows added this is
+[00:04:40] going to let us know so let's test that
+[00:04:42] shall we okay so we just copied this
+[00:04:43] random article we'll come over to our
+[00:04:45] wonderful new sheet I'm going to enter
+[00:04:47] it click enter and then we'll come back
+[00:04:49] at to
+[00:04:50] Automation and then we'll click run once
+[00:04:53] and if we've done our job properly we
+[00:04:55] should see our article pop up here great
+[00:04:57] let's have a look and has it found it
+[00:04:59] yeah great cool insert any article and
+[00:05:01] there's all you are on perfect and the
+[00:05:02] next thing I want to do is add
+[00:05:03] perplexity now the role that perplexity
+[00:05:05] plays here essentially is because it has
+[00:05:07] internet access we're just going to get
+[00:05:09] it to transcribe something now
+[00:05:11] perplexity have just been verified on
+[00:05:12] make.com which means you don't need to
+[00:05:14] buy an additional F po add-on so that
+[00:05:17] will save you like $39 so M 7B instruct
+[00:05:21] yes add message item yes we want the
+[00:05:23] role to be user and all we're going to
+[00:05:25] say is
+[00:05:27] transcribe this article word for word
+[00:05:31] and then we come down here on the left
+[00:05:33] and you can see this thing flashing up
+[00:05:34] here insert any article and there's our
+[00:05:36] article URL so we click on that perfect
+[00:05:40] all right great so we'll come here let's
+[00:05:42] just copy this URL and one thing you'll
+[00:05:43] see me doing a lot is testing each
+[00:05:45] modules it comes across cuz like I
+[00:05:46] always said you don't want to build like
+[00:05:48] a 20 step module and then find out that
+[00:05:50] it doesn't work so we put that one in
+[00:05:52] there we click okay we'll let perplexity
+[00:05:54] do its magic now the output we're
+[00:05:56] looking for here it's essentially just
+[00:05:57] the content of the article cuz that's
+[00:05:59] what the fun functionality we're using
+[00:06:00] it for so we click on this come down to
+[00:06:02] choices plus one message content and
+[00:06:07] look at that perfect the entire article
+[00:06:09] exactly as we wanted it the next thing
+[00:06:10] I'm going to create is an agent if
+[00:06:12] you've not used an agent before you're
+[00:06:14] going to absolutely love this so we're
+[00:06:16] going to click on add a new Module come
+[00:06:17] down to chat GPT excellent come across
+[00:06:20] over here and we're looking for message
+[00:06:23] and assistant perfect and now we need to
+[00:06:25] build our agent so the purpose of this
+[00:06:26] agent essentially is to take the
+[00:06:28] transcript and turn it into something
+[00:06:30] amazing like a LinkedIn post so if I
+[00:06:31] just show you what the agent looks like
+[00:06:33] so I'm in our school Community here let
+[00:06:34] me just this could be any of the social
+[00:06:36] medias I'm just picking LinkedIn as an
+[00:06:38] example here funny fact by the way
+[00:06:39] LinkedIn has the average highest net
+[00:06:41] worth per user class so maybe want to
+[00:06:43] think about the marketing so this one
+[00:06:44] for example we've been really specific
+[00:06:46] about what we need to be in there and
+[00:06:47] obviously if you want to build one of
+[00:06:48] these yourself I'd encourage you to
+[00:06:50] include like really relevant examples
+[00:06:51] like we've got loads of examples in here
+[00:06:52] and so basically you get the text like
+[00:06:54] this so we just copy the whole text and
+[00:06:56] then we come to open AI platform you're
+[00:06:57] going to come over to platform. open
+[00:07:00] you're going to come down here to
+[00:07:01] assistants on the left hand side then
+[00:07:03] create new assistant so this one we're
+[00:07:05] going to call it LinkedIn
+[00:07:09] build together and you know what let's
+[00:07:12] give it that special mergy one more time
+[00:07:14] great we enter in our LinkedIn prompt
+[00:07:16] and we just say which industry we want
+[00:07:17] so let's just say AI industry for the
+[00:07:19] sake of it perfect and literally all you
+[00:07:21] going to do is pick the model I've had
+[00:07:23] great success of GPT 4 Turbo little hack
+[00:07:26] by the way is I'd encourage you to build
+[00:07:27] your automations using like the best
+[00:07:29] model available and then once you know
+[00:07:31] that it works you can start to downgrade
+[00:07:33] these to like GPT 3.5 and and whatever
+[00:07:35] you like as you go through and that'll
+[00:07:36] have to save your cage your scale now
+[00:07:38] honestly once you've done that it's done
+[00:07:40] it's complete you can also add doc stbl
+[00:07:42] if you'd like to but for our purposes
+[00:07:43] today that's perfect if you want to play
+[00:07:45] around with it just come to the
+[00:07:46] playground you can enter Proms and it'll
+[00:07:48] show you what we'll do and now we've
+[00:07:49] created that we come back over to make
+[00:07:50] we go for the assistant here and since
+[00:07:52] it's not showing I just hit the refresh
+[00:07:54] button so we can find it cuz sometimes
+[00:07:55] if You' loaded before it won't show
+[00:07:57] there so that's a problem that you might
+[00:07:58] find sometimes and right top a wonderful
+[00:08:00] LinkedIn build together that's perfect
+[00:08:03] now what do you want the message to be
+[00:08:04] well the way that we've configured the
+[00:08:06] but means we don't really have to
+[00:08:07] include a message all we really need is
+[00:08:09] just the data right so click on the
+[00:08:11] message we're going to scroll down to
+[00:08:13] find out what the output is here right
+[00:08:14] so we go down to choices message content
+[00:08:19] perfect there you go that's excellent
+[00:08:21] and then we click okay so we're going to
+[00:08:23] test it again so let's go down to
+[00:08:24] choices come down to plus one come down
+[00:08:26] to message come down to Content we right
+[00:08:28] click run this mod will only add item
+[00:08:31] going to come down to this thing here
+[00:08:32] which is content enter the content hit
+[00:08:35] okay and then let it run the background
+[00:08:37] and if this has done its job properly
+[00:08:39] when this is complete we should have
+[00:08:40] something that looks like that has the
+[00:08:41] makings of a super super viral LinkedIn
+[00:08:43] post excellent so that's completed let's
+[00:08:45] just check out if the results looks like
+[00:08:47] what we're looking for can't idea let me
+[00:08:48] just move it here so you can get a good
+[00:08:50] look at it plus one text
+[00:08:53] value yeah and there we go that's
+[00:08:55] exactly the kind of thing I want I se
+[00:08:57] hashtags at the bottom plus a CTA that's
+[00:08:59] exactly what I'm saying perfect so just
+[00:09:01] to summarize here we entered the URL on
+[00:09:03] the sheet that came back over perplexity
+[00:09:05] then transcribe the article word for
+[00:09:06] word and then went through our really
+[00:09:08] cool LinkedIn bot but what we need to do
+[00:09:10] now is get the output from there to come
+[00:09:12] back and paste it in the LinkedIn post
+[00:09:14] so how do we do that well you might have
+[00:09:16] guessed it it's something to do Google
+[00:09:17] Sheets again so we come back over we
+[00:09:19] find Google Sheets and what we're going
+[00:09:20] to search for here is update a cell so
+[00:09:23] again I set this sprad sheet ID create
+[00:09:25] together automation perfect sheet name
+[00:09:27] is going to be sheet one now we need to
+[00:09:28] specify the cell right so well what cell
+[00:09:30] is it so we click on Cell here and if I
+[00:09:33] can just zoom out a little bit so you
+[00:09:34] can see Google Sheets identified a
+[00:09:36] change initially in this column here and
+[00:09:38] I just want to explain this for you it
+[00:09:40] found something in A2 we want the output
+[00:09:43] in B2 so what we do is we find out
+[00:09:46] exactly where that was entered so you
+[00:09:48] can see this is specified for us the row
+[00:09:50] number which is perfect right so that
+[00:09:52] already told us what the row number is
+[00:09:53] so that all we don't have to do is put B
+[00:09:55] behind it and it's done and it's it's
+[00:09:58] literally that simple so we come back
+[00:10:00] over to our Google sheet we're going to
+[00:10:01] hit enter that's our new article come
+[00:10:03] back over to our Automation and then
+[00:10:05] we're just going to hit run once and
+[00:10:07] then if this has done its job properly
+[00:10:09] if I come back over here we should see
+[00:10:11] at some point something in this fi pop
+[00:10:13] up for LinkedIn post then it's running
+[00:10:14] through Linkedin it's really interesting
+[00:10:16] actually quite people in the community
+[00:10:17] have said that they love the Instagram
+[00:10:19] the Facebook LinkedIn but also
+[00:10:21] interestingly Pinterest which I think is
+[00:10:22] a really really interesting one to look
+[00:10:24] at actually so we're going to look at
+[00:10:25] how we can automate lots of stuff around
+[00:10:27] all these platforms and the content is
+[00:10:29] one part of it but it's also like what's
+[00:10:31] your strategy and I think AI can help in
+[00:10:34] so many different ways through the whole
+[00:10:35] process so there's so much content that
+[00:10:37] we can create together on that and this
+[00:10:39] is work we should see in here now and we
+[00:10:41] don't and we don't see in there because
+[00:10:43] let's have a look at what we coded in
+[00:10:45] there b number three great but we didn't
+[00:10:47] specify the value right which is exactly
+[00:10:49] why it didn't come up cool so then all
+[00:10:51] we would do in this situation is we just
+[00:10:53] zoom out a tiny bit just so you can see
+[00:10:54] get a good view of it click on the value
+[00:10:57] let's have a look we're looking for this
+[00:10:58] perplexity we're looking for this one
+[00:11:00] here so we just click on result
+[00:11:02] excellent okay great so then let's click
+[00:11:04] on this here let's copy all up one more
+[00:11:06] time let's copy all of this amazing cool
+[00:11:09] and then the reason like I obviously I
+[00:11:11] keep all this sort of stuff in like
+[00:11:12] where it doesn't work is cuz like I said
+[00:11:14] before I really want this to be a
+[00:11:16] channel where like you get a good sense
+[00:11:17] of actually what it's like running the
+[00:11:19] software so you don't feel like you know
+[00:11:21] you're failing if it isn't perfect so
+[00:11:23] we've got row number but what row number
+[00:11:24] was it let's have a quick look this is
+[00:11:26] row number three cool we come back hit
+[00:11:27] row number three hit okay
+[00:11:29] and then now is the real real Moment of
+[00:11:32] Truth we should see it right there and
+[00:11:35] we do perfect and then let's just change
+[00:11:37] the font to have in here because I think
+[00:11:39] that font is a bit cooler and that
+[00:11:40] ladies and gentlemen is the first part
+[00:11:42] of automation so if you manage that
+[00:11:44] successfully congratulations that's
+[00:11:45] awesome then we go over to the second
+[00:11:48] part of our Automation and so for this
+[00:11:49] one we're at make we come again to the
+[00:11:50] top right create a new scenario
+[00:11:53] excellent and then we start again now
+[00:11:55] what we're going to do here is create
+[00:11:57] something that's going to spring into
+[00:11:59] into
+[00:12:00] action when this happens here okay so
+[00:12:04] I've got this new scenario here and I've
+[00:12:05] just titled our scenario scenario one
+[00:12:08] and scenario 2 so we can keep track and
+[00:12:10] it's it's good practice actually because
+[00:12:11] you may find you have quite a few
+[00:12:12] automations so what do we want then we
+[00:12:14] want to set up something that's going to
+[00:12:15] watch out for the cell to know that
+[00:12:18] something's been created in B3 but
+[00:12:21] because it's in a separate page it's not
+[00:12:23] as easy to put the data over so this is
+[00:12:26] what I found for me work really well so
+[00:12:28] we on Google Sheets
+[00:12:29] and then I'm going to look for I'm going
+[00:12:31] to type in watch and you're looking for
+[00:12:33] watch changes so click on watch changes
+[00:12:35] here and as you can see it's asked for
+[00:12:36] something really spooky called a web
+[00:12:38] hook so we click here let's add our own
+[00:12:40] web hook shall we let's call this the
+[00:12:41] work together web hook and of course our
+[00:12:45] patent pending Emoji is in there too
+[00:12:48] perfect we click save and then you'll
+[00:12:50] see this little link here all want you
+[00:12:51] to do is copy address to clipboard and
+[00:12:53] then we come back over to Google sheet
+[00:12:54] and you'll see this thing here called
+[00:12:55] extensions and I want you to click that
+[00:12:57] then go to addons and click on get
+[00:13:00] add-ons and what we have here is a
+[00:13:01] Google workspace Marketplace which is
+[00:13:03] like infinitely more lame than like the
+[00:13:05] Apple Marketplace so what we do here is
+[00:13:07] we type in make hit enter and you'll see
+[00:13:10] this at the top here make form integrat
+[00:13:12] and you need to download that I've
+[00:13:14] downloaded it I've got the installed
+[00:13:15] which is excellent so once that done we
+[00:13:17] come off and then we come over to
+[00:13:18] extensions and the bottom of extensions
+[00:13:20] you should see here make for Google
+[00:13:21] Sheets and to come over and click on
+[00:13:24] settings and once you do that something
+[00:13:25] should pop up on the right hopefully I'm
+[00:13:26] not I'm not in the way here but the only
+[00:13:28] fil to worry about for the purposes of
+[00:13:30] this automation is this thing here it
+[00:13:32] says web hog URL so what we do we come
+[00:13:34] back over to our automation copy this we
+[00:13:37] come here and then we're just going to
+[00:13:38] enter it in perfect and then you scroll
+[00:13:40] down at the bottom right you should be
+[00:13:42] able to see save and just all you do is
+[00:13:44] hit the button save and we should see
+[00:13:46] some changes confirmed in the middle of
+[00:13:47] the screen if this has worked
+[00:13:49] properly settings save successfully
+[00:13:52] little tip for you as well is that some
+[00:13:53] people struggle with this on Safari if
+[00:13:56] you're finding it isn't working it might
+[00:13:58] be worth just trying to do that in
+[00:13:59] Chrome instead we've now linked this
+[00:14:01] module with that Google sheet so we
+[00:14:02] click okay so what should we do let's
+[00:14:04] run it to see that actually works right
+[00:14:06] so run this module let's see if it's
+[00:14:07] picked up anything interesting so that's
+[00:14:09] run in the background and nothing's
+[00:14:10] happening well why is nothing happening
+[00:14:12] because there's been no changes right so
+[00:14:14] let's copy this and we're going to
+[00:14:16] emulate the output of the previous
+[00:14:18] automation so I'm going to click enter
+[00:14:21] now if this has worked properly if we
+[00:14:22] come back over we should start to see
+[00:14:25] exactly perfect we come here user row
+[00:14:29] values plus one long string on the B and
+[00:14:32] does that look familiar it should do
+[00:14:34] because we just made it perfect so it's
+[00:14:36] it's picked it up and what that has
+[00:14:37] enabled us to do is take the output from
+[00:14:39] our previous automation over here and
+[00:14:41] bring it back into this one which is
+[00:14:42] excellent so if I look at the output
+[00:14:44] right what this has given us here is
+[00:14:45] notation B4 if I go to our sheet what do
+[00:14:49] we need to give it we need to give it C4
+[00:14:51] because C4 is going to be the thing
+[00:14:53] where we approve it or disapprove it so
+[00:14:55] we need a way of taking that b and
+[00:14:57] transforming it into a see so what I did
+[00:15:00] for this one is all I literally did is
+[00:15:02] add another Module come down message an
+[00:15:04] assistant come here and I just made like
+[00:15:08] the most like over engineered GPT ever
+[00:15:11] for a really simple task so you come
+[00:15:13] back over to platform to open AI to
+[00:15:14] build your Bot and the bot basically
+[00:15:17] does this right so context you're an
+[00:15:19] Excel coding bot capable of only
+[00:15:21] producing a letter and a number you will
+[00:15:23] be given a self reference for example
+[00:15:25] B10 you'll then type out the output C10
+[00:15:28] the numbers the same your sole job is to
+[00:15:30] replace B with C with whatever number
+[00:15:32] you're given for the avoidance of Doubt
+[00:15:34] include no other text words only C and
+[00:15:36] an X for example if you b55 the output
+[00:15:39] would be c-55 now this also really I
+[00:15:41] think underscores the value of agents
+[00:15:44] zapia for example is a different nood
+[00:15:45] automation tool has things that you can
+[00:15:47] do where you can specify things with
+[00:15:48] sheets but I think agents are just so
+[00:15:50] versatile they can do so many things
+[00:15:52] it's great for whatever you want to do
+[00:15:54] basically so here what would we do well
+[00:15:57] we would take the message output from
+[00:15:58] what changes right so what are we
+[00:16:00] looking for here we're looking for B4
+[00:16:02] which range A1 notation because this
+[00:16:04] sheet here has said hey something's
+[00:16:07] popped up here great B4 so we need to
+[00:16:09] now parameterize c4 so we come back over
+[00:16:12] we picked the Google Sheets find the
+[00:16:13] approval column bar and so let's give it
+[00:16:15] a little bit of a run so if we give it
+[00:16:16] B4 for example if this has done its job
+[00:16:19] properly it should translate it into C4
+[00:16:22] so we can parze the cell and get
+[00:16:23] something doe from it so wait for this
+[00:16:25] one to Lear in the background this is
+[00:16:26] like the easiest task in the world so we
+[00:16:28] should see C C4 on the content let's
+[00:16:30] bring it over here take a look plus one
+[00:16:33] text C4 excellent so now we've got that
+[00:16:36] the next thing we need to do is just
+[00:16:37] pull through what that what that says
+[00:16:39] and so we're saying hey we want you to
+[00:16:40] pull through C4 or C3 whatever the
+[00:16:43] status is so we know that if it's
+[00:16:45] approved we can actually post that so
+[00:16:47] what we do here is we click plus again
+[00:16:50] Google Sheets and we're going to say get
+[00:16:53] AEL perfect and what do we say let's do
+[00:16:56] enter manually now we want to go for
+[00:16:57] select from a list excellent my drive
+[00:17:00] the correct together
+[00:17:01] automation excellent that loads in sheet
+[00:17:04] name sheet one and the cell we want and
+[00:17:06] want the output right so I hover over C4
+[00:17:07] we can see that flashing up in the
+[00:17:09] background which exactly what we want C4
+[00:17:11] perfect click okay now watch if I come
+[00:17:13] back over to our Google sheet let's say
+[00:17:15] that I am happy with the post and I say
+[00:17:18] that is approved if I come back here and
+[00:17:20] I say run this module only and I just
+[00:17:22] give it C4 that should come back and say
+[00:17:25] Yes approved with big thumbs up let's
+[00:17:27] check it out proved excellent so just to
+[00:17:30] summarize the second automation has
+[00:17:32] identified hey the article has been
+[00:17:34] populated into she it's then said great
+[00:17:36] cool well then the Google Sheets thing
+[00:17:38] is saying great what is the status of
+[00:17:40] your opinion on it is it approved or not
+[00:17:41] approved the next thing we need to do in
+[00:17:43] this automation is actually grab the
+[00:17:46] content itself so that this automation
+[00:17:48] can fire off and post it so again what
+[00:17:50] we do is get sell and just for for
+[00:17:52] Simplicity I'm just going to clone it
+[00:17:54] get cell and then what do you want it to
+[00:17:56] get we wanted to get this cell output
+[00:17:58] here right so we know that the change
+[00:18:00] was in B4 that's where the that's where
+[00:18:03] the update was so all we do here is we
+[00:18:05] come down we don't want the result of
+[00:18:07] this what we actually want is let's
+[00:18:10] scroll down range A1 notation B4 perfect
+[00:18:14] does that work well let's run it and see
+[00:18:16] if it does or not so let's see B4 this
+[00:18:18] works what we should see is the
+[00:18:20] information in this column here so we
+[00:18:22] come back over let's scroll plus one
+[00:18:24] output value long string big news from
+[00:18:26] stability AI they've just launched the
+[00:18:28] stable M2 come back over big news from
+[00:18:31] spil AI they've just launched s M2
+[00:18:33] excellent we're making really good
+[00:18:34] progress now this is where we need to
+[00:18:37] add a filter I want to briefly explain
+[00:18:38] this because you may find this really
+[00:18:40] helpful when you build your own
+[00:18:41] automations the reason why I had it grab
+[00:18:43] the value of this cell here rather than
+[00:18:45] cranking a filter which you can do here
+[00:18:47] and I'll show you in a second is because
+[00:18:49] I found it a nightmare sometimes I was
+[00:18:52] so explicit on what I wanted to be and
+[00:18:54] approved but just for some reason it
+[00:18:56] kept failing I found it way more
+[00:18:59] reliable to just get the output into the
+[00:19:02] Automation and then just read it out and
+[00:19:04] for you guys I just want these
+[00:19:05] automations to be easy to do with as few
+[00:19:07] failure points as possible and that's
+[00:19:09] just what I found worked better for me
+[00:19:10] when I was building this automation so
+[00:19:11] what we do here we're going to add a
+[00:19:12] filter we're going to zoom in a little
+[00:19:14] bit to get a little bit up close up
+[00:19:15] close view click on the spanner set up a
+[00:19:18] filter excellent so what's the condition
+[00:19:21] we're going to call this one approved
+[00:19:23] excellent and the condition is if this
+[00:19:27] value here approved which is in
+[00:19:28] reference to this sheet if that is
+[00:19:33] approved what we want it to say is
+[00:19:35] contains and little type is don't go for
+[00:19:37] contains go for contains case
+[00:19:40] insensitive it will save you a lot of
+[00:19:42] trouble I promise okay click on approved
+[00:19:46] and then we click okay excellent so what
+[00:19:48] we' basically said to this is this
+[00:19:50] filter here essentially if we've looked
+[00:19:53] at this post it's identified to been
+[00:19:55] something if that isn't approved the
+[00:19:57] ultimation stop nothing happens it won't
+[00:20:00] post however if you've gone in and you
+[00:20:01] said hey I like look at that I've you've
+[00:20:03] amended it maybe you've made some
+[00:20:04] adjustments to it you formatted it
+[00:20:06] whatever you want you click approved
+[00:20:07] then it will proceed to the rest of the
+[00:20:09] automation so let's run it and test the
+[00:20:10] whole thing out right so we're going to
+[00:20:11] click run once we're going to have for
+[00:20:14] wait for new data going to back over to
+[00:20:16] our sheet I'm just going to copy and
+[00:20:18] paste that in here to replicate you know
+[00:20:20] um what it look like in reality let's
+[00:20:22] say we approve it we come back over
+[00:20:25] Google Sheets found the change it's now
+[00:20:26] messaging the assistant to do the little
+[00:20:28] translation for the Google Sheets found
+[00:20:29] that approved gone through perfect got
+[00:20:31] to sell and if we come down value long
+[00:20:33] string it's pulled through everything we
+[00:20:34] needed just like that now just for the
+[00:20:37] sake of proving that it does work and
+[00:20:39] this filters working properly I'm going
+[00:20:40] to rerun it right again immediately wait
+[00:20:42] for new data let's come back over to our
+[00:20:44] Google sheet let's copy this come down
+[00:20:47] enter it and you know what actually I'm
+[00:20:48] not feeling that today I'm going to give
+[00:20:50] it a big disapproval I come back over to
+[00:20:52] automation now if this works it should
+[00:20:55] never make it past this approved filter
+[00:20:57] and it did to stop it so why did it fa
+[00:21:00] well it fell because the options I
+[00:21:01] created were approved and not approved
+[00:21:03] so an approved filter just w't working
+[00:21:04] there and I've made a few of these
+[00:21:05] different sheets so it's good this is
+[00:21:07] why it's so good to run through and I
+[00:21:08] want to give you that live experience so
+[00:21:10] we'll click run once again wait for new
+[00:21:13] data back over to the Google sheet copy
+[00:21:15] this one come down enter perfect are we
+[00:21:18] happy we're not happy we're going to
+[00:21:20] click there with that we're going to
+[00:21:21] come back if this works it should not
+[00:21:23] make it past the approved filter it
+[00:21:25] should stop there and it has it's killed
+[00:21:27] it it's killed the Tim actually cuz I
+[00:21:28] didn't approve it which is excellent
+[00:21:30] it's exactly what we wanted which means
+[00:21:32] that it's just not going to post the
+[00:21:32] stuff that you don't wanted to post so
+[00:21:34] then next thing you want to do is we
+[00:21:35] want a lovely image to go with our
+[00:21:37] LinkedIn post right so we click on plus
+[00:21:38] new we're going to go to chat GPT
+[00:21:42] excellent and then we're going to go
+[00:21:43] down and we're going to find generate an
+[00:21:45] image come over here model we want is
+[00:21:47] Dolly 3 excellent so prompt well let's
+[00:21:50] first of all decide the sty shall we so
+[00:21:52] let's check out the dolly 3 blueprint
+[00:21:54] this has got all the um all the
+[00:21:56] basically all the sizes that you need
+[00:21:57] for each platform as well so first of
+[00:21:59] all let's just set out what the um
+[00:22:01] dimensions are so first of all
+[00:22:04] Dimensions Perfect come back over to our
+[00:22:07] Dolly blueprint let's do something
+[00:22:09] in um yeah let's just go for something
+[00:22:12] like neoc classism shall we let's copy
+[00:22:14] this prompt come back over to our
+[00:22:18] scenario and take CR image in classical
+[00:22:20] sty style for this data come down and
+[00:22:24] then we want the output right that it's
+[00:22:26] got which is the value from the Google
+[00:22:27] Sheets when we the the grab aell thing
+[00:22:30] excellent come down now it's done we're
+[00:22:32] going to click okay but let's run the
+[00:22:33] whole automation again so click run once
+[00:22:35] we're going to click on wait for new
+[00:22:37] data we come back over to the sheet we
+[00:22:39] going to copy this come down hit enter
+[00:22:42] come down click approved then we go back
+[00:22:44] over to our Automation and what should
+[00:22:46] we have well it should go through the
+[00:22:48] pro filter and then once it's done that
+[00:22:50] it should generate our image excellent
+[00:22:51] it's done that let grab the sty to
+[00:22:52] generate our image in your own
+[00:22:54] particular style which would be great
+[00:22:55] and then we'll be able to see it and
+[00:22:56] then I'm going to show you how you get
+[00:22:57] that image
+[00:22:58] to post on LinkedIn with the content
+[00:23:01] that we've actually got which would be
+[00:23:02] really really really cool super so it's
+[00:23:04] done we click on the one come down to
+[00:23:05] data plus one revise prompt and there we
+[00:23:10] go we've got it so let's open up a new
+[00:23:12] tab enter it and see the
+[00:23:14] image perfect done it's given us a neoc
+[00:23:17] classic style I mean it's quite a weird
+[00:23:18] one to look at isn't actually it's like
+[00:23:20] we've got this beautiful art style we
+[00:23:22] this like future Tech stuff I think
+[00:23:23] that's a really cool image I love that I
+[00:23:25] love they're doing that you know you
+[00:23:26] can't stop these business guys from
+[00:23:27] working on a laptop that's for sure so
+[00:23:29] we come back over that's complete now
+[00:23:32] what we need to do is find a way to get
+[00:23:34] that image over into text and over to
+[00:23:36] LinkedIn so what you're going to use
+[00:23:37] next is this it's called get HTTP get a
+[00:23:42] file and what we're going to say to this
+[00:23:43] is hey I want you to grab the file from
+[00:23:47] what Dary just generated we click on
+[00:23:49] that let's go down and find it where are
+[00:23:52] you where are you let's have a look is
+[00:23:54] this flashing it's pulsing click cck on
+[00:23:56] data URL
+[00:23:58] perfect that's done and then we're going
+[00:24:00] to add in LinkedIn so we click on plus
+[00:24:03] we'll go on
+[00:24:04] linked LinkedIn let's go down LinkedIn
+[00:24:08] here obviously when you click on this
+[00:24:09] you'll just need to verify and connect
+[00:24:11] your account together now if you want to
+[00:24:13] post text you would simply click on
+[00:24:15] create user text post if you want to
+[00:24:17] post text and images you click on create
+[00:24:19] a user image post and it'll be a fi for
+[00:24:22] entering both and then when you come
+[00:24:23] here what I want to click is this HTTP
+[00:24:25] get a file which is great and then we
+[00:24:28] just simply align everything that we
+[00:24:29] need to okay so the only thing we need
+[00:24:30] to do then is just imply the content
+[00:24:33] click on content what's the content we
+[00:24:34] want to do is the value bit here right
+[00:24:37] click okay perfect and then the final
+[00:24:39] thing we need to do is add this filter
+[00:24:41] here at the end which is approved now
+[00:24:43] the reason why I need to add this filter
+[00:24:45] in here if I come back over to Google
+[00:24:46] Sheets can you see on the right hand
+[00:24:47] side here you may not able to see it but
+[00:24:49] on the right hand side we've got you can
+[00:24:51] actually specify the range so when I
+[00:24:53] initially create this automation I
+[00:24:55] basically said to it hey I only ever
+[00:24:57] want you to watch cells in column B but
+[00:25:00] no matter what combination I entered
+[00:25:03] into it for some reason it just wouldn't
+[00:25:05] do it it only works for me at least when
+[00:25:07] you give it the full the full sheet
+[00:25:09] there was no combination I could put in
+[00:25:11] that only exclusively did that so the
+[00:25:13] way that we solve for this is we had a
+[00:25:15] filter at the end of the journey and the
+[00:25:16] filter is simply there so we click on
+[00:25:18] the filter set up a filter I'm going to
+[00:25:20] put
+[00:25:22] final
+[00:25:23] check and the condition is simply this
+[00:25:26] is that the text
+[00:25:30] does
+[00:25:31] not start with case
+[00:25:35] insensitive approved so what that means
+[00:25:37] is that this Google sheet when it's
+[00:25:38] watching for new rows will sometimes
+[00:25:40] find out the fact that you've changed it
+[00:25:42] from nothing to approve so by adding the
+[00:25:44] step in it just means that it won't
+[00:25:46] create a good post for us so it does not
+[00:25:48] start with approved we click okay now to
+[00:25:50] check this works let's give it some a
+[00:25:52] completely unique topic so let's go for
+[00:25:54] English Springer Spaniels I actually
+[00:25:57] have four spring his spaniels they are
+[00:25:59] rambunctious they are a good time so
+[00:26:01] let's find a piece of news on it just
+[00:26:02] for the sake of the test so I've just
+[00:26:04] opened this page here for American can
+[00:26:06] Club what we're going to do is copy the
+[00:26:07] URL come back over to our cool
+[00:26:09] spreadsheet we're going to come down
+[00:26:11] great so then we've got this Google
+[00:26:12] Sheets just found the new row which is
+[00:26:13] great goes through to perplexity Ai and
+[00:26:16] then it'll go to a message on assistant
+[00:26:18] to create the new text that we like
+[00:26:20] excellent so it is working in the
+[00:26:21] background our perfect Automation and by
+[00:26:23] the way if you've got ideas for
+[00:26:24] automations let me down below starting
+[00:26:25] to get a really good idea of what people
+[00:26:27] want I'd also be curious to know what
+[00:26:29] interests you about AI is it like are
+[00:26:31] you trying to improve it for your day
+[00:26:33] job do you want to be an entrepreneur do
+[00:26:35] some kind of cool businesses in it it'd
+[00:26:36] be great to know what applications you
+[00:26:38] want to get out of this I think the
+[00:26:39] really cool thing is just like how many
+[00:26:41] different things that you can actually
+[00:26:43] do with it I think it's incredible and
+[00:26:44] now I update the sale if we come back we
+[00:26:46] should see that and we do perfect meet
+[00:26:48] the English spring espanel athlete with
+[00:26:50] a heart of gold and it's given us the
+[00:26:52] full breakdown of that PO and then now
+[00:26:54] we come back here set this one to run
+[00:26:56] every hour so it has a chance to read
+[00:26:58] your approval update but for the purpose
+[00:26:59] of this I'm just going to hit run ones
+[00:27:01] and enter the data as it would do so
+[00:27:03] we're going C on wait for new data now
+[00:27:05] when I enter this URL in this should
+[00:27:07] result if this has worked properly with
+[00:27:09] the post from Spring his spaniels with a
+[00:27:12] really cool image and we'll test that in
+[00:27:14] live time to make sure that it works
+[00:27:15] cool so let's go over to the article
+[00:27:17] we're going to come over here we're
+[00:27:18] going to enter it here let's say that
+[00:27:20] we're happy with that so we come over
+[00:27:22] come down to post that is approved we go
+[00:27:25] back over to the automation Google
+[00:27:27] Sheets found a change
+[00:27:28] it's done the code it's approved it's
+[00:27:30] now going to generate an image for us I
+[00:27:33] brought spring his spaniels it's now
+[00:27:34] getting the code then I'll go to get the
+[00:27:35] file from a
+[00:27:38] HTP m is coffee is delicious honest if
+[00:27:41] coffee was bad for you I don't know how
+[00:27:43] I would actually feel but thank God it's
+[00:27:45] uh thank God it's great for you great so
+[00:27:46] it's created the image it's pulled the
+[00:27:48] file and now it's posted on LinkedIn so
+[00:27:50] let me pull up LinkedIn actually right
+[00:27:51] now just so that we can see this thing
+[00:27:53] go live go to LinkedIn quickly go to my
+[00:27:56] profile
+[00:27:58] uh view profile Let's see we have
+[00:28:01] nothing on oh wait there you go it's
+[00:28:03] posted see amazing come down meet the
+[00:28:05] English spring his spinel the athlete
+[00:28:07] with the Heart of Gold did you know look
+[00:28:09] at this guys and at the end we've got
+[00:28:12] the spring his spinels in the exact
+[00:28:14] style that we wanted that we found from
+[00:28:15] a darly blueprint which is like amazing
+[00:28:18] guys that is so so so so cool and the
+[00:28:21] thing I love about this automation more
+[00:28:23] than anything else is that you can
+[00:28:24] approve and actually adapt it within a
+[00:28:26] Google sheet the last one I showed you
+[00:28:28] is great cuz it's a Google dark and you
+[00:28:29] can post it and do bit manual this takes
+[00:28:31] it another step forward and of course
+[00:28:33] you can access to all these resources
+[00:28:34] and these files so you don't need to
+[00:28:35] build timation by Jo down below I only
+[00:28:38] created it a couple of days ago and the
+[00:28:40] support's been overwhelming so if you're
+[00:28:42] watching this video at this stage and
+[00:28:43] you're part of the community I just want
+[00:28:44] to say thank you and I'm really excited
+[00:28:46] about where we can build it and
+[00:28:47] everybody in the group I just want to
+[00:28:49] get like an amazing unfair Advantage so
+[00:28:51] you can get light years ahead of
+[00:28:52] everybody else because I'll tell you
+[00:28:54] this people going to be blown away by
+[00:28:56] this sort of stuff honestly most people
+[00:28:58] have no idea you can do this sort of
+[00:28:59] stuff when we combine no code automation
+[00:29:01] with agents the future is agentic and
+[00:29:04] this sort of stuff is incredible one of
+[00:29:05] my friends I met in college who is a
+[00:29:07] coder he cannot believe that this is
+[00:29:10] possible and this is the sort of stuff
+[00:29:11] guys that like huge like AI research
+[00:29:14] labs are doing but you can do it all
+[00:29:15] yourself now using these tools and
+[00:29:17] that's what I want this channel to be
+[00:29:18] about empowering people to be able to do
+[00:29:20] this cool amazing automations and I want
+[00:29:22] to help in any way that I can if you're
+[00:29:23] watching thanks for watching have a
+[00:29:25] wonderful week and I will see you next
+[00:29:27] time

@@ -1,0 +1,366 @@
+{
+  "name": "cobuild part 4",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "15a63485-52c7-48e4-bae2-21dd370c0cad",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -496,
+        -144
+      ],
+      "id": "94c08eba-eecb-4f5b-8b80-e77aa5a39643",
+      "name": "Webhook",
+      "webhookId": "15a63485-52c7-48e4-bae2-21dd370c0cad"
+    },
+    {
+      "parameters": {
+        "base": {
+          "__rl": true,
+          "value": "appT6T0UD52syUkHZ",
+          "mode": "list",
+          "cachedResultName": "cobuild 1-10-25",
+          "cachedResultUrl": "https://airtable.com/appT6T0UD52syUkHZ"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblDGs9XLIAVG0s7b",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/appT6T0UD52syUkHZ/tblDGs9XLIAVG0s7b"
+        },
+        "id": "={{ $json.query.recId }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        -272,
+        -144
+      ],
+      "id": "fb853c88-17f1-4467-b32a-343d14eb8896",
+      "name": "Get a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "f4H2CjKCF1HGFW4I",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $('Webhook').item.json.query.socialChannel }}",
+                    "rightValue": "X",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "6cccc50e-a9e0-40de-8ed6-88da9d8b4560"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "X"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "1747c428-a54a-47da-b27c-46c4e4c89620",
+                    "leftValue": "={{ $('Webhook').item.json.query.socialChannel }}",
+                    "rightValue": "IG",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "IG"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "e41f3c0f-409e-4681-8cd4-9c0ec068272a",
+                    "leftValue": "={{ $('Webhook').item.json.query.socialChannel }}",
+                    "rightValue": "LI",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "LI"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        176,
+        -160
+      ],
+      "id": "faa0e044-50a1-4c8b-ae2b-31213ee6a899",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "accountId": {
+          "__rl": true,
+          "value": "15979",
+          "mode": "list",
+          "cachedResultName": "typeworkflow_ai_automations",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/15979"
+        },
+        "postContentText": "this is a sample caption",
+        "postContentMediaUrls": "={{ $('Upload media').item.json.url }}",
+        "options": {}
+      },
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "typeVersion": 2,
+      "position": [
+        400,
+        -144
+      ],
+      "id": "83e36c10-1754-474f-820b-cb5172f224b3",
+      "name": "IG",
+      "credentials": {
+        "blotatoApi": {
+          "id": "5A64jJESTKGtvOvc",
+          "name": "Blotato account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "platform": "twitter",
+        "accountId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "typeVersion": 2,
+      "position": [
+        400,
+        -336
+      ],
+      "id": "72a628ac-01b7-4ec4-bf7f-30beb863e6f6",
+      "name": "X",
+      "credentials": {
+        "blotatoApi": {
+          "id": "5A64jJESTKGtvOvc",
+          "name": "Blotato account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "platform": "linkedin",
+        "accountId": {
+          "__rl": true,
+          "value": "6790",
+          "mode": "list",
+          "cachedResultName": "Kevin Farrugia",
+          "cachedResultUrl": "https://backend.blotato.com/v2/accounts/6790"
+        },
+        "postContentText": "this is a sample caption",
+        "options": {}
+      },
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "typeVersion": 2,
+      "position": [
+        400,
+        48
+      ],
+      "id": "660067f0-4b1b-4d44-a590-7f371eebbf87",
+      "name": "LI",
+      "credentials": {
+        "blotatoApi": {
+          "id": "5A64jJESTKGtvOvc",
+          "name": "Blotato account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "media",
+        "mediaUrl": "={{ $json.Attachments[0].url }}"
+      },
+      "type": "@blotato/n8n-nodes-blotato.blotato",
+      "typeVersion": 2,
+      "position": [
+        -48,
+        -144
+      ],
+      "id": "e39e3358-d538-4365-b0b9-97cfc3c71f67",
+      "name": "Upload media",
+      "credentials": {
+        "blotatoApi": {
+          "id": "5A64jJESTKGtvOvc",
+          "name": "Blotato account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n.typeworkflowinternal.org",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "accept-encoding": "gzip, br",
+            "accept-language": "en-US,en;q=0.9,de;q=0.8",
+            "cdn-loop": "cloudflare; loops=1",
+            "cf-connecting-ip": "69.6.43.224",
+            "cf-ipcountry": "MT",
+            "cf-ray": "987df58038817c52-PMO",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "cookie": "rl_page_init_referrer=RudderEncrypt%3AU2FsdGVkX1%2Bpm9L3wQjG9ZYsqFzKKuw3WXzzA4%2BShkE%3D; rl_page_init_referring_domain=RudderEncrypt%3AU2FsdGVkX19mW1moRux2Zpv54bIrz7YD0vKWEPEMGfo%3D; ajs_anonymous_id=%2254532fff-ac32-46fe-bc9f-d085d96c0c14%22; rl_anonymous_id=RudderEncrypt%3AU2FsdGVkX19gdsjglfiPRICcCu8SAL7XbacSBwlvgtEKmDQ3lyZeyydFF0AN%2F0TF3JApwBcVdfCFTyVzSQzL%2FA%3D%3D; rl_user_id=RudderEncrypt%3AU2FsdGVkX187FhU7nAXxR1caIxpcaXBfAivBd946SKBem%2BtO9RSkt%2FyZbr49cYhFxj3%2B0%2Btzw9oEfA3NuwpqmpZ1qD1CMY94FrvoAQ%2BToET1jSGaVt9J23o0n2FLrnxOG%2FhlIvVqdT61MwPHR94%2F9mv%2BKELsLkKdhxu7s91LasE%3D; rl_trait=RudderEncrypt%3AU2FsdGVkX19f%2FN9TwHI%2F3C5fexyhirrVTEnEX4h%2BAHP%2FpEdD3befYw460eOmfu3cs%2FsSt%2FYnO97FQlb%2Fjn906104Iuh%2FCEYO4zqVv%2FOSgvlb5iH%2B%2BVecXMXLbKPLR7qXcJqq%2Bsu1sw4nATX53SkBzg%3D%3D; rl_session=RudderEncrypt%3AU2FsdGVkX1%2BpK1O8RAw%2F8cxrP5vvm4fHgCFnplScO28tmUUnnbsSIb9Zm%2Fqfkli67vQ9SwU%2F1WGn54m9vMtnaaa2AVt5DOqfIpNzSBS50mY5OjfzihcNbF7ZYQClrHQoz0AFUd%2B7Sn3Pi9u6O%2F70ww%3D%3D; rl_anonymous_id=RudderEncrypt%3AU2FsdGVkX19gRhdYTYTA0wF3pOUs5YGAqbdFjt%2FwKEyHuELO4Wl2TC5Vjh4jSMBeEFEVBtiNCysTugZMWAHuyA%3D%3D; rl_user_id=RudderEncrypt%3AU2FsdGVkX18va8npO08gHbTjhx6voIA93JamtiYSvtn7VqTnmBQHURZ8kTiywSNGf%2F6dEk5ymbbfYmV8bAUF1R62ggClBxRM27HNyKkizCqW7509HjsCKg6IhbwPj38x%2FU9GpcOCfUb%2BF6loa%2BrBB78DFkK3i4EGgGYT6KXR8ak%3D; rl_trait=RudderEncrypt%3AU2FsdGVkX1%2B6jf22NARyjAugNxFJXR%2BRZ8YJk1EA4TYb4LVuEkK3mPgb6nB7xtDIXb7HKdiSD%2FujyDI47YSQ%2Ff%2Be0BImqFbVi8Ylx5y%2BkaYp%2BO1eMhbMsDu0sOG0tTvzfa3YHMT%2BIxzKJnvOAD5aRGtue2nBk4x3H7lyF9eJ%2FEY%3D; ph_phc_4URIAm1uYfJO7j8kWSe0J8lc8IqnstRLS7Jx8NcakHo_posthog=%7B%22distinct_id%22%3A%220888fb519ee25dd82c0668ce33db49c7c9b5110356c49908a71ad744d2198f1a%2375535aa5-ae65-4571-9967-235164153182%22%2C%22%24sesid%22%3A%5B1759342355795%2C%220199a0f9-3eaf-71c6-94d3-e96bdaf0e9c7%22%2C1759342313135%5D%2C%22%24epp%22%3Atrue%2C%22%24initial_person_info%22%3A%7B%22r%22%3A%22%24direct%22%2C%22u%22%3A%22https%3A%2F%2Fn8n.typeworkflowinternal.org%2Fsetup%22%7D%7D; rl_session=RudderEncrypt%3AU2FsdGVkX19PTV%2FKopVj1aG5Z71sDfj67OWqVomiYyuBprDjy6jWd7NwbBuo6K4KFiuawfbzvoaQQ2vIo47MI150cZbA%2BPnEeqyBY2F%2BIYAyX6fai6x8hCzQv6IYTQK0f10U3BOKKWimsoY6zVX2vg%3D%3D",
+            "priority": "u=0, i",
+            "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Windows\"",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "none",
+            "sec-fetch-user": "?1",
+            "upgrade-insecure-requests": "1",
+            "x-forwarded-for": "172.69.211.135",
+            "x-forwarded-host": "n8n.typeworkflowinternal.org",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "653a3b747a57",
+            "x-real-ip": "172.69.211.135"
+          },
+          "params": {},
+          "query": {
+            "recId": "reccLGnvi1kJHSVPi",
+            "socialChannel": "IG"
+          },
+          "body": {},
+          "webhookUrl": "https://n8n.typeworkflowinternal.org/webhook/15a63485-52c7-48e4-bae2-21dd370c0cad",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Get a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get a record": {
+      "main": [
+        [
+          {
+            "node": "Upload media",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "X",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "IG",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "LI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IG": {
+      "main": [
+        []
+      ]
+    },
+    "Upload media": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "99ee8e17-1460-4a46-8bec-97a2312dd710",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "0888fb519ee25dd82c0668ce33db49c7c9b5110356c49908a71ad744d2198f1a"
+  },
+  "id": "SnLtVEIJF2GaerRa",
+  "tags": []
+}

@@ -1,0 +1,517 @@
+[00:00:00] in this video I'm going to show you how
+[00:00:01] to create a fully autonomous AI brain
+[00:00:03] that can tanx your ideas it can take a
+[00:00:06] sentence or a couple of words that you
+[00:00:08] put somewhere it can do full research on
+[00:00:10] it run it through multiple GPT agents
+[00:00:13] and give you an output wherever you want
+[00:00:14] it that is fully researched in any
+[00:00:16] format you want I'm going to show you
+[00:00:17] exactly how to do it step by step I'll
+[00:00:19] give you all the prompts and resources
+[00:00:21] completely free my only ask is if you
+[00:00:23] find this video helpful or interesting
+[00:00:25] to consider dropping a like and or a
+[00:00:27] comment down below to help with mother
+[00:00:29] algor rthm with that in mind let's jump
+[00:00:31] straight in and I've set this automation
+[00:00:33] up for ideas I give it a kernel of an
+[00:00:34] idea and it turns that into a fullon
+[00:00:36] analysis that I can just execute but you
+[00:00:39] could do this for literally anything so
+[00:00:41] to start let me show you how this works
+[00:00:43] to give you a feel of the kind of thing
+[00:00:44] that this can do so we start off on the
+[00:00:46] left and there's only literally um you
+[00:00:49] know a couple of components to this but
+[00:00:50] this section here could be as big as
+[00:00:52] small as you need to be so we start off
+[00:00:54] with trigger which is slack so instead
+[00:00:56] of having to type stuff in this is so so
+[00:00:58] so easy and I've said Slack but it could
+[00:01:00] be any com's channel you want literally
+[00:01:02] name it you can use it Google Docs
+[00:01:03] whatever once I've done that message it
+[00:01:05] goes through to perplexity AI if you
+[00:01:07] don't know perplexity AI is this
+[00:01:08] incredible AI search engine you can type
+[00:01:10] stuff in it will crawl the internet
+[00:01:12] check out URLs and it's better in that
+[00:01:14] sense than chat GPT or clae because
+[00:01:16] they've got an established knowledge
+[00:01:17] database perplexity can search for
+[00:01:19] things in real time so if it appeared 10
+[00:01:21] minutes ago plexity has access to it so
+[00:01:23] this is like almost the bra I want you
+[00:01:25] to think of this as the brins of our
+[00:01:26] operation this is the research agent
+[00:01:29] this is the thing that whatever we type
+[00:01:31] we know that AI plus the power of search
+[00:01:33] is going to find the most you know
+[00:01:36] contemporary relevant data sources to
+[00:01:38] give us the very very most recent
+[00:01:40] relevant thing we could possibly hope
+[00:01:42] for once perplex has done its research
+[00:01:44] and given it a specified format which
+[00:01:45] I'll cover then goes to our GPT agents
+[00:01:48] now every GPT agent I kind of want you
+[00:01:50] to think about as like digital workers
+[00:01:53] not like in a slave labor way I don't
+[00:01:54] want to get into the ethics of it but
+[00:01:56] essentially they are they're like mini
+[00:01:57] employees each Dreams Green darts as a
+[00:01:59] mini employee we've created these
+[00:02:01] individual agents on um chat GPT or
+[00:02:05] platform. open.com again I'll cover all
+[00:02:07] this very soon you give it very specific
+[00:02:09] tasks and they are going to be doing the
+[00:02:11] heavy heavy lifting in this journey so
+[00:02:13] perplexity gives us an output it goes to
+[00:02:15] gbt agent 1 then gbt agent 2 to get the
+[00:02:19] final output and then once that's done
+[00:02:20] it's going to land in Google doc or
+[00:02:21] whatever output you want and I apologize
+[00:02:23] in advance if I look down on my notes I
+[00:02:24] just want to make sure that I cover
+[00:02:25] everything so you've got all the detail
+[00:02:27] that you need so to do this you're going
+[00:02:29] to need a couple of things first thing
+[00:02:30] that you're going to need is access to
+[00:02:32] make.com I'll put a link Down Below in
+[00:02:34] the description so you can access that
+[00:02:35] and get started it's a no Cod automation
+[00:02:37] tool and it's kind of similar to zapia
+[00:02:39] people have their own preferences then
+[00:02:41] you need access to perplexity you don't
+[00:02:42] need to buy a subscription anything like
+[00:02:44] that but just to buy some AI credits I
+[00:02:46] mean I put $5 in and I've Barely Used
+[00:02:48] any of it I think I've used one C in all
+[00:02:50] of the automations that I've done and
+[00:02:51] then the next thing you need after that
+[00:02:52] is access to GPT 4 so we can access the
+[00:02:55] assistant within the playground that's
+[00:02:57] going to be about $20 a month if you
+[00:02:58] don't have access to GPT for and then
+[00:03:00] finally you need access to the
+[00:03:02] perplexity AI plugin and if this is
+[00:03:04] sound like a lot of detail before you
+[00:03:05] watch this video I encourage you to
+[00:03:06] watch a video I made just two days ago
+[00:03:07] it goes through in a lot of detail how
+[00:03:09] you get all these five things set up so
+[00:03:11] if you haven't seen that one yet go over
+[00:03:12] there watch that one and I'll be waiting
+[00:03:14] for you right away when you come back
+[00:03:15] great so with that in mind now let's get
+[00:03:17] started you going have a trigger for me
+[00:03:18] that is going to be slack so we search
+[00:03:20] for slack we going on show more we're
+[00:03:22] going to watch for private Channel
+[00:03:25] messages great if you don't you can also
+[00:03:27] make a private Channel slack it's super
+[00:03:28] super easy to do automation private then
+[00:03:31] we've got limit so basically you would
+[00:03:32] set this automation to run say every
+[00:03:34] single day just to save you save you
+[00:03:36] some cost even though it's not that
+[00:03:38] expensive now limit this is really
+[00:03:39] talking about how many different of the
+[00:03:41] inputs you're going to have are you
+[00:03:42] really going to use you can put it 10 20
+[00:03:45] whatever um I don't really see the value
+[00:03:48] in limiting it too low I mean if you put
+[00:03:49] the ideas in the chat then you may as
+[00:03:51] well run it so put 20 30 40 whatever you
+[00:03:54] like once you've done that you're going
+[00:03:55] to hit okay and that's all set up really
+[00:03:58] easy to do uh let's just say we're going
+[00:04:00] to put this to
+[00:04:01] run how often would I like this to run
+[00:04:03] I'd like this to run every day perfect
+[00:04:05] perfect at that time yeah no worries
+[00:04:07] wonderful now we're going to add a new
+[00:04:09] module and the first module we're going
+[00:04:10] to add is going to be perplexity so if
+[00:04:13] you seen my last video you'll know
+[00:04:15] exactly how to get the perplexity AI um
+[00:04:18] feature within here it's definitely
+[00:04:20] worth it for the functionality it gives
+[00:04:21] you we're going to click on perplexity
+[00:04:23] Ai and then we're going to click on
+[00:04:24] create a chat completion so we're going
+[00:04:26] to come over to our cheat sheet of how
+[00:04:28] to create an Aon tonomous AI brain I'll
+[00:04:31] put a link down below if you want access
+[00:04:32] to this whole document that I made and
+[00:04:34] it so much trial and error by the way
+[00:04:36] they literally going through all the
+[00:04:37] different specifics but you can have
+[00:04:38] that absolutely for free I'll just um
+[00:04:40] I'll put a link down below okay great so
+[00:04:42] the promp we're going to get from
+[00:04:43] plexity here is to act as an AI
+[00:04:46] researcher to analyze and expand on a
+[00:04:48] provided text idea produced a detailed
+[00:04:50] summary of the idea the maximum 150
+[00:04:53] words and conduct thorough research on
+[00:04:54] the topic including relevant data
+[00:04:56] statistics and specific examples present
+[00:04:59] research findings in a clear organized
+[00:05:00] manner blah blah blah and then we go
+[00:05:02] into some of the tasks here we give it
+[00:05:04] the idea so carefully read and analyze
+[00:05:06] the task to grasp theal concept nature
+[00:05:09] and intent of the idea identify key
+[00:05:11] points ideas objectives and then we're
+[00:05:12] going to ask it to organize its findings
+[00:05:14] into clear logical sections that cover
+[00:05:16] different aspects of the idea we're
+[00:05:17] thinking about background information
+[00:05:19] and context we're thinking about key
+[00:05:20] benefits potential applications
+[00:05:22] challenges limitations future prospects
+[00:05:24] and implications and then crucially this
+[00:05:26] bit is really important when presenting
+[00:05:28] your research use specific data points
+[00:05:30] percentages and real world examples to
+[00:05:32] add credibility to the depth of your
+[00:05:34] analysis that's so so important
+[00:05:36] complexity if you let it we'll run off
+[00:05:39] and do a million things we want to hone
+[00:05:40] it in and be really specific so that's
+[00:05:42] really really important ensure your
+[00:05:43] writing is concise coherent and easy to
+[00:05:45] follow your goal is to provide readers
+[00:05:47] with a comprehensive understanding of
+[00:05:49] the idea backed by rigorous research of
+[00:05:52] specific relevant examples cool right so
+[00:05:55] let's have look at this myol 7B instruct
+[00:05:57] is the model we're going to be using and
+[00:05:59] the only only F we need to think about
+[00:06:01] here is in the messages so we get down
+[00:06:04] to roll we're going to sign it as a user
+[00:06:05] cuz we're going to instruct it as a user
+[00:06:07] for example and then we're going to add
+[00:06:09] in the content and this is where we're
+[00:06:10] going to start with uh this document
+[00:06:12] here and then we've come back over we're
+[00:06:14] just going to paste it in here into the
+[00:06:15] content section let's have a look
+[00:06:17] excellent so you see this text idea
+[00:06:19] thing this is a format that's referenced
+[00:06:21] quite a lot through the text itself so
+[00:06:24] we just Define what that actual thing
+[00:06:26] means and then perplex will understand
+[00:06:28] what we're talking about when we so just
+[00:06:30] in a little bit more detail for clarity
+[00:06:32] so what we need to do here is basically
+[00:06:33] just align this to the message we get
+[00:06:34] from slack so all we do is click on
+[00:06:37] message here like this perfect click
+[00:06:40] okay now what do we do let's actually
+[00:06:42] test that this works and it's good to do
+[00:06:44] that regularly just so you don't build
+[00:06:45] up like a massive automation then it
+[00:06:47] just completely collapses so for example
+[00:06:49] let's say I don't know chocolate bananas
+[00:06:52] um making Chocolat
+[00:06:56] bananas do you know genius idea why has
+[00:06:58] it never been done before I don't know
+[00:07:00] so we're going to run the automation
+[00:07:01] just to see if it can pick up a slack
+[00:07:02] message and how that gets fed into
+[00:07:04] perlex AI excellent run once slack is
+[00:07:07] here doing its magic in the background
+[00:07:10] and one of the things I will say with
+[00:07:11] this as well is really really good to
+[00:07:13] with you whatever your use case is you
+[00:07:15] can refine it massively as you go along
+[00:07:17] but there's a lot of value in making
+[00:07:19] fine tweaks and just see how that
+[00:07:20] affects the output excellent so we've
+[00:07:21] got this here making chocolate bananas
+[00:07:23] Plexi down research online just having a
+[00:07:26] a free research assistant is so so so
+[00:07:28] cool so you can over here for example we
+[00:07:30] go down to choices plus one message and
+[00:07:34] then
+[00:07:36] content and then look at this guys
+[00:07:39] making chocolate dip bananas is a simple
+[00:07:41] yet delightful idea that combines the
+[00:07:42] natural sweetness of bananas with the
+[00:07:44] rich indulgent taste chocolate I'm I'm
+[00:07:47] going to stop reading I'm going a little
+[00:07:48] bit too hungry so it's giv the idea
+[00:07:49] summary it's given his background it's
+[00:07:50] given his benefits challenges future
+[00:07:52] prospects it's given us examples studies
+[00:07:55] and a conclusion uh just from one
+[00:07:59] message slack that's all we've done now
+[00:08:01] we've done that we're going to add in um
+[00:08:03] we're going to add in GPT agent now so
+[00:08:05] so to add GPT agent come here click open
+[00:08:08] Ai and then we're going to scroll down
+[00:08:10] for a message and assistant perfect well
+[00:08:14] what assistant are we going to message
+[00:08:15] well you can select from drop down here
+[00:08:16] it's so easy to do it's ridiculous so
+[00:08:20] assistant we're going to go for the idea
+[00:08:21] but the reason why I've set this up this
+[00:08:24] way is a feature of the way that
+[00:08:26] language models work we've got an idea
+[00:08:28] bar and we've got a critique but so if I
+[00:08:30] come back to the complete um the
+[00:08:32] complete setup the slack message is the
+[00:08:34] idea perplexity does the research and
+[00:08:37] gets to contemporary data this GPT agent
+[00:08:40] here is the idea bar so what this will
+[00:08:42] do is take the data from perplexity and
+[00:08:46] turn it into an amazing idea it will
+[00:08:47] transpose it into here's the here's a
+[00:08:50] kernel of information a lot of detail
+[00:08:52] now make this idea amazing in the format
+[00:08:54] that I want and then this little bot
+[00:08:56] here is our critique bot his only job is
+[00:08:58] to critique everything that the first
+[00:09:00] agent made and say hey is that good is
+[00:09:02] that bad does that make sense does that
+[00:09:04] not make sense and you'll know this from
+[00:09:05] experience if you just say the words
+[00:09:06] critique that or can this be improved
+[00:09:09] that like double the quality of the
+[00:09:10] response this is why the critique B is
+[00:09:13] important this isn't just an automation
+[00:09:14] this is this is combining best practices
+[00:09:17] with using language models and
+[00:09:18] automation so that's why we need an
+[00:09:20] ideas bar and we need a critique bar so
+[00:09:22] we back to our ideas bot perfect we're
+[00:09:24] going to come over now to create the
+[00:09:26] ideas part so all we do to do that is
+[00:09:28] we're in platform.
+[00:09:32] open.com assistant um and again you need
+[00:09:35] to get this will be like API credits on
+[00:09:37] your card but it's like very very very
+[00:09:39] very cheap from what I've used now come
+[00:09:41] on to create and we'll call this one
+[00:09:43] test
+[00:09:44] bot meu and then we're going to give it
+[00:09:46] instructions so we come back over to our
+[00:09:48] document here for example I'm going to
+[00:09:50] scroll down here's our ideas bot so
+[00:09:52] let's have a look at what we wrote for
+[00:09:53] this one so idea bot act as an AI
+[00:09:56] analyst and you'll see a lot of the time
+[00:09:57] we're giving these guys roles so
+[00:09:59] whatever use cases give it be specific
+[00:10:01] on the role to critically examine and
+[00:10:04] give an idea based on thorough research
+[00:10:06] from to reliable sources provide
+[00:10:09] comprehensive well structured analysis
+[00:10:11] of the idea considering its strengths it
+[00:10:13] weaknesses potential implications and
+[00:10:16] future prospects the analysis should be
+[00:10:18] 800 to 1200 words clear insightful and
+[00:10:21] informative covering multiple
+[00:10:23] perspectives including relevant data and
+[00:10:25] examples ensure the output is polished
+[00:10:27] easily understandable and actionable we
+[00:10:29] detail some things in terms of its tone
+[00:10:32] carefully stud research the central
+[00:10:33] female concept of the idea Theo
+[00:10:35] opportunity and address organize your
+[00:10:37] analysis into a well structured logical
+[00:10:39] flow that covers the following aspects
+[00:10:41] an intro main strengths and weaknesses
+[00:10:43] potential witness limitations
+[00:10:45] implications of future prospects
+[00:10:47] recommendations on actual insights based
+[00:10:49] on analysis and by way if you want a
+[00:10:50] video on how to create these for your
+[00:10:52] specific scenario just leton the down BL
+[00:10:54] I'm very happy to help you with that
+[00:10:55] representing your analysis use specific
+[00:10:57] data points examples and case studies
+[00:10:58] blah blah blah and then we do all the
+[00:11:00] different things down here and then we
+[00:11:01] finish by telling it what it goal is to
+[00:11:03] create a comprehensive insightful and
+[00:11:04] actionable Analysis of the given idea
+[00:11:07] and we ended it with instructions so we
+[00:11:09] copied this document here idea bot
+[00:11:12] Perfect come back over to our assistant
+[00:11:14] pop it in there the model GPT 4 Turbo
+[00:11:17] preview it is premium it's it's just
+[00:11:20] better it just creates better content it
+[00:11:22] really does and then this is where you
+[00:11:23] can take it from good to great and
+[00:11:25] that's to add files so what I like to do
+[00:11:27] with this is ADD files that you think
+[00:11:29] are relevant to the GPT that you're Crea
+[00:11:33] for example here I've just added a turn
+[00:11:34] of voice file which has a like literal
+[00:11:36] make like 20 different pages on like how
+[00:11:39] I want it to talk and speak and things
+[00:11:41] and all you do is just click add and
+[00:11:42] then turn the voice and it's done and
+[00:11:44] that is literally it and honestly that's
+[00:11:46] like all we need so then all we do is
+[00:11:47] we're going to come back over to our new
+[00:11:49] integration we're going to change this
+[00:11:52] um because it's not loaded in just yet
+[00:11:55] no worries so we're going to click save
+[00:11:57] and just refresh the page and I I want
+[00:11:59] to
+[00:12:00] you know I want to kind of show you
+[00:12:01] these things where like things aren't
+[00:12:03] appearing and available just because I
+[00:12:05] think it's good for you to know how if
+[00:12:07] you've not used a software before like
+[00:12:08] no cut automation how to actually
+[00:12:10] troubleshoot it because you know I just
+[00:12:13] hate those Flawless presentations that
+[00:12:15] like don't show you what it's actually
+[00:12:16] like to use so sometimes you need to
+[00:12:18] just refresh it or it'll give you some
+[00:12:20] complete bizarre like outcome you're not
+[00:12:22] expecting then it loads in nicely we
+[00:12:24] click on it great right let's find the
+[00:12:25] but shall we I know I'm on the right of
+[00:12:27] the screen so I'm always trying to move
+[00:12:28] this slightly left so that you can get a
+[00:12:30] good a really good Viewpoint of it my
+[00:12:32] open a connection and then the message
+[00:12:34] all we need to do is include the input
+[00:12:35] that we gave it to the perplexity AI
+[00:12:37] come down to choices come down to
+[00:12:39] message and then content now the reason
+[00:12:42] why by the way I think it's good to run
+[00:12:44] it as you go because when you're
+[00:12:45] selecting these and you haven't if you
+[00:12:47] haven't done a run through it's so tough
+[00:12:49] sometimes to know like is it message is
+[00:12:50] it content it shows you here can you see
+[00:12:53] like idea summary making CH so you know
+[00:12:55] okay great that's a specific one that I
+[00:12:56] need it's just a little tip you might
+[00:12:58] find helpful boom perfect then we click
+[00:13:02] okay right cool so let's try it now with
+[00:13:04] a completely new message making
+[00:13:06] chocolate
+[00:13:07] phones come back over let's then run the
+[00:13:11] entire scenario together just checking
+[00:13:14] it's got everything perfect making
+[00:13:15] chocolate phones has appeared
+[00:13:17] perplexity uh choices plus one message
+[00:13:22] content creating chocolate phones cool
+[00:13:24] so it's loaded so we click on the one
+[00:13:26] here let's have a look so it has
+[00:13:28] completed successfully
+[00:13:29] uh come down to plus one come down to
+[00:13:31] text value there we go look at this the
+[00:13:35] unusual individ concept chap FS blending
+[00:13:37] with technology blah blah strength and
+[00:13:39] opportunities marketing and branding
+[00:13:40] Innovation sustainability initiatives
+[00:13:42] challenges limitations durability
+[00:13:45] usability concerns implication of future
+[00:13:47] prospects novelty marketing strategy
+[00:13:50] future and it also got like a five-step
+[00:13:52] plan for us to consider to get the whole
+[00:13:54] thing off the ground including
+[00:13:55] conclusion and and bear in mind guys
+[00:13:57] like you can specify all these specifics
+[00:14:00] that you want to tailor it I mean I just
+[00:14:01] cobbled this together as an example to
+[00:14:03] show you just how easy it is and then on
+[00:14:05] that all do that is add a new one in
+[00:14:07] there straight after that so we come
+[00:14:08] back over and we had our critique box
+[00:14:10] and I thought just to speed up the last
+[00:14:11] part of the demo for you so we're not
+[00:14:12] rehashing it I've just show you the
+[00:14:14] automation I made earlier so you click
+[00:14:16] on this one here for example uh this is
+[00:14:18] the critique bot and we just lick it up
+[00:14:20] here content text content generation
+[00:14:23] text value which leads to this input
+[00:14:25] here the critique bar and that's it so
+[00:14:28] all we've done is taken the output from
+[00:14:29] this one put it in the message of that
+[00:14:31] one and then to add to Google Docs you
+[00:14:34] just simply search click on the Google
+[00:14:36] Docs and then on here you select the one
+[00:14:37] that you want which is content ideas
+[00:14:39] which is just a random document that I
+[00:14:41] chose you basically click here and it'll
+[00:14:43] show you a load of options and then on
+[00:14:45] in a pended text that's the place where
+[00:14:48] you put the output from the previous one
+[00:14:50] there so for example if I click here you
+[00:14:52] can see as you hover over it it flashes
+[00:14:55] on the left hand side and that's
+[00:14:57] basically it and then we're we're
+[00:14:58] literally
+[00:14:59] ready to go so we'll Test the full thing
+[00:15:01] out one more time with whatever prom
+[00:15:04] that we want so if I come back over to
+[00:15:05] slack making chocolate spring spaniels
+[00:15:08] for doggo enthusiasts and so I mean it's
+[00:15:10] not even grammatically correct but you
+[00:15:12] get you get the idea right we're going
+[00:15:13] to hit run once and then this will run
+[00:15:15] in the background foros and we have to
+[00:15:16] bear in mind this is just the kernel of
+[00:15:18] the idea right like the applications for
+[00:15:20] this are insane creating a GPT brain to
+[00:15:23] 10x your ideas right think more about it
+[00:15:26] and there's so many use cases of this
+[00:15:27] and somebody else speaking to in the
+[00:15:28] comments talking about how we could use
+[00:15:30] this to help people get jobs or let's
+[00:15:32] say you apply to work at Amazon to get a
+[00:15:34] six figure roll how this could take your
+[00:15:36] CV you know we could search the way the
+[00:15:38] plexity to find out best case best
+[00:15:40] practices for applying for that job and
+[00:15:42] just help you get the job in so many
+[00:15:43] different ways so if you've got ideas
+[00:15:45] for different use cases let me know down
+[00:15:47] below and there we go it's ported over
+[00:15:48] to Google doc I changed the formatting a
+[00:15:50] little bit there was some other stuff in
+[00:15:51] here just to make it slightly easier for
+[00:15:53] now but you can specify that with like
+[00:15:55] documents that you give it but look idea
+[00:15:57] score implementation
+[00:15:59] difficulty score the concept of creating
+[00:16:01] chocolate spring his spels presents a
+[00:16:03] unique and engaging idea that capitalize
+[00:16:05] on people's love for food for both dogs
+[00:16:07] and chocolate blah blah blah look at
+[00:16:09] this strength the witnesses onmet market
+[00:16:11] demand and it's even got data in here
+[00:16:13] right talking about the valuation of the
+[00:16:14] market diversification support it's
+[00:16:16] called out
+[00:16:17] weaknesses um ways we could do it
+[00:16:20] conclusions next steps ways that we' get
+[00:16:22] off the ground and a final hack for you
+[00:16:23] here guys in the platform the best way
+[00:16:25] to get the ultimate response that you're
+[00:16:26] looking for is to come click playground
+[00:16:28] over here we're going to come down to
+[00:16:30] assistance and what we can do is pick
+[00:16:32] the bot that we want so this bot for
+[00:16:34] example the instructions we've got it
+[00:16:36] and then enter the message and you can
+[00:16:38] see the outputs that it gives you and if
+[00:16:39] it isn't right you can actually change
+[00:16:41] the instructions on the left hand side
+[00:16:44] in real time until you get the perfect
+[00:16:46] output that you want but this is just a
+[00:16:48] beginning there's so many different
+[00:16:49] applications with this I hope you found
+[00:16:51] this really helpful in any case have a
+[00:16:53] wonderful week and see you next time

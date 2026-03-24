@@ -1,0 +1,1301 @@
+[00:00:00] in this video I'm going to show you can
+[00:00:01] scrape YouTube comments from any video
+[00:00:02] you want on YouTube or multiple videos
+[00:00:05] you first of all pick the creds that you
+[00:00:06] want let's say you pick I don't know
+[00:00:08] Alex OSI Grant cordone you can pick as
+[00:00:10] many as you want to we get all of those
+[00:00:12] bundled together in an RSS feed and the
+[00:00:15] second any one of those post a video our
+[00:00:17] agent our website our YouTube comments
+[00:00:19] grer kicks into action but then this is
+[00:00:21] why this is so epic and I'm so excited
+[00:00:23] to show you how to do this what this
+[00:00:25] will do is based on that video it's
+[00:00:27] going to give us a description a high
+[00:00:29] level overview what the video is about
+[00:00:30] in a couple of sentences you're going to
+[00:00:32] get a Vibe and sentiment analysis how
+[00:00:34] does everybody feel in the comment
+[00:00:36] section do they like it do they not like
+[00:00:37] it do they think it's the best thing in
+[00:00:38] the world or do they hate it and then on
+[00:00:40] top of that using our viral GPT agent
+[00:00:42] that I'm going to show you walk you
+[00:00:43] through it's going to generate five
+[00:00:45] unique what it believes to be highly
+[00:00:48] viral opportunity videos that you can
+[00:00:50] make based off those comment section and
+[00:00:52] everything will appear automatically for
+[00:00:54] you in a table like this that has a
+[00:00:57] video URL the title the description The
+[00:00:59] Vibes sentiments and the ideas all you
+[00:01:02] ever need to do like this for example is
+[00:01:04] a video that I made uh my last video
+[00:01:06] that I made on making money with AI
+[00:01:07] agent it explains what I do it explains
+[00:01:11] the vibe and the sentiment in the
+[00:01:12] comment section and then based on that
+[00:01:14] it talks about video ideas so look at
+[00:01:15] this one here right five top five Google
+[00:01:17] sheet automations for B2B why is it
+[00:01:19] asking that because in the last video I
+[00:01:22] did somebody said hey could you please
+[00:01:23] do a video on Google Sheets guys this is
+[00:01:26] an incredible automation I'm going to
+[00:01:28] show you exactly how to build it the the
+[00:01:29] reason why this is so effective is
+[00:01:31] because you actually get to hear from
+[00:01:33] the comments on channels in your Niche
+[00:01:35] what they really want videos on and it's
+[00:01:37] just an incredible thing and on top of
+[00:01:39] that there's going to be a second part
+[00:01:40] of the automation where I'll show you
+[00:01:41] how you can monetize this entire thing
+[00:01:43] and create a subscription income from it
+[00:01:45] that's going to be available over in my
+[00:01:47] school Community down here if you don't
+[00:01:49] know who I am by the way my name is Jack
+[00:01:51] my YouTube channel and my school
+[00:01:53] Community is all about the latest AI
+[00:01:55] it's about incredible automations and
+[00:01:57] most importantly it's about the stuff
+[00:01:59] that works and if you are thinking about
+[00:02:01] joining I'd encourage you to do so
+[00:02:03] within the next two days because at
+[00:02:04] Wednesday midday the price of our
+[00:02:06] community will go up and that's to align
+[00:02:08] with the school games and to Value the
+[00:02:10] community and what we've got going on
+[00:02:11] here every automation I cover in the
+[00:02:13] channel is here and all the ones that I
+[00:02:15] don't turn the voice AI agents lots of
+[00:02:17] incredible stuff I've also got a l of
+[00:02:19] bonuses that will expire by Wednesday
+[00:02:21] midday so if you're thinking about it
+[00:02:23] and that sounds like it might be
+[00:02:24] interested to you you may want to swing
+[00:02:25] on over and join us uh and and see what
+[00:02:27] all the hype is about and also last
+[00:02:29] thing is that you never actually have to
+[00:02:31] create any automation or you ever do and
+[00:02:34] I create a lot of automations you may
+[00:02:35] have seen my channel I create a lot of
+[00:02:36] automations and then for every video I
+[00:02:37] make you come down here you click on
+[00:02:39] more you click on import blueprint you
+[00:02:41] choose a Json file you select the file
+[00:02:43] click save and all these automations
+[00:02:45] populate automatically that's for every
+[00:02:47] single automation I do some of these
+[00:02:48] will take you 30 40 50 minutes to do but
+[00:02:50] if you're lazy and you want access to
+[00:02:52] the knowledge you can just go ahead and
+[00:02:54] do that so with that in mind guys I'm
+[00:02:56] going to walk you through I'm not going
+[00:02:56] to be lazy I'm going to build it with
+[00:02:58] you live so you figure out exactly how
+[00:03:00] you need to build this entire thing and
+[00:03:02] you're going to f how to do it step by
+[00:03:04] step but before I do that I just want to
+[00:03:06] cover briefly what tools you need to run
+[00:03:08] this and then we'll go into exactly how
+[00:03:11] you build it so the first thing you're
+[00:03:12] going to need is access to a no code
+[00:03:14] automation platform we're using make.com
+[00:03:17] there are a few options like zapia but
+[00:03:19] make.com is pretty incredible and again
+[00:03:22] I'll put all these links Down Below in
+[00:03:23] the description so you can just push the
+[00:03:24] buttons and start making it yourself
+[00:03:26] then we're going to get access to an RSS
+[00:03:27] feed the RSS feed is essentially going
+[00:03:30] to enable us to list all of our favorite
+[00:03:33] YouTube creators that we like or maybe
+[00:03:34] you just do this for your own videos for
+[00:03:35] example so I on this video just pull
+[00:03:38] together Alex and me as a for instance
+[00:03:40] but you could do it with your own videos
+[00:03:42] and you know not necessarily other
+[00:03:43] people's but essentially we can get all
+[00:03:44] the YouTube channels that we like we can
+[00:03:46] conol them into one place create a
+[00:03:48] bundle and then anytime they po
+[00:03:50] literally the second they post a video
+[00:03:52] this automation triggers so you can see
+[00:03:54] exactly what it's like but we'll likely
+[00:03:55] add a delay to let the comments come in
+[00:03:57] so we can understand what the sentiment
+[00:03:59] is about what the people what the people
+[00:04:01] want to hear about so we've got RSS
+[00:04:03] doapp that's the first thing you need
+[00:04:05] the next one's going to be access to
+[00:04:06] this thing called appify it's like this
+[00:04:08] really cool no code scraper I'll show
+[00:04:11] you exactly how to set it up so you can
+[00:04:12] use it and get flying with it and don't
+[00:04:15] don't be put off by these noid scrapers
+[00:04:16] and now it can seem a bit overwhelming
+[00:04:17] with different Technologies but once you
+[00:04:19] use them once in this video you'll feel
+[00:04:21] a lot more comfortable and your mind
+[00:04:23] will be blown and you think oh my gosh
+[00:04:24] look at all these really cool
+[00:04:26] opportunities I've got there so we've
+[00:04:28] got make we've got RSS
+[00:04:30] we've got appify and bear in mind appify
+[00:04:32] you get $5 free credits RSS you can
+[00:04:34] create free accounts maker is also free
+[00:04:36] up until a certain amount I mean like
+[00:04:38] you can get so far with the free version
+[00:04:39] so you will not be out of pocket if
+[00:04:41] using those three things and of course
+[00:04:42] platform the open.com you come over API
+[00:04:45] Keys you deposit a couple of dollars in
+[00:04:46] credits and then you can connect those
+[00:04:48] together if you're not sure on how to do
+[00:04:50] that in my community I've got
+[00:04:52] step-by-step guides on you know if
+[00:04:54] you're new to make how you learn make so
+[00:04:55] for example you need to know how to
+[00:04:56] connect things we've got introductions
+[00:04:58] to make sh you exactly how it works as a
+[00:05:00] beginner we've got how you connect to
+[00:05:02] air table GPT you know lots of different
+[00:05:05] resources so if you're not sure exactly
+[00:05:06] how you connect these things I've got
+[00:05:08] all those resources and trainings in the
+[00:05:09] school Community um you'll also be able
+[00:05:11] to fill it around but this just if you
+[00:05:12] want additional support that's one of
+[00:05:13] the things that we cover alongside all
+[00:05:15] the cool business making money stuff
+[00:05:17] which a lot of people super excited
+[00:05:18] about and once you've got that guys the
+[00:05:19] only other thing you need is this thing
+[00:05:20] called zero code kit which basically
+[00:05:23] lets you and I parade around like coders
+[00:05:25] without knowing almost anything about
+[00:05:27] code essentially normally do like
+[00:05:29] terminals sort of nonsense to run code I
+[00:05:31] say nonsense and loose ter I respect
+[00:05:33] coders but this this what essential has
+[00:05:35] to do is enter code and run it
+[00:05:37] automatically for us within a no code
+[00:05:39] solution so all you would need to do is
+[00:05:40] copy this put it in there and it runs
+[00:05:42] and this will grab our YouTube this will
+[00:05:44] grab our YouTube transcript and zero
+[00:05:46] code for
+[00:05:47] example I'll show what that looks like
+[00:05:49] very briefly it looks something like
+[00:05:51] this you click sign up sign in you come
+[00:05:54] down you see you get credits again you
+[00:05:55] can get like I like 25 for free 25 runs
+[00:05:58] for free so you can try this without
+[00:06:00] actually having to buy anything you get
+[00:06:01] an API key you copy that and actually
+[00:06:03] you would come back over to the
+[00:06:05] automation enter it in and then you
+[00:06:07] would be flying and the total cost of
+[00:06:09] this is quite low the final part we're
+[00:06:11] going to use here is something called
+[00:06:12] air table air table is Google Sheets on
+[00:06:16] steroids it's been hitting the gym it's
+[00:06:18] been doing the bicep kills it's been
+[00:06:19] pumping the chest up a little bit we
+[00:06:20] love air table air table is amazing just
+[00:06:22] it's just way more configurable it's
+[00:06:24] robust it's phenomenal and I'll show you
+[00:06:27] exactly how you use it it's super
+[00:06:28] straightforward and pretty much once
+[00:06:30] you've got those things you're ready to
+[00:06:32] rock and roll but we're going to touch
+[00:06:33] on all of them step by step and exactly
+[00:06:35] how we do it so look if you haven't
+[00:06:37] already grab that coffee and let's jump
+[00:06:40] straight in okay guys so step one what
+[00:06:42] are we with our formalities we need to
+[00:06:44] name these scenarios okay so let's call
+[00:06:46] this one YouTube um
+[00:06:51] comments comment
+[00:06:53] scraper one out of two we're going to
+[00:06:55] copy it uh again create a new scenario
+[00:06:58] Again by the way you go to make you
+[00:06:59] click on the correct new scenario in the
+[00:07:00] top right and then you'll be ready to
+[00:07:02] rock and roll and we click there awesome
+[00:07:04] of course this one there needs to be a
+[00:07:05] two out of two awesome cool so what's
+[00:07:09] the first thing we need well in order to
+[00:07:10] scrape the videos we don't want to have
+[00:07:12] to be automatically grabbing URLs
+[00:07:13] ideally we just we want to create this
+[00:07:15] in a way that it happens just in the
+[00:07:17] background for us it's not cuz we're
+[00:07:18] lazy it's cuz we're thinking ahead right
+[00:07:20] we're thinking ahead of the game so what
+[00:07:21] I want you to do is head over to a
+[00:07:24] website called RSS doapp and you should
+[00:07:27] see a big Bluey purple page P like this
+[00:07:30] you're going to sign up then once you
+[00:07:32] sign up and sign in I'll wait for you to
+[00:07:34] do that cool welcome back now you've
+[00:07:36] signed up you going to see page it look
+[00:07:38] something like this so on the left hand
+[00:07:40] side I want you to come and click on new
+[00:07:42] feed and it'll say hey enter URL topic a
+[00:07:45] keywood and by the way guys if you're
+[00:07:46] not sure what RSS feed is essentially in
+[00:07:50] Lay terms anytime an article is posted
+[00:07:52] or something happens or a YouTube video
+[00:07:54] is created this RSS Fe what's
+[00:07:56] essentially doing is it's recognizing
+[00:07:57] happened it's grabbing the data and
+[00:07:59] saying hey this URL just appeared on
+[00:08:01] this page that you gave us or hey some
+[00:08:03] text appeared on this page you gave us
+[00:08:05] that's why you get websites that auto
+[00:08:07] update um you can do it for anything you
+[00:08:09] could even search for things like if I
+[00:08:10] type in AI for example a HIV oh my
+[00:08:13] goodness I don't know what this thingss
+[00:08:15] I'm looking at but look if you type in
+[00:08:17] any search T ever any article that
+[00:08:19] appears on the Internet or most of them
+[00:08:21] will disappear here and you can save the
+[00:08:23] feed and use that as a feed in for your
+[00:08:25] automations I've got loads of cool
+[00:08:26] videos on the channel that shows you how
+[00:08:28] you do that but for the purpose of this
+[00:08:29] video guys I'm not going to be touching
+[00:08:31] the controversial topics I'm going to be
+[00:08:33] looking at YouTube videos cuz the
+[00:08:35] comments will really give us an idea of
+[00:08:37] the sentiment of the customers and what
+[00:08:39] it is that they want so what do we do
+[00:08:41] you're going to head over to
+[00:08:42] YouTube now we got wonderful Alex Ami we
+[00:08:45] love Alex in his no strip go over to his
+[00:08:47] Channel or the channel that you want to
+[00:08:48] do this so for example do your own
+[00:08:49] channel so you you can just automate
+[00:08:51] that click on videos and then I want you
+[00:08:54] to click on the URL itself okay then
+[00:08:57] come back over to RSS
+[00:09:00] enter topic a keyword in fact what I'm
+[00:09:02] also going to do is come here put that
+[00:09:04] in there click
+[00:09:06] generate and then it works in the
+[00:09:08] background for us and let's just say we
+[00:09:09] want someone else like let's also do the
+[00:09:12] Jack Roberts YouTube channel right let's
+[00:09:13] do the Jack Roberts YouTube channel so
+[00:09:15] we come over type in jaet Robins
+[00:09:16] wouldn't it be funny if I just don't
+[00:09:17] even appear I'm like oh no oh my
+[00:09:19] goodness like I can't I don't even turn
+[00:09:20] up so cool I had that once I was looking
+[00:09:23] for my name and I was like I don't know
+[00:09:25] like I I was like do I want to be do I
+[00:09:26] want to appear on YouTube for that I
+[00:09:28] don't know it's a funny one so look I
+[00:09:29] click on
+[00:09:30] videos and here we go I think there was
+[00:09:32] a wrestler called Jack The Snake Roberts
+[00:09:35] um and he was I was like I'm going to
+[00:09:37] have to become like you know well known
+[00:09:39] to come above that guide but I don't
+[00:09:40] know if it's something that you want to
+[00:09:41] be honest so look I come over here and
+[00:09:44] look can you see what this has done guys
+[00:09:45] this is filled up look these are all the
+[00:09:47] videos from Alex's YouTube channel like
+[00:09:50] do they look familiar well they probably
+[00:09:52] should do right because they're all his
+[00:09:54] videos cool so what do we do we click on
+[00:09:56] Save feed like this we're going to add
+[00:09:58] it to a bundle come back onto new feed
+[00:10:01] and then we're going to enter the Jack
+[00:10:02] robits YouTube channel okay cool and I'm
+[00:10:04] going to use this I'm going to use this
+[00:10:05] I'm not going to sell this but I'm going
+[00:10:07] to use this one it'll just help me make
+[00:10:08] better content for you so if you've not
+[00:10:10] ever commented down below just tell me
+[00:10:12] down below what you want to see because
+[00:10:13] I I do read it and I I love hearing from
+[00:10:15] you guys now look at this here are all
+[00:10:17] the videos that I've done cool let's
+[00:10:20] save that as a feed so what we've done
+[00:10:22] we make these little feeds could be my
+[00:10:24] channel you know let's say I have four
+[00:10:26] channels I can do all my four channels
+[00:10:27] and I add them up and you get the
+[00:10:29] channels you want then you come over
+[00:10:30] here to bundles and then we click on
+[00:10:32] create a new bundle and then you're
+[00:10:34] going to select Alex you're going to
+[00:10:36] select me and click on next and we'll
+[00:10:38] call this one
+[00:10:40] YouTube inspo and then click on create
+[00:10:44] awesome and what do we see we see me we
+[00:10:47] see Alex we see Alex we see me we see
+[00:10:50] Alex we see me we see Alex blah blah
+[00:10:51] blah and by a quick tip guys when you're
+[00:10:53] doing YouTube url you need to click on
+[00:10:55] videos not for home because they
+[00:10:57] different pages if you're on home some
+[00:10:58] people only have a couple of videos
+[00:11:00] there versus videos so you might be like
+[00:11:01] dude why am I not getting all videos
+[00:11:03] it's because you didn't click on the
+[00:11:04] videos Tab and and copy that your all
+[00:11:06] how do I know that well you might have
+[00:11:08] guessed it happened to me okay so look
+[00:11:10] we come back over now to RSS feeds and
+[00:11:12] all we do guys is we just click copy and
+[00:11:15] that's it that is the extent of what you
+[00:11:16] need to know about RSS feeds to make
+[00:11:19] this automation work so what do I do
+[00:11:21] next I come over to a new scenario
+[00:11:23] comment scrapable one I click on this
+[00:11:25] beautiful purple button I bring it over
+[00:11:27] I type in RSS and now you will when you
+[00:11:31] do this you're going to search for um
+[00:11:32] watch RSS feed items and what that
+[00:11:35] essentially means is that look I want
+[00:11:37] you to trigger the second that any new
+[00:11:40] item appears in this bundle that's what
+[00:11:41] I want you to do obviously we'd add a
+[00:11:43] time delay because we want we want there
+[00:11:45] to be enough time to let the comments
+[00:11:47] come out I mean if it triggers
+[00:11:48] automatically it's like you're going to
+[00:11:49] hey you've had no comments so there has
+[00:11:51] to be a delay on top of that okay so
+[00:11:53] just bear that one in mind and we set
+[00:11:54] delays down here on the bottom left by
+[00:11:56] how often we want it to run I would
+[00:11:58] encourage running this
+[00:12:00] probably you know to be fair every
+[00:12:03] couple of days or so I wouldn't do any
+[00:12:04] shorter than that because otherwise
+[00:12:06] you're just not going to get enough
+[00:12:07] comments also depends on how big the
+[00:12:08] channel is as well you know what I mean
+[00:12:10] so you just have to take those things
+[00:12:11] into consideration so we click on plus
+[00:12:14] you search for RSS and then we're going
+[00:12:16] to for the purpose of this video I'm
+[00:12:17] just going to retrieve so I'm going to
+[00:12:19] look back and I'm going to grab the last
+[00:12:21] video just so that I can show you how
+[00:12:22] this works step by step so I click on
+[00:12:25] retrieve RSS feed items and you'll see
+[00:12:27] all these crazy crazy crazy things click
+[00:12:29] on URL and paste and that's it and what
+[00:12:33] is that well it's just what we
+[00:12:35] copied from here which copied that come
+[00:12:38] over and we paste it don't worry about
+[00:12:40] date from don't worry about date to
+[00:12:42] maximum number of returned items for the
+[00:12:44] purposes of this video I'm just going to
+[00:12:46] say one um obviously you can up that
+[00:12:48] based on how many videos come through
+[00:12:50] but the key bit is going to be the
+[00:12:51] running frequency now now we've got that
+[00:12:54] so what's going to happen like I'll run
+[00:12:55] this one so you can see RSS is's
+[00:12:58] grabbing it he's bought something El
+[00:12:59] over we've got this and look guys that
+[00:13:01] is my video how to make money with AI
+[00:13:04] agents and using make and it's given us
+[00:13:07] the YouTube url which is awesome so now
+[00:13:09] what we need to do is go ahead and we
+[00:13:11] need to scrape the comments from that
+[00:13:14] video so the question he you're asking
+[00:13:15] is well how do we do that well I'm going
+[00:13:17] to show you right now so we're going to
+[00:13:18] head over to where is where is this
+[00:13:22] we're going head over to
+[00:13:24] ay.com so this is console. ay.com let me
+[00:13:28] just come over to to ay.com so you can
+[00:13:31] see what you'll see you see this
+[00:13:32] wonderful page you're going to log in or
+[00:13:34] sign up if you don't have an account yet
+[00:13:35] we going to come
+[00:13:37] through awesome what I want you to do is
+[00:13:40] on the left hand side come over to the
+[00:13:41] store and if you're not familiar with
+[00:13:43] appify by the way appify is like as I
+[00:13:45] said like all these no code scrapers so
+[00:13:46] you can scrape Instagram you can scrape
+[00:13:48] web pages you can scrape me if you can
+[00:13:50] think about it it can be scraped I think
+[00:13:52] if app had a m m it would sound
+[00:13:54] something a bit like that but you know
+[00:13:55] what guys we're laser focus today we
+[00:13:57] only care about one thing what we care
+[00:13:59] about is YouTube comments so type in
+[00:14:01] YouTube comments in that top thing there
+[00:14:04] incredible right now what do we do you
+[00:14:06] see down the bottom left you got usage
+[00:14:07] you get $5 of free usage and if you go
+[00:14:10] over that then you know what I mean you
+[00:14:11] can just like buy more credits but for
+[00:14:13] me this is phenomenally phenomenally
+[00:14:15] helpful we can also swich by pricing
+[00:14:17] models as well as little hacks on
+[00:14:18] pricing models and just click on paper
+[00:14:20] um I believe it's like yeah paper result
+[00:14:23] cuz um cuz some of these guys will be
+[00:14:24] like $30 $50 a month and some of them
+[00:14:27] are worthwhile however not all of them
+[00:14:29] so let's figure out which YouTube
+[00:14:31] scraper we used in the first one cuz
+[00:14:33] there are a couple so we make sure that
+[00:14:34] you get that one correct streamers
+[00:14:36] YouTube # comments # scraper Okay cool
+[00:14:39] so let's go find that one shall
+[00:14:42] we and it's this one here on the top
+[00:14:44] right cool you click on that one and
+[00:14:46] then what I want you to do and you can
+[00:14:48] see here guys I've got these different
+[00:14:50] URLs that come through but don't worry
+[00:14:52] about that for now so get rid of this
+[00:14:54] get rid of this and you're going to have
+[00:14:55] one simple URL now the other bit that
+[00:14:58] you're going to look at here is maximum
+[00:15:00] comments so you can set how many
+[00:15:02] comments you want to grab now the cost
+[00:15:04] of this is $2 per th000 comments and
+[00:15:07] then based on M YouTube channel you go
+[00:15:08] wild you go easy do as you wish for this
+[00:15:11] one I'm going to go with 14 but we can
+[00:15:12] change this anytime we want to and then
+[00:15:14] leave one URL then here's what I want
+[00:15:16] you to do you're going to see Json click
+[00:15:19] on Json right and then you're going to
+[00:15:21] see this and you can see how we can just
+[00:15:22] amend that there crl a and then contrl C
+[00:15:25] to copy that and then I want you to do
+[00:15:27] is create a task
+[00:15:29] that will basically go into your save
+[00:15:31] tasks that means that we can use the
+[00:15:32] appify module you know with our me
+[00:15:34] scenario so click on create a task and
+[00:15:36] if you haven't connected these things
+[00:15:37] yet there'll be an API key within appify
+[00:15:40] that you can use to connect it to make
+[00:15:42] and just follow those simple
+[00:15:43] instructions and you'll to set up so if
+[00:15:44] you doing this the first time you'll be
+[00:15:45] able to set them up obviously I can I
+[00:15:47] can support you more directly in the
+[00:15:48] group but that that's essentially what
+[00:15:50] you would do and follow the instructions
+[00:15:51] so look we create a task I'm not doing
+[00:15:53] it because I've already done it but
+[00:15:55] you'll do that and then you're going to
+[00:15:56] come back over to the scenario that
+[00:15:58] we've got click on this beautiful plus
+[00:16:01] button I'm going to scroll over and
+[00:16:02] click on uh where are we now actually
+[00:16:04] it's going to be
+[00:16:05] appify run an actor excellent and then
+[00:16:10] on the actor we type in YouTube comments
+[00:16:14] YouTube comment scraper amazing and then
+[00:16:16] input Json boom and then obviously guys
+[00:16:18] if you ever want to like change the
+[00:16:21] number of comments that you get you can
+[00:16:22] do so there quite straightforward now
+[00:16:24] look can you see this URL I want you to
+[00:16:26] come here I want you to delete it
+[00:16:29] okay and then can you see here if I come
+[00:16:32] back here for example let me get rid of
+[00:16:34] this and refresh it you can get a good a
+[00:16:35] good look at it you see this URL here
+[00:16:39] and you can also see this thing pulsing
+[00:16:40] which means it's connected that module
+[00:16:42] we do that so why have I done that so
+[00:16:44] what's happening there essentially RSS
+[00:16:46] is pulling the latest URL and then we
+[00:16:47] need to plug whatever the latest URL is
+[00:16:50] into applify and because that URL is
+[00:16:52] changing we're not going to hardcode it
+[00:16:54] we need it to be dynamic and this
+[00:16:56] enables us to be dynamic and then we
+[00:16:58] click okay and guys you just build the
+[00:17:01] first half of this automation how cool
+[00:17:03] is that now before I hit run this we're
+[00:17:05] going to start with the second part of
+[00:17:06] the automation so open up a new tab in
+[00:17:09] make uh by the way don't duplicate
+[00:17:11] because you'll have like an ID in the
+[00:17:12] URL and you're basically re-editing over
+[00:17:14] the same thing and it's always good
+[00:17:15] practice to hit that wonderful save
+[00:17:18] button incredible now look click on the
+[00:17:21] plus look for
+[00:17:24] appify and then I want to look for watch
+[00:17:27] actor runs and by the way guys I know
+[00:17:29] some of your International let me know
+[00:17:31] if the subtitles work on the videos like
+[00:17:32] if you need need the subtitles and I can
+[00:17:34] do Scottish accent to make it more
+[00:17:36] difficult if you want to play in hard
+[00:17:37] mode but I want to make sure that it's
+[00:17:38] it's visible and understandable so look
+[00:17:40] we click on ADD okay come down here and
+[00:17:43] then the actor pops up and again just
+[00:17:45] type in
+[00:17:46] YouTube uh comments scrapers on the
+[00:17:50] stream is
+[00:17:51] here sweet and then click save that will
+[00:17:56] add and click okay you won't have as
+[00:17:58] many duplicates as I've done I put the
+[00:17:59] scenario a couple times now so that's
+[00:18:01] why you L do that we've got appify cool
+[00:18:03] now what we do we click on plus so this
+[00:18:05] is going to watch and say hey
+[00:18:06] something's happened like appify is run
+[00:18:08] a script then we need an appify module
+[00:18:11] to get the data set items okay so look
+[00:18:14] come here and ask you for data set ID
+[00:18:17] you click on the data set ID you come
+[00:18:19] down and you're looking for default data
+[00:18:21] set ID click that and then you're going
+[00:18:25] to click okay awesome great now let's
+[00:18:29] run this entire thing from top to bottom
+[00:18:31] and see what we get so on scenario two
+[00:18:33] you're going to hit run once then we
+[00:18:36] going to come over to sario one and we
+[00:18:38] hit run once so what's going to happen
+[00:18:39] RSS feed is going to grab the latest
+[00:18:41] video it's going to run over and out to
+[00:18:42] the actor it's going to come back in any
+[00:18:44] time now we're going to see this one
+[00:18:46] grab it and push it over and by the way
+[00:18:48] guys I'm thinking about doing a live
+[00:18:49] stream in two days so you know we're
+[00:18:51] competing in the school games and like
+[00:18:53] man we're coming together like I think
+[00:18:54] we're in eighth place out of 10 and if
+[00:18:56] we finish top 10 we get to go to La the
+[00:18:58] channel gets to go to La we get to meet
+[00:19:00] Alex shake some hands I can take you
+[00:19:02] guys questions there so I'm thinking
+[00:19:03] about you know the competition finishes
+[00:19:06] I think at 10:00 UK time on Wednesday so
+[00:19:08] I was thinking about doing like a live
+[00:19:09] stream from like 88 till 10: we had this
+[00:19:12] like Community competition just while
+[00:19:13] this is loading I'll show you this we
+[00:19:15] have this community automation
+[00:19:16] competition I'm giving one like $1,000
+[00:19:18] in prizes and people kind of make these
+[00:19:19] incredible automations we've got stuff
+[00:19:21] going on with the iPhones engagement
+[00:19:22] groups and I'm thinking about running
+[00:19:24] through all those automations live these
+[00:19:25] Community automations live with you and
+[00:19:28] just awarding out the the prizes and do
+[00:19:29] the judging and also have like we can
+[00:19:31] have like the leaderboard up and we can
+[00:19:33] like get a bit of energy bit of casual
+[00:19:35] hangout you can ask you questions and
+[00:19:36] comments if that sounds interesting Let
+[00:19:38] Me Down Below in the comments I might I
+[00:19:40] might do first live stream obviously as
+[00:19:42] we know it's destined to go crazy
+[00:19:43] because no live stream goes flaws
+[00:19:45] through the first time and there we go
+[00:19:46] guys it's now grabbed it and now we're
+[00:19:48] grabbing the data set items from appify
+[00:19:51] which is awesome and the reason we run
+[00:19:52] these automations partially is because
+[00:19:54] we can actually get the data and
+[00:19:55] understand where we need to plug it as
+[00:19:57] we go through the whole process this is
+[00:19:59] grabbing it and then that hasn't come
+[00:20:01] through so let's have a quick look as to
+[00:20:03] why that's not happened so that one's
+[00:20:05] timed out that's not a problem we'll run
+[00:20:06] this one again and then guys we come
+[00:20:08] over to data set items we look at it and
+[00:20:10] look at the outputs all these bundles as
+[00:20:12] you can see are the comments hey my man
+[00:20:14] Jack got this one love to see more
+[00:20:16] videos on automation agency specific
+[00:20:18] services for the B2B space no problem my
+[00:20:20] guy I've got you covered so we have all
+[00:20:22] these cool things here right amazing but
+[00:20:25] now guys what we need to do is and this
+[00:20:27] is the feature make we need to get all
+[00:20:29] these different bundles and we need to
+[00:20:30] get it to one single output because if
+[00:20:33] we don't we'll have 14 different things
+[00:20:35] and it'll run 14 different automations
+[00:20:37] so what we're going to do as you can see
+[00:20:38] I can just give you a quick overview on
+[00:20:39] this guy is we've got an array
+[00:20:42] aggregator and then we've got a text
+[00:20:44] aggregator so the first thing we do is
+[00:20:47] we come over here and then we
+[00:20:49] find array click on flow control array
+[00:20:53] aggregator link this guy up and so what
+[00:20:56] array aggregator will do is you see
+[00:20:57] these bundles and I'm saying hey bro
+[00:20:59] take all the bundles and I want you to
+[00:21:00] condense it into one easy to use output
+[00:21:03] so I click on array aggregator here I
+[00:21:06] click on the source module which is
+[00:21:07] going to be appify get data set items
+[00:21:11] and then I scroll down and the only
+[00:21:12] thing I'm interested in
+[00:21:16] here is common if a common ever appears
+[00:21:19] did I scroll past common I probably did
+[00:21:21] do right there you go common cool
+[00:21:23] Incredible Ace now the next thing we're
+[00:21:25] going to add is a text aggregator so
+[00:21:27] click on tools
+[00:21:29] come down and type for text aggregator
+[00:21:32] and bring this one over here like this a
+[00:21:35] and then we're going to click on text
+[00:21:36] aggregator pick on the source module
+[00:21:38] which is going to be the array
+[00:21:40] aggregator and then we've got the text
+[00:21:43] so this is where it's really interesting
+[00:21:45] so I'm going to paste this code for you
+[00:21:47] down below so you can just use it now
+[00:21:48] check this out I come over to our
+[00:21:50] scenario if I click on my text
+[00:21:52] aggregator here can you see I've got all
+[00:21:54] these
+[00:21:55] arrays Okay cool so look what I'm going
+[00:21:58] to do is copy all of them like so contrl
+[00:22:01] and c I come over and obviously just put
+[00:22:03] these ones Down Below in the comment
+[00:22:04] section and then hit enter there cool
+[00:22:07] now this has got 13 if you had 14 15 16
+[00:22:09] or how many comments you're doing you
+[00:22:10] can increase it like that if you would
+[00:22:12] like to and then click okay now here's
+[00:22:15] the thing guys this can you see how it
+[00:22:17] says three. array and then it links to
+[00:22:20] three if you've got more stuff before
+[00:22:22] that that number needs to align with the
+[00:22:24] three so for example if I copy the thing
+[00:22:27] and I put it in the search
+[00:22:29] bar excuse me um okay let me get one I
+[00:22:34] can just copy all the way through for
+[00:22:36] you oh you see that three. array it
+[00:22:39] would be four. array and if it's number
+[00:22:41] 11 it would be 11. array but essentially
+[00:22:43] it's a lot of complicate Goble the G
+[00:22:45] just to Simply say that that will help
+[00:22:47] us grab everything that we need to all
+[00:22:49] right now what I'm going to do I'm going
+[00:22:50] to Auto align this I'm going to zoom out
+[00:22:53] a tiny bit like this so you can see and
+[00:22:55] I'm going to run this once I'm going to
+[00:22:57] run this anyway cuz it like a transform
+[00:22:59] being ended the module I'm going to go
+[00:23:00] back over to the first scenario and I'm
+[00:23:01] going to click run ones applify run
+[00:23:04] actor excellent we come back over and
+[00:23:06] then we wait for this entire automation
+[00:23:08] to run through so we're given a second
+[00:23:10] the background it's going to come down
+[00:23:11] it's going to grab it and the array and
+[00:23:13] tools the necessary evils guys they're
+[00:23:16] like the necessary evils of make it's
+[00:23:17] like an intermediate thing but if you
+[00:23:19] follow those step step by step and I'll
+[00:23:20] put all that code down in the
+[00:23:21] description for you completely free so
+[00:23:24] you can just use it and and get running
+[00:23:25] with this incredible now look text
+[00:23:28] aggregated click on the one and all that
+[00:23:30] is now turned into a long string so cool
+[00:23:33] guys check this out I've got every
+[00:23:35] comment has just appeared as one long
+[00:23:37] text which I think is so so so cool now
+[00:23:40] why is that really cool that's cool
+[00:23:43] because now we can feed that as a one
+[00:23:44] text to chat GPT and if we didn't have
+[00:23:47] that we would have to fire off a
+[00:23:48] scenario like 20 times it go nuts so now
+[00:23:50] we've done that let's look at what we
+[00:23:51] need to do next so I come back up to
+[00:23:53] this scenario for
+[00:23:54] reference what we've got next is app ify
+[00:23:58] get data set and zero code kit so if I
+[00:24:00] click on zero code kit here for example
+[00:24:02] I'm going to come down and there a link
+[00:24:04] in there it is okay cool now what I
+[00:24:08] found so the the next functional thing
+[00:24:11] we want to do if you want a description
+[00:24:12] in the video this is not something you
+[00:24:13] have to do but personally I quite like
+[00:24:16] this feature and this feature is a
+[00:24:18] description so if I click on this one
+[00:24:19] for example can you see this Jack
+[00:24:22] demonstrates building a simple
+[00:24:23] automation with m.com and AI agents to
+[00:24:25] generate viral tweets from YouTube video
+[00:24:27] transcripts the process involves
+[00:24:29] creating a product setting up a website
+[00:24:30] and embedding forms automating tweet
+[00:24:32] generation and email delivery enabling
+[00:24:34] easy monetization I quite like the
+[00:24:36] description side I think it's pretty
+[00:24:38] epic I think that it would basically
+[00:24:39] help us to understand whether or not we
+[00:24:42] think that video is right because not
+[00:24:43] every video is going to be right you
+[00:24:44] know that's why I'm going to do it so
+[00:24:46] what I'm going to also do now guys to
+[00:24:47] take this from an eight to a 10 out of
+[00:24:49] 10 and we're going to get to 11 out of
+[00:24:50] 10 soon is I'm going to scrape the whole
+[00:24:52] YouTube transcript and the way that I'm
+[00:24:54] going to do that is zero code kit I'm
+[00:24:56] going to click on run
+[00:24:59] python code like so and then it's going
+[00:25:01] to ask for something so in my community
+[00:25:03] I've got a full breakdown on how you can
+[00:25:06] actually grab that so I can move to CL
+[00:25:07] and in my community head up to classroom
+[00:25:09] I'm going to check out every AI
+[00:25:10] Automation and what I can do is I
+[00:25:12] covered it in this one here for example
+[00:25:14] all I would do as I come down I've got
+[00:25:16] the YouTube transcript code I basically
+[00:25:19] just copy this and enter it into uh the
+[00:25:22] Automation and essentially what that
+[00:25:24] enabl us to do is just download the URL
+[00:25:26] and if you want to build this one
+[00:25:27] yourself basically you can chat to clae
+[00:25:30] or GPT about building a python script to
+[00:25:31] do that and then give you an output or
+[00:25:33] if you just want it you can grab it as
+[00:25:35] part of the group um so what we do and
+[00:25:37] again I'll put all this down below so we
+[00:25:38] grab this guy you basically copy the
+[00:25:42] transcript from that link and enter the
+[00:25:44] python code if you want to do that step
+[00:25:46] and there'll always be whatever you do a
+[00:25:48] part of the URL where you can specify
+[00:25:50] this is a YouTube video that I want okay
+[00:25:52] so look see page URL I come here and
+[00:25:56] what I'm now going to try and find guys
+[00:25:59] okay is the URL of the video which
+[00:26:01] appify got now the the appify bit here
+[00:26:03] grabbed the URL for us so that's the URL
+[00:26:06] I'm saying hey this is where you got the
+[00:26:08] comments from now go ahead and grab me
+[00:26:10] please um the actual the actual sort of
+[00:26:13] transcript now this is a really
+[00:26:15] interesting things if I look at this
+[00:26:16] right I've got watch actor runs but I
+[00:26:18] don't see anything on get data set items
+[00:26:20] and I believe that's because you see
+[00:26:22] these these three things are together
+[00:26:24] it's like they're
+[00:26:25] not it it it it doesn't enable as now go
+[00:26:28] ahead and grab it so to fix this what
+[00:26:30] we're going to do is well for starters
+[00:26:32] I'm just going to copy this I'm going to
+[00:26:34] get rid of it and I'm going to delete
+[00:26:36] zero code kit and then all I'm going to
+[00:26:38] do is come back down to appify and I'm
+[00:26:40] going to add another get data set items
+[00:26:44] I'm going to click here I'm going to
+[00:26:46] click on this guy I'm going to come over
+[00:26:48] to data set ID and basically I'm just
+[00:26:50] going to repeat the exact same thing if
+[00:26:52] I come down to data set ID I come down
+[00:26:55] and where is my data set ID
+[00:26:58] excuse me my default data set ID how
+[00:27:00] dare I where are I where are my manners
+[00:27:03] then I click okay and the other thing
+[00:27:05] we're going to do very quickly is we're
+[00:27:07] going to limit the number of actions I
+[00:27:08] just want to make sure that it's either
+[00:27:10] that one or this one let me just quickly
+[00:27:11] check because this has grabbed commments
+[00:27:15] this actually produces 14 outputs that I
+[00:27:18] specified so if I just say grab that
+[00:27:20] data set ID I'm going to get 14 outputs
+[00:27:22] and it's going to repeat the automation
+[00:27:23] 14 times so to throttle that come down
+[00:27:26] to limit and change it from 100
+[00:27:28] to one and then click okay cool it's a
+[00:27:32] little cheeky work around but it'll help
+[00:27:33] us now what do we do we click on add
+[00:27:34] another module we click on a zero code
+[00:27:36] kit uh we come here zero code kit uh and
+[00:27:40] let's put
+[00:27:41] run python isn't it so cool by the way
+[00:27:43] that we can run python code I mean there
+[00:27:45] are many developers watching thinking
+[00:27:47] how dare you how dare you run this I
+[00:27:48] don't like that and I can't say blame
+[00:27:50] them to be fair it's quite nuts that we
+[00:27:51] can some of my friends cannot believe
+[00:27:53] the stuff that we do they're like
+[00:27:54] there's no way you can do that I'm like
+[00:27:56] well you better come check out the
+[00:27:57] channel m we're taken to another level
+[00:27:59] so look URL how do we grab the URL well
+[00:28:02] it's part of this grab um app provide
+[00:28:04] data set items so what I'm going to do
+[00:28:06] just for Simplicity sake for you is I'm
+[00:28:08] going to unlink and I'm going to click
+[00:28:10] on run once I'm going to come over here
+[00:28:12] and click on run once this again we'll
+[00:28:14] grab it that's grabbed it and sometimes
+[00:28:16] guys the reason why I run the scenarios
+[00:28:18] is because only when the data is flooded
+[00:28:20] through the gates will we then be able
+[00:28:22] to look in and actually modify and
+[00:28:25] change the things that we want um you
+[00:28:27] can kind of hardcode it in but I think
+[00:28:29] it's just easier once it's run through
+[00:28:30] the whole process and then we can see
+[00:28:32] appify like with a nice little bit of
+[00:28:34] data on it that's what run through and
+[00:28:36] just makes it easier so now we connect
+[00:28:37] these guys I click on it and now I can
+[00:28:40] finally tell it here the URL that I
+[00:28:45] want I delete this so you can get I'm
+[00:28:47] really cons I you have a really good
+[00:28:48] view of what's going on um so we come
+[00:28:51] down to watch actor runs no get data set
+[00:28:54] items let's have a look what we've got
+[00:29:00] here there we go page URL cool so we
+[00:29:03] want to grab the page URL but we're not
+[00:29:05] really seeing that and I think it's cuz
+[00:29:06] we'd already created it so let me create
+[00:29:08] this let me delete this guy delete the
+[00:29:10] python code bring him back
+[00:29:14] again run python grab this guy sometimes
+[00:29:18] you made amendments before or after you
+[00:29:20] need to delete modules and read them
+[00:29:21] back in so it can actually get a full
+[00:29:22] look of what's going on so look there
+[00:29:24] you go you can see now now it's
+[00:29:26] magically appeared somehow like and it
+[00:29:27] was was't there before so don't you just
+[00:29:30] hate that you have to like yeah it's
+[00:29:31] crazy it works that way and then you see
+[00:29:33] page URL and it's pulsing behind now we
+[00:29:36] can grab the page URL and the world
+[00:29:38] makes sense once more which we love Okay
+[00:29:40] cool so let's summarize what we've done
+[00:29:42] and what's happened okay you started off
+[00:29:44] on YouTube we picked the channels that
+[00:29:45] we wanted to we went over to RSS feeds
+[00:29:47] we created these incred incredible RSS
+[00:29:49] feeds combining all the channels that we
+[00:29:50] wanted to look at then we came into our
+[00:29:52] automation we're grabbing them
+[00:29:54] automatically as soon as they're
+[00:29:55] published we're running an act to scrap
+[00:29:57] all the comments
+[00:29:58] we are seeing that it's happened we've
+[00:30:01] taken those comments we've done some
+[00:30:02] higgledy piggledy magic to get it as a
+[00:30:04] single output then we've gone ahead and
+[00:30:07] we've actually scraped as well the
+[00:30:09] entire YouTube transcript and that
+[00:30:10] leaves us now with the really exciting
+[00:30:12] part and the really exciting part is the
+[00:30:13] bit how we turn that now into the magic
+[00:30:16] and what's the magic I hear you ask me
+[00:30:18] it's description it's The Vibes and
+[00:30:19] sentiment and most importantly it's the
+[00:30:22] video ideas cuz where else is it better
+[00:30:23] to get your video ideas than from what
+[00:30:25] people are saying we must listen to the
+[00:30:28] people the people are really important
+[00:30:29] so we come over now we've got this guy
+[00:30:32] here description I'm going to copy this
+[00:30:35] and I'm going to show you what this
+[00:30:37] looks like so look we come over we click
+[00:30:38] on plus I want you to click
+[00:30:41] on create a completion credit completion
+[00:30:45] so we sted credit completion um the
+[00:30:47] model is going to be gbt 40 it's like
+[00:30:49] half the price and double the speed
+[00:30:51] which sounds really cool thing to say
+[00:30:52] but it just is our messages we come down
+[00:30:55] we click on user and then we we got
+[00:30:58] message content and again all these all
+[00:30:59] the blueprints the guides the agents all
+[00:31:02] available Down Below in the school
+[00:31:03] Community but I'm also going to run you
+[00:31:04] through what it is for your knowledge
+[00:31:06] and if you're not part of the group I
+[00:31:07] still want you to be able to like use
+[00:31:08] and understand how this stuff works so
+[00:31:10] look here's what we're saying to it
+[00:31:12] right now check this
+[00:31:14] out you'll be provided with the
+[00:31:17] transcript of a YouTube video your task
+[00:31:19] is to carefully read and comprehend the
+[00:31:21] content of the transcript after
+[00:31:22] analyzing the transcript generate a
+[00:31:24] concise summary of the key points and
+[00:31:26] main ideas excuse me oh my goodness it's
+[00:31:28] all over the place isn't it of the key
+[00:31:30] points and the main ideas discussed in
+[00:31:31] the video the summary should be
+[00:31:32] informative helpful to the point with a
+[00:31:34] maximum length of 35 words identify core
+[00:31:37] themes of the video highlight most
+[00:31:39] important facts and statistics or
+[00:31:41] examples that support the main points I
+[00:31:43] okay if if appropriate briefly mention
+[00:31:45] the conclusions we don't want fluff we
+[00:31:47] don't want filler want to be clear and
+[00:31:49] effective we give it l of stuff 35 words
+[00:31:51] maximum and remember your goal is to
+[00:31:54] provide a comprehensive yet succinct
+[00:31:56] overview of the video's content enabling
+[00:31:58] read is to quickly grasp the call
+[00:32:00] message and Main takeaways do not repeat
+[00:32:02] the title and then what we need to do
+[00:32:04] guys is basically feed the yoube
+[00:32:07] transcript so what's the transcript well
+[00:32:09] it is simply the result from a zero code
+[00:32:13] kit boom done we love it and we click
+[00:32:16] okay great now my goodness it will not
+[00:32:20] oh Max tokens Max tokens zero if you put
+[00:32:23] zero with open AI it basically defaults
+[00:32:24] to the maximum and now we're going to
+[00:32:27] rename it so what do we call this guy we
+[00:32:29] call this guy description cuz we are
+[00:32:31] nothing without our names so we come
+[00:32:33] over here and we're going to rename into
+[00:32:35] description and the reason why I'm
+[00:32:36] running this versus an agent by the way
+[00:32:38] is because gbt 40 at the moment is only
+[00:32:42] available um within the application not
+[00:32:44] as agents without some uh apis and all
+[00:32:47] that sort of stuff and web Hogs cool so
+[00:32:49] that's description guide done cool
+[00:32:50] that's pretty neat right I mean really
+[00:32:52] Snappy I mean that itself could be
+[00:32:53] something you could sell nurl get a
+[00:32:55] brief description how call is that I
+[00:32:56] mean it's just so sick I need I need
+[00:32:58] more I need the descriptions for my own
+[00:32:59] videos which why it's so cool so
+[00:33:01] description then let's just clone him
+[00:33:05] it's a six day all over again so what is
+[00:33:07] the next one that we need well the next
+[00:33:08] one is Vibes and sentiments so let's
+[00:33:12] copy it let's rename it and give him a
+[00:33:14] name and you'll thank yourself for
+[00:33:16] adding these things in cuz when these
+[00:33:18] get complicated guys you look back
+[00:33:19] you're like oh my goodness I don't even
+[00:33:20] know what half these modules do it's
+[00:33:22] crazy so look Vibes and sentiment and we
+[00:33:25] come back over here and click on this
+[00:33:28] guy now let me give you the prompt for
+[00:33:30] this and then guys we've got a very
+[00:33:31] short prompt for this one which is to
+[00:33:33] analyze the provided YouTube comments
+[00:33:35] and generate a sentiment analysis with a
+[00:33:37] maximum of 35 words identify the overall
+[00:33:39] sentiment is it positive negative or
+[00:33:41] neutral and the main emotions expressed
+[00:33:43] highlight any significant patterns
+[00:33:45] themes or notable individual comments
+[00:33:47] that contribute to the general sentiment
+[00:33:49] provide a percentage breakdown of the
+[00:33:52] sentiment categories so we copy that we
+[00:33:54] come over to our sentiment analysis guy
+[00:33:58] we get rid of it we type in the message
+[00:34:00] content now for this one guys we need to
+[00:34:02] give it the YouTube comments right so we
+[00:34:05] type in let me come over here so you can
+[00:34:08] see okay cool come down we type in
+[00:34:11] YouTube comments and what's the output
+[00:34:13] we want let me just come over we're
+[00:34:15] going to select the text from the text
+[00:34:18] aggregator boom perfect because that's
+[00:34:20] what all the comments are right and then
+[00:34:22] finally we're going to clar The Vibes
+[00:34:25] and sentiment guy bring it over here and
+[00:34:27] then what is is the final one we're
+[00:34:28] going to do this one is the most
+[00:34:30] exciting one this one's the video ideas
+[00:34:33] so the video ideas the why this one so
+[00:34:36] epic is it's basically going to look at
+[00:34:37] all these comments and say look the
+[00:34:39] people are asking for x or oh you know
+[00:34:41] actually they really found that one
+[00:34:43] quite helpful this one not helpful so
+[00:34:44] let's do a video on this so let's take a
+[00:34:46] look at what we ask with the YouTube and
+[00:34:48] by the way this is combined with a viral
+[00:34:51] YouTube title generator which has been
+[00:34:53] trained on lots of stuff so for example
+[00:34:55] we've got here like the number one sign
+[00:34:56] your phone was hacked NASA isn't telling
+[00:34:58] us about Ms eight YouTube lessons I wish
+[00:35:00] I you sooner so let me go through what
+[00:35:02] this looks like just analyze the
+[00:35:04] provided YouTube comments and generate
+[00:35:06] five suggestions based on the viewer's
+[00:35:09] interest feedback and sentiment each
+[00:35:11] subject should be accompanied by a
+[00:35:12] revent Emoji rank the video suggestions
+[00:35:15] from most to least relevant we talk
+[00:35:17] about identifying common themes
+[00:35:18] questions we talk about the overall
+[00:35:20] sentiment we talk about you know the
+[00:35:21] niche the expertise the style we want to
+[00:35:24] prioritize based on the volume and
+[00:35:26] obious we look at then we then we're
+[00:35:28] going to give it some prompts about how
+[00:35:29] we then take that and instead of just
+[00:35:30] saying I'll do a video on AI it's okay
+[00:35:33] but like but what about AI this is going
+[00:35:35] to give us actual YouTube title ideas
+[00:35:37] all at the same time so if we like it we
+[00:35:39] can say that sounds cool I'll just do a
+[00:35:41] video on that that's perfect I give it
+[00:35:43] some example formats and then I talk
+[00:35:45] about just YouTube best practice right
+[00:35:47] we capitalize the first letter of each
+[00:35:48] word no title under 50 characters over
+[00:35:51] 50 characters ex me we feed examples we
+[00:35:54] tell these the traits of great titles we
+[00:35:56] summarize it and then we talk about this
+[00:35:58] for example and we go down and then we
+[00:36:00] say insert YouTube comment so look we
+[00:36:02] come up we copy that we then go over to
+[00:36:05] our automation here right we click on
+[00:36:07] video ideas we scroll
+[00:36:14] over and we paste it in we come down to
+[00:36:16] the bottom and then we need to say
+[00:36:18] insert YouTube comments no problem my
+[00:36:20] friend we just get rid of that and you
+[00:36:24] might have guessed it we just replace it
+[00:36:25] with the text then we click okay cool
+[00:36:29] and now guys this is looking pretty cool
+[00:36:31] right there's only one final step now
+[00:36:33] and that's to add all this cool stuff
+[00:36:35] straight into air table so the final
+[00:36:37] thing you going to do is come here
+[00:36:38] you're going to type in a table that's
+[00:36:41] going to be uh a table here I'm going to
+[00:36:43] for create a record phenomenal right now
+[00:36:47] let's go create an air table okay once
+[00:36:49] you signed in this is done by aworth so
+[00:36:51] essentially once you create it and say
+[00:36:52] hey cool do you want to like connect it
+[00:36:54] and you say yeah sure it opens a new tab
+[00:36:56] it signs you in and then you'll be able
+[00:36:58] to get ready to use it so look we open
+[00:36:59] up an air table we come down to the
+[00:37:00] bottom left and click on create start
+[00:37:02] with data uh let's just say we'll do a
+[00:37:05] automations with Jack uh click on this
+[00:37:07] one incredible and now we begin to make
+[00:37:10] our really cool table so let's have a
+[00:37:12] look at the different things that we
+[00:37:13] want we want video URL title description
+[00:37:16] Vibes and sentiments first thing we do
+[00:37:18] we double click on this one we say hey
+[00:37:20] what is the video URL single line text
+[00:37:24] is okay and then we click on this one
+[00:37:26] here and we're going to is say we want
+[00:37:28] the
+[00:37:31] title so this is going to be this video
+[00:37:33] is like how to buy 50 Labradors or
+[00:37:36] something like that right YouTube
+[00:37:40] title incredible and then what else do
+[00:37:43] we want we
+[00:37:44] want description Vibes and sentiment so
+[00:37:47] again let's um click on this guy and if
+[00:37:49] you click on a sign it'll be user we
+[00:37:51] don't want that we want long text or
+[00:37:53] single line text so we type in Vibes and
+[00:37:57] sentiment incredible and what were the
+[00:38:00] other ones we have in there of course
+[00:38:01] description and Vibes and sentiment call
+[00:38:03] so what I do I right click on YouTube
+[00:38:04] title I inser right and then I'm looking
+[00:38:07] for
+[00:38:09] description and we'll give that a little
+[00:38:11] Emoji like um let's give a little robot
+[00:38:14] emoji and then let's do long text and we
+[00:38:17] click create after Vibes and sentiment
+[00:38:19] what else do we have video ideas so
+[00:38:22] we've got description Vibes and
+[00:38:23] sentiment video ideas description Vibes
+[00:38:26] and sentiment again right click on this
+[00:38:28] guy and S it to the right and then we
+[00:38:30] just go for video ideas and what says
+[00:38:33] video ideas better than a light bulb
+[00:38:35] cool and then we're going to come down
+[00:38:37] long text click okay and then we need to
+[00:38:39] give this title a name just call this
+[00:38:41] one YouTube build
+[00:38:45] together with a little pink and then
+[00:38:47] also let's give it a nice little Emoji
+[00:38:49] we'll call this one let's go top hat I'm
+[00:38:51] in a I'm in a top hat mood today I
+[00:38:54] should wear top hat for next video
+[00:38:55] because of that right nice okay cool
+[00:38:58] guys well now is where we connect it all
+[00:39:00] together so let's do this now look air
+[00:39:03] table click on air
+[00:39:05] table click on base now let's go for
+[00:39:08] YouTube Build Together top hat thank you
+[00:39:10] very much kind sir now what do we do
+[00:39:12] table is table one you can obviously
+[00:39:14] build multiple sheets out if you like
+[00:39:16] now look at all this beautiful stuff
+[00:39:18] guys and oh this is why air table is so
+[00:39:20] cool it just pulls through all the all
+[00:39:22] the columns for us I I love air table
+[00:39:24] video URL all right where is the video
+[00:39:27] URL well the video URL comes from this
+[00:39:30] get data set items and it's here page
+[00:39:32] URL Boom YouTube title again scroll down
+[00:39:37] title how to make money with AI agents
+[00:39:39] boom description let's have a look then
+[00:39:42] Well the description is as might have
+[00:39:44] guessed the output from description GPT
+[00:39:46] cool Vibes and sentiment that is the
+[00:39:48] output from The Vibes and sentiment GPT
+[00:39:51] and video ideas H where could where I it
+[00:39:54] does sound familiar to me it's a result
+[00:39:56] from the video ideas GPT status we don't
+[00:39:59] need to worry about we can click okay
+[00:40:00] for your own personal reference if you
+[00:40:01] want
+[00:40:02] to you can change status here by right
+[00:40:05] clicking on a edit field and I can
+[00:40:08] say um done whatever you want so
+[00:40:11] basically what that would mean is like
+[00:40:12] let's just say this video I like I can
+[00:40:13] say cool yeah I like that my own records
+[00:40:15] and I run my whole YouTube channel now
+[00:40:17] off this particular thing all driven
+[00:40:19] guys by YouTube comments I cannot
+[00:40:21] emphasize enough how big this is it's
+[00:40:23] insane so I come back over and it's done
+[00:40:26] now look let's run this whole thing now
+[00:40:28] from top to bottom and see what's going
+[00:40:30] now if this works properly guys what
+[00:40:31] we'll see in this table is everything we
+[00:40:34] just detailed so let's go over and try
+[00:40:36] it so that we're here I'm going to click
+[00:40:38] on run ones this is going to wait for
+[00:40:39] the data I come back here now I click on
+[00:40:41] run ones the RS my video it's now
+[00:40:44] running through an actor all the latest
+[00:40:45] with it could have been Alex maybe Alex
+[00:40:46] just posted now it's going to grab that
+[00:40:47] it's incredible so now we wait for the
+[00:40:50] appify and guys the reason I love this
+[00:40:53] automation is because like YouTube
+[00:40:55] comments it's like people say like let's
+[00:40:57] say you are thinking of ideas like you
+[00:40:59] don't want to make videos you think
+[00:41:00] people want to make you want to say hey
+[00:41:02] bro like what do you want to video on
+[00:41:03] what are you actually interested in and
+[00:41:04] the cool thing about this it's going to
+[00:41:06] find all those different themes together
+[00:41:07] now look appy ran we've grabbed the data
+[00:41:09] we've aggregated it we put it through
+[00:41:11] the text aggregator we've downloaded
+[00:41:12] YouTube transcript we've created a
+[00:41:14] description we've done the Vibes and
+[00:41:16] sentiment we've done the video ideas and
+[00:41:18] it's all added to air table so if I
+[00:41:21] click on this air table now this has
+[00:41:22] worked properly I should see all the
+[00:41:24] information about my latest video
+[00:41:27] let's go check it out I head over now
+[00:41:29] and look at this guys full screen expand
+[00:41:34] how to make money and by the way if you
+[00:41:35] watch this video you tell me if you
+[00:41:36] think this is correct or not how to make
+[00:41:38] money with AI agents using make how to
+[00:41:40] make money with make.com and AI agents
+[00:41:42] by creating an automated application to
+[00:41:44] sell services online this video covers
+[00:41:46] building a website capturing user info
+[00:41:48] automa Service delivery and scaling
+[00:41:49] business operations very very good
+[00:41:52] description now what is the vibe and
+[00:41:54] sentiment so this give me 85% positive
+[00:41:56] 15 % neutral the overall sentiment in
+[00:41:59] the comments is positive M emotions
+[00:42:00] expressed enthusiasm gratitude curiosity
+[00:42:03] this is why I love you guys you guys are
+[00:42:04] awesome significant themes are content
+[00:42:06] quality automation benefits and requests
+[00:42:08] for further content that's cool man
+[00:42:10] there's no higher price I could get than
+[00:42:11] that I really appreciate you for that
+[00:42:13] now I come down to video ideas how to
+[00:42:15] automate B2B services with AI why is it
+[00:42:18] suggesting that because you asked for it
+[00:42:20] you L someone said hey could you do this
+[00:42:21] video Master Google cheats for
+[00:42:22] automation hacks that's because some
+[00:42:25] fact should I just pull this up let me
+[00:42:26] get the re on this cuz I think it's like
+[00:42:28] so important if I come on at me make
+[00:42:30] money with make let's just check cuz I
+[00:42:33] want I want you to see the comments so
+[00:42:34] you can be like yeah that makes perfect
+[00:42:36] sense right so let's load up the video
+[00:42:38] in question me would be everything
+[00:42:39] related to content repurposing and
+[00:42:41] distribution using longer higher pieces
+[00:42:43] content awesome this guy wants me to
+[00:42:44] speak a little bit slower I'll try to
+[00:42:46] take that feedback on board for you
+[00:42:47] thank you man for sharing that Jack bro
+[00:42:49] can you make a video on Google Sheets
+[00:42:52] well does that sound familiar well it
+[00:42:54] kind of does right cuz look at this guys
+[00:42:55] Master Google Sheets for automation so
+[00:42:57] let pull that out so then head this guy
+[00:42:58] wants Google Sheets and if the people
+[00:43:00] want Google Sheets the people should
+[00:43:02] have Google Sheets content repurposing
+[00:43:04] strategies the guy said hey I want a
+[00:43:05] repurpose and we've got five different
+[00:43:07] things with thumbnails how cool guys how
+[00:43:10] cool is that now if you want the second
+[00:43:11] part of this video which is how you can
+[00:43:12] take this YouTube scraper and monetize
+[00:43:14] it with a subscription in other words
+[00:43:16] that we turn this into something that
+[00:43:19] faces general public and they pay us a
+[00:43:22] subscription income and all they ever do
+[00:43:24] is it tells the charms they want and
+[00:43:25] they get all these ideas come head over
+[00:43:27] to school community and check it out but
+[00:43:29] in any case guys I want you to have a
+[00:43:31] wonderful wonderful week join me in the
+[00:43:33] rally me your support even if you're
+[00:43:34] part of the group your support being
+[00:43:35] this channel means a lot to me let's
+[00:43:36] join the rally let's get to scho games
+[00:43:39] have a wonderful week and I'll see you
+[00:43:41] in the next video

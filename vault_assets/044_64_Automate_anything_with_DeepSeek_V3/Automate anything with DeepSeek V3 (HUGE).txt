@@ -1,0 +1,545 @@
+[00:00:00] hey there guys in this video I'm going
+[00:00:01] to show you an incredible automation how
+[00:00:02] you can automate anything using deep
+[00:00:04] seek V3 a.com it's a bite-sized
+[00:00:07] beautiful automation but the focus of
+[00:00:08] the video is how you can use deep seek
+[00:00:10] in all of your a automations and save
+[00:00:12] like 97% of your cost as well as loads
+[00:00:15] of other crazy benefit so hope you
+[00:00:17] buckled in grab that coffee I've got my
+[00:00:19] coffee I'm ready to dive in and talk
+[00:00:21] about this so why are we talking about
+[00:00:22] it so just for context obviously deep
+[00:00:24] seek is a different language model uh
+[00:00:27] and it sort of originated from China so
+[00:00:29] um think about about what you will in
+[00:00:30] terms of your data but three key things
+[00:00:32] to be in mind number one is performance
+[00:00:34] so check out this beautiful performance
+[00:00:35] graph I'll pull link down below to
+[00:00:37] report so you can get why we're
+[00:00:38] interested okay so deeps is this uh blue
+[00:00:41] and white one so the models that we
+[00:00:42] typically use right if we think about
+[00:00:44] gbt 40 you can see that it's comparable
+[00:00:47] or edging out most of them on many of
+[00:00:49] these key metrics like math and the
+[00:00:52] sweet bench blah blah blah so you get
+[00:00:54] the performance is pretty exceptional
+[00:00:55] now when it comes to language models in
+[00:00:57] our AI automations one of the things we
+[00:00:59] often do is make tradeoffs with the
+[00:01:01] models where we're heading now is this
+[00:01:03] idea of its performance versus cost
+[00:01:05] versus speed latency all these really
+[00:01:07] critical factors so I started to say
+[00:01:09] that the performance of this model is
+[00:01:11] pretty exceptional okay U this thing
+[00:01:13] here is on retrieval so for example if
+[00:01:15] we gave it a huge context window what is
+[00:01:17] its ability to draw information back you
+[00:01:20] may recall sometimes when you speak to
+[00:01:22] chat GPT or Claude that it starts to
+[00:01:24] forget things in the conversation
+[00:01:27] apparently this needle and hyack which
+[00:01:28] is for example if you give it 128,000
+[00:01:31] tokens what is its ability to withdraw
+[00:01:33] information accurately and supposedly
+[00:01:36] it's excellent and then finally the cost
+[00:01:38] which is the crazy thing which is why
+[00:01:40] we're going to use it in AI automation
+[00:01:41] today so gpt1 uh per million token input
+[00:01:45] is around
+[00:01:46] $525 deep seek is 14 I'll put a link
+[00:01:50] down below comparing all the different
+[00:01:51] language models you can see cost versus
+[00:01:53] performance tradeoff so with that in
+[00:01:55] mind what does this mean it means it's
+[00:01:56] cool what's this 5.5 million that's how
+[00:01:58] much it cost to develop deep seek V3
+[00:02:01] based on training but it doesn't include
+[00:02:03] things like licensing data but that's
+[00:02:05] just in the GPU cost to develop it which
+[00:02:07] I think is pretty cool this whole thing
+[00:02:09] open source but the question is guys how
+[00:02:11] do we use it in an automation so the
+[00:02:13] automation I want to show you today okay
+[00:02:14] is how for example and I wanted to think
+[00:02:16] of something simple that you could use
+[00:02:18] and when I show you how to use it you
+[00:02:20] can use it for Anya use case that you
+[00:02:22] want to so the automation we use in this
+[00:02:24] video is you're going to be on your
+[00:02:25] email okay you're going to get an email
+[00:02:27] that comes in and what we're going to
+[00:02:29] say is is look I'm going to forward it
+[00:02:31] to an address I'm going to forward it to
+[00:02:33] our AI brain our deep seek brain and
+[00:02:36] what that's going to do guys is it's
+[00:02:38] going to create a response for us in
+[00:02:40] HTML or if we do or plain text whatever
+[00:02:42] we want to and reply in our turn of
+[00:02:44] voice specifically to that query and
+[00:02:46] then it's going to send it automatically
+[00:02:48] to Outlook or just send it to your own
+[00:02:50] inbox itself now you'll know from the
+[00:02:52] channel I've done an automation using a
+[00:02:54] rag system where it's trained on your
+[00:02:56] entire inbox and it knows all the
+[00:02:58] context of everything that's ever ever
+[00:03:00] happened but for this video I just want
+[00:03:02] to show you something simple that
+[00:03:03] everybody can follow along with it's by
+[00:03:05] size and you'll also learn how to
+[00:03:06] integrate and use any language model
+[00:03:08] that you want to so as always all the
+[00:03:10] blueprints the agents the guides are all
+[00:03:12] available over in the school Community
+[00:03:13] which is all about the latest AI
+[00:03:15] incredible automations and most
+[00:03:17] importantly guys it's about the stuff
+[00:03:19] that actually works go check it out we
+[00:03:20] got a lot of really crazy stuff
+[00:03:22] happening in January I think you really
+[00:03:23] appreciate it because this is the year
+[00:03:25] take over on AI automation so let's
+[00:03:27] create a new scenario and dive straight
+[00:03:28] in now the crugs of this automation guys
+[00:03:31] is going to be something called open
+[00:03:32] rout so what is open rout essentially
+[00:03:34] open r. enables us within a scenario to
+[00:03:38] use pretty much any language model we
+[00:03:40] want to sometimes when we talk about
+[00:03:43] automations right um they can fail for
+[00:03:45] example you know they have token limits
+[00:03:48] and the more that you use a chat gbt or
+[00:03:50] a Claude the higher rankings you get and
+[00:03:52] that lets you use more tokens per minute
+[00:03:54] but sometimes it means it can fail or
+[00:03:55] maybe Claude is overrun and your
+[00:03:58] scenarios fail one thing we don't one is
+[00:04:00] scenario failing so what's cool about
+[00:04:02] open rout you're going to click on open
+[00:04:04] CLI create a chat completion you'll need
+[00:04:06] to connect your account I'll show that
+[00:04:07] in a second but let me just show you how
+[00:04:08] this works okay look at this model so it
+[00:04:11] enables you to choose from all of these
+[00:04:13] flipping free and paid models it's
+[00:04:15] absolutely crazy you can use like models
+[00:04:17] for free look if I type a Word in free
+[00:04:19] look at this all these ones with free in
+[00:04:21] the background free in Brackets are free
+[00:04:23] to use which I think is pretty freaking
+[00:04:25] cool right we like free free is cool but
+[00:04:27] you know what on this channel we're
+[00:04:28] about stuff really really really kills
+[00:04:30] and works so we're going to use deep
+[00:04:31] seek V3 and you'll see this thing here
+[00:04:33] enable automatic feedback so essentially
+[00:04:35] if that doesn't work for some reason
+[00:04:37] open rout is kind of like sitting
+[00:04:39] between there's you right there's open
+[00:04:41] rout and then there's all these models
+[00:04:43] so we can say hey open rout I want this
+[00:04:44] one but if that doesn't work just get me
+[00:04:47] something similar get me something
+[00:04:48] similar performance cost whatever so o
+[00:04:51] will do that for you automatically
+[00:04:53] improving the variability of the
+[00:04:54] automation for you cool so what we see
+[00:04:56] is enable automatic feedback and then we
+[00:04:58] can give it a message and do various
+[00:04:59] things so look what I want you to do um
+[00:05:01] I'm just going to put content ABC for a
+[00:05:03] second and then we're going to go over
+[00:05:04] and connect this together all right so
+[00:05:06] we're going to head over to open. AI
+[00:05:08] you're going to create an account I
+[00:05:10] think it gives you like a dollar for
+[00:05:12] free but because deep seek is so cheap
+[00:05:14] it's insane so once You' create an
+[00:05:16] account you can actually have a look
+[00:05:18] around and browse and see what it's all
+[00:05:19] about so it's got all the different
+[00:05:21] models you can have a look at so for
+[00:05:22] example deep seek V3 right now is number
+[00:05:24] one in programming the reason why it's
+[00:05:26] excellent for programming and creating
+[00:05:28] code is because essentially what we can
+[00:05:30] use up for is creating
+[00:05:32] extremely long like uh context because
+[00:05:35] like you think about when you're
+[00:05:35] creating apps and things and we can do
+[00:05:37] that on no code um tools like you know
+[00:05:39] AI writers and things like that um it
+[00:05:41] can just do that at an insanely cheap
+[00:05:43] unit price but I also think it's got
+[00:05:45] Incredible use case which is what I want
+[00:05:46] to use here is how we can AI automate
+[00:05:48] how we can correct text landing pages um
+[00:05:51] copy for social media automations any
+[00:05:52] automation that we've ever done on this
+[00:05:54] channel and there things that we
+[00:05:55] including school on on the YouTube
+[00:05:57] channel we can substitute and us with um
+[00:05:59] deep seek to save some significant costs
+[00:06:03] and not let me get this beautiful
+[00:06:06] carpet okay that is flipping delicious
+[00:06:08] cool so this is the website I have a
+[00:06:10] little play around with it you can see
+[00:06:11] see things in the ranking section here
+[00:06:13] like how they all perform for
+[00:06:14] programming and what the rankings are
+[00:06:16] and you can come down and have a look
+[00:06:17] and deeps V3 is has increased by 3,800
+[00:06:21] on that cool so once you've done that
+[00:06:22] and you've connected it it is dead dead
+[00:06:24] straightforward to do that and to
+[00:06:25] connect it guys all you do is come over
+[00:06:27] come down select Keys you'll see on this
+[00:06:29] page and then you're going to click on
+[00:06:30] create a key and then you just simply
+[00:06:32] copy that and then paste it within your
+[00:06:34] automation all right and you may need to
+[00:06:36] deposit like a couple of dollars but you
+[00:06:37] get like a dollar for free that perfect
+[00:06:39] by clicking on credits cool so how's
+[00:06:41] this automation going to work so the way
+[00:06:42] I want this automation to work and I'm
+[00:06:43] going to use Outlook instead of Gmail to
+[00:06:45] bless or Outlook friends and family AI
+[00:06:47] automator there so the first thing we
+[00:06:48] want to do is come down and click here
+[00:06:50] and we're going to go for web Hooks and
+[00:06:51] we're going to go for whoops oh my
+[00:06:52] goodness it does not want to use web
+[00:06:54] hook today does it we're going to go
+[00:06:55] down for custom mail hook oh my goodness
+[00:06:58] what is a custom mail hook what we bring
+[00:07:00] him over here first of all just throw
+[00:07:01] him in there all right let's have a
+[00:07:03] quick look uh right cool so how does
+[00:07:05] this work basically we're going to do
+[00:07:06] click on it we're going to add a new
+[00:07:08] mail hook like this and we'll call this
+[00:07:10] one let's call this one deep seek V3 btg
+[00:07:16] which just means build together and copy
+[00:07:18] this as well cuz guys we're not Savages
+[00:07:20] and since deep se's got a whale emergy
+[00:07:22] which I really like we're going to copy
+[00:07:23] that as well awesome all right sweet now
+[00:07:26] we've got this random address okay now
+[00:07:28] look at this I click okay let me just
+[00:07:29] rename the scenario because we're not of
+[00:07:31] all the things we are guys Savages is
+[00:07:32] not one of them but we need to make sure
+[00:07:34] that we've got what we need so this one
+[00:07:36] here we've got this cool little address
+[00:07:37] here and I check this out and copy this
+[00:07:38] to clipboard click okay I'm going to
+[00:07:40] right click I'm going to run this web
+[00:07:42] hook one so what people don't realize
+[00:07:43] about web hooks is it can also be
+[00:07:45] triggered by mail um so we can email a
+[00:07:48] sort of like a custom mail hook and that
+[00:07:51] will bring all the information over for
+[00:07:53] us it's actually what zero if you have
+[00:07:54] like a business you have accounting
+[00:07:55] software when you send receipts and you
+[00:07:57] make attachments you you send it to this
+[00:07:59] mail hook I know because it's my least
+[00:08:01] favorite thing in the world to do is
+[00:08:03] attachment so let's head over to my
+[00:08:04] email and test it out all right I'm in
+[00:08:06] Gmail but it doesn't matter which
+[00:08:08] account this comes from it's just
+[00:08:09] sending something El so look I come to
+[00:08:10] recipient I type in basically this hook
+[00:08:13] and I say subject to
+[00:08:16] subject and then body can be Christmas
+[00:08:20] and Good
+[00:08:23] Times okay this is just a test right I
+[00:08:26] come down that's okay that's fine okay
+[00:08:29] oh my goodness get this thing out of
+[00:08:30] here then we click S I come back over to
+[00:08:32] scenario guys and check this out look at
+[00:08:33] this subject to subject text is
+[00:08:36] Christmas and good times so what that
+[00:08:37] basically means and the way you do the
+[00:08:39] scenario is anytime let's say we get an
+[00:08:41] email from somebody and we don't feel
+[00:08:42] comfortable having all our data in
+[00:08:44] certain location what we can do is get
+[00:08:45] an email we can forward it to this
+[00:08:47] address and then we can say hey write me
+[00:08:49] a reply for this email uh basically land
+[00:08:52] in a scenario deep seek does its magic
+[00:08:54] uh and then it sends and creates a
+[00:08:56] response for us in our inbox so we can
+[00:08:57] use it ad hoc as and when we want to
+[00:08:59] which I think is a really cool simple
+[00:09:00] automation so we've got that now the
+[00:09:02] next thing we need to do guys is let's
+[00:09:04] see what we've got we got deep seek V3
+[00:09:06] now the first one I want to do I message
+[00:09:09] I want you to use brawl as assistant and
+[00:09:11] we going to give it a system instruction
+[00:09:14] and then we're going to give it the data
+[00:09:15] but before we do that we must of course
+[00:09:17] rename these so I'm going to call this
+[00:09:18] one little wave hand we'll call this one
+[00:09:23] request beautiful I'm going come this
+[00:09:25] one I name this one I'm call this one
+[00:09:27] deep seek it's cool I just built out a
+[00:09:29] full tutorial in the community like step
+[00:09:32] by step as a brand new beginning using
+[00:09:33] making a automations like the skills you
+[00:09:35] learn why it's important it's really
+[00:09:37] flipping cool actually to come back down
+[00:09:38] to real simple Basics and I hope you get
+[00:09:40] from like not knowing what you're doing
+[00:09:42] to getting the point where you're Fly I
+[00:09:43] really enjoyed doing that and I saw that
+[00:09:45] because renaming modules is like a
+[00:09:47] really small little hack that's that's
+[00:09:48] helpful for managing your flows so we
+[00:09:51] got deep seek now what the hell are we
+[00:09:52] going to say to it so first first
+[00:09:54] message guys I want you to click on
+[00:09:56] assistant and give it a promp now this
+[00:09:57] prompt is just simple just to correct a
+[00:09:59] simple automation how you use it okay
+[00:10:01] you will receive an email and a set of
+[00:10:03] instructions from the user your task is
+[00:10:05] to create a response to that email in
+[00:10:07] HTML format the response must match the
+[00:10:09] user's turn of voice as inferred from
+[00:10:11] that instructions and provided context
+[00:10:13] do not add any additional context but an
+[00:10:16] email response requested by the user
+[00:10:17] Focus solely on delivering a concise
+[00:10:19] HTML structured edit a reply that aderes
+[00:10:21] to the style and requirements now as you
+[00:10:22] know in my other video it can pull down
+[00:10:24] every email you've ever had in your
+[00:10:26] inbox as well as your turn of voice and
+[00:10:27] make it amazing this is just an example
+[00:10:30] and of course we can add different tone
+[00:10:31] of voices so for instance in the
+[00:10:33] classroom if I come over and I just type
+[00:10:35] in tone of voice and on classroom is a
+[00:10:37] for quick for instance I can see yeah
+[00:10:39] okay this is automation on how you
+[00:10:41] create your T of voice with AI like this
+[00:10:42] right and then we've got all the
+[00:10:43] different things we have for example
+[00:10:45] this one's really interesting the
+[00:10:46] segmentation prompt is what you use to
+[00:10:48] create your own t of voice i' encourage
+[00:10:50] you to check that out right we use like
+[00:10:52] 11 different things like Vali word
+[00:10:53] choice grammatical patterns punctuation
+[00:10:55] blah blah blah to get to the point where
+[00:10:58] essentially you can have something that
+[00:10:59] sounds exactly like you and a good
+[00:11:01] example of that to check this out if I
+[00:11:03] just show you um let's have a look where
+[00:11:06] is the whole Mery turn of voice if I
+[00:11:08] come here I just want to show you a good
+[00:11:10] example of what this physically looks
+[00:11:11] like so if I come down here okay here we
+[00:11:14] go look I check out turn of voice I come
+[00:11:15] over and this is an example of what it
+[00:11:17] looks like VAB word choice and you'd
+[00:11:18] basically get this document basically
+[00:11:20] trained on all the information you've
+[00:11:21] got whether it's tax LinkedIn post um
+[00:11:24] YouTube videos or emails and we have
+[00:11:26] this sort of thing just to make sure the
+[00:11:27] responses are pretty flipping Epic so we
+[00:11:29] come back but for the example this I'm
+[00:11:31] just going to keep it very simple and
+[00:11:32] basic then we click okay and then the
+[00:11:34] final putation is we want it then to
+[00:11:36] reply back to our Outlook so to add
+[00:11:38] Outlook into the scenario we going to
+[00:11:39] come down here you might guess what we
+[00:11:41] add right we're going to add Outlook
+[00:11:43] come down add Outlook now I'm just going
+[00:11:45] to put create a draft so this is the way
+[00:11:47] that this will work let's just put draft
+[00:11:49] create a draft message we choose an
+[00:11:51] account so add your account if you
+[00:11:52] haven't done so already let's have a
+[00:11:53] look what I've got there we go that's
+[00:11:55] right I think so basically you come over
+[00:11:56] you sign in you'll need to give it a
+[00:11:58] sort of authoriz ation so we say hey
+[00:12:00] that's fine do that for me and then it
+[00:12:01] loads we wait for it while it loads cool
+[00:12:04] and then we s back we love that subject
+[00:12:06] okay so subject just going to be your
+[00:12:09] deep seek reply and you know of course
+[00:12:13] let's get our pattern pending whale in
+[00:12:14] there too right okay beautiful body
+[00:12:17] content is very simply just going to be
+[00:12:19] oops I'm going to come over here so you
+[00:12:20] can get I just want to make sure you can
+[00:12:22] always see all the times come down
+[00:12:23] message it's going to be content that's
+[00:12:25] it importance I do like on Outlook how
+[00:12:28] you can set importance like one of my
+[00:12:29] frustrations with it though is that like
+[00:12:32] I find so much stuff goes to junk like
+[00:12:34] people email me I only see it when I go
+[00:12:36] to when it goes a junk it's so flipping
+[00:12:39] annoying okay let's just put one of my
+[00:12:41] email addresses in and we call it Jack
+[00:12:45] cool all right sweet uh that's to
+[00:12:47] recipient are beautiful okay and then
+[00:12:50] we'll click okay and of course this one
+[00:12:51] here we'll just rename this one outl
+[00:12:53] just for the sake of it looking really
+[00:12:55] cool which I think is
+[00:12:57] important okay come down mail beautiful
+[00:13:00] email I like it all right sweet then we
+[00:13:03] click okay and all we do guys is we
+[00:13:05] simply where are we at right now or to
+[00:13:07] online decent so should we check out
+[00:13:09] what this looks like so if I got this
+[00:13:11] here for example let's have a look at
+[00:13:13] the web hook so we're going to copy this
+[00:13:14] address and I'm going to create like a
+[00:13:15] fake email to give it like a question
+[00:13:17] and see exactly how that works okay so
+[00:13:19] here we are so basically what would
+[00:13:20] happen is let's say we get an email from
+[00:13:21] a random person and we said you know
+[00:13:23] what I can't be bother to respond to
+[00:13:24] that so what I'm going to do I'm basic
+[00:13:26] going to enter this email address in
+[00:13:27] here and again you can save these as
+[00:13:28] spefic specific things subject don't
+[00:13:30] worry about it and let's just say hey to
+[00:13:32] chat gbt write me a
+[00:13:35] random um random email about I don't
+[00:13:38] know uh
+[00:13:40] YouTube sponsorships for honey not a
+[00:13:44] scam did you see the Honey Thing by the
+[00:13:46] way I thought that was fascinating how
+[00:13:48] they're doing the last last attribution
+[00:13:49] thing that was really really crazy I
+[00:13:51] wasn't sure about that um wild actually
+[00:13:54] because when I used it I was like dude
+[00:13:56] am I really getting like the best coupon
+[00:13:58] code with this stuff so I stopped using
+[00:13:59] in the end but with all the stuff that
+[00:14:01] we do about like AI automations and AI
+[00:14:02] co- pilot and Chrome extensions you can
+[00:14:04] rebuild something like honey it's not
+[00:14:06] that like we could scrape all of the
+[00:14:08] codes online I'm going on tangent here
+[00:14:09] you got you got to pull me back
+[00:14:11] sometimes but you can literally scrape
+[00:14:12] everything online uh build a chromic
+[00:14:14] extent now edit that actually physically
+[00:14:16] works like you really 100% could do that
+[00:14:18] and then just use your referral code
+[00:14:20] from that if you want to like it really
+[00:14:22] really isn't that difficult to do okay
+[00:14:23] I've just changed this a little bit just
+[00:14:24] to make sure that uh we've got some
+[00:14:26] dummy data that we can respond to so
+[00:14:27] let's come down uh we come down here
+[00:14:30] copy this sah Johnson get honey.com all
+[00:14:32] right sweet come back over here okay so
+[00:14:33] I've just posted the information in here
+[00:14:35] which is cool T and TR with Alex let's
+[00:14:37] come down and let's say we get this
+[00:14:39] email and we're like okay what do we
+[00:14:40] think about this dude is this right I
+[00:14:42] might just say something like hey reply
+[00:14:45] to the below um just say try and get I
+[00:14:49] don't know 3K per video
+[00:14:52] um
+[00:14:54] suggest a call but that's what I'm going
+[00:14:56] to do right let's just say that's how I
+[00:14:58] do right all I'm going to do guys so
+[00:15:00] basically our scenario right is going to
+[00:15:01] be running in the background but before
+[00:15:02] we run the scenario all we need to do
+[00:15:04] now is basically add in the user
+[00:15:05] information right so we've got the
+[00:15:07] content from the assistant so all we do
+[00:15:08] is come on to add item going to content
+[00:15:10] is just going to be let's have a look at
+[00:15:13] the uh let's have a look text that's
+[00:15:16] pretty much it and then we come down and
+[00:15:17] we say user and we come down and then we
+[00:15:19] click okay now that's done we can
+[00:15:21] actually send the email and run the
+[00:15:22] entire scenario to get a response for Al
+[00:15:24] M let's come here we click on run once
+[00:15:26] we come back over to the email per per
+[00:15:28] reply below try and get 3K per video
+[00:15:30] suggest we call we come over all we do
+[00:15:31] guys is we click Send Yes it doesn't
+[00:15:33] matter about the subject we come over to
+[00:15:35] scenario then we got the requests come
+[00:15:36] through deep Seekers now cor track
+[00:15:38] completion which is awesome we have a
+[00:15:39] look at what we've said How's it got all
+[00:15:41] the text yes reply to the below try and
+[00:15:43] get 3K per video suggest a call
+[00:15:44] phenomenal that's now working in the
+[00:15:46] background and now we're going to have a
+[00:15:47] draft message then all we would do guys
+[00:15:49] if we just wanted to reply to a message
+[00:15:51] based on our prompt we can just simply
+[00:15:52] forward it to Emil address really
+[00:15:54] accessible and it's also I think what is
+[00:15:56] cool about this automation is it's
+[00:15:57] something that we can give to other
+[00:15:58] people right do you know what I mean
+[00:16:00] like if you could say look if you're
+[00:16:00] struggling with this topic just send it
+[00:16:02] to this email and it will reply back to
+[00:16:04] email with a response and just like guys
+[00:16:05] it has created an Al message so let's go
+[00:16:07] check out what that looks like and I
+[00:16:08] come back over to my drafts your de
+[00:16:10] reply which is what we outlined and it's
+[00:16:11] given me this specific format and the
+[00:16:13] reason it's done that guys is because
+[00:16:14] I've just want to show you very briefly
+[00:16:15] on this automation one of the things I
+[00:16:17] said to it look on the assistant section
+[00:16:19] on the content I said this is how I want
+[00:16:21] the HTML to look and I gave it an
+[00:16:24] example so you can actually design that
+[00:16:25] if you want to send it back in HTML I
+[00:16:27] did it just to kind of show you but the
+[00:16:28] bottom line is it will do it come over
+[00:16:30] to the email and as you can see guys I
+[00:16:31] included all the HTML here so you don't
+[00:16:33] have to doubt if it's a reply it can
+[00:16:34] just be plain text that's just if you
+[00:16:35] want to be cool and fantasy and do that
+[00:16:37] so come back over here hey Sarah thanks
+[00:16:39] for reaching out I'm doing well thrill
+[00:16:40] to hear you've been in contact and blah
+[00:16:41] blah blah blah I'd love to exp
+[00:16:43] partnership with honey your mission to
+[00:16:44] corate blah blah blah I typically aim
+[00:16:45] for rate $3,000 per video uh for
+[00:16:47] sponsorship just nature give engagement
+[00:16:49] Channel schedule a call which we could
+[00:16:51] HDML blah blah blah and guys it's very
+[00:16:53] simple very cool and that's how you can
+[00:16:55] use deep seek V3 or any language model
+[00:16:57] Sentry in your AI
+[00:16:59] hope you find this video interesting
+[00:17:00] have a wonderful weekend and I'll see
+[00:17:02] you in my next video

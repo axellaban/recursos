@@ -1,0 +1,1236 @@
+[00:00:00] in this video I'm going to show you how
+[00:00:01] to AI automate 95% of a newsletter to
+[00:00:05] really really good quality we're going
+[00:00:07] to grab the latest like piece of news
+[00:00:09] article for your need we're going to run
+[00:00:11] it through everything we're going to
+[00:00:12] create a oneliner assistant we're going
+[00:00:14] to create an overview you're going to be
+[00:00:15] able to review it in this table open it
+[00:00:18] up see the URL from the article see what
+[00:00:20] it's about see if you want to include
+[00:00:22] this topic or not in your email you can
+[00:00:24] then approve it or deny it do you not
+[00:00:26] want it do you want it once that's done
+[00:00:28] and then runs through this really cool
+[00:00:30] automation that will create bullet
+[00:00:32] points it will create key takeaways it
+[00:00:34] will create a tldr it will create
+[00:00:36] everything we want I based this
+[00:00:37] automation G2 a request on the rundown
+[00:00:41] people love the rundown I said this is
+[00:00:42] exactly how you create something similar
+[00:00:43] to this and then the output at the end
+[00:00:45] of it would look something like this
+[00:00:47] where you get a nice little header that
+[00:00:49] summarizes everything you get an AI
+[00:00:50] generated image that we're going to use
+[00:00:52] and build a mid Journey you're going to
+[00:00:53] get a tldr of what this is in just a
+[00:00:56] couple of sentences and then you're
+[00:00:57] going to get four bullet points they
+[00:00:59] explain each part of the article and
+[00:01:01] finally why this matters and this will
+[00:01:03] automate guys 95% of the entire process
+[00:01:07] for you and as always guys all the
+[00:01:08] prompts the blueprints the trainings the
+[00:01:10] additional support it's all available
+[00:01:12] down here in my school Community we can
+[00:01:13] access absolutely everything with all
+[00:01:15] the uploads which basically means if you
+[00:01:17] just wanted to upload this automation
+[00:01:19] you'd come here you'd come down you'd
+[00:01:21] click import blueprint you choose the
+[00:01:23] file You' select it you'd save you'd
+[00:01:25] increase it and you'd also get access to
+[00:01:27] all the agents that we're going to cover
+[00:01:28] in this video the overview the on line
+[00:01:30] the bullet point agent I mean I could go
+[00:01:31] on there's a couple we're going to be
+[00:01:32] using this video and you access to all
+[00:01:34] that stuff plus support in the community
+[00:01:36] down below so come down say hello we'd
+[00:01:38] love to have you but in any case we're
+[00:01:40] going to jump in I'm going to show
+[00:01:41] exactly how to build this automation out
+[00:01:43] step by step so you can automate like
+[00:01:45] most of your AI newsletter and do it to
+[00:01:47] great quality so if you haven't already
+[00:01:49] grab that coffee and let's jump straight
+[00:01:51] in and if you're new here my name is
+[00:01:53] Jack and this YouTube channel and my
+[00:01:54] community is all about the latest AI
+[00:01:56] it's about incredible automations and
+[00:01:59] most importantly
+[00:02:00] it's about the stuff that actually works
+[00:02:02] so to kick this video off what I'm going
+[00:02:03] to I'm going to run you through it end
+[00:02:04] to end to show you how it works in
+[00:02:06] practice then I'm going to tell you
+[00:02:07] exactly what you need to Automation and
+[00:02:09] then we're going to build it together
+[00:02:11] step by step okay so this video starts
+[00:02:13] off with an RSS feed now when I've
+[00:02:14] thought about how we automate a
+[00:02:16] newsletter one of my top thoughts was we
+[00:02:19] don't just automate for the sake of
+[00:02:20] automating it needs to be good quality
+[00:02:23] has to be great quality and if we're
+[00:02:24] doing a newsletter if it's news focused
+[00:02:26] it needs to be relevant it needs to be
+[00:02:28] top of mine that's why built an approval
+[00:02:30] system and that's why I'm Autos scraping
+[00:02:33] the internet for information so for
+[00:02:34] example we start over here in RSS feeds
+[00:02:37] for the example of this I've pulled
+[00:02:39] AI news thing right we're going
+[00:02:40] to do AI news we an AI Channel I'm going
+[00:02:42] to show an example of AI news and
+[00:02:43] basically I've just said look pull these
+[00:02:45] articles from this website here just
+[00:02:48] pull it from this particular website
+[00:02:49] again I'll show you all the
+[00:02:50] configurations the opportunities are
+[00:02:52] literally endless with this stuff it
+[00:02:53] could be tweeters it could be anything
+[00:02:55] you want so this is going to pull a
+[00:02:56] record for the latest article on that
+[00:03:00] particular topic so look I'll click on
+[00:03:02] this I'm going to say pull down two
+[00:03:04] awesome and I'm going to run this
+[00:03:06] automation okay so this is part two
+[00:03:08] going to come over here to part one I'm
+[00:03:09] going to click on my RSS guy going to
+[00:03:11] click on I want let's just say we want
+[00:03:12] to get five options okay then we click
+[00:03:14] okay then we click run and bear in mind
+[00:03:16] guys this is going to be running in the
+[00:03:18] background automatically the news pops
+[00:03:20] up we add off filters to see what we
+[00:03:21] want and then this just keeps running
+[00:03:23] and running and running and running in
+[00:03:24] the background so what happens the RSS
+[00:03:27] grabs our particular like article all
+[00:03:29] the things we convert that to a file
+[00:03:32] then we convert that from the HTML to
+[00:03:34] text so we can understand it then what
+[00:03:37] happens here is that this GPT agent is
+[00:03:40] going to take all that information and
+[00:03:41] say look just explain it to me in one
+[00:03:43] single line and then the overview agent
+[00:03:46] is going to say cool well I've got all
+[00:03:48] this information what's it really about
+[00:03:50] right what's the Key summary what's the
+[00:03:52] key things we need to know and then we
+[00:03:53] add it to the air table so if I come to
+[00:03:56] my air table you see here for example
+[00:03:59] let me delete this one it's getting nice
+[00:04:00] and pretty we come down and we can we
+[00:04:02] can literally increase the size it look
+[00:04:04] PS AI conference Sparks to bate okay
+[00:04:07] that's interesting what's it about
+[00:04:08] article summary I'm a new I'm the new up
+[00:04:11] andhe my soul destroying day at paler
+[00:04:13] first ever AI Warfare Council so we can
+[00:04:15] look through this it gives us key
+[00:04:17] developments and insights impacts and
+[00:04:18] significance this is just for your
+[00:04:20] benefits and bear mind guys you need to
+[00:04:21] touch anything this just happens for you
+[00:04:24] the purpose of this okay is to basically
+[00:04:26] just give you context about whether or
+[00:04:28] not you want include it in your article
+[00:04:30] I didn't want to set this up in a way
+[00:04:32] that just fired stuff so you're actually
+[00:04:34] going to review this and think let's see
+[00:04:36] what I think AI Warfare deception
+[00:04:38] panties air conference do you know what
+[00:04:40] let's say I like the sound of that and I
+[00:04:42] say you know what I want to add that to
+[00:04:43] the newsletter boom then what happens we
+[00:04:46] come to the second part of the
+[00:04:48] automation we click on this guy we click
+[00:04:50] okay and then we're going to run this
+[00:04:52] whole thing once cool so this has then
+[00:04:54] grabbed that record for we just created
+[00:04:57] so look I click on plus one it's got two
+[00:04:59] here you see AI Warfare and deception
+[00:05:00] key insights and P's conference box
+[00:05:02] debate but the only one that's going to
+[00:05:04] come through is this one because that's
+[00:05:06] the one I selected add to at to
+[00:05:08] newsletter so it's got an approval
+[00:05:09] filter right bullet points we're
+[00:05:11] creating key bullet points for this guys
+[00:05:13] which is essentially I've built this in
+[00:05:14] the style of this so if you look at what
+[00:05:18] these guys do they have a short sum up
+[00:05:20] the top they have an image they have a
+[00:05:22] summarize this in a sentence and then
+[00:05:23] they have like here four bits of detail
+[00:05:25] to explain what it's about and then
+[00:05:27] we've got a why it matters or so what so
+[00:05:29] I've used this as an example obviously
+[00:05:30] do your own style I just want to show
+[00:05:32] you the kind of thing that's possible
+[00:05:33] here I come back over to automation
+[00:05:35] right we've built the bullet points
+[00:05:36] we've got the key takeway we've got the
+[00:05:38] to Long didn't read but we've got the
+[00:05:40] tile created and then this guy here is
+[00:05:43] creating a specific prompt for us to use
+[00:05:46] a med Journey now you might have seen
+[00:05:47] I've done videos on how to automate the
+[00:05:49] med Journey but for the purposes of this
+[00:05:50] video to keep it simple I'm just going
+[00:05:52] to have it create a prompt that we can
+[00:05:54] just enter into mid journey and bring
+[00:05:56] the image back for us and as I'll show
+[00:05:57] you later this mid Journey promt works
+[00:05:59] like a charm it covers things like the
+[00:06:01] subject the action the setting the
+[00:06:02] additional details and I've coded it and
+[00:06:04] developed this prompt in such a way that
+[00:06:06] you'll get consistent results it's going
+[00:06:08] to be the same style that really looks
+[00:06:10] like a genuine you know an actual fotter
+[00:06:12] that's taken by a human being and not
+[00:06:14] one of those wild wacky like obviously
+[00:06:15] AI things so we've entered that into mid
+[00:06:17] Journey let's go grab that image now and
+[00:06:19] as you can see guys if I come over here
+[00:06:20] now I've just add a little bit
+[00:06:21] formatting to make it easy to read but
+[00:06:23] this is essentially everything you get
+[00:06:25] you get the title here you get the
+[00:06:26] description for the mid Journey image
+[00:06:28] you get the tldr just in a couple of
+[00:06:30] sentences you get bullet points and then
+[00:06:32] why it matters so let's then head over
+[00:06:34] now to Mid Jour to grab that image and
+[00:06:35] look at this guys like this is the AI
+[00:06:38] Warfare B I mean like this is phenomenal
+[00:06:41] right so if you check this out like this
+[00:06:42] is absolutely ridiculous so I can copy
+[00:06:44] that for example let's copy that head it
+[00:06:46] back over okay we come back over to our
+[00:06:49] AI news and then essentially what we
+[00:06:50] would do is we just can pop that in
+[00:06:52] there and there you go and essentially
+[00:06:54] you'd have like this is just all like
+[00:06:56] automat I could say 95% done and then
+[00:06:58] you would just simply input this into
+[00:06:59] Emil template send it off and you're
+[00:07:01] completely ready to go obviously you can
+[00:07:03] add a little flare that you want to but
+[00:07:04] that's a whole automation now I'll also
+[00:07:06] say for jump in I've got automations I
+[00:07:09] think you can pretty much automate every
+[00:07:11] single step in other words it will also
+[00:07:13] create the HTML but that is going to be
+[00:07:15] for the next video if you want to see
+[00:07:16] that video let me know down below and
+[00:07:18] I'll show you how you cover that last 5%
+[00:07:20] but I didn't want this video like 2
+[00:07:21] hours I want to show you the basics you
+[00:07:23] can get started jump in have some fun
+[00:07:24] with it and we CLI at do the bits
+[00:07:25] afterwards so with that in mind what
+[00:07:27] tools do you need well if you're new to
+[00:07:29] the Channel all the automations we're
+[00:07:31] building here are in make.com make.com
+[00:07:33] is a no code automation tool it
+[00:07:35] basically just allows us to be like no
+[00:07:37] code no no code developers so to speak
+[00:07:39] so you need access to me.com again I'll
+[00:07:41] put all the links down below for you
+[00:07:43] once you've done that you need access to
+[00:07:45] RSS doapp RSS doapp has lots of like
+[00:07:48] free options so you can come and have a
+[00:07:50] look and they have like a pay plan that
+[00:07:52] isn't that expensive now this could
+[00:07:54] really be any trigger if you watch other
+[00:07:56] videos I have on the channel you'll see
+[00:07:57] that you could do it based on IDE you
+[00:07:59] could talk to GPT 40 as an idea then
+[00:08:02] that turns into a newsletter any trigger
+[00:08:04] you want literally anything you want we
+[00:08:06] can do but for the purposes of this I've
+[00:08:08] just done newsletter okay so you need
+[00:08:10] RSS the next thing you need and you've
+[00:08:12] got me obviously then you get access to
+[00:08:14] GPT so that's platform. open.com and
+[00:08:17] that's basically the API version chat
+[00:08:19] gbt you buy like $5 of credits for that
+[00:08:22] and if all this is signing like quite
+[00:08:23] complicated I've got really specific
+[00:08:25] trainings in my school Community for
+[00:08:26] this I've also got a video show on
+[00:08:28] screen where I build it live all these
+[00:08:29] other specifics so you can still to do
+[00:08:31] that step by step and I'll also cover on
+[00:08:33] this video but if you're more support I
+[00:08:34] I've got resources to help you with that
+[00:08:36] so we've got make we've got RSS we've
+[00:08:38] got GPT me access to air table that's a
+[00:08:41] completely free piece of software I like
+[00:08:43] to describe it as XL on steroids it
+[00:08:46] looks like this it's pretty easy to set
+[00:08:48] up again I'll show you exactly how you
+[00:08:49] set everything up so you'll be flying by
+[00:08:51] the end of this video and then finally
+[00:08:53] Google Docs or a place that you want to
+[00:08:55] throw your your your output into but
+[00:08:57] obviously if you want to use mid Journey
+[00:08:59] you can access to Mid journey in terms
+[00:09:01] of cost uh mid Journey Pro is like 11 or
+[00:09:04] so dollar make is free to use up to a
+[00:09:06] certain amount RSS is free to a certain
+[00:09:08] amount and obviously the API you can
+[00:09:10] just get started with $5 so with that in
+[00:09:14] mind we're now going to build this
+[00:09:15] entire automation from scratch now I've
+[00:09:17] covered a little bit but don't if it
+[00:09:18] sounds overwhelming don't worry I've got
+[00:09:20] you back you'll know exactly how to set
+[00:09:22] this up by the end of this video if you
+[00:09:24] follow it step by step and I'm sure you
+[00:09:26] will I think I think you're going to
+[00:09:27] absolutely love this one so let's jump
+[00:09:29] pen so to start off we need to do the
+[00:09:31] formalities which is naming it balloons
+[00:09:34] letter one out of two so I said our
+[00:09:36] trigger is going to be rssed night so
+[00:09:38] let's head over to RSS
+[00:09:41] doapp and you'll see a page that looks a
+[00:09:44] little something like this okay I'm
+[00:09:47] going to come back I'm go back to the
+[00:09:48] hom page so you can see you'll see a
+[00:09:49] page like this all right just create an
+[00:09:51] account and sign in so we sign in okay
+[00:09:54] then I want you to come down to the
+[00:09:56] explore tab on the left hand side now
+[00:09:58] the cool thing about if you're not
+[00:10:00] familiar you can basically get feeds
+[00:10:02] it's basically pulling data from the
+[00:10:03] internet for you to use your purposes so
+[00:10:05] say for example a lot of people know
+[00:10:08] this but let's just say that I love the
+[00:10:10] guardian right the guardian is a
+[00:10:12] newspaper uh in the UK what a lot of
+[00:10:14] people don't realize is you can actually
+[00:10:16] do this by website so for example I've
+[00:10:17] just come on here to the guardian AI all
+[00:10:19] right so look I've got this web page
+[00:10:21] they are publishing topics I can
+[00:10:23] actually take the URL from that web page
+[00:10:25] or multiple web pages if I want to and I
+[00:10:28] can enter it in and then I can click
+[00:10:30] search and what it will do is basically
+[00:10:32] every time an article does look familiar
+[00:10:34] it should do cuz we just saw it a second
+[00:10:36] ago right look this looks eily familiar
+[00:10:38] was the exact same thing so every time
+[00:10:40] the guardian in this case the guardian
+[00:10:42] you know newspaper it will pull down the
+[00:10:44] article and everything they've done now
+[00:10:46] you don't have to do it that way you
+[00:10:47] could also search by terms so for
+[00:10:49] example I could just say artificial
+[00:10:52] intelligence and now essentially any
+[00:10:55] article on artificial intelligence will
+[00:10:56] appear but if I've got favorite
+[00:10:58] newspapers I've got favorite things I
+[00:10:59] like to use that I trust and I think is
+[00:11:01] good I can search for them and grab them
+[00:11:03] you can also do this by individuals
+[00:11:05] twitters there's like a million
+[00:11:06] different things that you could do but
+[00:11:08] for the purposes of this and just to
+[00:11:10] make it simple I'm just going to grab
+[00:11:11] the Guardians one uh and we can go from
+[00:11:13] there so we're going to call on Save
+[00:11:15] feed and the other quick call out by the
+[00:11:17] way is like filters if I didn't want the
+[00:11:18] word piece coming up and I type that in
+[00:11:20] there and add it you see how that just
+[00:11:22] like Grays out that means that we'll get
+[00:11:25] no articles with that you can also do
+[00:11:27] things like replace and remove so it's
+[00:11:29] like whatever you know the name the
+[00:11:30] guardian bought up or ai's bought up
+[00:11:32] call it something else I've got another
+[00:11:33] video covering this in a bit more detail
+[00:11:35] but I just want to give you the Whistle
+[00:11:36] Stop tour cool now when you've created
+[00:11:38] your feed you'll see this XML I just
+[00:11:40] want you to copy it okay then we go back
+[00:11:43] over to our Automation and we click this
+[00:11:45] big shiny purple button here and we type
+[00:11:47] in
+[00:11:48] RSS like so buil in now you got watch
+[00:11:52] and retrieve watches basically every
+[00:11:54] time a new article comes fire and
+[00:11:56] retrievers just bring back the last x
+[00:11:58] amount that that you've done so for the
+[00:12:00] purpose of this video I'm going to click
+[00:12:01] on retrieve you could just say like hey
+[00:12:03] every 6 hours bring me like 10 articles
+[00:12:06] or something whatever you want right and
+[00:12:08] because we're approving it we can have
+[00:12:10] as many as we like and we can just sort
+[00:12:11] of find that we enter the URL so look I
+[00:12:14] come back over to my RSS feed I copy I
+[00:12:17] come to our article and I enter it you
+[00:12:20] don't worry about date from date two for
+[00:12:21] the moment maximum number of returned
+[00:12:23] items let's just say that we want two
+[00:12:26] just for the sake of this in fact let's
+[00:12:27] make it really easy and do one and then
+[00:12:28] we click one on Okay cool so look if I
+[00:12:31] run this scenario once bottom left we
+[00:12:33] should see the latest article we click
+[00:12:35] on this it's given us Ur that it's
+[00:12:37] pulled out but what's the output look
+[00:12:39] we're the peace activist my surreal soul
+[00:12:41] sucking day at palen's first AI Warfare
+[00:12:44] conference it's cool you kind of get
+[00:12:46] educated on what's happening in AI World
+[00:12:48] whilst we're learning some incredible
+[00:12:50] cut and Edge automations cool and then
+[00:12:52] it's given us URL so we found the
+[00:12:54] article we want the question is D how do
+[00:12:56] we actually find out what the article
+[00:12:57] says so we click onug
+[00:12:59] we come over here and we're going to
+[00:13:01] look for
+[00:13:04] HTTP get a file now this module will
+[00:13:07] just download you see here right we
+[00:13:09] feeded the URL I'm going to zoom out a
+[00:13:11] little bit so you can see as I hover
+[00:13:13] over where's URL here you see that it's
+[00:13:16] pulsing just means it's related to that
+[00:13:18] module so I just click on URL cool right
+[00:13:20] then I click okay now what this guy will
+[00:13:23] do is every time I give it Ur off marss
+[00:13:26] it will just download the whole page for
+[00:13:27] us which is really cool so look I run
+[00:13:30] this
+[00:13:31] again there you go look it's given his
+[00:13:33] the output and it's got all the data
+[00:13:35] there sweet but the problem is guys it's
+[00:13:37] in pesky HTML so what we need to do is
+[00:13:40] get the HTML into the queen's English so
+[00:13:42] we just come over here we type in HTML
+[00:13:44] to text awesome click on this and what
+[00:13:47] we're looking for is the data cool and
+[00:13:50] then what that will do guys is basically
+[00:13:52] take that into something that you and I
+[00:13:54] could probably actually understand
+[00:13:56] awesome so then the question is that
+[00:13:58] well what do we need to do next well
+[00:13:59] let's go back to the module that I book
+[00:14:01] to find out we're here a oneliner
+[00:14:03] assistant and an overview agent right so
+[00:14:07] that's cool so let's start off with our
+[00:14:08] oneliner assistant okay our oneliner
+[00:14:10] agent he's a cool guy I'm going to I
+[00:14:13] want to run you through so you
+[00:14:14] understand how to build these yourself
+[00:14:15] so that like you can build all these
+[00:14:16] amazing cations and we can all benefit
+[00:14:18] so I'm going to give you a quick
+[00:14:19] whistletop tour of how these work so
+[00:14:21] basically what we're what we're asking
+[00:14:22] here is for a concise and engaging
+[00:14:24] summary there's like 50 characters
+[00:14:26] maximum like you need to be able to
+[00:14:27] explain it quickly succinctly and not be
+[00:14:30] too you know not too verbos about it so
+[00:14:33] you may see lots of information on that
+[00:14:34] about a website such as the guardian the
+[00:14:36] times or another website disregard all
+[00:14:39] information pertaining to the website we
+[00:14:40] are only interested in the article and
+[00:14:42] that's because there are certain things
+[00:14:44] you can do by the way that like only
+[00:14:45] that starts with the text and ends with
+[00:14:47] the text because we're pulling the
+[00:14:49] website out you're going to get loads of
+[00:14:50] stuff like news politics all the other
+[00:14:52] stuff so we just kind of as a really
+[00:14:55] simple workaround just educating the AI
+[00:14:57] agent to be like look ignore this focus
+[00:14:59] on this if we want if we're really
+[00:15:01] conscious about our token count and our
+[00:15:03] pricing we can build those extra
+[00:15:04] measures in but for the purposes of this
+[00:15:06] this all how as out then we give
+[00:15:08] instructions analyze the data Give me a
+[00:15:10] summary that's 50 characteres long
+[00:15:11] ensure the summary is attention grabbing
+[00:15:13] informative use strong active language
+[00:15:15] avoid filler words blah blah blah 50
+[00:15:17] characters out there so then what we do
+[00:15:19] is we copy the whole thing and then we
+[00:15:20] over to platform the open.com we click
+[00:15:22] on create in the top right we give it a
+[00:15:25] name so we'll call this guy one liner
+[00:15:29] agent and then just paste the
+[00:15:30] instructions in the model you use any
+[00:15:32] model you want to gb4 Turbo 3.5 whatever
+[00:15:35] you want based on your purposes I always
+[00:15:37] recommend starting with a high level
+[00:15:38] model and then working way down gp40 is
+[00:15:41] Rock Solid at the moment basically
+[00:15:43] select the model that you want um and
+[00:15:45] essentially that is entirely complete so
+[00:15:47] then look I come back over now to Here
+[00:15:50] and Now I need to add the guy in so I
+[00:15:52] come in here I'm going to find
+[00:15:54] message an assistant now if you're
+[00:15:58] unfamiliar with what assistant is versus
+[00:15:59] a prompt so when I add chat gbt I can do
+[00:16:02] two things I can either create a
+[00:16:04] completion which in other words is hey
+[00:16:06] just send this to chat GPT and I can put
+[00:16:08] it in a prompt and I'll get an answer an
+[00:16:11] assistant is a precoded predefined think
+[00:16:15] of it like an agent or an assistant
+[00:16:16] right and the reason I like assistant is
+[00:16:18] if I want to build up several
+[00:16:19] automations maybe I want to use this one
+[00:16:21] line about in another automation
+[00:16:22] tomorrow I don't have to keep recol
+[00:16:25] rewriting the entire prompt I can just
+[00:16:27] slot them into 50 different things
+[00:16:28] things and if I ever want to change
+[00:16:30] anything I just go back over and I
+[00:16:32] improve it so I just think it's if it's
+[00:16:34] something you might use more than once
+[00:16:36] just use an assistant for it as well you
+[00:16:38] could obviously use Claude for this if
+[00:16:39] you want to I'm just using GPT to show
+[00:16:41] you the process and you can build out
+[00:16:43] and pick and choose the models that you
+[00:16:45] like as you go cool so the message we
+[00:16:47] want is what the message is the output
+[00:16:50] from the text passer and then the
+[00:16:52] assistant is the one liner agent so we s
+[00:16:54] that guys we click okay and then we're
+[00:16:55] going to give him a name let's call him
+[00:16:57] here one
+[00:17:00] liner and of course he's going to need a
+[00:17:02] little bit of emoji right so let's give
+[00:17:04] him number one as an emoji where is
+[00:17:07] it okay sweet awesome and then we click
+[00:17:10] okay sweet then the next thing we need
+[00:17:12] to do is to summarize the agent right so
+[00:17:14] what's that guy well look not this guy
+[00:17:17] it is overview agent cool so the reason
+[00:17:21] I like the overview agent I built this
+[00:17:22] before in automation it helps you
+[00:17:24] understand how to build scripts but
+[00:17:25] essentially this is like the tldr of it
+[00:17:27] a little bit so it's like gives you bit
+[00:17:29] more information about it so with this
+[00:17:31] guy look we pre-process the article we
+[00:17:35] analyze the article we write a summary
+[00:17:37] we give context and background from 70
+[00:17:39] to 80 words we're going to give key
+[00:17:40] developments and insights and repeat
+[00:17:42] that as is needed so basically you'll
+[00:17:43] have what it's about what the insights
+[00:17:45] and developments are and we can repeat
+[00:17:47] those two things based on how long the
+[00:17:48] article is and then we talk about the
+[00:17:50] impact and the significance we talk
+[00:17:52] about formatting a presentation we
+[00:17:53] detail things about how we want it to
+[00:17:55] log and the reason that we do that so if
+[00:17:57] I come back over now to show you for
+[00:17:59] instance the reason I've done it is
+[00:18:02] we've got the option to read the article
+[00:18:03] if you want to so look click on that
+[00:18:05] let's grab it let's just say I want to
+[00:18:07] come and have a look I can read through
+[00:18:09] if I'm interested I can read through
+[00:18:11] right awesome or if I just want to get
+[00:18:12] like what's the contacts what
+[00:18:13] developments I can read it all within
+[00:18:15] the thing and it just makes it a little
+[00:18:16] bit easier so that's why we include that
+[00:18:19] so if I come back over now to our
+[00:18:20] automation what we're going to do is
+[00:18:23] let's just clone this guy bring it over
+[00:18:26] call this one here rename it and we'll
+[00:18:27] call this guy over overview agent
+[00:18:30] overview and what should we give him
+[00:18:32] thing let's give him a little fire
+[00:18:34] Emoji awesome and then all we do is we
+[00:18:36] write the overview agent if that's what
+[00:18:38] you want to add uh where is he here
+[00:18:40] again same process copy it all and do
+[00:18:42] the exact same thing we did last time
+[00:18:45] with the one liner agent over there okay
+[00:18:47] exact same thing do this guy do it with
+[00:18:49] that guy we copy it go to platform.
+[00:18:51] open.com enter it in grab the B bring it
+[00:18:54] back over and I I'll wait here if you
+[00:18:56] way you do that and then we can we can
+[00:18:57] jump straight in cool all right so we've
+[00:18:59] got this guy and then we just select the
+[00:19:01] agent that we just built and once again
+[00:19:03] the input is the text that we got and
+[00:19:04] then we click okay awesome and so the
+[00:19:07] next thing we now need to do guys is
+[00:19:08] create an air table so if I come back to
+[00:19:10] this automation you'll see here the last
+[00:19:13] part is just create a record thing so
+[00:19:15] look we come back over here we click on
+[00:19:17] plus and we click on air table now you
+[00:19:20] can send this over if you want to to
+[00:19:21] Google Sheets I always recommend air
+[00:19:23] table for beginners I just think it's
+[00:19:25] way more robust and just a lot easier to
+[00:19:27] use so cck on air table and click on
+[00:19:30] create a record again if this is
+[00:19:32] something that you're struggling with I
+[00:19:33] have got like guides on how to set all
+[00:19:35] these things up uh in my school
+[00:19:36] Community but the TDR of it is that when
+[00:19:38] you create an account in air table you
+[00:19:40] just open a new a new base it's like
+[00:19:42] really like it's a step-by-step thing to
+[00:19:44] do and essentially all you do is it'll
+[00:19:46] ask you to sign in you open a new page
+[00:19:48] you give it the access levels that you
+[00:19:50] want and then the things will be
+[00:19:51] connected together so I've not going
+[00:19:53] into too much deta about how do the
+[00:19:54] connections but if you follow the
+[00:19:55] process it'll be simple and there's more
+[00:19:57] support down below if if you'd like some
+[00:19:59] help doing that cool so then once we've
+[00:20:01] done that right I've got this base here
+[00:20:04] so I'm just for the sake of this just
+[00:20:06] going to delete all of these so we can
+[00:20:08] start from a a blank slate so to speak
+[00:20:10] so we're going to name this one I've
+[00:20:12] called this one here AI automation
+[00:20:15] newsletter okay I come back over here
+[00:20:18] I've selected create a record I click on
+[00:20:21] the
+[00:20:22] record it loads up I click on the
+[00:20:26] base and then you just select the thing
+[00:20:28] that you named it which is a automation
+[00:20:29] newsletter it lets me pick the table so
+[00:20:32] I created two tables one's for a future
+[00:20:34] automation not in this video and one is
+[00:20:36] so this one it's just creating
+[00:20:38] newsletters cool so I come back over you
+[00:20:40] can see creating newsletter News Review
+[00:20:43] so we need the news review awesome
+[00:20:46] perfect and then you're going to see
+[00:20:47] this right you're going to see URL
+[00:20:49] oneliner summary and Status so
+[00:20:53] look what I'm going to do is I'm going
+[00:20:55] to delete the I'm going to show you how
+[00:20:56] you build these okay so you're going to
+[00:20:57] right click you going to edit field
+[00:20:59] you're going to typee in url and then
+[00:21:01] you're going to type in here URL that's
+[00:21:05] number one and then we click okay then
+[00:21:07] we click on the second guy and if it's
+[00:21:08] not there you can right click insert
+[00:21:12] right if there's no field there you need
+[00:21:14] to create a new field we edit field we
+[00:21:16] type in one liner up here and we type in
+[00:21:19] long text and let's enable Rich
+[00:21:22] formatting and then click save and then
+[00:21:25] we come over repeat the process again we
+[00:21:27] click on summary you won't see summary
+[00:21:29] you'll see some bare Fields but this is
+[00:21:31] how you do it you D summary long text en
+[00:21:35] Rich formatting click save and then you
+[00:21:37] got status so for this one you're going
+[00:21:38] to right click edit field or insert
+[00:21:40] field for example I create a new one for
+[00:21:42] the sake of this look I come over here I
+[00:21:44] type in status I come down I type in
+[00:21:50] status I come down I type
+[00:21:53] in single select and basically add my
+[00:21:56] options so the options I want to add is
+[00:21:58] let's just say like approval and let's
+[00:22:02] change the call to this guy and then
+[00:22:05] deny like this and change his color to
+[00:22:08] red and then we say CL Cay field status
+[00:22:12] one okay cool so basically what that
+[00:22:14] means is that like I can click on this
+[00:22:16] and I can say great do I approve do I
+[00:22:18] deny and then that will know if the
+[00:22:20] things happened or not okay so that's
+[00:22:21] how you build up the status format and
+[00:22:23] the one that I've used I've used at a
+[00:22:24] newsletter or no thank you hey there
+[00:22:27] guys Jack from the future here at at
+[00:22:28] this point in the automation it got so
+[00:22:30] hot my camera decided to shut down so
+[00:22:32] for the rest of the video it's going to
+[00:22:33] be an audio tour with some screen
+[00:22:35] sharing I didn't want to delay the video
+[00:22:37] getting out so you can get jumped in
+[00:22:38] I'll see you in person in the next one
+[00:22:40] right let's jump straight back in so get
+[00:22:43] rid of this guy and then there's two
+[00:22:44] Fields you need to add at the end which
+[00:22:46] is created time and last modified time
+[00:22:49] and that just helps us understand create
+[00:22:51] time we need to know when a field was
+[00:22:52] created and last modified is it'll say
+[00:22:55] hey if you've got like a 100 fields in
+[00:22:56] this sheet like and let's just say we
+[00:22:58] approve 77 and 65 this will say hey look
+[00:23:01] 77 and 65 have just been approved and
+[00:23:04] that will tell on next automation where
+[00:23:06] it needs to look in this table so to do
+[00:23:08] that we add new field all we look for is
+[00:23:11] created time and select created time and
+[00:23:14] then call it create a time at the
+[00:23:17] top like
+[00:23:19] this sweet right perfect and then you're
+[00:23:23] going to add a new field I'm deleting
+[00:23:25] this as I go cuz I already pre-built
+[00:23:27] these but for you I'm just showing you
+[00:23:28] how you do the process so again we're
+[00:23:31] going to date sorry
+[00:23:33] last modified time click on the field
+[00:23:37] last modifyed time will be there we
+[00:23:38] click on it and then put on create field
+[00:23:41] awesome and then whenever we edit a
+[00:23:43] field that will update with the latest
+[00:23:45] time and then we click delete and now
+[00:23:47] we've created our table and that's all
+[00:23:49] you ever need to do now in this in this
+[00:23:52] basically in this entire air table
+[00:23:53] that's the only thing you're ever going
+[00:23:54] to need to do so we've created that
+[00:23:56] right we come back over and what you'll
+[00:23:58] know
+[00:23:59] notices you may need to refresh this if
+[00:24:01] you've changed like the tables and stuff
+[00:24:02] and it'll bring through the new headings
+[00:24:03] for you and the really cool thing about
+[00:24:05] air table guys is it will show you every
+[00:24:07] column look URL oneliner summary status
+[00:24:10] URL oneliner summary status cool that's
+[00:24:13] what I like to see so the URL what do we
+[00:24:15] want well let's grab the URL from the
+[00:24:19] article here and that's just in case in
+[00:24:21] case I want to read it maybe I want to
+[00:24:22] read it maybe we want to have a look and
+[00:24:24] then we've got oneliner so we come over
+[00:24:26] to oneliner and we click result and then
+[00:24:28] we want the summary so come over to
+[00:24:30] overview and I click result and then
+[00:24:33] status we don't need to worry about that
+[00:24:34] until next part of the Automation and
+[00:24:36] then we click okay and then we're going
+[00:24:37] to click this Auto align button down
+[00:24:39] here to make it nice and pretty and then
+[00:24:40] guys we're going to run through the
+[00:24:42] entire automation so let's run it once
+[00:24:43] what's going to happen RSS is going to
+[00:24:45] find our article we've grabbed the file
+[00:24:47] text pass has turned it from that Goble
+[00:24:49] theg HTML into the queen English which
+[00:24:51] we' love to see oneliner agents made the
+[00:24:53] oneliner explainer the overview agent is
+[00:24:56] now creating a cool beautiful overview
+[00:24:58] us to read and enjoy and when that's
+[00:25:00] done it will go to air table and by the
+[00:25:02] way if it looks like I got a black eye
+[00:25:03] it's cuz I caught a straight elbow in
+[00:25:05] Jiu-Jitsu the other day like I literally
+[00:25:07] woke up two days later like nothing
+[00:25:08] going on and I was like oh my gosh D my
+[00:25:10] eyes like black it was like so rarely
+[00:25:12] ever happen so I was like just in case
+[00:25:13] you're wondering I'm not like walking
+[00:25:15] into doors or something so I want to set
+[00:25:17] the record straight on that for the
+[00:25:19] conspiratorially minded viewers out
+[00:25:21] there awesome so that's correct guys we
+[00:25:23] come out over here and we should see it
+[00:25:25] right perfect I mean that's awesome
+[00:25:27] right it's literally just all come in
+[00:25:29] automatically pales peners AI conference
+[00:25:33] ignites controversy there's our summary
+[00:25:35] there's the article if we want to go and
+[00:25:37] check it out impacting significance
+[00:25:39] impacting significance awesome and guys
+[00:25:42] you just completed the first part of the
+[00:25:44] utation I mean think about what you've
+[00:25:45] done right you've got literally news the
+[00:25:48] second it drops you've grabbed it
+[00:25:50] automatically you've ran it through this
+[00:25:52] cool stuff and you just got an approval
+[00:25:53] table and all you ever really need to do
+[00:25:55] for this plation is just say yeah sounds
+[00:25:57] all right or no I'm okay and that's it
+[00:26:00] we're going to open up a new Automation
+[00:26:03] and of course we're going to need to
+[00:26:03] name it right so let's come back over
+[00:26:04] here to get the
+[00:26:06] base cool and we're going to name this
+[00:26:08] one newsletter two out of two so what we
+[00:26:10] need to do here guys is we need
+[00:26:12] something to watch the table that says
+[00:26:14] look I want you to watch this air table
+[00:26:17] and tell me the second that this status
+[00:26:21] is approved I don't care about if it
+[00:26:22] could be 100 articles in here we don't
+[00:26:24] care in fact I'm going to run a few
+[00:26:25] articles here just to pop it out let's
+[00:26:27] just show some love just get five coming
+[00:26:29] out there that but let's just run this
+[00:26:30] get five coming out there but I could
+[00:26:32] have 100 in there but maybe for my
+[00:26:33] newsletter I just want to Cher pick the
+[00:26:35] best four every day and this is why I
+[00:26:37] built it this way cuz I I absolutely
+[00:26:39] want it to be the best quality possible
+[00:26:41] and I genuinely believe to do that we
+[00:26:42] need some selectivity because we have we
+[00:26:45] can use AI about what's good and viral
+[00:26:47] but maybe you want a little bit of
+[00:26:48] control and you can do this aate if you
+[00:26:49] want to but I bought this one to give
+[00:26:51] you a little bit of control okay so we
+[00:26:54] may have loads of them but we only want
+[00:26:55] the ones that we approve if we're doing
+[00:26:57] it in this way so how do we do that well
+[00:27:00] we start with you might have guessed air
+[00:27:02] table okay cuz that's how we ended the
+[00:27:04] last Automation and all I want it to do
+[00:27:07] is watch
+[00:27:09] records amazing now look at this comes
+[00:27:11] over here to the left we select the base
+[00:27:13] which is the AI automation newsletter we
+[00:27:15] canum the table we're going to click on
+[00:27:17] news review is that what we called it
+[00:27:19] over here it is right news review and
+[00:27:21] look at this guys already already like
+[00:27:22] bam B bam let's throw any other ones in
+[00:27:23] there that's what I like to see we on
+[00:27:25] news review and then we click on trigger
+[00:27:27] field so click on trigger field and what
+[00:27:29] we want last modified time so in other
+[00:27:32] words we've got a billion in here I'm
+[00:27:33] only interested in the one that was
+[00:27:35] modified last if I modify five last five
+[00:27:37] last will pop up that's cool then the
+[00:27:39] label field just looking for status and
+[00:27:41] then we click okay awesome and then
+[00:27:44] we've got to build out now all these
+[00:27:45] really cool modules and by the way one
+[00:27:47] of the things I love about the way that
+[00:27:49] um The Rundown AI have done it is it
+[00:27:50] gives you like small data more data and
+[00:27:52] it's really digestible but of course
+[00:27:54] this is just an example build it however
+[00:27:56] you like so what need first we need the
+[00:27:59] bullet point assistant okay cool well
+[00:28:02] how do we build that well you remember
+[00:28:04] from last time when I click on message
+[00:28:07] an
+[00:28:09] assistant okay cool we're here so what
+[00:28:12] is the what is the bullet point guy
+[00:28:14] about right well let's go find out sh
+[00:28:15] we've got the overview agent here we've
+[00:28:17] been through him we need the bullet
+[00:28:19] point agent so what does this guy do
+[00:28:20] well look he is a helpful bullet point
+[00:28:22] creation agent an expert in taking an
+[00:28:25] article summary and extracting four key
+[00:28:27] Sal iant points he speaks in full senses
+[00:28:30] and makes points the reason why he makes
+[00:28:32] points is in there if you knew the
+[00:28:34] building process for this you would
+[00:28:35] chuckle so I would like you to create
+[00:28:38] four bullet points excuse me well type
+[00:28:39] them that oh my goodness man how much
+[00:28:41] better is it going to be now I'd like
+[00:28:42] you to create four bullet points with no
+[00:28:44] additional text you'll receive a summary
+[00:28:46] create four bullet points maximum of 17
+[00:28:48] words per bullet point and look at this
+[00:28:50] guys I give it examples like this is
+[00:28:52] good here's another example here's
+[00:28:53] another example and here's an example of
+[00:28:55] the kind of UT that you would receive we
+[00:28:58] copy all of that we add it to uh again
+[00:29:01] platform to open.com we create a new bot
+[00:29:05] and then once we do that we'll be able
+[00:29:06] to find that assistant over here and
+[00:29:08] it's the exact same process we used in
+[00:29:10] the first part of it now you might be
+[00:29:11] wondering how do we get the message
+[00:29:13] there so let me start by adding in the
+[00:29:14] assistant so I've added the overview
+[00:29:16] agent in okay but where's the message
+[00:29:18] right well the message is just going to
+[00:29:20] be the summary and look it already knows
+[00:29:23] what it is so it'll pull through the
+[00:29:24] summary for us so I click on summary
+[00:29:26] that's Ace then we click okay and we're
+[00:29:28] going to rename this one right call this
+[00:29:30] guy what would we call what I call the
+[00:29:31] last guy what did I call him I called
+[00:29:33] him bullet point so let me just copy
+[00:29:34] that because you know what it saves us
+[00:29:36] like a couple seconds so it's it's
+[00:29:38] absolutely worth it all right cool so we
+[00:29:40] had him in there bullet point guy love
+[00:29:42] it you know I will say bracket guy got a
+[00:29:44] lot of hate last week and you know I'm
+[00:29:45] not happy about it man bracket guy
+[00:29:47] bracket by was unfairly you know
+[00:29:49] targeted so I'm hoping bullet point guy
+[00:29:52] will not be as harassed in the comment
+[00:29:54] section as bracket guy was now this guy
+[00:29:56] what do we want next well we've got our
+[00:29:58] four bullet points so this guy's going
+[00:29:59] to C our four bullet points the next
+[00:30:01] thing that's going to happen is a key
+[00:30:03] takeaway which is like the TLD drr of
+[00:30:06] the whole situation right so we need to
+[00:30:07] understand what the tldr is and just
+[00:30:09] pulling this up for reference we've got
+[00:30:10] the title there's an image there's the
+[00:30:14] bullet points and there's a tldr now the
+[00:30:17] tldr is what these guys refer to is the
+[00:30:19] rundown which is if you're just in a
+[00:30:20] rush like just give it me in two
+[00:30:22] sentences is essentially what we're
+[00:30:23] saying so we need to build the tldr
+[00:30:26] agent right so there's a bullet point
+[00:30:28] there's our key takeaway agent here
+[00:30:30] awesome okay helpful analytical expert
+[00:30:32] will explain the significance impact of
+[00:30:33] the data he'll use a maximum of 50 words
+[00:30:36] he'll receive lots of bullet points do
+[00:30:37] not write anything else any articles and
+[00:30:39] we give it an example here okay so look
+[00:30:41] why this matters example two example
+[00:30:44] three cool copy all this we head over to
+[00:30:46] platform. open.com and then we create
+[00:30:49] the key takeaway agent and then we come
+[00:30:51] back over here and then we select him
+[00:30:53] cool and then we' selected the key
+[00:30:54] takeway agent and then we click okay so
+[00:30:56] we've got the bullet points we got the
+[00:30:57] key takeaways now we need to add in the
+[00:31:00] different data points right so for this
+[00:31:02] for the key takeaway we click on this
+[00:31:03] guy we've got the summary but we also
+[00:31:05] want the output from the bullet point
+[00:31:08] awesome then we click okay sweet now
+[00:31:11] what's the next one we need to add in
+[00:31:12] come over here let's take a look the TL
+[00:31:14] DR bar we love this guy this guy is
+[00:31:17] great so what do we do we come back over
+[00:31:20] we duplicate we clone in we bring him
+[00:31:22] over here we're going to
+[00:31:24] rename TL Goodness Me Oh my goodness
+[00:31:29] t l d
+[00:31:31] r if I can spell TLD drr properly of
+[00:31:34] course which apparently I am unable to
+[00:31:36] do and I think shrugs Emoji is good for
+[00:31:39] this right let's give it a
+[00:31:41] little shrug awesome so what is it with
+[00:31:44] the tldr bot then tldr bot basically 30
+[00:31:47] words maximum doesn't write anything
+[00:31:50] just gives us the bottom line of what it
+[00:31:52] is and again we've given examples so
+[00:31:54] that we can actually just for the users
+[00:31:55] just want to Prov they can just grab
+[00:31:56] that go and then they're ready to rock
+[00:31:58] and roll awesome so then we do the same
+[00:32:00] thing we basically copy all that text or
+[00:32:02] write your own TDR and then we just add
+[00:32:04] it to the agent and then we just import
+[00:32:06] the agent at platform. open.com and we
+[00:32:08] select the tldr bar cool and then we
+[00:32:10] click okay sweet and this guy's lost his
+[00:32:12] emergy oh my goodness what is going on
+[00:32:13] here there you go that's better all
+[00:32:15] right of course we've got the bullet
+[00:32:16] points we got the key takeaway we got
+[00:32:17] the tldr and again because we duplicated
+[00:32:20] it we just got the same inputs as
+[00:32:22] exactly before so come back over now to
+[00:32:24] see what we do and you can see this
+[00:32:25] exactly the same we had as last time
+[00:32:28] then we need a title but so the title
+[00:32:30] but itself essentially is going to
+[00:32:33] summarize it in a sentence so for
+[00:32:35] example if I come over here what the
+[00:32:37] title B does is he creates this at the
+[00:32:39] top an emoji and just a couple of
+[00:32:41] sentences explaining what it does so
+[00:32:43] look the title B is a really simple but
+[00:32:45] quite powerful agent so you're a helpful
+[00:32:47] title B that summarizes the essence of a
+[00:32:49] text you're given in eight words or yes
+[00:32:51] you'll receive a summary of your article
+[00:32:53] and key bullet points use a maximum of
+[00:32:54] eight words don't write anything else
+[00:32:56] explainers just give us is the out part
+[00:32:58] and what I found really well guys what
+[00:33:00] prompting tip for you is give it good
+[00:33:02] examples give it bad examples sometimes
+[00:33:04] if you only give it good examples it
+[00:33:06] won't quite fully capture the essence of
+[00:33:08] what you want so you see how here I've
+[00:33:10] given it like Nvidia share prices
+[00:33:11] Skyrocket El mus purchase Twitter and
+[00:33:13] there Emoji at every end I've then taken
+[00:33:16] like the classic like AI mistakes which
+[00:33:18] is Emoji at the beginning and I don't
+[00:33:19] know why it does that we need we we to
+[00:33:21] shake it out of them but I've included
+[00:33:22] this anyway Elon Musk purchase a Twitter
+[00:33:24] 8 billion deal multiple emojis we don't
+[00:33:26] want that and no Emojis so beginning
+[00:33:28] multiple and no we copy all of this we
+[00:33:31] do the exact same thing platform.
+[00:33:33] open.com we create it then we come back
+[00:33:36] over and then we need to create the line
+[00:33:38] bot right so what did we call the last
+[00:33:40] one we called this guy tile bot so let
+[00:33:41] me rename it let's grab title bar come
+[00:33:44] back over here click in here click okay
+[00:33:47] cool and then basically that's that part
+[00:33:49] done so if I come back over and double
+[00:33:51] do little H check on title but what did
+[00:33:53] we give it as an input it's exact same
+[00:33:55] thing we're giving it the summary plus
+[00:33:57] that key detail there and we sorted so
+[00:33:59] we come back over now to our automation
+[00:34:01] which is awesome the next thing we want
+[00:34:03] to do is the mid Journey bot so again
+[00:34:07] let's come here let's clone it let's
+[00:34:09] come over here let's remove this little
+[00:34:11] gray thing awesome and then we're going
+[00:34:12] to call this one mid Journey bot so
+[00:34:14] let's rename it there you go awesome
+[00:34:17] cool perfect now the mid Journey bot
+[00:34:19] let's go check this out cuz this one's
+[00:34:20] really fascinating so look you're going
+[00:34:23] to receive text or data about a topical
+[00:34:25] post I want you to analyze the text
+[00:34:27] identify the elements for subject action
+[00:34:29] setting additional details use
+[00:34:31] information extracted from the text to
+[00:34:33] fill in the following prompt template
+[00:34:35] now if you've ever use mid Journey you
+[00:34:36] know it's so temperamental you put one
+[00:34:39] combo one hash out of place and boy
+[00:34:41] you're in for a world of pain I tell you
+[00:34:43] so this formula I found just works Tre
+[00:34:46] it's just so good so subject action
+[00:34:48] setting additional details the image
+[00:34:50] must be natural realistic in 2018 Styles
+[00:34:52] raw AK Tak on iPhone I like that because
+[00:34:55] kind of burm it's there but guys you
+[00:34:56] know you can maybe you don't want an
+[00:34:58] iPhone maybe you want it to be taken on
+[00:34:59] an Android phone or maybe you want it to
+[00:35:00] be in 2020 I don't know you can like
+[00:35:02] change this you can change aspect ratios
+[00:35:05] however you want I've got a full guide
+[00:35:07] on all the different aspect ratios I
+[00:35:09] think actually I have that in the group
+[00:35:11] that I built that quite recently so if I
+[00:35:13] come through classroom I just want to
+[00:35:15] check this because I built out quite a
+[00:35:17] few different ideas for that so if I
+[00:35:19] look at my mid Journey prom blueprint
+[00:35:21] here the aspect ratios yeah you see
+[00:35:23] we've got all the key ones that we need
+[00:35:25] here for example it's got a really good
+[00:35:26] guide on the so basically you know take
+[00:35:28] a screenshot of this or if you're in
+[00:35:29] community you can just grab it but
+[00:35:30] essentially it's got all the ratios that
+[00:35:31] we need I think the ones that we've got
+[00:35:33] work really well that's why I'm using
+[00:35:35] the the 16x9 in this particular case so
+[00:35:38] cool we come back over now tobot the
+[00:35:41] subject should be the main focus of the
+[00:35:43] image like a person object creature or
+[00:35:45] concept be really specific the action
+[00:35:47] describe what they're doing use
+[00:35:48] descriptive verbs the setting should
+[00:35:50] paint a vivid picture of the location
+[00:35:52] the background the environment then
+[00:35:53] additional details and obviously at the
+[00:35:55] end we believe me like if you you knew
+[00:35:58] how many time you have to specify this
+[00:36:00] always end with the exact phrase blah
+[00:36:02] blah blah and that just means that every
+[00:36:03] image you ever create with mid journey
+[00:36:06] is going to be consistent if you're
+[00:36:07] doing a newsletter consistency is key
+[00:36:09] and one of the things I've not touched
+[00:36:10] on this video guys is how monetizable
+[00:36:12] newsletters are they're like literally
+[00:36:14] insane so I'm hoping that you can take
+[00:36:15] all this stuff for free and just run
+[00:36:17] with it and make lots of money and just
+[00:36:18] tell me down below how how many dollar
+[00:36:20] signs you made from this cool
+[00:36:21] automation ensure the final prompt is
+[00:36:23] well formatted includes over necessary
+[00:36:25] components avoid incomplete or polyu PRS
+[00:36:28] output the complete ma Journey prompt
+[00:36:30] ready for use I give it an example input
+[00:36:32] text and I've given it an example output
+[00:36:35] text you might guess what we do next we
+[00:36:37] copy all of it we head over to platform.
+[00:36:39] open ey.com we insert it we create the
+[00:36:41] agent and then we come back over to our
+[00:36:44] Automation and then we just select the
+[00:36:45] one that we need and then on this one
+[00:36:47] guys I just want you to click here and I
+[00:36:48] just want you to select the result just
+[00:36:50] to keep the input slightly less for the
+[00:36:52] mid Journey bar and of course we need to
+[00:36:54] select the mid Journey one right so we
+[00:36:55] come here we've selected him then we
+[00:36:58] click okay and guys this is looking
+[00:37:00] almost complete so the only thing we
+[00:37:02] need to do now is just add it to our
+[00:37:05] articles this guy cool so this one I've
+[00:37:07] called AI is new I mean just the images
+[00:37:09] guys the image quality is just
+[00:37:10] phenomenal in this so I'm looking for AI
+[00:37:11] newsletter so what do we do we come back
+[00:37:12] over we come here click on this put on
+[00:37:18] google
+[00:37:19] doc Google Docs and I'm going to put
+[00:37:22] insert a paragraph into a document okay
+[00:37:26] we let the document ID so the order you
+[00:37:28] want to go for guys for the Google Doc
+[00:37:30] is we start off with number five which
+[00:37:32] is basically the title bar that we got
+[00:37:33] here then we want the mid Journey prompt
+[00:37:36] here which is perfect so we do those
+[00:37:37] guys out the way after that we want mat
+[00:37:39] tldr which is like explained to me
+[00:37:41] really briefly if I don't have the time
+[00:37:43] we close this guy down once we've done
+[00:37:44] that we've got two left we want to go
+[00:37:46] for the bullet points so explain it in
+[00:37:47] four bullet points for me and then
+[00:37:49] finally the key takeaway at the end then
+[00:37:51] we click okay now finally just set up
+[00:37:53] this one filter and you're ready to go
+[00:37:55] you come over you right click here C on
+[00:37:57] set up filter
+[00:37:58] we call this one approval the condition
+[00:38:02] is that
+[00:38:03] status
+[00:38:05] contains let's come down and have a
+[00:38:09] look contains case insensitive or what
+[00:38:12] did I call it over here let's have a
+[00:38:14] look what's my status add to newsletter
+[00:38:17] cool so I come back over right add
+[00:38:20] to news letter and then we click okay so
+[00:38:24] check this out right if I click run once
+[00:38:26] nothing will come through because I
+[00:38:28] haven't approved anything you see it's
+[00:38:29] pulled up everything but nothing's comes
+[00:38:31] through I haven't approved it so let's R
+[00:38:34] this automation again right from the top
+[00:38:35] I'm going to click here and going to put
+[00:38:37] maximum entry is one I click okay I
+[00:38:40] click run ones there are s items grabbed
+[00:38:42] it HTTP is done his job text passer then
+[00:38:45] we're going to create our on liner we're
+[00:38:46] going to get the overview and then it's
+[00:38:48] going to be added over here to our
+[00:38:50] automation newsletter we've got six
+[00:38:52] things already this works properly we'll
+[00:38:54] see a number seven appear very shortly
+[00:38:56] the overview is been creating which is
+[00:38:58] awesome we in the background well well
+[00:39:00] it quietly does its work and the thing
+[00:39:02] about newsletter is like you can
+[00:39:03] automate it but you really want like the
+[00:39:05] best quality possible and I think this
+[00:39:07] really hits in my opinion you know a
+[00:39:10] tool tool kit that you can just take you
+[00:39:12] can apply it to any Niche you doing you
+[00:39:13] can customize the input you can
+[00:39:15] customize different bits and pieces the
+[00:39:17] images and really like I feel a thousand
+[00:39:19] people could watch this video and
+[00:39:21] correct thousand different things that's
+[00:39:22] what's really exciting to me and that's
+[00:39:24] why I really love sharing this stuff
+[00:39:25] with you guys look and we should see
+[00:39:26] number seven up any moment now and there
+[00:39:29] we go look there you go it's pulled it
+[00:39:31] up perfect we love it let's say we look
+[00:39:33] at it and we think you know what I like
+[00:39:35] it add that to the newsletter please I
+[00:39:37] come here I click run once it's picked
+[00:39:40] up on it it's picked up on the fact it
+[00:39:41] was an approval the bullet point guys
+[00:39:43] making his four bullet points he's
+[00:39:45] working but bullet point guy he takes
+[00:39:47] his time but his quality is excellent
+[00:39:49] and we really appreciate him for it
+[00:39:51] which is a we got the key takeaways we
+[00:39:53] need to know exactly what's going on
+[00:39:54] what the bottom line is and everything
+[00:39:55] else in the next timation if you want to
+[00:39:58] see that what we're going to try and
+[00:40:00] look at doing is add all this to the
+[00:40:02] HTML we're going to hardcode it into the
+[00:40:04] HTML so literally there's a million ways
+[00:40:06] that we can do this till the bot's
+[00:40:08] complete title bot's working his magic
+[00:40:10] in the background the mid Journey bot's
+[00:40:11] cting a really cool prompt for us and
+[00:40:13] once that's done guys that will go
+[00:40:15] straight into our Google document that
+[00:40:17] we signed up and
+[00:40:18] connected and now it's done it's
+[00:40:20] complete so let's find our Google doc
+[00:40:21] when it lands in guys the format is not
+[00:40:23] great but you can change that pretty
+[00:40:24] quickly and there's some stuff that we
+[00:40:25] can do there but just to get you up and
+[00:40:27] running you can see so I bought this
+[00:40:28] over I just realized I added like the
+[00:40:30] wrong button so I like I used I didn't
+[00:40:32] use the title but cuz I cloned it so
+[00:40:35] that's a really good one to watch out
+[00:40:36] for we've got this we got the tldr we've
+[00:40:38] got the text here so all we would do
+[00:40:40] guys is copy that we'd come over to Mid
+[00:40:42] journey and then you can grab an images
+[00:40:43] from mid Journey if you want so just
+[00:40:44] come here let's copy that let's go back
+[00:40:46] over now enter that in and it's just a
+[00:40:49] couple seconds dialogue and you've got
+[00:40:50] all this stuff ready for your newslet so
+[00:40:53] guys I hope you find that interesting
+[00:40:54] it's been a pleasure chilling out with
+[00:40:56] you on my YouTube video drinking the
+[00:40:57] coffee in any case guys have a wonderful
+[00:41:00] wonderful week and I'll see you in the
+[00:41:02] next video

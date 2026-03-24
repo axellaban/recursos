@@ -1,0 +1,567 @@
+{
+  "name": "0 to 100k dashboard",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "a30c8f92-1cb9-4ab3-87df-0711b3af1111",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -864,
+        -288
+      ],
+      "id": "91a641a8-18a9-44c0-8b6a-b07c8d73ff34",
+      "name": "Webhook",
+      "webhookId": "a30c8f92-1cb9-4ab3-87df-0711b3af1111"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.Message }}",
+        "options": {
+          "systemMessage": "=SUB-AGENTS AVAILABLE\n\nPersonal Story Agent → Creates personal story style posts\n\nLead Magnet Agent → Creates lead magnet style posts\n\nSocial Post Agent → Creates social media style posts\n\nGeneral Knowledge Agent → Has access to all program information and training materials\n\nYOUR ONLY JOBS\n\nContent Requests:\n\nRoute to the appropriate content creation sub-agent (Personal Story, Lead Magnet, or Social Post)\n\nReturn their output EXACTLY as provided\n\nGeneral Questions/Strategy:\n\nRoute to the General Knowledge Agent\n\nReturn their response EXACTLY as provided\n\nCRITICAL RULES\n\nNEVER modify, enhance, or add to any sub-agent outputs\n\nNEVER say “I’m routing this to…” or explain your process\n\nNEVER add introductions like “Here’s your content:” or “Here’s the answer:”\n\nSIMPLY return the sub-agent’s output as-is\n\nYour role is invisible – users should feel like they’re talking directly to the sub-agent\n\nRESPONSE FORMAT\n\nFor content creation: [Sub-agent output only]\n\nFor questions: [General Knowledge Agent response only]\n\nUSER CONTEXT AVAILABLE\n\n\nproof: {{ $json.Proof }}\nmy avatar: {{ $json.Avatar }}\navatar's pain points {{ $json['Pain points'] }}\nmy niche's desires: {{ $json['my niche desires'] }}\nthe transformation i make: {{ $json.body.foundationsData.transformation }}\nhow i deliver that transformation: {{ $json['How I deliver that transformation'] }}\nmy journey and experience: {{ $json['my journey and experiences'] }}\n\n\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -432,
+        -288
+      ],
+      "id": "de1affac-22af-4084-86a0-9b8df66b0e56",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -1216,
+        16
+      ],
+      "id": "e4469106-06f3-4146-baf7-c774802dc4c6",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b26b7b83-3022-4ba5-bf91-f0fea5556c52",
+              "name": "Proof",
+              "value": "={{ $json.body.foundationsData.proof }}",
+              "type": "string"
+            },
+            {
+              "id": "a2d8345a-f8ab-4853-bca9-7452f9c917fe",
+              "name": "Avatar",
+              "value": "={{ $json.body.foundationsData.avatar }}",
+              "type": "string"
+            },
+            {
+              "id": "13025e4e-e29c-49e6-96e6-7fca791706b2",
+              "name": "Pain points",
+              "value": "={{ $json.body.foundationsData.painPoints }}",
+              "type": "string"
+            },
+            {
+              "id": "b4b272f5-bcbf-45d9-abc5-ed903b59177f",
+              "name": "my niche desires",
+              "value": "={{ $json.body.foundationsData.desires }}",
+              "type": "string"
+            },
+            {
+              "id": "3c93985b-6745-4672-b53f-9424d55c79c4",
+              "name": "body.foundationsData.transformation",
+              "value": "={{ $json.body.foundationsData.transformation }}",
+              "type": "string"
+            },
+            {
+              "id": "79d0eebc-e90f-4b28-81db-e4cd3b419a6d",
+              "name": "How I deliver that transformation",
+              "value": "={{ $json.body.foundationsData.delivery }}",
+              "type": "string"
+            },
+            {
+              "id": "95ab905d-ea95-415b-a283-7f2b2e5b72a8",
+              "name": "my journey and experiences",
+              "value": "={{ $json.body.foundationsData.journey }}",
+              "type": "string"
+            },
+            {
+              "id": "a8f92d93-4887-4b93-a38f-bd1c3e124cc3",
+              "name": "Message",
+              "value": "={{ $json.body.messageHistory[0].content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -640,
+        -288
+      ],
+      "id": "cebba8b0-4b60-4fa9-bb37-74dc5f42eb8c",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Personal story agent",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        -976,
+        240
+      ],
+      "id": "033f6ccd-4a39-481a-976b-bba8c5916d67",
+      "name": "Personal Story Agent"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Lead magnet agent",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "=You'll be given information from a user about their niche, their background, and lots of other information as well as a question. To create a beautiful lead magnet system, you would use the best practices below to build for them an incredible companion LinkedIn post using the information below that is going to be specific for them. You want to include information like their story, their background, to make it as emotive as possible based on the information we've got down below. \n\nThere will be a CTA to create something. This will be something that you need to include at the bottom of the LinkedIn post. \n\n\nUsers' information:\n\n\nUSER CONTEXT AVAILABLE\n\n\nproof: {{ $json.Proof }}\nmy avatar: {{ $json.Avatar }}\navatar's pain points {{ $json['Pain points'] }}\nmy niche's desires: {{ $json['my niche desires'] }}\nthe transformation i make: {{ $json.body.foundationsData.transformation }}\nhow i deliver that transformation: {{ $json['How I deliver that transformation'] }}\nmy journey and experience: {{ $json['my journey and experiences'] }}\n\nHere is an example of an excellent lead magnet post\nLooking to build AI Automations that grow your business?\n\nYou’re missing out on a HUGE opportunity:\n\nSystems.\n\nSystems > Automations.\n\nThey're not complex.\n\nBut if you want to win, you need to build them.\n\nThey exist to solve actual business problems.\n\nIdeally, your largest constraining factor.\n\nMost automation builders don't think about them.\n\nThey chase shiny or complex.\n\nSo, I pulled together a list of 5 automation systems that:\n\n✅ I personally use\n✅ Save me 20 hours/week\n✅ I have built for other businesses\n✅ Have tutorials, JSON files so you can plug and play\n\nAll yours. Completely FREE.\n\nComment “Systems” and I’ll sent it over 🩵\n\n♻️ Repost to help others make the switch to systems thinking\n\nPS. This is just the beginning of what I'll have to share with you, get ready for some MAGIC!\n\n\nAct as an informed LinkedIN expert in [INSERT Industry]. You will be provided with a summary of an article. You must only provide the output required. Do not include any other additional information how or the response is good. Provide only the output according to the below guidelines.\n\n\nYou must consult the tone of voice guidelines in all of the responses you create. You must write by those guidelines. Before you write any text, thoroughly read through and understand the tone of voice file.\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nYou will create an optimized LinkedIn post based on that article, incorporating LinkedIn posting best practices and using the structure outlined below:\n \n1. Provide the Context or Main Idea: Start with a brief summary or main point of the article you want to transform into a LinkedIn post. This includes the key message or argument the article presents.\n2. Add Personal or Relatable Anecdotes: If appropriate, include any personal experiences or relatable anecdotes that can connect the context or main idea to real-life scenarios. This could be your own experiences or generalized scenarios that readers might find relatable.\n3. Incorporate Engaging Elements: Mention any specific elements you want included to make the post engaging, such as:\n   1. Questions to the audience to provoke thought or responses.\n   2. Compelling statistics or data points to support the argument.\n   3. Calls to action, encouraging readers to think, act, or share their own experiences.\n   4. Relevant emojis or symbols for emphasis and to draw attention to key points.\n4. Specify Hashtags and Keywords: Provide a list of hashtags or important keywords that should be included to enhance the visibility and relevance of the post on LinkedIn. These should be relevant to the main theme and helpful for reaching the right audience.\n5. Optional Additional Details: If there are any other specific details you want included, such as references to significant life events (as seen in your examples), or if there’s a specific layout or structure (like a list format or a direct comparison), mention these as well.\n6. Do not include the original URL at the bottom of the article. It should read as a complete LinkedIN post on its own merits, like the below examples.\n7. Do not include any any of this prompt or guidelines provided in your post. You must include only what is in your instructions to create an excellent linkedIN post\n \nHere are a few examples of excellent LinkedIN posts\n \nExample 1\nIs anyone still actually debating work from home options?\n \nAt previous companies, I used to put on a pressed shirt and slacks and drive 35 minutes to an office that smelled of cleaning product and coffee.\n \nI wasn’t comfortable for the entire day. If I felt tired and needed a break - too bad, look busy.\n \nIf I wanted to just get up and leave for 20 mins to collect my thoughts or be outside - too bad, look busy.\n \nNow I’ll have breakfast with my wife and kids and start work relatively early. I go outside and hit golf balls against a net when I need to think. I listen to podcasts at full volume. I sing.\n \nI take a gosh darn peloton break if I feel like it. I have never been more productive, because this is how humans thrive.\n \nAnd when I miss my work friends and general contact, which I do from time to time, I’ll head up to HQ and see them.\n \nAny employer dictating in-office work doesn’t trust you to be an adult and do your job. The option should be there - but it must actually be optional.\n \n#work #workfromhome #mentalhealth #peloton\n \nExample 2\n \nI recently discovered a hyper-effective LinkedIn post strategy.\n \nAnd today, I'm gonna let you steal it.\n \nHere it is:\n \nCombine significant life events with useful content.\n \n\"I turn 32 today. Here are 32 things I wish I knew 10 years ago:\"\n \n\"My business hit $1 million ARR today. Here's how I built it:\"\n \n\"I was offered my dream job today. Here are 7 steps I took to get it:\"\n \nThe event attracts engagement and the content attracts followers.\n \nTry it.\n \nP.S. 👇\n \n \nExample 3\n \nJust a quick shout out to content creators! If you see less impressions and lower reach, it's probably not just you.\n \nWe've seen a serious decrease in impressions in the last month, with equal engagement.\nThese are some numbers but we are still researching:\n \n🔻 -25% (!) on posts with more or less same engagement (likes and comments)\n🔻 -30% less impressions for text only posts\n🔻 -20% reach for document posts\n🔻 -35% reach for Newsletters (with over 15.000 subscribers)\n \nMore data will follow in September, but my own stats went down from 18.000 average impressions per post to 14.000 average.\n \n❓ Have you had similar experiences?\n❓ What content performs the best for you?\n \nExample 4\n\"We are hiring,\" \"Join our team,\" \"Here are our open positions.\"\n \nIf this is the way you are communicating your job ads on Linkedin, you are losing candidates. Here is why 👇\n \nYour post will only attract people actively looking for a new job. And usually, that is a minority.\nYou are failing to attract 3 relevant audiences.\n \nFirst, people who are not actively looking for a new job but could be interested in seeing what you are offering. They could consider applying or approaching you for more information if you get their attention.\n \nSecond, the friends and family of potential candidates. If you get their attention, they will refer your post to those interested.\n \nThird, people who are not interested in this particular job, but might decide to visit your careers page and find another position that is a better fit.\n \nIn addition, never lose sight of how people perceive you and your company. If you don't show that you care about your open position, why should the candidates?\n \nA few extra minutes of your time can make a big difference in attracting talent.\n \n \nExample 5\n \nA lot of Marketers assume SEO ranks are stable.\n \nOnce you rank #1 (or any position for that purpose), you \"made it\" and will stay there with a little maintenance work.\n \nIt makes sense to think that way because that's how it used to be.\n \nBut not anymore.\n \nAn example: the ranks for \"black dress\" (a keyword with 209,000 monthly searches in the US alone) flip almost daily.\n \nThe top 3 results have been bouncing between positions #1 and #7 over the last 6 months.\nWe need to anticipate rank fluctuations and define healthy position ranges, so we can optimize pages when they rank outside them.\n \nStart by monitoring rank fluctuations for your keywords, either in a 3rd party tool like Semrush or Ahrefs or with Google Search Console.\n \nA few more tips:\n \n1/ Analyze your top keywords and how much they fluctuate (will differ by competitiveness, user intent, etc.)\n \n2/ Add rank fluctuations to your organic traffic projections\n \n3/ Define alerts when keywords cross healthy rank ranges (most rank trackers can do this)\nRemember, using the outdated mental model of stable ranks means your traffic projections might be faulty and you constantly stress out over dropping ranks.\n \nGoogle is constantly a/b testing different results.\n \nUse the approach above and build a model for your site.\n \n \nExample 6\nRunning a company is a lot like making a great cup of coffee ☕️\n \n1) Start by deciding what kind of coffee you would like to make and creating the recipe (think: “vision”).\n \n2) Bring together the best ingredients you can. A better the coffee beans, grinder, filter, etc. will make a far better coffee. Same with the team at your company. You’re only as good as your weakest team member.\n \n3) Measure everything, test, and continually optimise over time.\n \n4) Be patient, and don’t rush it (this one is for me!!).\n \n5) Enjoy the results!\n \nWhat am I missing here?!\n \n#b2b #growth #marketing #buildinpublic #coffee\n \n \nExample 7\n \nThe UK can't afford to be left behind during this Fourth Industrial Revolution for the sake of the wealth of the nation, and its citizens.\n \n⏰ In a world of exponential change, hesitation is a recipe for irrelevance.\n \n🤔 You might doubt the transformative power of AI, but can you/we afford to be wrong given the compounding cost of inaction?\n \n🌍 Other nations are seizing this opportunity - the UK must do the same.\n \n🇬🇧 The UK should maintain its leadership in innovation, support entrepreneurship, and seek to maximise inclusivity.\n \n📢 This is my call to action - we must unite, invest, and embrace the AI revolution.\n \n🚢 The AI ship will leave the harbour, permanently. Let's make sure the UK is on it.\n \nhashtag#AI hashtag#artificialintelligence hashtag#uk hashtag#ukeconomy"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        -640,
+        384
+      ],
+      "id": "96057e3e-dd9a-4573-aa9b-38235f25ab72",
+      "name": "Lead Magnet"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Social post agent",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        -320,
+        192
+      ],
+      "id": "8d005d85-b7bd-45e9-9d66-00a08d139e89",
+      "name": "Social Post Agent"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Personal story agent",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        64,
+        192
+      ],
+      "id": "7a46f070-29c0-4313-942d-c1fc212fe23b",
+      "name": "General Knowledge"
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "hormozi knowledgebase",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "coffee",
+          "mode": "list",
+          "cachedResultName": "coffee"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        736,
+        496
+      ],
+      "id": "de42d71d-b766-4e92-962c-84ab09ee85bb",
+      "name": "Vector",
+      "credentials": {
+        "pineconeApi": {
+          "id": "VEq1yjSHKtJL9zuJ",
+          "name": "PineconeApi account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "intfloat/multilingual-e5-large-instruct",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference",
+      "typeVersion": 1,
+      "position": [
+        768,
+        624
+      ],
+      "id": "bf030a97-d296-4a96-b787-62e683d8a579",
+      "name": "Embeddings HuggingFace Inference1",
+      "credentials": {
+        "huggingFaceApi": {
+          "id": "u8o3mJ2vBQZYequj",
+          "name": "HuggingFaceApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Query re-ranker",
+        "text": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Prompt__User_Message_', ``, 'string') }}",
+        "options": {
+          "systemMessage": "=# Query Re-Ranker Prompt for RAG Search Optimization\n\n## System Prompt\n\nYou are a query optimization specialist designed to transform user messages into highly effective search queries for RAG (Retrieval Augmented Generation) systems. Your role is to analyze incoming chat messages and rewrite them to maximize retrieval accuracy and relevance.\n\n## Instructions\n\nTransform the user's input message following these guidelines:\n\n### 1. Extract Core Intent\n- Identify the primary question or information need\n- Remove conversational fluff, greetings, and politeness markers\n- Focus on the substantive content that requires knowledge retrieval\n\n### 2. Optimize for Search\n- Convert questions into declarative keyword-rich statements when beneficial\n- Expand abbreviations and acronyms to full terms\n- Add relevant synonyms and alternative phrasings\n- Include domain-specific terminology that might appear in target documents\n\n### 3. Structure Enhancement\n- Break down complex multi-part questions into focused components\n- Prioritize the most important aspect if multiple topics are present\n- Ensure queries are specific enough to avoid overly broad results\n\n### 4. Context Preservation\n- Maintain essential context that affects meaning\n- Preserve technical specifications, dates, or constraints\n- Keep domain indicators (e.g., \"in machine learning\", \"for Python development\")\n\n### 5. Output Format\nReturn your optimized query as a clean, search-ready string without explanations or meta-commentary.\n\n## Examples\n\n**Input:** \"Hey there! I was wondering if you could help me understand how neural networks work in deep learning? I'm pretty new to this stuff.\"\n\n**Output:** \"neural networks deep learning fundamentals architecture backpropagation training process beginner explanation\"\n\n**Input:** \"What's the best way to handle authentication in my React app?\"\n\n**Output:** \"React authentication implementation best practices JWT OAuth login security patterns\"\n\n**Input:** \"I'm getting an error when I try to connect to my PostgreSQL database from Node.js. The connection keeps timing out.\"\n\n**Output:** \"PostgreSQL Node.js connection timeout error troubleshooting database connectivity issues solutions\"\n\n**Input:** \"Can you explain the differences between microservices and monolithic architecture?\"\n\n**Output:** \"microservices vs monolithic architecture comparison advantages disadvantages design patterns scalability\"\n\n## Your Task\n\nTransform the following user message into an optimized search query:\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agentTool",
+      "typeVersion": 2.2,
+      "position": [
+        272,
+        496
+      ],
+      "id": "792f40ad-bc63-48bd-85ea-4f46de478915",
+      "name": "Re-Ranker"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        240,
+        640
+      ],
+      "id": "a19620b9-e2ec-4423-99f0-4110828b7e73",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "IScOLzsa2Zm3BnzT",
+          "name": "Use this API key"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 📊 Re-ranker",
+        "height": 368,
+        "width": 432,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        128,
+        400
+      ],
+      "typeVersion": 1,
+      "id": "1030bbad-d3cc-4fae-86bf-53a257d57435",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "# 🧠 RAG Memory",
+        "height": 368,
+        "width": 464,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        608,
+        400
+      ],
+      "typeVersion": 1,
+      "id": "1e050037-1bc3-4cec-8547-2829826b59a0",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -80,
+        -288
+      ],
+      "id": "b60a1a17-2317-4c23-86cb-406576e8f965",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Webhook').item.json.body.sessionUUID }}",
+        "contextWindowLength": 100
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        144,
+        -96
+      ],
+      "id": "5b4af2fe-940f-43ae-be28-c050ca464ac8",
+      "name": "Postgres Chat Memory",
+      "credentials": {
+        "postgres": {
+          "id": "KIjKFcOxaiHTGl3q",
+          "name": "Jack Roberts"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Edit Fields": [
+      {
+        "json": {
+          "Proof": "I helped Coca-Cola go from $89,000/month to $1.26 million/month. I helped Red Bull, Triple S Sales, and I helped Magoo Enterprises launch a successful MMA campaign",
+          "Avatar": "I help drink companies crush it and build incredible delicious drinks and scale their revenue beyond $1M/month.",
+          "Pain points": "They are struggling to compete with Pepsi Max and the Pepsi Max tyranny",
+          "my niche desires": "My niche wants to sell their drinks, get their drinks out into the world, and do incredible MMA stuff",
+          "body": {
+            "foundationsData": {
+              "transformation": "We help them go from being unprofitable, stuck at $10-$20K/month, scaling up to over six-figures/month+"
+            }
+          },
+          "How I deliver that transformation": "We build AI operating systems that help them grow their business and crush it. We identify the biggest constraining factor and then we work with them one-to-one and in a group setting to crush that",
+          "my journey and experiences": "So for example, I quit my day job to begin my own startup. I was working even into weekends. I then replaced my entire income and went on to grow that business, even selling that business and turning it into a top 100 UK startup. I've helped Coca-Cola crush it in many different ways",
+          "Message": "Hey, I would like you to create me a lead magnet for a piece of content I'm doing which is basically why 99% of drinks manufacturers are not creating the right kind of content. Make it about something about they're not thinking about customers enough; they're trying to be pushing their PR brand.\n\nThe lead magnet I want to push on this is a \"How to get customers one-on-one\" guide."
+        }
+      }
+    ],
+    "AI Agent": [
+      {
+        "json": {
+          "output": "Struggling to get real traction with your drinks brand?\n\nHere’s the hard truth: 99% of drinks manufacturers fail to connect because they obsess over pushing their PR brand instead of truly understanding their customers.\n\nI’ve seen this firsthand—helping Coca-Cola skyrocket from $89K/month to $1.26M/month taught me that sales come from genuine connection, not just buzzwords or flashy branding.\n\nIf you’re stuck battling giants like Pepsi Max, here’s what you need to do:\n\n1. **Stop talking *at* your audience.** Shift from broadcasting your brand story to listening and engaging with what customers actually want.\n\n2. **Create content that answers real questions.** What problems are your customers solving with your drink? What emotions or moments do they associate with it?\n\n3. **Build one-on-one relationships.** Use social media, events, or personalized follow-ups to turn casual drinkers into loyal advocates.\n\n4. **Use your content to educate and inspire.** Show how your beverage fits into your customers’ lifestyles—not just what your brand stands for.\n\n5. **Measure engagement, not just impressions.** Track comments, messages, and meaningful interactions that indicate genuine interest.\n\nThis shift transforms your content from noise into conversation, building trust that converts into sales and growth.\n\nI help drinks brands like yours escape the PR trap, build authentic connections, and smash through those $1M/month ceilings by focusing on what truly matters: the customer.\n\nWant the full roadmap on how to get customers one-on-one and turn content into conversations that sell?\n\nComment “Customers” below, and I’ll send you this free guide loaded with practical steps to start building real relationships today.\n\nLet’s crush it together.\n\n🚀\n\nPS. This is how I helped Coca-Cola and Red Bull break through. Now, it’s your turn."
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Personal Story Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Lead Magnet",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Social Post Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "General Knowledge",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Personal Story Agent": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lead Magnet": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Social Post Agent": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "General Knowledge": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings HuggingFace Inference1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Vector",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Re-Ranker",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Re-Ranker": {
+      "ai_tool": [
+        [
+          {
+            "node": "General Knowledge",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector": {
+      "ai_tool": [
+        [
+          {
+            "node": "General Knowledge",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Personal Story Agent",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Lead Magnet",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "Social Post Agent",
+            "type": "ai_memory",
+            "index": 0
+          },
+          {
+            "node": "General Knowledge",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "40003513-66f6-45cb-95d2-6731aae7ea04",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "YCImRh040OkBor3M",
+  "tags": []
+}

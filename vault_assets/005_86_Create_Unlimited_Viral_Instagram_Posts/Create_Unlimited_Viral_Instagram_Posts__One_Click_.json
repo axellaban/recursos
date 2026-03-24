@@ -1,0 +1,349 @@
+{
+  "name": "Create Unlimited Viral Instagram Posts (One Click)",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gpt-image-1\",\n  \"prompt\": \"insert prompt\",\n  \"n\": 1,\n  \"size\": \"1024x1024\",\n  \"quality\": \"high\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2380,
+        520
+      ],
+      "id": "a647d621-cd17-4d6a-bf65-4c4de9b45487",
+      "name": "HTTP Request",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1948c236-674e-4e5a-b43b-86bd0849fdd7",
+              "name": "B64",
+              "value": "={{ $json.data[0].b64_json }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2660,
+        520
+      ],
+      "id": "bd0ab2dd-6e79-44e8-bf4d-e9778e869517",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const base64String = $json.B64;\n\nconst binaryData = Buffer.from(base64String, 'base64');\n\nreturn {\n  binary: {\n    data: {\n      data: binaryData,\n      mimeType: 'image/png',\n      fileName: 'generated-image.png'\n    }\n  }\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2940,
+        520
+      ],
+      "id": "393d0bc8-ed79-408e-9080-ddee40c4e9ab",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "=data",
+        "name": "={{$binary.data.fileName}}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "root",
+          "cachedResultName": "/ (Root folder)"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        3180,
+        520
+      ],
+      "id": "4df98550-3cf4-48d3-976a-107017a2bc23",
+      "name": "Google Drive",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        2120,
+        1000
+      ],
+      "id": "64c7415e-7dc1-4643-a5ef-221021fbcb8a",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/edits",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "gpt-image-1"
+            },
+            {
+              "name": "prompt",
+              "value": "turn cats into dogs"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "image",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2640,
+        1000
+      ],
+      "id": "dba9f26e-7354-49b1-b7b5-cbafa8c322f1",
+      "name": "Edit Images",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data[0].b64_json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        2940,
+        1000
+      ],
+      "id": "461ba522-1b79-4929-b27f-9d95a2d8f0b9",
+      "name": "Convert to File1"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "1yLx9verXMklFvjHt3K4BnrFYIYebEvkn",
+          "mode": "list",
+          "cachedResultName": "siihhooox_grainy_disposable_camera_photo_of_a_group_of_very_ang_14f1076f-b864-4126-af28-e88e43e4b2e7.png",
+          "cachedResultUrl": "https://drive.google.com/file/d/1yLx9verXMklFvjHt3K4BnrFYIYebEvkn/view?usp=drivesdk"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2360,
+        1000
+      ],
+      "id": "5c1c4808-4984-4d70-961c-3eecfb0e43ae",
+      "name": "Google Drive1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "=data",
+        "name": "={{$binary.data.fileName}}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "root",
+          "cachedResultName": "/ (Root folder)"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        3160,
+        1000
+      ],
+      "id": "a6edc77c-765c-4f4c-ba31-6102b9dba866",
+      "name": "Google Drive3",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🤩 Image to Image",
+        "height": 360,
+        "width": 1460
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1980,
+        860
+      ],
+      "typeVersion": 1,
+      "id": "cfb1fa7f-9861-4ab8-ad1a-f33cb29d2690",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "# 🔥 Text to Image",
+        "height": 360,
+        "width": 1460,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2000,
+        380
+      ],
+      "typeVersion": 1,
+      "id": "f95de80a-235a-43c9-a714-c7242a99f004",
+      "name": "Sticky Note5"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Drive1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Images": {
+      "main": [
+        [
+          {
+            "node": "Convert to File1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File1": {
+      "main": [
+        [
+          {
+            "node": "Google Drive3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive1": {
+      "main": [
+        [
+          {
+            "node": "Edit Images",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "c8eeb6d3-7301-4953-ab81-b07decd6de3a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "D8xfk1rMBtdKHtkd",
+  "tags": []
+}

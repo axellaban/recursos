@@ -1,0 +1,1417 @@
+[00:00:00] this AI web app was built using clae and
+[00:00:02] this very simple automation on me.com
+[00:00:05] imagine if you could build any AI web
+[00:00:07] app that you wanted to without the need
+[00:00:08] to code or learn coding and imagine if
+[00:00:10] we could connect that with AI in this
+[00:00:13] video I'm going to show you how you can
+[00:00:14] build this on a website any web
+[00:00:16] application that you want to I'm going
+[00:00:18] to show you how you can connect it to
+[00:00:19] make.com which essentially means that we
+[00:00:21] can use all sorts of automations and AI
+[00:00:24] automations incredible things and then
+[00:00:26] serve that response directly straight
+[00:00:29] back to the customer on a website to see
+[00:00:31] what they're going to do I'm also going
+[00:00:32] to show you in this video a really cool
+[00:00:34] application I think you're going to love
+[00:00:35] and you going learn something incredible
+[00:00:37] about prompt engineering the process
+[00:00:39] what I've built here by the way with no
+[00:00:41] code is literally an expert panel
+[00:00:43] discussion the way that this automation
+[00:00:44] works is that you come down you ask any
+[00:00:46] question that you want to and what this
+[00:00:48] automation will do is fire offto
+[00:00:51] make.com where it essentially will
+[00:00:52] create three experts to discuss it say
+[00:00:55] for example I want to talk about losing
+[00:00:57] weight it will design a PD dietician it
+[00:01:00] assign a personal trainer and maybe
+[00:01:02] somebody who's in like I don't know some
+[00:01:03] other expert in that area and then what
+[00:01:06] it does is assigns a role to Claude to
+[00:01:08] chat GPT and to llama to basically
+[00:01:11] debate that and then we have three
+[00:01:13] debate cycles that run through together
+[00:01:15] where they all look at each other's
+[00:01:16] responses so that you end up with at the
+[00:01:18] end of it a complete WhatsApp WhatsApp
+[00:01:21] style chat in this window where you can
+[00:01:23] read through yourself and get it now
+[00:01:25] this has all happened within the website
+[00:01:27] you've put one input in I just come here
+[00:01:28] I say I send it off and then within
+[00:01:31] certain number of seconds I get an
+[00:01:32] entire response back guys the
+[00:01:34] opportunities for this one is absolutely
+[00:01:36] insane I'm Jack and my YouTube channel
+[00:01:37] my school Community we're about three
+[00:01:39] things we're about the latest AI we are
+[00:01:41] about incredible automations and most
+[00:01:44] importantly we're about the stuff the
+[00:01:46] works so if you haven't already grab
+[00:01:48] that coffee and let's jump straight in
+[00:01:50] now guys the beauty of this to make this
+[00:01:52] you only need two or three tools and
+[00:01:55] that is it we don't need any crazy
+[00:01:56] external coding databases or anything
+[00:01:59] like that in this was inspired by a guy
+[00:02:00] called Riley who built a productivity
+[00:02:02] app using Claude And I thought that's
+[00:02:04] incredible I wonder if we could even
+[00:02:06] connect it to Ai and do something that's
+[00:02:08] like even crazier so what I'm going to
+[00:02:10] do I'm going to show you how this
+[00:02:11] automation works and then we're going to
+[00:02:12] show you how you can build any app you
+[00:02:14] want to with AI connected to make to get
+[00:02:16] AI to get a web based AI application
+[00:02:19] with zero coding be in mind I don't know
+[00:02:20] any coding I just push buttons and ask
+[00:02:22] questions okay and then it works so let
+[00:02:24] me show you how this works right now in
+[00:02:25] the
+[00:02:26] background this is what's going to
+[00:02:28] happen okay these are web hooks okay th
+[00:02:30] this scenario is always going to be
+[00:02:32] always going to be running the
+[00:02:33] background so let's say that we're on
+[00:02:34] this thing and by the way this is like
+[00:02:36] just a random page I haven't designed
+[00:02:37] that as an hour but you get the idea um
+[00:02:39] we come here so let's just say we ask a
+[00:02:41] question so let's just say we say hey I
+[00:02:43] don't know I H I
+[00:02:45] drink four coffees a day uh should I
+[00:02:51] stop drinking coffee for my health
+[00:02:55] something random like that I don't know
+[00:02:57] could be whatever you want to and then I
+[00:02:58] just say okay cool send that off off now
+[00:03:00] look at this immediately I get a
+[00:03:01] countdown timer all coded by a I didn't
+[00:03:03] touch this and by go this is an MVP I
+[00:03:05] deliberately didn't make this something
+[00:03:07] where like you would look perfect like
+[00:03:09] this literally took me like I don't know
+[00:03:10] an hour to do Max and then I got all the
+[00:03:12] stuff now look this has got a countdown
+[00:03:14] we' got animations let's head back over
+[00:03:15] to see what's happening with automation
+[00:03:16] look at this the web Hood C the data
+[00:03:19] it's it's prompted and created three
+[00:03:20] different roles it's created Frank
+[00:03:22] chairman of Department of National
+[00:03:23] nutrition at Harvard it's created
+[00:03:25] another guy who's a research director at
+[00:03:27] the French National Institute of Health
+[00:03:28] medical research Dr Rob dandam professor
+[00:03:31] in exercise nutrition Sciences at George
+[00:03:32] Washington we give them roles because it
+[00:03:35] helps the AI to better articulate its
+[00:03:36] points when you give it a specific role
+[00:03:39] now what's happening here this is round
+[00:03:40] one they all give their earing
+[00:03:42] statements now they're responding to
+[00:03:44] each other now what this is guys this
+[00:03:46] panel discussion prompt the reason why
+[00:03:48] this is such a powerful prompting
+[00:03:49] technique and I personally after
+[00:03:51] building this software I this
+[00:03:53] application irrelevant the fact is that
+[00:03:55] you can make it and get it to do all
+[00:03:56] this crazy stuff but I guess this could
+[00:03:58] almost be two videos in one a the prompt
+[00:03:59] strategy and be the technology but you
+[00:04:02] know you're going to get two for one
+[00:04:02] baby we just want to Stack the value
+[00:04:04] over here the reason why this is so cool
+[00:04:06] is because what this does guys is it
+[00:04:08] starts with one perspective okay and
+[00:04:10] normally like if you say to chat gbt or
+[00:04:12] clae hey tell me the best way to do X
+[00:04:14] and it will give you a list but then if
+[00:04:16] you say to it hey how could that be
+[00:04:18] improved it'll say that's a great
+[00:04:19] question Jack here are all the ways that
+[00:04:21] it could be improved with the panel
+[00:04:23] style strategy using three different
+[00:04:25] models the AI is criticizing itself
+[00:04:28] which means it is self self iterating
+[00:04:30] its perspective meaning it's trying to
+[00:04:32] put holes in it and the way that I
+[00:04:33] prompted this and all the prompts and
+[00:04:34] stuff available in school Community is
+[00:04:36] that it will basically you get to see
+[00:04:39] the conversation happen and at the same
+[00:04:40] time the actual quality gets better I
+[00:04:43] vastly prefer this output over just a
+[00:04:45] direct conversation now look I head back
+[00:04:47] over to the website this is just
+[00:04:49] finishing loading uh this is just a
+[00:04:51] funny feature of the code I put a 70c
+[00:04:52] time right if I added the line that said
+[00:04:54] remove the conversation happens before
+[00:04:55] it be cool but look at this guys look
+[00:04:57] how crazy this is Claude thank you for
+[00:04:59] introduction I am uh Dr astel research
+[00:05:02] director at the French National
+[00:05:04] Institute of Health and Medical Research
+[00:05:05] I specialize in x given your consumption
+[00:05:08] of four coffees a day my initial advice
+[00:05:10] is that moderate moderate coffee intake
+[00:05:12] can offer several health benefits
+[00:05:13] resarch shows x uh it goes on to discuss
+[00:05:16] I ask how does your coffee consumption
+[00:05:17] affect your day life wellbeing this can
+[00:05:19] guide more personalized advice as well
+[00:05:20] then this guy gives his opening
+[00:05:21] statements like I like to now this guy
+[00:05:23] here is coming from nutritional
+[00:05:24] epidemiology with the focus on coffee
+[00:05:26] consumption I would encourage you to
+[00:05:28] consider the type of coffee you're
+[00:05:29] consuming black coffee is the healthiest
+[00:05:30] option uh sugars and high fat creams
+[00:05:32] canate some of the health benefits blah
+[00:05:34] blah blah and then we got the third guy
+[00:05:36] here who's a profession exercise
+[00:05:37] nutrition while moderate coffee
+[00:05:39] consumption typically defined as three
+[00:05:40] to four cups per day is generally
+[00:05:42] considered safe did you realize you
+[00:05:43] going get a coffee master class I didn't
+[00:05:45] know that man I didn't know I was going
+[00:05:46] to sign up for that today and it goes on
+[00:05:48] now look what's really cool guys is they
+[00:05:50] then start to interact with each other
+[00:05:51] in as prompt and guys this is just an
+[00:05:53] example you could build anything a to-do
+[00:05:55] list a A can ban board you literally if
+[00:05:57] you could imagine it we can build it so
+[00:06:00] look uh dog man I'd like to build your
+[00:06:02] point about the importance of overal di
+[00:06:03] PS now it's really good that they
+[00:06:05] basically go on to you know they go on
+[00:06:07] to challenge each other and have
+[00:06:08] conversations and then the conversations
+[00:06:10] come getting better and better and
+[00:06:11] better and they give
+[00:06:12] recommendations um and they just kind of
+[00:06:14] push at the bottom it's also really good
+[00:06:16] when you're like unsure about decisions
+[00:06:17] like ah should I move to Italy or should
+[00:06:20] I move to Germany or you can basically
+[00:06:22] the better the question the better
+[00:06:23] responses but this is just to show you
+[00:06:25] high level Hab a specific works now the
+[00:06:28] way I'm going to start off this tools
+[00:06:29] that you need okay now I wanted to build
+[00:06:32] this with you in mind to make it as
+[00:06:33] simple as possible for you to plug and
+[00:06:35] play so to do that you realistically
+[00:06:36] need three things the first thing that
+[00:06:38] you're going to need is access to
+[00:06:39] make.com it is a no code uh automation
+[00:06:42] software where basically we can
+[00:06:44] modularize and put things together we
+[00:06:46] can put Google Sheets in there we can
+[00:06:47] put CA chat GPT air table which is like
+[00:06:50] a a steroidal Google sheet anything we
+[00:06:53] want we connect them together press
+[00:06:55] buttons and then it's no code automation
+[00:06:56] what we do here is AI and no code
+[00:06:58] automation words we connect things
+[00:07:00] together and we use the best
+[00:07:01] Technologies available the second thing
+[00:07:03] you going need access to obviously is
+[00:07:05] language model because this is going to
+[00:07:06] be the heavy lifting then the beauty of
+[00:07:07] using things like Claude uh and chat GPT
+[00:07:10] is the fact that we don't need to know
+[00:07:11] how to code we can just push the buttons
+[00:07:12] in get the code and running and then the
+[00:07:14] third thing that I want you to use now
+[00:07:17] there's two philosophies with this one
+[00:07:19] is that we could create code and host on
+[00:07:22] a website I think the hosting the domain
+[00:07:25] name all of that nonsense is just noise
+[00:07:28] there is something things where it's
+[00:07:30] worth just spending like $49 and getting
+[00:07:32] 25 sides and that's what C does car I
+[00:07:35] mean I I did my last business my tech
+[00:07:36] business I got like 50k unique visitors
+[00:07:39] I use WordPress okay if I was starting a
+[00:07:41] business from scratch I'd start with
+[00:07:42] card because it's just so much easier
+[00:07:43] and it's quicker and it's significantly
+[00:07:45] cheaper to do anyway but look I'll show
+[00:07:47] you right if I go on CH a starting point
+[00:07:49] you get all these things they're not
+[00:07:50] sponsored by the way I just will always
+[00:07:52] recommend the things that work for me
+[00:07:53] now Look you can pick any page you want
+[00:07:55] to say you like the look of this or this
+[00:07:57] and it's a modular thing and just show
+[00:07:59] you the price down here $49 you get 25
+[00:08:01] sites no branding and you get to create
+[00:08:02] the website immediately so you don't
+[00:08:03] have to worry about the fa or the hassle
+[00:08:05] of doing all that stuff um and I just
+[00:08:07] think that'll save a lot of time and I
+[00:08:09] recommend the stuff that Sav to the time
+[00:08:10] so those the only tools that you need
+[00:08:12] guys um so the question becomes how do
+[00:08:14] we physically build this now if you put
+[00:08:15] the community and you want to just Lock
+[00:08:16] and Load this automation all you ever
+[00:08:18] have to do is come down here to the
+[00:08:19] buttons input blueprint choose the Json
+[00:08:22] you select the Json you click save and
+[00:08:24] then it populates automatically All
+[00:08:26] These Blueprints and guides are
+[00:08:27] available in the community you can just
+[00:08:28] like copy and paste it if you like
+[00:08:30] saving time and getting automations that
+[00:08:32] aren't on the YouTube channel to get the
+[00:08:33] real deep super secret understanding of
+[00:08:36] how this stuff works so how am I going
+[00:08:38] to start this off I'm going to show you
+[00:08:39] first of all the AI bit okay building
+[00:08:41] the code and something really cool and
+[00:08:42] then we're going to build the make
+[00:08:43] scenario together so how do we do that
+[00:08:46] well what was really interesting is you
+[00:08:48] can actually feed Claude an image and
+[00:08:50] Claude has this really cool feature
+[00:08:52] called an artifact window so say for
+[00:08:54] example if I head over to google.com and
+[00:08:56] let's say I want to get some inspiration
+[00:08:58] just say hey WhatsApp style chat
+[00:09:02] window like this okay and let's say go
+[00:09:04] to images right and I just tried to find
+[00:09:06] one that's good maybe we could find like
+[00:09:09] I don't know what would be a really good
+[00:09:10] example of that uh okay let's take this
+[00:09:13] image okay let's say we copy that image
+[00:09:16] we can come over now we come over to
+[00:09:17] clae I paste in clae I give it a prompt
+[00:09:20] something like this like I would like
+[00:09:21] you to
+[00:09:25] create HTML only
+[00:09:27] code for a
+[00:09:31] web
+[00:09:33] application uh and then we basically
+[00:09:36] just list out the functionalities now
+[00:09:37] guys this could be anything you want it
+[00:09:38] could be to-do list it could be whatever
+[00:09:41] your world streams are clae can help you
+[00:09:43] pull that HTML I could say then I'd say
+[00:09:45] the functionalities number one um user
+[00:09:49] submits question and I say web hook
+[00:09:53] fires with
+[00:09:54] question and I'd say web hook address
+[00:09:58] now web hook to the things we're going
+[00:10:00] to be using um and then I'd say like uh
+[00:10:02] it will display uh three different
+[00:10:07] voices
+[00:10:09] um in a WhatsApp Style with different
+[00:10:13] colors and then I could say something
+[00:10:15] like uh once
+[00:10:17] submitted uh do a confetti
+[00:10:21] animation and add a 70 second timer and
+[00:10:26] then what else can we say and then just
+[00:10:27] say font
+[00:10:31] a here and just say use the below
+[00:10:33] designs for the HTML and then what we
+[00:10:36] could also do we can give it a couple of
+[00:10:37] different things as well in terms of how
+[00:10:39] to do this so for example come back over
+[00:10:41] the Google is there anything else we
+[00:10:42] really like um so if I just said like
+[00:10:44] cool chat design and guys this is
+[00:10:47] basically the whole process by the way
+[00:10:49] um this is kind of just what it is you
+[00:10:51] just kind of going back and forth like
+[00:10:52] this that looks quite cool so let's copy
+[00:10:55] that actually I won't copy that what
+[00:10:57] I'll do let me just screencast that
+[00:10:58] because what it can sometimes do even if
+[00:11:00] you give it like a landing page it will
+[00:11:02] um it can be a bit naughty and just
+[00:11:04] include stuff we don't want so let's
+[00:11:05] just copy that like so okay you ready
+[00:11:07] and then weit enter I check this out the
+[00:11:09] W that's load in the background let me
+[00:11:10] just do this thing here called HTML code
+[00:11:13] viewer uh which is this sweet one
+[00:11:15] here now we get to clo now look at this
+[00:11:18] it's building the stuff it's HTML only
+[00:11:20] the code it's running in the background
+[00:11:21] it's doing its bits it's doing its
+[00:11:22] pieces and it's just it's like a
+[00:11:24] conversational Builder like you
+[00:11:25] basically say do this and then you just
+[00:11:27] kind of do many troubleshoots as you go
+[00:11:28] all the way through the process
+[00:11:32] okay type your question let's have a
+[00:11:34] look um do we like that and by you can
+[00:11:36] say all sorts of stuff right like a
+[00:11:39] questions place all functional web timer
+[00:11:41] conf conf animation basic Styles I click
+[00:11:43] Send hey sometimes it doesn't work in
+[00:11:46] there so what we can do is we come to
+[00:11:47] the code and then we copy it now here's
+[00:11:49] what was really cool okay now head over
+[00:11:51] to car.com or your website builder of
+[00:11:52] choice so say for example we're here uh
+[00:11:55] on this one you come on this plus button
+[00:11:56] you're going to come down to embed Okay
+[00:11:59] click on the code like this um come down
+[00:12:02] the code paste the code and then once we
+[00:12:05] pasted the code we click done like so uh
+[00:12:07] and then we're going to put save come
+[00:12:09] down give it a title letter random
+[00:12:10] letters description the S will appear
+[00:12:12] online on Google publish a card you find
+[00:12:14] letter random letters no spaces if
+[00:12:16] that's cool I'm just kind of
+[00:12:17] speedrunning this because I think this
+[00:12:18] is like you just details you can think
+[00:12:21] about hit publish go to element
+[00:12:23] unfinished element let's just delete
+[00:12:24] some of the stuff shall we just for
+[00:12:26] Simplicity sake get rid of this guy
+[00:12:28] that's cool and we should be able to
+[00:12:30] publish it now excellent this now guys
+[00:12:32] you got a website you can do 225 of this
+[00:12:34] for $49 how crazy is that let's Lo it
+[00:12:38] up hey I'm Molly this is always going to
+[00:12:41] be good enough by the way to get your
+[00:12:42] MVP and then we've got this the the CLA
+[00:12:45] just made how crazy is that now look if
+[00:12:47] I say hey sand now that's not what we
+[00:12:50] want okay but it works so this your
+[00:12:53] first version is going to be terrible
+[00:12:54] and then you'll see this okay what we
+[00:12:55] going to do is go over then to make.com
+[00:12:58] and get the web set up okay so check
+[00:13:00] this out what do we do well look the
+[00:13:03] first thing we need to do is come here
+[00:13:04] like this uh type in web hugs okay and
+[00:13:07] then you're going to do this one here
+[00:13:08] which is custom web hook all right and
+[00:13:10] then just put
+[00:13:11] add and we'll call this
+[00:13:15] one coffee web hook why coffee I don't
+[00:13:18] know but at least we'll remember it
+[00:13:20] correct and a little Emoji little coffee
+[00:13:22] Emoji for good
+[00:13:24] measure okay cool let's get a little
+[00:13:26] coffee Emoji come over I love it okay
+[00:13:28] cool now check this out guys you're
+[00:13:30] given a web hog here and what it's doing
+[00:13:32] the moment is determining the data
+[00:13:33] structure so if your automation ever STS
+[00:13:37] just redetermined data structure make
+[00:13:40] sure that it can receive so the first
+[00:13:41] thing you want to validate is that look
+[00:13:43] you have created a cool web application
+[00:13:44] on this website we need to make sure now
+[00:13:47] that the the code is firing the
+[00:13:50] information to make now if I can get the
+[00:13:52] information to.com I can do anything I
+[00:13:54] can literally do anything I want I can
+[00:13:57] fire off letters to your address email
+[00:13:59] phone calls I I can like essentially
+[00:14:01] take over the world if I get it into
+[00:14:03] make.com its only job is to get it into
+[00:14:05] make.com once it's in that it can go
+[00:14:06] into my CRM it can do anything that's
+[00:14:09] how powerful this is so now we've got
+[00:14:11] look the web hook so let's head back
+[00:14:14] over now to CLA okay so i' say I would
+[00:14:17] like you
+[00:14:21] to rewrite the
+[00:14:25] code with the following
+[00:14:33] upgrades number one is include this web
+[00:14:40] hook and now we put that in there now
+[00:14:42] what's the other thing that we want to
+[00:14:43] do with that so let's have a quick look
+[00:14:45] type your question I would say we
+[00:14:51] want above the um above the um part
+[00:14:54] where you enter
+[00:15:01] um make it
+[00:15:04] look more like this and again I'm just I
+[00:15:08] could show you just in anyone here but
+[00:15:10] look if I just show you something like
+[00:15:12] this we'll just screenshot this shall
+[00:15:17] we we come back here with to clo bear in
+[00:15:19] mind you only
+[00:15:21] get five images in the chat so that's
+[00:15:23] just something to bear in mind if that
+[00:15:24] ever happens by the way little hack is
+[00:15:26] to say hey Claude please summarize this
+[00:15:27] conversation disly copy that text and
+[00:15:30] then move it into a new chat window now
+[00:15:32] look it's now giving us the code again
+[00:15:34] so you go to this iterative cycle of
+[00:15:36] identifying what's working what isn't
+[00:15:38] working we just copy and paste we just
+[00:15:40] copy and paste that's all we do and then
+[00:15:41] it starts to work in the background
+[00:15:42] check this
+[00:15:45] out okay it's working writing code for
+[00:15:47] his I love it okay sweet nowo what do I
+[00:15:50] do I copy the
+[00:15:52] content I head back over now to our
+[00:15:54] website here and what do I do I come
+[00:15:57] down to the code I click here I select
+[00:15:59] all I enter the new code I click done
+[00:16:02] and then I click uh publish this site
+[00:16:04] click publish changes like so yeah it
+[00:16:06] loads in the background for me having a
+[00:16:08] good
+[00:16:09] time awesome cool now we open the
+[00:16:12] website check this out it's here and
+[00:16:16] voila it looks a little bit better and
+[00:16:17] you'll go through like nine or 10
+[00:16:19] iterations it's by the way guys want
+[00:16:20] encourage you when you get one that
+[00:16:21] works and is cool Bank the code just
+[00:16:23] save the code to the side and then if
+[00:16:25] for some reason it regresses or
+[00:16:27] something you can always come back and
+[00:16:28] change it I say hey now look now we want
+[00:16:31] to validate okay that the web Hub works
+[00:16:34] so what do you
+[00:16:35] do you're going to click on this
+[00:16:37] redetermined data structure it's waiting
+[00:16:39] to receive something check this out guys
+[00:16:40] ready if I say
+[00:16:42] hey confetti how cool is that this is
+[00:16:45] crazy now has this found some stuff
+[00:16:47] successfully determined do you know that
+[00:16:49] means it means it's gotten some cool
+[00:16:50] data so let's test it out so run this
+[00:16:53] once okay sweet we come back over let's
+[00:16:55] ask it a question um let me just refresh
+[00:16:57] the page done
+[00:16:59] okay so how about how many times a week
+[00:17:02] should I work
+[00:17:05] out boom that goes in come back over to
+[00:17:08] the panel how many times a week should I
+[00:17:12] work out guys you done it you basically
+[00:17:14] done it so essentially what's happened
+[00:17:16] here is you've just created an AI web
+[00:17:18] application okay not AI yet but a web
+[00:17:20] application at the moment where you've
+[00:17:21] created a random code it's created it's
+[00:17:23] pained straight over um and then we're
+[00:17:25] ready to go like how insane is that like
+[00:17:28] and it's also fit fit within the uh cind
+[00:17:31] in website if it starts affecting the
+[00:17:33] code just say to chat gbt little hack by
+[00:17:36] the way is say hey place a container
+[00:17:39] around this so it doesn't affect the
+[00:17:40] rest of the code and then for some
+[00:17:42] reason that helps to shape out a little
+[00:17:43] bit there a little hack for you what
+[00:17:45] else would i' say I'd say align right
+[00:17:47] there's a little things we could do but
+[00:17:48] for the purpose of it this is great now
+[00:17:50] this video's really got two aspects to
+[00:17:52] it one is like the AI app but it's also
+[00:17:54] this thing I want to show you about how
+[00:17:56] we can create this panel discussion PR
+[00:17:59] that I think is profoundly powerful okay
+[00:18:01] so what we need to do first of all is
+[00:18:02] create a panel so to do that basically
+[00:18:05] what we want AI to do is to assign three
+[00:18:07] different experts I mean when I first
+[00:18:09] did the strategy I'm going to add Claude
+[00:18:10] in here when I first did the strategy
+[00:18:13] I'd say hey let's get Elon mask and Jeff
+[00:18:15] bayar and blah blah blah to discuss the
+[00:18:17] nuances of this thing um and they'll do
+[00:18:20] and you'll find like because when you
+[00:18:21] read through you're like okay that makes
+[00:18:23] sense I disagree with that and you can
+[00:18:25] basically pick and choose the bits that
+[00:18:27] you think are most helpful EXC when my
+[00:18:28] voice is just returning like I died a
+[00:18:30] cold it like took my voice off the shell
+[00:18:32] for a few days so we got CLA 35 Sonic
+[00:18:34] which is like one of the most powerful
+[00:18:35] models it's got which is awesome Max
+[00:18:37] tokens we're just going to put 4,000
+[00:18:39] like so and look guys it's already what
+[00:18:41] we call mapped autop populate this
+[00:18:43] question rep hook so we can just Yun
+[00:18:44] over grab and pull that over now look
+[00:18:47] add message if you want to follow along
+[00:18:49] and build this one with me this is what
+[00:18:50] I would do okay ra would be user content
+[00:18:53] let come to content type would be text
+[00:18:55] any with the text so I'm going to pop
+[00:18:57] this promp prompt in and I'll run you
+[00:18:58] through very briefly so
+[00:19:00] look you are an expert panel Creator
+[00:19:04] your task is to generate three
+[00:19:05] exceptionally qualified expert roles for
+[00:19:08] a hypothetical rantal discussion on a
+[00:19:10] given topic when provided with a
+[00:19:12] question you will output three distinct
+[00:19:14] roles of worldclass experts who would
+[00:19:16] offer the most authoritative diverse and
+[00:19:18] insightful perspectives here's the input
+[00:19:22] boom hles that based on this question
+[00:19:25] generate three expert roles that can be
+[00:19:27] specific individuals we hypothetical or
+[00:19:29] positions that represent absolute
+[00:19:30] Pinnacle of expertise in their
+[00:19:32] respective Fields aim for diversity
+[00:19:34] background and perspective while
+[00:19:35] maintaining Supreme relevance topic
+[00:19:37] output your response in Json in the
+[00:19:39] format as follows so look here's a
+[00:19:42] little hack for as well what we want
+[00:19:45] okay if we get an output from a language
+[00:19:47] model let's just say I say to chat GPT
+[00:19:49] dude give me five strategies for doing X
+[00:19:51] or give me five ways I could improve my
+[00:19:54] phone usage if I want those five things
+[00:19:56] to be five separate outputs in other
+[00:19:58] words I could Splinter my automation to
+[00:20:00] five different things I wanted to give
+[00:20:02] it me in Json if it's just one text
+[00:20:05] output like ja here's your strategy we
+[00:20:07] don't need to worry about Json but if I
+[00:20:09] want to get a response of let's say five
+[00:20:11] things maybe it's an article five
+[00:20:12] different topics maybe it's five
+[00:20:14] different strategies get it to give it
+[00:20:15] you in Json that's really really
+[00:20:17] important so I'll show you how you get
+[00:20:20] this for example if I come over to chat
+[00:20:21] GPT and if I said hey um I will have
+[00:20:27] this output um turn
+[00:20:30] it into Json okay and then I could say
+[00:20:33] something like roll one blah blah blah
+[00:20:36] blah uh
+[00:20:40] speciality blah blah blah okay this is
+[00:20:44] um really bad like writing but I'm just
+[00:20:46] doing this so you can get like a little
+[00:20:47] bit of I'm just trying to add that help
+[00:20:49] you with all your knowledge as you go
+[00:20:50] through this cuz I think like these
+[00:20:51] little tips and tricks will kill it okay
+[00:20:55] um boom now what it will do is turn that
+[00:20:56] into Json like so boom
+[00:20:59] there you go so we specified the output
+[00:21:02] now the reason we youve Json guys is
+[00:21:03] because uh and if you not heard it
+[00:21:05] before don't worry this is going to be
+[00:21:06] so unbelievably clear to you you're
+[00:21:08] going to be like dude I got 2020 Json
+[00:21:10] vision is we use this Beau called past
+[00:21:12] Json and what that does it basically
+[00:21:14] creates these outputs here that we can
+[00:21:17] then grab and use so I can use uh I can
+[00:21:20] just this just goes to Claude this just
+[00:21:22] goes to chat GPT this just goes to llama
+[00:21:24] and just enables to do some really
+[00:21:25] really cool stuff okay so you cre a Json
+[00:21:29] if you want to split the outputs so for
+[00:21:31] example if I have different models that
+[00:21:32] be solving different questions or
+[00:21:34] different documents you split the Json
+[00:21:36] guidelines for selecting experts just
+[00:21:38] you know choose best Authority use a mix
+[00:21:39] of academic industry and policy experts
+[00:21:41] you basically just want it to be
+[00:21:42] different you know what I mean you could
+[00:21:43] just say you could even let the user
+[00:21:45] decide if you want to I mean it
+[00:21:48] literally guys you're limited only by
+[00:21:50] imagination that's it that's what I want
+[00:21:52] you to think about consider inter
+[00:21:53] expertise your goals create panel of
+[00:21:55] experts blah blah blah blah blah and we
+[00:21:57] click okay and then You' say to chat GB
+[00:21:59] to create you a Json structure based on
+[00:22:01] the individual outputs that you would
+[00:22:02] want so then guys we come here we click
+[00:22:04] on this guy and we're going to add in
+[00:22:06] pass Json okay where's got a pass button
+[00:22:09] beautiful we click on him and then we
+[00:22:11] say choose data structure just add data
+[00:22:13] structure and just put generate and put
+[00:22:16] sample data in of what it would look
+[00:22:17] like like so which is cool come down and
+[00:22:20] then it will generate for us awesome and
+[00:22:22] then just click okay and you'll see all
+[00:22:23] this stuff down here by the way guys
+[00:22:25] this see how simple and straightforward
+[00:22:26] it is super duper cool then click save
+[00:22:29] on Jason string just put the text
+[00:22:30] response from Claude okay so this one
+[00:22:33] here is going to be um
+[00:22:37] King panel all right give a little King
+[00:22:40] icon sweet love it boom come
+[00:22:45] here excellent now let's run this one
+[00:22:47] all all the way from top so we run the
+[00:22:48] web hug uh that's okay come back over to
+[00:22:50] our website like so we're going to
+[00:22:52] refresh it so we get a new question come
+[00:22:53] down to say how
+[00:22:56] many should I about this should I do
+[00:23:00] boxing or
+[00:23:02] jiujitsu I'll do BJJ yeah
+[00:23:05] BJJ boom that comes off I come back this
+[00:23:08] is complete the king panels creating a
+[00:23:10] prompt for us now which is excellent and
+[00:23:12] that's done so if this has done a job
+[00:23:14] properly we should see look at this
+[00:23:17] former world champion boxer and boxing
+[00:23:19] coach Brazilian jiujitsu black belt and
+[00:23:21] MMA coach and a sport psychologist and
+[00:23:23] martial arts researcher and what I've
+[00:23:25] done with this one guys is I said look
+[00:23:26] give me a role and give me expert te so
+[00:23:29] that I can actually just give that to
+[00:23:30] the language model this is your role
+[00:23:32] this is what you're experienced in then
+[00:23:34] go to help me out all right so that is
+[00:23:37] now put basically it's turned the input
+[00:23:39] that we' got into Json which is cool and
+[00:23:42] then if you look at this we've got the
+[00:23:43] output roll one expertise one roll two
+[00:23:46] expertise 2 so then look if I add in
+[00:23:49] like another Cloe module right check
+[00:23:51] this out guys I CL module I click in if
+[00:23:53] I just go to let's just say 4,000 tokens
+[00:23:56] I go do add message on on the role I put
+[00:23:59] user if I do content I get to type text
+[00:24:03] look at this guys how insane is this
+[00:24:06] look at this right this I think this is
+[00:24:08] so cool I can do roll one I can do
+[00:24:10] expertise one so I can just say you get
+[00:24:12] expertise one you get expertise 2 and so
+[00:24:14] on and so on and so forth until we've
+[00:24:15] got everything na done I think that is
+[00:24:16] so so cool excellent so what do we do
+[00:24:18] now now look what I'm going to do I'm
+[00:24:19] going to build this Automation and then
+[00:24:20] we're going to come back to the website
+[00:24:22] to the a application and send it back so
+[00:24:24] just to give you some Frameworks for
+[00:24:25] this okay we have the applic which we're
+[00:24:28] going to design with CLA to make
+[00:24:30] incredible it sends information to this
+[00:24:32] web H but the question becomes dude how
+[00:24:33] do I get it back well I'll show you
+[00:24:35] exactly how you get it back we're going
+[00:24:37] to do this by bookending it with a web
+[00:24:39] hook response this grabs it our magic
+[00:24:41] happens in between and then we fire it
+[00:24:43] straight back to the website with all
+[00:24:44] the information that we want so the
+[00:24:45] question becomes what do we need to add
+[00:24:47] in next specifically right well look we
+[00:24:49] need to add in our panels and build the
+[00:24:51] pr out for that so the reason I'm going
+[00:24:53] to use different language models for
+[00:24:54] this is going to give us an incredible
+[00:24:55] response so we're going to do CL we're
+[00:24:57] going to do chat gbt and we're going to
+[00:24:58] llama um if you use pop my community you
+[00:25:00] going lot grock as well level four um
+[00:25:02] which you don't have to pay for in make
+[00:25:03] if you're part of the group so click on
+[00:25:05] this right let's have a look what we
+[00:25:06] want user text now look let's give it a
+[00:25:09] prompt okay let's see what the prompt
+[00:25:10] we're going to give it now for the just
+[00:25:12] out respect for your time I'm going to
+[00:25:13] chat through the prompt um rather than
+[00:25:16] rewrite all of it just to kind of help
+[00:25:17] you make it a little bit a little bit
+[00:25:19] easier for you okay now look I copied
+[00:25:20] the prompt and I run exactly through
+[00:25:22] what the prompt does what it says and
+[00:25:24] why we use it now look so look first
+[00:25:27] thing we do is assign the role and
+[00:25:29] assign the expertise so look you are
+[00:25:31] role number one okay what is role one
+[00:25:34] you are a formable okay boom get rid of
+[00:25:35] this you are roll one a comma a former
+[00:25:40] World Champ kickboxer cool perfect so
+[00:25:43] saying hey you are a blah blah blah who
+[00:25:44] is a blah blah
+[00:25:46] blah now look at this okay this is where
+[00:25:48] is really cool if you don't have a name
+[00:25:51] you may asso one for the PES of the
+[00:25:52] panel of this panel debate you have been
+[00:25:55] in invited to participate in a high
+[00:25:57] profile panel discussion uh with other
+[00:26:00] distinguished experts to answer this
+[00:26:02] question what do we do insert a question
+[00:26:05] cool hope this not make a sense right
+[00:26:07] have this is so cool guys I think this
+[00:26:09] is so sick your task is to provide
+[00:26:11] initial thoughts on topic as a panelist
+[00:26:13] you should introduce yourself briefly
+[00:26:15] mention your role expertise your goal is
+[00:26:17] to provide the best advice possible to
+[00:26:18] individuals asking the question you are
+[00:26:20] there uh you are then basically you on
+[00:26:22] their side you want to help them Winn do
+[00:26:24] this with the best of your expertise
+[00:26:27] present your initial perspective on
+[00:26:28] topic drawing from vast expertise and
+[00:26:30] knowledge you know highlight key points
+[00:26:32] remember you're speaking to both your
+[00:26:33] fellow panelists and a broad audience
+[00:26:35] your goal is to provide valuable
+[00:26:36] insights while setting the stage for
+[00:26:38] Rich multifaceted discussion keep in
+[00:26:40] mind this is just the opening round in
+[00:26:42] subsequent rounds you will have the
+[00:26:43] opportunity to respond to and build on
+[00:26:46] the perspectives of other panels other
+[00:26:48] panelist for now focus on the early uh
+[00:26:51] you presenting your thoughts please keep
+[00:26:52] your response concise under 100 words um
+[00:26:56] begin your response with a grief self-
+[00:26:57] introduction for diving into your
+[00:26:58] perspective on the topic I'm going to
+[00:27:00] get rid of that and I just wanted to
+[00:27:02] jump straight in okay now guys this is
+[00:27:04] just one application this can do so many
+[00:27:05] things you must output you must put
+[00:27:08] output some paragraphs include clear
+[00:27:09] line brakes blah blah blah and then we
+[00:27:10] click okay cool now we want to make sure
+[00:27:13] we name these so let's just rename this
+[00:27:15] one call this guy
+[00:27:17] one maybe we just do one and then an
+[00:27:20] emoji for like each round so round one
+[00:27:22] could be like fire for example sweet now
+[00:27:24] let's add chat GPT click on the button
+[00:27:27] and we come to chat GPT if you've not
+[00:27:28] added chat GPT before by the way it's
+[00:27:30] really simple you just go over to
+[00:27:32] platform. open.com and add an AP I'll
+[00:27:34] pull link down below just basically
+[00:27:35] click the buttons down below and you'll
+[00:27:36] be fine I've also got guides and stuff
+[00:27:37] that as well so you you absolutely
+[00:27:39] sorted any way that you look at it Okay
+[00:27:41] so we've got this one here for instance
+[00:27:43] uh the model is going to be GPT 40 um
+[00:27:45] and then what do we need to do okay so
+[00:27:47] max tokens is going to be zero if you
+[00:27:48] put zero for chat GPT um you will always
+[00:27:51] max out the max member token which is
+[00:27:52] cool then we're going to click on ADD
+[00:27:54] message the RO is going to be user and
+[00:27:56] then the Conta so just to save us time I
+[00:27:58] go to clae I come down I copy I come
+[00:28:03] back over you know what I do guys I do
+[00:28:05] that classic control V and all I need to
+[00:28:07] do is change the roll so he's not roll
+[00:28:09] one he is move over here just always
+[00:28:11] want to make sure you can get a really
+[00:28:12] good look at this you're not roll one
+[00:28:14] you are roll
+[00:28:19] two a expertise to actually I just
+[00:28:22] realized a small mistake uh that I made
+[00:28:24] to come back over I put roll one and
+[00:28:26] twice I think there you go look
+[00:28:28] see what I actually need to do is add
+[00:28:32] expertise one there you go cool s glad
+[00:28:35] we caught that then we just going to
+[00:28:36] come on here rename it call this one two
+[00:28:40] with a little fire
+[00:28:44] Emoji
+[00:28:45] beautiful in fact you know actually what
+[00:28:47] we need to do is we need to name these I
+[00:28:49] just realized and that'll become
+[00:28:51] apparent uh later uh again let's call
+[00:28:54] this one one ch gb2
+[00:28:59] cool and then finally we'll do LL for
+[00:29:01] that we will add in uh
+[00:29:05] perplexity now guys obviously like the
+[00:29:07] reason why I've done three models is cuz
+[00:29:10] all trying on different stuff they think
+[00:29:11] differently and not only we getting
+[00:29:13] three different experts but getting
+[00:29:14] three completely different language
+[00:29:16] models the challenge perspectives how
+[00:29:18] that's like it's like tripling up I me
+[00:29:20] I'm sure someone can do some research on
+[00:29:22] this I don't think there's that much
+[00:29:23] specifically on the panel discussion
+[00:29:25] strategy but I think it's really
+[00:29:26] powerful so let's pick model let's just
+[00:29:28] double check I did some research on the
+[00:29:30] strongest model that is available within
+[00:29:32] this and it is yeah the 370b instruct so
+[00:29:34] we come over uh and we come on 370b
+[00:29:37] instruct which is cool this one doesn't
+[00:29:39] have internet access by the way we don't
+[00:29:41] need it we could add internet access if
+[00:29:42] you want to we could add a research if
+[00:29:43] it says Hey research his topic get his
+[00:29:45] data then we feed the data into the
+[00:29:47] models and then the data like all the
+[00:29:49] language models then have the latest
+[00:29:50] greatest data on the internet do you see
+[00:29:53] how insane this is I've just tried to
+[00:29:55] make this simple I this video could be 6
+[00:29:56] hours by the way maybe you want it maybe
+[00:29:58] you want maybe I need to get six coffees
+[00:30:00] six hours of content and just show you
+[00:30:01] how insane this could be so max tokens
+[00:30:03] again we'll just put 4,000 on this one
+[00:30:05] in fact actually I think you can just
+[00:30:07] leave it on this one just come to
+[00:30:08] message come to the content section once
+[00:30:11] again and then we just copy and paste it
+[00:30:13] once again we come over to roll one this
+[00:30:15] time it's going to be
+[00:30:16] roll three with
+[00:30:20] expertise three how cool is that guys
+[00:30:24] really really cool and then this is its
+[00:30:25] question there down below and we can
+[00:30:27] come down and see all the beautiful
+[00:30:28] stuff that we had there and then we
+[00:30:29] click okay and roll is going to be user
+[00:30:33] and we're going to click okay now guys
+[00:30:35] out of respect for your time what I'm
+[00:30:36] going to do is I'm not going to build
+[00:30:38] this out 3x3x3 I'm going to show you how
+[00:30:40] it works and I'm going to add a web hook
+[00:30:41] in so you get the concept I think the
+[00:30:43] most valuable part of this video is
+[00:30:44] going to be the concept so you can take
+[00:30:46] your ideas your tools and you can fly
+[00:30:48] with it and I want to make sure that I
+[00:30:49] respect your time so let me show you
+[00:30:53] what um the rest of the steps look like
+[00:30:56] so you can build this yourself if you
+[00:30:57] like to
+[00:31:00] um and then I will show you the other
+[00:31:01] bit where we finesse out the AI itself
+[00:31:04] okay so
+[00:31:05] look beautiful all right sweet so look
+[00:31:08] I'm going to come back over now to this
+[00:31:09] one and click okay now look those were
+[00:31:12] those three okay what do we do for the
+[00:31:14] second stage these three here okay look
+[00:31:17] I basically you do the same thing you
+[00:31:19] duplicate this guy like this and you
+[00:31:22] bring him and you po pop him in here and
+[00:31:25] then you duplicate that guy and pop him
+[00:31:26] in there it's as simple as that that
+[00:31:28] right um or to Aline now let's look at
+[00:31:30] the prompt for the the next two levels
+[00:31:32] we repeat the same thing again you are r
+[00:31:34] one doing expertise one you're a
+[00:31:36] participant in a high-profile panel
+[00:31:38] discussion doing this and and uh doing
+[00:31:41] basically did the excuse me oh my did I
+[00:31:43] can't speak I need to get some language
+[00:31:44] skills over here Prof high profile pan
+[00:31:47] discussion to basically answer this
+[00:31:49] question this is round two of three so
+[00:31:52] we basically said look you've already
+[00:31:53] said some stuff bro this is what's
+[00:31:55] happened and then we basically what we
+[00:31:57] need to do guys is we say this is what
+[00:31:59] you said first so we come down on the
+[00:32:01] left and we basically put the text
+[00:32:03] response from the first module and then
+[00:32:05] we say hey this is what panelist 2 said
+[00:32:08] and you put the result from that guy and
+[00:32:10] then this is what panelist 3 said and
+[00:32:11] you put their result so basically it
+[00:32:13] gets its first comments and the comments
+[00:32:15] of the other panelists and then we just
+[00:32:17] tell it basically give it a prompt for
+[00:32:19] the second round for the second round
+[00:32:21] briefly acknowledge your fellow panelist
+[00:32:23] insights without repeating them in
+[00:32:24] detail reflect on how their perspective
+[00:32:27] relates or different from your own
+[00:32:28] initial response challenge or refine the
+[00:32:32] ideas presented using your unique
+[00:32:34] expertise to deepen the discussion
+[00:32:36] introduce A New Perspective or
+[00:32:38] unconventional approach that has not yet
+[00:32:40] been not been covered yet so we're just
+[00:32:41] saying look okay critique them like what
+[00:32:43] they got right what I got wrong and then
+[00:32:45] just try and bring something fresh into
+[00:32:46] for discussion which then itself can be
+[00:32:48] Rec critiqued in round three provide one
+[00:32:50] concrete example of a case stud it
+[00:32:52] supports your main point this should
+[00:32:53] illustrate the pack Point uh do
+[00:32:56] not hallucinate
+[00:32:58] off for one to and by the way what we
+[00:33:00] could do if we added the perplexity
+[00:33:02] module in to go out and do the research
+[00:33:04] one the re the um the internet accessing
+[00:33:06] levels which I'll show SEC we could say
+[00:33:08] look go find me 10 data points I could
+[00:33:11] say look using these data points give an
+[00:33:14] interesting conclusion like we could if
+[00:33:16] we spent together like an hour with some
+[00:33:18] coffee together we could make this like
+[00:33:20] a like I think this itself is salable
+[00:33:23] it's that it's that good because if I
+[00:33:26] wanted to have a conversation on a panel
+[00:33:28] using multiple multiple models where
+[00:33:30] could I do that do you know what I mean
+[00:33:32] like I it's like it's so much faf and
+[00:33:34] energy um and I think it's really
+[00:33:36] powerful I really genuinely think
+[00:33:38] there's so much power in this offer one
+[00:33:39] to two specific actionable
+[00:33:41] recommendations that the audience can
+[00:33:43] Implement and both short and long term
+[00:33:44] I'm making it useful I'm saying hey give
+[00:33:46] me some short give me some long
+[00:33:48] anticipate in brutally d a potential
+[00:33:49] counter AR to position consider a
+[00:33:51] futural trend keep your response concise
+[00:33:54] blah blah blah and then guys it's the
+[00:33:56] exact same PR you copy you come over to
+[00:33:58] number two you again you copy CH gbt you
+[00:34:01] come back over you paste them in here
+[00:34:03] paste it in and all you do differently
+[00:34:05] guys and this is like the only time
+[00:34:07] consuming part of it is you say look you
+[00:34:10] are again roll two expertise 2 this is
+[00:34:13] what you said last time and then instead
+[00:34:15] of it being panelist one you know um one
+[00:34:18] and two it's so two and three it's now
+[00:34:20] panelist one and three so you basically
+[00:34:22] say look that was panelist one I'm
+[00:34:24] panelist two so I need to give it the
+[00:34:25] answers from panelist one and three so
+[00:34:27] you're B basically just switching around
+[00:34:28] the order and give it that context you
+[00:34:30] do it for that then you do it
+[00:34:32] for perplexity the same thing so then
+[00:34:35] this is what panal one said this is what
+[00:34:36] panelist 2 said here's what you said if
+[00:34:38] you want to use uh internet access by
+[00:34:40] the way on when you're using perplexity
+[00:34:42] um basically you want to click the one
+[00:34:43] that says online that's the only thing
+[00:34:45] that has it the way that you know that
+[00:34:47] is you can ask it a question like hey
+[00:34:48] what's the date and if it doesn't return
+[00:34:50] the date the way you can do that by the
+[00:34:51] way is you can let right click run this
+[00:34:54] module only and then it will fire off
+[00:34:55] automatically if you ask him a day it
+[00:34:56] will give you the correct dat if it's
+[00:34:58] connect to the internet and then guys
+[00:35:00] you just repeat the exact same process
+[00:35:02] again you come in here you come to this
+[00:35:06] guy okay we clim him we bring him over
+[00:35:08] we add him to the end of the line we pop
+[00:35:10] him in there we Auto align we come down
+[00:35:13] and then we just change the prompt and
+[00:35:14] we rename it so it's really clear so for
+[00:35:16] the final round what do we do we come
+[00:35:18] back over to uh this guy here like so
+[00:35:22] and let look at the prompt finally come
+[00:35:24] down you are roll one x e one here's
+[00:35:27] question your initial response um
+[00:35:30] panelist two here's their role and what
+[00:35:31] they said panelist three here's their
+[00:35:33] role what they said then I say second
+[00:35:36] round respones so this is the convers
+[00:35:38] this is what you're doing this is what
+[00:35:39] you're doing this is what happened in
+[00:35:40] round one boom this is what happened in
+[00:35:43] round two Boom for the final round then
+[00:35:46] we give it this prompt right State your
+[00:35:48] main takeaway from the discussion in one
+[00:35:50] sentence maximum 16 words directly
+[00:35:52] address and refute a specific argument
+[00:35:54] made by another panelist synthesize the
+[00:35:57] panel insight offer three concrete
+[00:35:59] actionable recommendations rank them in
+[00:36:01] order of importance present a brief
+[00:36:03] hypothetical scenario illustrating how
+[00:36:06] your top recommendation would play out
+[00:36:08] in a real world situation predict how
+[00:36:10] this topic might involve in 5 to 10
+[00:36:12] years you know conclude the powerful
+[00:36:13] motivational call to action briefly
+[00:36:15] acknowledge any limitations in your
+[00:36:16] position keep your response under 250
+[00:36:18] words use paragraphs blah blah blah blah
+[00:36:21] blah guys you copy and paste it and once
+[00:36:23] again you just change
+[00:36:25] around the order so you this this is
+[00:36:28] panelist one this is panelist three you
+[00:36:30] said this this is one and three and the
+[00:36:31] next one will be one and two right you
+[00:36:33] see come down there you go this is what
+[00:36:35] you said here's one this is what you
+[00:36:36] said here's one here's two cool and then
+[00:36:39] we end it with the web hook response and
+[00:36:41] that guys is the entire Automation in a
+[00:36:44] nutshell it's very cool potential's
+[00:36:45] insane I actually use this I've I've
+[00:36:47] used this like several times like after
+[00:36:50] making it I'm like cuz it's just so good
+[00:36:52] CU I've read through it I was like dude
+[00:36:53] this is like really helpful stuff I'm
+[00:36:55] going to improve on it by adding in a
+[00:36:57] research uh but as well to get like 10
+[00:36:59] bits of like data and then I'll be
+[00:37:01] feeding that data to the models so they
+[00:37:03] can like use that and I can get like
+[00:37:05] academic like academically enforced data
+[00:37:08] as well as the discussion across
+[00:37:09] different experts and different models
+[00:37:12] all right cool so what do we do now now
+[00:37:14] look I come back for the purposes of
+[00:37:15] this we're going to just do one round of
+[00:37:18] conversations and send it back over now
+[00:37:21] look at the end of it this whole thing
+[00:37:23] is bookmarked by these two web Hooks and
+[00:37:25] if I come down to see the web hooks let
+[00:37:26] me show you how it works look I come
+[00:37:28] down to web Hub response and check this
+[00:37:29] out look at this I've got
+[00:37:32] HTML oh my goodness what is going on
+[00:37:34] there's a lot of stuff going on there
+[00:37:35] okay look you're going to need custom
+[00:37:37] headers and a value type so you're going
+[00:37:40] to work with um basically Claude develop
+[00:37:43] that so basically what I would then
+[00:37:45] suggest you do is do this you come back
+[00:37:47] here and say look awesome PL the would
+[00:37:50] awesome
+[00:37:52] in I am and just explain your purpose so
+[00:37:55] I am using my.com
+[00:38:01] and web hugs to send and
+[00:38:04] receive
+[00:38:06] data I am I have
+[00:38:09] received excuse
+[00:38:11] me the
+[00:38:16] data from the website
+[00:38:20] successfully I now need to set the data
+[00:38:25] back to the website with the responses
+[00:38:29] for the chat okay um please do two
+[00:38:34] things actually do three things
+[00:38:38] okay number
+[00:38:40] one create
+[00:38:43] HTML for the web hook uh what's the name
+[00:38:46] of it the web hook response uh where are
+[00:38:50] we web hook response in
+[00:38:55] make and I'll say here are the
+[00:38:59] inputs now what do we do we need to give
+[00:39:01] the inputs okay now check this out um if
+[00:39:03] I come over here what you would then do
+[00:39:05] guys is basically come here we would get
+[00:39:08] for uh web hug like so we would say web
+[00:39:10] hug response all the information you've
+[00:39:12] got that you want to come back so you
+[00:39:13] could say look I want to know the expert
+[00:39:15] name I want to know this I want to know
+[00:39:16] that we can add all that in there so
+[00:39:18] look here's what you could say I would
+[00:39:20] say look uh let's go for go down to King
+[00:39:23] panel first go to content let's go to
+[00:39:29] okay expert one
+[00:39:33] boom expert 2 would be roll two and then
+[00:39:38] expert
+[00:39:41] three would be uh RW three and then I
+[00:39:44] would
+[00:39:46] say expert
+[00:39:49] On's response I'd come down excuse me oh
+[00:39:53] my goodness come down clae text response
+[00:39:56] Okay and like let's just copy that for
+[00:39:59] our own time sake expert 2's
+[00:40:02] response is this
+[00:40:04] one and
+[00:40:06] then expert 3's response
+[00:40:10] is choices
+[00:40:13] message content all right we copy that
+[00:40:18] so think about dat points you need put
+[00:40:19] it just in the body so you can get the
+[00:40:21] actual codes and let CLA do all the
+[00:40:23] heavy lifting for you okay here are the
+[00:40:24] inputs and just say I would like
+[00:40:32] okay come down like
+[00:40:36] this the second thing that we wanted to
+[00:40:38] do then is to amend the HTML code and
+[00:40:43] paste it in
+[00:40:46] for so that it can receive the data from
+[00:40:52] make um and then
+[00:40:54] present those answers
+[00:40:57] in the WhatsApp sh
+[00:41:03] chat and I could say please
+[00:41:06] include the speaker's
+[00:41:09] name or the expert's name just so we're
+[00:41:12] consistent uh and I'll zoom out and
+[00:41:14] resize in a second if you feel it's not
+[00:41:15] making sense and the third thing we need
+[00:41:16] to then do is basically say look do we
+[00:41:19] require any keys and basically any
+[00:41:22] custom head is including key and value
+[00:41:24] basically and then at this point let
+[00:41:26] come back over let's just take a little
+[00:41:30] screenshot uh show advanced
+[00:41:34] settings come over here grab
+[00:41:44] that sweet come back over to Cloud push
+[00:41:48] that in that's quite a beasy question
+[00:41:49] we've given it so then type in enter so
+[00:41:52] you've done three things okay one you've
+[00:41:53] said Lu we've tested and validated that
+[00:41:55] it can send the data agreed we now need
+[00:41:57] to test that it can receive the data so
+[00:41:59] we're saying update the code so it can
+[00:42:01] receive data number one number two what
+[00:42:04] is the actual thing I need to put in the
+[00:42:08] body tell me what that is and also tell
+[00:42:10] me what the keys and values are so I'm
+[00:42:12] saying I that's it three things one what
+[00:42:13] do I put here what do I put here and the
+[00:42:16] thir third thing is how do I change this
+[00:42:18] code so it canot receive it now
+[00:42:19] sometimes it will allow you to receive
+[00:42:21] but I'm just trying to help reduce your
+[00:42:22] error rate okay so I come back over then
+[00:42:24] let's have a look at what Claude is
+[00:42:26] doing and what it's saying
+[00:42:28] now look it's done it cool the HTML code
+[00:42:30] for response and make.com Boom come on
+[00:42:33] here let's have a
+[00:42:35] look all right sweet so we just what
+[00:42:38] come to the code and all we do is we
+[00:42:40] copy the contents and we come back over
+[00:42:42] to our new which is this one I believe
+[00:42:45] isn't it yeah sweet come here in the
+[00:42:48] body there you go boom you can
+[00:42:51] see excellent nice now what do we need
+[00:42:54] for the key headers right let's check
+[00:42:56] that out and just come back over into
+[00:43:01] Cloud okay so let's have a look
+[00:43:04] application Json I'm just going to come
+[00:43:06] back to that in a second because it's
+[00:43:07] put it in JavaScript um let me just see
+[00:43:11] what it's done on here so first let's do
+[00:43:12] the um HTML web hook integration bit
+[00:43:15] first come down to
+[00:43:18] code okay sweet so what we do is we come
+[00:43:21] down we copy the contents come back over
+[00:43:23] to the website which is available here
+[00:43:28] click on this guy one of the little
+[00:43:30] things you'll notice sometimes it will
+[00:43:31] love to change it to uh JavaScript
+[00:43:35] instead of HTML very cheeky very very
+[00:43:37] cheeky indeed so I'm just going to save
+[00:43:39] you a little bit of time with
+[00:43:42] that okay cool so that's up and running
+[00:43:44] that's cool get rid of this guy come
+[00:43:46] back over now for Claude I just say hey
+[00:43:49] uh on the make integration
+[00:43:57] all be HTML and I'll just
+[00:44:00] yeah there is
+[00:44:02] no
+[00:44:05] JavaScript in the website
+[00:44:09] or please
+[00:44:12] clarify what you
+[00:44:15] would the key and
+[00:44:18] value in the make
+[00:44:20] module boom send that over any guys this
+[00:44:24] is what it it's just back and forth it's
+[00:44:25] basically ask it questions it do it
+[00:44:27] sometimes it gets a little cheeky does
+[00:44:29] some different bits and pieces so there
+[00:44:31] you go let's have a look for the custom
+[00:44:32] headers uh this is what it requires us
+[00:44:34] to do all right
+[00:44:37] sweet okay so before it now so now it's
+[00:44:40] had to re-edit the code for all of it
+[00:44:41] which is excellent normal ordinary guys
+[00:44:43] if you come up against a barrier just
+[00:44:45] say hey it isn't working and just ask it
+[00:44:47] the question so it's a little bit of
+[00:44:49] test and answer so let's update all
+[00:44:50] three things okay number one is to make
+[00:44:53] web hook Response Code so come here copy
+[00:44:57] that let's do make first come back over
+[00:44:59] come
+[00:45:00] here boom okay that's better then we've
+[00:45:02] got key and value so let's go check out
+[00:45:04] what those two things are so for the key
+[00:45:06] we want the content type
+[00:45:09] excellent and then for the value we want
+[00:45:14] this and then we
+[00:45:19] click okay incredible now we come back
+[00:45:22] over and let's have a look at the um
+[00:45:25] updated WhatsApp style chat
+[00:45:27] come to code copy it and then we're
+[00:45:30] going to do is going to come back over
+[00:45:31] then to our beautiful website which by
+[00:45:34] the way guys you can do so much stuff
+[00:45:36] with this website like it's ridiculous
+[00:45:38] it's so customizable for so many things
+[00:45:39] you can choose again I'm just showing
+[00:45:41] you the bare bur so you can have a
+[00:45:42] little bit of fun with it come down
+[00:45:43] click done come up click save click
+[00:45:46] publish give it a sack it's like working
+[00:45:48] in the background having a good time and
+[00:45:50] let's go visit
+[00:45:52] it all right now it's time for obviously
+[00:45:56] we need we need to like change the code
+[00:45:58] for this it's like V2 by by V6 so my
+[00:46:01] dogs like trying to come in the door I
+[00:46:03] I'll go catch him lit two se but look so
+[00:46:05] let's just test this whole thing works
+[00:46:06] and automatically Guys these web HS can
+[00:46:07] running perfect in the background all
+[00:46:09] the time automatically so now is the
+[00:46:11] moment of truth let's see that it works
+[00:46:12] let's refresh the page one more time and
+[00:46:14] then give it a question like could I buy
+[00:46:17] MAC or
+[00:46:20] Windows I am very Tech
+[00:46:24] literate and we click Send
+[00:46:28] so not much has happened it say it's
+[00:46:29] accepted so we've lost some of our
+[00:46:31] emojis that happens sometimes guys is
+[00:46:32] that when it does code other things drop
+[00:46:34] out now look at this kingom has created
+[00:46:37] basically the prompt for us which is
+[00:46:38] great we got a tech company we've got
+[00:46:41] rown computer science professor and
+[00:46:43] we've got a Professional Services
+[00:46:44] developer claude's done it chat tbt's
+[00:46:47] done it llama's done it and it sent
+[00:46:49] something back to the website so I head
+[00:46:50] back over and out to the website what do
+[00:46:52] we see so nothing has reappeared on the
+[00:46:54] website do you know what guys that is
+[00:46:56] perfectly okay if I click on the status
+[00:46:58] here status 200 everything should be
+[00:47:00] fine so what do we do we just come back
+[00:47:02] to Whatsapp we say hey the make
+[00:47:05] automation worked well
+[00:47:08] however the messages did not appear in
+[00:47:13] the
+[00:47:15] website please
+[00:47:17] rewrite the entire HTML
+[00:47:22] code to
+[00:47:25] ensure that it both
+[00:47:27] sends and receives the
+[00:47:31] data please
+[00:47:33] also add in a 30- second timer that
+[00:47:39] stops once the data
+[00:47:43] appears uh let's also add the confetti
+[00:47:47] Emoji confetti
+[00:47:49] animation on submission back
+[00:47:52] in remove all of the dead white space
+[00:47:56] under
+[00:47:57] underneath the submission
+[00:48:01] bar boom hit enter now it will revise
+[00:48:04] the code for us like and basically this
+[00:48:06] is how it works like it will sometimes
+[00:48:09] it's like three steps forward one step
+[00:48:10] back in terms of the code but you basic
+[00:48:12] be very specific and that's why I
+[00:48:14] encourage you when you get working code
+[00:48:15] for that just Bank it to side one side a
+[00:48:17] little bit and you can even start to
+[00:48:18] edit little bits in particular but if
+[00:48:21] you're good with your prompt it should
+[00:48:23] work perfectly I can see our uh thing
+[00:48:25] there which is cool so what we do we
+[00:48:26] just come down we copy the contents uh
+[00:48:29] let's head back over now to the website
+[00:48:30] let's edit the um let's edit the code
+[00:48:34] come back down come down to the code
+[00:48:35] come on the left hand side oops I think
+[00:48:37] I I accidentally puted the wrong button
+[00:48:39] that one sec let's come back over let's
+[00:48:41] copy it again come back
+[00:48:44] over get rid of it paste it done we save
+[00:48:48] it we publish the
+[00:48:50] changes we let it load a little bit in
+[00:48:52] the background we view it
+[00:48:57] and there we go it's actioned it I mean
+[00:48:58] how cool is that I mean this can
+[00:48:59] literally do anything that you want it
+[00:49:00] to so what do we do we come back over
+[00:49:02] then to make and by the way you can see
+[00:49:04] this stuff is working so look good
+[00:49:05] evening I'm Dr SM the Chan for Tech
+[00:49:07] liter individual the choice P Mac
+[00:49:08] Windows large depends on blah blah blah
+[00:49:10] what do we do we run this once wait for
+[00:49:12] new data and I'll ask it can I get a
+[00:49:15] sixpack in six months question ready
+[00:49:20] then we send boom conve emojis back time
+[00:49:22] remaining 29 seconds so we add time
+[00:49:24] isn't how Cool's that we come back over
+[00:49:26] now to the modu mod look at this we got
+[00:49:28] the prompts created Jason done its work
+[00:49:29] now it's going through each P's
+[00:49:31] discussion now guys the only reason it's
+[00:49:32] taking this much time is cuz we've got
+[00:49:33] all these language models right doing
+[00:49:35] different questions and stuff you could
+[00:49:37] actually use this to get a database so
+[00:49:39] in other words you could send this to
+[00:49:40] air table to retrieve information from a
+[00:49:43] client and spit it back dynamically in
+[00:49:45] like a couple seconds Max how crazy is
+[00:49:47] that the webook response been sent back
+[00:49:49] let's see if it appears in the web page
+[00:49:51] we come here and look at this guys world
+[00:49:54] renowned exercise phys olist Dr Sarah
+[00:49:57] Muson here exercise specializing your
+[00:49:59] muscle Hy hyper hypertrophy and body
+[00:50:02] composition changes with two decades
+[00:50:04] research blah blah blah can you get six
+[00:50:06] pack in six months absolutely but it
+[00:50:07] requires dedication holistic reproach
+[00:50:09] blah blah blah and essentially guys you
+[00:50:10] can then just work with CLA the trategy
+[00:50:12] BT to finesse and adapt this however you
+[00:50:15] want to so for example align it to the
+[00:50:17] left use these different colors for
+[00:50:18] these hex codes um do this emotion you
+[00:50:20] know this Emoji make this animation
+[00:50:22] better essentially the world is your
+[00:50:24] oyster the biggest thing I want you to
+[00:50:26] take away from this video is the fact
+[00:50:27] that you can have a user input on a
+[00:50:29] website we can send it to me.com we can
+[00:50:32] get AI involvement to automate anything
+[00:50:34] like this could be a business idea like
+[00:50:35] you know type in your podcast details
+[00:50:37] here like you type in a video for your
+[00:50:39] podcast we scrape the video we turn it
+[00:50:41] into 50 viral tweets we send it straight
+[00:50:44] back out we can take payments from them
+[00:50:45] we can do so many incredible things I
+[00:50:48] hope you see the potential list because
+[00:50:49] it's so so good but any case guys I hope
+[00:50:51] you have a wonderful week hopefully my
+[00:50:53] voice is better next time and I'll see
+[00:50:55] you in my next video yeah

@@ -1,0 +1,60 @@
+﻿Create 5 Summaries ⭐️
+
+
+
+
+
+
+Please create a JSON array from the following content. Ensure that the JSON is properly formatted and includes valid key-value pairs for each section, with the keys being "content".
+
+
+Do not include any additional information, only the JSON output. No other text is required.
+
+
+Ensure that the JSON is properly formatted and includes valid key-value pairs for each section, with the key being "content". Also, make sure all keys and string values are enclosed in double quotes, and the JSON structure is correctly closed.
+
+
+Your task is to act as a blog summarization agent. You will receive the full text of a blog post. After analyzing the post, generate 5 separate summaries, each focusing on a different key topic or theme from the article.
+
+
+Each summary should be roughly 100 words, capturing the essential points related to that specific topic from the blog post.
+
+
+Each summary must make sense if read on its own without any other context.
+The topics you choose should be the 5 most important or prominent themes covered.
+Aim to provide a comprehensive yet compact overview through your 5 topic-focused summaries. Vary the start of each summary to keep them engaging.
+
+
+Do not include any additional information, only the outputs in the specified format.
+If there is data in the extract referring to the website or the domain, you can disregard that. Remember, we want only to create the posts from the article. This means there may be non-relevant information in the text you receive.
+Your output must be in JSON.
+
+
+Each of the 5 points must separate distinct in the information; do not repeat the same information in each.
+
+
+Format your response like this:
+
+
+```json
+[
+    {
+        "content": "News Corp and OpenAI have announced a historic, multi-year partnership aimed at integrating News Corp’s news content into OpenAI’s offerings. This partnership will allow OpenAI to utilize content from News Corp mastheads in its responses to user queries. The collaboration's goal is to provide users with reliable information and enhance decision-making capabilities. OpenAI will get access to both current and archived content from major News Corp publications, which include The Wall Street Journal, Barron’s, MarketWatch, The New York Post, and many others."
+    },
+    {
+        "content": "Through this partnership, OpenAI will gain access to News Corp’s extensive library of current and archived news content. Publications included in this deal span major names such as The Wall Street Journal, MarketWatch, The Times, The Australian, and several others. This comprehensive access aims to provide users of OpenAI’s platforms with high-quality, reliable news sources, enhancing the depth and breadth of information available."
+    },
+    {
+        "content": "A significant aspect of the partnership is News Corp’s commitment to sharing its journalistic expertise with OpenAI. By doing so, both entities aim to uphold and enhance the highest standards of journalism within OpenAI’s offerings. This collaboration is set to establish new benchmarks for accuracy, integrity, and value in the digital era, ensuring content remains trustworthy and insightful."
+    },
+    {
+        "content": "Robert Thomson, Chief Executive of News Corp, expressed his optimism about the partnership, emphasizing the expected benefits in terms of setting new standards for veracity and value in digital journalism. Sam Altman, CEO of OpenAI, also highlighted the importance of this collaboration for advancing journalism and technology. He noted that News Corp’s role as a global news leader would significantly enhance OpenAI users' access to quality reporting."
+    },
+    {
+        "content": "This partnership between News Corp and OpenAI signifies a milestone in the integration of journalism and technology. Both companies are jointly committed to creating and delivering high-quality journalism through advanced AI tools. This collaboration is seen as a foundation for a future where AI technology not only respects but also enhances journalistic standards, fostering an environment of reliable and insightful information dissemination."
+    }
+]
+```
+
+
+Here is the blog: {{3.data}}

@@ -1,0 +1,169 @@
+{
+  "name": "Competitor Intelligence",
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/compass~google-maps-reviews-scraper/runs",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token",
+              "value": "INSERT API KEY"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"language\": \"en\",\n  \"personalData\": true,\n  \"startUrls\": [\n    {\n      \"url\": \"https://www.google.com/maps/search/?api=1&query=UltraFlex%20-%20Gym%20in%20Leeds&query_place_id=ChIJldvlVADie0gR7Z8S-EiqObY\",\n      \"method\": \"GET\"\n    }\n  ]\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        20
+      ],
+      "id": "53855594-6ab1-416a-bb82-74104dd439a1",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.apify.com/v2/actor-runs/{{$node[\"HTTP Request\"].json[\"data\"][\"id\"]}}/dataset/items?token=INSERT_API_TOKEN",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "token"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "ultraflex_reviews.json"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        460,
+        20
+      ],
+      "id": "58d44006-356f-4639-9e92-cd3bead9b103",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -40,
+        20
+      ],
+      "id": "02c1e0d6-90cf-4b57-bbd0-874f6f189bcb",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {
+    "HTTP Request": [
+      {
+        "json": {
+          "data": {
+            "id": "qjDvwi2Ykd2GVNGgC",
+            "actId": "Xb8osYTtOjlsgI6k9",
+            "userId": "xlcznw2nRCYkeOgdX",
+            "startedAt": "2025-04-09T12:32:52.253Z",
+            "finishedAt": null,
+            "status": "READY",
+            "meta": {
+              "origin": "API",
+              "userAgent": "axios/1.7.4"
+            },
+            "stats": {
+              "inputBodyLen": 267,
+              "rebootCount": 0,
+              "restartCount": 0,
+              "resurrectCount": 0,
+              "computeUnits": 0
+            },
+            "options": {
+              "build": "latest",
+              "timeoutSecs": 36000,
+              "memoryMbytes": 4096,
+              "maxItems": 73973,
+              "diskMbytes": 8192
+            },
+            "buildId": "JDagueJR1vcaH8RUO",
+            "defaultKeyValueStoreId": "2YYqdFOab18GGKuFd",
+            "defaultDatasetId": "eFSZEsow4RhVZPwnp",
+            "defaultRequestQueueId": "2gDqLm3LUOYwz311D",
+            "pricingInfo": {
+              "pricingModel": "PRICE_PER_DATASET_ITEM",
+              "pricePerUnitUsd": 0.0005,
+              "reasonForChange": "",
+              "unitName": "reviews",
+              "startedAt": "2024-08-15T00:00:00.000Z",
+              "createdAt": "2024-08-01T08:37:56.581Z",
+              "apifyMarginPercentage": 0.2,
+              "notifiedAboutFutureChangeAt": "2024-08-01T08:38:20.075Z",
+              "notifiedAboutChangeAt": "2024-08-15T00:09:19.252Z"
+            },
+            "buildNumber": "0.0.202",
+            "containerUrl": "https://e15tgmyhrngt.runs.apify.net"
+          }
+        }
+      }
+    ]
+  },
+  "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        []
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "de67dd2f-f250-4589-b22c-a5e88bcd7e48",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "EJ3rEjrNWesSbI72",
+  "tags": []
+}

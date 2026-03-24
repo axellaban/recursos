@@ -1,0 +1,2173 @@
+[00:00:00] in this video I'm going to show you step
+[00:00:01] by step how you can build and deploy an
+[00:00:03] AI SAS company that you can then use and
+[00:00:05] actually create thousands of dollars in
+[00:00:07] subscription income I'm going to show
+[00:00:09] you how you do everything step by step
+[00:00:11] terms of my background I built a tech
+[00:00:12] company before a SAS product um you know
+[00:00:14] we've done multiple six figures I did a
+[00:00:16] seven figure deal in fact and also had
+[00:00:18] over 880,000 customers but what I want
+[00:00:20] to do with this one is try to help you
+[00:00:22] go from zero to hero and keep it as
+[00:00:25] simple as possible and I'll show you
+[00:00:27] exactly how you build this entire thing
+[00:00:29] step by step and in this video I'm going
+[00:00:30] to show you how you can deploy loads
+[00:00:32] multiple in fact to bespoke AI
+[00:00:34] applications any ideas that you've got
+[00:00:35] like this one for example is a body fat
+[00:00:37] percentage tracker and we could have all
+[00:00:39] these different bespoke air applications
+[00:00:41] on different pages of our website all
+[00:00:44] behind a subscription income that we get
+[00:00:46] from customers now the way that I like
+[00:00:48] to kind of think about it is that like
+[00:00:49] I'll show you how you could build these
+[00:00:51] individual a applications on either
+[00:00:53] multiple different pages or build one in
+[00:00:55] a lot of dep I'll show you how we're
+[00:00:56] going to design it to get signups I'll
+[00:00:57] show you the back end and the database
+[00:00:59] that we're going to be using as well as
+[00:01:01] how we're actually going to use this to
+[00:01:02] generate and get subscription income and
+[00:01:04] create those products my name is Jack my
+[00:01:06] YouTube channel and my school Community
+[00:01:07] are all about three things we're about
+[00:01:09] the latest AI we're about incredible
+[00:01:12] automations but most importantly we are
+[00:01:14] about the stuff that actually works so
+[00:01:16] if you haven't already grab that coffee
+[00:01:19] and let's dive straight in and before we
+[00:01:20] get started I just want to call out
+[00:01:21] somebody in my community who's an
+[00:01:23] absolute Superstar no I'll share this
+[00:01:25] video down below where he shares his
+[00:01:26] Tech stack and how he developed his he's
+[00:01:28] done something slightly different I
+[00:01:30] think that could be a value to you so
+[00:01:31] I'll put link down below it's really
+[00:01:32] worth checking out and kind of help me
+[00:01:34] Inspire actually how I laid this out to
+[00:01:36] make it as visually interesting as
+[00:01:37] possible now what I'm going to do I want
+[00:01:39] to start a big picture because I'm not a
+[00:01:40] coded by a Trader I don't code so I want
+[00:01:42] to give you the kind of framework to
+[00:01:44] understand what we're doing and then
+[00:01:46] once I've given you the framework what
+[00:01:47] we're going to do is there's AI Jack
+[00:01:49] Superman with his AI sass sign we're
+[00:01:51] just going to work through it step by
+[00:01:52] step so at the end of it you'll have
+[00:01:53] everything you need to build your own
+[00:01:55] bespoke application and the
+[00:01:56] opportunities for this are simply
+[00:01:59] ridiculous so so what are we using and
+[00:02:00] why so what this is missing is the
+[00:02:02] marketing bit at the front end but we
+[00:02:04] can touch on that later and we've got
+[00:02:05] some interesting resources and stuff
+[00:02:06] like that in the community for how you
+[00:02:08] scale an AI business from not doing
+[00:02:09] anything to making some good income so
+[00:02:12] software side we're going to use two
+[00:02:14] pieces of software one of them is this
+[00:02:16] thing here called the softer Studio not
+[00:02:18] softer essentially think of it like it's
+[00:02:21] like a drag and drop database that
+[00:02:23] enables customers to sign up it enables
+[00:02:25] us to integrate with things like air
+[00:02:27] table which is like an Excel spreadsheet
+[00:02:29] it en us to integrate databases and
+[00:02:31] stripe and lots of other pieces of
+[00:02:33] software think of it as like the
+[00:02:34] structure of the house the building
+[00:02:36] blocks for our house this is what's
+[00:02:38] basically where the customer going to
+[00:02:39] come they're going to sign up and we can
+[00:02:41] deploy within software multiple
+[00:02:44] different uh AI either services or
+[00:02:47] different pages or we could have one
+[00:02:48] product we can build as many pages as we
+[00:02:50] like it isn't as configurable as an
+[00:02:54] incredible website you could build in
+[00:02:55] like card or WordPress but it is
+[00:02:57] incredible for the backbones and
+[00:02:58] managing the customers and getting in
+[00:03:00] there so we're going to do the front end
+[00:03:02] with that with with softer what I'm
+[00:03:04] going to do throw on top of that is
+[00:03:05] another layer which is card so card is
+[00:03:08] this incredibly like incredibly
+[00:03:10] accessible website build it's drag and
+[00:03:12] drop it's like 10 bucks or 12 bucks for
+[00:03:14] the year or something extortionately
+[00:03:16] simple and really cheap like that maybe
+[00:03:17] 50 bucks actually yeah it's like 50
+[00:03:19] bucks to you but the point is you can
+[00:03:21] use this as our front end something
+[00:03:22] Jazzy something stylish more
+[00:03:24] configurations we can use that as a
+[00:03:26] front end get them in and then they can
+[00:03:27] come and join our kind of our soft
+[00:03:29] application to get it nailed not
+[00:03:31] necessary but I'll just show it you so
+[00:03:32] you've got those tools in your toolkit
+[00:03:34] if you would like to use them and then
+[00:03:36] for automation this is where the magic
+[00:03:39] happens in make.com which is our noode
+[00:03:41] automation um platform so for example
+[00:03:44] we're going to be using web hooks we're
+[00:03:45] going to be integrating with air table
+[00:03:48] this is going to be really interesting
+[00:03:49] module and I'm going to show you two
+[00:03:51] different ones that we've got here for
+[00:03:53] example the the the example I'm going to
+[00:03:55] show you is a physique analysis so for
+[00:03:57] the purposes of this video we're going
+[00:03:58] to build a AI image Vision kind of
+[00:04:02] software that essentially what will
+[00:04:03] happen is you will give it let's say a
+[00:04:06] photo of your physique okay and what the
+[00:04:10] AI will do is Analyze That physique and
+[00:04:12] then tell you what it perceives to be
+[00:04:13] your body fat percentage and we're going
+[00:04:15] to give the users a dashboard here these
+[00:04:17] are just sample images by the way that I
+[00:04:18] I threw in there and we can track then
+[00:04:21] your body fat percentage as you go
+[00:04:22] through so think of this is like an AIP
+[00:04:25] and on top of that what we can also do
+[00:04:27] is enter our email and get different
+[00:04:28] data and get that kind kind a dynamic
+[00:04:30] graph of how we're tracking and we can
+[00:04:32] also upload our images how we're feeling
+[00:04:34] this week and then get a unique
+[00:04:36] dashboard based on our progress photo so
+[00:04:38] clients can actually see everything
+[00:04:40] they've uploaded this is just an example
+[00:04:42] but you could use this for interior
+[00:04:44] design essentially guys we can give to
+[00:04:46] the user a bspoke like you know
+[00:04:49] basically a kind of repertoire of all
+[00:04:50] the stuff we've uploaded and give them
+[00:04:51] unique AI applications based on what
+[00:04:53] they want which I think is pretty epic
+[00:04:55] and hopefully you can see like the
+[00:04:57] number of possibilities with that
+[00:04:58] technology wise going to use chat GPT so
+[00:05:00] that's going to be the kind of brain of
+[00:05:02] our operations we can make that as
+[00:05:03] complex or as simple as we like the
+[00:05:05] reality is most people think it's a lot
+[00:05:08] more complex than it actually is but
+[00:05:10] this is going to be our brains we could
+[00:05:11] train out loads of data we could do you
+[00:05:13] know literally unlimited number of
+[00:05:14] things if you've been around the channel
+[00:05:16] you you'll have a good idea of the stuff
+[00:05:17] we can do for storage we need a database
+[00:05:20] which is going to be air table not air
+[00:05:22] table obviously as I always say Google
+[00:05:23] Sheets on steroids uh if you're not
+[00:05:25] familiar with it it's like Excel but a
+[00:05:27] million times better we can upload
+[00:05:28] images to it uh this this is basically
+[00:05:30] where we're going to keep track of all
+[00:05:31] the customers that we have and all of
+[00:05:33] the conversations they have with us
+[00:05:35] throughout the course of the hopefully
+[00:05:36] long and wonderfully enjoyable
+[00:05:39] subscription with this AIP business that
+[00:05:41] we're developing and finally guys strive
+[00:05:43] it's like the one of the biggest payment
+[00:05:44] processes it's pretty straightforward
+[00:05:46] and pretty Ace now let's go through this
+[00:05:48] step by step and I've tried to let it
+[00:05:50] out in a way that is simple now you can
+[00:05:52] get really complicated with this but I
+[00:05:54] think I'd rather get you started get you
+[00:05:56] up and running and then we can add
+[00:05:57] further complexity onto it now I won't
+[00:05:58] spend too much time on the sexy front
+[00:06:01] end there's many options for this but
+[00:06:02] when you're thinking about the front
+[00:06:03] page of your website because ultimately
+[00:06:05] all of this is in service off getting
+[00:06:06] you more income or improving your
+[00:06:07] business there's typically four key
+[00:06:09] things that you want to do with the
+[00:06:11] website the first one is explain what it
+[00:06:14] is explain what it is in simple terms so
+[00:06:15] people can actually get what it's about
+[00:06:16] we want to have we want to if we can
+[00:06:18] have social proof so here's Billy Boo
+[00:06:21] the same situation as you they've
+[00:06:22] smashed it now it's all going well
+[00:06:23] explain how it works and make an offer
+[00:06:26] so good that they would feel stupid
+[00:06:28] saying though that they will really want
+[00:06:29] to click will leverage urgency and
+[00:06:31] scarcity to do that so if you head over
+[00:06:33] to card with 2 RS this is just like a
+[00:06:35] template that I chose you can literally
+[00:06:37] go through find the ones that you want
+[00:06:38] there's so many great examples of
+[00:06:40] websites that are crushing it this step
+[00:06:42] is optional it just depends if you want
+[00:06:44] something more configurable you want to
+[00:06:45] try different things out it's completely
+[00:06:47] your call so you go over to card.co I'll
+[00:06:48] put description all the links in the
+[00:06:50] description down below so you can select
+[00:06:51] it enil it pick one that you like you
+[00:06:53] open it up and then it's super super
+[00:06:55] easy to configure you can change the
+[00:06:57] text you can change loads of different
+[00:06:58] aspects of the website so this one's
+[00:07:01] optional you can go straight to soft if
+[00:07:02] you want to but this is just if you want
+[00:07:03] more configurability it's there and it's
+[00:07:05] ready to go so cool we'll say that card
+[00:07:08] tick complete we love it now we're going
+[00:07:11] to start off with the database and air
+[00:07:13] table for this so how do we do that
+[00:07:14] let's get over to a table and build out
+[00:07:17] this beautiful uh this beautiful
+[00:07:19] database we come down to the bottom left
+[00:07:20] we going hit create and we're going to
+[00:07:22] start from scratch so we'll call this
+[00:07:24] one the AI
+[00:07:27] PT which by the way I I actually you
+[00:07:30] know I made this cuz think what would be
+[00:07:31] a really cool interesting business and I
+[00:07:33] wanted to do something that really lent
+[00:07:35] on Vision because I think vision is
+[00:07:36] really underutilized as a business idea
+[00:07:39] I've also pulled together a list of like
+[00:07:40] 50 different ideas you could do if
+[00:07:42] you're thinking of sasses I'll put a
+[00:07:43] link Down Below in the description so
+[00:07:45] you can grab that if you're thinking of
+[00:07:46] different ideas so we've got the AIP now
+[00:07:49] the question is what Fields do we need
+[00:07:51] for this so I've got the one I made
+[00:07:52] earlier so we're going to have two tabs
+[00:07:54] the first one is going to be called
+[00:07:56] customers okay now this is going to be
+[00:07:58] when we get a new client a new signup of
+[00:08:00] which I'm sure there'll be many for your
+[00:08:02] fledging wonderful business they'll all
+[00:08:04] get added into this section which is
+[00:08:06] excellent so let's see what Fields we're
+[00:08:07] going to want we want the name the email
+[00:08:09] and a unique ID okay awesome so we got
+[00:08:12] name wonderful we'll put a little uh
+[00:08:15] Little Wave there we'll come on here we
+[00:08:17] going to go for email and then we want
+[00:08:18] to create unique ID so put unique ID
+[00:08:20] here for this we're going to come to
+[00:08:21] user want to type in formula and then
+[00:08:24] we're just going to type in record ID
+[00:08:25] and this will create like a random ID
+[00:08:27] for us so we'll have a unique identifier
+[00:08:29] for every customer to create and now you
+[00:08:31] have that you can use it in multiple
+[00:08:32] parts of the scenario again millions of
+[00:08:34] ways that you can do this and then we
+[00:08:35] want to get membership so call this one
+[00:08:37] membership like so we'll call this one
+[00:08:41] paying
+[00:08:44] subscriber like so and should good a
+[00:08:47] little cash Emoji for good
+[00:08:50] thing and then we'll have free if
+[00:08:53] they're not paying their membership fees
+[00:08:56] which I'm sure they will do for your
+[00:08:57] beautiful business and then we're just
+[00:08:58] going to add two more fields one is
+[00:08:59] going to be date excuse me uh create a
+[00:09:04] Time awesome and then finally just add
+[00:09:07] last modified time like so cool awesome
+[00:09:09] so this is going to be table one and
+[00:09:10] then next one we're going to add then is
+[00:09:12] up here start from scratch the second
+[00:09:15] one we're going to call is client
+[00:09:16] history like so let's come back over
+[00:09:19] beautiful and obviously guys you can
+[00:09:20] configure these are things that you want
+[00:09:22] that you'll need with your particular
+[00:09:23] thing but there's some that will be
+[00:09:24] universally helpful across every single
+[00:09:26] one so we got email the question and
+[00:09:29] phys image so for instance okay um I'm
+[00:09:34] I've set this up in a way that look I
+[00:09:35] want them to submit an image so what
+[00:09:38] I've said here is I've got the question
+[00:09:40] this could be for example if let's say
+[00:09:41] you want your client to be able to in
+[00:09:43] your dashboard say hey Jack um how do I
+[00:09:45] do ABC or like could you do this so Bas
+[00:09:47] think about what you want the user input
+[00:09:49] to be for me it's about because it's an
+[00:09:51] IP it's like how has your week been and
+[00:09:53] then also show me a physique update so
+[00:09:55] for example from that we could then use
+[00:09:57] that to inform a greater like AI Strate
+[00:09:59] for that individual so I've just called
+[00:10:01] this question and physique image so
+[00:10:04] we'll put question down here with a
+[00:10:07] question here but again this will be
+[00:10:08] just different based on whatever your
+[00:10:10] particular SAS idea is and then we'll
+[00:10:12] just say physique image and then let's
+[00:10:16] just put maybe like a strong I don't
+[00:10:18] know like a nice strong thing there cool
+[00:10:20] and then we want this one to be
+[00:10:22] attachment so then we can actually see
+[00:10:24] the image within the air table and also
+[00:10:26] just makes it easier when linking back
+[00:10:27] up and then we've got AI advice body fat
+[00:10:30] percentage and then the day cool all
+[00:10:32] right so let's go for AI advice this is
+[00:10:34] going to be what our beautiful
+[00:10:35] automation
+[00:10:37] says cool and then we're going to add
+[00:10:39] another one in there this one's going to
+[00:10:41] be body fat percentage again guys this
+[00:10:44] is just this is just one random idea
+[00:10:47] obviously you can kind of like do this
+[00:10:48] in a million different ways um awesome
+[00:10:51] long text that's fine and our last
+[00:10:53] column is going to be created time like
+[00:10:56] so
+[00:11:00] beautiful and you have officially
+[00:11:01] created your very first database as part
+[00:11:05] of this automation insane so we can head
+[00:11:07] back over to our beautiful list now we
+[00:11:08] built the database incredible now the
+[00:11:10] next thing you want to do is head over
+[00:11:11] to softer okay let's head over there now
+[00:11:14] so we arrive on softer cool so let's
+[00:11:16] start off with you'll create a page for
+[00:11:18] free I'm just going to log in because
+[00:11:20] I've got it I've got a few different
+[00:11:22] apps here so let's create a new app and
+[00:11:23] we'll start from scratch we come over
+[00:11:26] here and let's pick the ones that we
+[00:11:27] need so let's get rid of these
+[00:11:29] um yes want use a profile sign in sign
+[00:11:32] up reset and forgot password will be
+[00:11:34] important and then the homepage that's
+[00:11:36] cool and then click on create
+[00:11:40] application also by the way guys I sound
+[00:11:42] a bit funny it's a dentist this morning
+[00:11:44] so like half my face was numb I was like
+[00:11:46] drinking and water was falling out one
+[00:11:48] side so I was like oh my goodness this
+[00:11:49] is crazy so let me just help you with
+[00:11:52] the UI of this and know what this looks
+[00:11:53] like okay so looks a bit complicated
+[00:11:55] it's actually really straightforward
+[00:11:56] when you spend five minutes with it so
+[00:11:58] on the left we have Pages this is every
+[00:12:01] page in your application to add a new
+[00:12:03] page it's as simple as clicking this add
+[00:12:04] new page button like so giving it a name
+[00:12:06] like boom URL is boom and all of a
+[00:12:10] sudden guys boom is now there and that
+[00:12:12] could be that's how you build Pages
+[00:12:13] really really straightforward and you
+[00:12:14] can delete it like that that
+[00:12:15] straightforward we've got the theme so
+[00:12:17] we can set things that we want now we're
+[00:12:20] not Savages so we're not going to be
+[00:12:22] using inter we're going to be using
+[00:12:23] Monster app and dude immediately this
+[00:12:25] website just got twice as successful
+[00:12:27] going to body that's also go for monster
+[00:12:29] at just little things like you little
+[00:12:32] things like font make a huge difference
+[00:12:34] accent I quite like uh I think pink is
+[00:12:36] quite in for this at the moment so let's
+[00:12:38] just go for a nice beautiful shiny pink
+[00:12:40] or we could do yellow actually we'll do
+[00:12:42] pink pink is perfect all right sweet so
+[00:12:45] we find nice beautiful ping that's fine
+[00:12:46] come off that that's Ace you can put the
+[00:12:48] Sid the roundness you can basically
+[00:12:50] decide all these little bits and pieces
+[00:12:52] and then we click save like that how
+[00:12:54] cool is that and you can follow this
+[00:12:55] little guide on the right hand side if
+[00:12:56] you want to I might be obscuring it with
+[00:12:58] my Rainbow Road but you kind of get the
+[00:13:00] idea users is how we create user groups
+[00:13:02] and we're going to sync it with a data
+[00:13:04] source in a second so you can check out
+[00:13:06] what that looks like and then we've got
+[00:13:07] settings at the bottom where we can
+[00:13:08] track in loads of different things like
+[00:13:09] Integrations and add lots of bits and
+[00:13:11] pieces now what we're going to do is
+[00:13:13] basically sync this with our data source
+[00:13:15] so what this will do now you see that
+[00:13:17] database that you just created in air
+[00:13:19] table right let me come back over and
+[00:13:20] show you where are we the aipt let me
+[00:13:23] let me pin this other one here now let's
+[00:13:26] create a couple of random people okay
+[00:13:29] let's go for Jason
+[00:13:33] Bourne okay we love a good Jason Bourne
+[00:13:35] we'll call him GB at
+[00:13:38] outlook.com next one we'll call Matt
+[00:13:42] flowers who are these people who are
+[00:13:44] these people I have no idea Matt flowers
+[00:13:48] outlook.com do you know what's really
+[00:13:49] exciting about this automation guys is
+[00:13:51] the AI application side of it like
+[00:13:53] because it gives you the structure right
+[00:13:56] um so go this one Sarah and
+[00:13:59] Sarah an oh my goodness Sarah an okay we
+[00:14:02] go and call this one Sarah
+[00:14:04] an and this one can be from Gmail just
+[00:14:07] for some diversity and some interesting
+[00:14:09] aspects cool so we've got these
+[00:14:10] different emails here so what we're
+[00:14:11] going to do is sync it with our
+[00:14:13] application so whenever somebody creates
+[00:14:15] now an account on our new and beautiful
+[00:14:18] website so I'm going to publish this
+[00:14:19] very even though we're not even ready
+[00:14:20] yet I'm publishing it I'm just going to
+[00:14:22] jump there you go confetti you know I
+[00:14:24] love my confetti I love my confetti open
+[00:14:26] a new tab now check this out guys uh I
+[00:14:29] come to sign up now whenever somebody
+[00:14:31] comes on here and look how clean this is
+[00:14:32] guys you'd have to pay Developers for
+[00:14:34] this sort of stuff but it's available
+[00:14:35] for free like you've just replaced front
+[00:14:38] full stack backend front- end developers
+[00:14:40] designers uh prompt Engineers everything
+[00:14:42] it's insane how valuable this is so
+[00:14:44] whenever somebody completes this form at
+[00:14:46] the front what that will do is then send
+[00:14:48] the information over to a wonderful and
+[00:14:50] beautiful database right there that's
+[00:14:53] what the sync option does that's how it
+[00:14:54] connects think of softer and air table
+[00:14:57] connecting together this is basically
+[00:14:59] basically how they link up together this
+[00:15:00] is going to fire over to our beautiful
+[00:15:03] uh air table now I just want to make
+[00:15:04] this point because some of you will know
+[00:15:06] this but I just want to give you the
+[00:15:07] conceptual framework of how this work so
+[00:15:09] look sync with data source we pick our
+[00:15:11] source air table for Jack Roberts come
+[00:15:14] down let's what do we call this one we
+[00:15:15] call this one the AIP right beautiful we
+[00:15:18] love that and then it should let us
+[00:15:20] choose the one that we want it's going
+[00:15:21] to be customers of the tab that you put
+[00:15:23] your people in there and look look at
+[00:15:25] this guys map user Fields look map email
+[00:15:28] perfect
+[00:15:29] name awesome and then there's other
+[00:15:31] options of things that you can do and
+[00:15:32] blah blah blah it's all really cool and
+[00:15:34] then we click save and sync okay so
+[00:15:37] let's just test that this has worked so
+[00:15:39] publish the changes let's go and preview
+[00:15:42] it so let's say we want to sign up now
+[00:15:44] don't worry about the logic of a look of
+[00:15:45] it just yet if I say hey it's Bingbing
+[00:15:48] 77
+[00:15:51] outlook.com password is random Bing Bong
+[00:15:55] I agreed for the terms and conditions
+[00:15:57] and I sign up okay now if this has
+[00:15:59] worked successfully we should see this
+[00:16:01] record in air table so let's see what's
+[00:16:03] happened we don't need to save these
+[00:16:04] fake details let's go over to the AIP
+[00:16:07] and guys almost by Magic Bing Bong 77
+[00:16:09] has appeared in our database which is
+[00:16:11] awesome and cool so you've now connected
+[00:16:13] together your database and you're kind
+[00:16:15] of like application which I think is
+[00:16:17] really cool uh and pretty sick actually
+[00:16:19] so we've done that we've designed it now
+[00:16:21] what we want to do realistically is
+[00:16:22] there's some bit there's bits of work
+[00:16:24] that we need to do on the homepage
+[00:16:25] there's bits of logic we need to set up
+[00:16:27] but what I want to start with is the
+[00:16:29] creation of our new page so and it come
+[00:16:32] down to add new page now for the
+[00:16:34] purposes of this the way I want this to
+[00:16:36] work is this is the AIP so the AIP has
+[00:16:38] got several little AI applications which
+[00:16:40] when you're paying the subscription you
+[00:16:42] get access to so we're going to call
+[00:16:44] this one body
+[00:16:45] fat uh and we'll call this one burn just
+[00:16:48] because it's a burn Emoji like so and
+[00:16:50] then we click save so this is our new
+[00:16:52] body fat uh page okay so what we want to
+[00:16:55] do is just add a little bit of color to
+[00:16:56] it to make it simple so on the right
+[00:16:58] hand side we've got all these different
+[00:16:59] blocks so they'll do different various
+[00:17:02] different things so payment for example
+[00:17:03] if you want enable to pay on this page
+[00:17:05] but we'll do that on a different page so
+[00:17:06] I want to click on static okay we can
+[00:17:09] look at hero and we've got all these
+[00:17:12] different options here of things that we
+[00:17:13] want these ones are more suited for a
+[00:17:15] kind of you know they're kind of more
+[00:17:17] suited for a homepage if I'm honest with
+[00:17:19] you realistically the one that I wanted
+[00:17:21] to use is this feature with product I
+[00:17:24] think where is it actually it is this
+[00:17:25] one here feature with vertical tab so we
+[00:17:27] add that in and look at this of
+[00:17:29] automation guys it sys across nicely so
+[00:17:31] let's just alter some of the text bit
+[00:17:33] say hey your AI let just
+[00:17:36] say track your body
+[00:17:39] fat the smart way awesome and then just
+[00:17:43] says Hey upload your
+[00:17:47] photos and
+[00:17:49] get real time analysis awesome okay
+[00:17:54] beautiful and obviously guys what we can
+[00:17:56] do is customize these bits on the side
+[00:17:57] we can customize images image URLs all
+[00:17:59] this sort of stuff is very configurable
+[00:18:02] um what I would also say is on the style
+[00:18:04] section you can change padding and all
+[00:18:05] this beautiful stuff and just make it as
+[00:18:07] interesting as you want to and then for
+[00:18:09] every think of these the way that softer
+[00:18:11] works is in these blocks so you'll pick
+[00:18:14] a block and crucially what you can do is
+[00:18:16] set the visibility of that block so you
+[00:18:19] can say I only want this to be visible
+[00:18:21] for people who are logged in or visible
+[00:18:23] for people that are not logged in so say
+[00:18:25] for example not signed up yet does it
+[00:18:26] make sense that I can check all the
+[00:18:28] details a body fight it probably doesn't
+[00:18:30] right so we can say no I only want this
+[00:18:31] to be viewable by logged in users you
+[00:18:35] can also create user groups so when
+[00:18:37] someone signs up and they've got a
+[00:18:38] subscription I can then also have here
+[00:18:40] and I'll show I will show you to do this
+[00:18:41] in video so it says look only show this
+[00:18:43] to people that are paying so we can
+[00:18:45] actually lock off certain parts of our
+[00:18:46] website for paying users now I hoping
+[00:18:48] this makes sense and don't worry if you
+[00:18:50] still got questions we're more than like
+[00:18:52] I more than likely going to get to them
+[00:18:53] so you know you're doing a great job at
+[00:18:55] this stage so don't worry about it well
+[00:18:57] the first thing that I want us to do
+[00:18:58] here okay is to enable the user to see
+[00:19:01] some information about the photos that
+[00:19:03] they've uploaded previously now I'll do
+[00:19:05] that when we build the automation but
+[00:19:07] what I want to show you initially is
+[00:19:08] going to be the AI application itself
+[00:19:11] and how you can design these incredible
+[00:19:13] AI applications if you haven't seen my
+[00:19:14] video on that by the way please go and
+[00:19:16] check that out because if you haven't it
+[00:19:17] will be so valuable for you to see how
+[00:19:19] that works okay so what do we do let's
+[00:19:21] say we add a new blog and what you're
+[00:19:22] going to search for guys is code like so
+[00:19:25] and I'm going to do a custom code block
+[00:19:27] D what is the custom code block well I'm
+[00:19:30] going to show you how you build these
+[00:19:31] and I'm going to show you the one that I
+[00:19:32] built earlier so we're going to head
+[00:19:33] over to Claude but before we do that
+[00:19:35] let's take off our progress set theme C
+[00:19:38] page we only got a couple more three
+[00:19:39] more steps and you're basically Rock and
+[00:19:41] rolling so Cloe let's go over there and
+[00:19:43] build an example so you would give clae
+[00:19:45] a prompt like this like hey build uh me
+[00:19:48] an app in HTML that does the
+[00:19:54] following okay first thing I to say is
+[00:19:57] send information to to this web hug now
+[00:20:00] what I want you to do at this stage is
+[00:20:02] open a make scenario by the way guys if
+[00:20:03] you want the full blueprint so that all
+[00:20:05] you ever have to do is come down click
+[00:20:06] more click import blueprint you
+[00:20:08] basically select the file click save and
+[00:20:10] the entire automation populates for you
+[00:20:12] straight away everything's available
+[00:20:13] Down Below in school community so you
+[00:20:14] can plug and play we're also going to
+[00:20:16] build it together step by step so you
+[00:20:17] going have to do that but if you want to
+[00:20:18] save time and get all the other
+[00:20:20] resources and benefits it's there for
+[00:20:22] you so I want to do for the first one
+[00:20:23] guys is call this body fat percentage
+[00:20:25] okay so let's just use a fire Emoji so
+[00:20:27] we don't get confused with it and then
+[00:20:29] scenario one let call this one one out
+[00:20:31] of two like this okay what I need you to
+[00:20:33] do when you're building a web app is
+[00:20:35] essentially what we're saying is look
+[00:20:36] we've got the web page which I'll show
+[00:20:38] my old design for just to illustrate
+[00:20:40] this okay now for this to work what's
+[00:20:43] going to happen is we have our website
+[00:20:44] okay on softer now it's basically going
+[00:20:46] to link up to our make scenario like so
+[00:20:50] okay and make is going to reach over and
+[00:20:53] grab information from our database in
+[00:20:57] air table and then finds that data it's
+[00:20:59] going to bring it straight back and
+[00:21:00] display it for us in a beautiful you
+[00:21:03] know design like this and we're going to
+[00:21:05] get only going to get the data that's
+[00:21:06] relevant for that particular user how
+[00:21:08] cool is that so you could have like a
+[00:21:10] thousand records but I only want it for
+[00:21:12] like Tom Jefferson or whatever his name
+[00:21:13] is and this will pull back his specific
+[00:21:15] results so we know on day one he was
+[00:21:17] 22.5% but by day eight he was 21.33% so
+[00:21:21] Tom gets to basically view his own
+[00:21:23] unique uh body fat percentages all that
+[00:21:26] to say to simplify it we've got an
+[00:21:28] application that can reach over to a
+[00:21:29] database grab the data for the user and
+[00:21:32] bring it back now what it does is only
+[00:21:35] limited by your imagination so to do
+[00:21:37] this though we've got this scenario now
+[00:21:40] what we need to do is kick off with a
+[00:21:42] web hook okay so come down here we're
+[00:21:44] going to go for web hook like so and I
+[00:21:46] just want to show you briefly how these
+[00:21:47] applications work and then you can kind
+[00:21:49] of get the idea of okay so the custom
+[00:21:51] web hook we'll call this one we'll add
+[00:21:52] this one we'll call this one let's go
+[00:21:55] for beef body fat percentage and we'll
+[00:21:58] call this one on one out of two with
+[00:22:01] Build Together in capital letters in the
+[00:22:03] background and guys where are we without
+[00:22:06] our fire emojy I don't think we're
+[00:22:08] anywhere without our fire emojy we click
+[00:22:09] save and now we've been given this web
+[00:22:12] hook okay all you do is copy it all
+[00:22:14] right let's go back to Claude and just
+[00:22:16] basically this is how you're going to
+[00:22:17] build your web app you're going to say
+[00:22:18] look send information to this web hug
+[00:22:20] and just say I want you to let's say
+[00:22:22] create a
+[00:22:25] field that it captures name email and
+[00:22:30] feelings I don't know um
+[00:22:33] monserat um confetti on
+[00:22:36] submission uh make my design
+[00:22:39] amazing and what we can also do guys if
+[00:22:41] you want to is we can give it like
+[00:22:43] random images so just so like I don't
+[00:22:45] know nice dashboard
+[00:22:46] design I mean I'm just I'm free balling
+[00:22:49] here guys I'm like I'm like the rapping
+[00:22:51] version of free balling over here so let
+[00:22:52] say nice dashboard design let's say we
+[00:22:54] like the look at that for example we
+[00:22:56] come over uh let's just screen shot that
+[00:22:59] like so I mean this is literally why
+[00:23:01] it's so cool cuz it's not even just
+[00:23:03] simple functions it's like whatever you
+[00:23:05] want however you want it so I copy that
+[00:23:07] I come back over with the clae I'll say
+[00:23:09] um follow actually let's just say let's
+[00:23:11] just say this right base it off the
+[00:23:14] below design all right and then hit
+[00:23:16] enter that will load to clae we hit
+[00:23:18] enter and then clae will basically
+[00:23:20] develop for us a bespoke uh web
+[00:23:22] application code without using any
+[00:23:24] specific code which is awesome so clae
+[00:23:27] is generating one little tidbit I will
+[00:23:29] say is if Claude is misbehaving which it
+[00:23:31] has been doing very recently just use
+[00:23:33] chat GPT like it's absolutely fine
+[00:23:35] sometimes Claude gets a little bit uh a
+[00:23:38] little bit precious about its code so
+[00:23:39] Luke sh your feelings name email design
+[00:23:42] now I don't like the look of that just
+[00:23:43] say hey the design is a bit lame please
+[00:23:48] incorporate more I don't know uh fancy
+[00:23:52] elements like the um shown photo I don't
+[00:23:56] know I've misspelled a million things in
+[00:23:57] this but this is just I'm favoring speed
+[00:23:59] over accuracy here add
+[00:24:02] complexity and depth beautiful okay I
+[00:24:06] mean this is just to show you but even I
+[00:24:08] I get pulled back by in by the design
+[00:24:10] way too much I get I I have to I have to
+[00:24:13] pull myself back a little bit I been AG
+[00:24:14] is doing this I did not my last video on
+[00:24:16] LinkedIn I spent like an hour getting
+[00:24:18] like the gradients right and making sure
+[00:24:20] it was specific where it needed to be so
+[00:24:22] um I put a high emphasis on that I also
+[00:24:24] think you're looking at your sass design
+[00:24:26] and positioning matter they really most
+[00:24:29] businesses most websites their Design's
+[00:24:31] not great like their user journey is not
+[00:24:33] great if you just hit the basics do the
+[00:24:35] ABCs and make it look good it just
+[00:24:37] they'll just infer all these other
+[00:24:39] incredibly positive qualities about your
+[00:24:40] brand so I'd say it's worth doing
+[00:24:43] that oh my gosh the defi lab this has
+[00:24:46] gone way out of control what I'm going
+[00:24:48] to do I'm just going to copy the other
+[00:24:49] one because this is kind of irrelevant
+[00:24:51] we're off on a tangent if we were to
+[00:24:52] keep on having that conversation so you
+[00:24:54] copy the code come back over then to our
+[00:24:56] beautiful website that we devel helping
+[00:24:58] we've got a custom code you pop it in
+[00:25:00] the right hand side like that okay now
+[00:25:03] this is misbehaving a little bit but I
+[00:25:04] just want to show you that's basically
+[00:25:05] how it works so for the purposes of
+[00:25:07] speed I come back over here to our
+[00:25:09] previous one like so I'm going to copy
+[00:25:11] all this code I'm going to come back
+[00:25:13] over to our website here in that
+[00:25:15] instance by the way if the code was
+[00:25:17] misbehaving and it wasn't visible just
+[00:25:18] go back over to CL and say hey it's
+[00:25:20] changing the design of the page or it
+[00:25:22] isn't working and Claude will then
+[00:25:23] change the code you can also say place
+[00:25:25] it in a container use that language if
+[00:25:27] you find it it's interfering with the
+[00:25:28] website but often times it's fine and
+[00:25:30] body to track it is fine what we now
+[00:25:32] want to do is change the web hook that
+[00:25:34] this is using so let's go back over to
+[00:25:36] our initial design let's copy dress with
+[00:25:38] clipboard come back over now to this I'm
+[00:25:41] going to contrl F Type in
+[00:25:43] eu2 um let's have a look here we go and
+[00:25:46] let's copy all this thing
+[00:25:48] here and
+[00:25:51] delete and paste this one in and I think
+[00:25:53] that's good and just make sure there's
+[00:25:54] no other reference to that and there is
+[00:25:56] not cool sweet and then publish which is
+[00:26:00] fine like so now let's preview the
+[00:26:03] page opens up to new tab we come down
+[00:26:06] we've got body fat percentage tracker
+[00:26:08] which is absolutely fine so what do we
+[00:26:10] do now this isn't going to show anything
+[00:26:11] but we will see if it's
+[00:26:13] successful um this will say determined
+[00:26:16] structure so all we're testing right now
+[00:26:18] is that the information has been sent by
+[00:26:19] the web hook so let's go to this part of
+[00:26:22] the page type an email let's just call
+[00:26:24] Jason born.com show me the magic and do
+[00:26:27] we have that that's come through
+[00:26:29] through hold on a sec run once come back
+[00:26:33] oh my goodness let's refresh the
+[00:26:36] page Jason Bourne
+[00:26:39] awesome and would you believe it guys
+[00:26:41] Jason Bourne's come through so think
+[00:26:43] about that any data you want it's going
+[00:26:45] to go from here straight back over there
+[00:26:47] so what you've done is you've got an
+[00:26:48] application that will take the data and
+[00:26:50] spring it straight back over and when we
+[00:26:52] build this automation out what you'll
+[00:26:53] find is that we can send data back once
+[00:26:55] we access our database so you have web
+[00:26:57] hug right web hook response and then in
+[00:27:00] between these two things is air table so
+[00:27:02] we web hook comes in request data we
+[00:27:04] grab it from Air table and then we send
+[00:27:06] it straight back over so the user can
+[00:27:08] actually observe it and use it guys I'll
+[00:27:09] also put the code down for this body fat
+[00:27:11] percentage tracker for you if you want
+[00:27:12] to just so that you can use this as a
+[00:27:14] basis with your conversation with claw
+[00:27:16] just to help you get there a little bit
+[00:27:17] faster so I'll put that down below in
+[00:27:19] the description for you as well now
+[00:27:20] let's have a look at this so we built
+[00:27:22] our AI web app which we've just like
+[00:27:24] done we've added it into softer so
+[00:27:26] basically we've now got softer we've got
+[00:27:27] AI web app we've not done all the
+[00:27:28] finalities with the design pages and
+[00:27:30] stuff but we want to do the automation
+[00:27:31] bit and then we'll kind of dot our eyes
+[00:27:33] and cross our tees now we need to design
+[00:27:36] essentially two things in make a
+[00:27:38] computer vision dashboard and an AI
+[00:27:41] graph application so what am I talking
+[00:27:43] about with that so scenario 2 okay is
+[00:27:47] just how we in our scenario grab the
+[00:27:50] information and bring it back and then
+[00:27:52] scenario one is basically just this
+[00:27:54] function so if I show you in this one
+[00:27:56] this is scenario um this is scenario one
+[00:27:59] how we can have this form at the bottom
+[00:28:01] give an email give an image and some
+[00:28:03] feelings and upload something and it
+[00:28:06] come back and present here that's
+[00:28:07] scenario one and scenario two is going
+[00:28:08] to be our cool funny web app App
+[00:28:11] application awesome so let's actually
+[00:28:14] begin with the make scenario so we're
+[00:28:17] going to come over here this one is our
+[00:28:19] body fat percentage so we're going to
+[00:28:20] start off with this other scenario Okay
+[00:28:22] cool so this one we're going to call
+[00:28:25] computer vision okay we call this one 2
+[00:28:30] off
+[00:28:32] two with a beautiful fire Emoji now if I
+[00:28:37] come back over to our Design This Is
+[00:28:40] Awesome what we need to do really is
+[00:28:43] have a way for the user to submit
+[00:28:46] information wouldn't you agree so let's
+[00:28:47] just add a block and what I want you to
+[00:28:49] do on the right hand side is come down
+[00:28:51] to form like so and we're going to click
+[00:28:54] on we're going to click on conditional
+[00:28:56] form now conditional form will let you
+[00:29:00] add conditional logic which is handy I
+[00:29:02] kind of just prefer the design of it so
+[00:29:03] if I come down here for example let's
+[00:29:05] just customizes slightly so it's com out
+[00:29:07] to settings what do we want let's have a
+[00:29:10] look we want the
+[00:29:11] questions so let's have a look where
+[00:29:14] would you like to send the response we
+[00:29:15] want to send the response to make
+[00:29:17] awesome and that it's asking for a web
+[00:29:19] hook URL Okay cool so let's make the web
+[00:29:22] hook URL come to web hook go down to uh
+[00:29:25] custom web hook here and we'll call this
+[00:29:27] one here uh we'll call this one the body
+[00:29:29] fat uh percentage uh and image gen I
+[00:29:34] don't know why that is like the most
+[00:29:35] randomly long and nonrelevant thing ever
+[00:29:38] but it doesn't really matter what we
+[00:29:39] call it we give it a name okay and then
+[00:29:41] we're going to copy the address to the
+[00:29:42] clipboard and then we come back over to
+[00:29:45] our design so essentially what that's
+[00:29:46] saying guys is look you've asked for a
+[00:29:48] form I'm going to give you a form where
+[00:29:49] do you want me to send the information
+[00:29:51] to and what we're saying to this is hey
+[00:29:53] we're sending it over to make so think
+[00:29:55] of this conceptually guys is
+[00:29:58] the users on this they're on the
+[00:30:00] software part okay they're here right we
+[00:30:03] are then sending it to make to do some
+[00:30:05] cool fancy automation to kind of design
+[00:30:07] the AI the fancy bit and sending it over
+[00:30:10] to air table as where we're going to
+[00:30:11] store it right this is where they
+[00:30:13] interact this is where the magic happens
+[00:30:16] via make the automator and attack and
+[00:30:18] this is where it sits and lives in the
+[00:30:20] storage space so that's how they all uh
+[00:30:22] collab together in this instance okay so
+[00:30:25] look we've got that we're going to copy
+[00:30:26] the clipboard address we come back over
+[00:30:27] now now and we've told that look I want
+[00:30:30] you to put it over here in this place
+[00:30:31] all right cool so we've done that that
+[00:30:33] is awesome and now we've done that we
+[00:30:34] can start messing around with the
+[00:30:35] questions so com with questions what's
+[00:30:37] the heading and we'll just say hey
+[00:30:39] submit your
+[00:30:42] photo with a little bit of a up emoji
+[00:30:45] hopefully that doesn't reflect the
+[00:30:46] weight that reflects more the progress
+[00:30:48] and we got Tex so we can say hey get
+[00:30:50] your AI
+[00:30:53] feedback and again I've just chosen like
+[00:30:55] PT but this could be anything about like
+[00:30:57] design or like anything you can perceive
+[00:30:58] it now most people do text based stuff
+[00:31:00] but I wanted to do Vision because vision
+[00:31:02] is so dope awesome and then we've got
+[00:31:04] the actual sections down here so we've
+[00:31:06] got the section divider let's just
+[00:31:07] delete that and get rid of that let's
+[00:31:09] have a look what we've got your city
+[00:31:12] what do we want full name that's
+[00:31:14] absolutely fine so let's just open up
+[00:31:15] section one so we can see yep text get
+[00:31:17] your AI feedback that's cool all right
+[00:31:19] section two so what do we want I guess
+[00:31:21] we want sort of more like your
+[00:31:25] feelings and then we'll give that a kind
+[00:31:27] of like
+[00:31:28] some
+[00:31:30] eyes this week was dot dot dot dot and
+[00:31:33] then crucially guys add field and I want
+[00:31:36] to do attachment it should be
+[00:31:38] image let's have a look how is it
+[00:31:40] actually showing up there it is file
+[00:31:43] okay cool file and call this one your
+[00:31:45] physique with a strong arm Emoji awesome
+[00:31:48] and then we got this map to here so
+[00:31:50] that's what that's going to map to so
+[00:31:51] we're just going to say um client image
+[00:31:55] when it says map to CU basically that
+[00:31:57] will be the header say client image and
+[00:31:59] then this so call the map to what you
+[00:32:01] want it to be okay so map to Here For
+[00:32:03] example is
+[00:32:06] client uh feedback or client question so
+[00:32:09] if I said like I want you to show this
+[00:32:10] client question blah blah blah it just
+[00:32:12] makes it easier on the other side like
+[00:32:13] that okay uh and then we're going to
+[00:32:15] click on publish publish updates like so
+[00:32:19] uh and let's go and review the Page by
+[00:32:21] clicking over here to open a new tab so
+[00:32:23] let's go to our automation uh let's
+[00:32:26] unlink these delete this
+[00:32:29] guy okay cool now it is actually this
+[00:32:33] automation that we need okay cool our
+[00:32:34] computer vision one awesome right so
+[00:32:36] we're going to run this guy once that's
+[00:32:38] fine click okay red determine data
+[00:32:41] structure so we're going to the page
+[00:32:42] load your body fat the SmartWay things
+[00:32:44] are letting nice and the right and we've
+[00:32:45] got submit your photo cool so let's do
+[00:32:47] that right let's go
+[00:32:48] for Jack my feelings my week was great I
+[00:32:53] never we get to upload an image so I'm
+[00:32:55] going to upload a around an image of
+[00:32:56] Arie okay cool Arie is officially been
+[00:32:58] uploaded and then we click submit cool
+[00:33:00] and we get ni success image success
+[00:33:02] notification then we come back over to
+[00:33:04] our thing we got successfully determined
+[00:33:05] so let's do okay let's run this one One
+[00:33:07] More Time come back over and let's do
+[00:33:09] the same thing again jack my week was
+[00:33:11] great and another image Incredible and
+[00:33:13] we submit this one and we come back over
+[00:33:16] now to it and as you can see guys client
+[00:33:18] question my week was great client image
+[00:33:20] page and section ignore the paging
+[00:33:22] section that's not really relevant and
+[00:33:24] it hasn't included the email address so
+[00:33:25] let's just make sure that we're sending
+[00:33:26] that one over instead of name I'm just
+[00:33:28] going to replace that with um the email
+[00:33:31] address that's come down where is their
+[00:33:33] name cool just say map to
+[00:33:37] email and then your
+[00:33:40] email address with a cool little email
+[00:33:42] Emoji for good measure awesome cool uh
+[00:33:46] publish this one here publish updates
+[00:33:48] come over to our preview page Let's uh
+[00:33:50] refresh the page and here you can see
+[00:33:51] your app has been updated refresh see
+[00:33:53] exchanges so we hit that one there for
+[00:33:54] example incredible and we scroll down
+[00:33:59] now let's do this one so we'll call this
+[00:34:01] one Jack
+[00:34:03] outlook.com my feelings same as last
+[00:34:06] time my week was great and then upload
+[00:34:08] the physique awesome now you'll see this
+[00:34:09] scenario is waiting like so so we'll run
+[00:34:12] this one obviously for you it's going to
+[00:34:13] running automatically uh and then we
+[00:34:15] click on submit also we come back over
+[00:34:17] and as you can see guys there's my email
+[00:34:19] there's my client question and there's
+[00:34:21] my client image so basically if I load
+[00:34:24] this into a dashboard I should see Anie
+[00:34:26] and there we go that that is pretty
+[00:34:28] amazing because what we've done is we've
+[00:34:31] enabled the user of our services our SAS
+[00:34:34] to upload images to upload files to
+[00:34:36] upload text to upload sign basically
+[00:34:38] whatever you want and we get it into
+[00:34:40] make and remember guys once we get it
+[00:34:42] into make we can do absolutely anything
+[00:34:44] that we want so guys the first thing we
+[00:34:46] want to do is come here and click the
+[00:34:47] plus button and search for HTTP which
+[00:34:49] will basically enable us to get the file
+[00:34:51] that we just grabbed in the web hook so
+[00:34:54] look if I click on URL I should be able
+[00:34:55] to select the image awesome client image
+[00:34:58] insane decent and then we click okay
+[00:35:01] brilliant now the next thing I want to
+[00:35:02] do is now I've got the image in our
+[00:35:04] scenario you can get as complicated or
+[00:35:07] as simple as you want to you could get
+[00:35:08] custom gpts that have been trying to got
+[00:35:10] loads of data about images we could make
+[00:35:12] this 50 steps you could make it
+[00:35:13] sophisticated this is going to be the
+[00:35:15] brains of your SAS this is going to be
+[00:35:17] the bit that is going to distinguish you
+[00:35:19] from using chat GPT the question I want
+[00:35:21] to ask yourself is what can this do the
+[00:35:23] chat can't do and you could build it in
+[00:35:25] a modular way which means that you have
+[00:35:27] it goes to 15 filters each of them ask a
+[00:35:29] certain question then we can solve that
+[00:35:31] information feed back to the client
+[00:35:33] That's Unique that seems incredible that
+[00:35:35] seems like something outrageous so come
+[00:35:37] here type in Vision I'm going to keep it
+[00:35:38] simple for this one just so that you um
+[00:35:41] just this video isn't 17 hours maybe you
+[00:35:43] want the 17 hours if I get 17 copies
+[00:35:45] though I'll tell you that analyzes image
+[00:35:47] Vision awesome so what's the prompt that
+[00:35:49] we're going to need we'll going The
+[00:35:50] Prompt and I want to give it this prompt
+[00:35:52] here that I've just put in so look what
+[00:35:54] would your estimate how would you
+[00:35:55] estimate this person's body fat
+[00:35:57] percentage you must provide an output
+[00:35:59] like this body fat percentage x%
+[00:36:01] commentary ABC just demanded that there
+[00:36:03] you cannot provide a range you must
+[00:36:04] provide a number you must output in Json
+[00:36:07] with no additional characters for
+[00:36:08] example this there's the thing there's a
+[00:36:10] Json example blah blah blah do not add
+[00:36:12] the word Json on any apostrophes and
+[00:36:13] quotation marks with your answers yeah
+[00:36:15] it can only begin with this and end with
+[00:36:16] this if you're trying to control a
+[00:36:18] language model to do something and
+[00:36:20] you're find adding additional characters
+[00:36:21] sometimes a really simple fix is to
+[00:36:23] specify what the beginning of everything
+[00:36:25] must be and the end of everything must
+[00:36:26] be now ordinarily with chat gbt we would
+[00:36:28] specify that its output must be in Json
+[00:36:31] unfortunately in the vision analysis
+[00:36:32] module it doesn't seem that we can
+[00:36:34] actually specify Json which is why I've
+[00:36:36] given it this additional prompt but with
+[00:36:38] others like just pure text that's
+[00:36:40] something that we can look at doing now
+[00:36:41] what do we do we then going to give it
+[00:36:43] the image to come down to add image
+[00:36:45] image URL now let's come here and give
+[00:36:48] it the image URL right here like so the
+[00:36:50] client image and then we're going to
+[00:36:51] select the model which is going gbt 40
+[00:36:53] max tokens 300 that's okay and then we
+[00:36:55] click okay and then let's just ring name
+[00:36:57] this
+[00:36:58] one vision and what kind of vision would
+[00:37:01] it be if it didn't have some cool
+[00:37:03] beautiful googly ads now what I want to
+[00:37:06] do is command s to save this video to
+[00:37:08] save this automation I'm going to click
+[00:37:10] run once I'm going to come back over now
+[00:37:12] to our thing I'm going to give it the
+[00:37:13] same thing so Jack out.com my week was
+[00:37:15] great when we click submit that's all
+[00:37:17] done dusted and complete oh my goodness
+[00:37:20] it's still loading come back over to our
+[00:37:21] scenario web hooks HTTP and then we've
+[00:37:25] got vision and let's see what it says
+[00:37:27] body percentage 5% this person in the
+[00:37:29] image has extremely defined muscle
+[00:37:30] groups very little visible body fat
+[00:37:32] typical of a professional bodybuilder at
+[00:37:34] Peak competition level awesome so it's
+[00:37:37] given us an analysis on our image so the
+[00:37:40] next thing I want to do is to pass out
+[00:37:41] that Json now the reason I want to pass
+[00:37:43] these two things out and the reason why
+[00:37:44] I've asked for it in Json is because in
+[00:37:47] our air table you know I've got client
+[00:37:50] history here where their email is going
+[00:37:52] to go their questions going to go their
+[00:37:53] physique image is going to go what the
+[00:37:55] AI said and their body fat percentage I
+[00:37:58] need to separate out the body fat
+[00:37:59] percentage and the AI advice so it's in
+[00:38:02] two different columns so that I can show
+[00:38:03] it as two different things in the um
+[00:38:06] application itself now you could do that
+[00:38:08] multiple AI but this is just a cool
+[00:38:09] little hack and if you've not used this
+[00:38:10] before and make it'll be something that
+[00:38:12] you might find a value so what I want
+[00:38:14] you to do is come here for example uh
+[00:38:16] type in Json parer like that Json
+[00:38:19] parer the Json string is just simply the
+[00:38:23] result um from the last module like so
+[00:38:26] and click on data structure click on
+[00:38:28] generate and it yes for some sample data
+[00:38:31] so for that we're just going to come
+[00:38:32] over here we're going to copy the
+[00:38:34] results we're going to come over to Json
+[00:38:35] sample data paste that in there generate
+[00:38:38] and then it will
+[00:38:39] basically generate what it thinks it
+[00:38:41] should be which is pretty cool if you
+[00:38:43] ask me then we click save and then we
+[00:38:45] click okay so let's run this again one
+[00:38:47] more time to run the scenario once run
+[00:38:50] Anyway come back over uh let's answer
+[00:38:52] for the same information one more time
+[00:38:54] my we was great image then we submit
+[00:38:55] this we come back over to the scenario
+[00:38:57] vision is doing its job and then Json
+[00:39:00] will do the beautiful passing job and if
+[00:39:01] you look at that what we got body fat
+[00:39:03] percentage and commentary incredible now
+[00:39:06] finally guys what we want to do is come
+[00:39:07] to add an air table module like so click
+[00:39:09] on create a record now all the records
+[00:39:12] that this creates is going into our
+[00:39:14] second tab now we got two tabs right
+[00:39:16] customers somebody signs up they're in
+[00:39:18] the customers tab client history this is
+[00:39:20] where they interact with this now if you
+[00:39:22] built say several Pages do several
+[00:39:24] different AI things this client history
+[00:39:26] could be body fight history then at a
+[00:39:28] new tab we could call that one I don't
+[00:39:30] know fashion analysis and so on and so
+[00:39:32] on and so forth so you have records and
+[00:39:34] then we can specify in softer which of
+[00:39:37] those tabs we want to pull back for the
+[00:39:39] analysis so look let's pick the Bas the
+[00:39:43] base was what do we call this one the AI
+[00:39:45] PT okay the AI PT incredible and then
+[00:39:49] we're going to pick the second one when
+[00:39:51] it prompts us to do so a table come down
+[00:39:54] we're going to go for client history
+[00:39:58] let that load up have a rock and roll a
+[00:39:59] good time and now we get to map over
+[00:40:01] everything now the reason why I'm
+[00:40:02] grabbing their email is so I can
+[00:40:03] identify who it is and show it back to
+[00:40:06] them in the actual dashboard itself so
+[00:40:07] click on email now for that we come down
+[00:40:10] to email at the bottom we've got the
+[00:40:12] question which is client question we've
+[00:40:14] got the physique image add item click
+[00:40:16] file URL and for that we can use the U
+[00:40:19] client image right there now the reason
+[00:40:21] why I downloaded it guys is that some
+[00:40:23] applications that you use will want the
+[00:40:24] image to be downloaded if you want to do
+[00:40:26] various things just so you know how to
+[00:40:27] actually physically use that and then
+[00:40:29] we've got the AI advice so that is going
+[00:40:31] to be commentary from um the Json par as
+[00:40:35] you can see but now exist as two
+[00:40:37] separate things rather than one result
+[00:40:39] and then body fat percentage here like
+[00:40:41] so and then we're going to click on okay
+[00:40:43] now the final test is repeat it one more
+[00:40:45] time so run this again come back over do
+[00:40:48] the exact same thing one final time and
+[00:40:50] if it feels out we're testing a lot
+[00:40:52] that's a cool that's okay just means
+[00:40:53] that it works and then we do submit once
+[00:40:55] we've got the image we come back over
+[00:40:57] wait for it to land in the web hook and
+[00:40:58] then our magic computer vision
+[00:41:00] technology thing will
+[00:41:03] begin this is the girliest w b I've ever
+[00:41:05] bought honestly it's like I lost my
+[00:41:07] other one so like I'm going to parade
+[00:41:09] around with a purple one there so we
+[00:41:11] come over now and we should see if this
+[00:41:12] has worked successfully in our client
+[00:41:15] history the information but has it
+[00:41:18] appeared oh my goodness it doesn't even
+[00:41:19] seem to be there so let's just refresh
+[00:41:20] it and there we go for a second did you
+[00:41:23] doubt hopefully you didn't doubt now
+[00:41:25] look what's really cool about that I can
+[00:41:26] click on the image and there's on it
+[00:41:28] awesome and this is basically our
+[00:41:30] repository for everything that we want
+[00:41:32] which I think is so cool now what's
+[00:41:34] going to happen Okay so now we've
+[00:41:36] actually developed the quote unquote
+[00:41:38] technology of the brains the operation
+[00:41:40] what I want to show you now is how we
+[00:41:42] then display that to the client in the
+[00:41:44] dashboard now once you pick up these
+[00:41:45] skills I'm showing you they're config
+[00:41:47] it's like Lego blocks okay you learn it
+[00:41:49] and then you'll be able to add you own
+[00:41:50] little things and I want you to see this
+[00:41:52] video as really my attempt to kind of
+[00:41:55] give you um the structure you build on
+[00:41:57] the shoulders but I show you some
+[00:41:58] building blocks and things I think are
+[00:41:59] pretty cool and then you can run a
+[00:42:01] million miles with this but these are
+[00:42:02] just some cool little features I think
+[00:42:03] you'll find valuable so I'm now logged
+[00:42:04] into application is Bingbing 77 why have
+[00:42:06] I done that well let me show you I'm
+[00:42:08] going to give some sample data okay so
+[00:42:10] I've got Bingbing 77 outlook.com and
+[00:42:12] give the same thing again here like uh
+[00:42:15] um How Could my week have been improved
+[00:42:20] like so AI advis do more lazy guy
+[00:42:27] and let's just say this one is 10% body
+[00:42:29] fat I'm just going to load a random
+[00:42:30] images for instance now I've upload this
+[00:42:32] file manually in reality guys you're not
+[00:42:34] going to do that because everything
+[00:42:35] happens automatically but I've done this
+[00:42:37] just to show you get some sample dummy
+[00:42:39] data so that we can see in our
+[00:42:40] application so let's come back to our
+[00:42:42] website our page here now what do we do
+[00:42:44] we want we want the user to be able to
+[00:42:46] see all of their history right because
+[00:42:48] like you know I started four weeks ago
+[00:42:49] but like you know what do I look like
+[00:42:51] now compared to four weeks ago I want to
+[00:42:52] show that in a visual visually engaging
+[00:42:54] way so I click on Plus I'm going to
+[00:42:57] click on this list with vertical card
+[00:42:59] section awesome this is really cool now
+[00:43:02] what I wanted to do is to display the
+[00:43:04] data that we've got an air table so
+[00:43:06] let's have a little think about that and
+[00:43:07] the first thing it asks us here is
+[00:43:09] source so I click on Source I click on
+[00:43:11] air table okay now select the base it's
+[00:43:13] going to be AI the AIP and again
+[00:43:17] different pages different bases this is
+[00:43:19] how cool it is and I click on client
+[00:43:21] history like so all right I'm going to
+[00:43:23] mute this one down now what's important
+[00:43:26] here what what's important here is that
+[00:43:28] you let's say you're bing bong bing bing
+[00:43:30] 77 okay I only want you to see the
+[00:43:33] images and the data that are relevant
+[00:43:35] for you so if I'm a different client I
+[00:43:36] don't need to see someone else's I need
+[00:43:38] to see me so to achieve that what do we
+[00:43:40] do we need to add a basically an if this
+[00:43:43] then that statement okay so then we want
+[00:43:45] to add this condition in okay so say add
+[00:43:47] condition saying if okay the email is
+[00:43:50] the same as logged in users email they
+[00:43:55] can see it so in other words then only
+[00:43:57] if the email is the same they'll
+[00:43:58] actually see the images and that's how
+[00:43:59] we get to be slightly different and
+[00:44:01] slightly bespoke so that's cool and then
+[00:44:03] we've got the content so we can remove
+[00:44:05] loads of stuff that we're not interested
+[00:44:06] in in this for example so let's start at
+[00:44:08] basically making some cuts and chipping
+[00:44:10] and chopping some stuff so let's see
+[00:44:12] what is this text so we can hide it and
+[00:44:13] see what it does and what's
+[00:44:15] relevant the text we do want the email
+[00:44:18] we do want to show the divider I'm not
+[00:44:20] so interested in divider so let's just
+[00:44:22] hide that for a second this text uh
+[00:44:25] let's get rid of that uh this tags I
+[00:44:28] don't think we really need the tags to
+[00:44:29] be honest with you let's add a field
+[00:44:31] what we want to add is a text field and
+[00:44:34] that text field should be the body fat
+[00:44:36] percentage right awesome and the label
+[00:44:39] is your body
+[00:44:42] fat with
+[00:44:45] a fire Emoji how Cool's that then add
+[00:44:48] field another
+[00:44:50] text uh again text content is going to
+[00:44:52] be AI advice and the label will be AI
+[00:44:59] advice oh actually we got your PT
+[00:45:02] advice or AIP actually just call it your
+[00:45:04] advice yeah I'm getting to into detail
+[00:45:07] advice with a little brain
+[00:45:08] Emoji okay awesome and you can see right
+[00:45:11] there your body fight 5% your advice or
+[00:45:14] it could be what you know you you can
+[00:45:16] substitute what these different things
+[00:45:17] are but ultimately that's like
+[00:45:19] absolutely fine and then I've got a
+[00:45:20] little bit of random text it it says
+[00:45:21] single line short text I'm not sure that
+[00:45:23] where that's coming from it's probably
+[00:45:25] this um awesome cool that's gone now I
+[00:45:28] want to get rid of this add record thing
+[00:45:29] cuz we're going to add records by a
+[00:45:31] title so we don't really need that um
+[00:45:34] let's see if we can find that want to
+[00:45:35] see more basically that that will
+[00:45:37] suppress the numbers and the volumes
+[00:45:38] that you get so if you want to see more
+[00:45:39] you can click that you can get rid of
+[00:45:40] that and just show all of them that's
+[00:45:41] kind of more of a um a stylistic thing
+[00:45:45] so come down to Source that's all fine
+[00:45:48] excellent and it's going to be in within
+[00:45:49] content so item Fields I'm happy with
+[00:45:52] that let's go
+[00:45:55] down then we've got filters so come down
+[00:45:58] to all categories delete filters and
+[00:46:01] again you could use the filters if you
+[00:46:02] wish if you've got things you want to
+[00:46:04] filter by which I think is really cool
+[00:46:05] actually it's like another little extra
+[00:46:07] Bell and whistle that we like cm more is
+[00:46:10] fine and then search bar I'm just going
+[00:46:12] to toggle L off because we don't need
+[00:46:14] that and finally we just want to remove
+[00:46:16] the add record section as well which is
+[00:46:18] going to be in actions add record and
+[00:46:20] we're going to delete that for the
+[00:46:21] purposes of this video cool so we've got
+[00:46:23] these two beautiful things here this is
+[00:46:25] going to show all of our client uploads
+[00:46:27] and stuff um visible for what we have
+[00:46:30] there so I'm going to click publish like
+[00:46:32] so okay and then what we're going to do
+[00:46:34] is just test that actually only that
+[00:46:36] individual can see it okay so here I'm
+[00:46:38] previewing this as bing bing 77 so I can
+[00:46:40] see bing bing 77 physiques but if I
+[00:46:42] preview it as Matt
+[00:46:44] flowers do we see the physiques well we
+[00:46:46] shouldn't do because Matt flowers is not
+[00:46:48] on there and look no results found so
+[00:46:50] there you go very specific for that
+[00:46:52] individual which is excellent so guys
+[00:46:54] taking a step back you've basically
+[00:46:56] built
+[00:46:57] the entire page the hard bit the
+[00:46:59] functionality bit now I think let's go
+[00:47:00] back to our checklist and see what we
+[00:47:02] need to look at next so the scenario we
+[00:47:04] need to conf finish we've done the
+[00:47:06] computer vision we now want to do the AI
+[00:47:08] graph application and how that's going
+[00:47:10] to physically work and then once we've
+[00:47:12] done that we're going to come back to
+[00:47:13] softer we're going to get the payment
+[00:47:14] subscription set up and then finally
+[00:47:16] basically up PS and q's and make sure
+[00:47:18] that everything's exactly where we want
+[00:47:20] it to be now guys this is basically the
+[00:47:22] AI web application thing so this is
+[00:47:24] going to differ wildly based on the kind
+[00:47:25] of web app that you want to develop so
+[00:47:28] just for your skills and knowledge I
+[00:47:29] guess I'll show you what it looks like
+[00:47:31] and what this requires so when you're
+[00:47:33] building this with clae or chat gbt and
+[00:47:35] model of preference essentially what
+[00:47:36] you'll say is look I'm going to give you
+[00:47:39] okay I'm going to send you information
+[00:47:41] in a specified format so you can say to
+[00:47:43] CL look what format do you want the data
+[00:47:46] in so for example if I show you the one
+[00:47:48] that I built earlier if I can find that
+[00:47:50] where did I build that uh okay so over
+[00:47:53] here look if I come down to client
+[00:47:56] history can you see the body fat
+[00:47:57] percentage is 24.1 23.4 23.1 right so
+[00:48:01] check this out if I come over can you
+[00:48:04] see this is this here is the format so
+[00:48:07] one denotes the day that you created it
+[00:48:10] and then it's the body fat percentage
+[00:48:12] and then this data gets sent back over
+[00:48:15] to um this so based on the data or the
+[00:48:18] thing you want to create you're going to
+[00:48:20] specify a way that you're going to
+[00:48:21] actually get the data in the format and
+[00:48:23] then the web hook will be able to
+[00:48:24] translate that into this particular
+[00:48:27] design that sounds complicated don't
+[00:48:28] worry I promise it'll make sense in just
+[00:48:30] a second so the way that we end up doing
+[00:48:32] that by the way is we can control it and
+[00:48:34] make sure that we have this web hook
+[00:48:36] Readiness module which is basically chat
+[00:48:37] gbd saying hey take this data put it in
+[00:48:39] this format and then it will present
+[00:48:41] slightly differently for the user okay
+[00:48:44] so this is what we're going to build now
+[00:48:45] the web hooks we're going to do a search
+[00:48:47] on air table so basically what happens
+[00:48:49] here I'm really zoomed in here aren't I
+[00:48:51] oh my goodness I am insanely zoomed into
+[00:48:54] this this is absolutely crazy get the
+[00:48:56] email from the web hug which is great
+[00:48:58] which is Jason born.com why are we
+[00:49:00] getting that email well
+[00:49:02] because in this application we're
+[00:49:03] building I've just said hey you want to
+[00:49:05] check your body fat percentage tracker
+[00:49:07] just give us your email we could also
+[00:49:08] give them a secret client ID or a secret
+[00:49:10] password or something unique to the
+[00:49:12] individuals so that they're the only
+[00:49:13] ones that can access it but just for
+[00:49:15] Simplicity I've said give that email so
+[00:49:17] the user experience is look I wanted a
+[00:49:18] body fap tracker they type in that email
+[00:49:21] that email then goes to the scenario the
+[00:49:22] web hook grabs it air table then will
+[00:49:25] search our base for that email and we'll
+[00:49:29] pull through their body fat percentage
+[00:49:31] and that and the day that they submitted
+[00:49:32] it once it's got that information we
+[00:49:34] aggregate it and then we get chat gbt to
+[00:49:36] basically change the format of it and
+[00:49:38] then we send it straight back over to
+[00:49:40] the application and when it does that
+[00:49:42] that's how we end up with a really cool
+[00:49:44] a really cool design so let's build this
+[00:49:45] one together and hopefully that will
+[00:49:46] make good sense for you so we've got the
+[00:49:48] email from the web hook which is Jason
+[00:49:50] born.com now we come over to air table
+[00:49:53] you click on search records so this is
+[00:49:55] going to search our data database and
+[00:49:57] you'll use variety of functions like
+[00:49:59] searching and adding and that sort of
+[00:50:00] stuff with your database so the base I'm
+[00:50:02] really looking for here is going to be
+[00:50:04] AIP like so awesome let this guy up
+[00:50:08] what's the table table is going to be
+[00:50:09] client history and then we're going to
+[00:50:11] enter in a formula okay now the formula
+[00:50:14] is basically going to say look I only
+[00:50:16] want you to bring back uh Records that
+[00:50:19] match this particular um this particular
+[00:50:22] email okay so look I click on view don't
+[00:50:24] need to worry about that the information
+[00:50:25] I'm interested in for this particular a
+[00:50:27] app really is the body fat percentage
+[00:50:29] and also the created time so when did
+[00:50:31] they submit their body their image and
+[00:50:34] um what was the body fat percentage they
+[00:50:36] told us so that I can actually display
+[00:50:37] in the graph again these variables be
+[00:50:39] different for you or whatever
+[00:50:39] application that you want and then we've
+[00:50:41] got formula so look I've said email
+[00:50:44] equals client ID get rid of this put
+[00:50:47] this client ID now you see this that is
+[00:50:50] referring
+[00:50:52] to um where is it client history this so
+[00:50:55] whatever you've called this field is
+[00:50:58] what you need to replace that with okay
+[00:51:01] so just make sure it's the same um what
+[00:51:04] if you call it something else it's fine
+[00:51:05] and the formul work exactly the same
+[00:51:06] manner so I've just said look email when
+[00:51:08] the email equals this bring back those
+[00:51:10] particular things now I want to do one
+[00:51:12] other thing as well I'm going to come
+[00:51:13] down and click on show advanced
+[00:51:15] settings uh let's come up and have a
+[00:51:17] look we're going to sort um field Yeah
+[00:51:21] so basically I wanted to do it in
+[00:51:23] chronological order so I just got
+[00:51:25] created time ascending it basically
+[00:51:28] means it will show me them as they came
+[00:51:30] out so I want the earliest first going
+[00:51:31] down to the latest and then we're going
+[00:51:34] to click okay and that is pretty good
+[00:51:37] news so we're going to run this scenario
+[00:51:38] once as a for instance so click on run
+[00:51:40] once let's go over to our scenario let's
+[00:51:43] just preview this
+[00:51:45] page now if I check what's the email
+[00:51:47] we've got we've got bing bing 77 Okay
+[00:51:50] cool so we're previewing the page uh
+[00:51:52] we've got it here we going to come down
+[00:51:54] and we're going to check body fat
+[00:51:55] percentage tracker being B 77 show me
+[00:51:58] the magic that has sent some stuff over
+[00:52:00] it's landed here the web Hook's got it
+[00:52:03] and it's pulled the records now look
+[00:52:04] guys check this out it's pulled down
+[00:52:06] both records for bing bing 77 the 5% and
+[00:52:10] also the 10% which is exactly what we've
+[00:52:12] got here this is how it's going to pull
+[00:52:13] down something unique for every single
+[00:52:15] one of your clients but the problem is
+[00:52:18] we can't have several different outputs
+[00:52:21] we need to aggregate these together
+[00:52:23] because if you don't the next module you
+[00:52:25] have is just going to do okay here's
+[00:52:27] record one do your automation here's
+[00:52:28] record two do your Automation and what
+[00:52:30] we wanted to do is take all the data
+[00:52:32] together and just give it to the next
+[00:52:34] modle which in our case is going to be
+[00:52:35] chat GPT so in order to do that as you
+[00:52:38] can see in this one here we've got an
+[00:52:39] array aggregator where basically we just
+[00:52:41] select the data that we want pick it and
+[00:52:44] then it'll do a beautiful job of just
+[00:52:45] giving this one really single output so
+[00:52:47] look we come here we click here and go
+[00:52:50] for array
+[00:52:51] aggregator The Source module is simply
+[00:52:53] the air table that we just chose and
+[00:52:55] just pick the fields that you want to
+[00:52:56] use again it be different for everybody
+[00:52:58] I want crect a time and I want body fat
+[00:53:01] and then I'm going to select okay
+[00:53:02] awesome now we're going to click finally
+[00:53:04] our Readiness module now this again will
+[00:53:07] depend based on the thing that you're
+[00:53:08] doing let's just do chat
+[00:53:10] GPT click on create a
+[00:53:16] completion Awesome by the way guys if
+[00:53:18] you live in Germany we're head out to
+[00:53:19] Germany in a couple weeks time from an
+[00:53:20] AI automation Meetup it would be really
+[00:53:22] really cool to see you there so if you
+[00:53:24] are B in Germany man I think we're going
+[00:53:25] to Frankfurt which I've never been
+[00:53:28] before so I'm excited if you know
+[00:53:29] anything about Frankfurt any suggestions
+[00:53:30] you got to let me know help help a
+[00:53:32] brother out down below let me know the
+[00:53:33] details so we select user message
+[00:53:35] content I'm just going to paste this in
+[00:53:37] now just to briefly explain what this
+[00:53:39] prompt is and I'll change this in a
+[00:53:40] second okay you will be given a series
+[00:53:42] of inputs and you must output in a
+[00:53:45] specified format why have I specified
+[00:53:47] that because I want to give it to the
+[00:53:48] web hug to then appear on the page okay
+[00:53:51] the day this is going to be what that is
+[00:53:53] the day the body fat day body fat blah
+[00:53:55] blah blah day one this is the very first
+[00:53:57] day at which the user started submission
+[00:53:59] so if you see submission with 3 days
+[00:54:01] later that would be day four so this is
+[00:54:02] just some specific logic that I'm giving
+[00:54:04] it's saying look like if I submitted on
+[00:54:06] April the 7th okay then I submit on
+[00:54:08] April the 20th April the 7th in other
+[00:54:11] words the first day of my submission is
+[00:54:12] day one April 20th is day 13 that's how
+[00:54:15] it works this is just my goofy silly
+[00:54:17] examples and then I just say your
+[00:54:19] output's much must match the formula how
+[00:54:22] do you know what that formula is that's
+[00:54:23] when you're having a chat with Claude
+[00:54:25] and you say something like hey uh what
+[00:54:28] input
+[00:54:32] format would you like for this
+[00:54:35] application boom and it'll tell you and
+[00:54:37] then you just specify in to make sure
+[00:54:39] it's all connected and works fine and we
+[00:54:41] can do other things like make it more
+[00:54:43] robust and like kind of like error
+[00:54:44] tracking things but I just want to keep
+[00:54:45] this simple just for the purposes of
+[00:54:47] this okay now I'm going to click now
+[00:54:49] none of this stuff exists yet per se
+[00:54:50] does it which is fine going to click
+[00:54:52] okay now look I'm going to unlink these
+[00:54:54] for a moment and I'm going to run this
+[00:54:55] scenario
+[00:54:56] that's fine run this one anyway let's go
+[00:54:59] back now and submit the same body fat
+[00:55:01] ccent tracker again show me the magic I
+[00:55:03] come back over it's come through and do
+[00:55:05] we see this as one look at this guys
+[00:55:07] output is an array look created time
+[00:55:10] body F percentage how cool is that now
+[00:55:12] we got as an array and now it's in an
+[00:55:13] array I can come back over here like so
+[00:55:16] and I can start to decide what I would
+[00:55:18] like so look I'm going to come down
+[00:55:20] there we go now
+[00:55:23] date and body fat cool so the date is
+[00:55:27] let's come down here to array create a
+[00:55:30] time and then body fat is going to be
+[00:55:32] this one because it's an array just put
+[00:55:34] number one and you're done and then we
+[00:55:36] go again same thing create a date two
+[00:55:40] oops excuse me oh my goodness it is not
+[00:55:44] happy with that is it that's one body
+[00:55:48] fat that's two excuse me and you
+[00:55:51] basically guys are just going to repeat
+[00:55:52] this exact same process for as many
+[00:55:54] records now if you're trying to make the
+[00:55:55] super robust that can go on forever feel
+[00:55:58] free to just to add 100 or 300 or how
+[00:56:00] many think is reasonable for the
+[00:56:01] particular thing that you're
+[00:56:03] doing um this basically says this is the
+[00:56:05] third AR the third array the fourth
+[00:56:07] array the fifth array blah blah blah so
+[00:56:08] all the different stuff that you get it
+[00:56:10] will basically just appear here for you
+[00:56:12] U body fat one for I'm just doing four
+[00:56:14] just for the sake of it uh but you don't
+[00:56:16] really need to do four we've only got
+[00:56:17] two um examples but I'm just doing four
+[00:56:19] for the sake of it um cool come back up
+[00:56:23] and let's just change the date so we get
+[00:56:25] that one as well
+[00:56:27] fact I'm just going to do two because
+[00:56:28] I've got two pieces of data but you sort
+[00:56:30] of get the idea okay then I click okay
+[00:56:33] awesome and I'm going to call this one
+[00:56:35] web hug
+[00:56:37] Readiness it's good to name these just
+[00:56:39] as a best practice so that you know when
+[00:56:42] you look back it's like really easy a
+[00:56:43] glance what that looks like web hook
+[00:56:45] Readiness incredible then click a new
+[00:56:46] module and then here guys I'm basically
+[00:56:48] say web hook at web hook response so you
+[00:56:51] basically sand with your scenarios as
+[00:56:52] web Hooks and basically this is what
+[00:56:54] comes in data gets done then this is
+[00:56:56] what data do you want to send back over
+[00:56:57] to the automation so for this it's just
+[00:56:59] simply going to be the output of the web
+[00:57:01] hook Readiness and I click okay I'm
+[00:57:03] going to command s to save this and then
+[00:57:06] going click run once or you can click
+[00:57:08] the save button down here I come back
+[00:57:10] over now one final time I'm just going
+[00:57:11] to leave this page open and you're going
+[00:57:14] to see the magic
+[00:57:15] okay Boom Confetti bam why has it done
+[00:57:18] that it goes from 5% to 10% we only got
+[00:57:21] two days worth of data so it's
+[00:57:23] absolutely fine but it's worked that way
+[00:57:24] if we had multiple days of data it' be
+[00:57:26] very different but it's worked perfectly
+[00:57:27] fine and we can remove it and we can
+[00:57:29] predict the next seven days and there we
+[00:57:31] go we got seven days of prediction so we
+[00:57:33] look at what that would look like let
+[00:57:34] predicted another seven days it gives a
+[00:57:36] predicted body fat percentage and you
+[00:57:37] can make this as fancy or as interested
+[00:57:39] as you like and you've basically now
+[00:57:41] designed both of the make scenarios both
+[00:57:44] of the really cool automation scenarios
+[00:57:45] guys so well done for following along
+[00:57:47] with that you really you are smashing it
+[00:57:48] the AI graphic application done now what
+[00:57:51] we need to do is visibility payments
+[00:57:52] groups and the final dot dot in our eyes
+[00:57:55] in crossing our te so let's head back
+[00:57:56] over so looking at this guys what do I
+[00:57:58] like what do I not like well first of
+[00:57:59] all I don't like this stuff on the left
+[00:58:02] hand side I don't think it looks nice
+[00:58:03] like that so we need to change this and
+[00:58:04] I'm going to show you some really basic
+[00:58:05] stuff that we can do so to edit any of
+[00:58:07] this stuff we must go to the homepage so
+[00:58:09] we're going to go back over to the
+[00:58:10] homepage awesome and we got these
+[00:58:12] different links here that we can do okay
+[00:58:13] so if I click on this link what this
+[00:58:16] would enable us to do okay is basically
+[00:58:19] this is a little link drop down you see
+[00:58:20] link to I'm just going to say hey body
+[00:58:24] fat and a little fire Emoji boom and
+[00:58:27] then I can say um add action so in other
+[00:58:30] words once they click that what happens
+[00:58:31] we want it to open page or it could be
+[00:58:33] scrolled down to certain page and then
+[00:58:34] we select the page which is body F which
+[00:58:36] is awesome I love that okay then we can
+[00:58:39] C publish to update the changes let's
+[00:58:41] create a new page for example that it's
+[00:58:42] just about us cuz maybe we want to
+[00:58:43] explain how it works
+[00:58:45] so that one says
+[00:58:49] about oh let's give a little wave
+[00:58:51] actually which is a cool little wave
+[00:58:52] Emoji this is about this is what we're
+[00:58:54] about we click save don't worry about
+[00:58:56] the design on this let's just add a
+[00:58:58] random static block like I don't know
+[00:58:59] hero feature put this one in this is
+[00:59:01] just for a sake like I don't know let's
+[00:59:03] come down here say
+[00:59:05] hey
+[00:59:07] about
+[00:59:10] AIP Little Wave cool we like it that's
+[00:59:13] very cool decent and then going to come
+[00:59:15] back over to our homepage and then
+[00:59:17] instead of this drop down link what we
+[00:59:19] could do is again what that would do is
+[00:59:22] you click on it and it's like okay let's
+[00:59:23] say you wanted to ESS optimize this or
+[00:59:25] whatever you could have link one which
+[00:59:25] would be like I don't know it could be
+[00:59:28] articles and it could then be like uh
+[00:59:29] losing weight or building muscle you
+[00:59:31] could have all these different things
+[00:59:32] that they could go to so that would be
+[00:59:34] what what the links would look like uh
+[00:59:35] but for the purpose of this guys I'm
+[00:59:37] just going to get rid
+[00:59:38] of uh the multiple links and let's just
+[00:59:41] add a link here let's call this
+[00:59:44] one about just to give a little color
+[00:59:47] and flare to the website a little bit
+[00:59:50] come down add action and we can add sub
+[00:59:51] links there if we want to go and do some
+[00:59:53] different things uh come down about
+[00:59:55] awesome cool looking good good already
+[00:59:56] sweet now what do you want to do let's
+[00:59:58] go on to Styles looking for obviously we
+[01:00:00] can like feature it and move it around
+[01:00:02] all this sort of stuff which is quite
+[01:00:03] sick then crucially guys once we clicked
+[01:00:04] on this let's scroll to the bottom and
+[01:00:06] get this to be horizontal instead of the
+[01:00:08] top fix header now I like the fact that
+[01:00:10] it will roll down with us I think that'
+[01:00:11] be quite decent actually that's decent
+[01:00:13] and then visibility awesome now let's
+[01:00:15] see what we want to do now when we've
+[01:00:17] done that we want to come over to uh
+[01:00:19] let's have a look again you can just
+[01:00:21] obviously mess around with these pages
+[01:00:23] and update them and do whatever you want
+[01:00:24] to and you kind of get the idea of that
+[01:00:26] I showed you before how you can do the
+[01:00:27] visibility so this is the homepage so I
+[01:00:30] don't like the look of this so what
+[01:00:31] we're going to do is um delete it quite
+[01:00:34] frankly yeah let's just get rid of that
+[01:00:36] that's fine let's delete this as well I
+[01:00:38] think this is
+[01:00:39] relevant awesome all right so come here
+[01:00:41] add a block let's add a um C static
+[01:00:45] blocks let's go down for a feature what
+[01:00:47] have we got feature with link okay cool
+[01:00:50] and we could say like if it's our
+[01:00:51] homepage what do you want to say just
+[01:00:53] say
+[01:00:54] hey welcome to your for AI
+[01:00:58] PT all right
+[01:01:00] sweet and then various different
+[01:01:05] information actually we're going to keep
+[01:01:06] that in just so it shows What's it we
+[01:01:08] can do the images alt text all that
+[01:01:09] beautiful stuff guys at this point the
+[01:01:11] way that this is going to work is we
+[01:01:12] have logged in users and we have paying
+[01:01:15] users okay so you could create like
+[01:01:16] let's say you have 100 people and you
+[01:01:18] maybe have a free part of your website
+[01:01:19] but then there's like an upgrade bit so
+[01:01:21] what I would want to do here is have a
+[01:01:23] drive now obviously Design This in a way
+[01:01:25] it's like they get value they get a
+[01:01:26] sense of what it's like and then they
+[01:01:27] can upgrade to paid but what we'd want
+[01:01:29] to do here is create a payment option
+[01:01:30] for them so we going to add block okay
+[01:01:33] uh let's come down and then what we can
+[01:01:34] do is said like I want a stripe form so
+[01:01:36] we need to Now integrate the ability to
+[01:01:38] collect payments and then we're going to
+[01:01:40] change who can see what remember if you
+[01:01:41] everyone to change of visibility if you
+[01:01:43] click on it top right visibility who can
+[01:01:45] see logged in users not loged in users
+[01:01:47] Etc so to do that going to come over to
+[01:01:49] settings I'm going to go over to uh I
+[01:01:51] believe it is Integrations like so going
+[01:01:54] to come down head over to stripe the
+[01:01:56] checkout and it's going to ask for two
+[01:01:58] things it's going to ask for a
+[01:01:59] publishable key and also a secret key so
+[01:02:02] let me bring up stripe to do this this
+[01:02:04] is a fake one that I made earlier um but
+[01:02:06] I'll I'll create another one just for
+[01:02:07] the pses of this so come down let's
+[01:02:09] create a new account let's call this one
+[01:02:12] um
+[01:02:16] AIP with a strong emoji and we click
+[01:02:19] create that's cool so this will be a
+[01:02:20] test example for us let's see if we've
+[01:02:23] got the AIP is this going to open up for
+[01:02:25] us let have a look it is dashboard.
+[01:02:27] stripe it's doing this magic in the
+[01:02:28] background and then we can start
+[01:02:30] integrating this together let me know if
+[01:02:31] You' use AIP by the way I feel like with
+[01:02:33] the right polishing of it obviously I
+[01:02:35] just wanted to give you concept and idea
+[01:02:36] to get started with but I feel with the
+[01:02:37] right polishing and aspects to it it
+[01:02:39] could be interesting to get like you
+[01:02:41] know AI analysis of your journey and
+[01:02:43] metrics and even you could sell that as
+[01:02:45] a sass to like pts actually I think
+[01:02:46] that'd be really interesting so the
+[01:02:47] first thing to do guys is create
+[01:02:49] products good product catalog we will
+[01:02:50] click on this add product at the top
+[01:02:52] right here we'll call this one the AI
+[01:02:56] oh my goodness
+[01:03:00] AIP we a lot Emoji to that as well so we
+[01:03:02] get some nice pieces C just say how get
+[01:03:06] monthly get you know get weekly
+[01:03:08] analysis of your body
+[01:03:11] type and suggestions to
+[01:03:14] improve obviously create as many or as
+[01:03:16] few these as you want but this is just
+[01:03:18] as an example image uh we could image if
+[01:03:21] you want to we'll just do that so it
+[01:03:22] looks decent I've uploaded the AIP logo
+[01:03:24] recurring payment this is just going
+[01:03:25] going to be let's just say it's
+[01:03:26] something like1 19 or something like
+[01:03:29] that awesome billing period monthly and
+[01:03:31] then we will add the product awesome so
+[01:03:33] that's sling up and now we've got our
+[01:03:35] AIP you can do it monthly yearly strip H
+[01:03:37] enables quarterly bilding as well
+[01:03:39] there's lots of really cool options you
+[01:03:40] can do free trials you can get really
+[01:03:42] cool that like dude try out for two
+[01:03:43] weeks it's free and then we'll upgrade
+[01:03:45] you something paid so come back over to
+[01:03:46] home now we've got these two things here
+[01:03:48] so we're going to copy the publishable
+[01:03:50] key and come back over to our page here
+[01:03:53] so this is the publishable key then come
+[01:03:55] back back over here secret key let's
+[01:03:57] reveal the secret key The Not So secret
+[01:03:59] key anymore key come back over paste
+[01:04:01] that in sweet and then we click on
+[01:04:04] Save that's cool we've now integrated
+[01:04:06] strip that's pretty decent right what do
+[01:04:08] we do we come here um we can add a block
+[01:04:11] now we can do multiple stripe blocks
+[01:04:13] actually which is what I'm going to
+[01:04:14] suggest we do here so let's have a look
+[01:04:16] uh it's not form it is let me just find
+[01:04:19] out where I can search
+[01:04:21] stripe okay stripe we want the stripe
+[01:04:24] checkout form I think
+[01:04:27] cool and then we come down we're going
+[01:04:28] to set the product which is the A and
+[01:04:30] again you can do different different
+[01:04:32] things on different prices pric is going
+[01:04:33] to be £1 19 monthly uh AI PT let's go
+[01:04:39] awesome this is pretty sweet and place
+[01:04:41] holder so just upload our image my imag
+[01:04:43] is that it just it's just like adding
+[01:04:44] the image just adds such a like kind of
+[01:04:46] edge to it which I love that and
+[01:04:47] obviously we can add text above and
+[01:04:48] below but you kind of get the idea with
+[01:04:49] that right which is really sweet full
+[01:04:51] name coupon LS of information about that
+[01:04:53] we like it and then we publish it like
+[01:04:56] so the other thing that we could do guys
+[01:04:58] if you want to is just come to Pages add
+[01:05:00] new page let's just call this one
+[01:05:04] upgrade right Diamond like so uh click
+[01:05:08] save and then what we could do here guys
+[01:05:10] is obviously have like a herob block um
+[01:05:12] but then we could add like the stripe
+[01:05:14] module on an upgrade page like so if you
+[01:05:17] want a video on how I would like set
+[01:05:18] this up like like literally Page by Page
+[01:05:20] step by step letm me it down below and I
+[01:05:21] can do some content on that if that
+[01:05:22] would be of any value to you let me know
+[01:05:24] that and again we got the stripe thing
+[01:05:26] here let's just come down and quickly
+[01:05:27] just like um pick our product again we
+[01:05:30] can do so much with this it's absolutely
+[01:05:32] ridiculous the customizability this is
+[01:05:34] insane like and I don't I'm not joking
+[01:05:36] when I say like you pretty much are
+[01:05:38] replacing full-time coders with this
+[01:05:40] stuff it's absolutely insane so we need
+[01:05:42] to go find the product that we had so
+[01:05:44] let's come to the product all the
+[01:05:45] products that connected with that strab
+[01:05:46] account will appear here for you to put
+[01:05:48] whatever you want so AIP awesome
+[01:05:51] brilliant let's come back then to the
+[01:05:53] homepage and what I'm going to finally
+[01:05:55] do is just add this onto the header for
+[01:05:56] us so it's come down let's add one final
+[01:06:00] thing and this one's going to be
+[01:06:03] upgrade with a diamond emoji add action
+[01:06:07] and open page which is going to be the
+[01:06:09] upgrade page incredible and then we hit
+[01:06:12] publish cool I love it all right sweet
+[01:06:15] now what we can do let's uh as if for
+[01:06:17] instance view this as one of our
+[01:06:19] customers and let's actually purchase
+[01:06:21] the product so we can see that okay so
+[01:06:23] we're going to go on
+[01:06:24] preview and then we're going to use our
+[01:06:26] Jason born one which is going to be
+[01:06:29] ace all right awesome so let's click on
+[01:06:32] upgrade or we come back actually let's
+[01:06:35] go back to the homepage come down and
+[01:06:37] let's say we want to go right so I'm
+[01:06:39] doing this as Mt flowers let's just go
+[01:06:40] for bing bing
+[01:06:46] 77 what I really like about this is it's
+[01:06:48] automatically populate the email and the
+[01:06:50] reason why that's great is because we
+[01:06:51] can use the same email and strip to
+[01:06:54] validate that they're still paying cuz
+[01:06:55] what we need to do now is once basically
+[01:06:57] we can lock off those sections of the
+[01:06:59] website available only to paying
+[01:07:00] subscribers but what if they cancel well
+[01:07:03] we need to wait to see that they exist
+[01:07:04] I'm going to show you a really simple
+[01:07:05] way I found just to make sure that at
+[01:07:07] all times the people that can access
+[01:07:09] your apis are the ones that are actually
+[01:07:10] paying your subscription so we need to
+[01:07:12] give it a load of fake stuff uh give a
+[01:07:14] little big load of fake numbers oh my
+[01:07:16] gosh 0424 isn't it wild we're now in the
+[01:07:18] last part of 24 let run numbers BL okay
+[01:07:21] subscribe now it's just coming up wait
+[01:07:24] for a second
+[01:07:26] now as soon as this is done I'm going to
+[01:07:27] head over to stripe and just check
+[01:07:28] that's happened that's done cool so if I
+[01:07:30] head over to stripe I should see the new
+[01:07:32] customer Let me refresh the dashboard
+[01:07:34] and have a
+[01:07:37] look and we do 1818 so we've got our
+[01:07:40] first sale congrats us he isn't that
+[01:07:42] really cool decent so then what we can
+[01:07:44] do now is we're going to come back over
+[01:07:46] to our application uh come back over to
+[01:07:50] users uh let's have a quick look uh
+[01:07:52] users okay this is cool then click on
+[01:07:55] user groups um and we can create a new
+[01:07:57] group in other words what I'm saying
+[01:07:59] here is let's just say we call this paid
+[01:08:01] subscribers or paying customers so we
+[01:08:03] can now restrict access based on those
+[01:08:06] people who are actually paying for us
+[01:08:07] already okay so look this is one option
+[01:08:09] you can do you don't need to do this but
+[01:08:11] I'll just show you so it's there if you
+[01:08:12] want to have it so add users based on
+[01:08:14] conditions uh let's add the condition so
+[01:08:16] then the condition is if subscription is
+[01:08:19] any of a and we can select the ones that
+[01:08:21] they want so basically if they have that
+[01:08:22] subscription they get access to X then
+[01:08:25] we click SA
+[01:08:26] now that's cool because if we go to our
+[01:08:27] pages and I'm let's just say I'm on the
+[01:08:28] body fat page and I want to limit the
+[01:08:30] visibility of this I can do something
+[01:08:32] called like click on the Block uh I
+[01:08:34] don't know this block here and I could
+[01:08:35] say look visibility all users no it's
+[01:08:39] not it's logged in users but logged in
+[01:08:41] users who are also paid subscribers so
+[01:08:43] if you're not a paid subscriber they
+[01:08:44] won't physically see it but let me just
+[01:08:46] show you something really really cool
+[01:08:47] now because the API Cod we've got going
+[01:08:49] on with this right the body fat
+[01:08:50] percentage tracker what we can actually
+[01:08:52] do is let me just show you what the
+[01:08:55] automation looks like okay so I've got
+[01:08:57] this stripe thing so check this out what
+[01:08:59] I can do is on link these I can bring
+[01:09:01] the stripe module in and by the way it's
+[01:09:03] super easy to connect stripe you can do
+[01:09:04] like an oor or just get like one simple
+[01:09:06] API key but what I'm going to do is
+[01:09:09] search customers for that thing so let
+[01:09:11] me just copy this guy and bring it over
+[01:09:13] to our automation here and paste them in
+[01:09:16] awesome so what I'm going to do is I'm
+[01:09:18] basically say look if they do a request
+[01:09:21] if they're not a paying subscriber do
+[01:09:23] not basically use a request deny the
+[01:09:26] request so basically only ever going to
+[01:09:28] use API credits with people that are
+[01:09:30] physically paying you money it's like
+[01:09:32] the simplest easiest way to possibly
+[01:09:33] validate it so I come here for
+[01:09:36] example what I want to happen is I need
+[01:09:38] to add a router so let's have a look so
+[01:09:40] bring out stripe uh we need to add in a
+[01:09:42] beautiful router Flo control like so
+[01:09:45] let's add a router put that in there
+[01:09:47] oops my goodness oh my goodness let's
+[01:09:50] bring that over here connect and then
+[01:09:53] we're going to add this one up all right
+[01:09:54] cool so scenario one is going to be
+[01:09:57] continue your journey as normal over
+[01:09:59] here let me just realign these so it's
+[01:10:01] cool uh and then actually no we don't
+[01:10:04] want that we need to get rid of this guy
+[01:10:05] there we go that's a little bit better
+[01:10:06] that's a little bit better Auto align
+[01:10:08] cool and then this one's just going to
+[01:10:09] be a web hug and I'll show that looks
+[01:10:11] like in a second cool so stretch
+[01:10:14] customers we need to now create a new
+[01:10:16] stripe API key connection so for that we
+[01:10:18] C on
+[01:10:19] ADD connection type is going to be
+[01:10:21] stripe API key and then it's looking for
+[01:10:24] a key so how do we get the key well
+[01:10:26] we're going to come back over now to
+[01:10:27] stripe click on developers the top click
+[01:10:29] on API Keys now what is it looking for
+[01:10:32] it's looking for a restricted key so
+[01:10:34] look I come back over to the scenario
+[01:10:37] okay it's looking for restricted API key
+[01:10:39] right so how do I get that I come I
+[01:10:41] click down here for click create
+[01:10:43] restricted key now obviously look
+[01:10:46] through these and only give it the
+[01:10:47] permissions that you're comfortable with
+[01:10:48] it does need some writing permissions to
+[01:10:50] do this cuz when I used just basically
+[01:10:52] only read it just said like look sorry
+[01:10:54] like I need to write some of stuff so
+[01:10:55] just for Simplicity I'm just clicking
+[01:10:57] right on
+[01:10:59] everything read right yeah right and
+[01:11:01] read cool beautiful let's just get these
+[01:11:03] ones over here
+[01:11:06] phenomenal okay that's cool we probably
+[01:11:08] signed our life away there but it' be
+[01:11:10] okay I know we click on correct the key
+[01:11:11] the key name is required uh the AI
+[01:11:16] PT awesome come down and create key
+[01:11:20] sweet and then we got reval test key
+[01:11:22] let's uh excuse me let's copy that for
+[01:11:24] example and then when going to come back
+[01:11:25] over to our scenario which is over here
+[01:11:28] Clap the key in like so click
+[01:11:32] save give us a second and it has almost
+[01:11:35] by Magic appeared okay we love that
+[01:11:37] that's incredible so get rid of a email
+[01:11:41] click okay now for the time being I'm
+[01:11:43] just going to unlink these okay and I'm
+[01:11:45] just going to run this once right well
+[01:11:47] I'm going to come back over to our
+[01:11:48] scenario that we're viewing so let's
+[01:11:50] come over to body
+[01:11:54] fat now we have one p customer don't we
+[01:11:56] right so I'm going to give it a I'm
+[01:11:58] going to give it the example of the P
+[01:11:59] customer that we had which is Bing
+[01:12:03] Bing 77 okay so check this out bing bing
+[01:12:06] 77 show me the magic I come over and
+[01:12:09] look guys it's found bing bing 77 I
+[01:12:13] apologies guys basically one thing you
+[01:12:14] need to do guys is add the email link
+[01:12:16] that's completely my mistake so look
+[01:12:18] I've got bing bing 76 now I click okay
+[01:12:20] let me run this again twice just to show
+[01:12:22] you come back over
+[01:12:23] to uh where are we now bing bing 76 show
+[01:12:27] the magic I come over to stripe false
+[01:12:30] zero bundles I go back I change it to
+[01:12:33] Bing Bing 77 because he's the only guy
+[01:12:35] that's bought a subscription so far show
+[01:12:36] me the magic oh I need to I need to
+[01:12:38] actually physically run it wait for new
+[01:12:40] data come back over show me the magic
+[01:12:42] come back over and there you go bing
+[01:12:45] bing 77 has appeared so what we can now
+[01:12:47] say is look striple check for us has is
+[01:12:49] this a paying subscriber or not or
+[01:12:50] whatever criteria you're comfortable
+[01:12:51] with free trial whatever you want and if
+[01:12:53] they can find the user then there
+[01:12:54] actually still paying they proceed to
+[01:12:57] get the data and the wonderful
+[01:12:58] information and if they don't we're
+[01:12:59] going to send a web hook back that
+[01:13:01] basically says sorry you know re
+[01:13:03] apologize not link to an active
+[01:13:04] subscription we can't help you so then
+[01:13:06] basically your API credits only ever go
+[01:13:08] to people who are actually paying you
+[01:13:09] money so then we basically finish this
+[01:13:10] by clicking on this web put guy we'll do
+[01:13:12] a 401 and then we'll just give it a b it
+[01:13:14] says hey oh my goodness come over here
+[01:13:18] hey this is not
+[01:13:21] linked to a paint subscriber
+[01:13:26] yeah this email Isn't linked or whatever
+[01:13:28] whatever whatever messaging that you
+[01:13:29] want to give again that's one way you
+[01:13:30] could do it other way you could do it is
+[01:13:31] just restrict the sections there's so
+[01:13:32] much configurability that sits within
+[01:13:34] softer I hope you found that video
+[01:13:35] helpful guys I just say remember that
+[01:13:37] like success happens in small increments
+[01:13:39] over a very long period of time so if
+[01:13:41] you start your SAS business and it
+[01:13:42] hasn't taken off or conquered the rulle
+[01:13:44] in a couple of days that's completely
+[01:13:45] normal it's the same with everybody else
+[01:13:48] but I hope you find this video useful
+[01:13:49] guys and with all that in mind go crush
+[01:13:51] it

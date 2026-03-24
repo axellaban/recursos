@@ -1,0 +1,953 @@
+[00:00:00] in this video I'm going to try to create
+[00:00:01] a 100% automated AI appointment seter
+[00:00:04] that you can literally sell to clients
+[00:00:06] or Implement in your own business I'm
+[00:00:08] going to show you how to build an
+[00:00:09] inbound digital employee they literally
+[00:00:11] your customers will call this number the
+[00:00:12] agent will speak to the individual it
+[00:00:14] will take their information and then
+[00:00:16] send them down any route you want to
+[00:00:17] either book them onto appointments or
+[00:00:19] send them into a mailing list to sell
+[00:00:21] for different Services literally
+[00:00:22] whatever you want I'm going to show you
+[00:00:24] quickly how this works end to end then
+[00:00:26] I'm going to tell you what tools you
+[00:00:27] need how much it costs to run and then
+[00:00:30] show you exactly how you can build this
+[00:00:31] thing yourself step by step so you can
+[00:00:33] start building this digital employee
+[00:00:35] literally today and as always guys all
+[00:00:36] the prompts the blueprints the agents
+[00:00:38] it's all available Down Below in school
+[00:00:39] Community I mean even right now we've
+[00:00:41] got a live co-building session to help
+[00:00:42] people build their automations
+[00:00:44] everything from this video is going to
+[00:00:46] be available here in the classroom so
+[00:00:48] all you'd ever have to do if you want to
+[00:00:49] use one of these automations is come
+[00:00:50] down here click more click import
+[00:00:52] blueprint you choose the file you select
+[00:00:54] it you hit save and then the entire
+[00:00:56] automation populates automatically and
+[00:00:58] I'm also going to release a bit of a
+[00:00:59] mini course in our business section
+[00:01:00] about how you would actually sell this
+[00:01:02] to a client step by step if this is
+[00:01:04] something you want to monetize in terms
+[00:01:06] of who I am if you're new to the channel
+[00:01:08] my name is Jack this channel is all
+[00:01:10] about the latest AI it's about
+[00:01:11] incredible automations and you might
+[00:01:13] have guess it it's about the stuff that
+[00:01:15] actually works so with all that in mind
+[00:01:17] it's time to grab coffee and jump
+[00:01:19] straight in so to R automation you need
+[00:01:21] just a couple of things the first one is
+[00:01:22] going to be access to simp flat AI
+[00:01:24] they're the kind of AI brains behind the
+[00:01:26] voice side of this operation and they've
+[00:01:28] kindly agreed to sponsor mon video which
+[00:01:30] I'm super stoked about so we have sow AI
+[00:01:33] the second thing you're going to need
+[00:01:34] access to is zapia and don't worry I
+[00:01:36] should exactly had set up each one of
+[00:01:38] these things step by step zapia takes
+[00:01:40] the outputs and thf flow grabs it and
+[00:01:42] then allows us to send it straight over
+[00:01:44] to make if you want to build the whole
+[00:01:45] thing out of make which is what we
+[00:01:46] really cover on this channel once it
+[00:01:48] lands in make basically you need access
+[00:01:50] to make.com which is our no code
+[00:01:52] automation tool I put all these links
+[00:01:54] Down Below in the description for you
+[00:01:56] now once it lands in mag what you going
+[00:01:59] need access to is a language model for
+[00:02:01] Simplicity sake here I've used open AI
+[00:02:03] so you want access to the API and if all
+[00:02:05] this sounds new to you just watch this
+[00:02:07] video on the screen I should exactly had
+[00:02:08] to set up all the open stuff but don't
+[00:02:10] worry I'll also cover it here once
+[00:02:13] you've done that what we also want to do
+[00:02:15] with this is capture the client's data
+[00:02:17] put it into a CRM system so that we can
+[00:02:19] see what's happening where and do all
+[00:02:21] the wonderful things and finally it's an
+[00:02:23] additional thing if you want to but it's
+[00:02:25] optional and that's air table and in air
+[00:02:27] table we can store all this client data
+[00:02:30] for easy viewing and see what we want to
+[00:02:32] do the other thing you're going to want
+[00:02:33] to run automation is going to be a phone
+[00:02:34] number that's the number that people are
+[00:02:35] going to call we can use twio for this
+[00:02:38] so with that in mind let's run through
+[00:02:40] the whole automation end to end so you
+[00:02:42] can see what this physically looks like
+[00:02:44] and it all starts with a phone call and
+[00:02:46] the timation I'm going to show in this
+[00:02:47] video is an mot garage called Lightning
+[00:02:49] McQueen Auto so the purpose of this bar
+[00:02:52] okay is to speak to me and either book
+[00:02:53] me in for anot or if I don't know the
+[00:02:56] day or it's happening later to take my
+[00:02:58] contact information and set up reminder
+[00:03:00] servers so that like it can then onboard
+[00:03:02] me and make sure that I go with this
+[00:03:04] garage for anot and all I have to do is
+[00:03:06] call the number and this digital AI
+[00:03:08] agent will do all the hard work for us
+[00:03:09] so let's give it a call Welcome to
+[00:03:11] Lightning McQueen auto repairs how can I
+[00:03:13] help hey there I'd like to book an mot
+[00:03:17] please I'd be happy to help you with
+[00:03:20] that before we get started can you
+[00:03:22] please tell me when your vehicle's mot
+[00:03:23] is due it's super important to yeah
+[00:03:26] sorry it's due on the 15th of May
+[00:03:30] so your mot is due on the 15th of May
+[00:03:32] that's just around the corner I'd
+[00:03:34] recommend booking an appointment with us
+[00:03:35] as soon as possible to ensure everything
+[00:03:37] run smoothly would you like to schedule
+[00:03:40] a visit within the next week or so yeah
+[00:03:42] sounds
+[00:03:45] perfect great I have a few slots
+[00:03:47] available next week how does Friday May
+[00:03:49] 10th sound we have openings at 10:00
+[00:03:51] a.m. 1:15 p.m. and 4:15 p.m. which one
+[00:03:55] works best for you let's do it bright
+[00:03:57] and early 10: a.m. sounds perfect
+[00:04:02] fantastic choice I'll book you in for
+[00:04:04] 10:00 a.m. on Friday May 10th just to
+[00:04:06] confirm could I get your name and a good
+[00:04:08] contact number sure way we can send
+[00:04:10] sorry yeah no my name's Ben and best
+[00:04:13] contact number is
+[00:04:15] 07764
+[00:04:19] 8926 thanks Ben I've got that down so to
+[00:04:22] recap I've booked your mot appointment
+[00:04:24] for Friday May 10th at 10:00 a.m. your
+[00:04:27] contact details are Ben it's Jack
+[00:04:30] outlook.com and your phone number is
+[00:04:33] 0776 344
+[00:04:36] 8,926 is that all correct that's correct
+[00:04:40] thank you you're welcome Ben thank you
+[00:04:42] for choosing Lightning McQueen auto
+[00:04:44] repairs we'll see you on the 10th of May
+[00:04:46] have a great day and guys that is
+[00:04:48] literally it now think about this this
+[00:04:50] works 24/7 in the background for you
+[00:04:52] people call it up they book appointments
+[00:04:54] they have to worry about sickness or
+[00:04:55] annually it's just like running off in
+[00:04:57] the background which means everyone can
+[00:04:58] do some cool stuff so then what happens
+[00:05:01] when that does now once that phone call
+[00:05:02] is complete this zap here will be
+[00:05:04] running in the background again don't
+[00:05:06] worry I'll show you had to set all this
+[00:05:07] up really simply okay what then happens
+[00:05:10] is sylow over here okay grabs this call
+[00:05:13] takes the transcript it throws it over
+[00:05:16] to zapia zapia grabs that transcript and
+[00:05:19] throws it back over to us in make.com
+[00:05:22] and then this automation runs so if I
+[00:05:23] CLI run this once just so you can see
+[00:05:26] what happen I'll come back over to zapia
+[00:05:28] I'm just going to hit this re test step
+[00:05:30] button here just to run through another
+[00:05:33] conversation that I had and then you go
+[00:05:35] look zapia sent it back over we've
+[00:05:37] extracted their name we've extracted the
+[00:05:39] reason why they've called we've figured
+[00:05:41] out what their output is have they
+[00:05:42] booked an M appointment are we speaking
+[00:05:44] to them later we've also capture the
+[00:05:46] data about when the mot is due in each
+[00:05:48] one of these GPT agents guys is actually
+[00:05:50] analyzing the transcript to pull out all
+[00:05:52] the key bits of information that we
+[00:05:54] think is relevant based on whatever
+[00:05:56] you're selling and then look at this
+[00:05:58] it's then also analyze the transcri
+[00:05:59] script for improvement how incredible is
+[00:06:02] that so we can actually improve our
+[00:06:03] agent over time then it gets added to
+[00:06:06] HubSpot in our CRM and on top of that
+[00:06:08] we've also added to our air table so if
+[00:06:10] I come over now to our our CRM and bear
+[00:06:13] in mind it could be like any CRM you
+[00:06:15] want look it's captured my name it's
+[00:06:17] captured the email address captured the
+[00:06:18] phone number I come back over and I come
+[00:06:20] back over to air table and it's got the
+[00:06:21] whole record it's experienced what I
+[00:06:23] want to do my name when I book the
+[00:06:25] appointment ways it could be improved
+[00:06:27] and literally guys that's the timation
+[00:06:30] this one is really exciting and this is
+[00:06:32] something that's so sellable and I think
+[00:06:34] if you want to implement this in your
+[00:06:35] business my goodness it's it's epic now
+[00:06:38] guys let's start by building our AI
+[00:06:40] agent together once I've done that I'm
+[00:06:42] going to show you how you then send it
+[00:06:44] over to zapia over here and then once
+[00:06:46] that's done I'm going to show you how we
+[00:06:48] then build it over to bank so you'll
+[00:06:50] understand how to do this step by step
+[00:06:52] cool so you're going to head over to syf
+[00:06:54] flow. a and you're going to see a page
+[00:06:56] like this I want you to head over to the
+[00:06:58] top right click get started and create
+[00:07:01] an account now once you've created an
+[00:07:03] account you'll see a page that looks
+[00:07:05] something like this and the really cool
+[00:07:08] thing about this as well guys is that
+[00:07:09] when it creates appointments it will
+[00:07:11] appear in your calendar so for example I
+[00:07:13] put my outlook here you can see that an
+[00:07:14] appointment's been scheduled within my
+[00:07:16] calendar it's really cool like that so
+[00:07:20] let's go to the assistant and building
+[00:07:21] together right so what we do first of
+[00:07:23] all we come over this dark black button
+[00:07:25] the top right and we're going to hit
+[00:07:27] create and then we're going to say
+[00:07:28] assistant now
+[00:07:30] there are many ways that we could do
+[00:07:31] this so for example you can do an
+[00:07:32] outbound so let's say you've got a
+[00:07:34] customer email list and you just want to
+[00:07:36] call them to reactivate and to sell them
+[00:07:38] things you can do that with AI for the
+[00:07:40] purpose of this video I want to do
+[00:07:41] inbound and then obviously there's loads
+[00:07:43] of ways we can do this as widgets as
+[00:07:44] batches there's lots of cool stuff and
+[00:07:46] there's also templates down there which
+[00:07:47] is pretty cool so we're going to click
+[00:07:49] on inbound we click on this top right
+[00:07:51] one here awesome uh and then we look at
+[00:07:54] a page like this so so we'll start with
+[00:07:56] a name we'll call this one
+[00:07:58] McQueen
+[00:07:59] Auto sayot Sales I don't know what the
+[00:08:03] expression is in a different country but
+[00:08:04] mot is like you know when you get your
+[00:08:06] car like repair to make sure it's road
+[00:08:07] legal they're very particular on that in
+[00:08:09] the UK for some reason so if you come
+[00:08:10] here you can select your voices so let
+[00:08:12] at Rachel she's calm and
+[00:08:16] American hey there how can I assist you
+[00:08:19] she's a little bit too calm for my Ling
+[00:08:20] I I need some energy hey there how can I
+[00:08:22] assist you drew it's good a little bit
+[00:08:24] Bassy I like
+[00:08:26] it hey there how can I assist you well
+[00:08:29] Clyde's bringing the energy all right
+[00:08:31] let's go with D I
+[00:08:33] think hey there how can I assist you
+[00:08:36] she's bringing the energy but like
+[00:08:37] obviously based on what you're trying to
+[00:08:38] sell go for the perfect agent so D me
+[00:08:41] one of the things you can also do this
+[00:08:42] guys is integrate your 11 Labs if you
+[00:08:44] create like a voice clown you can
+[00:08:46] actually basically put into this and
+[00:08:48] have yourself selling yourself which is
+[00:08:50] pretty weird but I think it's pretty
+[00:08:51] epic so we select that awesome we've got
+[00:08:53] our voice agent perfect so what do we do
+[00:08:55] now patience level you can basically
+[00:08:58] scale that up and down I like less
+[00:09:00] latency so I like to go for the one
+[00:09:01] second but you can play with that as you
+[00:09:03] want to and then we've got a custom
+[00:09:04] greeting so this really brings us on to
+[00:09:06] the part of the video where we need to
+[00:09:07] think about the script that we want to
+[00:09:09] give to her okay so I've got this one
+[00:09:12] here okay so the way I want to open is I
+[00:09:14] want to keep it quite short I don't
+[00:09:16] wanted to keep it like a 50 minute
+[00:09:18] introduction right so let's come over
+[00:09:20] here and give it this so mine is hey
+[00:09:22] welcome to lightning mc Queen auto
+[00:09:23] repairs how can I help perfect now what
+[00:09:28] do we do after that we got language over
+[00:09:30] here so I'm going to put clict on UK
+[00:09:32] dialect which is awesome custom
+[00:09:34] vocabulary so you can add words you know
+[00:09:36] that you commonly use in your business
+[00:09:38] so that actually if there are certain
+[00:09:39] Expressions that your Target customer
+[00:09:41] knows the typical person wouldn't we can
+[00:09:43] add those in there okay obviously we
+[00:09:45] want to make sure that the enabled
+[00:09:46] recordings is accurate awesome then what
+[00:09:49] do we do we're just going to click next
+[00:09:51] okay we click next and we set up action
+[00:09:53] here so we're going to schedule things
+[00:09:54] to book into our calendars then we come
+[00:09:55] on to the prompt now this is a really
+[00:09:57] cool thing and I want to teach you a
+[00:09:58] couple of things here okay so obviously
+[00:10:00] if you want to come and have a play
+[00:10:01] around with it you can like change the
+[00:10:03] script I try and keep the script a
+[00:10:05] little bit shorter rather than longer so
+[00:10:08] let's get rid of that and let's build
+[00:10:09] our round cake so for the purposes of
+[00:10:12] this I've got the garage name Lightning
+[00:10:14] McQueen AO Repairs by the way I saw cars
+[00:10:16] recently I know it's like meant for like
+[00:10:17] 10-year-old I absolutely loved it
+[00:10:19] genuinely my wife showed me and I was
+[00:10:21] like why have I never seen this movie
+[00:10:22] it's so good except for the third one
+[00:10:24] anyway script instructions what we want
+[00:10:27] to do look identify by the way guys this
+[00:10:29] template will all be available Down
+[00:10:30] Below in the community so you can play
+[00:10:32] around with it if you want to so script
+[00:10:34] instructions identifying the M due dat
+[00:10:36] Begin by inquiring about when the
+[00:10:38] vehicles motsu demonstrate genuine care
+[00:10:41] for the well-being ask the visitor when
+[00:10:43] the
+[00:10:43] motsu emphasize the importance of
+[00:10:46] staying on top of this date now it
+[00:10:48] really depends on what your output
+[00:10:49] purpose is let's say you're doing with
+[00:10:51] the call center that deals with I don't
+[00:10:53] know maybe they're selling radiators or
+[00:10:54] something you know you would then
+[00:10:56] configure these questions and the road
+[00:10:58] map of this completely differently so
+[00:11:00] every script is going to look different
+[00:11:02] this is just what I found works for me
+[00:11:03] and the key bits I've got the bit which
+[00:11:05] is booking with me next month so for
+[00:11:07] example based on the date they give you
+[00:11:09] hey look if we're in like 28 30 days
+[00:11:11] within that date let's just get them
+[00:11:13] booked in guys let's get them booked in
+[00:11:15] future M reminders if it's beyond the
+[00:11:17] month we'll just say we we know we'll
+[00:11:19] send them reminders we'll then send them
+[00:11:20] into an email sequence so we can nurture
+[00:11:22] that client and make sure they get back
+[00:11:24] to us and just think for a second how
+[00:11:26] incredibly V valuable that is before you
+[00:11:29] need someone they call picking it up
+[00:11:31] this is going to speak to them capture
+[00:11:32] the information whether they call at
+[00:11:33] 1:00 a.m. or 1: p.m. it really doesn't
+[00:11:35] matter and we can do the same thing
+[00:11:36] without B in reality could we book them
+[00:11:38] if they're booking further than a month
+[00:11:40] yes but line between AOS is no ordinary
+[00:11:42] garage okay they're very busy they're
+[00:11:43] very B built up so we need to make sure
+[00:11:45] that they get booked in when they call
+[00:11:47] we've got future M reminders I've got
+[00:11:49] collecting information I want to grab in
+[00:11:51] there and then basically just what I
+[00:11:52] want to say at the end of it so it's
+[00:11:54] short it's sweet it's effective so we
+[00:11:57] copy this once you bued you around just
+[00:11:59] going to copy the whole thing so let's
+[00:12:01] come up let's see I think Google Docs
+[00:12:05] now it really doesn't like helping us
+[00:12:06] out sometimes does it man it really
+[00:12:07] likes to misbehave so we're going to put
+[00:12:09] we're going to do this in two stepper
+[00:12:10] okay we've done that little bit and then
+[00:12:12] let's grab this bit here awesome and now
+[00:12:14] I'm going to come back over let's go
+[00:12:16] down and that's the end of The Prompt
+[00:12:18] awesome awesome awesome cool so what do
+[00:12:20] we do next well I would personally quite
+[00:12:23] like to be able to book appointments
+[00:12:25] with this so what we do is we come into
+[00:12:27] scheduling real time booking and by the
+[00:12:29] way guys you can also throw an SMS in
+[00:12:31] app or you can do that and make so many
+[00:12:34] options so I click on Real Time booking
+[00:12:36] and within this guys you can connect it
+[00:12:37] to cal.com or high Lev I know a lot of
+[00:12:40] people here in the community use high
+[00:12:41] level so if you want to you can just
+[00:12:43] literally add that connect it to high
+[00:12:45] level and you'll be absolutely flying if
+[00:12:47] you want to know how to build that with
+[00:12:48] cal.com we're just going to open cal.com
+[00:12:50] in another document we log in to cal.com
+[00:12:53] or create an account as you like and
+[00:12:55] then we've got all this cool stuff here
+[00:12:57] so I've clicked on a meeting that I've
+[00:12:58] got here for example than cal.com and
+[00:13:00] you'll notice if you're using cal.com it
+[00:13:02] asks for a call event ID when you're on
+[00:13:05] cal.com and you click on the meetings if
+[00:13:07] I come to if I go back for example if I
+[00:13:09] click on this meeting look at the URL
+[00:13:11] you'll see about seven right numbers and
+[00:13:14] all you want you to do is is copy those
+[00:13:15] numbers you're going to come back over
+[00:13:17] that's a call event ID and basically it
+[00:13:19] will book them in to that call event ID
+[00:13:21] and then we need the API key and for
+[00:13:23] that guys you just come to settings in
+[00:13:24] the bottom left hand corner and you can
+[00:13:25] see API Keys which sounds kind of like
+[00:13:27] the thing that we need going to click on
+[00:13:29] ADD name this key and then it says name
+[00:13:32] this key let's call this one sin flow
+[00:13:36] McQueen I'm I am absolutely Ardent on
+[00:13:39] getting McQueen in every single bit of
+[00:13:40] this video I can expiration date you
+[00:13:42] know what I think we need this for a
+[00:13:43] while so let's go save then we copy the
+[00:13:45] API key it generates we then enter the
+[00:13:47] API key and then we just click on next
+[00:13:49] and once that's done you'll see the real
+[00:13:50] time booking so just enter your email
+[00:13:51] address that you want to use here set
+[00:13:53] the time zone initial booking date and
+[00:13:56] what's really cool with this guys is you
+[00:13:57] can actually say day for offering dates
+[00:13:59] how many appointment slots do you want
+[00:14:01] to offer an interval between slots so
+[00:14:03] like if you got stuff going on your
+[00:14:04] calendar and it overlaps bro we can like
+[00:14:07] we can make sure it lines inste that not
+[00:14:08] double booking appointments which is
+[00:14:10] awesome then we click on save so take
+[00:14:13] this video I'm just going to go with the
+[00:14:14] default settings just to make it a
+[00:14:16] little bit easier so then the question
+[00:14:17] becomes what do we need to do next
+[00:14:20] well excuse me sorry honestly the the
+[00:14:23] place I get this coffee from is so so
+[00:14:25] good delicious so what do we do okay
+[00:14:26] well we come down when to go for next I
+[00:14:29] should also say you can ask a co-pilot
+[00:14:31] you can use templates there's cool stuff
+[00:14:32] you can play around with we come over to
+[00:14:34] next now look now we need to act phone
+[00:14:36] number right so what's this what's this
+[00:14:37] phone number malaky about I hear you
+[00:14:38] asking me well what we're saying is look
+[00:14:41] they need to call somebody right what
+[00:14:43] number are they calling now to get this
+[00:14:45] phone number there's a couple of ways
+[00:14:46] that we can physically do this but what
+[00:14:48] you can do if you want to guys is head
+[00:14:49] over to twilio.com right and it's Twi Ki
+[00:14:53] me out cuz didn't agree to his terms
+[00:14:54] that would be hilarious so we'll click
+[00:14:56] on start for free at the top right hand
+[00:14:58] corner it wants to check make sure we're
+[00:15:00] not a robot again there has been
+[00:15:01] speculation but it doesn't need to know
+[00:15:03] this okay test tester let's give it an
+[00:15:06] email address oh my goodness it says my
+[00:15:07] password's to week it's not met the the
+[00:15:10] high standards of riger apparently
+[00:15:11] you'll get the code you enter the code
+[00:15:12] and we come through which is awesome
+[00:15:15] we've been officially verified that's
+[00:15:16] what we love to see then it's taken us
+[00:15:18] through to the homepage cool once you've
+[00:15:19] verified it starts loading up in the
+[00:15:21] background this opens twilio TW is a
+[00:15:23] really good CRM system by the way um
+[00:15:25] there are a lot of great CRM systems but
+[00:15:27] and know many ways to do this I'm just
+[00:15:29] trying to do it in a way that you can
+[00:15:30] experiment have fun with it and go nuts
+[00:15:32] course ask us the questions let's have a
+[00:15:34] look with no code at all what's your day
+[00:15:36] today blah blah blah let's have a look
+[00:15:37] see if that's got can I get a phone
+[00:15:39] number please third party Integrations
+[00:15:41] get started with twio awesome we open up
+[00:15:45] and then we're here right look how cool
+[00:15:46] this is and what you'll see down here
+[00:15:47] guys is your account Sid and your or
+[00:15:50] token and when you come back over to
+[00:15:51] sylow you're going to need to integrate
+[00:15:53] your twia with it and you'll need those
+[00:15:54] two pieces of information to actually
+[00:15:56] physically do that so it's available and
+[00:15:58] it's accessible there for you so we come
+[00:16:00] back over what we really want right is a
+[00:16:02] phone number so we come back here on the
+[00:16:04] top left to phone numbers and let's have
+[00:16:07] a look down let's just click on the
+[00:16:08] phone numbers category let's click on
+[00:16:10] manage phone numbers active numbers we
+[00:16:12] click on that and would you believe it
+[00:16:14] does now act phone numbers so let's go
+[00:16:16] and buy a new twio
+[00:16:22] number cool and then look at this guys
+[00:16:24] you got all these different options of
+[00:16:26] like numbers you can build like
+[00:16:27] Mansfield Milton and like if you want a
+[00:16:29] little hack by the way what they found
+[00:16:31] is like conversions increase if the
+[00:16:33] phone number area code matches where
+[00:16:34] you're calling from so like if you're in
+[00:16:36] London and somebody from New York gives
+[00:16:37] you a call like you know it may not be
+[00:16:39] great conversions so we basically pick
+[00:16:41] the country so if I just said you know
+[00:16:43] let's get someone from United Kingdom
+[00:16:45] put them on there and then look guys all
+[00:16:47] the numbers appear so you can like grab
+[00:16:49] these calls you can go for like
+[00:16:50] different home ones like there's so many
+[00:16:51] different options you can go with like
+[00:16:53] the monthly fee for this is like 90p
+[00:16:55] just forgetting the call which is
+[00:16:56] ridiculous and then once you've gotten
+[00:16:57] your phone number from twiter we go
+[00:16:59] we're going to come back over now and
+[00:17:00] complete the Automation and
+[00:17:02] congratulations guys you just made your
+[00:17:03] first AI digital employee who's like a
+[00:17:05] voice operator we would got the guys
+[00:17:07] writing text now we've got them speaking
+[00:17:09] to us so the next thing you need to do
+[00:17:11] is head over to zapia zapier.com and
+[00:17:14] once you sign up what I want you to do
+[00:17:15] when you come over here is come to the
+[00:17:16] top left and crate you only really need
+[00:17:18] a free plan for this both zapia and make
+[00:17:21] are great at giving you some you know
+[00:17:24] free stuff you can actually use a
+[00:17:26] platform without going nuts now the
+[00:17:27] reason I'm going to zap you first is
+[00:17:29] because simp is integrated with zapia so
+[00:17:31] when going to grab a stuff from zapia
+[00:17:32] and send it straight back over which is
+[00:17:34] awesome and it's also going to be a
+[00:17:35] great thing for you to learn about how
+[00:17:36] you can access maybe a module or two
+[00:17:38] that's in zapia and bring it straight
+[00:17:40] back into your workflow so it's going to
+[00:17:41] be super valuable for you so we don't
+[00:17:43] worry about what you want to Ultimate
+[00:17:44] it's funny actually it's got the same
+[00:17:45] kind of outer shell as I have in the
+[00:17:47] corner I feel like it's it's trying to
+[00:17:48] it's trying to take my style I'm not I'm
+[00:17:49] not happy about it so we come down to
+[00:17:51] trigger let's go for sflow AI and then
+[00:17:53] we need to do is pick an event so great
+[00:17:55] we picked sunlow but what starts this
+[00:17:57] whole thing off so we click on that we
+[00:17:59] click on voice phone call completed and
+[00:18:01] then we click on continue and it's
+[00:18:03] saying look bro I get it but we need
+[00:18:04] access to sflow to do this so all you do
+[00:18:07] is click on sign in here and by the way
+[00:18:10] guys I actually removed this just so I
+[00:18:12] could show you exactly how to do this to
+[00:18:14] make it as easy as possible for you so
+[00:18:15] it's asking for an API key so what's
+[00:18:19] sometimes really good is you can
+[00:18:21] actually like follow the hyperlinks can
+[00:18:22] be really good in finding things but
+[00:18:24] guys for our purposes it's super
+[00:18:25] straightforward so all you do is you
+[00:18:26] come over to the left and you see this
+[00:18:28] thing here it says Integrations just
+[00:18:30] click on that for me third party and
+[00:18:32] then you'll see rest API and if you
+[00:18:35] click on rest
+[00:18:36] API you can see all these cool things
+[00:18:39] and all I want to do is create a new API
+[00:18:41] key and then you just copy it here and
+[00:18:43] literally that's complete them and if
+[00:18:45] you come back to Integrations look at
+[00:18:47] third party these are all the places
+[00:18:48] that are coming soon so soon you will be
+[00:18:50] able to do this with a make and you can
+[00:18:51] completely skip this zappia step but the
+[00:18:53] purposes of right now we're on Cutting
+[00:18:55] Edge guys right so we need to make sure
+[00:18:57] we're getting it working properly with
+[00:18:58] the things got so we're going to come
+[00:19:00] back over then to our new zapia thing we
+[00:19:02] enter in our API key and once that's
+[00:19:04] done it's load in the background choose
+[00:19:06] an account perfect and by the way I went
+[00:19:08] and just grabbed the coffee in between I
+[00:19:09] mean you know some would say I have too
+[00:19:11] many I don't know if you can have too
+[00:19:12] many though maybe there's a limit I
+[00:19:14] don't know cool and then we've got
+[00:19:15] trigger here which is cool and it's
+[00:19:17] asking for model ID now this is so funny
+[00:19:19] like if you don't know this this will
+[00:19:20] trip you up make sure you get rid of
+[00:19:22] that model ID back over to sunflow click
+[00:19:24] on mqueen auto M Sales if that's the
+[00:19:28] business you want great by the way I
+[00:19:29] give it to you for free McQueen Auto
+[00:19:31] Sales have it run with it I actually
+[00:19:33] think it's a very very cool um very cool
+[00:19:36] idea we're going to copy the model ID so
+[00:19:38] if you've got like loads of different uh
+[00:19:40] voice agents doing different things we
+[00:19:42] just copy The Voice ID of the one that
+[00:19:44] we want and then we come back over we
+[00:19:46] come back over to this screen you know I
+[00:19:47] need to be I need to do better tab
+[00:19:48] management here enter the model ID hit
+[00:19:50] okay and then we're going to test the
+[00:19:52] trigger and then when you do this guys
+[00:19:53] you'll find the calls that pulls through
+[00:19:55] so you just select one that you're happy
+[00:19:56] with and then click on continue with
+[00:19:59] selected record and then the next thing
+[00:20:01] we want to do is add a web hook so we're
+[00:20:03] going to click on web hooks by zapia and
+[00:20:05] this is the bit we bring make.com into
+[00:20:08] the situation so we're going to head
+[00:20:10] over to make.com we're going to log in
+[00:20:12] we're going to create a new scenario
+[00:20:13] we're going to give this one the name of
+[00:20:16] Build
+[00:20:21] Together voice Ai and of course let's
+[00:20:24] give it the patent pending robot emoji
+[00:20:27] and then the first thing you want to add
+[00:20:28] this one guys is click on this and just
+[00:20:29] go for web hook oops excuse me web hook
+[00:20:33] and looking for custom web hook at the
+[00:20:35] top like this okay then click on create
+[00:20:38] a web hook I'm going to call this one uh
+[00:20:43] zapia data grab like this all right and
+[00:20:47] then let's put a diamond on there and
+[00:20:49] then you're going to click save and then
+[00:20:51] you can see all this stuff here I just
+[00:20:53] want you to copy that address to the
+[00:20:55] clipboard perfect then come back over to
+[00:20:57] build together and then you can see here
+[00:20:59] Web book it asks for an event so what we
+[00:21:02] do is we click on the event and then
+[00:21:04] what you want to click on is post the
+[00:21:05] one here it says post so click on post
+[00:21:08] awesome then click on continue and then
+[00:21:11] it asks for URL so we come to the URL we
+[00:21:14] enter in the web hook we just decided we
+[00:21:17] come down here and you can see on
+[00:21:19] headers just click on insert text or
+[00:21:22] data so for example if I come here and
+[00:21:24] all we want is the call transcript lead
+[00:21:26] phone number their email address and be
+[00:21:28] in mind guys with the email address if
+[00:21:29] you have like a CRM that you're calling
+[00:21:31] customers from as an outband perspective
+[00:21:33] it will already have that LinkedIn so
+[00:21:35] basically pick the data that you want
+[00:21:36] then click continue awesome and then I'm
+[00:21:39] going to head back over now to make.com
+[00:21:41] and what I want you to do is right click
+[00:21:42] on this module and just put run this
+[00:21:44] module only oh has errors no problem I
+[00:21:47] think we just hit okay errors have
+[00:21:49] miraculously been solved so hit run once
+[00:21:51] or run the modle only nothing's happened
+[00:21:53] we head back over now to zapp.com then
+[00:21:56] what do we do we just test a step so we
+[00:21:58] click test that's sent come back over
+[00:22:00] and we look at this guys we've now got
+[00:22:01] all the data from zapia that's just been
+[00:22:03] bought back over perfect so the first
+[00:22:04] thing we want to do in this SAR guys is
+[00:22:06] ADD name so click on this now you can
+[00:22:08] pick any model you want to for the
+[00:22:10] purpose of this I'm just going to go for
+[00:22:12] create a completion like so awesome Max
+[00:22:17] tokens we can set this one at 200
+[00:22:19] because it's not going to be a very long
+[00:22:21] one okay let we click on ADD message so
+[00:22:24] what's our message well if we come back
+[00:22:25] to our original automation what we're
+[00:22:27] going to do is copy copy this and then
+[00:22:30] come back over awesome so we come down
+[00:22:33] to message content and what we're saying
+[00:22:35] is look hey read the below transcript
+[00:22:37] and the output and the caller's name if
+[00:22:39] no name is provided just produce any and
+[00:22:42] then we give it the transcript so we can
+[00:22:43] find a transcript from the whole web hug
+[00:22:46] output that we've got here so call
+[00:22:48] transcript perfect and that give his our
+[00:22:51] name okay the pick the role Ro is going
+[00:22:53] to be user and the model we're just
+[00:22:55] going to pick just for the purpose of
+[00:22:56] this demonstration a GPT for turbo we'll
+[00:22:59] go for the one in the middle and then
+[00:23:00] click okay and obviously we would refine
+[00:23:02] and find the models but I'm just keeping
+[00:23:03] it simple for the sake of doing this by
+[00:23:05] the way grock is very very very cheap ll
+[00:23:08] at the moment is insane and I'll I'll do
+[00:23:10] a video covering on that cuz some of you
+[00:23:12] asked for that so we're going to cover
+[00:23:13] it to help you get speed and cost down
+[00:23:16] we're going to right click we're going
+[00:23:17] to rename it we're going to call this
+[00:23:19] guy name and then we're going to give
+[00:23:22] him a smiley face cool and then what do
+[00:23:24] we do we're going to right click we're
+[00:23:25] going to clone him bring him over here
+[00:23:27] and let's see what next one line is so
+[00:23:30] here we've got reason for calling
+[00:23:33] awesome and bear in mind guys the
+[00:23:34] structure of these will change massively
+[00:23:37] based on what your particular output is
+[00:23:39] right like this is just information I
+[00:23:41] think is important to check based on the
+[00:23:42] questions I'm asking and here we say
+[00:23:44] based on the below transcript provide a
+[00:23:46] succin summary of what the problems or
+[00:23:47] issues or desires the calls experiencing
+[00:23:50] if no objections provided simply State
+[00:23:52] no key objections also include one
+[00:23:54] sentence on sentiment and turn from the
+[00:23:57] customer calling now the max toen to 200
+[00:23:59] let's just bump that up a little bit
+[00:24:00] maybe turn on the 500 Mark everything
+[00:24:03] else is the same then we click okay and
+[00:24:05] then what do we call this one well we
+[00:24:07] give this guy the name of a reason for
+[00:24:08] calling right so let's just come back
+[00:24:10] over let's copy this come back over and
+[00:24:13] I just encourage you to like name them
+[00:24:15] all and if you're going to be doing this
+[00:24:16] in multiple flows it might be worth you
+[00:24:18] just making like gpts GPT assistants to
+[00:24:21] make that a bit easier for you and there
+[00:24:22] was so many different Automotion I could
+[00:24:24] have showed you on this video like
+[00:24:25] closing them booking cly appointments
+[00:24:27] but I thought this would be really good
+[00:24:28] one just to give you kind of like a bit
+[00:24:29] of an overview of what it can do and so
+[00:24:31] now we've got the name we've got the
+[00:24:32] reason for calling we want to figure out
+[00:24:34] what the output was so we're going to
+[00:24:35] clim this guy and then I'm going to
+[00:24:37] rename this one
+[00:24:39] toot o excuse me let's right click on
+[00:24:41] him here if it will ever allow me to do
+[00:24:44] so right let's have a look so come down
+[00:24:46] here man you know make sometimes it's
+[00:24:48] funny isn't it right come down rename
+[00:24:50] let's call this one
+[00:24:52] mot status and of course since is car
+[00:24:55] related and this is L between Autos I
+[00:24:56] think we need a bit of car in here right
+[00:24:58] click the car awesome then we click on
+[00:25:01] this guy let's look at the prompt and
+[00:25:03] give it this prompt so what we say here
+[00:25:06] is look every client from the call will
+[00:25:07] fall into one of two categories analyze
+[00:25:09] the transcript and outputs and give it
+[00:25:11] one of the following labels label one is
+[00:25:13] M dat unknown label two is the m has
+[00:25:16] been booked and then we basically give
+[00:25:18] it the M date for example if they say
+[00:25:21] that their m is joing the 15th of May
+[00:25:22] your output would be hey awesome 's
+[00:25:25] booked in on the 15th of May and then we
+[00:25:27] give it again the cool transcript then
+[00:25:30] we click okay awesome now what do we do
+[00:25:32] after that well the next we want to get
+[00:25:34] after that is going to be improvements
+[00:25:36] now this is optional this is basically
+[00:25:38] saying hey based on the conversation
+[00:25:40] were there any like bits that didn't
+[00:25:42] work and how can we take that data and
+[00:25:44] use that to improve things so we'll copy
+[00:25:46] this obviously you would't have that to
+[00:25:47] copy but you will get all these prompts
+[00:25:49] down below uh in the school community so
+[00:25:51] you won't need to do what I'm doing
+[00:25:53] right now we C copy it we bring it over
+[00:25:55] here we're going to rename this one and
+[00:25:58] Improvement cool and give a bit of a
+[00:26:01] diamond and the thing with this
+[00:26:02] technology guys is it's only getting
+[00:26:04] better like do you know what I mean we
+[00:26:06] talk about automation coming in the
+[00:26:07] future it it's arrived and the technolog
+[00:26:10] is getting to the point where it's going
+[00:26:11] to be insane so look based on a blood
+[00:26:13] transcript briefly provide a suggestion
+[00:26:15] on either the call or the product could
+[00:26:17] be improved make the ideas brief and 100
+[00:26:19] words maximum here's the transcript and
+[00:26:22] since we've given it 100w maximum let's
+[00:26:24] just give it 150 tokens just to throttle
+[00:26:27] it in to make make sure but it doesn't
+[00:26:29] exceed that at all then we click okay
+[00:26:32] amazing then the question is well what's
+[00:26:34] the next step in our process want to
+[00:26:36] connect it to HubSpot now you can
+[00:26:38] obviously insert here any CRM that you
+[00:26:40] want and this is the bit and I built
+[00:26:41] this Automation Way it's quite
+[00:26:43] configurable for you so just SL in the
+[00:26:45] one that you want to do there for the
+[00:26:46] purposes of this automation I'm going to
+[00:26:48] add in
+[00:26:49] HubSpot HubSpot Itself by the way is
+[00:26:52] really really really straightforward to
+[00:26:54] add like you can create an account it's
+[00:26:55] free for a certain amount and just super
+[00:26:57] easy to get started so over the B of
+[00:26:59] this you're going to come down to create
+[00:27:00] a contact cuz maybe this contact we
+[00:27:03] don't yet know yet he's called us right
+[00:27:05] we don't know anything about this guy
+[00:27:06] create contact add item and basically
+[00:27:09] what you'll then do is give it the key
+[00:27:11] so for example I could say something
+[00:27:12] like oh like what's their first name
+[00:27:16] right and I click on value and then all
+[00:27:17] I do is I just look for name perfect and
+[00:27:21] then basically guys you basically select
+[00:27:23] the key select the result and you can
+[00:27:24] add as many into your CRM as you like
+[00:27:26] for the purpos of this I'm actually
+[00:27:28] going to ditch the CRM and I'm just
+[00:27:30] going to do it into air table just
+[00:27:31] because it's a little bit quicker and
+[00:27:32] just out of respect for your time until
+[00:27:34] you can get the full view of how it all
+[00:27:35] slots in so but anyway insert your CRM
+[00:27:37] and if you want it to go to a separate
+[00:27:39] platform you can just add it in so we go
+[00:27:41] to air table and we're going to look for
+[00:27:44] create well once we've selected air
+[00:27:46] table of course come down create a
+[00:27:48] record so you head over to airtable.com
+[00:27:50] and if you're not sure how to set up air
+[00:27:51] table I've actually got that as a guide
+[00:27:53] in the community which shows you exactly
+[00:27:55] step by step how to do that so go and
+[00:27:57] check that one out if you like and once
+[00:27:58] you've done that you'll be able to
+[00:27:59] create your own table and it's super
+[00:28:01] super intuitive I've called this one
+[00:28:02] here Improvement basically what you can
+[00:28:05] do is you can write click on something
+[00:28:07] you can insert right you can decide the
+[00:28:09] field decide what it is and go all about
+[00:28:11] your day happily so I've mapped the
+[00:28:13] fields over here right so we've got
+[00:28:14] email we've got name reason for calling
+[00:28:17] destination and again to change it you
+[00:28:18] just right click edit field type in the
+[00:28:21] thing here for example we want this to
+[00:28:23] be email click on that amazing awesome
+[00:28:27] great and the way that you connect that
+[00:28:28] with make is basically opens up a new
+[00:28:30] browser and it say hey great like sign
+[00:28:32] in and then you sign in and it's done
+[00:28:35] super super easily so what we would need
+[00:28:37] to do here for example and this is a
+[00:28:38] great thing about air table and it's so
+[00:28:40] robust as we click on it like this this
+[00:28:43] will load up for us we pick the base so
+[00:28:46] every table you build will have a base
+[00:28:48] name we click on improvements which is
+[00:28:51] awesome that then loads for us and look
+[00:28:53] at this guys we click table one table
+[00:28:56] one loads up give it a second in every
+[00:28:58] single field that we created an air
+[00:29:00] table like email name reason for calling
+[00:29:03] destination M du appears here and all we
+[00:29:06] do then is we just map it over right so
+[00:29:08] we click on email like this we come down
+[00:29:11] to this let's have a look where is the
+[00:29:12] email we chose lead custom email awesome
+[00:29:15] name well we've got the name bot right
+[00:29:17] so come down here as a name bot reason
+[00:29:19] for calling let's have a look here
+[00:29:21] result destination don't need to worry
+[00:29:24] about that one mot ju's the big one and
+[00:29:27] then improvements we want in the
+[00:29:29] Improvement bar and then we click okay
+[00:29:31] awesome great perfect this is what I
+[00:29:33] absolutely love to see and one thing
+[00:29:35] I'll just say very quickly okay if
+[00:29:36] you're setting this up where you don't
+[00:29:38] have that individual's email address
+[00:29:41] within the
+[00:29:42] assistant in other words you don't
+[00:29:44] already have that email here ported in
+[00:29:47] what you would do to add into this okay
+[00:29:49] is you'd add in an additional bot that
+[00:29:51] says grab their email and you make it a
+[00:29:53] requisite as part of the conversation
+[00:29:54] that way you would always be able to
+[00:29:56] grab it and it would make it a lot
+[00:29:57] simpler for you but but for the purposes
+[00:29:58] of this I'm going to hit run once okay
+[00:30:01] this is now I'm going to wait for the
+[00:30:02] data I go back over to zapia I click on
+[00:30:06] retest step I come back over to make
+[00:30:09] it's grabbed it from the web hug we've
+[00:30:11] captured the name we've captured the
+[00:30:12] reason for calling it's now grabbing the
+[00:30:14] M status it's now looking at
+[00:30:15] improvements and then if this is done it
+[00:30:17] job properly it will fire through to air
+[00:30:19] table and we'll have all of the data
+[00:30:21] that we had with that particular client
+[00:30:24] okay so then we come back over to
+[00:30:26] where's our air table all table is here
+[00:30:28] we click on that oops wrong one it's
+[00:30:30] here and look at this guys look at this
+[00:30:34] guys so he's got our name no key
+[00:30:36] objections the customer Jack is calm and
+[00:30:38] Cooperative can you imagine imagine how
+[00:30:40] was hostile gives me those notes like
+[00:30:41] this guy's super hostile man never let
+[00:30:43] this guy make sure he gets his car
+[00:30:44] before he gives us a call want to secure
+[00:30:46] Mt appointment does it successfully
+[00:30:48] when's the Mt book well the Mt is booked
+[00:30:49] in for the 10th of May it's booked in
+[00:30:51] for tomorrow awesome talks about the
+[00:30:53] reaction with the bar any improvements
+[00:30:54] we can have we click off it and guys
+[00:30:57] that's it's complete you just created a
+[00:31:00] digital agent that will have
+[00:31:01] conversations with you sort everything
+[00:31:03] out for you and just rock and roll how
+[00:31:05] cool is that I think that is so so epic
+[00:31:07] and then guys if I come back over to my
+[00:31:09] email address you see I've actually got
+[00:31:10] the appointment booked in that I made
+[00:31:12] here for tomorrow on the 10th so now
+[00:31:15] it's calendarized in my email tell me
+[00:31:16] down below what you think we should
+[00:31:18] automate next but in any case guys thank
+[00:31:20] you so much for watching have a
+[00:31:21] wonderful week and I'll see you in the
+[00:31:23] next video

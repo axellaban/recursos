@@ -1,0 +1,393 @@
+[00:00:00] this is how you use the brand new canva
+[00:00:02] module in make to automate the creation
+[00:00:04] of hundreds if not thousands of unique
+[00:00:07] images and texts in chat GPT that you
+[00:00:09] can then automate and make to post on
+[00:00:11] your Instagram or other social media
+[00:00:13] platforms you've probably seen these
+[00:00:14] types of posts everywhere on places like
+[00:00:16] Instagram because they work and they're
+[00:00:18] a great complement to your social media
+[00:00:20] strategy in this video I'll show you how
+[00:00:21] you build it step by step so you can get
+[00:00:23] rock and rolling and get started my name
+[00:00:25] is Jack and my YouTube channel and my
+[00:00:27] school Community all about three things
+[00:00:29] we're about the latest AI we're about
+[00:00:31] incredible automations but most
+[00:00:33] importantly we're about the stuff that
+[00:00:35] actually works so if you haven't already
+[00:00:37] grab that coffee and let's jump straight
+[00:00:39] in I'll start by showing exactly how
+[00:00:41] this works I'll give you a very simple
+[00:00:42] automation for you to Plug and Play and
+[00:00:44] get started with the new canva module so
+[00:00:46] for example let's say that we create 50
+[00:00:48] different unique quotes following this
+[00:00:50] prompt for Alex's latest book we would
+[00:00:53] download this into CSV this then comes
+[00:00:55] through to Cana and I'll show you
+[00:00:56] exactly how you do the step by step by
+[00:00:58] the way and we use a feature called
+[00:01:00] create that gives us all these different
+[00:01:02] images so it's exact same everything
+[00:01:04] else is hardcoded the image the
+[00:01:06] background and we can just change the
+[00:01:07] just change text and we can figure
+[00:01:09] anything want to if you want to change
+[00:01:10] multiple text it's super easy to do I'll
+[00:01:13] show you how you that in a second now
+[00:01:14] the cool thing about this new canva API
+[00:01:16] is the fact that now we can post to
+[00:01:19] social media from canva so we actually
+[00:01:22] don't need to download from Cana anymore
+[00:01:24] and upload it this is all done
+[00:01:26] automatically with the brand new canva
+[00:01:28] API so we start off with our tools
+[00:01:29] module that creates an increment for
+[00:01:30] each page this is then exporting the
+[00:01:33] design from canva directly from our bul
+[00:01:35] create we then upload to Dropbox make an
+[00:01:37] API call to get the image and then this
+[00:01:39] image will be posted automatically to
+[00:01:41] Instagram now the reason why this API
+[00:01:43] thing here is really cool with canva is
+[00:01:45] the fact that we can say hey run this
+[00:01:46] scenario every day every two days every
+[00:01:48] 3 days so that once you create it in
+[00:01:50] canva it will run automatically with the
+[00:01:52] canva API what a lot of us wanted to see
+[00:01:54] was the ability to edit text within
+[00:01:56] canva to do that you need a developer
+[00:01:58] account so I'm going to do a video and
+[00:02:00] that in the future cover what that might
+[00:02:01] look like for the Pips of moment this is
+[00:02:03] something you can get started with right
+[00:02:04] now and start using your social media
+[00:02:06] platforms literally today so let's say
+[00:02:08] for example you wanted to get 50 of
+[00:02:10] these types of posts on Instagram and
+[00:02:12] let's say we wanted to do something with
+[00:02:13] Alexa Mery a really cool website by the
+[00:02:15] way is this website here called PDF
+[00:02:16] coffee where you can get the pdf version
+[00:02:18] of most books for the purposes of this
+[00:02:20] automation I'm going to show you how we
+[00:02:21] could take 50 quotes from Alex os's book
+[00:02:24] and turn them into Instagram posts so we
+[00:02:26] can start by giving it the following
+[00:02:27] prompt which is this based on this PDF
+[00:02:29] quote 50 quotes in the below format
+[00:02:31] innovate now plan later sometimes you
+[00:02:33] must invest then investigate use 125
+[00:02:36] characters maximum this is because of
+[00:02:38] the text length on canva make the quotes
+[00:02:40] valuable bite size information to digest
+[00:02:42] in short form content turn this into CSV
+[00:02:45] for me to export so what I do I then
+[00:02:46] just upload the book I wanted to analyze
+[00:02:48] and I've just uploaded the $100 million
+[00:02:50] offers book which is a phenomenal book
+[00:02:52] and exceptional and if you want to do
+[00:02:54] this for your own work maybe you want to
+[00:02:55] extract the you know the transcript of
+[00:02:56] your podcast maybe with your own books
+[00:02:58] this is an excellent way way for any
+[00:03:00] content you make to get into bite-sized
+[00:03:02] Clips so imagine you do a podcast with a
+[00:03:03] friend for 3 hours we could use this
+[00:03:05] just to draw out you know 20 30 4050
+[00:03:08] clips and again this could also be
+[00:03:09] automated I just wanted to give you
+[00:03:11] something really simple that you could
+[00:03:12] just get started with to get used to the
+[00:03:14] canva API I've got so many videos on the
+[00:03:16] channel in the school community that go
+[00:03:18] in depth to like the level 10 depth this
+[00:03:20] is just something really easy and fun do
+[00:03:23] you can get with to get started uh if
+[00:03:25] you just want a quick nice Automation
+[00:03:27] and to leverage what I think is quite a
+[00:03:28] cool feature in C so this is analyzing
+[00:03:31] the PDF once it's done that it's then
+[00:03:32] going to create 50 quotes for us so it's
+[00:03:34] going to be stuff and we let's check out
+[00:03:36] the file and see for ourselves we
+[00:03:37] download this file in the file we can
+[00:03:39] see action is a Kure for anxiety do this
+[00:03:40] first then improve what else we got
+[00:03:42] success in business is about practicing
+[00:03:44] practicing offers until you win blah
+[00:03:46] blah blah 50 quotes just like that
+[00:03:48] perfect so then guys then we come over
+[00:03:49] to canva you're going to select on logo
+[00:03:51] for the dimensions like so we're going
+[00:03:52] to get rid of this and then just design
+[00:03:54] this the way that you want the one that
+[00:03:55] I've seen working really well actually
+[00:03:58] is with this kind of background you see
+[00:04:00] so for example if I just copy this as a
+[00:04:02] for instance I'm going to come back over
+[00:04:03] but just design this in any style that
+[00:04:05] you want in any picture canva will also
+[00:04:07] let you match the color of the
+[00:04:08] background for consistency like that so
+[00:04:10] say this is the format that we like and
+[00:04:13] that we want all we would ever do guys
+[00:04:15] is you see in the bottom left here bulk
+[00:04:16] create we just simply click on bulk
+[00:04:17] create we come down to upload data we
+[00:04:20] then select the file from upload data
+[00:04:22] and what it's identified in the CSV is
+[00:04:24] quotes if I had multiple headings it
+[00:04:26] would have quote it could have author so
+[00:04:28] for instance I could have Alex hosi Lea
+[00:04:30] hosi Mr muu hosi and we could basically
+[00:04:33] change that every single post but I just
+[00:04:36] to keep this simple we're going to do
+[00:04:37] one variable field so what we click on
+[00:04:39] this we click on connect data and we
+[00:04:42] click on quotes and now essentially what
+[00:04:43] that's connected with is everything in
+[00:04:45] the quote column with this piece of text
+[00:04:47] now look if I put continue here and look
+[00:04:50] at this guys this has pulled through all
+[00:04:52] 50 quotes that we had but I just say hey
+[00:04:55] generate 50 designs and then the magic
+[00:04:57] happens and the magic is basically
+[00:04:59] brings every single thing that we want
+[00:05:02] right here you see 46 47 perfect now
+[00:05:05] what we want to do is give this a
+[00:05:06] wonderful name so we'll call this hosi
+[00:05:09] quotes 100 million offers and like that
+[00:05:13] perfect now the next thing we need to do
+[00:05:15] is create scenario in make so let's head
+[00:05:17] over to make and build the scenario out
+[00:05:19] so the first thing you want to do guys
+[00:05:20] to make sure that you post one at a time
+[00:05:22] is use something called the increment
+[00:05:23] function so we click on tools and then
+[00:05:26] you're going to search for increment and
+[00:05:28] essentially what this will do is it
+[00:05:29] Returns the value one and then each time
+[00:05:30] it runs it just goes plus one so reset a
+[00:05:33] value never we don't need it for this
+[00:05:34] one and then we just click okay now the
+[00:05:37] next thing you want to do is add in the
+[00:05:38] canva module the beautiful brilliant
+[00:05:40] canva module I must admit one of the
+[00:05:42] things that I wanted to see with this
+[00:05:43] canva module was the ability to edit in
+[00:05:46] Cana that doesn't seem like it's
+[00:05:47] available unless you get down the make
+[00:05:49] an API call so I'm investigating that at
+[00:05:51] the moment and I look forward to sharing
+[00:05:52] some details on that when it's done so
+[00:05:54] in the Cana module what do we need we're
+[00:05:56] going to export a design then we're
+[00:05:57] going to upload a file and then get an
+[00:05:59] API to get the URL for that file and
+[00:06:01] then essentially it's just going to post
+[00:06:03] for you on autopilot so look we come
+[00:06:05] over exported design and basically it's
+[00:06:08] one click opens to new browser you log
+[00:06:10] in you're ready to go pick the folder ID
+[00:06:13] for me it's just the basics because I'm
+[00:06:15] a Savage I don't have my canva organized
+[00:06:17] in folders yet I know it's crazy oh my
+[00:06:19] goodness yeah if I if I drank less
+[00:06:20] coffees maybe I have more heads space to
+[00:06:22] do it then we need to pick the design ID
+[00:06:24] so the design ID is basically what we
+[00:06:25] called it so we call this homos quotes
+[00:06:28] 100 million offers so let's check if we
+[00:06:30] can find that for Mery ques $100 million
+[00:06:32] offers
+[00:06:34] awesome now export type I want to put
+[00:06:37] PNG lossless now export as a single
+[00:06:40] image you can leave that as no for the
+[00:06:43] moment uh height you can just specify
+[00:06:45] the size if I just said just for
+[00:06:46] argument sake 500 I think realistically
+[00:06:48] you want about a th000 a th000 for this
+[00:06:50] and then you put the pages and then for
+[00:06:51] Pages guys all you do look at this right
+[00:06:54] we click on that and it's just the
+[00:06:56] output from increment function so the
+[00:06:58] first time a snar runs it'll be one then
+[00:07:00] two then three and you know what the
+[00:07:02] sequence looks like so we click on that
+[00:07:04] we click okay Ace now the next thing we
+[00:07:06] want to do to post on Instagram on make
+[00:07:08] what we need is a URL for the image add
+[00:07:10] in the upload file to Dropbox so we come
+[00:07:13] out a little bit click on Dropbox let's
+[00:07:14] go
+[00:07:15] for upload a file like so wonderful I'm
+[00:07:18] going to pick choose a folder it doesn't
+[00:07:20] really matter which one you pick but
+[00:07:21] pick anyone you like so I'll go for m 3
+[00:07:23] and then for the file we'll just put a
+[00:07:26] file name here which I would just say
+[00:07:27] call it the increment function so for
+[00:07:29] every new project you have so you have
+[00:07:30] file one file two file three file four
+[00:07:32] and then we've got the data and the data
+[00:07:34] is just going to be exactly what we've
+[00:07:36] seen from canva then we click okay now
+[00:07:39] the next thing you want to do guys is
+[00:07:40] the same thing again Dropbox and we're
+[00:07:42] going to put on here make an API call
+[00:07:45] okay awesome now what I want you to do
+[00:07:48] is put in the these exact details so
+[00:07:51] look I'm going to come over make an API
+[00:07:53] call I'll put this link in the
+[00:07:54] description for you so you can just grab
+[00:07:55] and go and get this you come over type
+[00:07:58] that in there perfect and then at the
+[00:08:00] bottom what we need to add in is
+[00:08:02] something in particular for this
+[00:08:04] particular thing which is going to be
+[00:08:05] this which is path path lower okay so we
+[00:08:08] come down again I'll put in the
+[00:08:10] description for you so you can just grab
+[00:08:11] and go and except for this time it's not
+[00:08:13] modle 24 it actually is let me bring it
+[00:08:16] over here so you get a good look at
+[00:08:18] it and we'll just find path glower which
+[00:08:21] is right there and then we click okay
+[00:08:23] and then finally guys let's go for
+[00:08:27] Instagram uh Instagram for business and
+[00:08:29] then we're just going to put here create
+[00:08:30] photo post like so and this is going to
+[00:08:33] load in the background and then it says
+[00:08:35] photo URL and then the photo URL what
+[00:08:37] what we need to do first to get the
+[00:08:39] photo URL is just run the scenario one
+[00:08:41] more time so un link that I'm going to
+[00:08:43] run this uh in particular so let me just
+[00:08:46] uh come here and run
+[00:08:48] once that's export the design excellent
+[00:08:50] the tool incremental function that
+[00:08:52] should be like a three or something and
+[00:08:53] this is fail because we didn't have a
+[00:08:54] proper file name so what you need to do
+[00:08:56] is i.png all right come so let's try
+[00:08:58] that one one more time uh and this
+[00:09:01] should work perfectly this time you know
+[00:09:02] pesky very particular about the pngs so
+[00:09:05] we're just going to run this once so we
+[00:09:06] can get the data to import into the
+[00:09:08] Instagram for business and then you
+[00:09:10] going be ready to rock and roll awesome
+[00:09:11] so then we're going to connect that
+[00:09:12] together Instagram for business we then
+[00:09:14] click on this and then we give it the
+[00:09:15] photo URL so what's the photo URL I hear
+[00:09:18] you saying so what we need to do
+[00:09:20] actually is delete this guy and bring it
+[00:09:22] back in again uh because sometimes if
+[00:09:24] you run a module beforehand it won't
+[00:09:25] prepopulate the items so again click on
+[00:09:28] create photo post
+[00:09:30] like so photo URL and you see now almost
+[00:09:33] by Magic the data has repopulated
+[00:09:35] awesome and you're just going to click
+[00:09:37] on link and then for caption for
+[00:09:38] argument sake I'm just going to put ABC
+[00:09:40] right here of course we can automate
+[00:09:42] that with loads of other beautiful fills
+[00:09:43] and automations of things which is
+[00:09:45] excellent so for example what we could
+[00:09:46] do is just add a chat GPT module to
+[00:09:49] analyze it and then create a text post
+[00:09:50] for us and then just put that into the
+[00:09:52] caption as well just to give us some
+[00:09:53] really good Instagram captions and I'll
+[00:09:55] show you how you do that in a second as
+[00:09:56] a bit of a bonus then we click okay and
+[00:09:58] then guys
+[00:10:00] you've basically created the entire
+[00:10:01] automation so let's run it one more time
+[00:10:03] and see if this works so what we would
+[00:10:05] do is we come down here to schedule
+[00:10:07] settings regular intervals and we just
+[00:10:09] say do it every day and what that means
+[00:10:11] is every day we'll get one post that
+[00:10:13] comes out with our cool homoi quot so
+[00:10:15] I'm going to hit run once tools
+[00:10:17] functions worked what number is it to
+[00:10:19] number four so basically this is now
+[00:10:21] working guys and if you s it correctly
+[00:10:22] image 4 should be what we now see on
+[00:10:25] Instagram and guys once you've got 50 60
+[00:10:27] 100 500 a thousand of these just let it
+[00:10:29] go forever and every day you'll get a
+[00:10:31] brand new post and Chach BT is done a
+[00:10:33] phenomenal job of capturing the essence
+[00:10:36] of those quotes this is something truly
+[00:10:37] auto part and if I come over to
+[00:10:38] Instagram I can see grow or die business
+[00:10:40] is either growing or shrinking guys and
+[00:10:43] that is literally the entire Automation
+[00:10:46] in a nutshell and guys to get a unique
+[00:10:47] caption for this all you do is come here
+[00:10:49] like so going to click on chat gbt uh
+[00:10:52] just type in Vision analyzes image
+[00:10:54] Vision which is awesome and then we've
+[00:10:56] got a prompt then we just add the image
+[00:10:58] and again it won't image URL so again
+[00:11:00] just add the same thing that we had in
+[00:11:02] the last one which is here I'm going to
+[00:11:04] do a prompt and for that guys I'm just
+[00:11:05] going to shut over to my school
+[00:11:06] community and I'm going to grab the um
+[00:11:09] prompt sequence that we've got for
+[00:11:11] making something on Instagram so I'm
+[00:11:12] going to come down to agents uh let's
+[00:11:14] have a look at Instagram real quick and
+[00:11:15] then we'll can pull down the all the
+[00:11:17] code for that Instagram agent which is
+[00:11:19] excellent and then we're going to copy
+[00:11:21] all of this beautiful text we going come
+[00:11:24] back over now to chat gbt sorry excuse
+[00:11:26] me come back over to this now we've got
+[00:11:28] our prompt and then guys just make sure
+[00:11:30] that you select the model there in GPT
+[00:11:32] 40 look to the
+[00:11:34] top excellent and then guys what we're
+[00:11:36] going to do is click okay like so and
+[00:11:39] then what we're going to do is bring
+[00:11:40] these in over here we're going to click
+[00:11:42] on this and then for the caption we'll
+[00:11:45] just going to put the result from chat
+[00:11:46] GPT and then we click okay and then we
+[00:11:48] right click and let's just call this
+[00:11:51] one Vision
+[00:11:53] caption okay cool with of course the
+[00:11:57] eyes CU it's all about Vision okay okay
+[00:11:59] and then we're going to save it and
+[00:12:00] we'll call this one canva build together
+[00:12:05] like
+[00:12:07] so sweet awesome now we align it and all
+[00:12:10] we do guys is we hit play and then we
+[00:12:13] watch it happen and Lally in the
+[00:12:14] background so run once tool increment
+[00:12:16] functions worked Cana is now exporting
+[00:12:18] the design which is excellent draw box
+[00:12:20] make CPI call the vision is now cor the
+[00:12:21] caption and now it's getting added
+[00:12:23] Instagram for business so when I load up
+[00:12:25] Instagram now I should see the brand new
+[00:12:27] image with a caption all completely done
+[00:12:29] on AO pallette from that one action at
+[00:12:30] the beginning and guys if I load it up I
+[00:12:32] can see we've got the actual image and
+[00:12:33] then we've got a caption for the
+[00:12:34] Instagram and guys it is as simple as
+[00:12:36] that and you just made an AI automation
+[00:12:38] with canva I know this video is just a
+[00:12:39] little bit shorter so let me know you
+[00:12:41] think Down Below on this kind of length
+[00:12:42] in any case guys have a wonderful week
+[00:12:44] and I will see you in my next video

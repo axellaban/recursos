@@ -1,0 +1,1606 @@
+{
+    "name": "📈 Your YouTube Data",
+    "flow": [
+        {
+            "id": 1,
+            "module": "http:ActionSendData",
+            "version": 3,
+            "parameters": {
+                "handleErrors": true,
+                "useNewZLibDeCompress": true
+            },
+            "mapper": {
+                "url": "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=[INSERT YOUTUBE ID]&maxResults=100&key=[INSERT YOUR KEY]",
+                "serializeUrl": false,
+                "method": "get",
+                "headers": [],
+                "qs": [],
+                "bodyType": "",
+                "parseResponse": false,
+                "authUser": "",
+                "authPass": "",
+                "timeout": "",
+                "shareCookies": false,
+                "ca": "",
+                "rejectUnauthorized": true,
+                "followRedirect": true,
+                "useQuerystring": false,
+                "gzip": true,
+                "useMtls": false,
+                "followAllRedirects": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": -699,
+                    "y": 11,
+                    "name": "Tech Global"
+                },
+                "restore": {
+                    "expect": {
+                        "method": {
+                            "mode": "chose",
+                            "label": "GET"
+                        },
+                        "headers": {
+                            "mode": "chose"
+                        },
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "bodyType": {
+                            "label": "Empty"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    },
+                    {
+                        "name": "useNewZLibDeCompress",
+                        "type": "hidden"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "get",
+                                "head",
+                                "post",
+                                "put",
+                                "patch",
+                                "delete",
+                                "options"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "type": "array",
+                        "label": "Headers",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "label": "Name",
+                                "type": "text",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "label": "Value",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "qs",
+                        "type": "array",
+                        "label": "Query String",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "label": "Name",
+                                "type": "text",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "label": "Value",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "bodyType",
+                        "type": "select",
+                        "label": "Body type",
+                        "validate": {
+                            "enum": [
+                                "raw",
+                                "x_www_form_urlencoded",
+                                "multipart_form_data"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "parseResponse",
+                        "type": "boolean",
+                        "label": "Parse response",
+                        "required": true
+                    },
+                    {
+                        "name": "authUser",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "authPass",
+                        "type": "password",
+                        "label": "Password"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "uinteger",
+                        "label": "Timeout",
+                        "validate": {
+                            "max": 300,
+                            "min": 1
+                        }
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    },
+                    {
+                        "name": "ca",
+                        "type": "cert",
+                        "label": "Self-signed certificate"
+                    },
+                    {
+                        "name": "rejectUnauthorized",
+                        "type": "boolean",
+                        "label": "Reject connections that are using unverified (self-signed) certificates",
+                        "required": true
+                    },
+                    {
+                        "name": "followRedirect",
+                        "type": "boolean",
+                        "label": "Follow redirect",
+                        "required": true
+                    },
+                    {
+                        "name": "useQuerystring",
+                        "type": "boolean",
+                        "label": "Disable serialization of multiple same query string keys as arrays",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    },
+                    {
+                        "name": "useMtls",
+                        "type": "boolean",
+                        "label": "Use Mutual TLS",
+                        "required": true
+                    },
+                    {
+                        "name": "followAllRedirects",
+                        "type": "boolean",
+                        "label": "Follow all redirect",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "module": "json:ParseJSON",
+            "version": 1,
+            "parameters": {
+                "type": 189619
+            },
+            "mapper": {
+                "json": "{{1.data}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -399,
+                    "y": 11
+                },
+                "restore": {
+                    "parameters": {
+                        "type": {
+                            "label": "My data structure"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "type",
+                        "type": "udt",
+                        "label": "Data structure"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "json",
+                        "type": "text",
+                        "label": "JSON string",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "kind",
+                        "type": "text",
+                        "label": "Kind",
+                        "default": null,
+                        "required": false,
+                        "multiline": false
+                    },
+                    {
+                        "name": "etag",
+                        "type": "text",
+                        "label": "Etag",
+                        "default": null,
+                        "required": false,
+                        "multiline": false
+                    },
+                    {
+                        "name": "nextPageToken",
+                        "type": "text",
+                        "label": "Next Page Token",
+                        "default": null,
+                        "required": false,
+                        "multiline": false
+                    },
+                    {
+                        "name": "items",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "kind",
+                                    "type": "text",
+                                    "label": null,
+                                    "default": null,
+                                    "required": false,
+                                    "multiline": false
+                                },
+                                {
+                                    "name": "etag",
+                                    "type": "text",
+                                    "label": null,
+                                    "default": null,
+                                    "required": false,
+                                    "multiline": false
+                                },
+                                {
+                                    "name": "id",
+                                    "type": "text",
+                                    "label": null,
+                                    "default": null,
+                                    "required": false,
+                                    "multiline": false
+                                },
+                                {
+                                    "name": "contentDetails",
+                                    "spec": [
+                                        {
+                                            "name": "videoId",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "videoPublishedAt",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": null,
+                                    "required": false
+                                }
+                            ],
+                            "type": "collection",
+                            "required": false
+                        },
+                        "type": "array",
+                        "label": "Items",
+                        "required": false
+                    },
+                    {
+                        "name": "pageInfo",
+                        "spec": [
+                            {
+                                "name": "totalResults",
+                                "type": "number",
+                                "label": null,
+                                "default": null,
+                                "required": false
+                            },
+                            {
+                                "name": "resultsPerPage",
+                                "type": "number",
+                                "label": null,
+                                "default": null,
+                                "required": false
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Page Info",
+                        "required": false
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "module": "builtin:BasicFeeder",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "array": "{{2.items}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -134,
+                    "y": 14
+                },
+                "restore": {
+                    "expect": {
+                        "array": {
+                            "mode": "edit"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "mode": "edit",
+                        "name": "array",
+                        "spec": [],
+                        "type": "array",
+                        "label": "Array"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "http:ActionSendData",
+            "version": 3,
+            "parameters": {
+                "handleErrors": true,
+                "useNewZLibDeCompress": true
+            },
+            "mapper": {
+                "ca": "",
+                "qs": [],
+                "url": "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics,contentDetails&id={{3.contentDetails.videoId}}&key=AIzaSyAblohRmIjHFfieoWqZuTbQ6x0t_-Rvjjc",
+                "gzip": true,
+                "method": "get",
+                "headers": [],
+                "timeout": "",
+                "useMtls": false,
+                "authPass": "",
+                "authUser": "",
+                "bodyType": "",
+                "serializeUrl": false,
+                "shareCookies": false,
+                "parseResponse": false,
+                "followRedirect": true,
+                "useQuerystring": false,
+                "followAllRedirects": false,
+                "rejectUnauthorized": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 159,
+                    "y": 9,
+                    "name": "Tech Global"
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "GET"
+                        },
+                        "headers": {
+                            "mode": "chose"
+                        },
+                        "bodyType": {
+                            "label": "Empty"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    },
+                    {
+                        "name": "useNewZLibDeCompress",
+                        "type": "hidden"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "get",
+                                "head",
+                                "post",
+                                "put",
+                                "patch",
+                                "delete",
+                                "options"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "bodyType",
+                        "type": "select",
+                        "label": "Body type",
+                        "validate": {
+                            "enum": [
+                                "raw",
+                                "x_www_form_urlencoded",
+                                "multipart_form_data"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "parseResponse",
+                        "type": "boolean",
+                        "label": "Parse response",
+                        "required": true
+                    },
+                    {
+                        "name": "authUser",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "authPass",
+                        "type": "password",
+                        "label": "Password"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "uinteger",
+                        "label": "Timeout",
+                        "validate": {
+                            "max": 300,
+                            "min": 1
+                        }
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    },
+                    {
+                        "name": "ca",
+                        "type": "cert",
+                        "label": "Self-signed certificate"
+                    },
+                    {
+                        "name": "rejectUnauthorized",
+                        "type": "boolean",
+                        "label": "Reject connections that are using unverified (self-signed) certificates",
+                        "required": true
+                    },
+                    {
+                        "name": "followRedirect",
+                        "type": "boolean",
+                        "label": "Follow redirect",
+                        "required": true
+                    },
+                    {
+                        "name": "useQuerystring",
+                        "type": "boolean",
+                        "label": "Disable serialization of multiple same query string keys as arrays",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    },
+                    {
+                        "name": "useMtls",
+                        "type": "boolean",
+                        "label": "Use Mutual TLS",
+                        "required": true
+                    },
+                    {
+                        "name": "followAllRedirects",
+                        "type": "boolean",
+                        "label": "Follow all redirect",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "module": "json:ParseJSON",
+            "version": 1,
+            "parameters": {
+                "type": 189626
+            },
+            "mapper": {
+                "json": "{{4.data}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 426,
+                    "y": 11
+                },
+                "restore": {
+                    "parameters": {
+                        "type": {
+                            "label": "My data structure"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "type",
+                        "type": "udt",
+                        "label": "Data structure"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "json",
+                        "type": "text",
+                        "label": "JSON string",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "kind",
+                        "type": "text",
+                        "label": "Kind",
+                        "default": null,
+                        "required": false,
+                        "multiline": false
+                    },
+                    {
+                        "name": "etag",
+                        "type": "text",
+                        "label": "Etag",
+                        "default": null,
+                        "required": false,
+                        "multiline": false
+                    },
+                    {
+                        "name": "items",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "kind",
+                                    "type": "text",
+                                    "label": null,
+                                    "default": null,
+                                    "required": false,
+                                    "multiline": false
+                                },
+                                {
+                                    "name": "etag",
+                                    "type": "text",
+                                    "label": null,
+                                    "default": null,
+                                    "required": false,
+                                    "multiline": false
+                                },
+                                {
+                                    "name": "id",
+                                    "type": "text",
+                                    "label": null,
+                                    "default": null,
+                                    "required": false,
+                                    "multiline": false
+                                },
+                                {
+                                    "name": "snippet",
+                                    "spec": [
+                                        {
+                                            "name": "publishedAt",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "channelId",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "title",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "description",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "thumbnails",
+                                            "spec": [
+                                                {
+                                                    "name": "default",
+                                                    "spec": [
+                                                        {
+                                                            "name": "url",
+                                                            "type": "text",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "width",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        },
+                                                        {
+                                                            "name": "height",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        }
+                                                    ],
+                                                    "type": "collection",
+                                                    "label": null,
+                                                    "required": false
+                                                },
+                                                {
+                                                    "name": "medium",
+                                                    "spec": [
+                                                        {
+                                                            "name": "url",
+                                                            "type": "text",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "width",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        },
+                                                        {
+                                                            "name": "height",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        }
+                                                    ],
+                                                    "type": "collection",
+                                                    "label": null,
+                                                    "required": false
+                                                },
+                                                {
+                                                    "name": "high",
+                                                    "spec": [
+                                                        {
+                                                            "name": "url",
+                                                            "type": "text",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "width",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        },
+                                                        {
+                                                            "name": "height",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        }
+                                                    ],
+                                                    "type": "collection",
+                                                    "label": null,
+                                                    "required": false
+                                                },
+                                                {
+                                                    "name": "standard",
+                                                    "spec": [
+                                                        {
+                                                            "name": "url",
+                                                            "type": "text",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "width",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        },
+                                                        {
+                                                            "name": "height",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        }
+                                                    ],
+                                                    "type": "collection",
+                                                    "label": null,
+                                                    "required": false
+                                                },
+                                                {
+                                                    "name": "maxres",
+                                                    "spec": [
+                                                        {
+                                                            "name": "url",
+                                                            "type": "text",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false,
+                                                            "multiline": false
+                                                        },
+                                                        {
+                                                            "name": "width",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        },
+                                                        {
+                                                            "name": "height",
+                                                            "type": "number",
+                                                            "label": null,
+                                                            "default": null,
+                                                            "required": false
+                                                        }
+                                                    ],
+                                                    "type": "collection",
+                                                    "label": null,
+                                                    "required": false
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": null,
+                                            "required": false
+                                        },
+                                        {
+                                            "name": "channelTitle",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "tags",
+                                            "spec": {
+                                                "type": "text",
+                                                "default": null,
+                                                "required": false,
+                                                "multiline": false
+                                            },
+                                            "type": "array",
+                                            "label": null,
+                                            "required": false
+                                        },
+                                        {
+                                            "name": "categoryId",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "liveBroadcastContent",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "localized",
+                                            "spec": [
+                                                {
+                                                    "name": "title",
+                                                    "type": "text",
+                                                    "label": null,
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                },
+                                                {
+                                                    "name": "description",
+                                                    "type": "text",
+                                                    "label": null,
+                                                    "default": null,
+                                                    "required": false,
+                                                    "multiline": false
+                                                }
+                                            ],
+                                            "type": "collection",
+                                            "label": null,
+                                            "required": false
+                                        },
+                                        {
+                                            "name": "defaultAudioLanguage",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": null,
+                                    "required": false
+                                },
+                                {
+                                    "name": "contentDetails",
+                                    "spec": [
+                                        {
+                                            "name": "duration",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "dimension",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "definition",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "caption",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "licensedContent",
+                                            "type": "boolean",
+                                            "label": null,
+                                            "required": false
+                                        },
+                                        {
+                                            "name": "contentRating",
+                                            "spec": [],
+                                            "type": "collection",
+                                            "label": null,
+                                            "required": false
+                                        },
+                                        {
+                                            "name": "projection",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": null,
+                                    "required": false
+                                },
+                                {
+                                    "name": "statistics",
+                                    "spec": [
+                                        {
+                                            "name": "viewCount",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "likeCount",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "favoriteCount",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        },
+                                        {
+                                            "name": "commentCount",
+                                            "type": "text",
+                                            "label": null,
+                                            "default": null,
+                                            "required": false,
+                                            "multiline": false
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": null,
+                                    "required": false
+                                }
+                            ],
+                            "type": "collection",
+                            "required": false
+                        },
+                        "type": "array",
+                        "label": "Items",
+                        "required": false
+                    },
+                    {
+                        "name": "pageInfo",
+                        "spec": [
+                            {
+                                "name": "totalResults",
+                                "type": "number",
+                                "label": null,
+                                "default": null,
+                                "required": false
+                            },
+                            {
+                                "name": "resultsPerPage",
+                                "type": "number",
+                                "label": null,
+                                "default": null,
+                                "required": false
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Page Info",
+                        "required": false
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "module": "airtable:ActionCreateRecord",
+            "version": 3,
+            "parameters": {
+                "__IMTCONN__": 1532818
+            },
+            "mapper": {
+                "base": "app60aNaSNo2at4Do",
+                "table": "tblHeXi3WcLUTLoGP",
+                "record": {
+                    "fld0N7jnpsJJLKZI5": "{{5.items[].statistics.viewCount}}",
+                    "fld1xOav0bY0Iuezz": "{{5.items[].statistics.commentCount}}",
+                    "fld3N41fM07nlmwPR": [
+                        {
+                            "url": "{{5.items[].snippet.thumbnails.maxres.url}}"
+                        }
+                    ],
+                    "fldLI1w4MRaDVJ6QZ": "{{5.items[].statistics.likeCount}}",
+                    "flda9tD1KlZCJUzAy": "{{5.items[].snippet.thumbnails.maxres.url}}",
+                    "fldaKz1WlO3gsZJhN": "{{5.items[].snippet.publishedAt}}",
+                    "fldesOsUsb4l9oFrG": "{{5.items[].id}}",
+                    "fldfHcyrATnYakXLy": "{{5.items[].snippet.channelTitle}}",
+                    "fldnKMTgTDMnUshK0": "{{5.items[].snippet.description}}",
+                    "fldqaBZn2LjdvmiYH": "{{5.items[].snippet.title}}"
+                },
+                "typecast": false,
+                "useColumnId": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 709,
+                    "y": 4
+                },
+                "restore": {
+                    "expect": {
+                        "base": {
+                            "label": "📈 YouTube Knowledge"
+                        },
+                        "table": {
+                            "label": "💎 Jack's YouTube",
+                            "nested": [
+                                {
+                                    "name": "record",
+                                    "spec": [
+                                        {
+                                            "name": "fldqaBZn2LjdvmiYH",
+                                            "type": "text",
+                                            "label": "📚 Title"
+                                        },
+                                        {
+                                            "name": "fld3N41fM07nlmwPR",
+                                            "spec": [
+                                                {
+                                                    "help": "Airtable will download the file at the given url and keep its own copy of it.",
+                                                    "name": "url",
+                                                    "type": "text",
+                                                    "label": "File URL"
+                                                },
+                                                {
+                                                    "help": "If empty, Airtable will generate the name automatically.",
+                                                    "name": "filename",
+                                                    "type": "filename",
+                                                    "label": "File name"
+                                                }
+                                            ],
+                                            "type": "array",
+                                            "label": "Attachments",
+                                            "editable": true
+                                        },
+                                        {
+                                            "name": "flda9tD1KlZCJUzAy",
+                                            "type": "text",
+                                            "label": "Thumbnail 🤩",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fldesOsUsb4l9oFrG",
+                                            "type": "text",
+                                            "label": "📹 Video"
+                                        },
+                                        {
+                                            "name": "fldfHcyrATnYakXLy",
+                                            "type": "text",
+                                            "label": "👀 Channel",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fldnKMTgTDMnUshK0",
+                                            "type": "text",
+                                            "label": "📚 Description",
+                                            "multiline": true
+                                        },
+                                        {
+                                            "name": "fld0N7jnpsJJLKZI5",
+                                            "type": "number",
+                                            "label": "📈 Views"
+                                        },
+                                        {
+                                            "name": "fldLI1w4MRaDVJ6QZ",
+                                            "type": "number",
+                                            "label": "👍 Likes"
+                                        },
+                                        {
+                                            "name": "fld1xOav0bY0Iuezz",
+                                            "type": "number",
+                                            "label": "💬 Comments"
+                                        },
+                                        {
+                                            "name": "fldaKz1WlO3gsZJhN",
+                                            "time": false,
+                                            "type": "date",
+                                            "label": "📆 Uploaded Date"
+                                        },
+                                        {
+                                            "mode": "edit",
+                                            "name": "fldXIfmvcnYDPMw75",
+                                            "type": "select",
+                                            "label": "Status",
+                                            "dynamic": true,
+                                            "options": [
+                                                {
+                                                    "label": "Todo",
+                                                    "value": "Todo"
+                                                },
+                                                {
+                                                    "label": "In progress",
+                                                    "value": "In progress"
+                                                },
+                                                {
+                                                    "label": "Done",
+                                                    "value": "Done"
+                                                }
+                                            ],
+                                            "validate": false
+                                        },
+                                        {
+                                            "name": "fldFj2nLqcoaA2xbY",
+                                            "time": false,
+                                            "type": "date",
+                                            "label": "Date created"
+                                        }
+                                    ],
+                                    "type": "collection",
+                                    "label": "Record"
+                                }
+                            ]
+                        },
+                        "record": {
+                            "nested": {
+                                "fld3N41fM07nlmwPR": {
+                                    "mode": "chose",
+                                    "items": [
+                                        null
+                                    ]
+                                },
+                                "fldXIfmvcnYDPMw75": {
+                                    "mode": "edit"
+                                }
+                            }
+                        },
+                        "typecast": {
+                            "mode": "chose"
+                        },
+                        "useColumnId": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "airtable3"
+                            },
+                            "label": "My Airtable OAuth connection (User ID: usrWHZndszJIS5AWQ)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:airtable3,airtable2",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "base",
+                        "type": "select",
+                        "label": "Base",
+                        "required": true
+                    },
+                    {
+                        "name": "typecast",
+                        "type": "boolean",
+                        "label": "Smart links",
+                        "required": true
+                    },
+                    {
+                        "name": "useColumnId",
+                        "type": "boolean",
+                        "label": "Use Column ID",
+                        "required": true
+                    },
+                    {
+                        "name": "table",
+                        "type": "select",
+                        "label": "Table",
+                        "required": true
+                    },
+                    {
+                        "name": "record",
+                        "spec": [
+                            {
+                                "name": "fldqaBZn2LjdvmiYH",
+                                "type": "text",
+                                "label": "📚 Title"
+                            },
+                            {
+                                "name": "fld3N41fM07nlmwPR",
+                                "spec": [
+                                    {
+                                        "name": "url",
+                                        "type": "text",
+                                        "label": "File URL"
+                                    },
+                                    {
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File name"
+                                    }
+                                ],
+                                "type": "array",
+                                "label": "Attachments"
+                            },
+                            {
+                                "name": "flda9tD1KlZCJUzAy",
+                                "type": "text",
+                                "label": "Thumbnail 🤩"
+                            },
+                            {
+                                "name": "fldesOsUsb4l9oFrG",
+                                "type": "text",
+                                "label": "📹 Video"
+                            },
+                            {
+                                "name": "fldfHcyrATnYakXLy",
+                                "type": "text",
+                                "label": "👀 Channel"
+                            },
+                            {
+                                "name": "fldnKMTgTDMnUshK0",
+                                "type": "text",
+                                "label": "📚 Description"
+                            },
+                            {
+                                "name": "fld0N7jnpsJJLKZI5",
+                                "type": "number",
+                                "label": "📈 Views"
+                            },
+                            {
+                                "name": "fldLI1w4MRaDVJ6QZ",
+                                "type": "number",
+                                "label": "👍 Likes"
+                            },
+                            {
+                                "name": "fld1xOav0bY0Iuezz",
+                                "type": "number",
+                                "label": "💬 Comments"
+                            },
+                            {
+                                "name": "fldaKz1WlO3gsZJhN",
+                                "time": false,
+                                "type": "date",
+                                "label": "📆 Uploaded Date"
+                            },
+                            {
+                                "mode": "edit",
+                                "name": "fldXIfmvcnYDPMw75",
+                                "type": "select",
+                                "label": "Status"
+                            },
+                            {
+                                "name": "fldFj2nLqcoaA2xbY",
+                                "time": false,
+                                "type": "date",
+                                "label": "Date created"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Record"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "text",
+                        "label": "ID"
+                    },
+                    {
+                        "name": "createdTime",
+                        "type": "date",
+                        "label": "Created Time"
+                    },
+                    {
+                        "name": "📚 Title",
+                        "type": "text",
+                        "label": "📚 Title"
+                    },
+                    {
+                        "name": "Attachments",
+                        "spec": [
+                            {
+                                "name": "id",
+                                "type": "text",
+                                "label": "ID"
+                            },
+                            {
+                                "name": "width",
+                                "type": "uinteger",
+                                "label": "Width"
+                            },
+                            {
+                                "name": "height",
+                                "type": "uinteger",
+                                "label": "Height"
+                            },
+                            {
+                                "name": "url",
+                                "type": "url",
+                                "label": "URL"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "filename",
+                                "label": "File name"
+                            },
+                            {
+                                "name": "size",
+                                "type": "uinteger",
+                                "label": "Size"
+                            },
+                            {
+                                "name": "type",
+                                "type": "text",
+                                "label": "MIME type"
+                            },
+                            {
+                                "name": "thumbnails",
+                                "spec": [
+                                    {
+                                        "name": "small",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Small"
+                                    },
+                                    {
+                                        "name": "large",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Large"
+                                    },
+                                    {
+                                        "name": "full",
+                                        "spec": [
+                                            {
+                                                "name": "url",
+                                                "type": "url",
+                                                "label": "URL"
+                                            },
+                                            {
+                                                "name": "width",
+                                                "type": "uinteger",
+                                                "label": "Width"
+                                            },
+                                            {
+                                                "name": "height",
+                                                "type": "uinteger",
+                                                "label": "Height"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Full"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Thumbnails"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Attachments"
+                    },
+                    {
+                        "name": "Thumbnail 🤩",
+                        "type": "text",
+                        "label": "Thumbnail 🤩",
+                        "multiline": true
+                    },
+                    {
+                        "name": "📹 Video",
+                        "type": "text",
+                        "label": "📹 Video"
+                    },
+                    {
+                        "name": "👀 Channel",
+                        "type": "text",
+                        "label": "👀 Channel",
+                        "multiline": true
+                    },
+                    {
+                        "name": "📚 Description",
+                        "type": "text",
+                        "label": "📚 Description",
+                        "multiline": true
+                    },
+                    {
+                        "name": "📈 Views",
+                        "type": "number",
+                        "label": "📈 Views"
+                    },
+                    {
+                        "name": "👍 Likes",
+                        "type": "number",
+                        "label": "👍 Likes"
+                    },
+                    {
+                        "name": "💬 Comments",
+                        "type": "number",
+                        "label": "💬 Comments"
+                    },
+                    {
+                        "name": "📆 Uploaded Date",
+                        "time": false,
+                        "type": "date",
+                        "label": "📆 Uploaded Date"
+                    },
+                    {
+                        "name": "Status",
+                        "type": "text",
+                        "label": "Status"
+                    },
+                    {
+                        "name": "Date created",
+                        "time": false,
+                        "type": "date",
+                        "label": "Date created"
+                    },
+                    {
+                        "name": "Last modified time",
+                        "type": "date",
+                        "label": "Last modified time"
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}

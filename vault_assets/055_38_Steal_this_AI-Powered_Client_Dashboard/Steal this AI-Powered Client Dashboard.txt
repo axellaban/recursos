@@ -1,0 +1,1053 @@
+[00:00:00] I built an AI power dashboard using CLA
+[00:00:02] to make that can give you a graph in
+[00:00:03] absolutely any style that you want that
+[00:00:05] is completely interactive light mode
+[00:00:07] dark mode can even predict what happens
+[00:00:09] in the future uh we have all the client
+[00:00:11] data for anything that we track it for
+[00:00:14] uh we can have a dynamic chart AI power
+[00:00:16] chat based on their data so if they want
+[00:00:18] to dive deeper into numbers we can
+[00:00:20] provide that it's all powered by an
+[00:00:21] Automation in may now imagine if we
+[00:00:24] could take the client experience from
+[00:00:26] here to here I know from firsthand when
+[00:00:29] I hired like a PPC Agency for my
+[00:00:31] business my the reporting sucks to be
+[00:00:33] quite Frank with you and we're paying
+[00:00:34] them really good money I think the
+[00:00:36] future now with these AI web apps is
+[00:00:38] creating Dynamic visually engaging
+[00:00:42] graphs and designs and data forms on
+[00:00:44] either websites or reports that users
+[00:00:46] can actually engage with and in this
+[00:00:47] video I'm going to show you exactly how
+[00:00:49] you can build any graph that you want or
+[00:00:51] any interactive data thing that you want
+[00:00:53] I'm going to show you how you can
+[00:00:54] actually make it interactive so it can
+[00:00:55] predict and do cool things based on
+[00:00:57] different kind of mathematical models we
+[00:00:58] can display all the data with client
+[00:01:00] like this automatically we can have
+[00:01:02] conversations about that data with our
+[00:01:04] own AI you know bot that knows
+[00:01:06] everything about our business that has
+[00:01:08] access to all of our data so I said hey
+[00:01:10] what was happening in July what could we
+[00:01:11] do differently we can have those
+[00:01:13] performance-led conversations imagine if
+[00:01:15] you're an agency or you want to sell
+[00:01:17] this to an agency to reduce I mean like
+[00:01:20] how much time are they spending every
+[00:01:21] single week talking to clients if we can
+[00:01:23] a them to self- serve have conversations
+[00:01:25] about it get all the information in a
+[00:01:26] great way it's killer for those guys
+[00:01:28] whether you want to sell this to
+[00:01:29] business businesses or you clients of
+[00:01:31] your own that you want to basically
+[00:01:33] create this for and doing your own
+[00:01:34] Dynamic set we can do that and I'm also
+[00:01:36] going to show you how you create this
+[00:01:37] whole thing that it's on this website
+[00:01:39] into a template that you can just lit
+[00:01:40] duplicate and change for any brand that
+[00:01:42] you want so you just replace the logo
+[00:01:44] change the color scheme across the
+[00:01:46] entire website the colors um the graph
+[00:01:48] whatever you want so you can scale it
+[00:01:49] from this to this in pretty much no time
+[00:01:52] so I'd like to if I may start with a
+[00:01:54] quick overview of how it actually works
+[00:01:55] so basically there's two scenarios in
+[00:01:57] make one Powers the AI power chat bot
+[00:02:00] and the second one power is basically a
+[00:02:02] conversation so what happens well look
+[00:02:05] essentially what happens is now here's a
+[00:02:07] really cool thing about this whenever
+[00:02:08] you load the website it will
+[00:02:10] automatically pull through the latest
+[00:02:13] data so then and that's what I think is
+[00:02:15] super now look if I reload this for
+[00:02:17] example what happens the website loads
+[00:02:19] up it then pulls the data automatically
+[00:02:22] from our CRM which for purpose of this I
+[00:02:24] built in air table but it could be
+[00:02:26] anything you want to it's really
+[00:02:27] straightforward to to build this sort of
+[00:02:29] stuff I I'll show you exactly how to do
+[00:02:30] that now look it pulls all the data run
+[00:02:32] and this tracks for example subscribers
+[00:02:34] how many new sales they've got and what
+[00:02:36] the churn is but you know what guys I've
+[00:02:38] I said you know that churn I'm not
+[00:02:40] interested get that churn out of here it
+[00:02:42] will remove it automatically and if I
+[00:02:43] said that I'm not interested in sales I
+[00:02:45] can get rid of that and I you it's just
+[00:02:47] so interactive that I can see and it
+[00:02:49] just enables better conversations about
+[00:02:51] the data because sometimes the numbers
+[00:02:53] are great but it's kind of like you want
+[00:02:55] you want it to be visual so you can add
+[00:02:57] your own unique style your own unique
+[00:02:58] mark on this and and essentially the
+[00:03:00] client can come down have a look at
+[00:03:01] different bits and pieces see what's
+[00:03:02] happening now what happened when this
+[00:03:04] launched it I off something called bit
+[00:03:06] of a web hook so what happens in the
+[00:03:08] background well this scenario runs now
+[00:03:11] this will be running automatically for
+[00:03:12] you and again I'll show you how you
+[00:03:13] build this step by step but essentially
+[00:03:15] whenever the website's loaded this will
+[00:03:16] pull the latest and greatest data from
+[00:03:19] your CRM and then let's say we go back
+[00:03:21] to our website now for example over here
+[00:03:23] if I can scroll and find it and I say
+[00:03:25] hey hang on a sec hey um what was my
+[00:03:28] churn in in I don't know let's pick a
+[00:03:31] month should we say like April I say hey
+[00:03:33] what was my turn in
+[00:03:37] April and the cool thing about this guys
+[00:03:39] is you can actually load this with data
+[00:03:41] about the client about things that
+[00:03:43] they've done we can have different
+[00:03:44] things hey the CH April was 92 so if I
+[00:03:47] come up for example can I validate that
+[00:03:48] was correct April month four 992 and is
+[00:03:52] also on the graph as you can see right
+[00:03:53] there Jon is 92 now why is this so cool
+[00:03:56] because when we have when we build this
+[00:03:58] chat B this AI power chat but we can say
+[00:04:00] look here are the principles I want to
+[00:04:02] talk about give it all the data for
+[00:04:04] every single unique client um all the
+[00:04:06] stuff about your own particular website
+[00:04:08] so essentially this becomes your AI P
+[00:04:10] coach now you could sell this to an
+[00:04:11] agency as an add-on like look we will
+[00:04:14] present all the data to the client we'll
+[00:04:15] give you an a power coach we'll build
+[00:04:16] that for you and it's like a complete
+[00:04:18] no-brainer because everybody guys is
+[00:04:20] working on spreadsheets if that
+[00:04:22] spreadsheets in Crazy dark so this is
+[00:04:24] completely Next Level and then we can
+[00:04:26] add whatever bells and whistles we want
+[00:04:27] we can add cly appointments in there if
+[00:04:29] we want to uh different toggles we can
+[00:04:30] design it and the cool thing is this is
+[00:04:32] once you create it you're done like
+[00:04:34] you're literally completely done now
+[00:04:35] I'll show all the code and blueprints
+[00:04:37] and the automation from this uh so all
+[00:04:38] you ever have to do if you want to uh is
+[00:04:40] basically come here click on more click
+[00:04:42] on import blueprint you select the file
+[00:04:45] click save and then basically the whole
+[00:04:46] automation will populate and as always
+[00:04:48] all the prompts blueprints agents are
+[00:04:50] available over in the school Community
+[00:04:51] but if you don't know who I am my
+[00:04:52] YouTube channel and my school Community
+[00:04:54] about three things we're about the
+[00:04:55] latest AI we are about incredible
+[00:04:58] automations and most important guys what
+[00:05:00] about the stuff that actually works so
+[00:05:02] as always if you haven't already please
+[00:05:05] grab that coffee and let's dive straight
+[00:05:07] in and look aside by the way at the
+[00:05:08] moment we got a competition in my
+[00:05:09] community about the prompto Thon over
+[00:05:11] $1,000 in prizes come and check that out
+[00:05:13] lots of cool stuff and it's an on boding
+[00:05:14] call maybe we'll we'll dive in that on
+[00:05:16] body call in 30 minutes we'll see how
+[00:05:17] we're feeling so I've shown you how it
+[00:05:20] works now I'm going to show you step by
+[00:05:21] step how you actually build that before
+[00:05:22] that briefly what do you actually need
+[00:05:24] Jack to run this really cool automation
+[00:05:26] well only really three things the first
+[00:05:28] thing you need is access to me.com no
+[00:05:29] code automation Builder it's a cool
+[00:05:31] thing that we're building on right now
+[00:05:33] uh you can get free usage up to like a
+[00:05:34] thousand actions and stuff there's a
+[00:05:36] link down below that give you like a
+[00:05:37] month free Pro if you want to buy that
+[00:05:39] uh just from just for coming from the
+[00:05:40] channel the second thing that we need in
+[00:05:42] this instance is this air table CRM so
+[00:05:45] what is that about as I always say
+[00:05:47] Google sheet on steroids hitting the gym
+[00:05:48] doing these tralon sandwiches it's like
+[00:05:50] Google Sheets but it's better more
+[00:05:52] configurable really easy again you can
+[00:05:55] use that for free up to like a thousand
+[00:05:57] records so again it's really easy to
+[00:05:58] touch the other thing you're going to
+[00:06:00] need guys is access to something called
+[00:06:02] card.co now guys card.co I talked about
+[00:06:04] in my last two videos which by the way
+[00:06:07] if you haven't seen those last two
+[00:06:08] videos on building AI web apps i'
+[00:06:11] strongly encourage you to grab that
+[00:06:12] coffee put it to one side head over
+[00:06:13] watch that video and I'll be waiting for
+[00:06:16] you when you come back because it'll
+[00:06:17] give you a lot of great foundational
+[00:06:18] information about how you build these AI
+[00:06:20] web apps to have you fly this video cool
+[00:06:23] well if you're back welcome back now
+[00:06:24] we'll continue with the video so incard
+[00:06:27] as I was saying it's really cool it's
+[00:06:28] really handy you you can essentially buy
+[00:06:31] uh it's like 25 websites yeah 25 sites
+[00:06:33] for $49 a year I was previous WordPress
+[00:06:36] convert but card has bought me over to
+[00:06:38] the dark side literally because it is in
+[00:06:40] dark mode and figuratively so you get 25
+[00:06:42] 25 sites $49 it's like $4 a month it's
+[00:06:46] it's ridiculous absolutely insane so we
+[00:06:48] need that cuz we want we want a rapper
+[00:06:50] to put all our AI web apps in and card
+[00:06:52] services that that purpose perfectly and
+[00:06:55] then finally guys the only other thing
+[00:06:56] that you're going to need is access to
+[00:06:57] clo or CH GPT because would you believe
+[00:07:00] it guys all these web apps and stuff
+[00:07:01] it's just by claing chat gbt and asking
+[00:07:04] the right questions cool so with that in
+[00:07:05] mind guys let's get started and begin
+[00:07:08] the automation so the very first thing I
+[00:07:10] want we need to do is this we going to
+[00:07:11] go to card get a blueprint a template
+[00:07:13] now look now let's say that we designed
+[00:07:15] the perfect template for your brand your
+[00:07:16] business your agency whatever you want
+[00:07:17] to do one of the cool things we can do
+[00:07:19] in card is come down here going to click
+[00:07:21] on Save and you can you see on the left
+[00:07:23] it says save as template if you save it
+[00:07:25] as a template essentially we can reuse
+[00:07:27] it again and again for any design that
+[00:07:29] we want to so I click on Save changes
+[00:07:31] this is now a template so when I want to
+[00:07:32] create a new um you know a new website
+[00:07:35] I'm able to do so because it's already
+[00:07:38] templated okay so if I go over to
+[00:07:39] card.com now let's check out choose a
+[00:07:42] open
+[00:07:43] dashboard maybe I want to go for new
+[00:07:45] site and let's go over now to my
+[00:07:48] templates and would you believe guys
+[00:07:49] almost by Magic it has appeared there
+[00:07:52] for us so you can do this obviously if
+[00:07:54] you want to you can actually just pick
+[00:07:56] any of these uh pre-ot sites that you
+[00:07:58] like that fit your designer feel but
+[00:07:59] obviously super customizable easy to do
+[00:08:01] so we're going to go with the template I
+[00:08:03] had here before uh now guys this one's
+[00:08:06] really cool you know W hard work CU you
+[00:08:08] click you blad images it's super super
+[00:08:10] intuitive to add things you click the
+[00:08:11] plus and blah blah blah so let's say in
+[00:08:13] this example that we work with a paddle
+[00:08:14] board company I say paddle board because
+[00:08:17] I've been paddle boarding a little bit
+[00:08:18] this past couple weeks and when the
+[00:08:19] sunshine guys it is caused for it so I
+[00:08:20] say hey paddle boarding the paddle
+[00:08:24] boarding Co all right I think I think
+[00:08:26] this name has potential all right cool
+[00:08:28] we'll just give it a random color let's
+[00:08:30] go nice and blue since they're paddle
+[00:08:31] boarding fantastic and and I've got this
+[00:08:33] image here from mid Journey which is
+[00:08:34] really cool nice beautiful paddle
+[00:08:36] boarding thing for our paddle boarding
+[00:08:37] car which is fantastic it's already
+[00:08:38] coming together so we can pre-specify
+[00:08:40] these headlines obviously if you want to
+[00:08:42] add links so click on X click on X then
+[00:08:43] type in your link and straight to your
+[00:08:46] your your particular website so cool so
+[00:08:48] we've created the website now you
+[00:08:49] basically move things around when you're
+[00:08:50] happy with it it is time to create the
+[00:08:52] graph now one of the best little hacks I
+[00:08:54] found with this is feeding an image so
+[00:08:57] say for example I have this what we're
+[00:08:59] going to do guys is we're going to come
+[00:09:01] here now look you can specify if you
+[00:09:04] wish any features that you want and when
+[00:09:06] I say that it's principally just limited
+[00:09:10] to your imagination I'm kind of not
+[00:09:12] kidding like any feature that you want
+[00:09:15] any crazy thing that you want it to do
+[00:09:17] it can do it can do confetti it can have
+[00:09:18] confetti in the background it can do
+[00:09:20] whatever you want I quite like the
+[00:09:22] predict next month part because it adds
+[00:09:23] a bit of you know you can get some
+[00:09:25] mathematical modeling and say like I
+[00:09:26] want you to create a formula for
+[00:09:28] predicting future champ future sales and
+[00:09:30] we can kind of model that out so pretty
+[00:09:32] much imagine anything I just did this as
+[00:09:33] a for instance to give you some
+[00:09:35] inspiration so head up to Claude and we
+[00:09:37] say hey
+[00:09:38] Claude we say hey I would
+[00:09:40] like you to uh write HTML code for a
+[00:09:44] website app that does the
+[00:09:47] following okay we come down so number
+[00:09:50] one is um we basically say look the
+[00:09:54] second
+[00:09:57] that it is loaded it makes a web hook
+[00:10:02] call to this web hook address and I'll
+[00:10:05] add that in in a second number two it
+[00:10:09] populates three fields and we're going
+[00:10:11] to say that is churn and obviously if
+[00:10:13] you go to SEO agency PPC agency just
+[00:10:15] substitute this for the data types that
+[00:10:17] you want it doesn't even have to be this
+[00:10:18] kind of graph it could be a bar graph it
+[00:10:20] could be literally you imagine whatever
+[00:10:22] you want it to be it could be anything
+[00:10:23] you want to I'm going to say for churn
+[00:10:25] for sales and for
+[00:10:28] subscribers uh I should say and month of
+[00:10:31] the year
+[00:10:33] awesome incredible um and then we're
+[00:10:36] going to say I guess the other thing we
+[00:10:38] realistically want to add is say I want
+[00:10:41] it to look like this image but go for a
+[00:10:47] Blue Aqua
+[00:10:50] theme and then let's also say you know
+[00:10:53] let's give it some other aspect of
+[00:10:54] interactivity let's just make it random
+[00:10:56] say hey add some really cool
+[00:11:00] interactive elements to the design all
+[00:11:03] right and then what I'm going to do guys
+[00:11:06] we're then going to head over to make uh
+[00:11:07] like so I'm going to delete all this
+[00:11:09] stuff cuz we're building this one from
+[00:11:10] scratch um and we're going to start by
+[00:11:12] adding a web hook like so typ in a web
+[00:11:15] hook here we go web hook built in uh
+[00:11:18] custom web hook and then you'll see guys
+[00:11:19] We'll add a new one and we'll call this
+[00:11:21] one paddle board Cod by the way if
+[00:11:22] you've not pal boarded it's so fun it's
+[00:11:25] really it's just good to get out of
+[00:11:26] Nature and have a rock and roll in good
+[00:11:28] time I think sometimes
+[00:11:30] and I'd highly recommend it I'm going to
+[00:11:31] do it this Thursday there a little bit
+[00:11:33] of a smash the morning get the coffee
+[00:11:35] get the good times and then get some P
+[00:11:37] boarding activities on the go I think we
+[00:11:39] get this cool link then okay but let me
+[00:11:41] know down in the comments if you've been
+[00:11:42] P Board I'm I don't know if it's just a
+[00:11:44] UK thing lead thing it's not big lead
+[00:11:45] but I'm just curious to know so we cop
+[00:11:47] this clipboard what do we do then we
+[00:11:49] head over back up to Claude and we we
+[00:11:51] now give it the web hook address all
+[00:11:53] right so let's go boom there we go and
+[00:11:55] then we say ah okay the other thing is
+[00:11:56] must be an HTML
+[00:11:59] which I understand is looked down on by
+[00:12:01] the coding community so we don't know
+[00:12:03] big fans of HTML actually if you say
+[00:12:05] you're a coding you do HTML apparently
+[00:12:06] that's a that's a slap on the wrist they
+[00:12:08] don't like that they like they get to
+[00:12:09] get out of here cool let's have a look
+[00:12:12] so this guy love the code instead I can
+[00:12:14] offer to create a HTML struct layout
+[00:12:16] using blue and aqu theme this is let
+[00:12:18] just say yes
+[00:12:22] okay okay cool now we let clae do the
+[00:12:24] thing in the background for
+[00:12:27] us okay and then we the fact when to
+[00:12:29] open up which is excellent I'll take a
+[00:12:30] sip of my beautiful cof in the
+[00:12:34] meantime cool and guys it's literally
+[00:12:37] simple as that and we building a web
+[00:12:38] apps now I need you to understand this
+[00:12:40] the capability the functionality the
+[00:12:42] strength the error rate is going to go
+[00:12:43] down but everything else is going to go
+[00:12:45] up over time so by being able to wield
+[00:12:47] and get used to creating apps in this
+[00:12:50] feature in this manner is going to be a
+[00:12:53] huge Advantage for you now the the
+[00:12:55] capabilities that we've got and
+[00:12:56] Integrations we've got only going to go
+[00:12:57] up so this is incred skill to learn
+[00:13:00] right now I think and look we've got the
+[00:13:01] stuff got the code got the preview we
+[00:13:03] just copy it okay then we go over to our
+[00:13:06] website that we've got again this is an
+[00:13:08] example the last one we did but let's
+[00:13:10] head over to Brand performance we come
+[00:13:12] over to code what do we do we delete
+[00:13:14] what's in there already and then we just
+[00:13:16] push the code in click done and then we
+[00:13:18] come over we click save and we need to
+[00:13:20] give it a title so it's called this
+[00:13:21] paddle boarding Co description uh for a
+[00:13:26] paddle boarding good time P carding
+[00:13:30] that's cool and then let's just go for
+[00:13:31] paddle paddle and then we open a new tab
+[00:13:33] let's see what we get and we can see the
+[00:13:35] brand performance this is cool so let's
+[00:13:37] check if the data structure has been
+[00:13:39] determined has it yes okay that's really
+[00:13:41] cool it has so what do we do now guys
+[00:13:43] well we got to do a couple of things
+[00:13:45] right number one is we have our air
+[00:13:47] table so basically come over to air
+[00:13:49] table um we can create a new app so come
+[00:13:52] down uh start from scratch or whatever
+[00:13:55] you like um and essentially we can just
+[00:13:57] build in the different data sets that we
+[00:13:58] want so I've got some cool data here uh
+[00:14:01] for month sales churn subscribers and
+[00:14:03] some random notes so I will add those in
+[00:14:06] here so we'll come here there we go
+[00:14:08] let's expand it perfect but again just
+[00:14:10] kind
+[00:14:11] of have these as whatever you want so I
+[00:14:13] said like let's just change this one to
+[00:14:16] month uh okay that's cool and then
+[00:14:18] double click on notes and then we'll say
+[00:14:20] this one is let's just say new or sales
+[00:14:23] or
+[00:14:25] subscribers in fact what do we call that
+[00:14:27] last one yeah sales
+[00:14:30] sweet beautiful uh this one's going to
+[00:14:33] be churn like so um cool and then this
+[00:14:36] one here guys
+[00:14:39] is
+[00:14:41] subscribers we'll put a nice little uh
+[00:14:44] alarm Bell for that but it's single
+[00:14:45] select let's just change that to long
+[00:14:46] text for
+[00:14:47] example beautiful and then we're going
+[00:14:49] call this one paddle board
+[00:14:51] Co with an aqua blue feel to it and
+[00:14:54] should we give a little paddleboard
+[00:14:55] Emoji as well for good measure I think
+[00:14:58] we should I think that's important yeah
+[00:15:00] okay sweet let's get the yellow one on
+[00:15:02] there The Simpsons emerging cool and
+[00:15:04] then we've got NES and we've got NES by
+[00:15:05] guys is cuz we're also going use chat to
+[00:15:07] analyze this in the next video so in the
+[00:15:09] next automation so it makes things a
+[00:15:11] bazillion times easier incredible now
+[00:15:15] what do we do next well essentially we
+[00:15:17] come back to the automation here we
+[00:15:18] click on this and then we go for air
+[00:15:21] table and I'm going to for search
+[00:15:23] records okay sweet let's have a quick
+[00:15:26] look click on the base it's going to be
+[00:15:27] paddle board
+[00:15:29] P of bka excellent give that a sack the
+[00:15:33] table there table
+[00:15:36] one we want month want sales want churn
+[00:15:39] want subscribers and we want the notes
+[00:15:41] in fact you don't need the notes on this
+[00:15:43] one so don't worry about that for the
+[00:15:44] moment limit is 10 I mean like based on
+[00:15:46] how many fields you've got if you've got
+[00:15:48] 100 put 100 but I think we've only got
+[00:15:50] eight so it's fine 10 is fine and then
+[00:15:52] we click okay which is awesome and then
+[00:15:55] what we're going to do guys is we're
+[00:15:56] going to right click on this one we're
+[00:15:57] going to run this module only and we
+[00:16:00] should see all of these numbers but look
+[00:16:02] guys would you believe it they've come
+[00:16:04] in a random order month four month three
+[00:16:06] month six that's not good to us we don't
+[00:16:08] like that so what we're going to do
+[00:16:09] instead is we click on our table uh and
+[00:16:12] essentially what we're going to do is
+[00:16:14] sort click on add item click on the
+[00:16:16] field and for us it's going to be the
+[00:16:18] month and the direction is going to be
+[00:16:20] ascending and then we click okay so now
+[00:16:23] we're going to get them in order so that
+[00:16:24] it doesn't screw up the data for us so
+[00:16:27] click on add a new module now now what
+[00:16:29] we're going to do here guys is array
+[00:16:31] aggregator now we need an array
+[00:16:33] aggregator because essentially we're
+[00:16:35] going to get all this data I just want
+[00:16:37] it in one output for the web hook just
+[00:16:38] to come over grab it and bounce and not
+[00:16:40] have to do a million different um you
+[00:16:43] know a million different operations so
+[00:16:45] let's go for we select the module which
+[00:16:46] is air table in other words this guy all
+[00:16:49] the things that we want we've texed then
+[00:16:51] we click okay and then the only other
+[00:16:54] thing we need to add is a text
+[00:16:56] aggregator The Source module is the
+[00:16:59] array aggregator and then the text has
+[00:17:02] come down to array and I went to sales
+[00:17:05] month sales turn subscribers all right
+[00:17:09] now check this out this is a little
+[00:17:10] manual bit you're going to need to do so
+[00:17:12] you do um excuse me we just say hey the
+[00:17:14] month we're going to come down and we're
+[00:17:16] going to say
+[00:17:22] sales I'm going to come down here and
+[00:17:24] we're going to say
+[00:17:26] churn and then we're going to come down
+[00:17:28] here and we're going to say subscribers
+[00:17:30] all right and then all you're going to
+[00:17:32] do guys is simply
+[00:17:34] zer0 0 0 copy all of it come down and
+[00:17:40] then just come down here and go one one
+[00:17:43] one one and copy all of it
+[00:17:47] again come down here and do two and
+[00:17:50] essentially so on and so on and so th
+[00:17:52] forth until you've got all of them copy
+[00:17:54] all of that then head over to a chat GPT
+[00:17:57] and once we chat GPT just say hey
+[00:17:59] complete this sequence oh my goodness oh
+[00:18:03] my goodness complete
+[00:18:11] this to 10 and then chat gbt
+[00:18:15] will do that for us which is it liny and
+[00:18:18] then we'll let that load up in the
+[00:18:19] background then guys we're just going to
+[00:18:21] come back we're going to paste that into
+[00:18:22] the module um and then we're going to be
+[00:18:25] almost complete with the data grab and
+[00:18:26] that is literally as simple as it is so
+[00:18:28] let have a look let's just L up for
+[00:18:29] background and the thing I love about
+[00:18:31] this is whenever the client loads this
+[00:18:32] website and they're the only ones with
+[00:18:34] the URL they're going to get the most
+[00:18:35] up-to-date accurate data so all you need
+[00:18:37] to do is make sure air table's update
+[00:18:39] and there's like a billion automations
+[00:18:41] that we can put into air table anyway so
+[00:18:43] essentially there's no need anymore to
+[00:18:45] create bespoke reporting of bespoke
+[00:18:47] graphs because it's done automatically
+[00:18:49] no need any longer guys to create
+[00:18:51] bespoke graphs how cool is that I think
+[00:18:53] that's really cool I think it's really
+[00:18:54] really cool let get rid of this paste
+[00:18:56] all in oh my goodness
+[00:18:59] beautiful and then finally what am I
+[00:19:01] going to do well first of all I'm going
+[00:19:02] to do this I'm going to unlink the first
+[00:19:04] guy and I'm going to run the whole
+[00:19:05] module excuse me grab the grab the
+[00:19:07] lightning bult throw on the air table
+[00:19:09] and just run the module the reason I'm
+[00:19:11] doing that is I can get the output now
+[00:19:13] from the text I create youc look at this
+[00:19:15] all this text string look there we go
+[00:19:18] and what I need to do guys is come down
+[00:19:20] and copy that then go back over to clae
+[00:19:22] and say
+[00:19:25] hey the data input will be next
+[00:19:30] text in the blow
+[00:19:33] format use this data to
+[00:19:37] populate the table uh the um the
+[00:19:41] graph only user
+[00:19:45] data with a number next to
+[00:19:49] it please
+[00:19:53] provide the full HTML code
+[00:20:00] the data being sent come down enter and
+[00:20:03] then guys we hit enter one more time
+[00:20:05] like so and while that's loading let's
+[00:20:07] just give that a second to do one thing
+[00:20:09] at one time so essentially this bit's
+[00:20:12] going to be bespoke to what you want to
+[00:20:14] do cuz your data structure will be
+[00:20:15] different now there's lots of things we
+[00:20:16] can do in terms of Json and getting
+[00:20:18] different modules to do different things
+[00:20:20] um based on the complexity of what
+[00:20:21] you're trying to do but essentially
+[00:20:23] we're just saying look what you let this
+[00:20:25] is what we're going to be sending what
+[00:20:26] you need we can change what we send and
+[00:20:28] we can make it more standardized our
+[00:20:30] side if you want to with a chat gbt
+[00:20:31] module or Json or we can be using python
+[00:20:34] there's a billion things we can do this
+[00:20:35] is just a very very simple thing you can
+[00:20:37] do to get started I'm going to copy the
+[00:20:40] code I'm going to over to paddle board
+[00:20:42] co uh one of the hottest fastest growing
+[00:20:45] P boarding Brands the world has ever
+[00:20:47] seen now we're back on the website we
+[00:20:49] click on this over here come down to the
+[00:20:50] code delete the code hit enter click
+[00:20:53] done click save click publish
+[00:20:56] changes now before we load up the page
+[00:20:59] let's just see if we can actually get
+[00:21:00] this working so reconnect the web Hooks
+[00:21:03] and at the end of it you're just going
+[00:21:04] to put web hook response body 200 and
+[00:21:08] then it's just going to be the output
+[00:21:09] from text aggregator click okay and then
+[00:21:11] click on run once which module's not set
+[00:21:14] up the initial web hug module no
+[00:21:18] way I think it's I think it is set up I
+[00:21:20] think it's pulling out leg that's
+[00:21:21] running come back over here click on
+[00:21:24] this for example and let see what
+[00:21:25] happens when it loads and what happened
+[00:21:27] guys no data got pulled through so let's
+[00:21:30] come back to see what happened and did
+[00:21:31] we get a 200
+[00:21:33] response yes we did which means it's
+[00:21:35] sent across so all we do we come back to
+[00:21:37] Claude and we say
+[00:21:38] hey we got a 200
+[00:21:42] response but no data came through to to
+[00:21:48] the web app please fix this and paste
+[00:21:52] the full HTML code boom then we hit
+[00:21:55] enter and then Claude will ping this
+[00:21:56] back the beautiful code once we got the
+[00:21:58] code guys we copy it and we repeat the
+[00:22:00] process once again we come back we click
+[00:22:02] on the code we get rid of the previous
+[00:22:04] stuff enter the new stuff click done
+[00:22:06] click save click publish and while
+[00:22:09] that's publishing just come back over to
+[00:22:10] this guy run this module in the
+[00:22:12] background so it can catch what we're
+[00:22:14] sending out um and then let's check out
+[00:22:16] the new website see how that
+[00:22:18] looks and voila is this data accurate
+[00:22:21] well let's check right so on month 5 it
+[00:22:25] says that we had 30 new sales let's
+[00:22:27] check out apparently did the phone is
+[00:22:29] definitely agreeing with you some saying
+[00:22:30] Jack yeah we got five sales let's go
+[00:22:32] check it out on our beautiful paddle
+[00:22:35] thing some five 30 sales beautiful so
+[00:22:38] two improvements we need to make is to
+[00:22:39] specify what the predict next month
+[00:22:41] thing does and then also just change
+[00:22:43] month five to the actual month itself
+[00:22:45] but in essence guys we've actually now
+[00:22:47] created um the whole interactive aspect
+[00:22:50] so we've got it basically pulling down
+[00:22:51] the data automatically on a website on
+[00:22:54] repeat whenever you want and that's
+[00:22:55] completely done and that would have been
+[00:22:56] in any style you want any calls you want
+[00:22:58] you name it it's essentially done the
+[00:23:00] next thing that I personally like to add
+[00:23:01] them is a hardcoded view of like the
+[00:23:05] actual data and number itself which is
+[00:23:07] super easy to do so we just clone this
+[00:23:09] and we don't even need to clone actually
+[00:23:10] to be honest with you but let's say we
+[00:23:11] don't that's say I come to plus I come
+[00:23:14] down to embed okay I drag the embed up
+[00:23:17] underneath data now what's the data well
+[00:23:20] basically let's go over now to my dogs
+[00:23:22] are getting py they're loving it we come
+[00:23:24] over here sharing sink and all we're
+[00:23:27] going to do guys is embed this view like
+[00:23:29] so opens a new tag and you get this cool
+[00:23:31] embed code and we just copy the embed
+[00:23:34] code we come back over click on this
+[00:23:36] code bit here come down to code hit
+[00:23:39] enter click done click save publish
+[00:23:44] changes give this SE to work in the
+[00:23:46] background whip this guy up in a new
+[00:23:48] page and we should see if we scroll down
+[00:23:51] here the months and all the data from
+[00:23:53] our table so now the client can also see
+[00:23:56] embedded in this website all the
+[00:23:57] information they need in terms of sales
+[00:23:59] and churn so the only thing left to do
+[00:24:00] now is to build out the interactive
+[00:24:03] chatbot for the client that we have so
+[00:24:05] how do we do that well would you believe
+[00:24:07] it guys it's pretty much very very
+[00:24:09] similar process so the way the chatbot
+[00:24:11] one works is really simple uh
+[00:24:13] essentially I'll show you right here
+[00:24:15] what we've got on this guy which is the
+[00:24:17] new FL it's the same thing we go to web
+[00:24:19] hug we get the data from our table we do
+[00:24:21] the array aggregator we do the text
+[00:24:22] aggregator we have our data brain and
+[00:24:25] then we send it straight back uh and it
+[00:24:27] is as simple as that so let's build this
+[00:24:30] one together so look we come over to our
+[00:24:31] new and improved Automation and we're
+[00:24:35] going to call this one data
+[00:24:37] chat paddle board like so and again guys
+[00:24:41] what are we with our formalities let's
+[00:24:42] go our paddle board and BR up there
+[00:24:44] awesome now start with web hook custom
+[00:24:48] web hook let's add a new web hook and
+[00:24:50] we'll call this
+[00:24:52] one panel board
+[00:24:55] chat click save so here guys we've got
+[00:24:58] the first one we've got the data we
+[00:25:00] click okay one of the things we can do
+[00:25:01] guys is come back to Automation and we
+[00:25:02] just copy these guys come back over
+[00:25:05] paste them click allow and it is simple
+[00:25:08] as that we do the exact same thing and
+[00:25:10] we come here and we just connect it like
+[00:25:12] so and that should have all the
+[00:25:13] individual stuff that we had before in
+[00:25:16] the last one month of sending a regular
+[00:25:18] tools etc etc and then what we're going
+[00:25:20] to do here guys is Select chat GPT we're
+[00:25:23] going to click on
+[00:25:25] um create a completion prompt awesome
+[00:25:29] give us a second Max tokens is going to
+[00:25:31] be zero and model is going to be gbt 40
+[00:25:33] system anyway guys here's where we can
+[00:25:35] add little of stuff about your business
+[00:25:36] so we could add an assistant in this
+[00:25:39] part of the role if we want to as I
+[00:25:41] showed in my last video you'll see
+[00:25:42] basically we can add documents for your
+[00:25:44] business all the information client
+[00:25:45] information client dos all the stuff you
+[00:25:47] think is relevant what I would recommend
+[00:25:49] you
+[00:25:50] do is for every client that you have is
+[00:25:53] to create a unique document Mega file
+[00:25:57] that's structured in very particular way
+[00:25:58] that has all the information about their
+[00:25:59] data what they do we can continue to
+[00:26:01] update it with different automations so
+[00:26:03] that each individual GPT for that client
+[00:26:06] can be used in different places and just
+[00:26:07] makes your life a lot easier it's a
+[00:26:09] really really cool process and that's
+[00:26:10] something I'd recommend everybody to
+[00:26:11] have a look at role here we're going to
+[00:26:13] go for user so I'm going to keep this
+[00:26:14] one really simple which is basically
+[00:26:15] just we're going to give it the
+[00:26:16] information and then we've got to give
+[00:26:18] it a prompt so let me show you what
+[00:26:20] prompt I'm going to be using for this
+[00:26:21] one so look essentially we're going to
+[00:26:24] be saying the following okay you are a
+[00:26:27] highly knowledgeable and friendly
+[00:26:29] chatbot named data expert designed to
+[00:26:31] help clients understand their business
+[00:26:32] data and make their decisions again I'll
+[00:26:34] put this prompt down below description
+[00:26:35] you can just grab this and use it you
+[00:26:37] have access to all business data
+[00:26:38] including sales churn subscriber
+[00:26:40] information you also have access to any
+[00:26:42] files a client May attach review that's
+[00:26:44] if you want to do additional things like
+[00:26:45] let the client attach files images
+[00:26:47] that's something that we can also have a
+[00:26:48] look at if we wish to then we give it
+[00:26:50] PRS of how we want to greet the user how
+[00:26:51] we want to get to understand their needs
+[00:26:53] we can ask it to provide insights
+[00:26:55] recommendations answer questions
+[00:26:57] encourage interactions close a
+[00:26:58] conversation give it some examples then
+[00:27:01] we give it the data and then we also
+[00:27:03] give it all of this which is basically
+[00:27:06] like the inputs for the messaging that
+[00:27:07] we're going to have so let's copy this
+[00:27:09] information let's go back over now so
+[00:27:11] essentially what we're going to do guys
+[00:27:12] is come down to message content we're
+[00:27:14] going to paste all right now look I'm
+[00:27:16] going to come down here now the bits we
+[00:27:18] need to change is simply the inputs okay
+[00:27:20] so business data as you can see is going
+[00:27:22] to be the input from the text aggregator
+[00:27:24] module and then we need to give it all
+[00:27:26] the confers conversational stuff so at
+[00:27:28] this point I need to pause this okay I
+[00:27:31] need to add a new one in which is going
+[00:27:32] to be web hook
+[00:27:34] response 200 and the output is going to
+[00:27:36] be the result from um the last module
+[00:27:39] and click okay now look now we need to
+[00:27:41] actually build the AI for this chat Bo
+[00:27:44] and in order to do that basically we're
+[00:27:45] going to come down here we're going to
+[00:27:46] collect we're basically going to rederm
+[00:27:48] a data structure we are going to copy
+[00:27:50] the address to the clipboard and then
+[00:27:52] we're going to head over to Claude but
+[00:27:54] what we're going to do with Claude I
+[00:27:55] think to start a new chat window okay so
+[00:27:56] I'm going to say to clae this say okay I
+[00:27:58] would like to
+[00:28:01] build a WhatsApp style
+[00:28:05] chatbot that accomplishes the
+[00:28:11] following okay and then we say we
+[00:28:13] basically it a list number one
+[00:28:15] is um essentially user asks a
+[00:28:20] question
+[00:28:23] application um basically sends question
+[00:28:28] to this web
+[00:28:31] hook and I'm going to say uh
+[00:28:34] application sends all messages in the
+[00:28:37] chat as an
+[00:28:39] array so that the AI can review the
+[00:28:43] whole conversation okay awesome number
+[00:28:47] four is waiting
+[00:28:50] animation whilst the app uh well web
+[00:28:55] hook Returns the response and number
+[00:28:59] five copy this design because you know
+[00:29:01] what guys copying design is just
+[00:29:03] sometimes a little bit easier than
+[00:29:04] actually designing it ourselves this
+[00:29:06] let's just screenshot this and then we
+[00:29:08] can give it that but obviously for you
+[00:29:10] guys add whatever you want into yeah
+[00:29:12] into this whole particular thing look we
+[00:29:14] go copy design boom enter oh I should
+[00:29:17] also
+[00:29:21] say and then we specify it must been
+[00:29:23] HTML we've hit enter and then it's going
+[00:29:25] to build the app for us okay cool so
+[00:29:26] let's build it in one moment and again
+[00:29:29] we get the artifact Windows come up and
+[00:29:31] do this and I think these are the kind
+[00:29:33] of areas where you can really push the
+[00:29:35] envelope to do something unique and
+[00:29:36] different for clients I mean this is a
+[00:29:38] use case where you can imagine like if
+[00:29:39] you add the right data modeling the
+[00:29:41] mathematical modeling interactivity just
+[00:29:44] something that helps to make better
+[00:29:45] decisions and it looks sexy so it's just
+[00:29:47] so easy to be like dude do you want to
+[00:29:49] go with a company that's just going to
+[00:29:51] send you like by pigeon mail or do you
+[00:29:53] want to go with the fresh new up and
+[00:29:54] coming hungry guys so look we've got the
+[00:29:57] code we copy the the Cod we come over
+[00:29:59] now to our website which is not this guy
+[00:30:01] or this one we come over to our P
+[00:30:03] boarding website again we go explore
+[00:30:05] which is essentially uh means chat with
+[00:30:08] the data but call whatever you want
+[00:30:09] click on embed grab the embed bring that
+[00:30:12] underneath explore click on the code bit
+[00:30:14] here's a code hit enter scroll down
+[00:30:17] click done click save click publish
+[00:30:20] changes and we give it a bit of a drum
+[00:30:22] roll it's done now let's actually click
+[00:30:27] okay so we're going to check this one
+[00:30:28] out on a new website we're going to come
+[00:30:30] over to our cool thing here now this is
+[00:30:32] waiting for a message then we load up
+[00:30:34] the application for our beautiful paddle
+[00:30:36] boarding C we going to come down to the
+[00:30:38] performance Genie and then we're going
+[00:30:39] to ask it a question so I'll say
+[00:30:41] something like hey um I don't know how's
+[00:30:44] your day okay boom hit enter that's not
+[00:30:48] in the background I'm sorry I don't have
+[00:30:50] information to answer that if I come
+[00:30:51] back over now to our thing has that
+[00:30:53] picked up on the custom web hug it
+[00:30:55] hasn't so if I click on red determine
+[00:30:57] data structure I come back over again
+[00:30:59] now and I said hey and then I'm going to
+[00:31:01] come back over here to our thing and
+[00:31:04] it's not done anything yet so all we do
+[00:31:06] guys is we copied the rest of the
+[00:31:07] clipboard so then guys we come back over
+[00:31:08] the CLA and I can say hey uh please
+[00:31:13] update the below HTML code to send a uh
+[00:31:18] send a message to this web hook address
+[00:31:22] and then we'll just sort of say send all
+[00:31:24] messages in the chat
+[00:31:28] as an array and update with the web hook
+[00:31:32] response and I'll just put web hook
+[00:31:35] address and then we'll
+[00:31:38] put code oops oh my goodness delete
+[00:31:42] everything no way so we come back to
+[00:31:44] club guys and we just say hey we just
+[00:31:46] say update this
+[00:31:49] code to send all messages in the chat to
+[00:31:54] this web hook address send them as an
+[00:31:58] array and update the the chat with
+[00:32:03] the response and then we say web hook
+[00:32:07] address is this and then the code we're
+[00:32:11] just going to Simply enter this one in
+[00:32:12] and you can do a new chat window could
+[00:32:13] be the same chat window sometimes guys
+[00:32:15] the chat Windows get really really long
+[00:32:17] and it just blasts through all of the
+[00:32:21] credits that you've got so it's just
+[00:32:22] sometimes worth thinking about when you
+[00:32:24] open a new chat window a what hack you
+[00:32:26] can do sometimes is just quite simply to
+[00:32:30] um summarize just get it to Simply
+[00:32:32] summarize everything that's there and
+[00:32:34] you'll find yourself serving quite a lot
+[00:32:35] of time so we've copied the code we
+[00:32:37] enter the code we enter and then Claude
+[00:32:40] will then generate that for us in the
+[00:32:41] background so we can pip and pop and
+[00:32:42] have a good time and get this fixed and
+[00:32:44] now that's complete guys all we do is
+[00:32:46] come down over to the code section we're
+[00:32:47] going to copy going to head back over
+[00:32:49] now to our website over here and we've
+[00:32:51] seem to have several copies let's delete
+[00:32:53] these guys delete this guy come down to
+[00:32:55] explore come down here enter all enter
+[00:32:58] the code click done click save click
+[00:33:01] publish changes give that a second to
+[00:33:03] load excellent okay and then we're just
+[00:33:05] going to open this one up into a new tab
+[00:33:07] like so awesome come down and where is
+[00:33:10] our beautiful Genie he's there all right
+[00:33:12] cool so look this is now waiting for a
+[00:33:14] data structure so what we really do is
+[00:33:15] we come back and we say um let's get rid
+[00:33:18] of this
+[00:33:19] guy okay and let's see if this comes
+[00:33:22] back and it's picked up and that is
+[00:33:24] successfully determined which is
+[00:33:25] excellent and now it's complete guys all
+[00:33:26] we do is we run the whole module like so
+[00:33:29] run once awesome and then we come back
+[00:33:32] over we'll refresh this page now we need
+[00:33:35] to make sure that the message is a bit
+[00:33:36] there's a greater contrast cuz there's
+[00:33:37] no contrast to the message yet but if I
+[00:33:39] said hey what is my turn in
+[00:33:45] July hit send and see what comes
+[00:33:49] back error communicating with the server
+[00:33:51] so if I come back what do we see in the
+[00:33:53] actual automation itself well in the
+[00:33:55] automation itself
+[00:33:58] how could I assist you the business
+[00:33:59] today what information came through
+[00:34:01] let's have a look Bund bundle away hey
+[00:34:03] what was my tune in um July okay so
+[00:34:07] basically it's picked up the information
+[00:34:09] but what we need to do now is give that
+[00:34:10] to chat GPT so look we're going to come
+[00:34:12] down to chat GPT cuz we never gave it
+[00:34:14] the actual information all right so we
+[00:34:16] come down like so bring this over here
+[00:34:20] and no wonder it didn't work we come
+[00:34:21] down
+[00:34:23] messages uh and then we just put content
+[00:34:25] okay and again all we're going to do
+[00:34:27] guys is is the exact same thing so come
+[00:34:30] down and then this is one and we come
+[00:34:32] down and then this is two and then guys
+[00:34:34] we just continue to come down and repeat
+[00:34:36] this all the way up to 80 if you want to
+[00:34:38] and just get chat GPT to do I'm just
+[00:34:39] doing a couple just as a four instance
+[00:34:42] come down to nine awesome come back to
+[00:34:45] 10 amazing click okay perfect come back
+[00:34:47] let's run this module once as for
+[00:34:50] instance now let's reload the page back
+[00:34:52] up and see if we can have that
+[00:34:53] conversation so we'll reload the whole
+[00:34:55] thing we've got the performance gen
+[00:34:56] coming down if I said hey what is my
+[00:34:59] churn in my turn my churn in
+[00:35:04] July enter and then we see what comes
+[00:35:07] back off the back of that error
+[00:35:08] communicating with the server so let's
+[00:35:10] see what happened in the actual process
+[00:35:11] itself did it get the answer hey your
+[00:35:14] turn in July was 81 so the message is
+[00:35:17] going out correctly we just need to make
+[00:35:18] sure it's received in a proper way so
+[00:35:20] let's go back to chat gbt i s it's clae
+[00:35:23] and we basically say hey it
+[00:35:25] is all working perfectly
+[00:35:29] but
+[00:35:30] change these two
+[00:35:33] things number one make the chat
+[00:35:39] bubbles darker I cannot see
+[00:35:44] them the web app is not picking up the
+[00:35:50] response from the web
+[00:35:52] hook for your context
+[00:35:58] it is a naked response that looks like
+[00:36:03] this and we just come back over to our
+[00:36:05] module uh we just simply copy
+[00:36:08] this and then we go back over to this
+[00:36:11] and say
+[00:36:12] please provide full HTML code for me to
+[00:36:17] copy and paste hit enter boom then once
+[00:36:20] we get that guys we'll make the final
+[00:36:21] update and one thing I briefly did as
+[00:36:22] well on the page is I updated this so we
+[00:36:26] can hopefully predict the next mon month
+[00:36:28] boom done how cool is that it just
+[00:36:30] boings up and just gives us different
+[00:36:32] predictions which is so flipping cool
+[00:36:35] I'm really excited to see what you could
+[00:36:36] do with this by the way and how you
+[00:36:37] would create new interactive graphs I've
+[00:36:39] seen some really cool examples of like
+[00:36:40] for well not 40 but threedimensional
+[00:36:42] aspects to it so yes Sky's a limit with
+[00:36:45] this stuff genuinely but the data
+[00:36:46] visualization thing is so untapped at
+[00:36:48] the moment I think it's such a huge
+[00:36:49] opportunity so when to come down let's
+[00:36:51] just see if uh this is the one that I
+[00:36:54] want it is cool we just copy it finally
+[00:36:57] then we come back over to our uh explore
+[00:37:00] section click on the bad get rid of this
+[00:37:01] code hit enter click done click save
+[00:37:04] click publish changes give that a second
+[00:37:06] to
+[00:37:07] load open up a new page there we go done
+[00:37:10] dun done we're going to come down and we
+[00:37:12] got a performance joury one more time so
+[00:37:14] let's give this a run we're going to
+[00:37:16] come to our performance Genie and we're
+[00:37:18] going to say
+[00:37:20] hey what's turn in
+[00:37:24] July hit
+[00:37:26] enter give it a second to come back and
+[00:37:28] see what's hello in Ju light the TR rate
+[00:37:29] was 81 is there anything specific you'd
+[00:37:31] like to know about this TR rate or do
+[00:37:32] you need more details on how it affects
+[00:37:34] your business feel free to ask and it's
+[00:37:35] as simple as that guys I hope you see
+[00:37:37] just the potential of this data
+[00:37:39] visualization in client dashboard that
+[00:37:40] can do so many things let me know down
+[00:37:43] below what you're going to do with this
+[00:37:44] in any case have a wonderful week and
+[00:37:46] I'll see you in my next video

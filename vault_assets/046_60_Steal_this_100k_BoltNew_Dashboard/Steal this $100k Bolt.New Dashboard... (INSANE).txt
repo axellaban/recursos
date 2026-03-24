@@ -1,0 +1,892 @@
+[00:00:00] today we're going to build a $100,000
+[00:00:02] live dashboard that you can either give
+[00:00:03] to your clients or use for your own
+[00:00:05] business so what is it look like $1,000
+[00:00:09] dashboard this is going to be flipping
+[00:00:10] epic so technology we're going to use
+[00:00:12] we're going to use b.n we're going to
+[00:00:13] use clo we're going to be using
+[00:00:15] something called air typ and of course
+[00:00:17] me.com for all incredible no code AI
+[00:00:20] automations now why on Earth would you
+[00:00:22] want to build a 100K dashboard well I'll
+[00:00:24] show you exactly how you do it step by
+[00:00:25] step in this video there are many things
+[00:00:27] that we may want to include in this
+[00:00:28] dashboard now the beauty of this is we
+[00:00:30] can add anything we want to um some
+[00:00:32] ideas for you Number One Financial how
+[00:00:34] much money have you if you're an a
+[00:00:35] automation agency made this individual
+[00:00:38] so when we're working with clients we
+[00:00:39] figure out look what are the pound and
+[00:00:41] Pence impacts what are the time saving
+[00:00:43] impacts and also what are the other
+[00:00:44] metries we think about how much money
+[00:00:46] you've made them how much money you've
+[00:00:48] saved them you can include things in
+[00:00:50] that like profit and loss so for example
+[00:00:51] on the iel it's connected to a live air
+[00:00:54] table database that'll show you how to
+[00:00:55] set up dynamically like how many
+[00:00:57] conversations they've had we can use
+[00:00:58] things there like the operating profit
+[00:01:00] profit margin expenses year to date with
+[00:01:02] loads of cool graphs and loads of crazy
+[00:01:03] stuff that's going on on top of that
+[00:01:05] guys we're going to Roi so how much per
+[00:01:07] money they spent with you have they made
+[00:01:08] back and now think about it like there's
+[00:01:09] no easier way to differential yourself
+[00:01:11] than awesome cool dashboard that just
+[00:01:13] makes look epic then we got time so how
+[00:01:15] much time they saved by time to launch
+[00:01:17] so how quickly do we get things active
+[00:01:19] how much time is it uh you know up time
+[00:01:21] in terms of like your automations how
+[00:01:23] long are they running for how many
+[00:01:25] employees worth of value have you saved
+[00:01:27] and then there's also General stuff
+[00:01:28] based on the automations that we do like
+[00:01:29] like how many conversations have they
+[00:01:31] had uh how many calls has your AI agent
+[00:01:33] or AI employee had and also how many
+[00:01:35] leads you've got on top of that we're
+[00:01:37] also going to add in a chat bot which
+[00:01:38] we're going to run through make and clae
+[00:01:40] so for example our customers our clients
+[00:01:42] or even people their own business are
+[00:01:43] going to be able to have a chat
+[00:01:45] interface where they can ask you very
+[00:01:46] simple questions and we're going to try
+[00:01:48] that on our own database our on emails
+[00:01:50] um our own knowledge and from that we
+[00:01:52] can give them a realistic answer in our
+[00:01:53] ATT of voice and finally just to keep
+[00:01:56] this really simple because I wanted to
+[00:01:57] make this as simple as possible what
+[00:01:59] we're going to do is add this Pass Key
+[00:02:00] functionality into it so we're going to
+[00:02:02] give an ID to every client and what
+[00:02:04] we're going to do on b. new is when we
+[00:02:06] develop this is you can even see here
+[00:02:08] for example if I refresh this page as a
+[00:02:11] quick for instance while this all loads
+[00:02:12] up what's going to happen is every time
+[00:02:14] a client comes to log in or lands on the
+[00:02:16] page they have to enter a unique ID
+[00:02:18] which we give per client which basically
+[00:02:20] means that other clients aren't going to
+[00:02:21] able to access the ones that we want so
+[00:02:23] this loads up for example you'll see
+[00:02:25] enter your pass key they need to enter
+[00:02:26] the appropriate Pass Key to get the data
+[00:02:29] for the which makes it really easy to
+[00:02:30] launch and get started you can of course
+[00:02:32] do this with other things and add like
+[00:02:34] login credentials and connect it to
+[00:02:36] Firebase I just wanted to keep this
+[00:02:37] super simple and easy that you can just
+[00:02:39] follow along with and absolutely smashed
+[00:02:41] so with that in mind if you haven't
+[00:02:43] already grab that coffee and let's Diop
+[00:02:45] straight in incredible so to get started
+[00:02:47] we're going to head back over again to
+[00:02:48] codepen.io like I showed you in my last
+[00:02:50] video the one that we're going to use is
+[00:02:52] this one here I'll put a link Down Below
+[00:02:54] in the description and then we're going
+[00:02:55] to head over to bolt. new and we're
+[00:02:56] going to give it the following promp
+[00:02:58] I've kind of built this promp out using
+[00:03:00] AI but essentially what we're saying is
+[00:03:01] look we want to create a module and
+[00:03:03] responsive react based interactive
+[00:03:04] dashboard that integrates with a table
+[00:03:06] using a user provided base ID so this is
+[00:03:09] going to enable us to get a this okay
+[00:03:11] whatever we show an a table to show on
+[00:03:13] our new Incredible AI application the
+[00:03:15] problem with this is if you show it it
+[00:03:17] just looks a bit lame but what doesn't
+[00:03:19] look lame is this which is why we're
+[00:03:22] going to use that and just drive it
+[00:03:23] instead okay so we come back over it we
+[00:03:25] give it the prompt we talk about
+[00:03:26] authentication we talk about automations
+[00:03:28] Vision Solutions by the way all the
+[00:03:31] promps agents blueprints for all the
+[00:03:32] automations are down below my score
+[00:03:33] community so you can check that out and
+[00:03:34] grab it if you'd like to we talk about
+[00:03:36] different tabs that we want display top
+[00:03:38] conversations blah blah blah all this
+[00:03:40] all this really cool information then we
+[00:03:41] going to say hey use the blow
+[00:03:44] code to create
+[00:03:48] this awesome and what I really love
+[00:03:50] about this guys and if we come back over
+[00:03:52] then we copy the CSS come over here pop
+[00:03:55] that in
+[00:03:57] beautiful and then one more time I'm
+[00:04:00] going to come down to the JS Babble come
+[00:04:01] back over here and then paste that in
+[00:04:03] boom and then get started so what I
+[00:04:06] really like about this guys is the fact
+[00:04:07] that you think about when you're talking
+[00:04:08] to clients and you're having those
+[00:04:10] conversations actually having an
+[00:04:11] interactive dashboard that can clearly
+[00:04:13] show in pounds and pens in really
+[00:04:16] beautiful interactive Styles everything
+[00:04:17] going in the background how much money
+[00:04:19] they've made how much time they've saved
+[00:04:20] it's just such an easy way to
+[00:04:23] differentiate yourselves the biggest
+[00:04:24] issue I see with people in a automation
+[00:04:26] agencies is they're not able to
+[00:04:28] articulate the value they have if you
+[00:04:30] can actually just show an interactive
+[00:04:31] dashboard that gong into it just takes
+[00:04:33] you from your perceived value being here
+[00:04:35] to what up there and if you've got to
+[00:04:36] show the information anyway why the hell
+[00:04:38] would you not set this up now what other
+[00:04:39] thing I'm going to show you here is how
+[00:04:40] we can actually have our scenarios okay
+[00:04:42] that run the background how then we're
+[00:04:44] going to dynamically update then into a
+[00:04:46] table and then from a table it's going
+[00:04:48] to reflect immediately into the
+[00:04:49] dashboard which means when you have
+[00:04:51] these automations running for clients
+[00:04:53] and every time let's say a conversation
+[00:04:55] happens when something's going on we can
+[00:04:57] update a number in air table and
+[00:04:59] therefore update what our cool new
+[00:05:01] database looks like incredible and now
+[00:05:02] that's complete we have this air table
+[00:05:04] based ID so in the problem that I had
+[00:05:06] one of the things I asked it for is that
+[00:05:07] every client's going to give a unique
+[00:05:09] air table ID and once they give that air
+[00:05:12] table ID it will then grab that code and
+[00:05:15] then grab the information from the air
+[00:05:16] table and display what's within it so in
+[00:05:19] a way what this kind of is is like an
+[00:05:21] air table wrapper like enable us to
+[00:05:22] create beautiful visualizations but then
+[00:05:25] alongside that we can then have
+[00:05:26] interactive chat functionalities and
+[00:05:28] loads of other really epic AI apps so
+[00:05:30] we've got this for instance let me now
+[00:05:32] then go and grab a random number so if
+[00:05:34] you go over to your air table ID this is
+[00:05:36] just a random table we're going to build
+[00:05:37] one together in a moment okay you go on
+[00:05:39] Sharon sync and you can see this here
+[00:05:41] right opens up in a new one you're going
+[00:05:43] to copy the information after the
+[00:05:46] hashtag we're going to copy the sharable
+[00:05:48] URL and then we're going to come back
+[00:05:50] over to our beautiful page base ID enter
+[00:05:54] the Linkin then click on connect to
+[00:05:56] dashboard okay and a few problems so
+[00:05:58] let's check out what the problems are
+[00:05:59] and click here for instance and since
+[00:06:00] it's got problems we come down and we
+[00:06:02] click on attempt fakes so obviously
+[00:06:04] there's always going to be some back and
+[00:06:05] forth with bow as we get things set up
+[00:06:07] and the cool thing is if something
+[00:06:08] doesn't work we'll just ask we iterate
+[00:06:10] we go back and forth and then it'll
+[00:06:11] start implementing everything together
+[00:06:14] now the automation I'm going to use to
+[00:06:16] show you how this works and how you
+[00:06:17] could actually do that now the first
+[00:06:18] thing I'd always recommend you do take a
+[00:06:20] step back think about what are the
+[00:06:22] metrics that are really going to matter
+[00:06:24] for my client or my business it's not
+[00:06:26] always about a letter of random metric
+[00:06:28] but if you're selling for example a chat
+[00:06:29] B what would be really cool to know
+[00:06:31] number of issues resolved or number of
+[00:06:33] conversations that have been had or if
+[00:06:35] you can get their financial p&l or you
+[00:06:37] know whatever it is think long and hard
+[00:06:39] about the numbers that make sense and
+[00:06:40] the numbers that will add value based on
+[00:06:42] the clients that you're going for now
+[00:06:44] this is just leading the background I
+[00:06:46] did an automation a couple days ago a
+[00:06:47] couple weeks ago excuse me that
+[00:06:49] essentially you can train on every
+[00:06:51] single email that you ever have this one
+[00:06:53] is a chatbot for example right it would
+[00:06:55] look at every single email that you get
+[00:06:56] learn your tone of voice add it to a
+[00:06:58] database you can have 10,000 different
+[00:07:00] emails and it would know exactly what to
+[00:07:02] say and how to respond to you so this
+[00:07:04] here is the chat bar and I'll show what
+[00:07:06] that looks like right over here it's an
+[00:07:08] email that sounds exactly like you okay
+[00:07:10] and the way this would work is we have a
+[00:07:12] chat bot an email comes in we basically
+[00:07:14] do some really cool stuff with in terms
+[00:07:16] of indexing and pine Cent and it would
+[00:07:18] then basically create an email for you
+[00:07:20] or we could do a chatbot version where
+[00:07:21] basically you ask a question and it
+[00:07:23] comes back now what we're going to do
+[00:07:25] here guys is we're going to add
+[00:07:26] something in here that essentially is
+[00:07:29] going to act as like a counter so every
+[00:07:31] time that we have a conversation with
+[00:07:32] somebody um it's going to update in the
+[00:07:34] dashboard basically in live time now you
+[00:07:37] could basically use the same thing for
+[00:07:39] anything this is just to show you how
+[00:07:40] the technology Works cool so this is
+[00:07:42] come back up my work now let say enter
+[00:07:43] the aable ID and let's have a look at
+[00:07:45] what we've got although we go check this
+[00:07:47] out we got a dashboard overview so again
+[00:07:49] we enter ID we connect to the dashboard
+[00:07:51] and look at this guys automations with3
+[00:07:53] efficiency scores 98 total conversations
+[00:07:56] is 232 Financial overview blah blah all
+[00:07:59] this sort of stuff down and then we have
+[00:08:01] this AI assistant in the bottom right
+[00:08:03] hand corner where we can ask it
+[00:08:04] questions sweet so what we need to do
+[00:08:06] now is create an air table ID give it
+[00:08:08] some dummy data and then test that it's
+[00:08:10] all working effectively so to do that
+[00:08:12] what are we going to do we're going to
+[00:08:13] head over to air table. airtable.com
+[00:08:15] excuse me oh my goodness I'm going to
+[00:08:17] create a brand new thing so come down
+[00:08:18] the bottom left hand corner click on
+[00:08:20] start from scratch now let's think of
+[00:08:22] some silly dummy data here so if we call
+[00:08:24] this one let's just say client
+[00:08:28] information
+[00:08:29] and then we will have little fire emerg
+[00:08:32] cool all right sweet so let's on the
+[00:08:34] first one we'll have this one called uh
+[00:08:37] automations and then oops Yeah
+[00:08:39] automations is fine and the second one
+[00:08:41] let's call this one something like I
+[00:08:43] don't know
+[00:08:45] efficiencies these are just random
+[00:08:47] numbers by the way guys random sort of
+[00:08:49] fields let's enter to uh the left and
+[00:08:52] we'll call this one month great okay and
+[00:08:55] then what we'll do change param fi
+[00:08:56] that's Absol right and then we'll just
+[00:08:57] add in all this fake data
+[00:09:00] awesome so I've got this fake
+[00:09:01] information now going from January to
+[00:09:03] August with automations efficiencies
+[00:09:05] income and expenses so what we're going
+[00:09:07] to do to B now and you'll need to do
+[00:09:08] this based on what your particular use
+[00:09:11] cases are so for example I'm going to
+[00:09:12] say here I would like to graphs okay
+[00:09:17] graph one will be a line
+[00:09:21] graph for fields and let's just see what
+[00:09:24] fields we had basically automations and
+[00:09:27] efficiencies
+[00:09:30] automations and efficiencies with months
+[00:09:33] on the bottom from the month field and
+[00:09:38] let's just make sure that oh my gosh we
+[00:09:40] sort of correct spelling as we go cool
+[00:09:43] and then graph two will be the same will
+[00:09:48] be a line graph and again whatever graph
+[00:09:50] you want just specify it for the fields
+[00:09:53] income and expenses with the months on
+[00:09:56] the bottom the month field
+[00:09:59] okay cool then we come over to Sharon
+[00:10:01] sync going to click on here we will go
+[00:10:03] for uh create a link to view cool we
+[00:10:06] going to copy that link here and then we
+[00:10:07] come back over to Bol and just say hey
+[00:10:11] pull through the uh data from this for
+[00:10:17] and just say the full URL link will also
+[00:10:22] be the password for the uh table base ID
+[00:10:27] if you cannot um basically pull up an
+[00:10:31] air table
+[00:10:33] ID just say um record not
+[00:10:37] found beautiful and is there anything
+[00:10:39] else we need to add I think that'll be
+[00:10:41] okay for us at the moment actually
+[00:10:42] there's one thing yes add confetti after
+[00:10:46] sign after successful
+[00:10:52] link awesome oh and then uh one other
+[00:10:55] thing we should add actually is uh a
+[00:10:57] screenshot of this to say hey this is
+[00:10:59] what the table what the actual think is
+[00:11:01] called and also what the columns are
+[00:11:03] called so let's just copy that clipboard
+[00:11:05] come back over uh I
+[00:11:07] attached an image with the name of the
+[00:11:11] table and the
+[00:11:13] columns for your reference and obviously
+[00:11:16] this will just differ very slightly
+[00:11:18] based on your own preferences and what
+[00:11:20] data that you're using now the beautiful
+[00:11:22] thing about this guys is that as this
+[00:11:24] data updates it too should then
+[00:11:26] dynamically update with inv va. new
+[00:11:28] which I think is pretty flipping epic
+[00:11:30] the air table base ID if you wanted to
+[00:11:32] kind of Disguise the air table thing I
+[00:11:34] just wouldn't call it air table base ID
+[00:11:36] I just call it let's say it's my I have
+[00:11:38] an automation agency called Jax AI
+[00:11:40] automations I'd say Jack AI automations
+[00:11:43] enter unique code they don't need to
+[00:11:45] know that it's from a table it just I
+[00:11:46] mean like this looks like you've spent
+[00:11:48] hundreds of that I mean I've actually
+[00:11:50] physically seen businesses that have
+[00:11:52] spent you honestly don't even want to
+[00:11:54] know how much money building databases
+[00:11:56] building dashboards that don't even come
+[00:11:58] close to this like this is live right
+[00:12:00] now today you follow this video you do
+[00:12:02] it you crush it you've got something
+[00:12:03] that is absolutely flipping incredible
+[00:12:05] so we can disguise you know where the
+[00:12:07] data is coming from from this
+[00:12:09] perspective it's just the air table data
+[00:12:11] it's grabbing it and it's putting in an
+[00:12:12] epic style that we think looks really
+[00:12:14] really cool okay so it's landed so let's
+[00:12:15] enter in oh we need to get the actual
+[00:12:17] share links let's come back over
+[00:12:18] shareing sync copy the link come back
+[00:12:20] over the Bol and enter in there and then
+[00:12:22] connect the
+[00:12:23] dashboard record not F please find your
+[00:12:25] base ID all right sweet let's have a
+[00:12:27] look not F Okay so just say hey we are
+[00:12:31] and maybe we just need to atted the base
+[00:12:32] ID which I believe is this bit here
+[00:12:34] right so it's either that or that if I
+[00:12:36] come in and click on connect the
+[00:12:38] dashboard that doesn't work and does
+[00:12:40] this one work no hey we are not being
+[00:12:43] permitted entry when we enter the air
+[00:12:47] table share link URL cool and then we
+[00:12:51] come back over to air table we going to
+[00:12:52] copy that come back over here boom now
+[00:12:55] we hit enter and then basically you'll
+[00:12:56] go to the scbl Shing stuff which is why
+[00:12:58] I've left in the video so you can see
+[00:12:59] how we actually solve it in real time
+[00:13:00] all right cool so apparently it's done
+[00:13:01] his changes let's test this one right
+[00:13:03] here connect to dashboard unable to
+[00:13:05] access the air table base please check
+[00:13:07] that you share the link so let's come
+[00:13:08] over here potential problem detected
+[00:13:10] error fetching editable data
+[00:13:11] authentication required awesome so we
+[00:13:13] need to provide a valid API key now I
+[00:13:15] did this in the last one I used I want
+[00:13:16] to see if I could avoid using it but I'm
+[00:13:18] going to show you how you get an API key
+[00:13:19] to connect air table with Bol so guys
+[00:13:22] what we need to do is head over to a.com
+[00:13:25] slre API key and you're going to click
+[00:13:27] on this button says create token we come
+[00:13:29] over it we click on correct new token we
+[00:13:31] give it a name like uh
+[00:13:33] build together like so we look at the
+[00:13:36] Scopes I'm going to basically let it
+[00:13:38] read records of course you can let it
+[00:13:39] write so weirdly what we can actually do
+[00:13:41] here guys is let the individual update
+[00:13:44] the records in the air table if you want
+[00:13:45] toess the functionality where that
+[00:13:47] actually affecting the air table and
+[00:13:49] then it itself then goes on to trigger
+[00:13:51] new automations so say for example you
+[00:13:53] have let's say you're doing social media
+[00:13:55] posts okay and it shows them the social
+[00:13:57] media Post in the dashboard they don't
+[00:13:59] like it and then they change them copy
+[00:14:01] or B like I'm happy with that that can
+[00:14:03] then trigger an automation to make that
+[00:14:05] says when A Change Is Made trigger e
+[00:14:07] automation loads of those kind of
+[00:14:09] automations in the community on the
+[00:14:10] channel so if you're interested not
+[00:14:12] check that out now access atab base all
+[00:14:14] current and future bases I'm going to
+[00:14:15] select we'll just need rude permissions
+[00:14:17] for this one and then we click on create
+[00:14:18] token you'll be given then a really cool
+[00:14:20] API key how cool is it maybe it's not
+[00:14:22] that cool I don't know then when you
+[00:14:23] come back over to bolt Leo I'm going to
+[00:14:25] say hey the API key require
+[00:14:31] is this oh my goodness guys what is
+[00:14:33] going on my spine I think I need another
+[00:14:35] flat white right oh my goodness
+[00:14:37] basically then enter API key hit enter
+[00:14:39] and then continue the conversation with
+[00:14:40] B okay so let's try this one again come
+[00:14:42] back and past your air table share URL
+[00:14:44] again change that if you want to connect
+[00:14:45] the dashboard and is it going to work
+[00:14:47] for us D it does and we are officially
+[00:14:51] in right so let's just check this is
+[00:14:52] correct it's gone April August Feb Jan
+[00:14:54] July June March May so if I go on Feb 15
+[00:14:58] automations and 7 to efficiencies let's
+[00:15:00] just check that that's
+[00:15:01] correct um where are we at on this now
+[00:15:04] actually which was that okay let's go
+[00:15:06] for really simple let's go for Jan 67
+[00:15:09] and 12 there you go 67 efficiencies 12
+[00:15:12] on automations that is pretty cool and
+[00:15:13] the income is
+[00:15:15] $48,500 in January so we come back over
+[00:15:18] to January uh where are we now
+[00:15:21] $48,500 guys and just like that it's but
+[00:15:23] and all the data so I think what we'd
+[00:15:25] say then is like look let's have Jan the
+[00:15:27] beginning and April you know let's just
+[00:15:29] move everything back to actual work just
+[00:15:30] say hey looks
+[00:15:33] great however let's start the
+[00:15:40] month Jan bab March Etc in sequence by
+[00:15:46] the way the reason why it does that is
+[00:15:47] sometimes our table can bit weird when
+[00:15:48] it pulls through data so hey in sequence
+[00:15:51] uh the current
+[00:15:53] one is
+[00:15:55] starting with I don't know with a from
+[00:15:59] now the next thing you want to do is get
+[00:16:00] the live counter update so what will
+[00:16:02] happen is every time you update these
+[00:16:03] numbers guys uh in here it will update
+[00:16:06] the numbers there which is awesome but
+[00:16:08] now let's show you how you can connect
+[00:16:09] that to an automation to like a live
+[00:16:11] counting automation for example so let's
+[00:16:13] go back over let's add that and then why
+[00:16:15] don't we also add hey
+[00:16:17] let's add a predict future function as
+[00:16:22] well and then finally you see this down
+[00:16:25] here guys we've got the hello I'm a
+[00:16:27] assistant how can Happ you today just SE
+[00:16:28] say the
+[00:16:30] AI assistant send the
+[00:16:35] information to this web hook okay
+[00:16:39] beautiful now let's have a look at this
+[00:16:41] one this is an automation by the way
+[00:16:42] this blueprint is available download in
+[00:16:43] school Community this pine cone thing by
+[00:16:46] the way guys just lets you update like
+[00:16:48] imagine if I gave it like 20,000 emails
+[00:16:50] or 20,000 cuz like if youve got an A
+[00:16:53] automation agcy what I reckon you do is
+[00:16:54] you have every page on your website you
+[00:16:56] have every perceivable question they
+[00:16:58] could ask we can upload that to this
+[00:16:59] pine cone database using this Gathering
+[00:17:02] cleansing automation using this upser V
+[00:17:05] Automation and then using this one here
+[00:17:07] it will then look and basically based on
+[00:17:09] all the thousands of different pieces of
+[00:17:10] data sets you got pull through the most
+[00:17:12] 10 relevant sheets of paper that you
+[00:17:13] think is relevant and then send back a
+[00:17:16] response which is flipping crazy so come
+[00:17:19] this web is a quick for instance I show
+[00:17:21] you had to bul this in the video I'll
+[00:17:22] put a link on the screen so you can
+[00:17:23] check that out we get the automation
+[00:17:25] blueprints in the community I'm going to
+[00:17:26] come here uh and we are going to get
+[00:17:28] over to bolt I'm going to say hey send
+[00:17:30] it to this web hog hit enter and then go
+[00:17:34] so then basically what will happen guys
+[00:17:35] is the second that this gets a piece of
+[00:17:38] information it will then send it over
+[00:17:40] basically we'll have something in the
+[00:17:41] middle like our AI brain we'll grab some
+[00:17:43] stuff from Pine Cone or it could be
+[00:17:44] anything you want to and it will send it
+[00:17:46] over now for the purpose of this I'm
+[00:17:48] just going to delete these really
+[00:17:50] quickly what I'm going to do is add two
+[00:17:52] separate things the first thing I add
+[00:17:54] here now this is like a really simple
+[00:17:55] way to count up or let's just say we one
+[00:17:57] of the things we want to track
+[00:17:59] is how many conversations or how many
+[00:18:03] chats has this set how many messages has
+[00:18:05] our chat boot sent fing a do is this
+[00:18:08] increment function okay so what this
+[00:18:10] will do is every time this is triggered
+[00:18:12] it will go plus one plus 2 plus 3 plus 4
+[00:18:14] then we come over to a table like so and
+[00:18:17] we go to I believe it is going to be
+[00:18:19] update a record upsert a record so
+[00:18:23] upsert a record is either to update or
+[00:18:25] insert a record course we come to base
+[00:18:27] we click on client information which is
+[00:18:29] the uh table base for that client in
+[00:18:30] this case it would be client a client B
+[00:18:33] client C blah blah blah go on the table
+[00:18:35] uh what I recommend we do guys is let's
+[00:18:37] actually just add a second um a second
+[00:18:40] table here to startop from scratch call
+[00:18:42] this one table two which is number of X
+[00:18:46] okay and on the name what we're going to
+[00:18:48] say is we'll just say hey this one could
+[00:18:50] be number of automations
+[00:18:55] okay cool and then that's just for
+[00:18:57] Simplicity s delet of the fields so
+[00:19:00] nothing crazy or mad happens all right
+[00:19:03] sweet and then we've got this field here
+[00:19:04] which will be the total number of
+[00:19:06] automations basically total number of
+[00:19:08] not automations let's just say messages
+[00:19:11] all right now once I show you how to do
+[00:19:12] it for messages you can do it for
+[00:19:14] anything which is why I'm keeping it
+[00:19:15] very simple right so if I come then back
+[00:19:17] over to our automation table we want
+[00:19:20] okay let's just refresh this cuz we just
+[00:19:22] added that in then up to two tables
+[00:19:24] number of X incredible okay guys cool
+[00:19:27] now on the upsert thing one of the
+[00:19:28] things we need to do is give it a record
+[00:19:30] ID the question is how on Earth do you
+[00:19:32] find that well look let me show you if I
+[00:19:33] come back over then to a table uh now
+[00:19:36] what I've done I put r i could put the
+[00:19:37] number nine okay now how do you find the
+[00:19:40] record ID for any given cell well air
+[00:19:42] table actually gives you a unique ID for
+[00:19:44] every single cell that exists but the
+[00:19:46] way you find it out is you expand it and
+[00:19:48] one of the things you'll notice is that
+[00:19:49] the URL itself changes okay and in the
+[00:19:52] URL you're going to come down I'm just
+[00:19:54] going to put it in here so you can see
+[00:19:56] what you're looking for is where it says
+[00:19:58] rack and you copy everything up to the
+[00:20:01] question mark like so right then delete
+[00:20:03] this and I'll put in the messages will
+[00:20:05] be nine and I'll oops enter cool come
+[00:20:07] off is at nine awesome then we come back
+[00:20:09] over to our scenario let's run this one
+[00:20:11] once circum through record ID I hit
+[00:20:13] enter and then we will click okay now
+[00:20:16] this will upset so let's just say we
+[00:20:18] give it let's say we want to change it
+[00:20:20] from the number nine to the number 10
+[00:20:25] okay like so click okay come back and
+[00:20:27] then let's run this module once
+[00:20:29] there you go number of message is 10 if
+[00:20:31] we come back over to air table we should
+[00:20:33] see 10 and there you go change the 10 so
+[00:20:36] that's how we're always going to update
+[00:20:37] that one particular field and then what
+[00:20:39] we're going to do guys is we're going to
+[00:20:41] we're going to take a screenshot of this
+[00:20:43] we're going to come back over to B now
+[00:20:46] look there's many things you could do
+[00:20:47] for example what we could do then if I
+[00:20:48] wanted to turn let's say each time this
+[00:20:51] automation runs it's actually Worth to
+[00:20:54] us I don't know maybe it's worth $200
+[00:20:58] what we could do then is have something
+[00:20:59] that converts that number to some dll
+[00:21:02] amount we could do that in air table we
+[00:21:03] could add a track GPT or Claude modual
+[00:21:06] um within our automation it does that
+[00:21:08] and so actually the financial number
+[00:21:09] itself keeps increasing over time and
+[00:21:11] then B just simply grabs that number and
+[00:21:13] then brings it straight into automation
+[00:21:15] which is in you can imagine the
+[00:21:16] possibility of this what I'm doing as
+[00:21:18] well this video I'm doing a bonus video
+[00:21:19] of how you integrate stripe with bolt
+[00:21:21] it'll be my community live when this
+[00:21:22] video goes live I'm going to push it
+[00:21:24] alongside there uh just for everybody
+[00:21:25] inside the community now we come over to
+[00:21:27] B this is done
+[00:21:29] we connect to the dashboard what I'm
+[00:21:30] also going to say to it I'm going to say
+[00:21:31] hey I'm going to say I would like a
+[00:21:35] field on the
+[00:21:37] dashboard which is what do we call this
+[00:21:40] actually I should check um number of
+[00:21:45] messages grab this
+[00:21:50] number is in um I'd say what was it like
+[00:21:54] the
+[00:21:55] second sheet of air table here is a
+[00:22:01] photo of the uh name of the um I guess
+[00:22:06] column and then we enter like so and
+[00:22:09] then we're going to click on go like
+[00:22:10] that and then it will do the updates and
+[00:22:12] then we can test that everything works
+[00:22:13] properly in addition to that what we'll
+[00:22:14] also do guys is send it a message and
+[00:22:16] see how that works and connects together
+[00:22:18] okay so allegedly this is done let's
+[00:22:20] come back over there and share the thing
+[00:22:22] and see where we're at we got the oops
+[00:22:24] oh my goodness right we've got this
+[00:22:26] let's come back over to Bol and try it
+[00:22:27] add table ID connect the dashboard
+[00:22:29] awesome let's see if this lets
+[00:22:31] up and we are in which is cool we've got
+[00:22:34] a couple problems cool let's just check
+[00:22:35] out what's happened here so Something's
+[00:22:37] Happened in the financial overview cool
+[00:22:39] let's just attempt fix and get that
+[00:22:40] sorted all right allegedly this has been
+[00:22:42] fixed so we come back we'll we'll log in
+[00:22:44] now connect to the dashboard like so
+[00:22:46] give that a second cool we've got the AI
+[00:22:48] assistant we got lots of cool stuff and
+[00:22:50] then let's see if we see total messages
+[00:22:52] is tan well is that true well what we're
+[00:22:55] going to do guys first of all is we're
+[00:22:57] going to test the AI system and we could
+[00:22:59] add anything we want here we could also
+[00:23:00] embed calendary links into bolt. new so
+[00:23:03] our clients can B conversations with us
+[00:23:05] which is like it's like a One-Stop shop
+[00:23:06] for everything they ever need I just
+[00:23:08] think it looks so flipp and sick guys
+[00:23:10] let's check it out connect the dashboard
+[00:23:12] I'm logging in I wait for things to
+[00:23:13] happen boom I'm here well what's going
+[00:23:15] on my automations what's going on my
+[00:23:16] income my efficiencies I guess it's
+[00:23:18] pretty cool how many messages have I had
+[00:23:19] I've had 10 all right sweet well look
+[00:23:21] I've got questions about this I've got
+[00:23:22] I've got things I want to ask right so
+[00:23:25] let's test this out we've got our
+[00:23:26] automation here when connect these guys
+[00:23:29] together um what we probably want to add
+[00:23:31] down is a actual like chat gbt module or
+[00:23:34] Cloe module to uh uh basically give us a
+[00:23:38] better of the thing with Claude we're
+[00:23:39] going to throw this little bad boy in
+[00:23:40] here we cut those together let's bring
+[00:23:42] this one over Max tokens is going to be
+[00:23:44] 4,000 now in reality guys what you would
+[00:23:46] do is you would use the automation I
+[00:23:48] showed you earlier which is here okay
+[00:23:52] where we have our responder brain which
+[00:23:55] pulls all this data down from Pine Camp
+[00:23:56] don't worry if that doesn't make sense
+[00:23:58] I've not shown you what that looks like
+[00:23:59] in this video that's in a video that
+[00:24:00] I'll show you on screen now and of
+[00:24:02] course inside the group but just for
+[00:24:04] Simplicity sake to demonstrate how
+[00:24:06] flipping cool this is uh we're going to
+[00:24:08] messages the other thing I would
+[00:24:09] encourage you to do is you turn the
+[00:24:10] voice which is exactly what I do on uh
+[00:24:13] this automation you see this guy right
+[00:24:15] here has got audio Turner voice as well
+[00:24:16] so is exactly what you sound like so the
+[00:24:18] messages sound like they're talking to
+[00:24:20] you it's coming from AI Jack or whatever
+[00:24:22] you want which is another cool thing we
+[00:24:23] launched on scho community recently so
+[00:24:25] user content type uh let's just say text
+[00:24:28] the other thing we could do as well guys
+[00:24:29] if you want is we can give it all the
+[00:24:31] data from our table so I say hey you're
+[00:24:34] a friendly uh basically say hey respond
+[00:24:38] to the customer in the best
+[00:24:40] way you can bam now this is the worst
+[00:24:43] prompt in the history of prompts okay
+[00:24:44] cool guys so what we're going to do is
+[00:24:46] we are going to uh run the scenario once
+[00:24:49] okay something references non-existing
+[00:24:50] modules that's not great okay let's come
+[00:24:53] back over and we want the text response
+[00:24:55] and let's full screen this cool there we
+[00:24:57] go beautiful let's run this module once
+[00:24:59] now obviously when you go live and use
+[00:25:01] the automation I Shar it will have like
+[00:25:03] a consistent chat history so it keep
+[00:25:04] pulling through all the chat so the way
+[00:25:06] we're going to set this one up so if I
+[00:25:08] come then back over to let's see va. new
+[00:25:11] I'm going to say hey uh how's your day
+[00:25:15] and I hit
+[00:25:16] enter thinking thinking you couldn't
+[00:25:20] connect to the server that's not amazing
+[00:25:22] let's see what happened did it send it
+[00:25:24] back well did we give that let me just
+[00:25:26] see actually
+[00:25:29] ah okay what we didn't do is add the
+[00:25:31] query in okay cool right so let's run
+[00:25:33] this one more time come back uh let's
+[00:25:36] going back over to Bol let's ask it the
+[00:25:38] same question hey how's your day
+[00:25:40] couldn't conect a server so what do we
+[00:25:41] do we come off and we say
+[00:25:43] hey the chatbot says that it couldn't
+[00:25:49] connect to the
+[00:25:52] server on each
+[00:25:55] message please send the entire ire chat
+[00:26:00] history in one part to the web hook
+[00:26:05] respond uh basically um display the uh
+[00:26:08] reply in the same uh chat
+[00:26:12] window boom hit answer then we just Dr
+[00:26:15] Sho the B make sure that happens and the
+[00:26:16] beauty of that guys it basically means
+[00:26:17] that every time you ask a question if
+[00:26:19] there's a conversation that's evolving
+[00:26:20] like what do you think about this what
+[00:26:21] do you think about that we'll how about
+[00:26:22] this we'll how about that basically
+[00:26:24] it'll have full and complete context
+[00:26:26] every single time and because it has
+[00:26:27] such full and complete context going to
+[00:26:29] call this one responder brand and what
+[00:26:32] I'd recommend that you do guys is you
+[00:26:33] basically build this guy up beef him up
+[00:26:35] maybe the questions about your pricing
+[00:26:37] maybe there questions about whatever it
+[00:26:38] is try and just create like the AI
+[00:26:40] version of yourself here um and the
+[00:26:42] other thing is you got to think about
+[00:26:44] sometimes it's like show don't tell like
+[00:26:46] if you truly are at The Cutting Edge
+[00:26:49] Innovative you want to be having stuff
+[00:26:52] like that in your group like in my
+[00:26:53] school Community for example one of the
+[00:26:55] things we just launched was this thing
+[00:26:57] called John con it so you'll notice like
+[00:26:59] well this is sort of learning up I'll
+[00:27:00] just quickly show you this because is
+[00:27:02] this guy still working yet basically we
+[00:27:04] have a level system right where you
+[00:27:06] start off at level one you're a fax
+[00:27:07] machine you get nothing you're worth
+[00:27:08] nothing and you unlock things like
+[00:27:10] $1,000 of software all up to free
+[00:27:13] lifetime memberships and it's themed
+[00:27:15] right we got the Terminator whatever
+[00:27:16] this cool stuff so we launched John
+[00:27:18] Conor and the fight against like you
+[00:27:20] know the Terminators and stuff and you
+[00:27:21] can actually you can DM him and he's
+[00:27:23] trained on all of my YouTube videos and
+[00:27:25] so he knows everything I've spoken about
+[00:27:27] you could say hey what's the answer to
+[00:27:29] this and he'll actually DM and respond
+[00:27:31] to you um in John Conor theme to make
+[00:27:34] things epic um so I just think it's
+[00:27:36] really really cool we got a metaverse me
+[00:27:37] p in 42 minutes I'm going to jump on
+[00:27:38] that once I finish recording this video
+[00:27:39] for you but I say that to say like yeah
+[00:27:42] it's just good to add these cool amazing
+[00:27:44] things in a because you know we have a
+[00:27:45] textbook guarantee thing in our
+[00:27:46] community anyway but also like if you
+[00:27:48] just want to get an answer you can ask
+[00:27:50] AI Jack or AI John Connor and he'll
+[00:27:51] actually get it to you within a couple
+[00:27:53] of minutes which I think is really
+[00:27:54] flipping cool so we've been a lot of
+[00:27:56] time building fun building that with
+[00:27:57] people in the community n Adam you know
+[00:28:00] everyone in our communities is flipping
+[00:28:01] awesome so let's go over here and let's
+[00:28:04] copy this we are going to copy the link
+[00:28:06] come back over like so enter that into
+[00:28:09] the air table cool and now let's connect
+[00:28:10] to the dashboard yeah so guy called null
+[00:28:12] did a really good job building John
+[00:28:13] Connor he'll be you'll be very glad that
+[00:28:15] it's live now so asistant let's start
+[00:28:17] with asking a question but first of
+[00:28:19] course we need to run this SAR in the
+[00:28:20] background we'll come back over then to
+[00:28:22] B and we'll say hey brosi uh how's your
+[00:28:26] day
+[00:28:28] thinking is going to a response you
+[00:28:30] couldn't rep process our request let's
+[00:28:32] look find a potential problem let's just
+[00:28:35] chat Rd let's just attempt the fix okay
+[00:28:37] so this just been fixed total message is
+[00:28:39] attempt so we're going to send it a
+[00:28:40] question now and what we're also going
+[00:28:41] to do is this increment function here uh
+[00:28:43] excuse me the upod air table is going to
+[00:28:46] be let's change it hard code now from 10
+[00:28:49] to be the number which is this guy cool
+[00:28:53] and what was it last time we did it was
+[00:28:54] two sweet so we'll run it one more time
+[00:28:56] we're going to hit on run this once come
+[00:28:59] back over here oops we're now B cool
+[00:29:03] hey how you
+[00:29:06] thereit enter thinking let's see if it
+[00:29:08] comes back and see what response we get
+[00:29:10] back from
+[00:29:11] that cool I apologize but your message
+[00:29:13] seems uncomplete or clear could you
+[00:29:15] please provide more what you help with
+[00:29:17] cool all right is that the answer that
+[00:29:18] we got from chat gbt it is and we said
+[00:29:21] that number was what was two pretty
+[00:29:23] sweet so if we come back over then and
+[00:29:25] check on our thing to the messages is
+[00:29:27] two Co I've just updated the number of
+[00:29:28] messages let's try this one more time
+[00:29:30] run this once come back over to bolt and
+[00:29:33] we're going to say here something like
+[00:29:35] hey how do I um best Market my social
+[00:29:40] media
+[00:29:42] marketing agency tell me in 20 words but
+[00:29:46] something crazy like that tell me the
+[00:29:47] thing own some cool stuff but you've got
+[00:29:49] a fully responsive there blah blah blah
+[00:29:51] blah blah all right now if I come back
+[00:29:52] over this all completed that's response
+[00:29:54] that we got to increment function was
+[00:29:56] four I come back over there let's just
+[00:29:58] say that I want to um maximize this out
+[00:30:01] I hit a by we should see four messages
+[00:30:03] at the Top If it's worked properly and
+[00:30:05] has it top messages for so guys that is
+[00:30:08] how we connect make to air table to b.
+[00:30:11] nude create some incredible experiences
+[00:30:13] I hope you can see the potential of this
+[00:30:14] because it is really flipping epic now
+[00:30:16] if you haven't already watch this video
+[00:30:18] this video guys I actually think it's
+[00:30:20] one of the sickest like insane video one
+[00:30:22] of the comments on it recently said this
+[00:30:24] feels too good to be free and I I
+[00:30:27] actually really really love this video
+[00:30:28] and I think it'll bless you if you
+[00:30:29] haven't tried it out yet learn cool
+[00:30:30] stuff but in any case guys have a
+[00:30:32] wonderful week and I'll see you in the
+[00:30:34] next video

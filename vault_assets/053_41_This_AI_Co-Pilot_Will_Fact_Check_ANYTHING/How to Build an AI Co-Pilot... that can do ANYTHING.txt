@@ -1,0 +1,613 @@
+[00:00:00] I built an A powered co-pilot that will
+[00:00:01] follow me around the web and help me
+[00:00:03] fact check absolutely anything that I
+[00:00:05] want to on articles so if I highlight
+[00:00:06] this TT for example and I want to fact
+[00:00:08] check whether or not cryptocurrency
+[00:00:09] scammers are using AI deep fake videos
+[00:00:12] of kid starm and Prince William to
+[00:00:13] Target victims all I ever have to do is
+[00:00:16] literally highlight it hit this crime
+[00:00:18] extension button and then what this
+[00:00:19] truth pilot will do is essentially
+[00:00:21] search the internet and look right here
+[00:00:23] for example it tells you what the claim
+[00:00:24] is it tells you whether or not it
+[00:00:26] believes it's true and it's confidence
+[00:00:28] score on that and then will explain its
+[00:00:29] findings for example the claim
+[00:00:31] originates from a report from feminal
+[00:00:32] Harper immediate insight and research
+[00:00:34] from which identified over 250
+[00:00:37] fraudulent adverts on metap platform
+[00:00:39] another example let's say that we're on
+[00:00:41] Reddit and this person here says Hey the
+[00:00:42] first time buy a stamp Duty benefit
+[00:00:44] stops hard at
+[00:00:45] 625k like is that actually true whatever
+[00:00:48] do again we highlight it we come to
+[00:00:50] truth pilot we hit hit the uh hit the
+[00:00:52] button in the cemic extension and again
+[00:00:55] it will compare sources it will go the
+[00:00:57] internet and it will determine whether
+[00:00:58] or not it believes like claim be true
+[00:01:00] and then give you sources that you can
+[00:01:01] click on and actually validate and
+[00:01:03] whilst that's happening you can still go
+[00:01:05] around reading through the article and
+[00:01:06] see what you think and here for example
+[00:01:07] it says yes it's true and it gives us
+[00:01:09] findings and it's given us multiple
+[00:01:11] sources and you can check out the
+[00:01:12] sources by clicking on them and actually
+[00:01:14] looking at the data and information for
+[00:01:15] yourself this automation is absolutely
+[00:01:18] insane if you don't know how to build AI
+[00:01:20] co-pilots using Chrome it's a skill that
+[00:01:22] will be incredibly valuable and I'll
+[00:01:24] show you exactly how you use the skill
+[00:01:27] to create these kinds of automations for
+[00:01:28] whatever you like and in this video I'll
+[00:01:30] show you how you can build your own
+[00:01:32] truth pilot step by step so you can get
+[00:01:34] rocking and rolling and basically
+[00:01:35] completely change the way that you use
+[00:01:37] the internet I'm Jack my YouTube channel
+[00:01:39] and my school Community are all about
+[00:01:41] three things we're about the latest AI
+[00:01:44] we're about incredible automations but
+[00:01:46] most importantly what about the stuff
+[00:01:48] that actually works if you haven't
+[00:01:50] already grab that coffee and let's jump
+[00:01:52] straight in so I'd like to if I me start
+[00:01:54] with what you need to run this
+[00:01:55] Automation and it is amazingly simple
+[00:01:58] because you only need a couple of things
+[00:01:59] the first thing you need as you might
+[00:02:00] have guessed is access to Google Chrome
+[00:02:02] so we're using Chrome extensions to
+[00:02:04] build this but instead of thinking it is
+[00:02:06] a Chrome extension I want you to think
+[00:02:07] about what we're building here as an AI
+[00:02:10] co-pilot it is AI with internet access
+[00:02:13] that follows you around the internet and
+[00:02:15] will do anything you if you can think
+[00:02:17] wouldn't it be cool if then yes you can
+[00:02:19] most likely do it with this technology
+[00:02:21] so it's such a cool skill and to do that
+[00:02:23] what you'll need to build this
+[00:02:24] automation is me.com which is this now
+[00:02:26] code automation platform I'll put a link
+[00:02:28] down below so you can just literally
+[00:02:30] button to get started and it enables us
+[00:02:31] to add these different apps to access
+[00:02:33] and do different things it's very
+[00:02:34] modular the other thing that you're
+[00:02:36] going to need is perplexity Ai and the
+[00:02:38] reason we're using perplexity AI here as
+[00:02:41] opposed to just a simple chat GPT or
+[00:02:43] Claude module is we want access to the
+[00:02:45] internet so the way this automation
+[00:02:48] works is we've designed it in such a way
+[00:02:50] that essentially we find something the
+[00:02:52] auto the web hook says great if you
+[00:02:55] highlight something and hit this button
+[00:02:56] it will grab the text and it will fire
+[00:02:59] it back over to our make scenario over
+[00:03:01] here and what will happen here is it
+[00:03:02] will produce both the URL and the text
+[00:03:05] that you've highlighted and then we
+[00:03:06] basically say to per plexy look here's
+[00:03:08] what the climb is here's the article it
+[00:03:10] originated from and we give it a really
+[00:03:12] cool prompt to go through and basically
+[00:03:14] validate whether or not that's true and
+[00:03:16] it reads multiple sources and then the
+[00:03:18] second web Hub will send the information
+[00:03:20] straight back to you you're in a
+[00:03:21] beautiful design you can see exactly
+[00:03:23] what you need to see without having to
+[00:03:24] actually go forth Google and check
+[00:03:26] things and the cool thing is guys you
+[00:03:27] can actually code perplexity here in any
+[00:03:29] way that you want to you could say give
+[00:03:30] me 20 sources give me 50 sources ignore
+[00:03:32] these Publications ignore those
+[00:03:34] Publications it's whatever you want to
+[00:03:35] do so if we were to build this how do we
+[00:03:38] actually do it well step by step I'll
+[00:03:39] show you how we get started so the first
+[00:03:41] thing I want you to do is head over to
+[00:03:43] Claude and we're going to basically tell
+[00:03:45] Claude that we want it to build us an AI
+[00:03:47] creme extension and so the prompt we're
+[00:03:49] going to give it is say look it will do
+[00:03:50] the following number one it will
+[00:03:51] highlight a piece of text on a web page
+[00:03:53] number two it will send that text and
+[00:03:55] the URL of that page to this web hook
+[00:03:57] and then we enter the web hook this web
+[00:03:59] will then return the data back in plain
+[00:04:01] text truth pilot will display that text
+[00:04:04] in a box on the right hand side image
+[00:04:06] below so we'll show an image in a second
+[00:04:08] using the formatting provided five it
+[00:04:10] will add a loaning animation whilst it's
+[00:04:12] loaning in the same shape as the Box
+[00:04:15] cycling through phases such as examining
+[00:04:17] data comparing sources facts checking
+[00:04:18] drinking coffee the cuter you can make
+[00:04:20] it usually the better and more epic it
+[00:04:21] is the header will be a gradient CL
+[00:04:23] animation the the extension is activated
+[00:04:25] once you click the button on the sidebar
+[00:04:27] I should say in the uh Chrome bar
+[00:04:30] and then we want a confetti
+[00:04:34] animation when
+[00:04:36] activated and at the bottom here please
+[00:04:38] paste the full code for me to copy and
+[00:04:40] paste PS only require One logo I say
+[00:04:43] that to say because uh often times it
+[00:04:45] requires you to add like a like
+[00:04:47] basically different dimensions and then
+[00:04:48] guys what I want you to do with all of
+[00:04:50] these things is essentially just give it
+[00:04:52] like a screenshot of something epic that
+[00:04:54] you'd like if you can't seem to find it
+[00:04:56] anywhere on like the internet feel free
+[00:04:58] to use mid journey to get inspiration
+[00:04:59] design inspiration and then just say
+[00:05:01] dude make this cuz it's easier to show
+[00:05:04] an image than it is to explain it so the
+[00:05:06] more detailed your first message can be
+[00:05:08] now what I need to do here I haven't
+[00:05:10] done actually let me just stop this real
+[00:05:11] quick is I actually need to add the web
+[00:05:14] hug address in so I put that back in
+[00:05:16] there for example Okay cool so the web
+[00:05:19] hook address guys where do we get that
+[00:05:21] well really simply all we do we create a
+[00:05:23] new scenario make and what you need to
+[00:05:24] come for here first f is web hugs and
+[00:05:26] then click on custom web hug like so and
+[00:05:29] we'll call this one let's call this one
+[00:05:32] the truth
+[00:05:34] bomb and then we'll have a little bomb
+[00:05:36] emoji and then we'll just leave it like
+[00:05:37] that and then it gives us this cool
+[00:05:39] thing here and then we're going to copy
+[00:05:40] that to clipboard and then we'll come
+[00:05:42] here and we'll call this one
+[00:05:46] truth pilot and let's add a little you
+[00:05:48] know let's give it a pilot I love that
+[00:05:50] cool and then we're going to save that
+[00:05:51] and then guys we come back over to clae
+[00:05:54] and then we just specify what the web
+[00:05:55] hook address is and then we hit enter
+[00:05:57] now occasionally guys it will give you
+[00:05:59] all of of the files together in one Mega
+[00:06:01] file and if that's the case I found it
+[00:06:02] easier just to ask it to separate it
+[00:06:04] into individual files and what we do
+[00:06:06] guys we click on the Manifest at Json we
+[00:06:08] come down we copy the content and if you
+[00:06:10] haven't seen my latest video on AI chem
+[00:06:12] extensions I'd encourage you to go watch
+[00:06:13] that video first because this video will
+[00:06:15] be 20 times easier for you if you just
+[00:06:18] went there welcome back and now let's
+[00:06:20] jump straight back in now if you're on
+[00:06:21] Mac what I'd like to use is text edit so
+[00:06:23] come down to right click click on new
+[00:06:25] document like so and it'll pop up and
+[00:06:26] all you're going to do guys is paste in
+[00:06:28] the code from from this particular one
+[00:06:30] here and then come down to view format
+[00:06:32] make plain text come down to file and
+[00:06:35] then save this as
+[00:06:38] manifest.json awesome and then I'm going
+[00:06:40] to click save yep and put yes use Json
+[00:06:43] and if using Windows guys you can use
+[00:06:44] the edit pad or text editor something
+[00:06:46] that's playing that isn't Microsoft Word
+[00:06:48] that enables you to save it in these
+[00:06:49] kind of formats so we've saved that on
+[00:06:51] the homepage which is awesome and then
+[00:06:52] I'm going to repeat the exact same
+[00:06:53] process once again so we come down we go
+[00:06:56] down for new document we bring this over
+[00:06:58] here we click on background JavaScript
+[00:07:01] like so and then we're just going to
+[00:07:02] copy that going to come back over we're
+[00:07:04] going to paste it then come to format
+[00:07:06] make plain text come over to file click
+[00:07:09] on Save and we'll call this one
+[00:07:14] background.js beautiful wonderful love
+[00:07:16] that close these guys down next we want
+[00:07:18] to do is exactly the same process again
+[00:07:19] so we come down new document and then
+[00:07:22] we're going to come over to content at
+[00:07:23] JavaScript incredible we copy it we
+[00:07:27] paste it we come down to view we go so
+[00:07:30] format make plain text and this one is
+[00:07:33] called content.js
+[00:07:35] incredible and guys every time you build
+[00:07:37] one of these you'll find that the
+[00:07:39] process just gets Slicker and Slicker
+[00:07:40] and Slicker as you get used to error
+[00:07:43] handling it more and more again new
+[00:07:45] document bring it over here styles. CSS
+[00:07:48] which is cool what do we do guys we just
+[00:07:50] simply copy this we come back over we
+[00:07:52] paste it we click on file we click on uh
+[00:07:56] excuse me uh format make plain text
+[00:07:59] incredible come to file come to save and
+[00:08:02] again we'll call this one styles.css
+[00:08:05] awesome and then guys when you're
+[00:08:07] looking at your desktop here what I want
+[00:08:08] you to do is right click click on new
+[00:08:10] folder and we'll call this one
+[00:08:13] truth pilot 2.0 like so and then guys
+[00:08:17] just click on all of those things that
+[00:08:19] you just created and drag them in like
+[00:08:21] so I come back over to Chrome this is
+[00:08:22] where the Magic Begins so what do we do
+[00:08:25] we come over here for example the top
+[00:08:27] right and we come on to extensions and
+[00:08:29] manage extensions the first thing I want
+[00:08:31] to make sure that you do is make sure
+[00:08:33] that developer mode is enabled on the
+[00:08:35] top right like so and guys then we then
+[00:08:37] we come to the desktop we select truth
+[00:08:38] pilot 2.0 click okay and we you believe
+[00:08:40] it it has arrived so the first thing we
+[00:08:43] need to do is validate the a the data
+[00:08:45] will appear so first of all I want to
+[00:08:47] click on details scroll down like so and
+[00:08:49] put pin to a bar awesome and then what
+[00:08:52] we'll do guys is we'll come on to the
+[00:08:53] same article and just kind of rebuild it
+[00:08:55] in the same way we did at the beginning
+[00:08:57] of the video in our scenario guys you
+[00:08:58] can see that it's waiting to determine
+[00:08:59] the data structure so that's running we
+[00:09:01] come back over then let's copy this bit
+[00:09:03] here and then when we click the icon
+[00:09:05] here nothing's happening which is
+[00:09:07] perfectly cool so how do we solve that
+[00:09:08] we just come back here with the clo and
+[00:09:09] we say hey I am clicking the icon and
+[00:09:15] nothing is
+[00:09:17] happening at all
+[00:09:21] including the web hook being the web
+[00:09:24] hook receiving data and then guys cl's
+[00:09:26] given us some directions so let's work
+[00:09:28] through this together so first one on
+[00:09:29] manifest.json so we copy this and we go
+[00:09:32] through the exact same process as before
+[00:09:34] so double click on manifest.json
+[00:09:36] or right click and open with text edit
+[00:09:39] like
+[00:09:43] so copy all update it click on file
+[00:09:47] click on Save awesome close that one
+[00:09:48] down and then let's see what else we
+[00:09:50] need to look at so then we've got popup
+[00:09:52] to JavaScript so this is a new one it
+[00:09:53] wants us to create which is cool so come
+[00:09:55] down the text edit right create new
+[00:09:57] documents paste in the C code format is
+[00:10:00] going to be plain text come this over uh
+[00:10:04] save this as popup.js
+[00:10:13] incredible and then we've got the
+[00:10:14] background JavaScript
+[00:10:16] awesome same thing once
+[00:10:19] again background JavaScript open that
+[00:10:21] with text
+[00:10:24] edit file
+[00:10:26] save superb and then finally we've got
+[00:10:29] got the content of JavaScript which is
+[00:10:32] cool and what I'm going to say is like
+[00:10:34] hey
+[00:10:36] please share all of the content
+[00:10:39] JavaScript code including all of the
+[00:10:44] requirements I gave you earlier and I'll
+[00:10:47] paste those in as well and now we hit
+[00:10:49] enter and occasionally guys when you're
+[00:10:50] asking it to make code amendments for
+[00:10:51] you in the content.js it will give you a
+[00:10:54] trunet response of just the bit of code
+[00:10:55] it wants you to edit now unless you're
+[00:10:57] using a code visual editor or something
+[00:10:59] it can just be easy just to be like bro
+[00:11:01] just give me the full code that you can
+[00:11:03] just copy and paste and just simplifies
+[00:11:05] your execution of it a little bit but if
+[00:11:06] you're a coder you'll find it easy just
+[00:11:07] to kind of okay great you can like work
+[00:11:09] on it like in a bit more of a modulous
+[00:11:11] sense uh but this would be pretty
+[00:11:12] straightforward if you're new and
+[00:11:14] learning this with the first time so we
+[00:11:16] copy the content okay then we come back
+[00:11:18] so let's click on content.js we're going
+[00:11:20] to right click it again open that with
+[00:11:22] text edit get rid of all of it paste it
+[00:11:26] in beautiful hit file hit save fantastic
+[00:11:30] now this is a really cool bit because
+[00:11:32] what do we do if we go to extensions we
+[00:11:34] come back we can just hit this refresh
+[00:11:36] button here awesome which basically
+[00:11:38] means that we don't have to keep on reun
+[00:11:39] loading it it just refreshes it based on
+[00:11:41] the files that we gave it so come back
+[00:11:43] to the page we're going to refresh the
+[00:11:44] page and then let's do the same thing
+[00:11:46] again so we click on the sentence hit
+[00:11:49] the T your file could not be accessed
+[00:11:52] your file may have been moved edited or
+[00:11:54] deleted let's go check actually if we're
+[00:11:56] saying has it pulled through the data
+[00:11:58] not yet so then what we want to do guys
+[00:11:59] is basically share a screenshot of
+[00:12:02] what's
+[00:12:03] happening so we come back over to CLA
+[00:12:05] and say
+[00:12:07] hey still not
+[00:12:09] working and then we're going to show the
+[00:12:11] screenshot we're going to come over to
+[00:12:13] the extensions errors and share this as
+[00:12:16] well like that please paste the
+[00:12:20] full code for me to copy and paste then
+[00:12:24] we hit enter and essentially guys this
+[00:12:26] is essentially the process of there's an
+[00:12:28] error we show with Claude and we kind of
+[00:12:30] Workshop it through like that and then
+[00:12:31] guys we all the same process again
+[00:12:33] starting with
+[00:12:34] manifest cool all right then so let's
+[00:12:36] actually try that all again one more
+[00:12:38] time so we come back over to Google
+[00:12:39] Chrome we come back and we're going to
+[00:12:42] redo it and all of a sudden guys the
+[00:12:44] errors have disappeared don't so let's
+[00:12:46] have another crack at this so we refresh
+[00:12:47] the page again we highlight the text and
+[00:12:50] we click on our truth pilot box and it
+[00:12:52] says activate truth pilot awesome cool
+[00:12:55] truth pilot activated select some fact
+[00:12:57] check some some text to fact check all
+[00:12:59] right we've done that and look at this
+[00:13:02] guys truth part result accepted so we
+[00:13:04] come back over now and what the test
+[00:13:06] will be to see if mag has picked up that
+[00:13:08] stuff and it has cool so let's go back
+[00:13:11] over let's refresh the
+[00:13:13] page right again let's highlight the
+[00:13:15] text now does that look as good as we
+[00:13:17] want it to do no but the point is that
+[00:13:19] it's functional so we click on Truth
+[00:13:21] pilot on more time activate truth pilot
+[00:13:23] click okay we've had it that's fine it's
+[00:13:27] a bit of a strange process actually but
+[00:13:28] okay that's okay we come back over let's
+[00:13:30] see what's happened ah okay the scenario
+[00:13:32] wasn't running so we'll wait for new
+[00:13:34] data in reality guys once this is
+[00:13:36] working we just turn this button on on
+[00:13:37] and it will run for you automatically so
+[00:13:39] we come back over highlight this text
+[00:13:42] truth pilot result is accepted so and
+[00:13:45] guys check this out it's pulled through
+[00:13:48] the text and the URL so what we've what
+[00:13:50] you've just done is you've been able you
+[00:13:52] you're going to be bring the web on
+[00:13:53] Chrome any text you see that you can
+[00:13:55] highlight you can now send the text that
+[00:13:58] you highlight and URL to make now once
+[00:14:01] it's in make you can do anything you can
+[00:14:03] connect this to air table you can double
+[00:14:05] check data sources we can connect to the
+[00:14:07] internet literally once it's in make you
+[00:14:09] can do unlimited things so the next
+[00:14:12] thing we want to do is return a response
+[00:14:15] and for that it's perplexingly simple
+[00:14:17] all you're going to do is come here to
+[00:14:18] add a new module and you're going to
+[00:14:20] find perplexity now if you've not used
+[00:14:22] perplexity before the way this works is
+[00:14:24] via an API call so you would have it to
+[00:14:26] perplexity tocom and you deposit like5
+[00:14:29] in credits that's it and perplexity is
+[00:14:32] kind of like the Willy Wonka of the API
+[00:14:35] world when it comes to AI because you
+[00:14:37] put $5 in it may as it's like the
+[00:14:38] Everlasting Gob stopper it's ridiculous
+[00:14:40] it like never ever stops I'll put a link
+[00:14:42] down below so you can click and check it
+[00:14:43] out now look we come down to messages
+[00:14:46] and we got content and we got role the
+[00:14:48] role I want to select is user now I'm
+[00:14:49] going to walk you through what the
+[00:14:50] prompt is with this okay now the cool
+[00:14:52] thing is you can adjust this based on
+[00:14:54] your own personal thresholds that you're
+[00:14:56] comfortable with so if you want five
+[00:14:58] sources versus three if you want to
+[00:15:00] exclude certain sources you can do all
+[00:15:02] of that here and do do so at your own
+[00:15:04] kind of Will and desire which is awesome
+[00:15:06] so what is the actual prom now look I
+[00:15:10] found an statement on insert website
+[00:15:13] claims that insert claim right so that's
+[00:15:15] the text that you pick up I need a
+[00:15:17] detailed fact check report on this claim
+[00:15:20] and I would like you to sort up to three
+[00:15:22] additional examples that either support
+[00:15:24] or refute uh this information this
+[00:15:27] report should include and then I break
+[00:15:29] understand how I personally wanted to
+[00:15:30] see it I wanted to restart the claimers
+[00:15:32] the verdict and I gave it the four these
+[00:15:34] four ideas which were true false
+[00:15:37] misleading or unverifiable so misleading
+[00:15:40] is like it's true technically but it's
+[00:15:43] like not quite actually true it's like
+[00:15:46] it's quite misleading then we got and
+[00:15:47] you could go on to Define these if you
+[00:15:49] want to this could go as deep as you
+[00:15:50] want see this is like a minimal viable
+[00:15:52] product just to get you some data but
+[00:15:54] you I could spend a week building up
+[00:15:56] this prompt and it would be like the
+[00:15:57] most powerful thing ever but I want to
+[00:15:58] give you something that you can just
+[00:15:59] like use and get started with confidence
+[00:16:02] score aign a confidence score between 1
+[00:16:04] and 10 where 10 indicates like a high
+[00:16:06] confidence if the and the verdict and
+[00:16:08] one is like a low confidence include a
+[00:16:10] brief explanation of oh my goodness
+[00:16:13] gracious on why in Brackets next to a
+[00:16:16] number no more than 12 words it's good
+[00:16:17] to like throttle the word countdown
+[00:16:19] findings offer context and further
+[00:16:20] information about the claim including
+[00:16:22] its origin any reasons why it might be
+[00:16:24] misunderstood and how experts you it and
+[00:16:26] limit this section to maximum 200 words
+[00:16:28] so you'll get the M output that you want
+[00:16:30] and then we've got the source
+[00:16:32] summary identify up to three new new
+[00:16:36] being the key word here credible sources
+[00:16:38] that verify the claim provide a brief
+[00:16:40] summary of the findings from each Source
+[00:16:43] ensuring that they are distinct from the
+[00:16:45] original one and just say look include
+[00:16:46] the name for example scientific journal
+[00:16:49] reput news reputable news Outlet expert
+[00:16:52] organization this cannot be rdit you
+[00:16:55] must not use the same website you are
+[00:16:57] provided with you must search the claim
+[00:16:59] on the internet and find reputable
+[00:17:01] sources to assess the veracity of the
+[00:17:03] claim a brief description and a direct
+[00:17:05] clickable hyperlink to the full article
+[00:17:08] please ensure the output follows this
+[00:17:09] format numbered headers client blah blah
+[00:17:11] blah so copy all of this and I'll put
+[00:17:14] this text avilable down below if you
+[00:17:15] just grab if if you want to play with
+[00:17:16] this one as for instance and we come
+[00:17:18] over and we just type that into the
+[00:17:19] content like so and almost by Magic guys
+[00:17:22] can you see it hovers over and it hovers
+[00:17:25] over incredible we click okay and then
+[00:17:27] the final part the s guys is you add a
+[00:17:29] new module you're going to come over to
+[00:17:31] web hooks web hook response click on the
+[00:17:34] body and then what I want to click on is
+[00:17:36] come down to choices come down to
+[00:17:38] message and just type in content and
+[00:17:40] then click okay now I'm going to save
+[00:17:43] this automation I'm going to Auto align
+[00:17:45] it I'm going to come here I'm going to
+[00:17:46] cck on run once and wait for new data
+[00:17:49] and I'm going to come back over to this
+[00:17:51] now I don't like the way that this one
+[00:17:53] works it's like too many button clicks
+[00:17:55] I'm I'm not a big fan of a design but
+[00:17:57] step one isn't about design step one's
+[00:17:58] about function and the design comes
+[00:18:00] later so let's just say again I want to
+[00:18:02] validate this particular claim I click
+[00:18:04] on the truth pilot I activate the truth
+[00:18:06] pilot that's okay we click okay and we
+[00:18:08] see what
+[00:18:10] happens and has just come through no I
+[00:18:13] think this works are they go okay
+[00:18:16] accepted and we'll see what happens I'm
+[00:18:18] like going back and forth back and forth
+[00:18:20] so perplexity AI is now checking
+[00:18:23] it it's now doing its beautiful research
+[00:18:25] and it's sent out the response there you
+[00:18:27] go look there you go cool there you go
+[00:18:30] how cool is that it's got everything it
+[00:18:31] needs so if I come back
+[00:18:34] over there we go and guys if you look at
+[00:18:37] that it's pulled it all through now
+[00:18:39] what's happened is I clicked a button by
+[00:18:40] mistake and it's gone off and gone crazy
+[00:18:42] what we need to do is change the prompt
+[00:18:44] a little bit now just to tidy up a
+[00:18:45] little bit so now I've said to CL look I
+[00:18:46] want seven things I want when I when I
+[00:18:48] click it once it should activate and I
+[00:18:50] should be specific about where that is
+[00:18:53] so if I said hey when I click it once um
+[00:18:55] in the Chrome extension bar
+[00:18:59] it should activate I don't want to
+[00:19:00] double click on anything uh produce
+[00:19:03] confetti once clicked make the font
+[00:19:05] avener and make the font heavier that's
+[00:19:07] like in the uh main bar in the truth
+[00:19:09] pilot
+[00:19:12] box this is just a design thing I but we
+[00:19:14] need to be stick for design here don't
+[00:19:17] we add an X next to the box to shut it
+[00:19:20] down make the Box wider make the grining
+[00:19:22] colors contrast well against Y and
+[00:19:24] improve the animation keep the
+[00:19:25] formatting sent from the web hog it
+[00:19:27] looks bad at the moment and then guys as
+[00:19:30] always what do we say we say you know
+[00:19:32] what we need right paste the full code
+[00:19:36] for me to copy and paste and then we hit
+[00:19:38] enter incredible and guys essentially
+[00:19:41] one of the reasons why I want to show
+[00:19:43] you through this step by step about the
+[00:19:45] troubleshooting process is that is
+[00:19:47] really the only skill you need to
+[00:19:48] develop here is about understanding
+[00:19:50] what's not working and then talking to
+[00:19:52] the model about what isn't working and
+[00:19:55] what you need to fix it and that's
+[00:19:57] basically the long and short of you
+[00:19:58] actually get these models to do anything
+[00:20:00] and basically the further along the
+[00:20:02] conversation you get the the more but
+[00:20:04] once you've got it functional okay and
+[00:20:06] you're now just looking at design it
+[00:20:08] just gets incredibly easy and simple and
+[00:20:10] quite fun in my opinion because it's
+[00:20:12] like that's when we get to take it to a
+[00:20:13] whole new level and sometimes it's two
+[00:20:15] steps forward one step back but the
+[00:20:17] bottom line is guys this stuff is
+[00:20:18] incredible this is how you build an AI
+[00:20:20] web pilot so once I've integrated that
+[00:20:22] guys I come back over now I highlight
+[00:20:23] the text I want to check I come here I
+[00:20:25] click on the T and let's see what
+[00:20:27] happens it's loading in the background
+[00:20:28] it's checking and guys the coolest thing
+[00:20:30] about this automation is the fact that
+[00:20:32] think about what you could do even got a
+[00:20:33] little friend here has come to check out
+[00:20:35] the last bit of the automation with us
+[00:20:36] other things that you could do with this
+[00:20:38] like it's actually insane and again here
+[00:20:40] it's work look the claim the verdict the
+[00:20:42] confidence score the findings and the
+[00:20:44] summaries and guys I'll put this down
+[00:20:45] below if you want to check it out and
+[00:20:46] have a play with it but any case guys I
+[00:20:48] hope you see the potential of this and
+[00:20:50] just have this to completely change your
+[00:20:51] bring experience this is the new way to
+[00:20:54] experience the internet and if you're at
+[00:20:56] the beginning of your AI automation
+[00:20:57] Journey or you want to see how far you
+[00:20:59] can go i' encourage to check out this
+[00:21:01] video here on 10 levels of AI Automation
+[00:21:04] in any case guys have a wonderful week
+[00:21:06] and I'll see you in my next video

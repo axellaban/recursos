@@ -1,0 +1,4024 @@
+[00:00:00] Do you want to automate 90% of your work
+[00:00:02] with AI? In this video, I'm going to
+[00:00:04] show you five key AI automations that
+[00:00:06] actually deliver. You're probably tired
+[00:00:08] of hearing how these concepts might help
+[00:00:10] you. But in this video, I'm going to
+[00:00:11] show you step by step the high ROI
+[00:00:13] systems that you can use to accelerate
+[00:00:15] your business so that you don't get left
+[00:00:17] behind. And these aren't just ideas.
+[00:00:19] These are the exact high ROI systems
+[00:00:21] that I use to build my own sevenfigure
+[00:00:23] AI business and help thousands of
+[00:00:24] entrepreneurs just like you get
+[00:00:26] measurable results. So, I'm going to
+[00:00:27] give you the step-by-step framework
+[00:00:29] across these five verticals so you can
+[00:00:30] get started. And beginning here, you may
+[00:00:32] find yourself on the left, which is the
+[00:00:34] 10%. Maybe you're using chat GBT,
+[00:00:36] Claude, DeepSeek. In this video, what
+[00:00:38] I'm going to do is take you from the
+[00:00:39] left and bring you over here to the
+[00:00:41] promised land to the right. And we're
+[00:00:43] going to be using no code tools like N8
+[00:00:46] and Make.com to build what we call AI
+[00:00:48] automations to truly accelerate your
+[00:00:51] business. And to show you in a cool
+[00:00:53] graph on the left, we've got AI. This is
+[00:00:54] effectively what we're going to do in
+[00:00:56] this video and how we roll. We have
+[00:00:57] checkp deep sea claude on the left AI on
+[00:01:00] the right we have no code automation
+[00:01:02] systems and when you combine them
+[00:01:03] together that's truly how you accelerate
+[00:01:06] the the the sort of processes on the
+[00:01:08] right enable us to connect anything to
+[00:01:10] anything Gmail Google sheets air table
+[00:01:12] um any application you could possibly
+[00:01:14] imagine scraping things off the internet
+[00:01:17] grabbing attachments grabbing anything
+[00:01:18] you can imagine and on the left is the
+[00:01:20] brain is the artificial intelligence and
+[00:01:22] when we combine no code automation with
+[00:01:24] AI we get something truly exceptional
+[00:01:26] So, the very first vertical I want to
+[00:01:28] start with here is manual data entry. We
+[00:01:31] attack this cuz I found with businesses,
+[00:01:33] this is usually when there's somebody at
+[00:01:35] a computer pressing buttons, there's
+[00:01:36] some time to be solved somewhere. It's
+[00:01:39] the lowest ROI activity that exists
+[00:01:40] within most businesses. And on top of
+[00:01:42] that, it's prone to lots of error. So,
+[00:01:44] we're going to build three automations
+[00:01:46] together on this one. And I'm going to
+[00:01:48] time stamp everything down below so you
+[00:01:50] can go at your own leisure, come back
+[00:01:51] when you fancy to complete this uh video
+[00:01:53] and kind of crush your automation
+[00:01:55] desires. So, the first one is going to
+[00:01:56] be an email to a CRM. We're going to get
+[00:01:58] an we're going to set up our inbox.
+[00:02:00] Anytime we get an email, we're going to
+[00:02:01] create an AI agent. And that agent is
+[00:02:04] going to look through the email and he's
+[00:02:05] going to add onto a to-do list. He's
+[00:02:07] going to check the to-do list we've
+[00:02:08] already created in our CRM or Google
+[00:02:10] Sheets. And if it thinks we need to add
+[00:02:12] another one, we're going to do that. The
+[00:02:13] next one we're going to do is going to
+[00:02:14] be an auto invoicer. So, basically, when
+[00:02:17] we're in our own CRM and we tick
+[00:02:19] something to be, hey, process invoice,
+[00:02:21] we're actually going to create something
+[00:02:23] a unique invoice for that client. And we
+[00:02:25] can even send it to that client if we
+[00:02:27] like. And then finally, we're going to
+[00:02:28] do an AI meeting notes. Okay, we're
+[00:02:30] going to have a note taken. It's going
+[00:02:31] to join all of our meetings. We dial in,
+[00:02:33] it joins us automatically. It listens to
+[00:02:35] everything and then it will export the
+[00:02:37] transcript so we can do whatever we like
+[00:02:39] to with that particular transcript. So,
+[00:02:40] if you haven't already, grab that coffee
+[00:02:43] and let's dive straight in. So, for the
+[00:02:44] first one that I'm going to build, guys,
+[00:02:46] is email to CRM. I'm going to build that
+[00:02:48] in N8. So, to do that, I'm going to head
+[00:02:50] over to natn.io or if you've got a
+[00:02:52] self-hosted version, you can do that as
+[00:02:53] well. And when you create a new
+[00:02:54] scenario, by the way, if you're new to
+[00:02:56] NA10, I'm going to put a link on screen
+[00:02:57] somewhere so you can get the basics and
+[00:02:59] go through that step by step. But it
+[00:03:00] should also make perfect sense to even
+[00:03:02] if you're a beginner and you've never
+[00:03:03] coded before, there's no need for coding
+[00:03:05] experience with this. So the very first
+[00:03:07] thing we do since we are not savages is
+[00:03:09] we're going to name it. I'm going to
+[00:03:10] call this one something like email to
+[00:03:13] CRM. And then we're going to give this a
+[00:03:16] beautiful little emoji here. And we'll
+[00:03:17] give this a little fire emoji. Cool. All
+[00:03:19] right. First thing we want to do is add
+[00:03:21] a trigger. Every automation we build
+[00:03:23] will have something that starts it. That
+[00:03:24] could be an email. It could be uh an
+[00:03:26] update to a CRM. It could be a WhatsApp
+[00:03:28] message, Telegram message, whatever it
+[00:03:30] is. And then we're going to have a
+[00:03:31] defined output at the end of it. So very
+[00:03:34] first step is going to be Gmail. And we
+[00:03:36] just simply search for Gmail. We click
+[00:03:38] on Gmail and we're going to say, hey, I
+[00:03:40] want you to trigger the moment a message
+[00:03:42] is received. If you haven't uh connected
+[00:03:45] Google to NM, I'll put a link down below
+[00:03:47] how you can do that. It's very, very
+[00:03:49] simple. Just follow it. I'll time stamp
+[00:03:50] it and I'll show you how you connect
+[00:03:51] those things together for you. But I
+[00:03:53] respect your time. I'm going to jump in
+[00:03:54] with this one. So on the Gmail trigger,
+[00:03:56] what we're basically going to do is
+[00:03:57] click on this guy and you're going to
+[00:03:59] connect and get your inbox which is ace.
+[00:04:01] Now effectively I want you to remove
+[00:04:03] this simplify thing here guys because we
+[00:04:05] won't get all the data that we actually
+[00:04:07] need and then click on fetch test event.
+[00:04:10] And what that's going to do is go to
+[00:04:11] your inbox and grab the last email we
+[00:04:13] got. Now, the last email I got is one I
+[00:04:15] prepared earlier. And as you can see on
+[00:04:16] the right hand side, it was basically
+[00:04:18] from WordPress talking about an upgrade,
+[00:04:21] which is fine. Um, do we want to do an
+[00:04:22] upgrade? I don't think we do actually do
+[00:04:24] to be fair. But basically, we've got an
+[00:04:25] email from Gmail, which is cool. I'm
+[00:04:26] going to head over to Gmail and create a
+[00:04:28] fictitious email uh asking it to do
+[00:04:30] something on a to-do list. So, let me
+[00:04:31] jump over right now and do that. So,
+[00:04:33] here guys, I've got an email says, "Hey,
+[00:04:34] due by Friday. Hey, Jack, it's banned.
+[00:04:36] Please complete the report by Friday for
+[00:04:38] the Stevenson account." What I'm going
+[00:04:39] to do is going to come down here and
+[00:04:40] click on send. And then I come back over
+[00:04:42] to my Gmail and I give this one a double
+[00:04:44] click. And let's te uh fetch a test
+[00:04:46] event. And you can see there should be
+[00:04:49] something about the Stevenson account
+[00:04:50] due by Friday. There's a subject line
+[00:04:52] and there should be some text somewhere
+[00:04:54] talking about uh the Stevenson account
+[00:04:56] which is exactly what we want. Cool.
+[00:04:58] Beautiful. Right. The next thing we're
+[00:04:59] going to do guys is add in our AI agent.
+[00:05:01] So to do that we click on this button
+[00:05:03] here and we click on advanced AI and
+[00:05:04] then you click on AI agent. Beautiful.
+[00:05:07] Now we want to do two things. We want to
+[00:05:09] create a prompt and we basically want to
+[00:05:11] explain to the AI what its job is. And
+[00:05:14] then the second thing that we want to do
+[00:05:16] is give it the information. So the first
+[00:05:19] thing I'm going to do is click on the
+[00:05:20] source for prompt and click on define
+[00:05:22] below. And essentially I want to give it
+[00:05:24] the key information. Now the key
+[00:05:26] information is going to be the date. In
+[00:05:28] other words, what was the date of the
+[00:05:30] email? Uh the next thing is going to be
+[00:05:32] the subject. So what is the subject
+[00:05:33] line? Uh who it's
+[00:05:35] from, which is fine. And then
+[00:05:38] effectively what we want to do is come
+[00:05:40] over here. Let's just get rid of this
+[00:05:42] guy real quick. And essentially we're
+[00:05:44] adding the text here which is hey Ben uh
+[00:05:46] please complete the Stevens report.
+[00:05:48] Beautiful. Now the next thing we're
+[00:05:49] going to do guys is add in the system
+[00:05:51] message. Okay. Beautiful guys. And by
+[00:05:53] the way if it's gotten dark it's cuz I
+[00:05:54] had to jump off this recording to go
+[00:05:56] record something. But I'm back now and
+[00:05:57] I'm ready to complete this. So what do
+[00:05:59] we do? We need to give it a system
+[00:06:01] message. Now I find the best way to do
+[00:06:03] this guys to be completely transparent
+[00:06:04] with you is use a model. Just create the
+[00:06:06] prompts. Uh, I'm using Gemini 2.5 Pro,
+[00:06:08] which has been blind tested to be the
+[00:06:10] best one at the moment. And I'm going to
+[00:06:11] say, hey, I'm going to say, I'll put a
+[00:06:13] link down below for this as well if you
+[00:06:14] like. Uh, write me an AI agent uh system
+[00:06:18] message. Uh,
+[00:06:20] objective add in um basically um to-do
+[00:06:25] item, date, and owner. Uh tools is going
+[00:06:29] to be uh check the Google Sheets, and
+[00:06:32] that's it. basically um we'll receive uh
+[00:06:36] an email message and also a subject
+[00:06:41] line. Bam. Okay. Now, hopefully Gemini
+[00:06:43] can work in the background and create
+[00:06:44] something epic for us. What's really
+[00:06:46] cool about Gemini is you can actually
+[00:06:47] see the thinking of the model. Often
+[00:06:48] times when using these models, I find it
+[00:06:50] helpful to test it with one and another
+[00:06:53] one uh when you're using it directly,
+[00:06:54] but this one should be absolutely fine.
+[00:06:56] Now, whilst that's still working in the
+[00:06:57] background, I'm going to come back over
+[00:06:58] to our beautiful scenario. And what
+[00:07:00] we're going to do is come down to add
+[00:07:01] option and click on system message. So
+[00:07:04] essentially think of the system
+[00:07:05] messages. This is the thing that it will
+[00:07:08] its core instructions and then the
+[00:07:10] variable part is going to be the prompt.
+[00:07:11] So coming over to Gemini here we go. I'm
+[00:07:14] just going to come over here. Let's give
+[00:07:15] it multiple options which I think is
+[00:07:17] fine. Uh we don't need to go that
+[00:07:19] detailed. I think this one will be okay.
+[00:07:21] So we'll just copy this. Come back over
+[00:07:22] to our scenario. Type in the system
+[00:07:24] message. And also one thing I'd always
+[00:07:26] recommend you add guys is just say hey
+[00:07:28] the date is uh two curly brackets then
+[00:07:31] we want dollar sign now space two curly
+[00:07:34] brackets like that and change it to
+[00:07:36] expression and that basically will tell
+[00:07:37] the AI hey this is a date and time and
+[00:07:40] when it gets the message it'll be fine
+[00:07:42] cool we come off this we click off and I
+[00:07:44] think we're ready to go now the next
+[00:07:45] thing we want to do is add in a chat
+[00:07:46] model think of that like its brain like
+[00:07:48] its battery we're going to go for chat
+[00:07:51] GPT and you need to create a credential
+[00:07:54] to do that come down to create a new
+[00:07:55] credential. Then guys, what I'd love for
+[00:07:57] you to do is head over to
+[00:08:01] platform.openai.com/apien keys. You'll
+[00:08:03] see all these beautiful keys here. All
+[00:08:04] you're going to do is come down to
+[00:08:06] create a new secret key. Give it a name.
+[00:08:08] Hit create secret key. And guys, a long
+[00:08:11] complicated number is going to pop up. I
+[00:08:13] want you to copy that. And once you've
+[00:08:14] copied that, come back over to the
+[00:08:16] scenario and enter it here under the API
+[00:08:19] key. Don't worry about organization ID.
+[00:08:21] Then click save. And then you will be
+[00:08:23] connected. I'm going to connect one that
+[00:08:25] I made earlier which is going to be open
+[00:08:27] AI account 14. GPT photo mini is fine.
+[00:08:31] And as you can see we're now here ready
+[00:08:32] to rock and roll. Memory don't worry
+[00:08:34] about for this part of the video. We
+[00:08:35] will come on to that later. It's
+[00:08:37] basically g ability to remember what
+[00:08:39] it's already told you. We'll use that as
+[00:08:40] the chat functionality. Now what we're
+[00:08:42] going to do is add let's do this on
+[00:08:45] Google sheets uh one I prepared earlier.
+[00:08:47] But in essence, it could go to ClickUp,
+[00:08:48] it could go to Slack, it could go to
+[00:08:50] anything you could possibly imagine.
+[00:08:52] WhatsApp, Telegram, your CRM of choice.
+[00:08:55] I'm going to do Google Sheets to keep
+[00:08:56] this beautifully nice and simple. Google
+[00:08:58] Sheets on the right hand side. Now, I
+[00:09:00] want to give two tools here. The first
+[00:09:02] one is going to be its ability to read
+[00:09:04] the thing and the second one is its
+[00:09:06] ability to create the thing. So, the
+[00:09:09] first one I've come over, this is what I
+[00:09:10] prepared earlier guys, which is Google
+[00:09:12] sheet called to-do list with loaded T's.
+[00:09:14] uh what we want to talk about, who it's
+[00:09:17] going to go to, and or who's doing it,
+[00:09:19] and when's it happening, and add as many
+[00:09:21] columns as you humanly like. Right now,
+[00:09:23] this is going to blow your mind. I come
+[00:09:24] back over, right? What tool description
+[00:09:27] set automatically uh we want it to Yeah,
+[00:09:29] automatically is fine. Sheet within
+[00:09:31] document, that's fine. Get rows. Now,
+[00:09:33] the operation I want it to do, guys,
+[00:09:35] let's have a
+[00:09:37] look. Yeah, retrie. Yeah, let's say get
+[00:09:40] rows and then we pick the document. The
+[00:09:41] document is quite simply to-do list and
+[00:09:43] the sheet is sheet one. So you could
+[00:09:45] have sheet one for one thing, sheet two
+[00:09:47] for somebody else, whatever you want it
+[00:09:48] to be. Okay. And then once that's done,
+[00:09:50] we click off. Now that is its ability to
+[00:09:52] read all the stuff that's in there. Now
+[00:09:54] check this out. I come down to another
+[00:09:56] tool. I'm going to do Google Sheets
+[00:09:58] again. All right. This time though,
+[00:10:01] instead of get rows, I want it to append
+[00:10:04] row, which is its ability to create a
+[00:10:06] new row in the sheet. And again, we just
+[00:10:08] pick this the list, which is going to be
+[00:10:09] to-do list, and then sheet, which is
+[00:10:11] going to be sheet one. Now, check this
+[00:10:13] out. You see it's got map each column
+[00:10:14] automatically. Now, guys, check this
+[00:10:16] out. The what, the who, and the when.
+[00:10:18] The what, the who, and the when, is
+[00:10:19] pulled down all the columns. How
+[00:10:21] freaking cool is that, right? I come
+[00:10:23] back over. I'm going to hit this magical
+[00:10:24] AI button. And what this basically does,
+[00:10:27] guys, is just lets the AI define what
+[00:10:29] content we want to put into each one of
+[00:10:31] those three columns. And then we can
+[00:10:33] come off and we're complete. And now the
+[00:10:35] whole thing is ready to rock and roll. I
+[00:10:37] click on the Gmail trigger. Let's have a
+[00:10:38] look at what I've got here. This was all
+[00:10:40] the information about, hey, it's Jack,
+[00:10:42] please complete, hey Ben, please
+[00:10:43] complete the report by Friday for the
+[00:10:45] Stevenson account. I'm going to pin
+[00:10:47] this, which basically means, hey, NHN,
+[00:10:49] what I want you to do is just hold the
+[00:10:51] data for that so I don't have to keep on
+[00:10:53] refiring the whole scenario. Then guys,
+[00:10:55] if I just come down and click on test
+[00:10:56] workflow, let's see this work in action.
+[00:10:58] The agent's doing its magic. It's
+[00:11:00] checking the model. It's appending the
+[00:11:02] sheet. It's making some magic happen.
+[00:11:04] And if I can just come over and check
+[00:11:05] then what's happened? What do we see?
+[00:11:08] Complete the report for the Stevenson
+[00:11:09] account. Who's doing it bad and when is
+[00:11:11] it getting done? Now if I run this one
+[00:11:13] again, it shouldn't actually add it to
+[00:11:16] the list, right? Because we've already
+[00:11:17] got it. So let's just test that as a
+[00:11:19] quick for instance. We're going to run
+[00:11:20] this one
+[00:11:22] through. It's using the model. It's
+[00:11:25] appending the sheet. And as it adding
+[00:11:26] something in, it is cool. Well, this is
+[00:11:28] great cuz this is the first time we get
+[00:11:31] to actually test um and troubleshoot.
+[00:11:35] So, I come back over what I wanted to
+[00:11:36] do. AI agent in its instructions, we're
+[00:11:39] going to say, "Hey, okay, it wasn't very
+[00:11:41] detailed." Okay.
+[00:11:44] Um, you must first
+[00:11:46] check to see if the to-do list
+[00:11:49] item already exists.
+[00:11:53] If it does, do
+[00:11:56] nothing
+[00:11:58] else. The
+[00:12:02] who refers to the person who has the
+[00:12:07] action to-do. Sound really cool? All
+[00:12:10] right, cool. So, that we know was a
+[00:12:11] little bit too short. We come off. Now,
+[00:12:13] if I come back over guys to this to-do
+[00:12:15] list and we've got one from Ben that
+[00:12:17] actually should be Jack. So, I'm going
+[00:12:19] to run this twice very quickly. Delete
+[00:12:20] this and we're going to run this one
+[00:12:21] first. So the first thing we should do
+[00:12:23] is to read the sheet and look at that
+[00:12:24] guys. Immediately it has responded to to
+[00:12:26] our new prompt and then it will add in
+[00:12:28] to something here which is great. So
+[00:12:30] we'll see Jack prepare for Steven's
+[00:12:32] account by Friday. Beautiful. I come
+[00:12:34] back over. I try this one more time and
+[00:12:36] we'll see how this works. It's reading
+[00:12:38] it. And is it appending it? No, it
+[00:12:40] hasn't. I double click the to-do
+[00:12:42] complete the report for the students and
+[00:12:43] account for Jack Roberts was due on the
+[00:12:45] 11th of April. It already exists. No new
+[00:12:48] entry will be added. And there we go
+[00:12:49] guys. So, you've officially just built
+[00:12:51] your very first automation in this
+[00:12:53] entire series. So, what do we do now? We
+[00:12:54] come back over and let's have a look.
+[00:12:56] Don't get too far ahead of ourselves
+[00:12:58] here to the second one, which is going
+[00:12:59] to be the auto invoicer. Now, guys,
+[00:13:02] we're going to build this one and
+[00:13:03] make.com so you can learn both tools as
+[00:13:05] we go and find the best one for the job
+[00:13:07] as we go forward. So, the first thing I
+[00:13:09] want to do really is let's just use that
+[00:13:11] same Google sheet that we had
+[00:13:12] previously. So, I come back over to here
+[00:13:14] and then let's just change a few
+[00:13:16] different fields. Okay? So instead of
+[00:13:18] who, let's add a couple to the right and
+[00:13:20] let's instead have something like insert
+[00:13:23] one column above. That's fine. Oh no, we
+[00:13:25] don't want that. We really want to add a
+[00:13:27] new row, don't we? So let's come down.
+[00:13:28] Can we add a new row to the right?
+[00:13:30] Allegedly, we can. Okay, cool. I'm going
+[00:13:32] to say
+[00:13:33] price. And then instead of when I'm just
+[00:13:36] going to change this to be something
+[00:13:37] like uh invoice June. Okay. Now, it
+[00:13:41] doesn't matter whether or not you're
+[00:13:43] using Google Sheets. This could be
+[00:13:45] anything you want to, but you'll
+[00:13:46] actually see exactly how this is so
+[00:13:48] cool. So, the what is going to be the
+[00:13:49] item that we're going to charge them
+[00:13:51] for. Okay. Um, look at me. I'm getting
+[00:13:54] like such a stickler for design here.
+[00:13:56] Definitely not necessary. And then,
+[00:13:57] let's just make sure that's bold. Item.
+[00:13:59] Um, and then we'll call this one client
+[00:14:02] price. So, essentially, you can have all
+[00:14:04] of your different things here. Okay.
+[00:14:05] Now, what I'm going to do is uh let's
+[00:14:07] also just add in an address, shall we? I
+[00:14:09] think that'd be quite nice, wouldn't it?
+[00:14:11] Address. Cool. All right. Sweet. And
+[00:14:14] then we've got the price and then
+[00:14:15] invoice due yes or no. So what we can do
+[00:14:17] item let's just say first item is for AI
+[00:14:22] automation consultancy. Cool. The client
+[00:14:26] is going to be Jack Roberts
+[00:14:28] Incorporated. His address is 97
+[00:14:33] Maguain
+[00:14:36] LN778 Juliet Uniform. The price for that
+[00:14:39] is going to be beautiful
+[00:14:41] $10,000 and the invoice due is going to
+[00:14:44] be where is is the invoice due or not?
+[00:14:46] Have we just said yes that is that's
+[00:14:48] absolutely fine. Now if you want to
+[00:14:50] calculate things like VAT you can build
+[00:14:52] logic like that into the sheets itself
+[00:14:55] by adding the right thing and just add
+[00:14:56] like a different formula just to make
+[00:14:58] that as easy as possible. So for
+[00:14:59] instance, if it was VAT, I could have
+[00:15:02] something like VAT price and then we
+[00:15:05] could add in a formula. And by the way,
+[00:15:06] you can use AI to different formulas. So
+[00:15:08] check this out. If I just screenshot
+[00:15:09] this guys, cop click this to clipboard
+[00:15:11] and head over to Gemini, I can say,
+[00:15:15] hey, write me a formula. So that uh
+[00:15:19] which field was this? This is going to
+[00:15:20] be
+[00:15:22] E2 column
+[00:15:26] E equals the previous
+[00:15:31] column multiply by 1.2. Now obviously
+[00:15:34] this is quite a simple one to do because
+[00:15:37] as you know you come down you equals the
+[00:15:39] sum open brackets of this close brackets
+[00:15:43] times 1.2 and it'll be $12,000. But I
+[00:15:46] just want to show you like you can
+[00:15:47] actually ask it to do anything you want
+[00:15:49] to uh for any kind of creative or
+[00:15:52] bonkers formula that you want. Okay, so
+[00:15:53] we've got that for VAT price. Really,
+[00:15:55] really cool. So, what do we do next,
+[00:15:57] guys? Well, this is no longer a to-do
+[00:15:59] list. This is now invoice tracker. And
+[00:16:02] again, I'm using sheets. Use this just
+[00:16:04] for anything you want to. And since
+[00:16:06] we're not savages, guys, we're going to
+[00:16:07] use a beautiful bag of cash to get
+[00:16:09] things checked. All right, cool. So,
+[00:16:11] let's head over to make.com now. Now,
+[00:16:13] what's the first thing I want to do is
+[00:16:14] I'm going to type in Google Sheets.
+[00:16:15] Let's have a look here. Beautiful. And
+[00:16:17] what we're going to look for now is
+[00:16:18] watch new rows. So this is only going to
+[00:16:20] trigger the second that we add a brand
+[00:16:23] new row. So any rows that exist
+[00:16:25] previously, we don't need to worry about
+[00:16:26] it. Okay. So search by path my drive.
+[00:16:29] Going to uh basically spreadsheet ID.
+[00:16:32] Give this a second. And I think it's
+[00:16:34] just going to be invoice tracker.
+[00:16:36] Beautiful. Table contains headers. Yeah.
+[00:16:38] Sheet name is just going to be sheet
+[00:16:39] one, isn't it? Beautiful. Come down.
+[00:16:42] Limit is two. We can put the limits how
+[00:16:44] many we want to put it as 10. Then click
+[00:16:46] uh minus 18. No, 10 is going to be
+[00:16:49] absolutely fine which is cool. Uh since
+[00:16:51] specific ID and we'll just put uh all
+[00:16:54] all's fine actually. Cool. So if I just
+[00:16:56] run this one once, we should see the
+[00:16:57] information. And look at this guys.
+[00:16:59] Price VAT. Bam. Bam. Bam. Now what we
+[00:17:01] want to do is create a template for our
+[00:17:04] invoice. And there's many ways that we
+[00:17:05] can do this. One of the simplest ways is
+[00:17:07] to head over to
+[00:17:09] uh Google Sheets. So I've got this thing
+[00:17:11] here called automation planner. I'm
+[00:17:12] going to change it. I'm going to call
+[00:17:14] this instead something like uh invoice
+[00:17:20] generator. Okay. And then we obviously
+[00:17:22] want to have a cach sign at the
+[00:17:24] beginning of it. So this is where you
+[00:17:27] design your automation template. You can
+[00:17:28] use AI to do this. Really cool. So let's
+[00:17:31] just say this is invoice.
+[00:17:34] Um beautiful. Now I'm just going to skip
+[00:17:36] the bit where we make it look like an
+[00:17:38] invoice, but I just want to show you the
+[00:17:39] principle of it. Okay. So you would
+[00:17:41] design your whole invoice in here. Okay,
+[00:17:45] this would be our logo. Okay, really
+[00:17:48] decent. So what do we want to do? We
+[00:17:50] would then have the individual's name on
+[00:17:52] the left hand side, which is going to be
+[00:17:54] uh client
+[00:17:56] name. Beautiful. And all you're going to
+[00:17:58] do, guys, is two brackets.
+[00:18:02] Insert
+[00:18:03] client name. Close brackets. All right.
+[00:18:06] And then we're going to have date,
+[00:18:09] right?
+[00:18:11] insert
+[00:18:12] date and you could you know say have
+[00:18:14] invoice due come down
+[00:18:19] insert invoice due right you get the
+[00:18:23] idea this is how and you can basically
+[00:18:24] by using these custom placeholder tags
+[00:18:26] customize anything you want to so if I
+[00:18:28] just said instead of invoice due I could
+[00:18:30] say amount due uh and again this could
+[00:18:32] be our logo which we beautifully have in
+[00:18:34] the middle essentially you can just drop
+[00:18:35] it in and effectively what you do is you
+[00:18:37] build your dream invoice template that
+[00:18:39] sits within Google Docs and we have
+[00:18:41] these different things here that will
+[00:18:43] then basically change. So check this
+[00:18:44] out. I call this invoice generator.
+[00:18:46] Really cool. Now check this out. I come
+[00:18:48] back over to our scenario, guys. And
+[00:18:50] what I do, I go to Google Docs. Okay, I
+[00:18:53] can put create a
+[00:18:56] document. Actually, we want create a
+[00:18:58] document from a template. So let's do
+[00:19:00] Google
+[00:19:01] Docs. Okay, let's have a quick look
+[00:19:05] here. Create a document from a template.
+[00:19:08] Come down. get document ID and this
+[00:19:10] should just be invoice generator.
+[00:19:12] Beautiful. And guys, check this out.
+[00:19:14] This is really flipping cool. So, if I
+[00:19:16] just come down here, um, give a second
+[00:19:18] insert client name. I can just come out
+[00:19:20] here. It is, uh, Jack Robertson. Cool.
+[00:19:23] Insert the date. And you can basically,
+[00:19:24] and so, we'll add some code to get
+[00:19:25] insert date as well. So, let's just
+[00:19:26] figure that out real quick. And I
+[00:19:28] believe we can use this code here. I'll
+[00:19:30] again, I'll pop this down below. So, you
+[00:19:32] can just grab that. Uh, and all I did,
+[00:19:33] by the way, guys, is I just checked,
+[00:19:35] hey, what is the way to set that up in
+[00:19:36] AI? And it just adds it in. And then
+[00:19:38] we've got image URLs. Don't worry about
+[00:19:40] that. We can customize it. We can get
+[00:19:42] client images and bring that over. Uh
+[00:19:44] title. Uh let's just check actually. Are
+[00:19:46] we specifying title somewhere? I don't
+[00:19:48] think we are. Ah, it's not. Pull up the
+[00:19:50] amount and do it because I missed a
+[00:19:52] thing on it. So I come back over. I'm
+[00:19:53] going to come back off this and then
+[00:19:55] click on this again. And I think
+[00:19:56] actually let's just refresh the
+[00:19:58] information. Beautiful. Give that a
+[00:19:59] second and I go insert invoice due. How
+[00:20:01] much is due? It is $12 inclusive of VAT.
+[00:20:04] Uh invoice generator body image one. We
+[00:20:06] don't need to worry about this. And
+[00:20:07] again, this is just going to be the
+[00:20:08] name. So, it could just be basically the
+[00:20:10] name of the business. And then we could
+[00:20:13] have like uh the date, which will be
+[00:20:18] this. Sounds pretty cool, right? And
+[00:20:20] obviously guys, just add all the
+[00:20:21] information that you need. Beautiful.
+[00:20:22] And then we can pick the document
+[00:20:23] location. So again, this could be in a
+[00:20:25] particular folder that we've got and you
+[00:20:26] can and you can decide where that is. I
+[00:20:28] am for argument sake just going to put
+[00:20:30] it in the main section moment. Then I
+[00:20:32] can click on save. And then if you
+[00:20:33] check, if I run the scenario once, this
+[00:20:35] will show nothing because nothing's
+[00:20:37] happened. So I come back over here. I'm
+[00:20:39] just going to grab this information. I'm
+[00:20:40] going to drop it down. You know what
+[00:20:42] guys, the price just went up. The price
+[00:20:43] is now $15,000 and that's now 18. I come
+[00:20:46] back over to the scenario. I click on
+[00:20:48] run once. Google sheet finds rows.
+[00:20:50] Google Docs is now going to create a new
+[00:20:52] document from that template, which is
+[00:20:54] really flipping cool. Give that a
+[00:20:56] second. And then we can see we will have
+[00:20:58] the web view link which we can copy and
+[00:21:01] test out what that looks like. So let's
+[00:21:02] just go do that real quick and let's see
+[00:21:04] invoice client name Jack Roberts date is
+[00:21:06] the 8th of April and the amount due is
+[00:21:08] $18,000. So you've successfully created
+[00:21:10] this invoice. Now what we want to do is
+[00:21:13] to turn it into a PDF. Right? So how on
+[00:21:16] earth do we do that? Well, first thing
+[00:21:18] we want to do is go to pdf.com which is
+[00:21:20] going to be let's
+[00:21:23] see convert into a PDF. Beautiful. Now
+[00:21:26] guys, if you've not got an account with
+[00:21:27] PDF.co, you can very simply just head
+[00:21:30] over to PDF.co as you might have
+[00:21:32] guessed. Sign up and then you get
+[00:21:34] basically the ability to create like
+[00:21:35] loads of PDFs uh for free actually um as
+[00:21:38] part of their free plan and you can pay
+[00:21:39] upgrade if you're using a significant
+[00:21:41] amount of them. Essentially, you'll find
+[00:21:43] an API code that exists within there.
+[00:21:45] You then grab that and just enter it
+[00:21:46] into make and you'll be ready to rock
+[00:21:48] and roll. Cool. So, we want to upload a
+[00:21:51] file. Uh let's just see what the data
+[00:21:52] is. I think what we're going to need
+[00:21:54] here, guys, is input a file from URL. I
+[00:21:56] think be better. Let's click on URL and
+[00:21:58] let's just see it is the web view link.
+[00:22:01] Let's see if this
+[00:22:02] works. Output name. Uh again, let's just
+[00:22:06] call it the same name that we had here,
+[00:22:07] which is a automation consultancy with
+[00:22:09] that file name. Beautiful. Document PDF
+[00:22:12] is exactly what we want. Export type is
+[00:22:13] going to be downloaded file. Click okay.
+[00:22:15] So, I'm going to grab this information,
+[00:22:17] come back over to make.com. I'm going to
+[00:22:19] rightclick and run this module only. uh
+[00:22:22] like so. And we'll call this one tester.
+[00:22:24] Like so. Click okay. And what this will
+[00:22:26] now do is convert that document for us
+[00:22:28] into a PDF unless it doesn't work. It
+[00:22:31] can't download that file. That's
+[00:22:33] completely okay. So, what I think we're
+[00:22:35] going to want to do instead is unlink.
+[00:22:37] We're going to add a new document here,
+[00:22:38] which is going to be Google
+[00:22:40] Docs. And we're going to put on download
+[00:22:43] a
+[00:22:45] document. Beautiful. All right. Sweet.
+[00:22:48] And then what's the document that we
+[00:22:49] want to download? Well, we click on this
+[00:22:51] guy. Click on the document ID. Actually,
+[00:22:53] excuse me. Yeah, we want Let's just give
+[00:22:56] this a hot second to map. Click on this.
+[00:22:59] And then, can you see it's got that
+[00:23:00] document ID there, guys? Just bring it
+[00:23:02] over. That's cool. Then I'm going to
+[00:23:03] click okay. Then I connect these
+[00:23:05] together. Click on this guy. And then
+[00:23:08] what we can do, if you just give me hot
+[00:23:10] moment, you see how bam, it's already
+[00:23:12] identified that that's a thing that we
+[00:23:14] need. We can just click on it and that
+[00:23:15] will automate for us
+[00:23:18] automatically. Some beautiful freshening
+[00:23:20] Coke Zero. It's a little bit too late
+[00:23:21] for some coffee is where I am at the
+[00:23:22] moment. I'm in Dubai, by the way. That's
+[00:23:24] why my whole background is like so
+[00:23:26] different. About to try and make some
+[00:23:27] moves and get things ready. Rock and
+[00:23:28] roll. So, the next thing we want to do
+[00:23:30] is to create an email, right? So, let's
+[00:23:33] then click on this button here and add
+[00:23:34] in Gmail. I'm going to put here send an
+[00:23:37] email. So, let's just do that real
+[00:23:39] quick. Beautiful. Who are we sending to?
+[00:23:41] Let's just first verify our connection
+[00:23:43] one more time. So, let's just click on
+[00:23:44] here and add and then sign in with
+[00:23:47] Google. Beautiful. I think we're
+[00:23:48] verified. If I come back off and then
+[00:23:49] click on this guy, it's cool. So, we now
+[00:23:51] want to add in a recipient, but we don't
+[00:23:53] have their email. So, what do we need to
+[00:23:55] do? We need to make sure that we getting
+[00:23:57] the client email. So, come in here.
+[00:23:59] We're going to insert uh one column to
+[00:24:02] the left. And we'll call this one email.
+[00:24:05] Okay. And we call this one, I don't
+[00:24:07] know,
+[00:24:08] Jack at AI
+[00:24:10] Automations with Jack. I think it's by
+[00:24:13] Jack actually.
+[00:24:17] Byjack.com. Beautiful. We copy that.
+[00:24:19] We're out of rock and roll. We come back
+[00:24:21] over to the scenario now. Oh, no way. It
+[00:24:22] is with Jack. Okay, cool. Let's just
+[00:24:24] come down here and copy this beautiful,
+[00:24:27] beautiful email address. Come back over
+[00:24:29] to our scenario and we'll just paste
+[00:24:30] that in for the moment. Come back over
+[00:24:32] here. The email address we are going to
+[00:24:34] map over to this guy. So, what I'm going
+[00:24:37] to do is I'm just going to unlink. I'm
+[00:24:39] going to come back over here. I am going
+[00:24:40] to copy the whole row. Come down here,
+[00:24:43] paste it in. Come back over to make. Run
+[00:24:44] this module once. It will now pull
+[00:24:47] through an email under price. Maybe I
+[00:24:50] need to change that a little bit. Oh
+[00:24:51] well. Bring that one over. Click over
+[00:24:53] here. Let's just make sure we got the
+[00:24:55] right thing. Now we have got that right.
+[00:24:56] Actually, it is email. That's cool.
+[00:24:58] Anyway, we come back over to the
+[00:25:00] scenario. Click on send an email. And
+[00:25:02] the email we want is if I just bring
+[00:25:04] this over here so you can
+[00:25:09] see. Okay. The email's not appear guys
+[00:25:12] and it's not appeared because uh
+[00:25:14] essentially if you add something in
+[00:25:16] beforehand, you just need to duplicate
+[00:25:18] the module sometimes. So look, come down
+[00:25:20] here. This is cool. Uh let's have a look
+[00:25:23] at the two recipient. And now the email
+[00:25:25] address should magically appear. And
+[00:25:27] where is it? There. Beautiful. Then
+[00:25:28] we've got the subject. It's going to be
+[00:25:31] uh let's just do the subject
+[00:25:34] as their
+[00:25:36] name invoice.
+[00:25:40] And then we can standardize it with the
+[00:25:42] date in brackets, can't we? Um, where is
+[00:25:45] the date? In fact, I'll just come over
+[00:25:47] here and add that in from here because
+[00:25:49] we've got some beautiful short code for
+[00:25:51] that. Nice. Come back over to Gmail and
+[00:25:54] then we'll post that in there. Ace. And
+[00:25:56] then the content, guys, is going to
+[00:25:58] well, let's now create a brief thing in
+[00:26:00] HTML. So, if I come over to Gemini, I
+[00:26:02] can say, hey, create me a uh simple HTML
+[00:26:06] email. In fact, you know what? rather
+[00:26:08] than HTML. Let's well, you could do that
+[00:26:10] and you could add in your email
+[00:26:11] signature and make it look really epic.
+[00:26:12] But basically, if we just said, "Hey
+[00:26:15] there." And then let's add in his first
+[00:26:19] name, which is going to be um Did we
+[00:26:23] even add that name? Okay, so now we'd go
+[00:26:25] back and we would add in the name,
+[00:26:27] right? The CL. So there's the business.
+[00:26:28] And you can see basically as you go
+[00:26:30] through this, you start to add in all
+[00:26:33] this cool stuff, right? Okay. Beautiful.
+[00:26:35] Now we've got the name. Uh, but for the
+[00:26:37] purposes of this, I'm just when you
+[00:26:38] rerun this again, you just add in that
+[00:26:40] name there. So, say, "Hey there, Jack."
+[00:26:42] Or, "Hey there, uh, please see the
+[00:26:46] attached invoice for your
+[00:26:52] reference. Best wishes, Jack." All
+[00:26:55] right. And then attachments. Add an
+[00:26:57] attachment. Got the file. We can just
+[00:26:59] select the PDF. Obviously, you could
+[00:27:01] just send the Google Docs, but we don't
+[00:27:02] really need to do that. Come down. And
+[00:27:04] then we can click on save. And then we
+[00:27:06] should be able to run this entire
+[00:27:07] automation from cradle to grave. Hit run
+[00:27:09] so quick. For instance, Gmail's not
+[00:27:12] happy for some reason. Let's figure out
+[00:27:14] why. Needs me to verify again. I'll do
+[00:27:17] my uh minutely verification. Okay, I
+[00:27:20] come back over. I'm actually going to
+[00:27:21] add some HTML in here, guys. Like so.
+[00:27:23] And let's click on show advanced
+[00:27:26] settings. That's abs. You can use HTML
+[00:27:29] tags. You can indeed. That's beautiful.
+[00:27:31] We click on save. Now, if we run this
+[00:27:32] whole thing from top to bottom, we
+[00:27:34] should get the beautiful situation. So,
+[00:27:35] we come down here. Let's enter the new
+[00:27:37] information. Come back over to our mix
+[00:27:39] scenario. Click on run. By the way,
+[00:27:40] guys, I'll put all the blueprints
+[00:27:42] available for this down below in the
+[00:27:43] community. So, you can just come over,
+[00:27:44] grab, and just auto upload these and get
+[00:27:45] started. Google Docs, we've created it.
+[00:27:48] We've downloaded it. Uh PDF code is now
+[00:27:50] translating it into PDF. That one didn't
+[00:27:52] work. Let's figure out why that didn't
+[00:27:54] happen. Let's just click on that for a
+[00:27:55] second. And this is a completely normal
+[00:27:58] part of the entire process. Uh, okay. Is
+[00:28:01] it because we didn't map? Yeah, we kind
+[00:28:03] of just want the file to be that get re
+[00:28:04] URL link. Okay, cool. That makes perfect
+[00:28:07] sense. No, we then want to click on
+[00:28:08] import from a file. All right, cool. Now
+[00:28:10] the world makes sense once again. Cool.
+[00:28:12] So, we come back over. Let's just redo
+[00:28:14] this whole thing. Come come come here
+[00:28:16] and then run
+[00:28:18] once. Okay. What information does it
+[00:28:21] require? Let's give that a hot second.
+[00:28:23] Yeah, I think that's cool, isn't it? We
+[00:28:25] happy with that PDF code. All right.
+[00:28:27] Cool. Google sheet finds the records.
+[00:28:29] Now we are going to download and create
+[00:28:31] the document from a template which is
+[00:28:32] cool which you made very beautiful very
+[00:28:34] sexy. Then we're going to download that
+[00:28:35] document convert it with PDF.co and then
+[00:28:38] we're going to send a beautiful email to
+[00:28:40] myself. So if I head over now I should
+[00:28:43] get this should go from 45 to 46 with
+[00:28:46] any luck when this lands. Let me just
+[00:28:47] come check in on the automation. Okay,
+[00:28:50] we're still waiting on conversions but
+[00:28:51] you can see just by actually how you
+[00:28:53] connect these modules together the kinds
+[00:28:55] of things that are actually possible. So
+[00:28:58] you don't need to physically create
+[00:28:59] these things anymore. So the Gmail
+[00:29:01] module failed. Let's just figure out
+[00:29:02] exactly why that happened. It's cuz we
+[00:29:04] didn't pick a from email address. All
+[00:29:07] right. Cool. Let's now do that one more
+[00:29:09] time. Okay. And this is also why we do
+[00:29:12] all of these things. That's who it's
+[00:29:14] from. Beautiful. So let's do this one
+[00:29:17] final beautiful time. Bam. Okay. Come
+[00:29:19] back over. Then we can run this module
+[00:29:21] once gets a row correcting document from
+[00:29:23] a template. We'll download it. We'll
+[00:29:24] convert it in PDF.co. Then we'll send
+[00:29:26] it. and then we'll be well on our way to
+[00:29:28] kick some butt with this entire
+[00:29:29] automation. And then guys, if I come
+[00:29:31] over here, you can see we've got this. I
+[00:29:32] can now click on the PDF for instance,
+[00:29:34] and we have we should have the full PDF
+[00:29:36] ready to rock and roll. Invoice Jack,
+[00:29:38] there's your automation date and the
+[00:29:39] amount dues. Obviously, you customize
+[00:29:41] this to however you want to, but
+[00:29:42] fundamentally that's how you've built an
+[00:29:44] entire automation and got an automatic
+[00:29:46] email invoice generator, which is
+[00:29:48] flipping really cool. So, now we've done
+[00:29:50] that, I want to take a very quick look
+[00:29:52] at the third one, which is an AI meeting
+[00:29:54] note taker. Now, I've done a video on
+[00:29:57] basically how you can get this. Now, the
+[00:29:59] technology that I recommend that you
+[00:30:00] use, just cutting straight to the chase
+[00:30:01] for you guys is going to be this one.
+[00:30:03] So, let me come over to and get a brand
+[00:30:05] new uh scenario up and running for you.
+[00:30:08] This to be honest with you guys, there's
+[00:30:09] two softwares you can use. Uh the one
+[00:30:11] that I really like
+[00:30:13] personally is
+[00:30:15] Fireflies.ai, and I'll show that looks
+[00:30:17] like. Let's give this a hot second. The
+[00:30:19] one AI note take a few meetings. Uh
+[00:30:21] essentially what you do it will join
+[00:30:23] your meetings and give you full
+[00:30:24] breakdowns of everything that everybody
+[00:30:26] said as well as the actions. So you can
+[00:30:28] get started uh for free uh check out the
+[00:30:30] meeting and that will then join
+[00:30:31] everything. And if you want to take that
+[00:30:33] a step further, one of the things that
+[00:30:34] we can do and I'll even show you
+[00:30:36] actually how this works. If I come over
+[00:30:37] to my beautiful uh school community real
+[00:30:40] quick and I come over to the classroom
+[00:30:43] and if I just search for fireflies or
+[00:30:46] just meet it I think it's the fireflies
+[00:30:48] like so beautiful AI meetings note
+[00:30:51] taker. One thing you can do in the group
+[00:30:52] is if I just come down and say hey 100x
+[00:30:54] productivity meetings ace I can download
+[00:30:57] this real quick. Click on
+[00:30:59] download. Beautiful. Now, this won't be
+[00:31:02] necessary for everybody, but I work with
+[00:31:03] a well, we work with a client recently
+[00:31:05] that was spending 15 to 20 hours per
+[00:31:07] week on calls with clients uh and
+[00:31:09] wanting to be able to send an email back
+[00:31:11] in his tone of voice. So, Fireflies will
+[00:31:13] give you the full transcript of the
+[00:31:14] call. It'll give you all the actions. If
+[00:31:16] you want to take that a step further,
+[00:31:18] you can use this automation. Okay, cool.
+[00:31:20] So, I come to new scenario. What I can
+[00:31:21] do is come down here, click on more,
+[00:31:22] click on import blueprint, and then
+[00:31:24] choose the file. I select the file that
+[00:31:26] I just downloaded, click save, and then
+[00:31:28] bam, the whole thing will populate for
+[00:31:30] me automatically. So then what Fireflies
+[00:31:32] will do is list all the transcripts that
+[00:31:34] have happened within the last 24 hours.
+[00:31:36] We then want to add in this iterator
+[00:31:38] module, uh, which will split out and
+[00:31:41] pass out all of the sentences. So for
+[00:31:43] example, let's see if I've had any
+[00:31:45] meetings in the last 24 hours. The truth
+[00:31:48] is I have not. So nothing is appearing.
+[00:31:51] But when it does, you then be able to
+[00:31:52] iterate and separate out all the
+[00:31:54] sentences. Cuz you can see, you click on
+[00:31:56] this, you basically come down then to
+[00:31:57] sentences, select that. Then tools is
+[00:32:00] just going to be a text aggregator. In
+[00:32:02] other words, we kind of want to be able
+[00:32:03] to pull out all the information about
+[00:32:05] the speaker name and the text. So you
+[00:32:06] just add the iterator module and those
+[00:32:08] two things. And then actions. This one,
+[00:32:10] we're just going to give it a very clear
+[00:32:12] prompt. We say, "Hey, analyze it. Here
+[00:32:14] are the things I want to know about."
+[00:32:15] And then we can ask a checklist. So here
+[00:32:17] I'd think about is there anything that I
+[00:32:19] want to know about the meeting that just
+[00:32:21] happened that I can't get from a
+[00:32:22] transcript and then you can prompt AI in
+[00:32:25] this scenario to say look I am looking
+[00:32:27] there are 10 things that must happen did
+[00:32:29] these 10 things happen yes or no and
+[00:32:31] then we can add that to a document have
+[00:32:33] that sent to you automatically but 80%
+[00:32:36] of what you need guys being very frank
+[00:32:37] with you is just going to be an AI
+[00:32:40] meeting note taker that can join your
+[00:32:41] calls and capture everything for you if
+[00:32:43] you want an alternative you can use
+[00:32:45] fathom but five lives has excellent for
+[00:32:47] me and I I wouldn't be without it.
+[00:32:49] Beautiful guys. Now, step two is going
+[00:32:50] to be customer service and we're going
+[00:32:52] to begin with your knowledge base. So,
+[00:32:54] what I'm going to first of all going to
+[00:32:55] show you is how we can scrape your data
+[00:32:57] from every LinkedIn post that you've
+[00:32:58] done. Maybe you have a YouTube channel,
+[00:33:00] how we can grab all those videos and
+[00:33:01] also any website that you have. We're
+[00:33:03] going to take all that text and from
+[00:33:05] that we're going to run it through a
+[00:33:07] very specific system that I'll show you
+[00:33:09] on screen uh which is right here. Uh
+[00:33:12] we're going to look at things like your
+[00:33:14] vocab and word choice, grammatical
+[00:33:15] patterns, punctuation, sentence
+[00:33:16] structure, talking devices, paragraph
+[00:33:18] structure, tone and mood, coherence and
+[00:33:20] cohesion, idiosyncrasies, insert quirks,
+[00:33:23] and figurative language models. And once
+[00:33:24] we have all of that data, we're then
+[00:33:26] going to use that tone of voice uh
+[00:33:28] basically knowledge base, then tone of
+[00:33:30] voice to do various different things. We
+[00:33:31] can do chat bots with it. We can create
+[00:33:33] Instagram posts. But fundamentally, it's
+[00:33:34] one of the core principles of using AI.
+[00:33:38] Anybody can make AI content, but can
+[00:33:40] they make it authentically sound like
+[00:33:42] you? But to do that, we want to build a
+[00:33:43] knowledge base. Now, once we have this
+[00:33:45] knowledge base, we can do millions of
+[00:33:46] things. We can link it to a chatbot. So,
+[00:33:48] for example, this chatbot could then
+[00:33:51] know everything about your website and
+[00:33:52] have meaningful conversations about it.
+[00:33:54] So, let's start off with the knowledge
+[00:33:56] base with LinkedIn. Now, the easiest way
+[00:33:58] through LinkedIn is to hit this URL
+[00:34:00] here, and I'll put a link down below in
+[00:34:02] the description for you, uh, which is
+[00:34:06] linkedin.com/mypreferences/d/d download
+[00:34:08] my data. And what we can do, guys, here
+[00:34:11] is to download lots of stuff about your
+[00:34:14] articles, anything that you've done. And
+[00:34:16] what this will then do, guys, give us a
+[00:34:17] full extract that we can then uh
+[00:34:19] download. We request it, and then it
+[00:34:21] should either just download it right
+[00:34:22] here for us or it will just send
+[00:34:23] straight to your email. Then from that
+[00:34:25] we have all of your written text and
+[00:34:27] then we can give that to AI to actually
+[00:34:29] understand how it is that you
+[00:34:31] communicate. And when we know how you
+[00:34:32] communicate, we can then get the AI to
+[00:34:34] communicate just like you, which is
+[00:34:36] really flipping cool. So this normally
+[00:34:37] takes about 5 or so minutes to work. It
+[00:34:39] can be slightly longer sometimes, but
+[00:34:41] when that's complete, it will download.
+[00:34:42] Just click down below and you get all
+[00:34:43] the access for the next stage of the
+[00:34:45] process. Beautiful. So that's LinkedIn.
+[00:34:48] Then guys, how on earth do we do
+[00:34:51] YouTube? All right. So, for this one, I
+[00:34:53] am going to head over to
+[00:34:54] beautifulmake.com and we're going to
+[00:34:55] create a brand new scenario. Now, guys,
+[00:34:58] for this one, we're going to do a couple
+[00:34:59] of things. Uh, basically, we're going to
+[00:35:00] get an RSS feed. RSS, just cutting
+[00:35:03] straight to the chase, stands for really
+[00:35:05] simple syndication. And basically, what
+[00:35:07] it enables us to do is track the
+[00:35:08] information from any resource online
+[00:35:10] ever. That could be somebody's Twitter
+[00:35:12] account, somebody's YouTube account. Um,
+[00:35:14] when the word AI is written in the news,
+[00:35:16] you could possibly imagine that usually
+[00:35:18] there's an RSS. So, what we kind of want
+[00:35:20] to do is head over to a YouTube channel.
+[00:35:22] Let's say, for example, mine. You're
+[00:35:23] going to copy the URL from the homepage.
+[00:35:26] You come over to RSS, and you can create
+[00:35:27] these absolutely free. I think if you're
+[00:35:29] on the free plan, you can only do three,
+[00:35:31] but when you're paid, you can do 25. And
+[00:35:33] it's really, really cool. So, what we do
+[00:35:35] is we enter in uh that beautiful topic,
+[00:35:38] which is my channel, like so for RSS
+[00:35:41] generator, and then it will create a
+[00:35:43] feed, and then we can use that in
+[00:35:44] make.com to do many beautiful, wonderful
+[00:35:46] things. So this is every single video
+[00:35:49] that I've done which is really really
+[00:35:50] cool. So what I kind of want to do guys
+[00:35:51] is if I'm going to write scripts which
+[00:35:54] my team will do say for short form
+[00:35:56] content we want it to sound like me like
+[00:35:59] what is it that makes Jack Jack right so
+[00:36:01] what I do is I click on save feed once
+[00:36:04] you've done that and then I'm going to
+[00:36:05] copy this. Okay. Now, there's other
+[00:36:07] things we can do like we can say, "Hey,
+[00:36:09] only pull things that are 7 days older
+[00:36:11] or not and lots of different things like
+[00:36:12] that." But basically, guys, we come back
+[00:36:14] over here. You're going to type in RSS
+[00:36:17] like so. Retrieve RSS feed items. Now,
+[00:36:19] check this out, guys. All I do is enter
+[00:36:21] URL. And we can say, hey, only from this
+[00:36:24] date if we want to, but we kind of want
+[00:36:25] to return lots of stuff. So, I'll just
+[00:36:26] say maximum return items is 100. Now,
+[00:36:28] check this out, guys. If I run this
+[00:36:29] once, this will pull down every single
+[00:36:31] video that I've done. Check this out.
+[00:36:33] Output. Look at these beautiful outputs.
+[00:36:35] That's 50 that I've got on there. Look
+[00:36:36] at this. How to build an eye in voice
+[00:36:38] agent that does everything. How to
+[00:36:39] scrape any social media platform for
+[00:36:41] free. All this really, really cool
+[00:36:42] stuff. Okay. Now, that's cool. What we
+[00:36:45] now want to do is actually scrape that
+[00:36:49] information um and scrape the
+[00:36:51] transcripts. Now, there's a couple of
+[00:36:52] ways you can do this. One of the
+[00:36:54] quickest ways I find, and we built
+[00:36:56] something in my community specifically
+[00:36:58] for this. If you go to the classroom and
+[00:37:00] I'll show you how you can do it without
+[00:37:01] it as well, but if you go to level four
+[00:37:03] here, you can come down here to YouTube
+[00:37:05] transcriber and all you do is click on
+[00:37:07] this custom module here and it'll
+[00:37:10] basically say, hey, do you want to
+[00:37:11] download this custom transcriber which
+[00:37:13] is a unique app that you get when you
+[00:37:15] install it and effectively what that
+[00:37:16] will enable you to do in the scenario
+[00:37:20] uh which I'll show you right now is if I
+[00:37:22] come down I just type in scrape
+[00:37:24] transcript. Actually I think we need to
+[00:37:26] go to ninja armory. There you go. Ninja
+[00:37:28] Armory YouTube transcriber. And we're
+[00:37:30] just going to say, hey, we're just going
+[00:37:31] to transcribe raw, which is fine. And
+[00:37:35] all you would do in this one, guys, is
+[00:37:36] enter in a video URL. Right? So, I've
+[00:37:38] just grabbed a random URL and I just
+[00:37:39] enter it in here and click on run.
+[00:37:41] You'll see what this will do is go ahead
+[00:37:43] and transcribe all of the text
+[00:37:45] information. Come down and there is the
+[00:37:47] full transcript for everything that I
+[00:37:49] said, which is really cool. Beautiful,
+[00:37:50] guys. And if you'd like to build this
+[00:37:51] yourself, you can do so by heading over
+[00:37:53] to console.cloud.google.com/appis,
+[00:37:56] google.com/appis. What you basically do
+[00:37:58] is either select a project or create a
+[00:38:00] brand new project and then you go for
+[00:38:02] YouTube like so. You type in YouTube
+[00:38:04] data API v3 and essentially what you're
+[00:38:07] going to do is try the API and then you
+[00:38:09] can chat with Google uh chat with
+[00:38:10] YouTube on this chat button here.
+[00:38:12] Explain to what we'd like to do which in
+[00:38:14] this case is going to be grab your
+[00:38:15] captions and it'll give you two
+[00:38:17] different pieces of code to run for your
+[00:38:19] HTTP request that you can bring back
+[00:38:21] over to the scenario. Uh, and once you
+[00:38:23] get your API key, you can start to use
+[00:38:25] those and download the tracks. But it's
+[00:38:27] a lot simpler. That's why we built the
+[00:38:28] module because we thought it'd be a lot
+[00:38:29] easier. So now we've done that. The next
+[00:38:31] thing that we want to do once we've
+[00:38:32] actually physically got the data, as you
+[00:38:34] can see in this one here, is to simply
+[00:38:35] use it on a Google doc. So what I kind
+[00:38:38] of want to do guys is I want to create a
+[00:38:40] new document and then I want to just add
+[00:38:42] all that information into it. So look,
+[00:38:43] if I head over then to drivegle.com, I
+[00:38:46] create a new document. Beautiful. And I
+[00:38:48] will call this one something
+[00:38:50] like
+[00:38:53] Jack. YouTube info actually transcript,
+[00:38:58] right? And let's at the beginning just
+[00:39:00] give it something cool like a rocket
+[00:39:02] emoji cuz it's very cool. All right,
+[00:39:04] sweet. That's decent. Now, what I want
+[00:39:06] to do is add all of our information into
+[00:39:07] there. So, if I come back over to our
+[00:39:08] mix scenario, I click on this guy here
+[00:39:10] and I'm going to go for Google
+[00:39:12] Docs. Beautiful. I'm going to put on add
+[00:39:15] a paragraph. No, we just want to type in
+[00:39:17] paragraph. Insert a paragraph to a
+[00:39:19] document, which is cool. And then click
+[00:39:21] on the document ID. Do we have the
+[00:39:23] document ID yet? We don't. But if I just
+[00:39:25] type this in, there you go. Jack's
+[00:39:26] YouTube transcript. And appended text is
+[00:39:29] just going to be the transcript like
+[00:39:30] that. And click on save. Beautiful. And
+[00:39:33] then guys, all we do is we come down and
+[00:39:35] we hit run once. And then essentially
+[00:39:36] what happen is RSS brings down all the
+[00:39:38] information, all these 50 different
+[00:39:40] videos. Uh, and then we start
+[00:39:41] transcribing them one by one by one by
+[00:39:43] one. So, if I come over here for
+[00:39:45] example, look at this. Uh, we Oh, this
+[00:39:47] is one I did earlier with 70 different
+[00:39:49] pages, but you can see right here for
+[00:39:50] example. There you go. How crazy is
+[00:39:53] this? Just keeps on adding it. It goes
+[00:39:55] down and down down. And this is all of
+[00:39:56] my video content. I could follow that
+[00:39:58] keep if I don't like which maximum 15
+[00:40:00] words. Beautiful. Okay, sweet. This
+[00:40:02] sounds is my stuff. It's crazy, right?
+[00:40:04] So guys, that's how we're going to crush
+[00:40:05] and do YouTube. Check. We've done
+[00:40:06] LinkedIn. We've done YouTube. What is
+[00:40:08] the next thing that we want to check
+[00:40:10] out? Well, the next one we want to check
+[00:40:11] out, guys, is going to be a website.
+[00:40:14] Cool. So, to do this one, we are going
+[00:40:15] to head over to N8N. Beautiful. So,
+[00:40:17] let's sign in and create a new scenario.
+[00:40:19] And of course, we're not crazy. So,
+[00:40:20] we're going to call this one a website
+[00:40:22] scraper. Website scraper. Cool. So, what
+[00:40:25] we're going to use with this one, guys,
+[00:40:27] is if I get my little guy in here, we
+[00:40:29] are going to use ampify.com. Now,
+[00:40:31] aify.com. If I come over here to the
+[00:40:33] beautiful uh let me just duplicate this
+[00:40:35] and bring it over if you can have a
+[00:40:37] look. All right. So appi.com, what is
+[00:40:40] it? It is the Willy Wonka emporium of
+[00:40:42] scrapers. If you can imagine it, you can
+[00:40:43] probably scrape it. So you can come down
+[00:40:45] the left hand side to the appy store and
+[00:40:47] this is all the pre-built scrap
+[00:40:48] scrapers. We're actually going to be
+[00:40:50] using the most popular one, which is a
+[00:40:51] website scraper. So the idea is we have
+[00:40:53] our website. We want to download all the
+[00:40:55] pages to understand maybe your tone of
+[00:40:57] voice, maybe you want to use this to
+[00:40:58] download your knowledge base, whatever
+[00:41:00] you possibly want. So I'm going to come
+[00:41:01] here on the left hand side to the
+[00:41:02] website's content crawler like so, which
+[00:41:05] is cool. Now, Ampify will give you five
+[00:41:07] bucks completely free every single
+[00:41:10] month. I'll put a link down below so you
+[00:41:11] can get started with that or you can
+[00:41:13] upgrade to $39 a month or whatever you
+[00:41:15] want to. So, what you're going to do
+[00:41:16] here is enter in the URLs. This could be
+[00:41:19] one URL or as many URLs as you actually
+[00:41:21] like. I know we can set lots of
+[00:41:22] different settings like how many pages
+[00:41:24] down would you like it to go? Um, well,
+[00:41:26] this maximum number of session
+[00:41:27] rotations, most of the default settings
+[00:41:29] are fine. The most important one is the
+[00:41:31] maximum crawling depth. That's really,
+[00:41:34] really important. So now we've got that.
+[00:41:35] What I want you to do, guys, is come
+[00:41:37] over and click on JSON, okay? And you're
+[00:41:40] going to copy all of this code. Now, one
+[00:41:44] of the best, easiest hacks you can use
+[00:41:46] in NA10. And again, I'll pop this
+[00:41:48] template in the community if you do just
+[00:41:49] want to grab it. But just to show what
+[00:41:50] it looks like when it's done properly,
+[00:41:52] which is this module right here.
+[00:41:55] Uh it will look something like this.
+[00:41:58] Request to make the thing work. Then
+[00:42:00] there'll be the request to download the
+[00:42:02] data. and then we're going to upload it
+[00:42:04] to a document. So what I want you to do
+[00:42:06] is head over to language mode of your
+[00:42:08] choice. Say for example claude and then
+[00:42:09] you say hey uh make a curl
+[00:42:12] request for this ampify module in
+[00:42:17] NA10. Here is the JSON like so. And then
+[00:42:23] we say here is the name of the scraper.
+[00:42:28] And then what we do guys come over to
+[00:42:30] ampify which is not this guy. Let me
+[00:42:32] just uh remove this beautiful guy. And
+[00:42:35] we copy here which is epify appy website
+[00:42:37] content crawler. Come down here like so.
+[00:42:40] Hit enter. Now curl request is like such
+[00:42:42] a cheat code cuz basically what it means
+[00:42:43] is in our n scenario when we click on
+[00:42:46] add a first step we type in http request
+[00:42:50] and then what we can do is import cur
+[00:42:53] curl. Excuse me. It's making me
+[00:42:55] emotional. I'm getting so fed up about
+[00:42:56] it. And then we come back over to Claude
+[00:42:58] and they've given us a curl command
+[00:43:00] which is great. We copy that. We come
+[00:43:02] back over and we just paste it in. And
+[00:43:04] then bam, the whole thing will be there
+[00:43:07] perfectly. Then what we need to do is
+[00:43:08] give it our API token. So to do that, we
+[00:43:10] are going to head back over to Appify,
+[00:43:12] we come over to settings and then under
+[00:43:15] API and integrations, you'll see your
+[00:43:17] code, I believe. All you do is copy it.
+[00:43:20] That's literally it or create it if
+[00:43:21] you've not got it. Then we're going to
+[00:43:22] come back over to our phenomenal
+[00:43:24] scenario and then you're going to enter
+[00:43:25] in your API key where it says value
+[00:43:27] right there. Hit paste and then click
+[00:43:29] off the screen. So, I've done that and
+[00:43:31] then we are going to hit play to see if
+[00:43:32] this
+[00:43:34] works. And it's worked. Now, how do we
+[00:43:36] know it's working? If I come over to
+[00:43:38] Appify, can you see on the bottom left,
+[00:43:40] it's got this cool memory thing, which
+[00:43:42] basically means, guys, that uh it's
+[00:43:44] working. And it's actually currently
+[00:43:46] scraping the entire website, which is
+[00:43:48] ace. Then the next thing we want to do
+[00:43:50] is send off a request to get and grab
+[00:43:52] the information back. And just to save
+[00:43:54] the time, what I want to click on this
+[00:43:56] plus button, go HTTP one more time.
+[00:43:59] again is get and the URL guys just enter
+[00:44:01] in this code and what I will do is I
+[00:44:03] will put it down below for you in the
+[00:44:05] description so you can just physically
+[00:44:06] get it and it'll be HTTP request not
+[00:44:09] HTTP request 2 so let me just get rid of
+[00:44:11] this beautiful and if it's under
+[00:44:13] expression and it's green it means it
+[00:44:14] knows that it's there and it's going to
+[00:44:16] work for you and the other thing we do
+[00:44:17] is add a query parameter like so and
+[00:44:19] name is going to be token and then here
+[00:44:20] guys just paste in that um paste in your
+[00:44:23] API token one more time so I've done
+[00:44:25] that what I'm going to do is just pin
+[00:44:26] this data real quick Uh, beautiful. And
+[00:44:30] then if I come here and I click on play,
+[00:44:32] what this should do is grab all the
+[00:44:33] information. And remember when we pin,
+[00:44:35] we're just using that data. So if I
+[00:44:36] double click into this and look at all
+[00:44:38] this data on the right hand side, that
+[00:44:40] is basically all the text from the
+[00:44:41] entire thing, which is code for flipping
+[00:44:43] cool. Right now, I'm going to right
+[00:44:45] click on this and I'm going to click on
+[00:44:46] pin. So there's only 17 pages on this
+[00:44:48] website, which is cool. What I want to
+[00:44:50] do now is to add it to a Google
+[00:44:51] document. So for that, I come here to
+[00:44:53] the plus button. I type in Google Docs
+[00:44:56] like so. And let's just put update a
+[00:44:59] document. Uh we'll give it a doc ID or
+[00:45:01] URL. So let me just grab a random one
+[00:45:02] here. Um actually I think we need to
+[00:45:05] just pick one ourselves. So come over to
+[00:45:07] my Google Docs. All right. So check this
+[00:45:08] out. I'm on this YouTube transcript
+[00:45:10] surf. Look. If I come over and this is
+[00:45:13] the thing that you want here. That would
+[00:45:15] be your doc ID. Okay. So you just copy
+[00:45:17] that like so. Now you would have your
+[00:45:20] own unique one for this. But just to
+[00:45:21] show you how this works. If I come down.
+[00:45:24] You ready?
+[00:45:29] you get the ID that of the doc that you
+[00:45:30] want. Uh I'm going to come back over to
+[00:45:32] N8. I type that in which is cool. And
+[00:45:35] insert body is fine. And and the text
+[00:45:37] guys is just going to be the text from
+[00:45:40] the whole thing here which is right
+[00:45:42] here. And we bring that like so.
+[00:45:44] Beautiful. Then what we can do is test
+[00:45:46] the step and then it will start to
+[00:45:47] execute. So let's see if this works. And
+[00:45:50] just like that guys, look at this.
+[00:45:52] All of the entire website is now
+[00:45:54] appearing for us automatically in a
+[00:45:57] document. And you can see 88 pages, 93
+[00:45:59] pages, 96, 98, so on and so on and so
+[00:46:02] forth. And guys, that is essentially how
+[00:46:04] you can scrape everything on LinkedIn,
+[00:46:06] on YouTube, and any website that you
+[00:46:07] want to. And with that, we can pretty
+[00:46:08] much do anything in the world that we
+[00:46:10] would like, which I think is code for
+[00:46:12] pretty cool flipping news. Decent. All
+[00:46:14] right. Now, what do we do next? So, if I
+[00:46:15] come back over to our beautiful plan of
+[00:46:17] action, we've got knowledge base. The
+[00:46:19] next thing I want you to do now we've
+[00:46:21] got that data is to create a ton of
+[00:46:23] voice. So we are also going to do this
+[00:46:26] in um I'm going to leave this one cuz
+[00:46:27] I've already got beautiful snor
+[00:46:29] prepared. We're going to build this one
+[00:46:31] guys
+[00:46:32] in NA10 for your tone of voice flow. Now
+[00:46:35] just to show you briefly what that
+[00:46:36] physically looks like. So if I come over
+[00:46:38] to my school community I want to show
+[00:46:40] you a really cool example. Right. So I
+[00:46:43] have I think it's here. This is an
+[00:46:46] example of what we want to do. So
+[00:46:47] essentially we want to give it a text
+[00:46:48] and we want to break it down to multiple
+[00:46:50] steps. So we're going to look at
+[00:46:52] vocabulary and word choice. And this is
+[00:46:53] an example for something did for homey.
+[00:46:55] I got his book and I ran it through the
+[00:46:57] system that I'm going to run it through
+[00:46:58] with you right now. And it has different
+[00:47:00] things there like for example use a mix
+[00:47:02] of simple conversational words and more
+[00:47:04] specialized business and marketing
+[00:47:05] terminology. Use examples like stuff
+[00:47:07] best neat. If I come down and then we've
+[00:47:08] got loads of stuff, right? We've got
+[00:47:10] grammatical patterns. He this is how he
+[00:47:12] expresses himself. We have punctuation,
+[00:47:14] sentence structure and length. Vary your
+[00:47:16] sentence structures to maintain reader
+[00:47:17] engagement. Use a mix of simple
+[00:47:18] sentences blah blah blah blah blah
+[00:47:20] paragraph structure, tone and mood,
+[00:47:22] overall coherence. And you know, this is
+[00:47:24] just like a an example. What you're
+[00:47:27] going to get is going to be way more
+[00:47:28] detailed than this, but this is just to
+[00:47:30] show you what's actually physically
+[00:47:31] possible. So, what we're going to do, if
+[00:47:33] I head over to the beautiful N scenario
+[00:47:35] right here, we're going to build this
+[00:47:37] guy. All right. So, we'll build this
+[00:47:39] again step by step, and I'll show you,
+[00:47:40] and then I'll just I built it pre-built
+[00:47:42] so you can actually physically use it.
+[00:47:43] So the first thing I want to do is have
+[00:47:46] our information, right? So we need to
+[00:47:48] figure out which document we want to
+[00:47:50] use. So I'm going to put on get a
+[00:47:51] document like so. Now let's go ahead and
+[00:47:53] grab the document that we were just
+[00:47:55] using. Okay, which is my YouTube
+[00:47:58] transcript. Okay. And I'm going to know
+[00:47:59] this works well
+[00:48:01] because it's me. It's how I speak. It's
+[00:48:03] how I communicate. So if I come all the
+[00:48:05] way down
+[00:48:06] here or if it'll let me just just remove
+[00:48:10] all the data we just added to it. All
+[00:48:11] right. I've just cut out this
+[00:48:12] information from YouTube transcripts.
+[00:48:14] I'm going to grab our document ID from
+[00:48:17] the Remember, I'll just show you again
+[00:48:18] one more time just so you do it. Come
+[00:48:20] down here. We are grabbing this guy.
+[00:48:22] Bada bing, bada boom. Up to there. Copy
+[00:48:26] him. Beautiful. All right, that's
+[00:48:28] weird. So, that's gone. We're going to
+[00:48:30] come back over to your N8 scenario,
+[00:48:32] which is this one right here. Doc ID or
+[00:48:34] URL. Enter this one. Test the step. And
+[00:48:36] it should just bring down the document
+[00:48:37] with all the text. Now, the reason I
+[00:48:39] like N8N over make.com and you'll see
+[00:48:41] that we're using both technologies
+[00:48:43] because I want to have the skills to use
+[00:48:44] both because they're different tools for
+[00:48:46] different jobs. You can stretch either
+[00:48:47] of them out to do anything. I just want
+[00:48:49] to show you what I believe to be the
+[00:48:50] easiest way for each version. So,
+[00:48:52] content um this has pulled down the
+[00:48:54] content in N8 when you download. So, in
+[00:48:57] make when you download it, you have to
+[00:48:58] do some extra confuding basically to get
+[00:49:01] the text. I just want to keep this super
+[00:49:03] simple for you. So, we've got the text
+[00:49:04] which is the entire 6 to seven pages.
+[00:49:07] All right. This is cool. Right now, what
+[00:49:09] do I do next? I want we need to do
+[00:49:11] something called edit the field. And
+[00:49:13] there's a reason for that. So,
+[00:49:14] essentially, if you come down and enter
+[00:49:16] a set module, okay, you're going to grab
+[00:49:19] this thing over here and pull it over to
+[00:49:21] the fields set. And essentially, we're
+[00:49:23] going to give it a name. And what this
+[00:49:25] means is when we use this later in the
+[00:49:27] scenario, the module will always
+[00:49:29] understand what thing we're referencing.
+[00:49:32] So, I'm going to say here, which is
+[00:49:34] Jack's
+[00:49:36] YouTube. Okay, beautiful. I love that.
+[00:49:40] Right, I test the step. It should be
+[00:49:42] fine. And
+[00:49:44] basically, okay, cuz we need to connect
+[00:49:46] it. All right, so look, I'm going to pin
+[00:49:47] this data cuz we don't need to rerun
+[00:49:48] this every time. Now, effectively, what
+[00:49:50] will happen is guys, every time that we
+[00:49:52] run the scenario, um, we will know it's
+[00:49:55] Jack's YouTube data. So, then we're
+[00:49:56] going to add a series of chat modules.
+[00:49:59] Okay, so the first one is going to be
+[00:50:01] advanced AI and I just want to click on
+[00:50:04] open AI and I want to click on message
+[00:50:07] and assistant. Okay, cool. So we're
+[00:50:09] going to pick our correct credential of
+[00:50:10] which I have a thousand. Please don't
+[00:50:12] judge me. And we come down resource
+[00:50:14] assistant. That's fine. Uh no, we don't
+[00:50:16] want to message an assistant actually.
+[00:50:17] Have I clicked on the wrong thing here?
+[00:50:19] I have clicked on the wrong thing. Okay,
+[00:50:20] we actually want
+[00:50:23] um advanced AI and we want open AI and
+[00:50:27] we want to let's just get rid of this
+[00:50:29] guy down the bottom
+[00:50:31] right. Message a model. Okay, cool.
+[00:50:35] Select our correct uh credential which
+[00:50:37] is beautiful. Resources text from list.
+[00:50:39] Um you can do any one you want to just
+[00:50:41] to keep it really simple. GBT40 is f5.
+[00:50:43] All right, beautiful. And then we've got
+[00:50:44] the prompt. So let's just execute the
+[00:50:46] previous nodes to bring that
+[00:50:47] information. There has been an error in
+[00:50:49] our workflow and I wonder why that is.
+[00:50:51] Let's just have a quick
+[00:50:54] check. Yeah, that should be absolutely
+[00:50:56] fine. Oh, I know why. Okay, it's
+[00:51:00] because there you go. Now it will work
+[00:51:03] fine. Okay, you ready? If I click on
+[00:51:05] this now, we're just going to execute
+[00:51:06] previous nodes.
+[00:51:08] Beautiful. All right, sweet. Now we need
+[00:51:10] to give it a prompt. Now these prompts,
+[00:51:13] guys, I have over here. Let me just grab
+[00:51:16] them. Actually, I think it's
+[00:51:16] segmentation
+[00:51:18] prompt. So, this stuff is how you break
+[00:51:22] it down. Just to give you a quick TLDDR
+[00:51:24] of what that physically looks like in
+[00:51:25] the scenario, right? Is we've
+[00:51:28] got vocab and word choice as a quick for
+[00:51:31] instance, right? You click on that and
+[00:51:32] you basically break it all down. So,
+[00:51:33] here I've said look, analyze the text
+[00:51:35] and create tone of voice guidelines for
+[00:51:37] vocabulary and word choice. Provide
+[00:51:39] detailed guideline explanation each text
+[00:51:40] element. It's imperative the guidelines
+[00:51:42] read as instructions to a language model
+[00:51:45] to emulate this style exactly. So I want
+[00:51:48] the app outbut to be hey when you're
+[00:51:49] writing write like this write like this.
+[00:51:51] Right. So I don't want it to describe
+[00:51:53] how I speak. Just say hey you need to
+[00:51:55] use these kinds of bits of language.
+[00:51:56] Feel free to include examples from
+[00:51:57] written text of what good and bad looks
+[00:51:59] like. That's a nice little hack by the
+[00:52:00] way. Get it to use examples so it can
+[00:52:02] reference it. Keep the response 350
+[00:52:05] words maximum. That's so that your
+[00:52:07] ultimate tone of voice guidelines
+[00:52:08] doesn't become like a gigantic crazy
+[00:52:11] document and then it sorts your various
+[00:52:12] other different things. And then I just
+[00:52:14] say hey analyze the given tags to the
+[00:52:15] following vocabulary and word choice.
+[00:52:16] Analyze the writer's use of unique
+[00:52:18] specialized or repetitive words and
+[00:52:19] phrases. Identify the frequency and
+[00:52:21] diversity of the writer's vocabulary.
+[00:52:23] Examine use of jargon, slang or
+[00:52:25] colloquialisms. Determine the writer's
+[00:52:27] preference, simple or complex words. Uh
+[00:52:29] look for any distinctive or unusual word
+[00:52:31] choices of which I'm sure I have many.
+[00:52:34] So, what do we do in the uh section
+[00:52:36] here? We're going to click on this guy.
+[00:52:38] We're just going to give it this prompt,
+[00:52:39] okay? Or whatever prompt that you want
+[00:52:41] to. And again, you can work with chat to
+[00:52:42] build your own. This is just stuff that
+[00:52:44] I found building this for clients. I've
+[00:52:45] had people come up to me and said,
+[00:52:46] "Jack, I sold your tone of voice
+[00:52:48] automation for like 20K to this like
+[00:52:50] dude." And I was like, "Dude, that's a
+[00:52:51] it really worked cuz he showed them the
+[00:52:53] output in his own tone of voice.
+[00:52:55] Freaking kicks ass." So, what we want to
+[00:52:57] do is we want to highlight Jason tone of
+[00:52:59] voice. I'm just going to zoom out just
+[00:53:00] so it's not overwhelming for you. Look
+[00:53:02] at this. Then we're going to grab Jack's
+[00:53:05] YouTube and bring it over. And the
+[00:53:07] reason why we set it, guys, is can you
+[00:53:09] see how the JSON for
+[00:53:11] content is very simply
+[00:53:14] uh content? Well, I had a bit of an
+[00:53:15] issue with it last time I did it, but
+[00:53:16] basically it kept referring back to the
+[00:53:17] same thing. So now what this will do if
+[00:53:19] I click off this, right, and of course,
+[00:53:21] let's just rename it because of all the
+[00:53:23] things we are savages is not one of
+[00:53:26] them. Now check this out. Vocab and word
+[00:53:28] choice, right? Hit play.
+[00:53:31] Now it's working in the background which
+[00:53:32] is code for good news. We'll give this a
+[00:53:34] hot second working in the background and
+[00:53:36] then we can see its whole breakdown for
+[00:53:39] me on that. And then we do grammatical
+[00:53:40] patterns, punctuation, sentence
+[00:53:43] structure, rhetorical devices, paragraph
+[00:53:45] structure, tone and mood, coherence,
+[00:53:47] cohesion all the way up to figurative
+[00:53:49] language which is really cool. So then I
+[00:53:51] click on this guy and you can see vocab
+[00:53:53] and word choice. Utilize informal
+[00:53:55] conversational language that feels
+[00:53:57] relatable and down to earth. Avoid
+[00:53:59] overly formal or technical jargon. For
+[00:54:01] example, use phrases like dude and bro,
+[00:54:04] I see an attack. I feel hurt. I feel
+[00:54:05] seen. I feel like I'm being attacked
+[00:54:07] right now. Words and phrases like
+[00:54:09] unreasonable action, crush it, freaking
+[00:54:11] awesome, and blow their minds should be
+[00:54:13] employed to convey enthusiasm and
+[00:54:15] urgency. Introduce collocicalisms and
+[00:54:17] slang to maintain a casual approach and
+[00:54:18] tone. Use expressions such as rock and
+[00:54:20] roll and badass. You know, I what can I
+[00:54:23] say? It's absolutely nailed me that. So
+[00:54:25] then what you would do is you would then
+[00:54:27] just clone this guy. Can I clone him? I
+[00:54:31] duplicate him. We don't like the word
+[00:54:32] clone. We got to think about our clones.
+[00:54:34] And then we just copy over. And then you
+[00:54:36] do the same thing with grammatical
+[00:54:37] patterns, right? So maybe that is on uh
+[00:54:40] here grammatical patterns or whatever
+[00:54:41] your specific thing is. Okay. So you
+[00:54:43] basically write all the prompts, all
+[00:54:45] that sort of stuff and you write it out.
+[00:54:46] So in the graphical patterns for
+[00:54:47] example, I click on this guy. So we've
+[00:54:49] got analyze this text. Create turn
+[00:54:51] guidance for uh actually graphical
+[00:54:53] patterns. Let's change this
+[00:54:55] one.
+[00:54:57] Cool. And then we have all the stuff
+[00:54:59] here, right? Analyze grammatical
+[00:55:00] patterns. Identify the writers use
+[00:55:02] specific grammatical structure such as
+[00:55:04] passive voice, complex tenses,
+[00:55:05] particular parts of speech. Analyze
+[00:55:07] right as you. So basically what you do
+[00:55:08] is you break it all down. You get the
+[00:55:10] verbiage and the beautiful information.
+[00:55:12] So I am going to out of complete respect
+[00:55:14] for your time just know you know how to
+[00:55:16] do that and replicate them all the way
+[00:55:17] through. And again guys, just as a quick
+[00:55:20] reminder on this stuff, when you come
+[00:55:22] down, you see this has got a JSON tone
+[00:55:24] of voice because that connects to what I
+[00:55:28] named it here, which is JSON
+[00:55:31] um content. Uh is that right
+[00:55:34] actually?
+[00:55:36] Yeah. Let me just make sure this is
+[00:55:38] correct. Edit fields and set it. Yes.
+[00:55:41] Right. So we come down here for example,
+[00:55:43] you'll see. Let me just
+[00:55:46] um run this one real quick and you'll
+[00:55:48] see what I mean. I'm going to delete
+[00:55:49] this just to make sure it's running
+[00:55:50] perfectly properly. Test this workflow.
+[00:55:54] Cool. Vocab and word choice and then
+[00:55:56] grammatical patterns. So, you basically
+[00:55:57] repeat that all the way through the
+[00:55:59] system to make sure it hits everything
+[00:56:01] that you
+[00:56:02] need. And it's truly marvelous actually
+[00:56:04] to see the breakdown of how you speak
+[00:56:06] and what that looks like. All right,
+[00:56:08] cool. So, has this actually done it? No,
+[00:56:09] it didn't provide it because we need to
+[00:56:11] give it this beautiful text. So I come
+[00:56:14] down and we want edit field turn of
+[00:56:16] voice. Cool. So what you want to do is
+[00:56:18] just make sure all of that is in every
+[00:56:21] single scenario for you. Okay. So you
+[00:56:23] come down, check on this guy. Is it
+[00:56:24] there? No, it isn't. There you go. Cool.
+[00:56:28] And just go through every single one.
+[00:56:30] And I'll just skip past this bit, but
+[00:56:32] you get the idea. You basically just
+[00:56:33] come down and complete like this.
+[00:56:34] Beautiful. So I've completed that. The
+[00:56:35] next thing I want to do is update a
+[00:56:37] Google document. So let's just create a
+[00:56:38] Jack's Turner voice document. Cool. And
+[00:56:40] we'll call this one
+[00:56:43] Jack
+[00:56:45] tone of voice. Beautiful. And let's
+[00:56:48] change the font to a veneer because
+[00:56:50] we're not crazy. And then let's come
+[00:56:52] back over to our thing. And of course,
+[00:56:53] we need to grab our
+[00:56:56] um unique ID, which is this guy all the
+[00:56:59] way here. Oh, let's not forget the one.
+[00:57:01] We want to make sure that it works. All
+[00:57:03] right. Sweet. So, come back over to our
+[00:57:05] edit edit scenario. There we go. Cool.
+[00:57:07] Doc ID is this
+[00:57:09] one. And then text. So, we can't do that
+[00:57:12] until we've run everything else. So, I'm
+[00:57:13] just going to click off this and run the
+[00:57:14] scenario
+[00:57:16] once. And now it's working all the way
+[00:57:18] through. And what I'm going to do, guys,
+[00:57:20] once it's done, is just pin the data for
+[00:57:23] every single one of these things. You
+[00:57:24] can, if you wish to connect all these
+[00:57:26] things together, if you want to automate
+[00:57:27] the process of scraping a client's
+[00:57:28] website, then creating a tone of voice
+[00:57:31] for them, or scraping everyone's YouTube
+[00:57:33] channels, you can connect these things
+[00:57:34] together. They function like Lego. Um,
+[00:57:37] and obviously like part of me always
+[00:57:38] feels when I make these videos that I
+[00:57:40] can make the 10 hours long because
+[00:57:41] there's so much cool stuff you can do
+[00:57:43] with it. It's freaking you're basically
+[00:57:45] limited only by imagination, which is
+[00:57:47] what I love about this technology. It's
+[00:57:48] so cool cuz I don't have like a
+[00:57:51] technical background. I'm not a coder.
+[00:57:52] Um, what I do is I bring the ideas and
+[00:57:54] connect things together and have rock
+[00:57:56] and roll and drink a lot of coffee.
+[00:57:57] Basically, that's basically what I do
+[00:57:58] around here. Cool. So, let this one run
+[00:58:00] in the background. Beautiful. It is
+[00:58:02] officially complete. Look at this stuff.
+[00:58:04] So, let's quickly just pin all of the
+[00:58:07] data. Come down and pin. Which means
+[00:58:09] that when we run it one more time, uh,
+[00:58:11] we don't need to run all these different
+[00:58:13] modules again. Um, you know, this might
+[00:58:15] be the longest video I've ever done in
+[00:58:17] terms of just a full breakdown stuff,
+[00:58:19] but it was one of my observations that
+[00:58:22] obviously the potential of this is
+[00:58:23] crazy, but so much like it's great to
+[00:58:26] conceptually know like what's possible,
+[00:58:28] but then it's like, okay, great, but
+[00:58:30] then how do you actually do the stuff
+[00:58:31] that works? And that's something I
+[00:58:32] really want to pride this channel on.
+[00:58:33] Everything we do here is the stuff that
+[00:58:34] actually works. So you can have
+[00:58:36] something that physically works at the
+[00:58:38] end of the video. So I come down, I
+[00:58:40] connect these guys together. I click on
+[00:58:41] the update document guy. And what I
+[00:58:43] should be able to do now is insert all
+[00:58:46] of the information. So we've got the
+[00:58:47] text. Uh we're going to make it an
+[00:58:49] expression. And we're going to go down
+[00:58:50] and grab everything. So we got this guy.
+[00:58:53] Beautiful. We're going to come down
+[00:58:54] here. We're going to grab this
+[00:58:56] guy. Cool. Then we come down to number
+[00:58:59] eight. And basically, you might get the
+[00:59:01] idea of what we basically do now. We're
+[00:59:02] just going to come down and copy all the
+[00:59:04] information over. Beautiful. And that's
+[00:59:05] all done, guys. I mean, look at this
+[00:59:06] stuff, dude. It's really crazy. Like,
+[00:59:08] utilize casual and conversational
+[00:59:09] language. Like, bro, hey, dude. This one
+[00:59:12] here, use active words consistently. I
+[00:59:14] emailed Gary Vaynerchuk. It's preferred
+[00:59:16] over passive communications. That's
+[00:59:18] true. Conversational and casual
+[00:59:20] language. I love this stuff, dude. This
+[00:59:21] is crazy. Beautiful, guys. And now this
+[00:59:24] has successfully updated it. So, let's
+[00:59:26] check out what it looks like. Tone of
+[00:59:28] voice guidelines for Jack's YouTube
+[00:59:29] transcript. So,
+[00:59:31] personification. When writing,
+[00:59:32] occasionally use personification to give
+[00:59:35] life to non-humanike entities. Example,
+[00:59:37] AI space. Dude, suggest that AI space is
+[00:59:39] an entity one can converse with. All
+[00:59:41] right, what else we got? Paragraph
+[00:59:42] structure guidelines. Use predominantly
+[00:59:44] short paragraphs for dynamic pacing and
+[00:59:46] engagement. Insert medium length
+[00:59:47] paragraphs depending on the complexity.
+[00:59:49] Topical devices. When crafting
+[00:59:51] sentences, primarily use active voice.
+[00:59:52] Good. I started building websites and
+[00:59:54] making money. Bad websites are being
+[00:59:55] built. Metaphors and simileies. This is
+[00:59:58] this is really cool actually. Avoid
+[01:00:00] run-on sentences to maintain clarity and
+[01:00:02] avoid reader fatigue. Repeat
+[01:00:03] enthusiastic and informal expressions to
+[01:00:07] maintain a conversational and engaging
+[01:00:08] style. Key phrase you should include.
+[01:00:09] It's amazing. I love that. Thank you so
+[01:00:11] much. Appreciation, excitement as seen.
+[01:00:13] It's amazing to have the podcast, bro.
+[01:00:15] Dude, this is freaking crazy. So, I now
+[01:00:17] have nine pages of what essentially is
+[01:00:20] uh Jack's phenomenal way of speech,
+[01:00:23] which is cool. So, cool. Now we've
+[01:00:25] scripted the data. We've got your tone
+[01:00:26] of voice. What is the next thing that we
+[01:00:29] want to have a look at? So we've done
+[01:00:30] that. Tone of voice is done. Now let's
+[01:00:32] take a look at a chatbot. All right.
+[01:00:34] Sweet. So this is the chatbot we're
+[01:00:36] going to build together. So let me come
+[01:00:37] off this one. We got website 10 voice.
+[01:00:39] What we can do, let me delete this guy
+[01:00:41] real quick. Actually, let me just save
+[01:00:42] it for posterity. Beautiful. All right.
+[01:00:46] And we come off this guy. And then let's
+[01:00:47] just make sure that this one is saved.
+[01:00:49] Beautiful. Right. Now let's open a brand
+[01:00:50] new scenario. Now the applications with
+[01:00:52] this chatbot are in set. So what I want
+[01:00:54] you to do first of all is come on this
+[01:00:56] plus button here and type in chat chat
+[01:00:58] trigger. Now first thing I want to do is
+[01:01:01] just get you to see if the chatbot
+[01:01:02] works. So come down here. We are going
+[01:01:05] to use we're going to use an agent for
+[01:01:07] this advanced AI AI agent. And the
+[01:01:10] reason for that is I want him to be able
+[01:01:12] to reach over and access his memory
+[01:01:14] either about the website that we have or
+[01:01:17] maybe just anything we want to. And then
+[01:01:19] we can give it tools and do various
+[01:01:20] different things like send emails to the
+[01:01:21] clients, bring them on, stuff like that.
+[01:01:23] So, just to get started, to keep it
+[01:01:25] simple, chat model is we're going to go
+[01:01:26] for Open AI. Uh, where are we at with
+[01:01:29] OpenAI? Oh my goodness. Chat GPT maybe.
+[01:01:31] Will that going to show up? Advanced
+[01:01:33] Open AAI chat mode. Cool. Again, the
+[01:01:35] correct test credentials to make sure
+[01:01:37] we're rocking and rolling. That's cool.
+[01:01:39] And let's just get the right model up.
+[01:01:41] G4 Mini is fine. Um, you know what?
+[01:01:43] Fine. We'll do G4 Mini. I don't really
+[01:01:45] mind. Now, look. See this open chat
+[01:01:46] thing at the bottom? Click on that. I
+[01:01:48] can say, "Hey, man.
+[01:01:50] What is 60
+[01:01:52] plus this crazy number here? And it
+[01:01:55] should come back and do a good job.
+[01:01:57] Cool. Now, what we can do with this
+[01:01:58] chatbot, guys, uh we can actually
+[01:02:00] integrate it into your website and do
+[01:02:02] various different things. I'll show you
+[01:02:03] how this works in principle. Also, what
+[01:02:05] we could do instead of a chatbot, what
+[01:02:06] we could do is add in any trigger you
+[01:02:09] like. So, for example, Telegram, right?
+[01:02:13] Um could sit over here. We could if we
+[01:02:15] wanted to have WhatsApp. I've done
+[01:02:17] videos on the channel before. I'll put a
+[01:02:19] link somewhere on the screen so you can
+[01:02:20] see how you connect to WhatsApp. So
+[01:02:21] basically all you do, you send a message
+[01:02:23] to a WhatsApp chat. Your agent does
+[01:02:26] loads of cool stuff. We'll send a
+[01:02:27] message back. So there's loads of really
+[01:02:29] cool stuff that we can do on that front.
+[01:02:30] But just to show you the cool concept,
+[01:02:32] we're going to do a chatbot. And then
+[01:02:33] what we can also do with this guys, you
+[01:02:35] can see is we can create a unique
+[01:02:37] window. Um, and with this window, if I
+[01:02:40] come into settings, actually, I think
+[01:02:41] it's a different part of of the
+[01:02:42] automation. But basically, what we can
+[01:02:44] do with this guy is we can have a URL we
+[01:02:47] give to somebody and they can just
+[01:02:48] simply chat with it and we can embed it
+[01:02:49] on the website, which is really flipping
+[01:02:51] cool. Beautiful. So, what I want to do
+[01:02:53] now is show you how you create a
+[01:02:55] basically the knowledge base for your
+[01:02:57] business. So, to do that, we're going to
+[01:02:59] start off with a Google Drive folder.
+[01:03:02] Okay. So, I'm going to head over to
+[01:03:03] drive.google.com. All right. I've got
+[01:03:04] this new folder called business
+[01:03:06] knowledge. Okay. So, what I want to do
+[01:03:08] is head over to our scenario. I want to
+[01:03:09] create a new one here. Okay. I'm going
+[01:03:11] type in Google Drive. All right. And I'm
+[01:03:13] going to say, hey, we want when a file
+[01:03:15] is created. So, come down here,
+[01:03:19] triggers. Let's have a
+[01:03:22] look on changes to a specific file on
+[01:03:25] changes involving a specific folder,
+[01:03:27] which is cool. We just run every minute.
+[01:03:29] That's cool. And folder, we're just
+[01:03:30] going to type in
+[01:03:32] business like
+[01:03:34] so. Business knowledge. Cool. So, what
+[01:03:36] am I saying here? I want you to update
+[01:03:39] whenever a file is created, right? Does
+[01:03:41] that sound cool? We test it. There
+[01:03:42] should be nothing that appears because
+[01:03:43] no files have ever been in there. So,
+[01:03:45] what I want to do is basically download
+[01:03:47] my tone of voice here. In fact, why
+[01:03:49] don't we do a business scrape? Maybe
+[01:03:52] that's a better way to do. So, let me
+[01:03:53] just grab one of those documents. All
+[01:03:55] right. So, I've got this thing here,
+[01:03:56] right, which is video introduction
+[01:03:58] checklist for maximum engagement. All
+[01:03:59] right. So, I put that in there. I'm just
+[01:04:01] going to download this real quick.
+[01:04:02] Beautiful. And then I'm going to upload
+[01:04:04] it to this Google Drive here. I've just
+[01:04:06] uploaded this one to Google Drive. But
+[01:04:07] from your perspective, what you're going
+[01:04:08] to do whenever you get a new piece of
+[01:04:10] information about your business, you set
+[01:04:12] up an automation and you just drop it in
+[01:04:13] a Google folder and then it will
+[01:04:15] automatically become more intelligent
+[01:04:16] with everything that you know. So then I
+[01:04:18] come back over to our beautiful scenario
+[01:04:21] here and I click on fetch a test event.
+[01:04:24] It should now find it and it has. Cool.
+[01:04:26] So this is all the data from the article
+[01:04:28] my my beautiful beautiful article on
+[01:04:31] phenomenal introductions, right? Which
+[01:04:33] is code for very very cool. Now the next
+[01:04:35] thing we want to do is to simply
+[01:04:37] download the file, right? So Google
+[01:04:39] Drive,
+[01:04:40] oops, click on this guy and we'll
+[01:04:43] download a file. Phenomenal. And the
+[01:04:46] file from the list. Let's just have a
+[01:04:47] quick look. We want to kind of make it
+[01:04:49] an expression, right? And by the ID. So
+[01:04:51] let's find the ID from the left hand
+[01:04:53] side for what the file actually is. And
+[01:04:56] I believe it's this ID right here.
+[01:04:58] Actually, no, I don't think it is.
+[01:04:59] That's the permissions one. So we're
+[01:05:01] looking for the ID. There you go. This
+[01:05:02] guy right here. Download it. Now click
+[01:05:04] on test step and see if it pulls it
+[01:05:06] through. And it does. So I can now
+[01:05:08] download it which is code for very cool
+[01:05:10] flipping good news. Now just to make
+[01:05:11] this easier I'm going to insert a couple
+[01:05:13] of um if I can actually just show you
+[01:05:15] this now. Actually where is it now? I
+[01:05:17] think it's here. I do this. Okay. Yeah.
+[01:05:18] If we come over here let's have a note.
+[01:05:20] So these notes are just going to help us
+[01:05:22] keep track of what's happening here. So
+[01:05:24] I'm going to call this one is going to
+[01:05:25] be the AI
+[01:05:28] agent. I think two two little things to
+[01:05:31] make it big.
+[01:05:34] No, maybe not. Oh well, we'll come down
+[01:05:36] here and let's just put him there. We
+[01:05:38] know what it means. And then we'll do
+[01:05:40] another one here, which in this guy,
+[01:05:41] we're going to change the color to
+[01:05:43] green. And this is going to be the
+[01:05:47] rag. All right,
+[01:05:50] cool. Ah, you need a space. We knew
+[01:05:53] there was a reason why. Okay, rag.
+[01:05:54] That's decent. Ace. And I'm just going
+[01:05:56] to do You may you may call me crazy, but
+[01:05:58] I just think the design's got to be
+[01:06:00] cool. All right, so now rag. So, what we
+[01:06:02] want to do next, guys, is to use a pine
+[01:06:04] cone vector database. So, you're going
+[01:06:06] to click here to click on pine cone
+[01:06:09] vector store.
+[01:06:10] Beautiful. And click on add documents to
+[01:06:13] vector store. Beautiful. Now, I want to
+[01:06:14] head over to Pine Cone. So, you're going
+[01:06:16] to head over to pine cone.io. And you
+[01:06:18] can use this completely free of charge.
+[01:06:19] Click on login. Pine cone, guys, think
+[01:06:21] of it as the mystical bookshelf in which
+[01:06:23] we can store millions of pieces of
+[01:06:25] information and databases that we can
+[01:06:27] then reach over and retrieve at our worm
+[01:06:29] whenever we like. So, you're going to
+[01:06:31] sign in or create an account at this
+[01:06:32] stage. I'm going to do this now with
+[01:06:34] this account here. And by the way, if
+[01:06:35] you see Arabic, it's because I'm in the
+[01:06:36] UAE right now. Living that UAE
+[01:06:38] lifestyle. All right, cool. So, we come
+[01:06:40] over here. Let's have a look. All right,
+[01:06:42] sweet. Welcome to our project. So, we're
+[01:06:44] going to go to our Let's go to our
+[01:06:46] database. All right, beautiful. So,
+[01:06:48] you're going to click on create index.
+[01:06:50] The default is going to be the name. So,
+[01:06:51] we're going to call this one um
+[01:06:55] business. Okay, it must be all lower
+[01:06:58] case. We'll just call it business with
+[01:06:59] two S's. I think that's really cool.
+[01:07:01] Llama text embed. What do we want? Let's
+[01:07:03] have a quick look. We want text
+[01:07:05] embedding three small for this one's
+[01:07:06] fine. Come down. That's fine. That's all
+[01:07:09] fine. Click on create index, which is
+[01:07:11] code. Very cool. Flipping good news. And
+[01:07:13] this will now be our database in which
+[01:07:15] we can store all of your information as
+[01:07:16] when it launches. Now, let's connect
+[01:07:18] these together. Come back over to your
+[01:07:20] workflow and insert documents. Choose
+[01:07:22] from list. Let's see if it pops up.
+[01:07:24] Okay. So, this is connect to a different
+[01:07:25] account. I'll just show you how you can
+[01:07:27] create a brand new credential. needs an
+[01:07:28] API key. So, let's go over to Pine Cone
+[01:07:30] and let's find out where we get our API
+[01:07:32] keys on the left hand side and just
+[01:07:34] create a new API key and copy the code.
+[01:07:35] Beautiful. Got mine here. And then we
+[01:07:37] come back over to our scenario and enter
+[01:07:38] in the API key. Cool. Click on save and
+[01:07:41] it should connect. Cool. Which means we
+[01:07:43] should now see business from a list. And
+[01:07:44] do we see business? Excellent. Cool. So,
+[01:07:47] this is how we do it. Freaking cool.
+[01:07:49] Now, what's the next thing we need to
+[01:07:50] do? A couple of things. Embedding. So,
+[01:07:51] in other words, what's the embedding
+[01:07:53] system? So, do you know how we choose
+[01:07:54] the small model? That's exactly what we
+[01:07:56] do here. So, we're looking for Open AI's
+[01:07:58] embedding, which is
+[01:08:00] here. Uh, test credential. Now, let's
+[01:08:03] just make sure it's the same credentials
+[01:08:04] as used for chat GPT, which is cool.
+[01:08:06] Text embedding three small. Perfect. And
+[01:08:09] then the document here. We click on this
+[01:08:10] and it's default data loader. And we
+[01:08:13] want it to be binary cuz that's the
+[01:08:15] format. And load all input data should
+[01:08:17] be fine. Automatically detect the mine
+[01:08:18] type. That's also really cool. And then
+[01:08:20] we need the text splitter. And for this
+[01:08:22] one, yeah, we just go for recursive
+[01:08:24] character text splitter. Now, chunk size
+[01:08:27] is if we upload a document with like a
+[01:08:28] billion uh letters in it, it's like I'm
+[01:08:31] what I'm going to do, Jack, is I'm going
+[01:08:32] to chunk it up like this. Bam, bam, bam,
+[01:08:34] bam. And each thousand tokens, each
+[01:08:36] thousand characters are going into a
+[01:08:37] different file. This is saying how big
+[01:08:39] do you want chunks to be? Um, the
+[01:08:40] smaller chunks better. So, it really
+[01:08:42] depends on how distinct the data set is.
+[01:08:45] I like a th00and with 150 chunk overlap,
+[01:08:49] which I think is really cool. And then
+[01:08:51] we click off it. Now, what we can do is
+[01:08:53] simply uh test this workflow. So, let me
+[01:08:56] just test this one right here. Google
+[01:08:58] Drive's created a file, downloaded it.
+[01:08:59] It's working in the Pine Cone data store
+[01:09:01] default data loader. It's using the
+[01:09:03] embeddings model. So, now let's actually
+[01:09:05] check out our Pine Cone database, guys.
+[01:09:07] Now, if this has worked, we should
+[01:09:09] see a record in here. So, let's just
+[01:09:12] make sure that it's up and running and
+[01:09:14] loading. Give that a hot second. And
+[01:09:17] would you believe it, guys? We have it.
+[01:09:19] Look at this. How crazy is this? Video
+[01:09:22] checklist introduction for maximum
+[01:09:23] engagement. blah blah blah blah all the
+[01:09:25] way through. How freaking insane is
+[01:09:27] that? So, why don't we also just do now
+[01:09:28] my tone of voice as well so it knows
+[01:09:30] exactly what I sound like. So, let me
+[01:09:32] just download that and upload it to the
+[01:09:33] folder. All right, beautiful. I'm
+[01:09:34] uploading with Jack Turnup voice.
+[01:09:35] Phenomenal. Then I'm going to come back
+[01:09:37] over to our scenario right here. And
+[01:09:40] we're going to test this workflow again
+[01:09:42] and see if it downloads. Has it got the
+[01:09:44] right
+[01:09:45] information? Let's have a look. I
+[01:09:47] certainly hope I certainly hope that it
+[01:09:49] has. And so, it should now technically,
+[01:09:50] if we check on Pine Cone, have Jack's
+[01:09:52] tone of voice. And we'll know this if it
+[01:09:55] actually uh recognizes it and we'll see
+[01:09:57] it in third one. Okay. And then what
+[01:09:59] we're going to do is have this chat with
+[01:10:00] it. And do we see it there? Let's have a
+[01:10:03] look. We have uploaded quite a few here
+[01:10:05] which is cool. Uh and what's interesting
+[01:10:06] here guys is it's actually uploaded many
+[01:10:08] different ones. And the reason it's done
+[01:10:10] that is
+[01:10:10] because it's chunked it for us. So since
+[01:10:13] it exceeded 1,000 characters, it's now
+[01:10:15] uploaded multiple different ones. You
+[01:10:17] see? And you see this score? This is
+[01:10:19] actually lots of different numbers. And
+[01:10:22] when we ask it a question, AI is going
+[01:10:24] to turn that into a very long string of
+[01:10:25] numbers. And each thousandword chunk,
+[01:10:28] thousand character chunk has a set of
+[01:10:30] numbers. And all the AI does is
+[01:10:31] basically think of it in like 29 million
+[01:10:33] dimensions. A lines like what is the
+[01:10:35] most similar? So if cat was a seven and
+[01:10:37] dog was eight and you asked it a
+[01:10:39] question like how many pets do I have?
+[01:10:42] It would be somewhere around 87 or 8 cuz
+[01:10:44] that's quite common. But if I asked it
+[01:10:46] how tall is Burj Khalifa, that might be
+[01:10:48] 252 which is in the building section. So
+[01:10:50] that's kind of like a really simplified
+[01:10:52] way of how it works. So we've
+[01:10:53] successfully got our data. This is so
+[01:10:55] freaking cool. So what's the next thing
+[01:10:56] we want to do? Well, we kind of want to
+[01:10:58] give it the ability first of all, let's
+[01:11:00] just get our house node. Oh my goodness.
+[01:11:02] We want to give it the ability to reach
+[01:11:04] into that pine cone database and check
+[01:11:06] to get the information so that we can
+[01:11:07] actually make sure everything works
+[01:11:08] properly. So we're going to click on
+[01:11:09] tools and we're going to go for vector
+[01:11:12] store tool. Beautiful. All right.
+[01:11:15] Description of data. I don't think we
+[01:11:17] need that one. Right. We're going to
+[01:11:18] bring him over here. Then we click on
+[01:11:20] the vector store. And for that is going
+[01:11:21] to be Pine Cone, which is great. And we
+[01:11:22] just pick it from the list, which for us
+[01:11:25] should be business. Phenomenal. We like
+[01:11:27] that. He comes down here. And then the
+[01:11:30] embedding is the same one as before,
+[01:11:32] which is going to be
+[01:11:33] chatgpt. Beautiful. Uh, of course, let's
+[01:11:36] just make sure we get the correct
+[01:11:38] information. Where are we right now?
+[01:11:40] Okay. Open account 14. That's decent.
+[01:11:43] And then need the model here. Again,
+[01:11:44] we'll just use chat GPT. Again, this is
+[01:11:46] just the brain, so to
+[01:11:49] speak. Uh, Open AI is right over
+[01:11:54] here. Yep, that's absolutely fine. Test
+[01:11:56] credentials, man. Test 767 is really
+[01:11:58] it's becoming the the en public enemy
+[01:12:01] number one. All right, sweet. And is
+[01:12:04] this guy happy? He doesn't look very
+[01:12:04] happy for me. Describe our data. So,
+[01:12:06] data name. Yeah, data name is just going
+[01:12:08] to be Yeah. So, data name is going to be
+[01:12:11] vector store. And I'll say, hey, all
+[01:12:15] knowledge in vector
+[01:12:18] database. And then limit is the num
+[01:12:21] total number of things it can grab. So
+[01:12:24] if yours is particularly complex and you
+[01:12:26] would expect it to grab a hundred, you
+[01:12:27] can change this up. Um, usually
+[01:12:30] somewhere between four and 10 is fine.
+[01:12:31] I'm just going to say three. Just do it
+[01:12:33] based on the size of a data set and
+[01:12:35] whether or not you think it would need
+[01:12:36] to check multiple documents to find an
+[01:12:38] answer. If it's like a single line
+[01:12:40] question, then you would edge towards
+[01:12:41] smaller. We don't need to give it 10
+[01:12:43] things when our database size is 10. But
+[01:12:45] if it's something where it needs to
+[01:12:47] reach over and grab so many different
+[01:12:48] aspects, then you would increase the
+[01:12:49] number. So two is going to be fine for
+[01:12:52] our data set at the moment. And then
+[01:12:53] what we're going to do with the AI agent
+[01:12:54] is give it a very quick prompt. So come
+[01:12:56] down here to system message. Say, hey
+[01:12:58] assistant. I'm just going to very
+[01:12:59] quickly say obviously you build this
+[01:13:00] out, but check your vector database for
+[01:13:04] information in
+[01:13:08] answering questions.
+[01:13:12] Beautiful. We freaking love that. And
+[01:13:14] then we click off and we're good to rock
+[01:13:15] and roll. So, let's now add a little bit
+[01:13:19] of a note to make sure this looks
+[01:13:20] decent. And of course, we'll just change
+[01:13:22] the color because we can't have two
+[01:13:23] yellow ones. We're going to guess won't
+[01:13:24] be purple. Bring this guy over. Uh,
+[01:13:27] where are we right
+[01:13:28] now? Okay, cool. And then, guys, we
+[01:13:31] should be able to ask it a question. It
+[01:13:32] would only really know um if it could
+[01:13:35] access the database. Okay, bam. Now,
+[01:13:38] let's check it out. I'll come down to
+[01:13:39] chat. open chat. I could say something
+[01:13:42] like, okay, what is a question? It would
+[01:13:44] only know, okay, if I said like, okay,
+[01:13:46] what is number four on the video
+[01:13:48] introduction checklist, right? There's
+[01:13:50] no possible way it would know that
+[01:13:51] unless it knew this. Okay, what is
+[01:13:54] number four on
+[01:13:58] the video
+[01:14:03] creation
+[01:14:05] checklist? Sound cool? All right. Bam.
+[01:14:08] Let's enter in. As you can see, AI
+[01:14:10] agents checking the vector store. Come
+[01:14:11] down. Check this out, guys. Item number
+[01:14:13] four is urgency creation. 30 to 40
+[01:14:15] seconds. This section emphasize
+[01:14:16] importance of learning AI no code. How
+[01:14:18] flipping cool is that, guys? So, you
+[01:14:20] basically now created a flipping cool
+[01:14:21] chatbot that's going to be trained on
+[01:14:23] all the knowledge. Again, that could
+[01:14:24] have been in your entire website,
+[01:14:25] whatever you wanted to, ready to rock
+[01:14:26] and roll in one really cool location.
+[01:14:29] Now, what we can do if we want to make
+[01:14:30] this B publicly available is click on
+[01:14:31] this guy and click on make chat publicly
+[01:14:33] available. And now we've got a chat URL.
+[01:14:35] So, let's go enter that into a website.
+[01:14:38] Okay, that's not loaded just yet. So,
+[01:14:39] let's just come back over. I think what
+[01:14:41] we need to do is make the scenario
+[01:14:43] active. That's absolutely cool. Click on
+[01:14:45] okay and then come back over to the hook
+[01:14:48] and just refresh the page. Beautiful.
+[01:14:50] So, we got this new thing. So, why don't
+[01:14:51] we ask it what is number three on the
+[01:14:54] video introduction checklist for maximum
+[01:14:56] engagement. Okay, let's have a look.
+[01:14:58] what
+[01:15:01] is number three on
+[01:15:07] the so it comes back and tells us will
+[01:15:09] it know the answer only time will tell
+[01:15:11] I've got a feeling it's going to know
+[01:15:12] exactly what the answer
+[01:15:14] is give that a hot second one thing I'd
+[01:15:17] encourage you to do there you go m is
+[01:15:19] the accessibility statement which occurs
+[01:15:20] 20 to 30 seconds is that true it is to
+[01:15:23] make this work properly you need to code
+[01:15:26] the AI agent tell it its use case tell
+[01:15:28] all the data has access to. If you get
+[01:15:30] questions about this, check this. If you
+[01:15:31] get questions about that, check that.
+[01:15:33] And you can use AI to help build that.
+[01:15:34] Uh, but if I uh, excuse me, it's getting
+[01:15:36] me I'm getting emotional about this hat.
+[01:15:37] That's how cool this is. That's how you
+[01:15:39] build and connect all this stuff
+[01:15:40] together. Little top tip by the way is
+[01:15:42] to add tags cuz you can search for these
+[01:15:43] in any time. So, I could say something
+[01:15:45] like knowledge base
+[01:15:48] uh, and you know, chatbot. And now when
+[01:15:51] I search for that myself, my own
+[01:15:52] dashboard, I will be able to see those.
+[01:15:54] Beautiful. Then coming back to customer
+[01:15:55] service, let's quickly now parlay all
+[01:15:57] that stuff as an email responder. So I
+[01:15:59] can come back over to the scenario which
+[01:16:01] is right over here. And how do I want to
+[01:16:04] change that? Well, what I could do if I
+[01:16:06] wanted to instead, let me just download
+[01:16:07] this just so you've got it. Download
+[01:16:10] um we'll call this one simple chatbot
+[01:16:15] rag. Beautiful. Okay, great. And
+[01:16:18] actually guys, just very quickly, the
+[01:16:19] way that you can integrate this into
+[01:16:20] your thing. If I come down here, right,
+[01:16:22] chat URL make publicly available. We can
+[01:16:25] actually click on embedded chat and then
+[01:16:27] what you can do with this is copy the
+[01:16:30] code. So if I just come down here, there
+[01:16:32] you go. Full instructions right there,
+[01:16:34] opens a new page. And essentially you
+[01:16:37] can follow what happens here. You
+[01:16:38] basically just embed this on your
+[01:16:39] website with your own unique code and
+[01:16:42] then the chatbot will appear on your
+[01:16:43] website ready to use. Just want to cover
+[01:16:44] that. Just make sure that you got all
+[01:16:45] the details that you possibly might
+[01:16:47] need. All right, cool. So, same concept.
+[01:16:49] Now, we're going to do an email
+[01:16:50] respondent. So, this one's going to be
+[01:16:51] we get an email and I want our chatbot
+[01:16:55] to yeah, basically create a draft
+[01:16:57] response. So, first step is going to be
+[01:16:59] Gmail like so. Beautiful. Triggers on a
+[01:17:01] message received. Let's get a uh excuse
+[01:17:04] me, fetch a test event. Let's hopefully
+[01:17:06] it's nothing too
+[01:17:07] controversial. All right, your LinkedIn
+[01:17:09] data file archive fast is ready for
+[01:17:11] download. All right, cool. That's good,
+[01:17:13] right? because we need to know that it's
+[01:17:14] decent. So, let's see what we want to
+[01:17:16] do. Well, what do I want it to do? I
+[01:17:18] kind of just want it to have the AI with
+[01:17:20] the brain. So, to save a lot of time,
+[01:17:22] and again, if you've already built this,
+[01:17:24] the cool thing is you can repurpose it,
+[01:17:25] right? So, I'm actually just going to
+[01:17:27] grab all of this information, and I'm
+[01:17:29] going to come over here to our scenario.
+[01:17:32] I'm going to paste it in. All right. So,
+[01:17:34] effectively, all we're doing is agent
+[01:17:39] plus the ability to read uh your
+[01:17:42] information. So, for example, what we
+[01:17:43] could do is whenever you get a Gmail, we
+[01:17:45] could like turn that into text and add
+[01:17:48] it automatically to your Google Drive,
+[01:17:49] which means it's going to be trained on
+[01:17:51] everything that every email that you've
+[01:17:53] ever gotten and it will know exactly how
+[01:17:55] you respond to things. Okay, but this is
+[01:17:56] just to show you a quick for instance.
+[01:17:57] So, what we're going to do is leverage
+[01:17:59] its knowledge. So, we've got the AI
+[01:18:01] agent, its ability to check different
+[01:18:03] things. We're going to give it a tool
+[01:18:05] and its tool is going to be Gmail
+[01:18:06] consumer Gmail tool. So, what we're
+[01:18:08] going to do is resource is going to be
+[01:18:10] draft. Operation is going to be create.
+[01:18:12] Actually, I wonder if um what is
+[01:18:15] thread. Uh okay, I see what it's saying
+[01:18:17] here. Okay, we're going to click on
+[01:18:19] draft. Operation is going to be create.
+[01:18:21] Subject is going to be the same subject
+[01:18:23] as the one that we got, which is going
+[01:18:24] to be let's just find out where that is
+[01:18:26] on the left hand side. Subject line.
+[01:18:28] Beautiful. Uh who is it going to go to
+[01:18:31] is the question with the message. H
+[01:18:32] okay. Come down to option. You can do
+[01:18:34] two emails. In other words, who you want
+[01:18:35] to send this to? So we are going to send
+[01:18:37] this one to the person who sent us the
+[01:18:39] email which is
+[01:18:42] there. Beautiful. And then the message
+[01:18:44] we are going to let AI define. And by
+[01:18:47] clicking this beautiful AI button here,
+[01:18:49] email type is going to be text. Cool.
+[01:18:51] Sweet. Be decent. Now all we're going to
+[01:18:53] say is we're going to say, hey, you'll
+[01:18:56] receive an
+[01:18:58] email. If I could spell today, wouldn't
+[01:19:01] that be flipping really cool? You
+[01:19:02] receive an email. I'm going to say, hey,
+[01:19:04] your job
+[01:19:06] is to
+[01:19:09] determine whether or not it
+[01:19:12] requires a
+[01:19:17] response. Okay. And then essentially I'm
+[01:19:19] going to say if it does, which is fine.
+[01:19:22] Let me
+[01:19:24] just Oh my goodness. Requires a
+[01:19:26] response. Uh if it
+[01:19:28] does, draft the
+[01:19:31] email. If it doesn't, don't. And then it
+[01:19:35] could also say something like use your
+[01:19:36] knowledge base and also guys um to
+[01:19:40] answer the
+[01:19:42] questions and obviously if it's got
+[01:19:44] access and training to all your stuff
+[01:19:46] what you could also do is say hey here
+[01:19:47] are several examples of how I want you
+[01:19:48] to respond tonally. This is what I need
+[01:19:50] you to look like blah blah blah blah
+[01:19:51] that sort of stuff. Now look going to
+[01:19:53] come off this I'm going to run this guy
+[01:19:55] once. So come down here I'm going to pin
+[01:19:57] this data which is like a nonsense data.
+[01:19:59] Now it shouldn't really send anything
+[01:20:01] off because no prompt is specified.
+[01:20:04] Oops. Okay, let's just make sure we
+[01:20:05] specify the prompt. Uh define that below
+[01:20:07] and that is going to be not the snippet.
+[01:20:10] Actually, what we need to do guys is
+[01:20:12] unpin this. And uh instead of simplify,
+[01:20:15] just click on fetch test event. Okay.
+[01:20:17] And then I'm going to pin this. If you
+[01:20:19] simplify it, basically you'll lose a lot
+[01:20:21] of the information. So we kind of just
+[01:20:22] want the
+[01:20:23] full unadulterated text. And let me just
+[01:20:26] make sure this has not messed anything
+[01:20:28] up. That's fine. And let me just make
+[01:20:29] sure the creator draft is still okay.
+[01:20:31] Now this what is the subject has
+[01:20:32] changed. Let's just quickly just
+[01:20:36] um find out what that was. Okay, there
+[01:20:39] you go. Isn't it really weird that the
+[01:20:40] subject just changes? Okay, that's odd.
+[01:20:43] And then the two email is going to be
+[01:20:45] who sent it. Obviously, we got the dates
+[01:20:46] as well, which is cool. So, you want to
+[01:20:48] get like the dates about what's
+[01:20:48] happening, all that sort of stuff. And
+[01:20:50] the from message. Cool. And obviously,
+[01:20:52] you just add things in there, guys, like
+[01:20:54] um if it's to a no reply, obviously
+[01:20:56] don't create the draft. And that's what
+[01:20:58] he said. The email is a notification
+[01:20:59] from LinkedIn doesn't mean it requires a
+[01:21:00] response. So, let's just send something
+[01:21:02] that would need a response. So, I come
+[01:21:03] over to my Gmail. Okay, guys. So, I've
+[01:21:05] clicked on this. Let's just say
+[01:21:06] something like urgent and let's ask it
+[01:21:08] something that it would only know if it
+[01:21:11] knew me. I'll say, "Hey, tell me about
+[01:21:14] the tone of voice
+[01:21:17] guidelines. Do you have any
+[01:21:21] interesting
+[01:21:25] observations best at?" Boom. Then, let's
+[01:21:28] send this one off.
+[01:21:32] Then I've clicked on test workflow. It's
+[01:21:33] got the email. The agent's doing its
+[01:21:35] job. It's checking the vector store
+[01:21:36] which is really cool. Pulling down
+[01:21:38] information. Let's just make sure that
+[01:21:39] we've got the right thing
+[01:21:42] here. Okay, it's good. Urgent looking
+[01:21:44] right now. It's created draft. So let's
+[01:21:46] head back over and see what he said. And
+[01:21:48] actually guys, if I come over to the
+[01:21:49] actual snore itself, I have drafted
+[01:21:50] response to Ed's email regarding some
+[01:21:52] return voice. I do have some interesting
+[01:21:54] observations. We've gone through those
+[01:21:55] guidelines. Here are some key points.
+[01:21:56] Active voice. It's recommended to use
+[01:21:58] active constructions as they had
+[01:21:59] clarity, engagement to metaphors,
+[01:22:01] simileies, complex ideas, and key
+[01:22:03] concepts. And guys, it would only ever
+[01:22:05] know that if it could access our
+[01:22:06] database, which means now that your
+[01:22:07] customer service teams will have access
+[01:22:09] to draft emails responding to
+[01:22:11] everything. And we can set up automation
+[01:22:12] that automatically trains it on every
+[01:22:14] single response in your entire thing.
+[01:22:16] This stuff has the opportunity to
+[01:22:18] completely revolutionize everything
+[01:22:20] about your business. It is so freaking
+[01:22:22] epic. And even now, I've opened up. Hey
+[01:22:24] there, Ed. I've got some stuff. So you
+[01:22:26] can see how we've got those two dots.
+[01:22:27] The reason it's done that is because we
+[01:22:29] have not added in a certain formatting.
+[01:22:31] So I come down here. What you want to do
+[01:22:33] is add option. And you can also see
+[01:22:34] guys, okay, it's removed that which is
+[01:22:36] good, which is I like to do that. But if
+[01:22:38] I come back over, what we would want to
+[01:22:39] do text email type HTML, which now means
+[01:22:42] that when it comes over, it will have
+[01:22:43] the bold and it'll be formatted and then
+[01:22:45] we can add our own specific signatures
+[01:22:47] and the opportunities are truly flipping
+[01:22:49] endless. Excellent. So we've now
+[01:22:51] complete section two. We've done
+[01:22:52] knowledge base, tone of voice, chatbot,
+[01:22:54] and email responder. The next one is
+[01:22:55] going to be lead intelligence and your
+[01:22:57] ability to autoqualify leads. So I'm
+[01:23:00] going to save the scenario again cuz I
+[01:23:01] want to make sure that all of this data
+[01:23:03] is available for you. So this is going
+[01:23:04] to be auto email
+[01:23:11] responder and we'll download this guy.
+[01:23:13] Beautiful. So let's create a brand new
+[01:23:14] scenario. All right. Phenomenal. So for
+[01:23:16] this one guys, the way I want to think
+[01:23:17] about this is we have here okay
+[01:23:21] qualified leads. Let's say we have a a
+[01:23:24] lead magnet or we have something where
+[01:23:26] they fill out a form and what I want to
+[01:23:28] do is look at that information and say,
+[01:23:30] "Dude, is this the kind of guy we want
+[01:23:31] to work with? Is this the kind of guy we
+[01:23:33] want on our team and our business?" And
+[01:23:35] then we're going to have an agent make
+[01:23:36] those decisions like a kind of a very
+[01:23:37] simple what do we think about it based
+[01:23:39] on our own requirements? And then based
+[01:23:41] on that, we can either work with them,
+[01:23:42] send an email or do whatever we like.
+[01:23:44] Now, for the trigger, this would be
+[01:23:45] whatever is on your website. It could be
+[01:23:47] anything you could possibly imagine.
+[01:23:49] Slack conversation, um, Instagram,
+[01:23:51] WhatsApp, whatever it is. Right. So, I'm
+[01:23:53] going to kick off this one here first of
+[01:23:54] all by naming it, which is going to be
+[01:23:55] lead
+[01:23:57] qualification. Okay, cool. All right.
+[01:24:00] And obviously, since lead qualification,
+[01:24:02] let's do something like a fire thing.
+[01:24:04] Cool. So, let's connect this to a uh a
+[01:24:08] form. So, why don't we say something
+[01:24:09] like we could even do paper form or we
+[01:24:11] could do um how about in fact, let's do
+[01:24:15] type form. Okay. So let's build a very
+[01:24:17] quick sample thing on Typeflow. And no,
+[01:24:19] it's not Type that. Do Typeform.com.
+[01:24:21] That'll be cool. Bring them over here.
+[01:24:23] All right. Swim. So the key with
+[01:24:25] Typeform, guys, or any kind of these uh
+[01:24:27] softwares is you want to count the
+[01:24:29] balance between the right number of
+[01:24:31] questions to make it decent and also not
+[01:24:34] making it so long people don't sign up.
+[01:24:35] So my first tech startup, I had roughly
+[01:24:38] 3,000 customers every single month. And
+[01:24:40] that was 10,000 for top end and 3,000
+[01:24:43] finished it. So silly stuff like asking
+[01:24:46] for their phone number. 10% of all drop
+[01:24:48] offs came off just from asking that
+[01:24:50] question. So you can say stuff like hey
+[01:24:52] what is your number so that we can
+[01:24:55] insert some kind of value for the
+[01:24:57] customer like so that we can confirm or
+[01:24:58] so that we can do X. You know when you
+[01:25:01] get those kind of numbers it makes a big
+[01:25:02] difference but that's the kind of line
+[01:25:03] that you you're kind of treading between
+[01:25:06] uh information and not so one nice
+[01:25:08] little thing that you can consider guys
+[01:25:09] is actually is this information that I
+[01:25:11] really need right now? like I go as cut
+[01:25:13] as much as you possibly can. You can
+[01:25:15] always get the data later. Can't tell
+[01:25:16] how the number of forms that I just
+[01:25:18] never completed because the requirements
+[01:25:20] were insane. So, make forms worth
+[01:25:22] filling out. That's really cool. So,
+[01:25:24] what we're going to do is uh first of
+[01:25:26] all, let's give it a load of our
+[01:25:27] information. This is cool. All right. We
+[01:25:29] create the account. That's cool. That's
+[01:25:31] fine. Okay. Decent. So, let's create a
+[01:25:34] form as a quick for instance. This could
+[01:25:36] sit on your website. You could embed
+[01:25:37] this into your website as a quick for
+[01:25:38] instance. Uh let's create with AI. Um
+[01:25:41] qualify leads. That's fine. Company name
+[01:25:43] is going to
+[01:25:44] be, let's just call it Dubai
+[01:25:49] Umbrellas. We We sell uh umbrellas in
+[01:25:55] 30k
+[01:25:56] packages to hotels. That's it. All
+[01:26:01] right. Absolutely outrageous business,
+[01:26:04] but who knows? Maybe maybe it's going to
+[01:26:06] take off, guys. Maybe it's going to take
+[01:26:07] I say this cuz like the weather I'm
+[01:26:08] looking outside right now is insane in
+[01:26:10] Dubai at the moment. Cool. Previde your
+[01:26:12] contact information. That's cool. Are
+[01:26:14] you a hotel in Dubai? Blah blah blah
+[01:26:15] blah blah blah blah. Very, very, very,
+[01:26:17] very cool. All right. Sweet. So, we've
+[01:26:19] done this. We're just going to click on
+[01:26:20] publish, which is
+[01:26:22] decent. Cool. It's published. And we've
+[01:26:24] got the link. That's fine. So, we can
+[01:26:25] give people that link if we want to or
+[01:26:27] do various different things. Uh, let's
+[01:26:29] call this one Dubai
+[01:26:31] umbrellas. Uh,
+[01:26:33] Dubai
+[01:26:35] Umbrellas. Excellent. All right. Cool.
+[01:26:38] Now, what do we need to do? We need to
+[01:26:40] link this up and get an API key. Right.
+[01:26:43] So, let's come over to N8. Um, right.
+[01:26:46] Cool. Type form trigger. First of all,
+[01:26:47] let's come down and create a new
+[01:26:48] credential. So, click on this guy. We
+[01:26:50] are going to go to create a new
+[01:26:52] credential. Access token is what we
+[01:26:54] want. So, let's go and find out where
+[01:26:55] the access tokens are. It's usually in
+[01:26:58] your account settings. Personal tokens.
+[01:27:01] Excellent. Generate a new
+[01:27:03] token. Then we give it a name like
+[01:27:07] Dubai. and then all scopes and create a
+[01:27:09] token. Cool. Will pop up on screen.
+[01:27:11] You're going to copy that and then
+[01:27:12] you're gonna come back over to N8N and
+[01:27:15] enter in your access token and then
+[01:27:16] click on save. And then it should now be
+[01:27:18] able to find our beautiful form. Dubai
+[01:27:20] umbrellas has appeared which is cool.
+[01:27:22] And then we can test the step. Now it
+[01:27:24] won't pull anything through because we
+[01:27:26] haven't submitted it yet. So let's do
+[01:27:28] that real quick. If I then come back to
+[01:27:30] our workspaces and let's uh get this
+[01:27:33] stuff. So ultimately what's the key
+[01:27:34] stuff you want to know? You want to know
+[01:27:35] their contact information obviously. Um,
+[01:27:38] and you want to add as much value as you
+[01:27:40] possibly can. Uh, five questions I found
+[01:27:42] really good to ask him. Daniel Priestley
+[01:27:44] is a really big uh, you know, advocate
+[01:27:45] of this and I think he's completely
+[01:27:47] right with it is basically what is your
+[01:27:48] dream goal? What is your biggest pain
+[01:27:52] point that if I could snap my fingers
+[01:27:53] your life would be million times better?
+[01:27:55] And what stopped you from getting from
+[01:27:57] where you are today to where you want to
+[01:27:58] get to? Then you want to ask a couple
+[01:28:00] pricing questions. One might be at which
+[01:28:02] price point would this be so expensive
+[01:28:04] that it would be prohibitive? And then
+[01:28:07] at what price point would it be so low
+[01:28:08] that you would begin to question the
+[01:28:10] value? When you gather that data, you
+[01:28:11] can start to understand how you want to
+[01:28:13] uh produce it. So I've got this link.
+[01:28:14] I'm now going to enter it and we're
+[01:28:16] going to fill this out together with
+[01:28:17] some fictitious information. So name is
+[01:28:19] going to be Jane Smith. Cool. Enter
+[01:28:22] random number. Uh random email address.
+[01:28:24] Company is going to be Jack. Are you
+[01:28:25] hotel in Dubai? I am a hotel in Dubai.
+[01:28:27] Are you looking to purchase a bra
+[01:28:29] hotel? No, I'm not. How many bras you
+[01:28:32] typically purchase the package?
+[01:28:33] Actually, let me come back up. Well,
+[01:28:34] let's just answer this one honestly. How
+[01:28:36] many browsers typically purchase? We'll
+[01:28:38] just say less than
+[01:28:39] 30K. Are you specifically? Yes, I
+[01:28:42] am. Yes, that's cool. And I'm located in
+[01:28:46] Dubai. Cool. Then click submit. Then
+[01:28:48] come over to our beautiful scenario. And
+[01:28:50] you can see all that information, bam,
+[01:28:52] has populated automatically. Then what I
+[01:28:54] would want to do is you want to add in
+[01:28:55] an AI agent. So advanced AI. Um, by the
+[01:28:58] way, a small little detail, guys, is
+[01:29:00] when you use an AI agent versus not.
+[01:29:02] It's like if it's very specific like if
+[01:29:06] it's blue, if X then do Y, if Z then do
+[01:29:08] A, then you would want to use a a simple
+[01:29:11] automation rather than an agent. But if
+[01:29:13] it's variable, in other words, every
+[01:29:15] single outcome is going to be completely
+[01:29:16] different. Uh you may lean towards using
+[01:29:18] an agent for that in that case. So we've
+[01:29:20] got the prompt message. So we are going
+[01:29:22] to define that below. And essentially,
+[01:29:24] we're just going to bring through all of
+[01:29:26] the data. You don't need to bring down
+[01:29:27] all this data, but I'll bring it in
+[01:29:29] anyway, just so we've got it. In fact,
+[01:29:31] no, we don't even need it. Let's just go
+[01:29:32] for company. Are you hotel in Dubai? Uh,
+[01:29:36] purchase a hotel. That's cool. How many
+[01:29:38] browsers tool will you use? Yeah, that's
+[01:29:39] cool. Are you specifically interested in
+[01:29:41] this? Is your business XYZ? Oops. Let's
+[01:29:44] come down
+[01:29:46] here. And are you located in Dubai? Ace.
+[01:29:50] Decent. Cool. So, that's it. Then
+[01:29:52] options. We are going to give it a
+[01:29:53] system message. Hey, you're helpful
+[01:29:54] assistant. Um, qualify. Obviously, you'd
+[01:29:58] build this prompt out a little bit,
+[01:29:59] guys. like
+[01:30:01] qualify if this
+[01:30:03] lead is appropriate for our
+[01:30:08] business. We want them to
+[01:30:15] have to be and then insert your
+[01:30:17] requirements, right? I mean, you could
+[01:30:19] probably guys, you don't need an agent
+[01:30:20] to do this. You could just simply say,
+[01:30:22] if this is yes, then go forward. If this
+[01:30:25] is yes, then go forward. And so, it's
+[01:30:26] just like a systematic. It's not going
+[01:30:27] to be variable. The reason I'm using an
+[01:30:29] agent is because I'm going to going to
+[01:30:30] use this to create a custom lead magnet
+[01:30:32] afterwards. So, say I want them to be a
+[01:30:34] hotel in
+[01:30:36] Dubai
+[01:30:39] and let's
+[01:30:42] say spend over 30k on
+[01:30:46] umbrellas. Okay, cool. Beautiful. And
+[01:30:48] then we're going to come off here. We
+[01:30:50] are going to pin this data real quick.
+[01:30:52] And then I'm going to give a chat model
+[01:30:54] to
+[01:30:57] this. Open a chat model. That's cool.
+[01:31:00] Beautiful. Get our right
+[01:31:02] credentials. Excellent. Uh memory for
+[01:31:06] memory. We can test this workflow now.
+[01:31:08] Oh, that was one key point as well.
+[01:31:10] Okay, so check this out. What's he said?
+[01:31:11] Basic believe does not qualify as
+[01:31:13] appropriate for your business. The key
+[01:31:14] points are blah blah blah. So then what
+[01:31:16] I could do is add a tool to this which
+[01:31:18] could be to update our Google sheet. So
+[01:31:20] if I come over and create a new Google
+[01:31:21] sheet. Okay. Right. And I just say hey
+[01:31:24] name
+[01:31:27] business
+[01:31:29] qualified. Yes or
+[01:31:32] no? Why? Right. Very very very flipping
+[01:31:36] simple. Obviously just substitute this
+[01:31:38] to be your um your information whatever
+[01:31:42] that you need. Maybe your own CRM of
+[01:31:43] choice. Could be ClickUp could be
+[01:31:44] anything. Now we want the actual
+[01:31:46] background to be this different color
+[01:31:47] like that.
+[01:31:50] Sweet. Okay, cool. And we'll call this
+[01:31:52] one
+[01:31:57] lequalification. Beautiful. And then
+[01:31:59] here, let me just bring these guys
+[01:32:02] up. And then why don't we also have the
+[01:32:05] date at the end. Cool. And obviously,
+[01:32:06] let's just make it slightly different
+[01:32:08] color just so it's nice and easy on the
+[01:32:09] eyes. Beautiful. All right. Cool. So,
+[01:32:11] let's come back over to our scenario.
+[01:32:13] And then what we want to do is come over
+[01:32:14] to tools. We are going to go for Google
+[01:32:16] Sheets.
+[01:32:20] Cool. And we want it to So operation is
+[01:32:23] going to be a p append row which is to
+[01:32:25] add or remand from list is going to be
+[01:32:28] lead
+[01:32:29] qualification. The sheet is going to be
+[01:32:31] sheet one as always. Cool. And then
+[01:32:33] name. Now some of the stuff we can just
+[01:32:35] hardcode. So for example the name is
+[01:32:37] going to be Jane, right?
+[01:32:38] Jane Smith.
+[01:32:40] Cool. Actually add a space in there. My
+[01:32:43] goodness. We're not crazy. Business is
+[01:32:45] going to be this one here. Are they
+[01:32:47] qualified? Yes or no? We'll let the AI
+[01:32:49] say that. Why? We'll let the AI say
+[01:32:51] that. And then we've got the date. Uh,
+[01:32:52] and I think we should just put
+[01:32:55] in this expression. There you go. Cool.
+[01:32:57] So, we know what the date is now. All
+[01:32:59] right. Sound cool. And then the AI
+[01:33:01] agent, we'll just say,
+[01:33:03] uh, for every lead, you must
+[01:33:08] update the
+[01:33:10] tracker. Cool. Come off this. And then
+[01:33:12] we can run this whole scenario once. See
+[01:33:13] what this looks like.
+[01:33:16] And then if we come over to the Google
+[01:33:18] Sheets, what do we see? Lead does not
+[01:33:19] qualify as intent spend less than 30K
+[01:33:21] data added. There you go. Bada bing,
+[01:33:23] bada bum. And obviously what we would
+[01:33:24] probably do, guys, is just add in the
+[01:33:26] email address, right? We definitely want
+[01:33:27] to do that cuz we get that data. There
+[01:33:29] you go. Email. So we just add an email,
+[01:33:31] which is really cool. And we're going to
+[01:33:32] need that for the next part of this
+[01:33:33] automation. Insert water to the left.
+[01:33:35] And let's call this email. Now, like I
+[01:33:38] say, if it's really to qualify, I
+[01:33:41] wouldn't recommend you use an agent in
+[01:33:43] this case. What I would recommend that
+[01:33:44] you do instead is have
+[01:33:46] a bring this over here. Okay. Is have
+[01:33:51] this Google Sheets. Okay. Google Sheets
+[01:33:57] fact. Okay. And I just add here append
+[01:34:00] row in a sheet. I would have I would
+[01:34:01] hardcode all that stuff in it. I would
+[01:34:03] add a model here that says advanced AI
+[01:34:06] uh AI open AI right here. And click on
+[01:34:10] uh where are we right now? it's going to
+[01:34:12] be message a model. Okay, cool. The
+[01:34:15] reason I would do this is because can
+[01:34:16] you see AI agents are going to be right
+[01:34:18] 98% of the time, but occasionally it can
+[01:34:21] do something wrong and it's really
+[01:34:22] important that your business is always,
+[01:34:24] you know, crushing it. So, what I would
+[01:34:26] like to do here is basically dictate
+[01:34:29] that every single one that comes in is
+[01:34:30] absolutely without question going to get
+[01:34:32] added to the Google sheet and we're
+[01:34:33] adding different information in. That's
+[01:34:35] what I would like to do and how I would
+[01:34:36] run this one just to make sure that it's
+[01:34:38] I mean these AI agents aren't going to
+[01:34:40] fail. It's just like best practice to do
+[01:34:42] it that way. But I built it this way
+[01:34:43] because
+[01:34:45] uh what I want to do is give you the
+[01:34:47] ability now to create a custom lead
+[01:34:49] magnet. Okay. So what I'm now going to
+[01:34:51] say is the following which is going to
+[01:34:54] be look if this is now we can get really
+[01:34:58] fancy with these custom lead magnets. We
+[01:34:59] can call a sub agent who is specialized
+[01:35:02] in creating uh custom lead magnets which
+[01:35:04] is what I would recommend if you really
+[01:35:05] want to go deep into it. But one of the
+[01:35:07] things that we could do is like if this
+[01:35:08] is a good
+[01:35:11] match, I would like you to
+[01:35:14] create an email with a
+[01:35:18] custom message. Use the below
+[01:35:24] uh
+[01:35:27] template and
+[01:35:29] specify something
+[01:35:34] unique where it
+[01:35:36] says insert message.
+[01:35:40] This should be one sentence
+[01:35:44] maximum and show that you have read
+[01:35:49] their
+[01:35:51] response. Sound cool? All right. Sweet.
+[01:35:53] So, you can imagine I'm just showing you
+[01:35:55] what this would look like. We could turn
+[01:35:56] this into a document. We could then turn
+[01:35:57] that into a PDF. There's like a billion
+[01:35:59] things that we can do with that, right?
+[01:36:01] So, what we could do, we could also say,
+[01:36:03] by the way, I want you to create a
+[01:36:04] custom action plan. In fact, let's do
+[01:36:06] that. Let's say that I want you to
+[01:36:07] create a custom action plan. All right?
+[01:36:10] Okay. Um, something unique action
+[01:36:14] plan for the first 30 days. Okay. No
+[01:36:21] more than five
+[01:36:24] points. Cool. Now, let's head over to
+[01:36:29] Claude. I'm going to say, "Hey,
+[01:36:32] write me a
+[01:36:36] beautiful welcome email to the
+[01:36:39] company." Uh,
+[01:36:41] include a section that
+[01:36:47] says, insert
+[01:36:50] message, and AI will uh insert a 30-day
+[01:36:54] action plan there.
+[01:37:01] Keep the email
+[01:37:03] short. It is a client inbound
+[01:37:08] uh lead capture. Beautiful. All right.
+[01:37:11] Send that off. And obviously what we can
+[01:37:12] do get the HTML. We can get the images.
+[01:37:14] We can get anything you could possibly
+[01:37:15] imagine. Cool. I want it in HTML
+[01:37:19] designed
+[01:37:21] well beautifully. Uh, I have a
+[01:37:30] font. Okay,
+[01:37:33] sweet. And if you want to go deeper on
+[01:37:35] building custom lead magnets, I did an
+[01:37:37] entire video that creates a document and
+[01:37:40] turns that into PDF so you can see
+[01:37:41] exactly how that works. Um, cool. All
+[01:37:44] right. Sweet. This is good, right? So,
+[01:37:45] we come over to We want the code. Uh, we
+[01:37:48] copy all this code. Come over to this.
+[01:37:51] Now, here's a cool thing, right?
+[01:37:53] What I'm going to do is create a new
+[01:37:55] tool. I'm going to go for Gmail. And
+[01:37:57] it's better practice to hardcode where
+[01:38:00] we can. So look, if I say resource
+[01:38:02] message, operation is going to be draft
+[01:38:05] create. Subject is going to be we'll let
+[01:38:08] the model define what that is or we
+[01:38:10] could be really specific about it. Email
+[01:38:12] type is text. Now we want HTML. Click on
+[01:38:14] this. Uh bam. All right. Now check this
+[01:38:17] out. If I come expression, actually
+[01:38:18] guys, what I'm going to do is let this
+[01:38:19] be defined by the model. come back to
+[01:38:21] the agent and say, "Hey, here's a
+[01:38:25] HTML." Bam. Come down. Beautiful. Sweet.
+[01:38:29] So, let's uh do this one more time. What
+[01:38:32] I'm going to do is change the answer so
+[01:38:34] that we'll actually draft an
+[01:38:36] email. I'm going to say more than 30k.
+[01:38:41] So now what it should
+[01:38:44] do is physically create a draft email.
+[01:38:48] So I test the workflow. platform trigger
+[01:38:50] is doing its work in the background
+[01:38:51] using AI and then what we should get is
+[01:38:54] a draft email plus the information
+[01:38:56] updated into our situation. I didn't add
+[01:38:58] email actually. I probably should have
+[01:38:59] done that. It's not going to work. I'll
+[01:39:01] tell you
+[01:39:02] why. Because um what I didn't do in the
+[01:39:05] draft email, I didn't actually add who
+[01:39:07] it was to. Did I send replies to?
+[01:39:11] Um actually it will work. It's
+[01:39:15] just not going to be there. Right. So,
+[01:39:18] let's have a quick look. Why is that not
+[01:39:20] pulling through?
+[01:39:24] Um, oh, I see it's not send replies to.
+[01:39:26] Actually, what we want is option to
+[01:39:30] email. There you go. Mapping. And then
+[01:39:33] we want to send it to this email here.
+[01:39:34] All right. Cool. Now, that should work
+[01:39:36] properly. Okay. Let's test this workflow
+[01:39:37] one more time. Make sure that's okay.
+[01:39:40] Come through. Okay. So, that hasn't
+[01:39:41] worked because the column names were
+[01:39:44] updated after the setup, which is cool.
+[01:39:45] So, what we need to do is refresh this
+[01:39:46] real quick, which is fine. And then
+[01:39:48] we've got email. Let's come over to
+[01:39:50] mapping. And the email should be there,
+[01:39:52] right? Cool. So, when you change it, you
+[01:39:53] just need to do it one more time. So,
+[01:39:55] this should now physically update. And
+[01:39:56] we should get an email in there, too.
+[01:39:58] Right. Let's have a
+[01:40:00] look. Cool. There we go. Right. They
+[01:40:02] come back over to scenario Ace and then
+[01:40:04] I can check on the emails. Now, the
+[01:40:05] emails can take a second to load up and
+[01:40:06] draft. So, I'm going to check what the
+[01:40:07] agent's done. The lead is appropriate
+[01:40:09] for a business as a hotel and Dubai with
+[01:40:11] an interest in spending over 30K in
+[01:40:13] Brattlers. I have updated the track
+[01:40:14] record accordingly and drafted an email
+[01:40:16] to Jack. If you need any modifications
+[01:40:17] or have further instructions, let me
+[01:40:19] know. Cool. Let's just see if it's
+[01:40:20] landed now in the inbox. And just like
+[01:40:21] this guys, we have now this welcome to
+[01:40:23] our company. The Jack, thank you for
+[01:40:24] reaching out to us. This is blah blah
+[01:40:25] blah blah. And obviously guys, what we
+[01:40:27] would do is we would just then obviously
+[01:40:29] colorify this, make it look excellent,
+[01:40:31] just kind of add a lot of flavor to it
+[01:40:32] and we can make it as specific as we
+[01:40:34] would humanly like. But now we're
+[01:40:35] getting unique information for that
+[01:40:37] particular client, which is no, it's
+[01:40:39] pretty flipping epic. Now, if I wanted
+[01:40:40] to take this one step further and really
+[01:40:42] get a cool lead magnet, what I could do
+[01:40:45] is delete all of these guys like so.
+[01:40:47] Come down here, add this guy, go for AI,
+[01:40:49] advanced AI. Let's go for open AI real
+[01:40:52] quick. Let's go for message a model. And
+[01:40:54] then give it the right credential. And
+[01:40:55] then what I could basically say is look,
+[01:40:58] I could say, hey, based on these
+[01:41:02] responses and the
+[01:41:04] information about our
+[01:41:09] business, create a unique uh document in
+[01:41:14] HTML
+[01:41:15] that looks amazing. I want, we could say
+[01:41:19] something
+[01:41:20] like bespoke
+[01:41:23] um 10step process for scaling their
+[01:41:28] business to 10K per
+[01:41:34] month. The below is an example outline.
+[01:41:41] use
+[01:41:43] this and make it specific and unique for
+[01:41:48] that business. All right, cool. Then
+[01:41:50] let's go to CL real quick and say,
+[01:41:54] "Hey, a
+[01:41:57] beautiful HTML one pager
+[01:42:01] uh
+[01:42:01] containing 10 steps to scale
+[01:42:06] your business to I don't know 10k per
+[01:42:09] month.
+[01:42:11] Use example
+[01:42:13] data. I am
+[01:42:17] looking for the design and AI
+[01:42:21] will fill in the data. Cool. Now we'll
+[01:42:25] get this. This will then something that
+[01:42:27] we can then use guys actually to get it
+[01:42:30] to create anything unique that we want
+[01:42:32] to. Right? So we'll get this
+[01:42:33] information. It's very very cool. We'll
+[01:42:34] give this to the AI. We'll get it to
+[01:42:36] create and just output and spit out
+[01:42:38] something really epic for us. And that
+[01:42:39] means that every client that joins our
+[01:42:41] business can get a custommade uh lead
+[01:42:43] magnet. And obviously the more time you
+[01:42:44] put into prompts, the better the
+[01:42:46] output's going to be. I'm just showing
+[01:42:47] you this so you can actually get a full
+[01:42:48] understanding of the kind of thing that
+[01:42:50] it can do and just how epic it is. All
+[01:42:51] right, beautiful. So we got this thing
+[01:42:52] on the right. 10 steps to scale your
+[01:42:54] business 10K a month. Bada bing bada
+[01:42:56] boom. How cool is that? That's really
+[01:42:57] cool, right? So we come over to the
+[01:42:58] code. We are going to copy this. We are
+[01:43:00] going to head over to our edit end
+[01:43:01] scenario and I'm going to say uh use the
+[01:43:05] below HTML but specify but make it
+[01:43:09] unique. All right, but make
+[01:43:12] it unique. You must output in HTML only.
+[01:43:18] All right. Boom. Come
+[01:43:20] down. There you go. Sweet. Uh model
+[01:43:23] we'll just use for GPT. Maybe go
+[01:43:25] somewhere big actually. But I think GPT4
+[01:43:26] Turbo is going to be fine. Actually,
+[01:43:28] let's just use GMT4 app. Okay, cool. Uh,
+[01:43:31] that's the prompt. Actually, no, we want
+[01:43:33] that to be the system message, right?
+[01:43:36] Oh, I see. Okay, that's the user
+[01:43:37] message. And then we want the assistant
+[01:43:39] and below. Okay, cool. Beautiful. And
+[01:43:42] then the prompt is going to be all this
+[01:43:44] beautiful information here. All right,
+[01:43:45] come down. Bam, bam, bam. Oh, yeah.
+[01:43:48] Cool. What I'm going to do just so this
+[01:43:49] actually physically works without the
+[01:43:51] need to do this and come back to type
+[01:43:52] form. I'm just going to change some of
+[01:43:54] this information.
+[01:43:57] Um, tell me about your
+[01:44:02] business. I
+[01:44:04] spend more than 30K. Uh, maybe something
+[01:44:07] like I am stuck at
+[01:44:12] 2K a month. I have three clients. I
+[01:44:16] don't know how to
+[01:44:20] scale. I don't know. I live in I could
+[01:44:24] actually say something like I don't know
+[01:44:24] my business is based in
+[01:44:29] London. I want client
+[01:44:33] acquisition strategies. Just random
+[01:44:35] nonsense data so it can work properly.
+[01:44:37] And then look if I run this uh whole
+[01:44:38] workflow one more time real quick. We
+[01:44:41] should get an outpoint in HTML which is
+[01:44:42] cool. And test that looks exactly like I
+[01:44:45] want it to. I'm just going to show you
+[01:44:46] something really cool we can do. We can
+[01:44:48] do to HTML
+[01:44:49] viewer. Uh there you go. It's called
+[01:44:52] code beautify. Come down. Open is going
+[01:44:54] to do the magic in the background. And
+[01:44:56] then we should get something completely
+[01:44:57] unique. Cool. That's created it. And
+[01:44:59] then what I want to do is go to
+[01:45:03] PDF.co. I actually want a HTTP request
+[01:45:05] module. That's decent. And we want to
+[01:45:07] head over now to
+[01:45:10] PDF.co. The beautiful PDF.co from
+[01:45:13] earlier in the video. We're going to log
+[01:45:14] in. Okay. Give our email address.
+[01:45:15] Beautiful. So guys, I've come over to
+[01:45:17] chat to Petite. I said, "Hey, create me
+[01:45:18] a call request for PDF.co." Obviously,
+[01:45:21] make.com has got an integration, so it's
+[01:45:23] a bit easier. We come down here, we
+[01:45:24] enter that data in, which is cool. Then,
+[01:45:27] we just need to get our API key from
+[01:45:28] PDF.co. Come down here, I copy it, I
+[01:45:30] come back over, and let's just enter it
+[01:45:32] in. Then, we've got the HTML. We come
+[01:45:34] over here to content and throw that guy
+[01:45:35] in there. And then, we click on
+[01:45:38] test. It's executing the node perfectly.
+[01:45:41] I'm very impressed that that worked
+[01:45:42] first time, actually. It's really cool
+[01:45:44] how it does that. That's been executed
+[01:45:45] successfully. It's given us URL. So,
+[01:45:48] let's just check it out. And guys, look
+[01:45:49] at this. Wow. 10 steps to create unique
+[01:45:52] solutions to 10K a month. Create a
+[01:45:54] telepath to elevate your business.
+[01:45:55] Maximize growth. Identify hidden
+[01:45:57] opportunities. Let's just see what it
+[01:45:58] says. M. Let's have a look. Reveling
+[01:46:01] price track. Explore dynamic pricing.
+[01:46:02] Create products with consistent demand
+[01:46:04] over time. EF things.
+[01:46:07] Wow, this is really freaking
+[01:46:10] cool. And then here we've got a link.
+[01:46:13] Right. So, one of the things I want it
+[01:46:14] to do actually, guys, is to give is to
+[01:46:16] say something specific. So, under this,
+[01:46:20] I'm going to say, actually, I'm just
+[01:46:22] um open this guy up real quick. Oh my
+[01:46:25] goodness.
+[01:46:26] I'm going to say,
+[01:46:29] look, you must reference the business's
+[01:46:34] name and tailor the responses in the um
+[01:46:39] PDF to the business
+[01:46:43] um
+[01:46:45] talk about their first name and their
+[01:46:50] company
+[01:46:51] name. first name and then we'll give it
+[01:46:54] as Jane
+[01:46:57] Smith. Cool. And then uh company
+[01:47:00] name is going to be this guy which is
+[01:47:03] Jack. Right. We probably to be fair,
+[01:47:06] very very cool name. Bam. Right now
+[01:47:08] let's run the scenario again one more
+[01:47:09] time. Test the whole workflow. Then
+[01:47:11] we've got that. What we can do is add
+[01:47:13] that to an email. Send them directly and
+[01:47:15] then mine is going to be what is known
+[01:47:17] as completely blown out of the planet
+[01:47:19] which is really cool. I mean like the
+[01:47:21] fact that you can get these custom lead
+[01:47:22] man is ace. One of the things I'd
+[01:47:23] encourage you to do is add a delay time
+[01:47:25] delay so that it looks like you've
+[01:47:27] actually built it. So we could do that
+[01:47:29] over a day. We could create it as a
+[01:47:31] draft and then you just go in every day
+[01:47:33] and just say, "Yep, that's cool. That's
+[01:47:34] decent. That's fine." And you just send
+[01:47:36] it off as and when you're happy with it
+[01:47:37] just to make sure that um it doesn't
+[01:47:40] look like it's automated. It's about
+[01:47:42] creating the impression that a lot of
+[01:47:44] effort and time has gone into it. So
+[01:47:46] here's URL. Let's try one more time.
+[01:47:47] Beautiful. So let's download this. Look
+[01:47:49] at this guys. 10 steps to scale Jack to
+[01:47:51] 10K a month. Jane Smith brings you a
+[01:47:53] tailored road map to elevate blah blah
+[01:47:55] blah blah blah. Pinpoint your unique
+[01:47:56] niche. Jane focus on the specific needs
+[01:47:58] of Jack's ideal customer. Deep dive into
+[01:48:00] market research. Develop plan. And guys,
+[01:48:02] it's completely obviously some of the
+[01:48:04] stuff has gobbled good cuz I gave it
+[01:48:06] gobbled good strategies. But guys, this
+[01:48:07] is exactly what we designed in Claude.
+[01:48:10] This is freaking crazy. Get your
+[01:48:11] personalized plan. Bam. We need to
+[01:48:12] remove this. I can do that by adding a
+[01:48:14] simple prompt into the system which
+[01:48:16] basically would be your basically what
+[01:48:18] we would say is your output must end and
+[01:48:22] begin with this.
+[01:48:24] Okay, which I'll add in now cuz I'm
+[01:48:26] going to I'm giving you a template for
+[01:48:27] this. So your outputs
+[01:48:31] must begin
+[01:48:35] with Yeah, that basically means we won't
+[01:48:38] get these little dots and end with
+[01:48:43] uh let's have a look at the
+[01:48:47] bottom. Yes, with
+[01:48:51] that. Cool. Beautiful guys. So you just
+[01:48:54] learned how to create a beautiful
+[01:48:55] phenomenal lead magnet.
+[01:48:58] So, what I'm going to do is download
+[01:48:59] this lead magnet here as well. So, we've
+[01:49:02] got that one ready to rock and roll.
+[01:49:03] Exceptional. Now, we're doing lead
+[01:49:04] intelligence. The next thing we're going
+[01:49:05] to look at, guys, is going to be
+[01:49:06] customer growth. Starting with two very
+[01:49:09] simple automations. One is going to be
+[01:49:10] RSS to LinkedIn posts and the other one
+[01:49:12] is going to be how you can batch create
+[01:49:14] 50 60 70 Canva posts at exactly the same
+[01:49:16] time. Awesome. So, this one we're going
+[01:49:18] to do in make. So, we're going to start
+[01:49:20] off with beautiful RSS. Let's head over
+[01:49:22] to RSS.feeds and let's generate
+[01:49:25] something. Let's do something on
+[01:49:26] something like I don't know let's say we
+[01:49:28] want to do something on Tesla as a for
+[01:49:30] instance maybe we're like an electric
+[01:49:31] car company or something basically pick
+[01:49:33] the the word or the keyword that you
+[01:49:35] want and then RSS is going to create an
+[01:49:38] application for us which is really
+[01:49:39] really flipping cool. All right, cool.
+[01:49:41] Musk calls Trump adviser a and
+[01:49:43] quarrel over text. Let's just say we
+[01:49:44] want to be teslannews.com, right? Enter
+[01:49:46] the keywords. You got to do you also do
+[01:49:48] um Twitter feed as well, by the way. If
+[01:49:51] you want to do Samman direct or
+[01:49:52] something, whatever you want. Click on
+[01:49:54] save to feeds ace. Copy this. Come back
+[01:49:57] over to our make scenario. We're going
+[01:49:58] to come down here. Watch for RSS feed
+[01:50:00] items. That's cool. Or retreat. Retreat
+[01:50:02] grabs everything that's happened. And a
+[01:50:04] watch for RSS feed items is everything
+[01:50:06] that's coming in the future from this
+[01:50:07] point. Since we're recording it, I'm
+[01:50:09] just going to go ahead and retrieve.
+[01:50:11] Okay. And I'll say I just say I want to
+[01:50:12] retrieve the last five as a quick for
+[01:50:14] instance. Going to run this module once.
+[01:50:17] Beautiful. It's got all the stuff. Now,
+[01:50:18] what I want to do is download the data.
+[01:50:20] So, I come here. I do HTTP. Beautiful.
+[01:50:23] Uh, get a file. And all I do is just
+[01:50:27] download it. And I do that by clicking
+[01:50:29] in the URL like so. Then I click on run
+[01:50:31] once. And then we should get the entire
+[01:50:33] article, which is really cool. In fact,
+[01:50:34] we've got all five articles, right? And
+[01:50:36] all of the data. But this data is in
+[01:50:39] HTML. So we want to convert that. So
+[01:50:40] what do we do? We do HTML to
+[01:50:44] text which is there the beautiful
+[01:50:47] Queen's English. We come over, we select
+[01:50:48] the HTML which in this case is going to
+[01:50:51] be uh where is it right now? It's just
+[01:50:53] simply the data output from there.
+[01:50:54] That's fine. And then we can get all the
+[01:50:56] information. Then what I want it to do
+[01:50:58] is get a chat GBT module. Again, this is
+[01:51:00] just something really simple. So I could
+[01:51:02] do something like create a completion.
+[01:51:06] Let's give it one of the more powerful
+[01:51:08] models this time, I think. So, let's go
+[01:51:10] for
+[01:51:11] um let's have a look. Yeah, GBT 4.5. Why
+[01:51:15] not? It's a little bit more expensive on
+[01:51:16] the tokens, but that's fine. Uh maximum
+[01:51:18] token completions. If you put zero, it
+[01:51:20] will default to the max, which is what
+[01:51:21] we like. And then add message roll is
+[01:51:24] going to be user. And then the text
+[01:51:26] content is just a text from text parser.
+[01:51:28] Uh and then what I want to do as well is
+[01:51:30] add a new one in there, which is going
+[01:51:32] to be the assistant. Okay. So, I'm going
+[01:51:34] to say, look, I would like you to
+[01:51:39] create an
+[01:51:41] insightful LinkedIn
+[01:51:44] post based on the below
+[01:51:49] framework and my tone of voice.
+[01:51:53] Okay, the
+[01:51:55] framework and then here's just going to
+[01:51:57] be all the best practices. So what I did
+[01:51:59] in my school community is I basically
+[01:52:01] found what all the best practice were
+[01:52:02] for going
+[01:52:05] var a automation and then on the left
+[01:52:08] hand side if I scroll down I should see
+[01:52:10] it under LinkedIn which is cool and this
+[01:52:13] is a good example let's have a look here
+[01:52:15] and a LinkedIn agent. So let's just grab
+[01:52:18] all of the data from this and what we've
+[01:52:20] done here is obviously pumped it full of
+[01:52:22] loads of cool stuff like examples of how
+[01:52:24] we want it to look. Uh, we come back
+[01:52:26] over here and here's the framework. And
+[01:52:28] then I'm going to say, hey,
+[01:52:32] oops, my tone of voice. And then let's
+[01:52:36] just grab my tone of voice real quick.
+[01:52:37] Now, the tone of voice I'm using here,
+[01:52:39] guys, is my spoken tone of voice, not my
+[01:52:42] written tone of voice. Um, so it's not
+[01:52:44] going to be exactly the same because we
+[01:52:46] write and speak differently. So, if
+[01:52:47] you're going to use this, I would
+[01:52:48] actually use your LinkedIn download post
+[01:52:51] just to make sure it's accurate. And
+[01:52:52] that's the data that I'd encourage you
+[01:52:53] to do. In fact, that's actually what I'm
+[01:52:55] going to go ahead and grab. Okay,
+[01:52:56] beautiful. So, we'll call this one
+[01:52:57] LinkedIn
+[01:52:58] post. Now, guys, what you could do is
+[01:53:00] post this directly to LinkedIn, or you
+[01:53:02] could add it to an air table or a Google
+[01:53:04] sheet for you to approve effectively,
+[01:53:06] whatever you would like it to do. So,
+[01:53:08] for this instance, let's uh run this
+[01:53:10] module once. I'm just going to set this
+[01:53:12] down to one item just so we can see what
+[01:53:15] that looks like. Let's click run
+[01:53:17] once. All right, beautiful. It's now
+[01:53:19] turning that into a LinkedIn post. Just
+[01:53:21] a very easy, simple, crisp way to get
+[01:53:24] that with your particular insights. We
+[01:53:25] can obviously feed it a billion
+[01:53:27] different things, but it's just a very
+[01:53:28] easy, simple, quick automation uh to get
+[01:53:31] started and making some absolute magic
+[01:53:32] happen. So, this is going to create for
+[01:53:33] us a cool LinkedIn post. We can check
+[01:53:35] out to see what that looks like. So,
+[01:53:37] let's see what the actual article was
+[01:53:38] that we're going to be turning into this
+[01:53:41] uh Musk calls Trump adviser and
+[01:53:43] quarrel over Tesla. What we could also
+[01:53:44] do is add an AI module in between that
+[01:53:46] says, "Hey, is this something that we
+[01:53:48] want to write an article about? Yes or
+[01:53:50] no? If so, bring it over. The other way
+[01:53:52] that we could do this is actually bring
+[01:53:54] all of this information into a
+[01:53:56] spreadsheet where we go through and we
+[01:53:57] say, "Yes, that looks good news. That's
+[01:53:58] good news. That's good news. That's good
+[01:54:00] news." So, for example, we could add in
+[01:54:01] an air table here after the RSS feed and
+[01:54:05] then we just review it regularly and
+[01:54:07] then we just take yes or no and then
+[01:54:09] that will download for us automatically
+[01:54:10] so that we get to decide which articles
+[01:54:13] we want to create content on. Right? So,
+[01:54:15] come down. Let's have a quick look at
+[01:54:16] some of the details of what it's done.
+[01:54:19] Uh, where is choices? Uh, message
+[01:54:21] content long strip. Elon Musk just
+[01:54:23] called one of Trump's top advisers a
+[01:54:25] after a heated exchange over
+[01:54:26] tariffs and Tesla. Peter claims blah
+[01:54:28] blah blah blah. Ouch. All this in goes
+[01:54:30] on this blah blah blah. I'd love to hear
+[01:54:31] your take. Drop your thoughts below.
+[01:54:33] Boom. And if you wanted to post this
+[01:54:34] directly to
+[01:54:37] LinkedIn, you could do that, right? Come
+[01:54:39] down. You could just create a user text
+[01:54:41] post or user image post. We could create
+[01:54:43] an image of midjourney that's that
+[01:54:44] describes that. There's so many
+[01:54:46] different ways that we could physically
+[01:54:47] do this. Uh, an interesting one here is
+[01:54:49] you could have it added to Air Table,
+[01:54:50] like I say, and just review everything.
+[01:54:52] So, that's how you get a simple RSS feed
+[01:54:54] down to post and you would simply say,
+[01:54:56] "Hey, every x amount of minutes I want
+[01:54:57] this to run." Uh, if not, you can just
+[01:54:59] add then just like we've done in every
+[01:55:00] other previous automation, add that to a
+[01:55:03] spreadsheet for you to check out. So,
+[01:55:04] for example, if I had Air Table, I could
+[01:55:06] create a record. I could go over to the
+[01:55:08] beautiful Let's just go over to
+[01:55:10] airtable.com like so. Give that a hot
+[01:55:13] second. All right, cool. create uh start
+[01:55:16] from scratch. Here for example, I could
+[01:55:19] have a article
+[01:55:21] name article title, right? And here I
+[01:55:26] could have the actual LinkedIn post,
+[01:55:30] right? And then when here I could have
+[01:55:34] status, right? And here it could simply
+[01:55:37] be uh we would just come down to single
+[01:55:39] select uh and we would say
+[01:55:43] posted
+[01:55:45] not or like no something really simple
+[01:55:48] like that right then if I call this one
+[01:55:50] here
+[01:55:52] LinkedIn RSS really easy and simple and
+[01:55:56] I come back
+[01:55:57] oops and I come back over here for
+[01:55:59] example uh in the base I could just go
+[01:56:01] for LinkedIn just refresh these
+[01:56:05] Look, LinkedIn RSS. That's really cool,
+[01:56:08] right? Give that a hot sec. Table is
+[01:56:10] going to be table one. And then we can
+[01:56:12] pin together all of the data. Article
+[01:56:14] title. Again, I bring this over just so
+[01:56:16] you can see properly. Article title is
+[01:56:18] going to be this guy. LinkedIn post, the
+[01:56:21] one created by AI to see if we like it
+[01:56:22] or not. And again, we can just do this
+[01:56:24] as we want to. Click on save. Come back
+[01:56:26] over. I can run this entire thing. And
+[01:56:28] then guys, what we could do is simply
+[01:56:30] live them over here and it will appear
+[01:56:32] for us automatically. And then we can
+[01:56:34] create a second scenario that basically
+[01:56:35] triggers off and says, "Hey, when this
+[01:56:38] status is posted or post for example,
+[01:56:42] grab it and post it to LinkedIn
+[01:56:44] directly." Right? So check this out. I
+[01:56:45] come back over. It's now creating it for
+[01:56:47] us. I'm going to name this one RSS to
+[01:56:53] LinkedIn. Beautiful. And we'll just get
+[01:56:55] this one saved. And we can download this
+[01:56:56] one as well. Boom. And that has
+[01:56:58] completed. So if I head over to
+[01:56:59] LinkedIn, beautiful. And just like that,
+[01:57:01] guys, we got the entire post that's
+[01:57:02] appeared here, which is flipping
+[01:57:03] awesome. And it's laid out everything
+[01:57:05] for us, which is pretty freaking sweet.
+[01:57:06] So now, guys, I want to go on to the
+[01:57:08] next part, which is going to be how we
+[01:57:10] can actually get, let's say, 50
+[01:57:13] different Instagram reels from one
+[01:57:15] single point of contact. And we're going
+[01:57:17] to use Can for that. We're going to
+[01:57:18] batch create it so we can get 50 things
+[01:57:20] running out on autopilot for us. So how
+[01:57:23] do we do that? Well, let's say, for
+[01:57:24] example, we have a podcast, right? And
+[01:57:26] let's say that I like the look of this
+[01:57:28] one. Brutally honest truths that give
+[01:57:29] you an unfair advantage in life. Let's
+[01:57:32] right click on it. Let's copy the clean
+[01:57:34] link. Then what we're going to do is
+[01:57:35] we're going to head over to this website
+[01:57:37] here which is tactic which gives us a
+[01:57:39] free YouTube transcript. You can
+[01:57:41] obviously automate that just like I
+[01:57:42] showed you earlier in the video. We get
+[01:57:44] downloaded as an RSS feed and then you
+[01:57:45] can just get the transcript
+[01:57:46] automatically. Now I'm going to come
+[01:57:48] down. I'm going to copy the transcript.
+[01:57:50] Beautiful. Then what do I do? I'm going
+[01:57:52] to head over to Claude and I'm going to
+[01:57:54] say, "Hey, based on this
+[01:57:57] transcript, write me 50 quotes no longer
+[01:58:02] than let's just say, I don't know, 30
+[01:58:05] characters of advice." Okay. Uh, do this
+[01:58:10] in a
+[01:58:13] table. In the second column, excuse me,
+[01:58:16] I'm getting emotional thinking about it.
+[01:58:18] uh write a
+[01:58:20] brief
+[01:58:22] Instagram
+[01:58:23] caption and then there is all of the
+[01:58:26] thing. Bam. Right. Next thing I want to
+[01:58:27] do is go over to make.com whilst that's
+[01:58:28] working in the background. Cool. Now the
+[01:58:30] first thing I want to do here guys is
+[01:58:31] what's called an increment function. And
+[01:58:33] that will make sense why? Cuz look every
+[01:58:34] time I run this it will pop out a number
+[01:58:37] one. I run it again then we get number
+[01:58:39] two. And that's going to be relevant
+[01:58:41] because we're going to take this data
+[01:58:42] and put it into air table. So, if I'm in
+[01:58:44] Air Table now, I could say, "Hey, this
+[01:58:45] is going to be the quote." And then
+[01:58:49] this, yes, that's cool. And then here is
+[01:58:52] going to be the caption. And we're going
+[01:58:53] to need the caption to post this onto
+[01:58:55] Instagram. Phenomenal. All right. Cool.
+[01:58:58] So, let's go back over to Claude and
+[01:59:00] look at this. Pain is progress. Happy
+[01:59:02] not but not satisfied. Actually, let's
+[01:59:04] just say
+[01:59:05] um make the
+[01:59:08] quotes up to I don't know 90 characters
+[01:59:12] because I think that's a little bit too
+[01:59:13] short in my opinion. Mountains behind
+[01:59:15] mountains. It doesn't even make any
+[01:59:16] sense, does it? Okay, so let's actually
+[01:59:18] make these longer so we can actually
+[01:59:19] physically use them. Beautiful, guys.
+[01:59:20] This looks better. Pain is the price of
+[01:59:22] progress. The fastest growth periods are
+[01:59:24] often the most miserable. You know what,
+[01:59:25] guys? I like it. So, I'm going to copy
+[01:59:27] all of this data. Oh, it's still
+[01:59:30] compiling for us. Can I just copy this?
+[01:59:33] Okay, give this a hot second. So, we're
+[01:59:34] going to get 50 and we're going to turn
+[01:59:36] them into reals. The meta on Instagram
+[01:59:38] at the moment is that like re reals are
+[01:59:40] like four or five seconds long that you
+[01:59:41] just keep on reading are really really
+[01:59:43] cool. So, we've got all this stuff.
+[01:59:44] Let's copy it. Let's head over to our
+[01:59:46] air table and we're going to paste them
+[01:59:48] all in and we'll expand the table and
+[01:59:50] then bam. We should all come down there.
+[01:59:52] No, it's all gone into one thing which
+[01:59:54] is fine. So, let's come back and let's
+[01:59:56] just copy it
+[01:59:57] directly. All right, let's hopefully
+[01:59:59] this will just pick up on everything
+[02:00:00] that we need. All right, cool. So what
+[02:00:02] I'm going to say to it is just separate
+[02:00:03] these out. So give me an output with
+[02:00:07] just the quotes please. Callbacks
+[02:00:09] producing. Now give me a table with just
+[02:00:13] the corresponding captions. Actually
+[02:00:17] guys I'm just going to change these to
+[02:00:18] be in a list.
+[02:00:20] Actually put them in a
+[02:00:23] list. No
+[02:00:27] numbers. Naked
+[02:00:29] text. Okay guys. So basically I think
+[02:00:31] all you got to do is put them in with no
+[02:00:33] spaces in between so you can copy them
+[02:00:35] over perfectly which is really funny.
+[02:00:37] Okay, cool. So we can finally get this
+[02:00:39] information and then create the
+[02:00:40] beautiful thing on Canva. Ace. So we
+[02:00:42] come over, we copy, we go back over then
+[02:00:44] to this document and then all the quotes
+[02:00:46] should appear beautifully. Uh
+[02:00:49] phenomenal. And then we just say
+[02:00:51] hey same thing with
+[02:00:54] the
+[02:00:56] captions actually I'll say
+[02:00:59] corresponding. Beautiful. And then it
+[02:01:01] should do the exact same thing for us to
+[02:01:02] bring over. And then we can do our
+[02:01:04] scenario. So what are we going to do? We
+[02:01:05] other thing we want to add into our
+[02:01:07] scenario, guys, is I'm going to insert
+[02:01:08] one to insert, right? Uh and we'll go
+[02:01:11] for long text. Actually, I'm just going
+[02:01:13] to do for Yeah, single line text is fine
+[02:01:16] here, guys. Um bring this one
+[02:01:18] over. Okay, that's fine. Change primary
+[02:01:21] field. And this is just going to be
+[02:01:24] number. Actually, I think there's
+[02:01:26] something we can do, which is simply
+[02:01:30] um number. There you go. That should
+[02:01:33] just give us a number for everything.
+[02:01:34] There we go. Cool. Beautiful. And then
+[02:01:36] we've got captions. And we're doing
+[02:01:37] that, guys, because that's going to
+[02:01:38] trigger off the beautiful scenario. So,
+[02:01:40] we come over to this, copy this, come
+[02:01:43] back over to our camera here, and paste
+[02:01:45] it all in. And bam, there's everything.
+[02:01:47] Sweet. Okay, this is actually shaping up
+[02:01:49] to be really nice now. Okay, cool. So,
+[02:01:50] what we do next is we come back over to
+[02:01:52] our beautiful integration. And what I
+[02:01:54] kind of want it to do, what we need to
+[02:01:55] do actually is we've got this
+[02:01:57] information. We're going to download it
+[02:01:58] as a CSV. So if I come over to um here
+[02:02:03] and I say, "Hey, do
+[02:02:05] me the
+[02:02:10] quotes to
+[02:02:13] download as a CSV." And then we can just
+[02:02:17] give all the quotes that we got here
+[02:02:18] very quickly. Cool. So we downloaded by
+[02:02:20] clicking this button here. And then
+[02:02:21] guys, we're going to head over to Canva.
+[02:02:23] Now, you can design this any way you
+[02:02:24] want to. I've made it like 2.5 seconds
+[02:02:26] long, so we got lots of repeats. You're
+[02:02:28] going to come down on the bottom left to
+[02:02:29] bulk create. Okay? Then you're going to
+[02:02:31] upload data like so. In fact, guys, if
+[02:02:34] it doesn't download as a sales fee for
+[02:02:35] you, you can enter data manually. Um,
+[02:02:37] come over to the Canva quotes, just copy
+[02:02:39] it, actually, and just bring it straight
+[02:02:41] over. It just depends on whatever's
+[02:02:42] easier for you. So, if I just enter all
+[02:02:44] this stuff in, there you go. Bam. And
+[02:02:46] then you could add in anything else you
+[02:02:47] wanted to. So, click that, then click
+[02:02:49] done. So, that should be ready to rock
+[02:02:52] and roll, which is what we like to see.
+[02:02:54] Now, check this out. This is Instagram
+[02:02:56] capture right now. Look, if I click on
+[02:02:57] continue, it's now going to completely
+[02:03:00] change everything. If I create design,
+[02:03:02] it's going to completely cascade this
+[02:03:04] now and give me everything I possibly
+[02:03:06] need. Pain is the price of progress, the
+[02:03:08] fastest growth period, the most
+[02:03:09] comfortable, be happy, but not
+[02:03:12] satisfied. And look, guys, every single
+[02:03:13] one is completely different. So, you
+[02:03:16] just batch created 50 quotes from her
+[02:03:18] podcast. So I'll call this one uh
+[02:03:22] whole mosy Canva just for easy
+[02:03:25] reference. Then what we do is we go back
+[02:03:27] over to our make scenario. Uh and then
+[02:03:29] effectively we're going to use the Canva
+[02:03:31] module. Uh we're going to show more and
+[02:03:33] we are going to go for export a design
+[02:03:36] folder ID. Mine is just completely
+[02:03:38] crazy. So if I just type in let's
+[02:03:40] refresh this one real quick. Okay. Let
+[02:03:42] me just add a new connection. Yeah, my
+[02:03:44] Canva connection. We should just have to
+[02:03:45] sign in and we're ready to go.
+[02:03:46] Beautiful. Then folder ID. So, we're
+[02:03:48] just going to go for generic one cuz
+[02:03:50] it's fine. That's okay. And then we
+[02:03:53] should have to just pick and select the
+[02:03:55] particular file. Design ID is homey
+[02:03:58] Canva. Type is going to be
+[02:04:01] MP4.
+[02:04:02] Quality, just go for 720, 1080p,
+[02:04:05] whatever you want really. And the page
+[02:04:06] is just going to be the output from this
+[02:04:08] guy here. Okay, beautiful. Now that's
+[02:04:11] done. What next? I'm basically just
+[02:04:12] going straight to Instagram. So, come
+[02:04:14] down here. I can type in Instagram. Um,
+[02:04:17] let's start Instagram for business. We
+[02:04:19] want uh let's have a look here. Show
+[02:04:21] more. Okay. Create a real post like
+[02:04:25] so. Bring this one
+[02:04:27] over. Video URL. So, let me just first
+[02:04:30] of all uh run this scenario once so we
+[02:04:32] can download it. And Canva is going to
+[02:04:35] grab our beautiful re for us to kick
+[02:04:36] some butt. This is cool. Exporting it in
+[02:04:38] slow motion. Actually, the next thing
+[02:04:40] we're then going to want to do is to
+[02:04:41] grab the um let's have a look. There you
+[02:04:44] go. File URL. That's a style download.
+[02:04:46] That's awesome. And then we want to grab
+[02:04:47] air table 2. So type in air table. Uh we
+[02:04:50] are going to go for search records.
+[02:04:52] Let's have a look. Base is going to be
+[02:04:55] what did we call this base? It's canva
+[02:04:57] quotes,
+[02:05:00] right? Phenomenal. Cool. Table is going
+[02:05:02] to be table
+[02:05:04] one. Uh sort. No, don't worry about
+[02:05:07] that. I'm only really interested in my
+[02:05:09] number quotes, captions. That's fine.
+[02:05:11] And then we want to give it a little bit
+[02:05:13] of a formula. All right. So I believe
+[02:05:15] it's just simply this which is going to
+[02:05:18] be
+[02:05:19] number okay equals and then whatever
+[02:05:22] this is. All right. So if I limit is
+[02:05:25] going to be one obviously cuz we only
+[02:05:27] want one quote. So if I do this and if I
+[02:05:30] come out and I just run this module one
+[02:05:32] and I just say okay pull me quote
+[02:05:34] five and then this says hey I put
+[02:05:37] fields. Let's have a look. Now guys, in
+[02:05:39] the air table itself, we're going to
+[02:05:40] have this quote, which is number equals.
+[02:05:42] And then we're going to add in this guy
+[02:05:44] here, which is going to be the
+[02:05:46] incremental function. And then in our
+[02:05:48] air table, we just need to add all these
+[02:05:51] guys in, which I will just do very
+[02:05:53] quickly. I think I just copy all these
+[02:05:55] guys actually. Okay, so just type in
+[02:05:56] numbers one through to 50 here. I come
+[02:05:59] back over then to our beautiful
+[02:06:01] scenario. I think we are then ready to
+[02:06:02] rock and roll. So the video URL is going
+[02:06:05] to be the one that we got from Canva.
+[02:06:07] Let's come down here and find that file
+[02:06:09] URL is there. And then it hasn't yet got
+[02:06:12] the records. But if I come down, it
+[02:06:13] should be captions there.
+[02:06:15] Oops. It's going to be captions. Of
+[02:06:17] course, you can do cover frames,
+[02:06:19] whatever you like to or just take a
+[02:06:20] screenshot. You can edit that
+[02:06:21] afterwards. So then if I come over and
+[02:06:23] run this entire automation from scratch,
+[02:06:25] it should work beautifully. So run
+[02:06:26] scenario. And then guys, you just set
+[02:06:28] this to run incrementally. And then
+[02:06:29] it'll go rule number one, rule number
+[02:06:31] two, rule number three, rule number
+[02:06:32] four, all the way down until it's
+[02:06:34] completed every single rule that you've
+[02:06:35] got. Meaning you can just schedule 50
+[02:06:37] posts in one single go. And you can see
+[02:06:39] guys, Cam's bought it down. There's the
+[02:06:40] quote. Focus isn't about adding more.
+[02:06:43] It's about the ruthless elimination of
+[02:06:45] distractions # focus wins. And then it's
+[02:06:48] posted for us on Instagram. Beautiful
+[02:06:50] guys. Then finally, the next section in
+[02:06:52] automation number five is going to be
+[02:06:53] datim. So we're going to look at content
+[02:06:55] performance and then competitive
+[02:06:57] intelligence. So looking at content
+[02:06:59] performance. So I've got this scenario
+[02:07:00] here. I'm going to upload one just in
+[02:07:02] the same way that we've scoped
+[02:07:03] everything else with amplify. We can do
+[02:07:05] the exact same thing with Instagram. So
+[02:07:07] for instance, I can come down here. I
+[02:07:08] can import a blueprint. Okay. So I've
+[02:07:10] updated one here and it's basically
+[02:07:11] going to work exactly the same way as
+[02:07:13] everything else. I've got an air table
+[02:07:15] that basically has all the I just for
+[02:07:17] example, let's say I want to understand
+[02:07:19] what content is going viral on Instagram
+[02:07:21] for my niche, right? All I basically do
+[02:07:22] is I come down. I've got this air table.
+[02:07:24] So for example, I've got this Instagram
+[02:07:26] scraper that has lots of different
+[02:07:27] accounts that do AI content. And
+[02:07:29] basically what I do in this scenario
+[02:07:31] here is I come over. It grabs a record
+[02:07:34] from there. So, for example, it will
+[02:07:36] grab these five accounts. Okay? And
+[02:07:37] ultimately what it'll then do, guys,
+[02:07:39] ultimately is output something like this
+[02:07:40] that has every account, the video, if
+[02:07:42] you just want to check it out and watch
+[02:07:43] it like this. So, I can say, "Hey, well,
+[02:07:45] what's this person done? They've got
+[02:07:46] 1322 likes. Let's check it out. Let's
+[02:07:49] have a look if it'll let me do it." A
+[02:07:51] free alternative to chat GPT's $200.
+[02:07:54] Beautiful, right? Very, very cool. And
+[02:07:56] what's the transcript? Downloads the
+[02:07:58] entire transcript for us. Plexi just
+[02:07:59] released a free alternative to Chat
+[02:08:00] GPT's blah blah blah. very simple. How
+[02:08:03] many likes, how many views, how many
+[02:08:04] comments? Uh again, captions, creative
+[02:08:06] dates, all this other really stuff as
+[02:08:08] well as captions. So, I can actually
+[02:08:09] look through this and say, "This is
+[02:08:11] really cool. Uh what if I don't know, I
+[02:08:14] want to see what the highest performing
+[02:08:15] ones are? Okay, this has got 5,569
+[02:08:18] comments. Cool. What's that about?" And
+[02:08:19] then you can go through and check them
+[02:08:21] all out. So, in the actual scenario
+[02:08:23] itself, which is record, we again are
+[02:08:26] using, as you can see from NHN, the
+[02:08:29] exact same process for everything else.
+[02:08:31] insert this information, get the JSON,
+[02:08:33] it downloads it. We then get all the
+[02:08:35] information. Then we're going to
+[02:08:36] download the video. You can download the
+[02:08:38] video, guys. Let me just get rid of this
+[02:08:40] uh all this uh notifications popping up
+[02:08:42] on the right. And all you're going to do
+[02:08:43] is simply download the video that just
+[02:08:45] went through there. And essentially,
+[02:08:47] what this code's going to do is convert
+[02:08:50] the video into a format that OpenAI can
+[02:08:52] understand. And then we're going to use
+[02:08:54] the transcriber module for AI that's
+[02:08:56] going to transcribe the whole thing for
+[02:08:58] us and turn it into information. And
+[02:09:00] when we download this video guys, what
+[02:09:02] we'll get is all the information, all
+[02:09:04] the likes, all the comments, the
+[02:09:06] hashtags, everything. And then you just
+[02:09:07] simply come on to Air Table and then you
+[02:09:09] update all of these things together for
+[02:09:11] account, the video, the transcript, the
+[02:09:13] likes, views, the comments, the
+[02:09:14] captions, everything that you could
+[02:09:16] possibly need. I've got the full
+[02:09:17] transcript for this in the community on
+[02:09:19] the Instagram scraper. You can just
+[02:09:20] basically download it. It costs about $1
+[02:09:22] to do 50 accounts with this stuff. But
+[02:09:24] what it basically means is you can get
+[02:09:25] this beautiful view here every week uh
+[02:09:29] of what's going live in every single
+[02:09:31] niche. You can do the exact same thing
+[02:09:32] for Tik Tok as Instagram. So for
+[02:09:34] example, if you go over to the beautiful
+[02:09:37] Appify, one of the things that we can do
+[02:09:39] is I come over to my console real quick.
+[02:09:41] Any account you can imagine, right? I go
+[02:09:42] to the Appify store. I can do I want Tik
+[02:09:45] Tok. Okay, sweet. Let's do Tik
+[02:09:47] Tok. Beautiful. Tik Tok will appear. Tik
+[02:09:49] Tok data extractor. So any competitor
+[02:09:51] across any niche we can go we can grab
+[02:09:53] and we can have a look at what content's
+[02:09:55] out there and how you can improve it.
+[02:09:57] Now the next one I want to look at is
+[02:09:58] going to be a competitive intelligence
+[02:10:00] version of this. So what we can do
+[02:10:02] really interestingly with this one guys
+[02:10:04] and we'll build this one together is
+[02:10:06] let's say that I want to get a summary
+[02:10:08] every week of all of the Google reviews
+[02:10:10] for my competitors in a document. So I
+[02:10:12] can say great what are the customers
+[02:10:14] saying about what they love about the
+[02:10:16] service and what are they saying about
+[02:10:17] what they dislike about the service. I
+[02:10:19] can also set up Google alerts. So
+[02:10:21] anytime their name is mentioned in the
+[02:10:23] press, I get an email that can come
+[02:10:25] through to an agent and then that agent
+[02:10:27] can then compile a report for me. Say,
+[02:10:29] "Hey, Meoo Enterprises was mentioned
+[02:10:32] five times this week. Here's everything
+[02:10:33] that was said about it." And then we can
+[02:10:35] leverage that to make some really epic
+[02:10:36] stuff. So say for example, I want to do
+[02:10:38] that. Well, what I would do first of all
+[02:10:39] as before is going to do an Appify
+[02:10:41] scraper. So let's head over to Appify
+[02:10:44] and let's just do
+[02:10:46] Google reviews. All right, beautiful.
+[02:10:50] So, Google Maps review scraper. So, what
+[02:10:52] we would do first of all is find the
+[02:10:54] business on Google reviews. So, here is
+[02:10:57] the gym I like to go to, which is this
+[02:10:59] cool Ultraflex gym. Here we go. Let's
+[02:11:02] check out the reviews. They have got
+[02:11:04] 4.618. I think that's pretty cool. All
+[02:11:06] right, so you basically enter as many of
+[02:11:09] your competitors here as you want to.
+[02:11:10] Add in the next one. The next one could
+[02:11:12] be this guy. Blah blah blah. All the
+[02:11:14] different gyms and competitors you want
+[02:11:15] to track on Google. Okay. Then number of
+[02:11:18] reviews, we don't need to know that. But
+[02:11:21] what I would want to do is only really,
+[02:11:22] it depends on the frequency, guys, of
+[02:11:24] how often you'd like this report. Maybe
+[02:11:26] you want to get it every 7 days, maybe
+[02:11:28] every 14 days, every month, whatever you
+[02:11:30] recommend. I think if you're going to do
+[02:11:32] meaningful data, I would do 28 days, but
+[02:11:35] just for the purposes of this, I'm going
+[02:11:37] to put in seven. Uh, and then all you're
+[02:11:39] going to do, guys, is come over to the
+[02:11:40] JSON. We are very simply going to copy
+[02:11:44] all the JSON. We're going to head over
+[02:11:45] to Claude. We're going to say, hey,
+[02:11:47] create me a curl for
+[02:11:50] this. Appify
+[02:11:53] scraper. And then I'm going to say the
+[02:11:56] scraper is called. And then you come
+[02:11:59] back over to uh appy. And you just copy
+[02:12:02] this here. Compass.google maps review
+[02:12:04] scraper. Boom. Enter that in. Bam. And
+[02:12:06] then we come back over to our N8
+[02:12:08] scenario. And we're going to click on
+[02:12:09] import curl. Come over here. And here's
+[02:12:11] a curl command. This is going to be
+[02:12:13] post. It's very nice how it tells us
+[02:12:15] that sort of stuff. We come back over
+[02:12:17] here and then we enter that in like so.
+[02:12:18] Click on import. It's already changed
+[02:12:20] the method to post. And then we enter
+[02:12:22] our API token. And then we're just going
+[02:12:24] to say ace now write me a URL curl to
+[02:12:30] download the data once it has finished
+[02:12:35] processing. And then we're going to copy
+[02:12:37] this guy. Bring this one over. Same
+[02:12:39] thing again. HTTP request import curl.
+[02:12:42] Beautiful. All right. Sweet. And then
+[02:12:43] we're going to enter our API tokens,
+[02:12:45] which if you remember correctly is
+[02:12:48] located over here under personal uh
+[02:12:50] settings, I believe. Yes. And then come
+[02:12:53] over to account and API integrations.
+[02:12:55] And then just copy this guy and then
+[02:12:57] come back over and then enter it into
+[02:12:59] the uh parameters. Beautiful. And then
+[02:13:00] what we can do is simply run this
+[02:13:02] automation once. And actually guys, I've
+[02:13:03] just had to change this a little bit.
+[02:13:04] You need to basically make sure you're
+[02:13:06] pulling this HTTP request from the left
+[02:13:09] hand side and then token. Just enter
+[02:13:10] your API token right here. And just down
+[02:13:12] here where it says API token. It should
+[02:13:14] be duplicative but why not just include
+[02:13:15] it. We come out and then let's just pin
+[02:13:17] this data as a for instance uh just to
+[02:13:20] run the module. And then we click on run
+[02:13:22] once for this guy testing workflow. And
+[02:13:25] it seems to have gotten all the
+[02:13:26] information. So let's have a good look
+[02:13:27] at what it's delivered. Cool. So this is
+[02:13:29] saying hey it didn't get any
+[02:13:30] information. So let's just go back over
+[02:13:32] to amplify. So guys I think this one
+[02:13:33] didn't work because we set to the last 7
+[02:13:36] days and I don't think they've had
+[02:13:37] anything in the last 7 days. So I do
+[02:13:39] last 28 days and test the step of this
+[02:13:42] one. That's cool. And now we can run the
+[02:13:44] scenario next. So what I've done guys,
+[02:13:45] I've just removed the review start days
+[02:13:48] thing. Let's test this step real quick.
+[02:13:50] Beautiful. It's found the information
+[02:13:52] and then we can do the second part of
+[02:13:53] the
+[02:13:54] automation. And let's just check that
+[02:13:56] it's running in the background, which it
+[02:13:58] should be. There you go. 4 GB. That's
+[02:14:00] phenomenal. Let's see how that's getting
+[02:14:01] on on the run
+[02:14:04] section. And look at this guys. 118
+[02:14:07] results. That's pretty flipping cool. So
+[02:14:09] I come back over then to our phenomenal
+[02:14:11] scenario which is right here. And then
+[02:14:14] what I can do, I'm going to come down
+[02:14:15] here. I'm going to pin this data. Come
+[02:14:17] here and run this one. And then we
+[02:14:18] should get an output with every single
+[02:14:20] review of our competitors which you can
+[02:14:21] then do with whatever we like. So just
+[02:14:23] out view loading the binary data. And
+[02:14:27] there is absolutely everything you could
+[02:14:30] possibly want there. All the JSON pretty
+[02:14:33] freaking cool. Very very nice. Then I
+[02:14:35] can say hey let's add some code. So I
+[02:14:36] can do some code here. And what I want
+[02:14:38] to do is basically turn all of this
+[02:14:41] beautiful information here into some
+[02:14:43] text that we can deal with. So I can
+[02:14:44] say, hey, write me some code in NAN to
+[02:14:48] turn this binary data into a JSON output
+[02:14:55] into a list of reviews with the core
+[02:15:02] data numbered. And we'll give our little
+[02:15:04] photo. And we can come back and provide
+[02:15:05] a second photo as well. What the JSON
+[02:15:07] looks
+[02:15:11] like. Beautiful. Come back over here.
+[02:15:14] Phenomenal. And then we can hit enter.
+[02:15:16] Beautiful. Double click on the code. And
+[02:15:17] then we just enter this information and
+[02:15:19] we can test the
+[02:15:22] step. Cool. We just change the syntax.
+[02:15:25] Okay guys. Beautiful. So we're going to
+[02:15:26] call this one here
+[02:15:30] competitor intelligence. Beautiful. So
+[02:15:33] essentially what this is going to do for
+[02:15:34] us now is based on that individual
+[02:15:36] business periodically we can get that to
+[02:15:39] download and run whenever we want it to
+[02:15:42] run. You can do that over here by
+[02:15:43] clicking I believe it's schedule
+[02:15:45] um schedule trigger. So we can come down
+[02:15:48] here. We can set the number of interval
+[02:15:49] of days how often we'd like it to run.
+[02:15:51] So for instance this one could be every
+[02:15:53] 7 days 28 days. There's a video on my
+[02:15:55] YouTube channel actually. I'll show you
+[02:15:56] very quickly what that looks like. So on
+[02:15:57] my channel there's a full video on
+[02:15:59] competitive intelligence automation that
+[02:16:01] I really encourage you to check out and
+[02:16:02] I show you there loads of different ways
+[02:16:04] that you could actually build that. Uh
+[02:16:06] somebody in my community Jonathan there
+[02:16:07] sold three 300 bucks a month to 45
+[02:16:10] clients I think is over 80 now. There's
+[02:16:12] so many applications with this
+[02:16:13] particular one. But if I come back over
+[02:16:15] here to this automation here guys we set
+[02:16:17] the interval instead of uh clicking
+[02:16:18] workflow here. Come down. Beautiful.
+[02:16:20] Connect these guys together. This will
+[02:16:22] give you the JSON output for absolutely
+[02:16:24] everything. And with that JSON, we can
+[02:16:26] connect to Chat GBT. We can add coding
+[02:16:28] modules. We can pull it, extract it, and
+[02:16:30] manipulate it in a million different
+[02:16:31] ways, meaning you get the information.
+[02:16:32] And then we can just add a AI sentiment
+[02:16:35] analysis bar to check everything that
+[02:16:37] happens. And now we've completed all
+[02:16:39] five different dimensions for these AI
+[02:16:40] automations. All the blueprints are
+[02:16:42] going to be available in the community
+[02:16:43] with digital support. So you can just
+[02:16:44] plug and play these if you like. But in
+[02:16:46] any case, I hope you have a beautiful
+[02:16:47] week. Watch this video on screen if you
+[02:16:49] want to go another level deeper with AI
+[02:16:51] automations. But in any case, I wish you
+[02:16:52] have a beautiful week and I'll see you
+[02:16:54] inside the next

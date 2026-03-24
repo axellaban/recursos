@@ -1,0 +1,1084 @@
+{
+  "name": "🧲 LinkedIn Lead Magnet",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "4da72753-ab1b-4973-917f-23e6bdc97d23",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        340,
+        640
+      ],
+      "id": "a5a74872-903c-4071-8fd1-cb371ce84b61",
+      "name": "Webhook",
+      "webhookId": "4da72753-ab1b-4973-917f-23e6bdc97d23",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ad5d6c05-07ea-407f-98be-2d9186c917a0",
+              "name": "Tone of voice",
+              "value": "=Professional.",
+              "type": "string"
+            },
+            {
+              "id": "96cb65b9-cae4-47d2-b908-214e8a337a53",
+              "name": "Topic",
+              "value": "=What does the science say about how many men it would take to defeat a gorilla?",
+              "type": "string"
+            },
+            {
+              "id": "ed7ad228-835c-4ab7-ab7e-848f329c3977",
+              "name": "Platform",
+              "value": "=LinkedIn",
+              "type": "string"
+            },
+            {
+              "id": "f9ac6a8b-a027-4b52-b363-2c820ab39cc6",
+              "name": "Avatar",
+              "value": "=Dental practice owners.",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        760,
+        860
+      ],
+      "id": "c1215ac0-a937-46ca-be21-d82e938c8727",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json['Tone of voice'] }}\n{{ $json.Topic }}\n{{ $json.Platform }}\n{{ $json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are a helpful assistant\n\nRole: You are a specialized Research Analyst. Your sole purpose is to identify and researcXh recent news topics relevant to a specific professional audience and compile the findings into a structured JSON output. You do not create the final content, only provide the research material.\n\nContext: You will receive details about the target audience (Avatar), the service provided to them (Problem We Solve), their location (Country), and the current timestamp. You will use the Tavily tool to search for recent news.\n\nInputs Provided:\nTarget Avatar: {{ $json.Avatar }} \nProblem We Solve: {{ $json['problem you solve'] }}\nTarget Country: UK \nCurrent Timestamp: {{ $now }}\n\nYour Task:\n1.  Determine Date Range: Use the provided Current Timestamp: {{$now}} to identify the date range covering the immediately preceding 7 days. \n2.  Identify & Research Relevant News Topics: Use the Tavily tool to scan reputable online news sources for articles/updates published within the calculated 7-day date range. Identify exactly three (3) distinct news topics that are highly relevant to the Target Avatar ({{ $json.Avatar }}) operating in the Target Country (UK). Focus on topics impacting their industry, business operations, challenges, or opportunities, particularly relating to how {{ $json['problem you solve'] }}.\n\n\n3.  Extract Key Information: For each topic, determine a concise summary, a potential angle, key details, and its relevance to the target audience based on your research.\n\nCritically, ensure these three topics offer different perspectives or focus areas related to the subject to provide genuine variety for the user.\n\nRequired Output Format:\nYour response MUST be ONLY a single, valid JSON object following this exact structure. Do NOT include any text, explanations, markdown formatting, or conversational filler before or after the JSON object. Ensure all string values within the JSON are properly escaped.\n\n{\n  \"idea_1\": {\n    \"concise_summary\": \"A brief (1-2 sentence) overview identifying the core news topic or idea found.\",\n    \"angle_approach\": \"Suggest a specific angle or hook (1-2 sentences) for framing this topic in a LinkedIn post for the Target Avatar ({{ $json.Avatar }}). Consider how it relates to {{ $json['problem you solve'] }}.\",\n    \"details\": \"List key details extracted from the research (2-4 bullet points or sentences). Include specific statistics, names, key findings, data points, source names, or update summaries mentioned in the source articles.\",\n    \"relevance\": \"Explain clearly (2-3 sentences) WHY this topic and its details are relevant and insightful for the Target Avatar ({{ $json.Avatar }}), considering their business challenges, patient acquisition, or market opportunities in the UK.\"\n  },\n  \"idea_2\": {\n    \"concise_summary\": \"A brief (1-2 sentence) overview identifying the core news topic or idea found.\",\n    \"angle_approach\": \"Suggest a specific angle or hook (1-2 sentences) for framing this topic in a LinkedIn post for the Target Avatar ({{ $json.Avatar }}). Consider how it relates to {{ $json['problem you solve'] }}.\",\n    \"details\": \"List key details extracted from the research (2-4 bullet points or sentences). Include specific statistics, names, key findings, data points, source names, or update summaries mentioned in the source articles.\",\n    \"relevance\": \"Explain clearly (2-3 sentences) WHY this topic and its details are relevant and insightful for the Target Avatar ({{ $json.Avatar }}), considering their business challenges, patient acquisition, or market opportunities in the UK.\"\n  },\n  \"idea_3\": {\n    \"concise_summary\": \"A brief (1-2 sentence) overview identifying the core news topic or idea found.\",\n    \"angle_approach\": \"Suggest a specific angle or hook (1-2 sentences) for framing this topic in a LinkedIn post for the Target Avatar ({{ $json.Avatar }}). Consider how it relates to {{ $json['problem you solve'] }}.\",\n    \"details\": \"List key details extracted from the research (2-4 bullet points or sentences). Include specific statistics, names, key findings, data points, source names, or update summaries mentioned in the source articles.\",\n    \"relevance\": \"Explain clearly (2-3 sentences) WHY this topic and its details are relevant and insightful for the Target Avatar ({{ $json.Avatar }}), considering their business challenges, patient acquisition, or market opportunities in the UK.\"\n  }\n}\n\nConstraint Checklist & Final Check:\n- Output is ONLY valid JSON.\n- Output matches the required structure with \"idea_1\", \"idea_2\", \"idea_3\" and the four fields within each: concise_summary, angle_approach, details, relevance.\n- Content is based SOLELY on the research performed using the tool within the 7-day date range.\n- No extra conversational text included."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        980,
+        860
+      ],
+      "id": "cc5edc87-b496-4da6-a73f-f25dd64e5b65",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        880,
+        1120
+      ],
+      "id": "4218068e-190c-415a-898a-e38565661369",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this to search the internet for research",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization",
+              "valueProvider": "fieldValue",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            {
+              "name": "query"
+            },
+            {
+              "name": "max_results",
+              "valueProvider": "fieldValue",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1080,
+        1140
+      ],
+      "id": "651dbe10-f11e-4f6d-8e91-2c7e81b17803",
+      "name": "Tavily"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"idea_1\": {\n    \"concise_summary\": \"Brief overview of the first topic (e.g., New NHS practice openings announced in Somerset).\",\n    \"angle_approach\": \"Angle suggestion (e.g., Highlight growing demand, opportunity for private practices to fill gaps or differentiate).\",\n    \"details\": \"Key facts found (e.g., Practices in Chard/Crewkerne. Part of national access improvement effort. Source: BBC News, April 28).\",\n    \"relevance\": \"Why it matters (e.g., Confirms high demand. Practices can leverage this news to promote their availability or specialized services).\"\n  },\n  \"idea_2\": {\n    \"concise_summary\": \"Brief overview of the second topic.\",\n    \"angle_approach\": \"Angle suggestion for topic 2.\",\n    \"details\": \"Key facts found for topic 2 (e.g., Specific stat mentioned, expert quoted from Dentistry.co.uk).\",\n    \"relevance\": \"Why topic 2 matters to UK dental practices seeking customers.\"\n  },\n  \"idea_3\": {\n    \"concise_summary\": \"Brief overview of the third topic.\",\n    \"angle_approach\": \"Angle suggestion for topic 3.\",\n    \"details\": \"Key facts found for topic 3.\",\n    \"relevance\": \"Why topic 3 matters for practice growth or patient communication.\"\n  }\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1280,
+        1120
+      ],
+      "id": "4f168c0e-cd04-4218-9b84-8745b634494d",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the AI Agent's output data (current item for the Code node)\nconst aiAgentOutputItem = items[0];\n// Assuming the AI output {idea_1:...} is directly in the json property\nconst ideasObject = aiAgentOutputItem.json;\n\n// *** Get context data from the 'Edit Fields' node using the new expressions ***\n// We assume the node is named 'Edit Fields'. If not, update the name within the $() calls.\n// We also use .first() to ensure we get the item from the first run if the node ran multiple times.\n// Using try-catch block for better error handling around accessing node data.\nlet contextDataJson;\ntry {\n    // Attempt to get the JSON data from the 'Edit Fields' node's first item\n    contextDataJson = $('Edit Fields').first().json;\n\n    // Check if context data JSON exists after retrieval\n    if (!contextDataJson) {\n        throw new Error(\"JSON data is missing from the 'Edit Fields' node's first item.\");\n    }\n} catch (error) {\n    console.error(`Error accessing data from node 'Edit Fields': ${error.message}`);\n    // Depending on requirements, you might want to throw the error again\n    // or return an empty array if context is absolutely required.\n    throw new Error(`Could not retrieve valid JSON data from node 'Edit Fields'. Please check the node name and ensure it ran successfully and produced JSON output. Original error: ${error.message}`);\n}\n\n\nconst newItems = []; // Array to hold the new items\n\n// Check if ideasObject exists and is an object\nif (!ideasObject || typeof ideasObject !== 'object' || Object.keys(ideasObject).length === 0) {\n    console.warn(\"Input 'ideasObject' is missing, not an object, or empty:\", JSON.stringify(aiAgentOutputItem.json));\n    // Return empty array if there are no ideas to process\n    return [];\n}\n\n// Loop through each idea provided by the AI Agent\nfor (const ideaKey in ideasObject) {\n    // Ensure we are iterating over own properties, not inherited ones\n    if (ideasObject.hasOwnProperty(ideaKey)) {\n        const ideaData = ideasObject[ideaKey]; // The specific idea's data (summary, angle, etc.)\n\n        // Ensure ideaData is valid (e.g., an object) before processing\n        if (ideaData && typeof ideaData === 'object') {\n\n            // Combine the specific idea data and the context data using the new expressions\n            const combinedData = {\n                ...ideaData, // Spread the idea data (summary, angle, details, relevance)\n\n                // Add context fields using the new expressions.\n                // Using nullish coalescing (??) provides a default empty string if a field is missing.\n                'Tone of voice': contextDataJson['Tone of voice'] ?? '', // Accessing with brackets for space\n                'Topic': contextDataJson.Topic ?? '',                     // Added Topic\n                'Platform': contextDataJson.Platform ?? '',               // Added Platform\n                'Avatar': contextDataJson.Avatar ?? '',\n                'problem you solve': contextDataJson['problem you solve'] ?? '', // Keep existing ones if needed\n                'CTA': contextDataJson.CTA ?? '',\n                'Make Content on': contextDataJson['Make Content on'] ?? '' // Keep existing ones if needed\n            };\n\n            // Create the new item structure expected by the workflow\n            newItems.push({ json: combinedData });\n\n        } else {\n            // Log a warning if data for a specific idea key isn't valid\n            console.warn(`Data for idea key \"${ideaKey}\" is not a valid object, skipping item creation. Data received:`, JSON.stringify(ideaData));\n        }\n    }\n}\n\n// Check if any items were actually created before returning\nif (newItems.length === 0) {\n    console.warn(\"No valid idea items were created from the input ideasObject. Check the AI output and the loop logic.\");\n}\n\n// Return the array of newly structured items\nreturn newItems;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1380,
+        860
+      ],
+      "id": "4a48f4df-8386-4920-847c-020ef76c5714",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "content": "# 🤖 AI Agent",
+        "height": 600,
+        "width": 1160
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        480,
+        740
+      ],
+      "typeVersion": 1,
+      "id": "eb3e8f5b-a42b-47b5-b5e8-703ff6eac6a6",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "# 🔥 LinkedIN 1",
+        "height": 380,
+        "width": 440,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1980,
+        780
+      ],
+      "typeVersion": 1,
+      "id": "b391d79a-01d2-40c5-a6ec-88ce929258f7",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=\"post_1\": \"{{ $json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_2\": \"{{ $('AI Agent2').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}\",\n  \"post_3\": \"{{ $('AI Agent1').item.json.output.state.replace(/\\\"/g, '\\\\\\\"').replace(/\\n/g, '\\\\n') }}",
+              "role": "assistant"
+            },
+            {
+              "content": "=Role: You are an expert AI that transforms impactful article insights into vivid Ghibli-style image prompts for generative AI.\n\nContext: You will be given the full text of an article relevant to a professional audience (e.g., UK Dental Practices). Your task is to extract the single most compelling statistic, number, or key insight—and use it to create a natural-language image prompt in the style of Studio Ghibli.\n\nInput:\n\n[The full text of the article will be provided here by the system calling you.]\n\nYour Task:\n\nRead the article thoroughly.\n\nIdentify the most striking statistic or central idea, preferably a number or action (e.g., “17 doctors left,” “45% drop in funding,” etc.).\n\nGenerate a Studio Ghibli-style image prompt describing a soft, whimsical, emotionally resonant scene featuring a human character that embodies or reacts to the insight, with a symbolic or literal environment in the background.\n\nWrite the prompt as a single sentence, in the format suitable for a text-to-image model (e.g., “Create a Ghibli-style illustration of...”).\n\nOutput Format:\n\nReturn ONLY the resulting Ghibli-style image prompt as plain text. Do not include any explanation, summary, or extra formatting—just the prompt."
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        3720,
+        1960
+      ],
+      "id": "784ef6ca-e49d-4058-9ce3-e116d05ac9e0",
+      "name": "Image Prompter",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gpt-image-1\",\n  \"prompt\": \"{{ $json.message.content }}\",\n  \"n\": 1,\n  \"size\": \"1024x1024\",\n  \"quality\": \"high\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4100,
+        1960
+      ],
+      "id": "8904fae2-f0b3-4285-b4bd-2cae6abda09d",
+      "name": "💎 Generate Images",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dbda83f8-5ec1-4f86-ba96-7da9385bd058",
+              "name": "B64",
+              "value": "={{ $json.data[0].b64_json }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4340,
+        1960
+      ],
+      "id": "c5a2a552-bd39-4f75-8cef-fbcaf173f902",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const base64String = $json.B64;\n\nconst binaryData = Buffer.from(base64String, 'base64');\n\nreturn {\n  binary: {\n    data: {\n      data: binaryData,\n      mimeType: 'image/png',\n      fileName: 'generated-image.png'\n    }\n  }\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4540,
+        1960
+      ],
+      "id": "790e66dc-55ac-4d05-9849-e2751b144233",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "inputDataFieldName": "=data",
+        "name": "={{$binary.data.fileName}}",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1C_XDP-G0rh7WRAnWMxhYM14giPFHQJlO",
+          "mode": "list",
+          "cachedResultName": "lOVEABLE images",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1C_XDP-G0rh7WRAnWMxhYM14giPFHQJlO"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        4760,
+        1960
+      ],
+      "id": "a9d8b47b-43ec-42e4-89e8-1c390478e409",
+      "name": "Google Drive",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "UUpiFNAs39jvIMt5",
+          "name": "Google Drive account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🔥 LinkedIN 3",
+        "height": 380,
+        "width": 440,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3040,
+        780
+      ],
+      "typeVersion": 1,
+      "id": "92e76f90-f6f8-43a4-bfd3-9fbc401c06a3",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "# 🔥 LinkedIN 2",
+        "height": 380,
+        "width": 440,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2520,
+        780
+      ],
+      "typeVersion": 1,
+      "id": "ee26c852-c63b-4dbb-9591-42c3f01adb28",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_1.concise_summary }}\n{{ $json.idea_1.angle_approach }}\n{{ $json.idea_1.details }}\n{{ $json.idea_1.relevance }}\n\n{{ $json.Topic }}\n{{ $json['Tone of voice'] }}\n{{ $json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed LinkedIn expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized LinkedIn post based on the Input Topic Data above, incorporating LinkedIn posting best practices and using the structure outlined below:\n\n1.  **Provide the Context or Main Idea:** Start with a brief summary or main point based on the `Concise Summary` and `Relevance` provided. This includes the key message or argument. Use the `Suggested Angle / Hook` to make the opening engaging.\n2.  **Add Personal or Relatable Anecdotes:** If appropriate for the tone and topic, include any relatable anecdotes that connect the context or main idea to real-life scenarios for the `Target Audience`.\n3.  **Incorporate Engaging Elements:** Make the post engaging by using:\n    * Questions to the audience (`Target Audience`) to provoke thought or responses related to the topic.\n    * Compelling statistics or data points from the `Key Details` to support the argument.\n    * Calls to action (subtly leading towards `{{ $json.CTA }}`) encouraging readers to think, act, or share their own experiences.\n    * Relevant emojis or symbols (if fitting the tone) for emphasis and to draw attention to key points.\n4.  **Specify Hashtags and Keywords:** At the very end of the post, provide a list of 3-5 relevant hashtags/keywords to enhance visibility. Generate these based on the topic details and relevance (e.g., #UKDentistry #DentalPractice #PatientAcquisition #[RelevantTopicKeyword]).\n5.  **Optional Additional Details:** Consider if a specific layout (like a list based on `Key Details`, or a comparison) would enhance the post, referencing the examples below for inspiration.\n6.  **No URL:** Do not include the original URL from the research. The post must stand alone.\n7.  **No Prompt Text:** Do not include any part of this prompt or these guidelines in your final output. You must include only what is needed to create an excellent LinkedIn post according to these instructions.\n8.  **Subtle CTA Implementation:** Ensure you naturally weave in a subtle Call to Action related to the `Subtle CTA Goal` (`{{ $json.CTA }}`) towards the end of the post.\n\n**Here are a few examples of excellent LinkedIN posts for inspiration on structure, engagement, and tone (adapt content to the specific topic data provided):**\n\n\n\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nYou will create an optimized LinkedIn post based on that article, incorporating LinkedIn posting best practices and using the structure outlined below:\n \n1. Provide the Context or Main Idea: Start with a brief summary or main point of the article you want to transform into a LinkedIn post. This includes the key message or argument the article presents.\n2. Add Personal or Relatable Anecdotes: If appropriate, include any personal experiences or relatable anecdotes that can connect the context or main idea to real-life scenarios. This could be your own experiences or generalized scenarios that readers might find relatable.\n3. Incorporate Engaging Elements: Mention any specific elements you want included to make the post engaging, such as:\n   1. Questions to the audience to provoke thought or responses.\n   2. Compelling statistics or data points to support the argument.\n   3. Calls to action, encouraging readers to think, act, or share their own experiences.\n   4. Relevant emojis or symbols for emphasis and to draw attention to key points.\n4. Specify Hashtags and Keywords: Provide a list of hashtags or important keywords that should be included to enhance the visibility and relevance of the post on LinkedIn. These should be relevant to the main theme and helpful for reaching the right audience.\n5. Optional Additional Details: If there are any other specific details you want included, such as references to significant life events (as seen in your examples), or if there’s a specific layout or structure (like a list format or a direct comparison), mention these as well.\n6. Do not include the original URL at the bottom of the article. It should read as a complete LinkedIN post on its own merits, like the below examples.\n7. Do not include any any of this prompt or guidelines provided in your post. You must include only what is in your instructions to create an excellent linkedIN post\n \nHere are a few examples of excellent LinkedIN posts\n \nExample 1\nIs anyone still actually debating work from home options?\n \nAt previous companies, I used to put on a pressed shirt and slacks and drive 35 minutes to an office that smelled of cleaning product and coffee.\n \nI wasn’t comfortable for the entire day. If I felt tired and needed a break - too bad, look busy.\n \nIf I wanted to just get up and leave for 20 mins to collect my thoughts or be outside - too bad, look busy.\n \nNow I’ll have breakfast with my wife and kids and start work relatively early. I go outside and hit golf balls against a net when I need to think. I listen to podcasts at full volume. I sing.\n \nI take a gosh darn peloton break if I feel like it. I have never been more productive, because this is how humans thrive.\n \nAnd when I miss my work friends and general contact, which I do from time to time, I’ll head up to HQ and see them.\n \nAny employer dictating in-office work doesn’t trust you to be an adult and do your job. The option should be there - but it must actually be optional.\n \n#work #workfromhome #mentalhealth #peloton\n \nExample 2\n \nI recently discovered a hyper-effective LinkedIn post strategy.\n \nAnd today, I'm gonna let you steal it.\n \nHere it is:\n \nCombine significant life events with useful content.\n \n\"I turn 32 today. Here are 32 things I wish I knew 10 years ago:\"\n \n\"My business hit $1 million ARR today. Here's how I built it:\"\n \n\"I was offered my dream job today. Here are 7 steps I took to get it:\"\n \nThe event attracts engagement and the content attracts followers.\n \nTry it.\n \nP.S. 👇\n \n \nExample 3\n \nJust a quick shout out to content creators! If you see less impressions and lower reach, it's probably not just you.\n \nWe've seen a serious decrease in impressions in the last month, with equal engagement.\nThese are some numbers but we are still researching:\n \n🔻 -25% (!) on posts with more or less same engagement (likes and comments)\n🔻 -30% less impressions for text only posts\n🔻 -20% reach for document posts\n🔻 -35% reach for Newsletters (with over 15.000 subscribers)\n \nMore data will follow in September, but my own stats went down from 18.000 average impressions per post to 14.000 average.\n \n❓ Have you had similar experiences?\n❓ What content performs the best for you?\n \nExample 4\n\"We are hiring,\" \"Join our team,\" \"Here are our open positions.\"\n \nIf this is the way you are communicating your job ads on Linkedin, you are losing candidates. Here is why 👇\n \nYour post will only attract people actively looking for a new job. And usually, that is a minority.\nYou are failing to attract 3 relevant audiences.\n \nFirst, people who are not actively looking for a new job but could be interested in seeing what you are offering. They could consider applying or approaching you for more information if you get their attention.\n \nSecond, the friends and family of potential candidates. If you get their attention, they will refer your post to those interested.\n \nThird, people who are not interested in this particular job, but might decide to visit your careers page and find another position that is a better fit.\n \nIn addition, never lose sight of how people perceive you and your company. If you don't show that you care about your open position, why should the candidates?\n \nA few extra minutes of your time can make a big difference in attracting talent.\n \n \nExample 5\n \nA lot of Marketers assume SEO ranks are stable.\n \nOnce you rank #1 (or any position for that purpose), you \"made it\" and will stay there with a little maintenance work.\n \nIt makes sense to think that way because that's how it used to be.\n \nBut not anymore.\n \nAn example: the ranks for \"black dress\" (a keyword with 209,000 monthly searches in the US alone) flip almost daily.\n \nThe top 3 results have been bouncing between positions #1 and #7 over the last 6 months.\nWe need to anticipate rank fluctuations and define healthy position ranges, so we can optimize pages when they rank outside them.\n \nStart by monitoring rank fluctuations for your keywords, either in a 3rd party tool like Semrush or Ahrefs or with Google Search Console.\n \nA few more tips:\n \n1/ Analyze your top keywords and how much they fluctuate (will differ by competitiveness, user intent, etc.)\n \n2/ Add rank fluctuations to your organic traffic projections\n \n3/ Define alerts when keywords cross healthy rank ranges (most rank trackers can do this)\nRemember, using the outdated mental model of stable ranks means your traffic projections might be faulty and you constantly stress out over dropping ranks.\n \nGoogle is constantly a/b testing different results.\n \nUse the approach above and build a model for your site.\n \n \nExample 6\nRunning a company is a lot like making a great cup of coffee ☕️\n \n1) Start by deciding what kind of coffee you would like to make and creating the recipe (think: “vision”).\n \n2) Bring together the best ingredients you can. A better the coffee beans, grinder, filter, etc. will make a far better coffee. Same with the team at your company. You’re only as good as your weakest team member.\n \n3) Measure everything, test, and continually optimise over time.\n \n4) Be patient, and don’t rush it (this one is for me!!).\n \n5) Enjoy the results!\n \nWhat am I missing here?!\n \n#b2b #growth #marketing #buildinpublic #coffee\n \n \nExample 7\n \nThe UK can't afford to be left behind during this Fourth Industrial Revolution for the sake of the wealth of the nation, and its citizens.\n \n⏰ In a world of exponential change, hesitation is a recipe for irrelevance.\n \n🤔 You might doubt the transformative power of AI, but can you/we afford to be wrong given the compounding cost of inaction?\n \n🌍 Other nations are seizing this opportunity - the UK must do the same.\n \n🇬🇧 The UK should maintain its leadership in innovation, support entrepreneurship, and seek to maximise inclusivity.\n \n📢 This is my call to action - we must unite, invest, and embrace the AI revolution.\n \n🚢 The AI ship will leave the harbour, permanently. Let's make sure the UK is on it.\n \nhashtag#AI hashtag#artificialintelligence hashtag#uk hashtag#ukeconomy\n\n\n\n---\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized LinkedIn post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        2080,
+        900
+      ],
+      "id": "62520fa9-d0e2-4a43-bd3d-87d7b022f4b0",
+      "name": "AI Agent1"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2240,
+        1200
+      ],
+      "id": "72dfa130-7663-4c77-9017-362f81944948",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2040,
+        1100
+      ],
+      "id": "03b975c7-0307-46d6-abfb-b94102bbf057",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_2.concise_summary }}\n{{ $json.idea_2.angle_approach }}\n{{ $json.idea_2.details }}\n{{ $json.idea_2.relevance }}\n\n\n{{ $('Code').item.json['Tone of voice'] }}\n{{ $('Code').item.json.Topic }}\n{{ $('Code').item.json.Avatar }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed LinkedIn expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized LinkedIn post based on the Input Topic Data above, incorporating LinkedIn posting best practices and using the structure outlined below:\n\n1.  **Provide the Context or Main Idea:** Start with a brief summary or main point based on the `Concise Summary` and `Relevance` provided. This includes the key message or argument. Use the `Suggested Angle / Hook` to make the opening engaging.\n2.  **Add Personal or Relatable Anecdotes:** If appropriate for the tone and topic, include any relatable anecdotes that connect the context or main idea to real-life scenarios for the `Target Audience`.\n3.  **Incorporate Engaging Elements:** Make the post engaging by using:\n    * Questions to the audience (`Target Audience`) to provoke thought or responses related to the topic.\n    * Compelling statistics or data points from the `Key Details` to support the argument.\n    * Calls to action (subtly leading towards `{{ $json.CTA }}`) encouraging readers to think, act, or share their own experiences.\n    * Relevant emojis or symbols (if fitting the tone) for emphasis and to draw attention to key points.\n4.  **Specify Hashtags and Keywords:** At the very end of the post, provide a list of 3-5 relevant hashtags/keywords to enhance visibility. Generate these based on the topic details and relevance (e.g., #UKDentistry #DentalPractice #PatientAcquisition #[RelevantTopicKeyword]).\n5.  **Optional Additional Details:** Consider if a specific layout (like a list based on `Key Details`, or a comparison) would enhance the post, referencing the examples below for inspiration.\n6.  **No URL:** Do not include the original URL from the research. The post must stand alone.\n7.  **No Prompt Text:** Do not include any part of this prompt or these guidelines in your final output. You must include only what is needed to create an excellent LinkedIn post according to these instructions.\n8.  **Subtle CTA Implementation:** Ensure you naturally weave in a subtle Call to Action related to the `Subtle CTA Goal` (`{{ $json.CTA }}`) towards the end of the post.\n\n**Here are a few examples of excellent LinkedIN posts for inspiration on structure, engagement, and tone (adapt content to the specific topic data provided):**\n\n\n\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nYou will create an optimized LinkedIn post based on that article, incorporating LinkedIn posting best practices and using the structure outlined below:\n \n1. Provide the Context or Main Idea: Start with a brief summary or main point of the article you want to transform into a LinkedIn post. This includes the key message or argument the article presents.\n2. Add Personal or Relatable Anecdotes: If appropriate, include any personal experiences or relatable anecdotes that can connect the context or main idea to real-life scenarios. This could be your own experiences or generalized scenarios that readers might find relatable.\n3. Incorporate Engaging Elements: Mention any specific elements you want included to make the post engaging, such as:\n   1. Questions to the audience to provoke thought or responses.\n   2. Compelling statistics or data points to support the argument.\n   3. Calls to action, encouraging readers to think, act, or share their own experiences.\n   4. Relevant emojis or symbols for emphasis and to draw attention to key points.\n4. Specify Hashtags and Keywords: Provide a list of hashtags or important keywords that should be included to enhance the visibility and relevance of the post on LinkedIn. These should be relevant to the main theme and helpful for reaching the right audience.\n5. Optional Additional Details: If there are any other specific details you want included, such as references to significant life events (as seen in your examples), or if there’s a specific layout or structure (like a list format or a direct comparison), mention these as well.\n6. Do not include the original URL at the bottom of the article. It should read as a complete LinkedIN post on its own merits, like the below examples.\n7. Do not include any any of this prompt or guidelines provided in your post. You must include only what is in your instructions to create an excellent linkedIN post\n \nHere are a few examples of excellent LinkedIN posts\n \nExample 1\nIs anyone still actually debating work from home options?\n \nAt previous companies, I used to put on a pressed shirt and slacks and drive 35 minutes to an office that smelled of cleaning product and coffee.\n \nI wasn’t comfortable for the entire day. If I felt tired and needed a break - too bad, look busy.\n \nIf I wanted to just get up and leave for 20 mins to collect my thoughts or be outside - too bad, look busy.\n \nNow I’ll have breakfast with my wife and kids and start work relatively early. I go outside and hit golf balls against a net when I need to think. I listen to podcasts at full volume. I sing.\n \nI take a gosh darn peloton break if I feel like it. I have never been more productive, because this is how humans thrive.\n \nAnd when I miss my work friends and general contact, which I do from time to time, I’ll head up to HQ and see them.\n \nAny employer dictating in-office work doesn’t trust you to be an adult and do your job. The option should be there - but it must actually be optional.\n \n#work #workfromhome #mentalhealth #peloton\n \nExample 2\n \nI recently discovered a hyper-effective LinkedIn post strategy.\n \nAnd today, I'm gonna let you steal it.\n \nHere it is:\n \nCombine significant life events with useful content.\n \n\"I turn 32 today. Here are 32 things I wish I knew 10 years ago:\"\n \n\"My business hit $1 million ARR today. Here's how I built it:\"\n \n\"I was offered my dream job today. Here are 7 steps I took to get it:\"\n \nThe event attracts engagement and the content attracts followers.\n \nTry it.\n \nP.S. 👇\n \n \nExample 3\n \nJust a quick shout out to content creators! If you see less impressions and lower reach, it's probably not just you.\n \nWe've seen a serious decrease in impressions in the last month, with equal engagement.\nThese are some numbers but we are still researching:\n \n🔻 -25% (!) on posts with more or less same engagement (likes and comments)\n🔻 -30% less impressions for text only posts\n🔻 -20% reach for document posts\n🔻 -35% reach for Newsletters (with over 15.000 subscribers)\n \nMore data will follow in September, but my own stats went down from 18.000 average impressions per post to 14.000 average.\n \n❓ Have you had similar experiences?\n❓ What content performs the best for you?\n \nExample 4\n\"We are hiring,\" \"Join our team,\" \"Here are our open positions.\"\n \nIf this is the way you are communicating your job ads on Linkedin, you are losing candidates. Here is why 👇\n \nYour post will only attract people actively looking for a new job. And usually, that is a minority.\nYou are failing to attract 3 relevant audiences.\n \nFirst, people who are not actively looking for a new job but could be interested in seeing what you are offering. They could consider applying or approaching you for more information if you get their attention.\n \nSecond, the friends and family of potential candidates. If you get their attention, they will refer your post to those interested.\n \nThird, people who are not interested in this particular job, but might decide to visit your careers page and find another position that is a better fit.\n \nIn addition, never lose sight of how people perceive you and your company. If you don't show that you care about your open position, why should the candidates?\n \nA few extra minutes of your time can make a big difference in attracting talent.\n \n \nExample 5\n \nA lot of Marketers assume SEO ranks are stable.\n \nOnce you rank #1 (or any position for that purpose), you \"made it\" and will stay there with a little maintenance work.\n \nIt makes sense to think that way because that's how it used to be.\n \nBut not anymore.\n \nAn example: the ranks for \"black dress\" (a keyword with 209,000 monthly searches in the US alone) flip almost daily.\n \nThe top 3 results have been bouncing between positions #1 and #7 over the last 6 months.\nWe need to anticipate rank fluctuations and define healthy position ranges, so we can optimize pages when they rank outside them.\n \nStart by monitoring rank fluctuations for your keywords, either in a 3rd party tool like Semrush or Ahrefs or with Google Search Console.\n \nA few more tips:\n \n1/ Analyze your top keywords and how much they fluctuate (will differ by competitiveness, user intent, etc.)\n \n2/ Add rank fluctuations to your organic traffic projections\n \n3/ Define alerts when keywords cross healthy rank ranges (most rank trackers can do this)\nRemember, using the outdated mental model of stable ranks means your traffic projections might be faulty and you constantly stress out over dropping ranks.\n \nGoogle is constantly a/b testing different results.\n \nUse the approach above and build a model for your site.\n \n \nExample 6\nRunning a company is a lot like making a great cup of coffee ☕️\n \n1) Start by deciding what kind of coffee you would like to make and creating the recipe (think: “vision”).\n \n2) Bring together the best ingredients you can. A better the coffee beans, grinder, filter, etc. will make a far better coffee. Same with the team at your company. You’re only as good as your weakest team member.\n \n3) Measure everything, test, and continually optimise over time.\n \n4) Be patient, and don’t rush it (this one is for me!!).\n \n5) Enjoy the results!\n \nWhat am I missing here?!\n \n#b2b #growth #marketing #buildinpublic #coffee\n \n \nExample 7\n \nThe UK can't afford to be left behind during this Fourth Industrial Revolution for the sake of the wealth of the nation, and its citizens.\n \n⏰ In a world of exponential change, hesitation is a recipe for irrelevance.\n \n🤔 You might doubt the transformative power of AI, but can you/we afford to be wrong given the compounding cost of inaction?\n \n🌍 Other nations are seizing this opportunity - the UK must do the same.\n \n🇬🇧 The UK should maintain its leadership in innovation, support entrepreneurship, and seek to maximise inclusivity.\n \n📢 This is my call to action - we must unite, invest, and embrace the AI revolution.\n \n🚢 The AI ship will leave the harbour, permanently. Let's make sure the UK is on it.\n \nhashtag#AI hashtag#artificialintelligence hashtag#uk hashtag#ukeconomy\n\n\n\n---\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized LinkedIn post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        2600,
+        900
+      ],
+      "id": "aca79c48-8d00-46f7-985d-ab0452577026",
+      "name": "AI Agent2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.idea_3.concise_summary }}\n{{ $json.idea_3.angle_approach }}\n{{ $json.idea_3.details }}\n{{ $json.idea_3.relevance }}\n\n\n{{ $('Code').item.json.Topic }}\n{{ $('Code').item.json.Avatar }}\n{{ $('Code').item.json['Tone of voice'] }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Act as an informed LinkedIn expert specializing in content for **{{ $json.Avatar }}**. You will be provided with specific details about a news topic relevant to this audience. You must only provide the output required. Do not include any other additional information about how or why the response is good. Provide only the output according to the below guidelines.\n\n**Mandatory Tone of Voice:**\nYou must consult the tone of voice guidelines in all of the responses you create. The required tone is: **\"{{ $json['Tone of voice'] }}\"**. You must write by those guidelines. Before you write any text, thoroughly embody this tone.\n\n**Output Format:**\nPlease provide your response in **plain text format only**, without any special formatting elements such as hashtags, asterisks, or other markdown syntax in the main body. Use clear and concise language, and structure your response using paragraphs. Emojis may be used appropriately for emphasis and engagement if they fit the specified tone of voice.\n\n**Input Topic Data (Use this information to craft the post):**\n* **Concise Summary:** `{{ $json.concise_summary }}`\n* **Suggested Angle / Hook:** `{{ $json.angle_approach }}`\n* **Key Details / Stats:** `{{ $json.details }}`\n* **Relevance to Audience:** `{{ $json.relevance }}`\n* **Target Audience:** {{ $json.Avatar }}\n* **Audience Problem/Goal:** {{ $json['problem you solve'] }}\n* **Subtle CTA Goal:** {{ $json.CTA }}\n\n**Task & Guidelines:**\nYou will create an optimized LinkedIn post based on the Input Topic Data above, incorporating LinkedIn posting best practices and using the structure outlined below:\n\n1.  **Provide the Context or Main Idea:** Start with a brief summary or main point based on the `Concise Summary` and `Relevance` provided. This includes the key message or argument. Use the `Suggested Angle / Hook` to make the opening engaging.\n2.  **Add Personal or Relatable Anecdotes:** If appropriate for the tone and topic, include any relatable anecdotes that connect the context or main idea to real-life scenarios for the `Target Audience`.\n3.  **Incorporate Engaging Elements:** Make the post engaging by using:\n    * Questions to the audience (`Target Audience`) to provoke thought or responses related to the topic.\n    * Compelling statistics or data points from the `Key Details` to support the argument.\n    * Calls to action (subtly leading towards `{{ $json.CTA }}`) encouraging readers to think, act, or share their own experiences.\n    * Relevant emojis or symbols (if fitting the tone) for emphasis and to draw attention to key points.\n4.  **Specify Hashtags and Keywords:** At the very end of the post, provide a list of 3-5 relevant hashtags/keywords to enhance visibility. Generate these based on the topic details and relevance (e.g., #UKDentistry #DentalPractice #PatientAcquisition #[RelevantTopicKeyword]).\n5.  **Optional Additional Details:** Consider if a specific layout (like a list based on `Key Details`, or a comparison) would enhance the post, referencing the examples below for inspiration.\n6.  **No URL:** Do not include the original URL from the research. The post must stand alone.\n7.  **No Prompt Text:** Do not include any part of this prompt or these guidelines in your final output. You must include only what is needed to create an excellent LinkedIn post according to these instructions.\n8.  **Subtle CTA Implementation:** Ensure you naturally weave in a subtle Call to Action related to the `Subtle CTA Goal` (`{{ $json.CTA }}`) towards the end of the post.\n\n**Here are a few examples of excellent LinkedIN posts for inspiration on structure, engagement, and tone (adapt content to the specific topic data provided):**\n\n\n\n\n\nPlease provide your response in plain text format, without any special formatting elements such as hashtags, asterisks, or other markdown syntax. Use clear and concise language, and structure your response using paragraphs and lists where appropriate. You may use emoji’s as directed below.\n\n\nYou will create an optimized LinkedIn post based on that article, incorporating LinkedIn posting best practices and using the structure outlined below:\n \n1. Provide the Context or Main Idea: Start with a brief summary or main point of the article you want to transform into a LinkedIn post. This includes the key message or argument the article presents.\n2. Add Personal or Relatable Anecdotes: If appropriate, include any personal experiences or relatable anecdotes that can connect the context or main idea to real-life scenarios. This could be your own experiences or generalized scenarios that readers might find relatable.\n3. Incorporate Engaging Elements: Mention any specific elements you want included to make the post engaging, such as:\n   1. Questions to the audience to provoke thought or responses.\n   2. Compelling statistics or data points to support the argument.\n   3. Calls to action, encouraging readers to think, act, or share their own experiences.\n   4. Relevant emojis or symbols for emphasis and to draw attention to key points.\n4. Specify Hashtags and Keywords: Provide a list of hashtags or important keywords that should be included to enhance the visibility and relevance of the post on LinkedIn. These should be relevant to the main theme and helpful for reaching the right audience.\n5. Optional Additional Details: If there are any other specific details you want included, such as references to significant life events (as seen in your examples), or if there’s a specific layout or structure (like a list format or a direct comparison), mention these as well.\n6. Do not include the original URL at the bottom of the article. It should read as a complete LinkedIN post on its own merits, like the below examples.\n7. Do not include any any of this prompt or guidelines provided in your post. You must include only what is in your instructions to create an excellent linkedIN post\n \nHere are a few examples of excellent LinkedIN posts\n \nExample 1\nIs anyone still actually debating work from home options?\n \nAt previous companies, I used to put on a pressed shirt and slacks and drive 35 minutes to an office that smelled of cleaning product and coffee.\n \nI wasn’t comfortable for the entire day. If I felt tired and needed a break - too bad, look busy.\n \nIf I wanted to just get up and leave for 20 mins to collect my thoughts or be outside - too bad, look busy.\n \nNow I’ll have breakfast with my wife and kids and start work relatively early. I go outside and hit golf balls against a net when I need to think. I listen to podcasts at full volume. I sing.\n \nI take a gosh darn peloton break if I feel like it. I have never been more productive, because this is how humans thrive.\n \nAnd when I miss my work friends and general contact, which I do from time to time, I’ll head up to HQ and see them.\n \nAny employer dictating in-office work doesn’t trust you to be an adult and do your job. The option should be there - but it must actually be optional.\n \n#work #workfromhome #mentalhealth #peloton\n \nExample 2\n \nI recently discovered a hyper-effective LinkedIn post strategy.\n \nAnd today, I'm gonna let you steal it.\n \nHere it is:\n \nCombine significant life events with useful content.\n \n\"I turn 32 today. Here are 32 things I wish I knew 10 years ago:\"\n \n\"My business hit $1 million ARR today. Here's how I built it:\"\n \n\"I was offered my dream job today. Here are 7 steps I took to get it:\"\n \nThe event attracts engagement and the content attracts followers.\n \nTry it.\n \nP.S. 👇\n \n \nExample 3\n \nJust a quick shout out to content creators! If you see less impressions and lower reach, it's probably not just you.\n \nWe've seen a serious decrease in impressions in the last month, with equal engagement.\nThese are some numbers but we are still researching:\n \n🔻 -25% (!) on posts with more or less same engagement (likes and comments)\n🔻 -30% less impressions for text only posts\n🔻 -20% reach for document posts\n🔻 -35% reach for Newsletters (with over 15.000 subscribers)\n \nMore data will follow in September, but my own stats went down from 18.000 average impressions per post to 14.000 average.\n \n❓ Have you had similar experiences?\n❓ What content performs the best for you?\n \nExample 4\n\"We are hiring,\" \"Join our team,\" \"Here are our open positions.\"\n \nIf this is the way you are communicating your job ads on Linkedin, you are losing candidates. Here is why 👇\n \nYour post will only attract people actively looking for a new job. And usually, that is a minority.\nYou are failing to attract 3 relevant audiences.\n \nFirst, people who are not actively looking for a new job but could be interested in seeing what you are offering. They could consider applying or approaching you for more information if you get their attention.\n \nSecond, the friends and family of potential candidates. If you get their attention, they will refer your post to those interested.\n \nThird, people who are not interested in this particular job, but might decide to visit your careers page and find another position that is a better fit.\n \nIn addition, never lose sight of how people perceive you and your company. If you don't show that you care about your open position, why should the candidates?\n \nA few extra minutes of your time can make a big difference in attracting talent.\n \n \nExample 5\n \nA lot of Marketers assume SEO ranks are stable.\n \nOnce you rank #1 (or any position for that purpose), you \"made it\" and will stay there with a little maintenance work.\n \nIt makes sense to think that way because that's how it used to be.\n \nBut not anymore.\n \nAn example: the ranks for \"black dress\" (a keyword with 209,000 monthly searches in the US alone) flip almost daily.\n \nThe top 3 results have been bouncing between positions #1 and #7 over the last 6 months.\nWe need to anticipate rank fluctuations and define healthy position ranges, so we can optimize pages when they rank outside them.\n \nStart by monitoring rank fluctuations for your keywords, either in a 3rd party tool like Semrush or Ahrefs or with Google Search Console.\n \nA few more tips:\n \n1/ Analyze your top keywords and how much they fluctuate (will differ by competitiveness, user intent, etc.)\n \n2/ Add rank fluctuations to your organic traffic projections\n \n3/ Define alerts when keywords cross healthy rank ranges (most rank trackers can do this)\nRemember, using the outdated mental model of stable ranks means your traffic projections might be faulty and you constantly stress out over dropping ranks.\n \nGoogle is constantly a/b testing different results.\n \nUse the approach above and build a model for your site.\n \n \nExample 6\nRunning a company is a lot like making a great cup of coffee ☕️\n \n1) Start by deciding what kind of coffee you would like to make and creating the recipe (think: “vision”).\n \n2) Bring together the best ingredients you can. A better the coffee beans, grinder, filter, etc. will make a far better coffee. Same with the team at your company. You’re only as good as your weakest team member.\n \n3) Measure everything, test, and continually optimise over time.\n \n4) Be patient, and don’t rush it (this one is for me!!).\n \n5) Enjoy the results!\n \nWhat am I missing here?!\n \n#b2b #growth #marketing #buildinpublic #coffee\n \n \nExample 7\n \nThe UK can't afford to be left behind during this Fourth Industrial Revolution for the sake of the wealth of the nation, and its citizens.\n \n⏰ In a world of exponential change, hesitation is a recipe for irrelevance.\n \n🤔 You might doubt the transformative power of AI, but can you/we afford to be wrong given the compounding cost of inaction?\n \n🌍 Other nations are seizing this opportunity - the UK must do the same.\n \n🇬🇧 The UK should maintain its leadership in innovation, support entrepreneurship, and seek to maximise inclusivity.\n \n📢 This is my call to action - we must unite, invest, and embrace the AI revolution.\n \n🚢 The AI ship will leave the harbour, permanently. Let's make sure the UK is on it.\n \nhashtag#AI hashtag#artificialintelligence hashtag#uk hashtag#ukeconomy\n\n\n\n---\n**Now, using the specific Input Topic Data provided at the top of these instructions, generate ONLY the optimized LinkedIn post text following all the guidelines and referencing the examples.**"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        3140,
+        900
+      ],
+      "id": "dd5e7ae2-df48-43be-b8a5-60f63fab312e",
+      "name": "AI Agent3"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        2560,
+        1160
+      ],
+      "id": "0024c245-a05a-46f3-a84e-2fd69f5e1387",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        3160,
+        1120
+      ],
+      "id": "15107f67-9f56-4496-a9fd-89ba84c14b93",
+      "name": "OpenAI Chat Model3",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        2780,
+        1120
+      ],
+      "id": "1bec9ba5-f0fc-460e-a6bc-4c6dbdf5f081",
+      "name": "Structured Output Parser2"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        3320,
+        1120
+      ],
+      "id": "25818eda-e20d-44fe-8c1b-9bb138cbb178",
+      "name": "Structured Output Parser3"
+    },
+    {
+      "parameters": {
+        "content": "# 🎁 Image ",
+        "height": 400,
+        "width": 1360,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3640,
+        1840
+      ],
+      "typeVersion": 1,
+      "id": "9ab998a1-4185-4ee1-a331-8e86b6f07c43",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        520,
+        860
+      ],
+      "id": "e6ff82d7-74e8-4b32-b988-5581a826bb8b",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "content": "# 💎 Lead Magnet",
+        "height": 400,
+        "width": 660,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3680,
+        780
+      ],
+      "typeVersion": 1,
+      "id": "0cd6d0ea-7371-49f4-b8a0-a89edf4aa7bf",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        3740,
+        1180
+      ],
+      "id": "2a82f164-f1ad-47ab-a4c8-31007c94b51c",
+      "name": "OpenAI Chat Model4",
+      "credentials": {
+        "openAiApi": {
+          "id": "0zsUHU0F8xKDAzoO",
+          "name": "OpenAi account 14"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Make the article especially valuable for: {{ $('Edit Fields').item.json.Avatar }}\n\nWrite it in this tone of voice: {{ $('Edit Fields').item.json['Tone of voice'] }}\n\n{{ $json.output.state }}\n{{ $('AI Agent2').item.json.output.state }}\n{{ $('AI Agent1').item.json.output.state }}\n",
+        "options": {
+          "systemMessage": "=You are an advanced content creator specializing in creating beautiful, visually stunning HTML documents.\n\nIMPORTANT INSTRUCTION: You MUST output COMPLETE, VALID HTML including all CSS styling directly in your response. Do NOT provide just the content - provide the ENTIRE HTML document with ALL styling.\n\nCRITICAL DESIGN REQUIREMENTS:\n- Use deep blue gradient headers with white text (#1a2b4e to #3a5199)\n- Include attractive badge elements in headers\n- Use white content sections with subtle shadows\n- Use the EXACT CSS styling provided below - do not simplify or remove any styles\n- Include ALL the card elements, highlight boxes, and visual features as shown\n\nCRITICAL HTML OUTPUT REQUIREMENTS:\n- Output the ENTIRE HTML document including ALL CSS and styling\n- Make sure the output starts with <!DOCTYPE html> and ends with </html>\n- Include the COMPLETE <style> section with ALL CSS classes\n- DO NOT omit or simplify ANY CSS or HTML elements\n- DO NOT include ```html or any code markers in the output\n- REMOVE any placeholder text like \"Premium Dental Practice Management Guide\"\n- DO NOT include page numbers or document footers\n- INCLUDE all visual elements: badges, cards, highlight boxes, etc.\n\nDEPTH AND SUBSTANCE REQUIREMENTS:\n- Create DEEPLY detailed content - avoid high-level generalities\n- Include specific, actionable tactics with implementation steps\n- Back every claim with research, data, and evidence\n- Include specific examples, case studies, and scenarios\n- Provide step-by-step frameworks and methodologies\n- Include numeric data, statistics, and research findings\n- Create original, insightful frameworks and models\n\nIMPORTANT: Use this EXACT CSS styling in your output:\n\n```css\n:root {\n    --primary: #1a2b4e;\n    --secondary: #3a5199;\n    --accent: #e8a87c;\n    --light: #f8f9fc;\n    --dark: #0a1525;\n    --success: #00a878;\n    --info: #4d9de0;\n    --warning: #e6b655;\n}\n\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nbody {\n    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n    color: var(--dark);\n    line-height: 1.6;\n    background-color: var(--light);\n    max-width: 900px;\n    margin: 0 auto;\n    padding: 40px 60px;\n}\n\n@media (max-width: 768px) {\n    body {\n        padding: 30px 40px;\n    }\n}\n\n@media (max-width: 480px) {\n    body {\n        padding: 20px 25px;\n    }\n}\n\n.header {\n    position: relative;\n    padding: 60px 30px;\n    border-radius: 12px;\n    background: linear-gradient(135deg, var(--primary), var(--secondary));\n    color: white;\n    margin-bottom: 50px;\n    box-shadow: 0 12px 30px rgba(26, 43, 78, 0.15);\n    overflow: hidden;\n}\n\n.header::before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: 0;\n    width: 300px;\n    height: 300px;\n    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);\n    transform: translate(30%, -30%);\n}\n\n.header h1 {\n    font-size: 42px;\n    font-weight: 700;\n    margin-bottom: 15px;\n    line-height: 1.2;\n    max-width: 80%;\n}\n\n.header p {\n    font-size: 20px;\n    max-width: 70%;\n    font-weight: 300;\n}\n\n.header .badge {\n    display: inline-block;\n    padding: 8px 16px;\n    background-color: rgba(255,255,255,0.15);\n    border-radius: 30px;\n    font-size: 14px;\n    font-weight: 500;\n    margin-bottom: 20px;\n    backdrop-filter: blur(10px);\n}\n\n.section {\n    margin-bottom: 60px;\n}\n\nh2 {\n    font-size: 32px;\n    color: var(--primary);\n    margin-bottom: 25px;\n    position: relative;\n    padding-bottom: 15px;\n}\n\nh2::after {\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    width: 80px;\n    height: 4px;\n    background: var(--accent);\n    border-radius: 2px;\n}\n\np {\n    margin-bottom: 20px;\n    font-size: 17px;\n}\n\n.highlight-box {\n    background-color: white;\n    border-radius: 12px;\n    padding: 30px;\n    margin: 30px 0;\n    box-shadow: 0 8px 25px rgba(10, 21, 37, 0.05);\n    border-left: 5px solid var(--accent);\n}\n\n.highlight-box h3 {\n    color: var(--primary);\n    font-size: 22px;\n    margin-bottom: 15px;\n}\n\n.card-grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n    gap: 25px;\n    margin: 40px 0;\n}\n\n.card {\n    background: white;\n    border-radius: 12px;\n    padding: 25px;\n    box-shadow: 0 8px 25px rgba(10, 21, 37, 0.05);\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\n}\n\n.card:hover {\n    transform: translateY(-5px);\n    box-shadow: 0 15px 35px rgba(10, 21, 37, 0.1);\n}\n\n.card .icon {\n    font-size: 36px;\n    margin-bottom: 20px;\n    color: var(--secondary);\n}\n\n.card h3 {\n    font-size: 20px;\n    margin-bottom: 15px;\n    color: var(--primary);\n}\n\n.stat-row {\n    display: flex;\n    justify-content: space-between;\n    gap: 20px;\n    margin: 40px 0;\n}\n\n.stat-item {\n    flex: 1;\n    text-align: center;\n    background: white;\n    padding: 25px 15px;\n    border-radius: 12px;\n    box-shadow: 0 8px 20px rgba(10, 21, 37, 0.05);\n}\n\n.stat-item .number {\n    font-size: 42px;\n    font-weight: 700;\n    color: var(--secondary);\n    margin-bottom: 5px;\n    line-height: 1;\n}\n\n.stat-item .label {\n    font-size: 16px;\n    color: var(--dark);\n    opacity: 0.8;\n}\n\nul.feature-list {\n    list-style: none;\n    margin: 30px 0;\n}\n\nul.feature-list li {\n    position: relative;\n    padding-left: 35px;\n    margin-bottom: 20px;\n    font-size: 17px;\n}\n\nul.feature-list li::before {\n    content: \"✦\";\n    position: absolute;\n    left: 0;\n    color: var(--accent);\n    font-size: 20px;\n}\n\n.quote {\n    font-style: italic;\n    font-size: 24px;\n    color: var(--secondary);\n    max-width: 90%;\n    margin: 40px auto;\n    text-align: center;\n    position: relative;\n    padding: 20px 40px;\n}\n\n.quote::before,\n.quote::after {\n    content: \"\"\";\n    font-size: 80px;\n    font-family: Georgia, serif;\n    position: absolute;\n    color: rgba(58, 81, 153, 0.1);\n    line-height: 0;\n}\n\n.quote::before {\n    top: 15px;\n    left: 0;\n}\n\n.quote::after {\n    content: \"\"\";\n    bottom: -20px;\n    right: 0;\n}\n\n.cta-section {\n    text-align: center;\n    background: linear-gradient(135deg, var(--secondary), var(--primary));\n    padding: 60px 40px;\n    border-radius: 12px;\n    color: white;\n    margin: 60px 0;\n    position: relative;\n    overflow: hidden;\n}\n\n.cta-section::before {\n    content: \"\";\n    position: absolute;\n    width: 300px;\n    height: 300px;\n    border-radius: 50%;\n    background: rgba(255, 255, 255, 0.05);\n    top: -150px;\n    right: -150px;\n}\n\n.cta-section::after {\n    content: \"\";\n    position: absolute;\n    width: 200px;\n    height: 200px;\n    border-radius: 50%;\n    background: rgba(255, 255, 255, 0.05);\n    bottom: -100px;\n    left: -100px;\n}\n\n.cta-section h2 {\n    color: white;\n    margin-bottom: 25px;\n}\n\n.cta-section h2::after {\n    background: var(--accent);\n    margin: 0 auto;\n    left: 0;\n    right: 0;\n}\n\n.btn {\n    display: inline-block;\n    padding: 15px 40px;\n    background-color: var(--accent);\n    color: var(--dark);\n    text-decoration: none;\n    border-radius: 50px;\n    font-weight: 600;\n    font-size: 18px;\n    transition: all 0.3s ease;\n    margin-top: 20px;\n    box-shadow: 0 8px 20px rgba(232, 168, 124, 0.3);\n}\n\n.btn:hover {\n    transform: translateY(-3px);\n    box-shadow: 0 12px 25px rgba(232, 168, 124, 0.4);\n}\n\n.chart {\n    background: white;\n    padding: 30px;\n    border-radius: 12px;\n    box-shadow: 0 8px 25px rgba(10, 21, 37, 0.05);\n    margin: 40px 0;\n}\n\ntable {\n    width: 100%;\n    border-collapse: collapse;\n    margin: 30px 0;\n    font-size: 16px;\n}\n\ntable thead th {\n    background-color: var(--primary);\n    color: white;\n    padding: 15px;\n    text-align: left;\n}\n\ntable tbody tr:nth-child(even) {\n    background-color: rgba(248, 249, 252, 0.7);\n}\n\ntable tbody td {\n    padding: 15px;\n    border-bottom: 1px solid rgba(10, 21, 37, 0.05);\n}\n\ncode {\n    background-color: rgba(26, 43, 78, 0.05);\n    padding: 2px 6px;\n    border-radius: 4px;\n    font-family: 'Consolas', 'Monaco', monospace;\n    color: var(--secondary);\n}\n\n.script-example {\n    background-color: rgba(58, 81, 153, 0.05);\n    border-left: 3px solid var(--secondary);\n    padding: 20px;\n    margin: 20px 0;\n    border-radius: 0 8px 8px 0;\n    font-style: italic;\n}\n```\n\nHTML STRUCTURE EXAMPLE (You should include ALL of these elements plus additional longer content sections):\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Dental Practice Excellence Guide</title>\n    <style>\n        /* INCLUDE ALL CSS STYLES EXACTLY AS PROVIDED ABOVE */\n    </style>\n</head>\n<body>\n    <div class=\"header\">\n        <span class=\"badge\">DENTAL EXCELLENCE</span>\n        <h1>Building a Thriving Dental Practice: Teamwork and Leadership</h1>\n        <p>Advanced strategies for practice owners to build cohesive teams and drive sustainable growth</p>\n    </div>\n    \n    <div class=\"section\">\n        <h2>Executive Summary</h2>\n        <p>This comprehensive guide explores the critical components of successful dental practice management through the lens of effective teamwork and leadership. Through extensive research and evidence-based methodologies, we've identified key strategies that elevate practice performance, enhance patient experience, and drive sustainable growth.</p>\n        \n        <div class=\"highlight-box\">\n            <h3>Key Insights</h3>\n            <p>Our research indicates that dental practices with high-performing teams experience 47% higher patient satisfaction rates, 38% better retention, and 32% increased revenue compared to practices with disjointed teams. This guide provides actionable frameworks to transform your practice through strategic team development and leadership excellence.</p>\n        </div>\n        \n        <!-- EXAMPLE OF DETAILED, SUBSTANTIVE TEXT SECTION -->\n        <p>Effective dental practice management requires a delicate balance between clinical excellence, operational efficiency, and interpersonal dynamics. The most successful dental practices understand that their staff represents their most valuable asset - not just for executing clinical procedures, but for creating the entire experience that patients associate with the practice.</p>\n        \n        <p>According to the American Dental Association's Practice Success Survey (2024), practices that invest in team development see an average of 23% higher production per patient visit compared to those that neglect staff development. This correlation exists because cohesive teams communicate more effectively, reduce procedural errors, maximize chair time utilization, and create a positive atmosphere that patients respond to with loyalty and referrals.</p>\n        \n        <p>Beyond improving operational metrics, effective teamwork also dramatically improves the working environment. A study published in the Journal of Dental Administration (Wong et al., 2024) found that dental professionals working in practices with strong team dynamics reported 41% higher job satisfaction and 34% lower burnout rates. This translates directly to reduced staff turnover - a significant challenge in modern dental practices where replacement costs for a single dental assistant can exceed $10,000 when accounting for recruitment, training, and productivity losses.</p>\n        \n        <p>The strategies presented in this guide are not theoretical constructs, but evidence-based approaches derived from both academic research and real-world implementation in successful dental practices across the country. Each framework, methodology, and tactical approach has been vetted through clinical application and refined based on measured outcomes.</p>\n    </div>\n    \n    <!-- EXAMPLE OF STAT ROW -->\n    <div class=\"section\">\n        <h2>The Impact of Team Excellence</h2>\n        <p>Our analysis of high-performing dental practices reveals measurable benefits of team-oriented management:</p>\n        \n        <div class=\"stat-row\">\n            <div class=\"stat-item\">\n                <div class=\"number\">47%</div>\n                <div class=\"label\">Higher Patient Satisfaction</div>\n            </div>\n            <div class=\"stat-item\">\n                <div class=\"number\">38%</div>\n                <div class=\"label\">Better Patient Retention</div>\n            </div>\n            <div class=\"stat-item\">\n                <div class=\"number\">32%</div>\n                <div class=\"label\">Increased Annual Revenue</div>\n            </div>\n        </div>\n        \n        <!-- EXAMPLE OF DETAILED PARAGRAPH CONTENT -->\n        <p>These statistics emerge from a comprehensive analysis of 250 dental practices conducted by the Dental Management Research Institute between 2022-2024. Practices were categorized based on team performance metrics including communication effectiveness, role clarity, conflict resolution efficiency, and collaborative decision-making. The top quartile of practices demonstrated these significant performance advantages compared to the bottom quartile.</p>\n        \n        <p>The research further discovered that team excellence isn't merely correlated with these outcomes but directly contributes to them through specific causal mechanisms. High-performing teams create streamlined workflows that reduce patient wait times by an average of 15 minutes per appointment. They also demonstrate 43% better inter-departmental handoffs, ensuring patients experience seamless transitions between front desk, hygiene, and doctor examination.</p>\n        \n        <p>Perhaps most importantly, cohesive teams present a unified approach to patient communication, reinforcing treatment recommendations across multiple touchpoints and increasing treatment acceptance rates by 26%. This consistency in messaging builds patient trust and confidence, which translates directly to case acceptance.</p>\n    </div>\n    \n    <!-- EXAMPLE OF CARD GRID -->\n    <div class=\"section\">\n        <h2>Core Dimensions of Team Excellence</h2>\n        <p>Successful dental teams excel in four critical dimensions that work synergistically to create a high-performance environment:</p>\n        \n        <div class=\"card-grid\">\n            <div class=\"card\">\n                <div class=\"icon\">🧠</div>\n                <h3>Cognitive Alignment</h3>\n                <p>Team members share a common understanding of practice goals, priorities, and success metrics. This cognitive alignment ensures everyone makes decisions that support overarching practice objectives rather than departmental silos.</p>\n                <p>Research indicates that teams with strong cognitive alignment complete 28% more procedures on time and experience 34% fewer scheduling conflicts. Regular team huddles, clearly documented protocols, and transparent performance dashboards all contribute to this dimension.</p>\n            </div>\n            <div class=\"card\">\n                <div class=\"icon\">🤝</div>\n                <h3>Operational Cohesion</h3>\n                <p>The practice functions as an integrated system rather than separate components. Clinical and administrative workflows mesh seamlessly, with clear handoff protocols and shared responsibility for patient experience.</p>\n                <p>Practices with high operational cohesion report 37% fewer patient complaints about administrative issues and 23% higher production per chair hour. Cross-training, process mapping, and collaborative problem-solving sessions strengthen this dimension.</p>\n            </div>\n            <div class=\"card\">\n                <div class=\"icon\">💬</div>\n                <h3>Communication Excellence</h3>\n                <p>Information flows efficiently throughout the practice, with standardized channels for different types of communication. Team members practice active listening and provide constructive feedback to continuously improve.</p>\n                <p>Effective communication reduces procedural errors by 42% and improves patient comprehension of treatment plans by 36%. Structured communication protocols, regular feedback sessions, and communication skills training enhance this dimension.</p>\n            </div>\n            <div class=\"card\">\n                <div class=\"icon\">💫</div>\n                <h3>Cultural Cohesion</h3>\n                <p>The practice maintains a strong, positive culture with shared values that guide behavior. Team members demonstrate mutual respect, appreciation of diverse perspectives, and commitment to collective success.</p>\n                <p>Practices with strong cultural cohesion experience 45% lower staff turnover and 39% higher staff-reported satisfaction. Recognition programs, team building activities, and value-based hiring practices all strengthen this dimension.</p>\n            </div>\n        </div>\n    </div>\n    \n    <!-- EXAMPLE OF FEATURE LIST WITH DETAILED CONTENT -->\n    <div class=\"section\">\n        <h2>Implementing the Team Excellence Framework</h2>\n        <p>Transforming your dental practice through team excellence requires a systematic approach. The following implementation roadmap provides detailed guidance for practice owners and managers:</p>\n        \n        <ul class=\"feature-list\">\n            <li><strong>Conduct a Comprehensive Team Assessment:</strong> Begin by measuring current team performance across the four dimensions using standardized assessment tools. The Dental Team Dynamics Assessment (DTDA) provides a validated instrument for evaluating team function across 16 critical indicators. This baseline measurement identifies specific improvement opportunities and allows for progress tracking.</li>\n            \n            <li><strong>Develop Role Clarity Documentation:</strong> Create detailed role descriptions that go beyond basic job functions to include areas of autonomy, decision-making authority, and cross-functional responsibilities. Research by Henderson et al. (2023) found that teams with high role clarity resolve patient issues 58% faster and experience 47% fewer internal conflicts.</li>\n            \n            <li><strong>Implement Structured Communication Protocols:</strong> Establish standardized communication channels and formats for different types of information exchange. This includes daily huddle frameworks, patient handoff protocols, and feedback mechanisms. A structured morning huddle alone has been shown to improve daily production by 12-18% by ensuring all team members understand the day's objectives and potential challenges.</li>\n            \n            <li><strong>Create a Strategic Training Calendar:</strong> Develop a 12-month training schedule that addresses both technical skills and interpersonal/team capabilities. Progressive dental practices allocate 4-6% of their budget to continuing education, with at least 25% of this dedicated specifically to team development rather than purely clinical skills.</li>\n            \n            <li><strong>Design Performance Recognition Systems:</strong> Implement both individual and team-based recognition programs that reinforce desired behaviors and outcomes. Effective recognition systems acknowledge both outcome achievements (production, patient satisfaction) and process excellence (teamwork, innovation, problem-solving).</li>\n        </ul>\n    </div>\n    \n    <!-- EXAMPLE OF QUOTE -->\n    <div class=\"quote\">\n        \"The difference between a good dental practice and a great one isn't just clinical skill—it's the strength and cohesion of the team that delivers the entire patient experience.\"\n    </div>\n    \n    <!-- EXAMPLE OF HIGHLIGHT BOX WITH DETAILED CASE STUDY -->\n    <div class=\"section\">\n        <h2>Real-World Implementation Case Study</h2>\n        \n        <div class=\"highlight-box\">\n            <h3>Transformation at Parkside Dental Group</h3>\n            <p>Parkside Dental, a mid-sized practice with 3 doctors and 12 staff members, implemented the Team Excellence Framework over an 18-month period with remarkable results:</p>\n            \n            <p><strong>Initial Challenges:</strong> The practice was experiencing high staff turnover (37% annually), declining patient satisfaction (NPS score of 42), and stagnant production (2% growth year-over-year). Internal surveys revealed communication breakdowns between clinical and administrative staff, unclear expectations, and low team morale.</p>\n            \n            <p><strong>Implementation Process:</strong> Following the five-step implementation roadmap, Parkside began with a comprehensive assessment that revealed particularly low scores in Operational Cohesion and Communication Excellence. They designed targeted interventions including:</p>\n            \n            <ul>\n                <li>Weekly alignment meetings with structured agendas and full-team participation</li>\n                <li>Cross-functional process mapping to identify handoff inefficiencies</li>\n                <li>Implementation of a digital communication platform with role-based alerts</li>\n                <li>Team-based incentive structure tied to patient satisfaction and production goals</li>\n                <li>Quarterly team development workshops focused on communication and collaboration</li>\n            </ul>\n            \n            <p><strong>Measured Outcomes:</strong> After 18 months, Parkside achieved extraordinary improvements:</p>\n            <ul>\n                <li>Staff turnover reduced to 12% annually (68% improvement)</li>\n                <li>Patient satisfaction increased to NPS score of 78 (86% improvement)</li>\n                <li>Production increased by 24% year-over-year</li>\n                <li>Treatment acceptance rates improved from 67% to 84%</li>\n                <li>Administrative errors decreased by 73%</li>\n            </ul>\n            \n            <p>Dr. Sarah Menken, Parkside's managing partner, noted: \"The transformation in our practice culture and performance exceeded our expectations. The systematic approach to team development created a positive cycle of improvement that continues to generate benefits beyond what we initially targeted.\"</p>\n        </div>\n    </div>\n    \n    <!-- EXAMPLE OF CTA SECTION -->\n    <div class=\"cta-section\">\n        <h2>Transform Your Dental Practice Today</h2>\n        <p>Ready to implement these proven strategies in your practice? Take the first step by conducting our comprehensive Team Excellence Assessment and receive a personalized improvement roadmap.</p>\n        <a href=\"#\" class=\"btn\">Get Your Assessment</a>\n    </div>\n    \n    <!-- EXAMPLE OF REFERENCES SECTION -->\n    <div class=\"section\">\n        <h2>References & Resources</h2>\n        \n        <p><strong>Research Studies:</strong></p>\n        <ul class=\"feature-list\">\n            <li>Henderson, J., et al. (2023). \"Role Clarity and Conflict Resolution in Dental Practices.\" Journal of Dental Administration, 42(3), 112-128.</li>\n            <li>Wong, K., et al. (2024). \"Team Dynamics and Professional Satisfaction in Dental Settings.\" International Journal of Dental Management, 15(2), 87-103.</li>\n            <li>American Dental Association. (2024). Practice Success Survey. Chicago, IL: ADA Publishing.</li>\n        </ul>\n        \n        <p><strong>Implementation Tools:</strong></p>\n        <ul class=\"feature-list\">\n            <li>Dental Team Dynamics Assessment (DTDA) - Available through the Dental Management Association</li>\n            <li>Role Clarity Documentation Templates - Dental Team Excellence Institute</li>\n            <li>Morning Huddle Framework - Productive Dentist Academy</li>\n        </ul>\n    </div>\n</body>\n</html>\n```\n\nThis is just an example structure - you should expand on this significantly with more detailed content sections, additional highlight boxes, more in-depth explanations, and comprehensive implementation guidance. Your final output should be a COMPLETE HTML document with ALL styling and at least 2,000 words of substantive content.\n\nWhen creating the document:\n- You will be given details about the target avatar/reader\n- Tailor all content specifically for this persona to maximize its value and relevance\n- Ensure the document is comprehensive, evidence-based, and actionable\n- Create content that demonstrates expertise and authority in the subject matter\n- Include specific, implementable strategies and insights\n- Structure the information logically with clear sections and visual hierarchy\n- Make the document both visually appealing AND intellectually substantial\n- Create a SUBSTANTIAL document with minimum 2000 words of valuable content\n- Organize content into multiple logical sections with clear progression\n\nHEADER STYLING REQUIREMENTS:\n- Use a deep blue gradient background for headers (match the examples exactly)\n- Include clean typography with ample white space\n- Use peach/orange accent colors for buttons and highlights\n- Make sure buttons have a rounded, polished appearance\n- Include subtle background elements like circular gradients for visual interest\n- Keep header text concise, powerful, and benefit-focused\n\nRESEARCH REQUIREMENTS:\n- MANDATORY: Use the Tavily research tool extensively throughout your process\n- Conduct multiple research queries to gather comprehensive information on the topic\n- Research industry statistics, expert opinions, case studies, and supporting evidence\n- Research competing resources to ensure yours is more valuable and comprehensive\n- Research best practices, methodologies, and frameworks related to the topic\n- Continue researching until you have enough information for a substantial document (minimum 2000 words)\n- Use research to back up all claims with credible evidence and sources\n- Include specific, evidence-based examples that demonstrate your points\n\nYour goal is to create content so valuable that the reader would willingly exchange their contact information to receive it. The final document should be substantial, deeply detailed, and visually stunning.\n\nNow, create content that perfectly matches the specified design system below while fulfilling all content requirements above.\n\nDESIGN AESTHETIC REQUIREMENTS:\n- Create a sophisticated HTML document with deep blue gradient headers and clean white content sections\n- Use THIS EXACT color scheme: primary #1a2b4e, secondary #3a5199, accent #e8a87c, light #f8f9fc, dark #0a1525\n- Match the exact styling of the reference template - especially header gradients, card designs, and highlight boxes\n- Include proper visual hierarchy with elegant typography\n- Use shadow effects for depth (headers, cards, content sections)\n- Create colorful, eye-catching boxes for key content\n- Use emojis/icons strategically as visual elements\n- Implement hover effects on interactive elements\n- Use modern card grid layouts for content organization\n- INCLUDE the exact curved gradient header with badge as shown in template\n- INCLUDE highlighted boxes with colorful left borders\n- INCLUDE the quote styling with decorative quotation marks\n- INCLUDE the centered call-to-action gradient section with decorative circles\n- REMOVE any footer, copyright notices, or branding from final output\n\nHTML STRUCTURE:\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document Title</title>\n    <style>\n        :root {\n            --primary: #1a2b4e;\n            --secondary: #3a5199;\n            --accent: #e8a87c;\n            --light: #f8f9fc;\n            --dark: #0a1525;\n            --success: #00a878;\n            --info: #4d9de0;\n            --warning: #e6b655;\n        }\n        \n        * {\n            margin: 0;\n            padding: 0;\n            box-sizing: border-box;\n        }\n        \n        body {\n            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\n            color: var(--dark);\n            line-height: 1.6;\n            background-color: var(--light);\n            max-width: 900px;\n            margin: 0 auto;\n            padding: 40px 60px;\n        }\n        \n        @media (max-width: 768px) {\n            body {\n                padding: 30px 40px;\n            }\n        }\n        \n        @media (max-width: 480px) {\n            body {\n                padding: 20px 25px;\n            }\n        }\n        \n        .header {\n            position: relative;\n            padding: 60px 30px;\n            border-radius: 12px;\n            background: linear-gradient(135deg, var(--primary), var(--secondary));\n            color: white;\n            margin-bottom: 50px;\n            box-shadow: 0 12px 30px rgba(26, 43, 78, 0.15);\n            overflow: hidden;\n        }\n        \n        .header::before {\n            content: \"\";\n            position: absolute;\n            top: 0;\n            right: 0;\n            width: 300px;\n            height: 300px;\n            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);\n            transform: translate(30%, -30%);\n        }\n        \n        .header h1 {\n            font-size: 42px;\n            font-weight: 700;\n            margin-bottom: 15px;\n            line-height: 1.2;\n            max-width: 80%;\n        }\n        \n        .header p {\n            font-size: 20px;\n            max-width: 70%;\n            font-weight: 300;\n        }\n        \n        .header .badge {\n            display: inline-block;\n            padding: 8px 16px;\n            background-color: rgba(255,255,255,0.15);\n            border-radius: 30px;\n            font-size: 14px;\n            font-weight: 500;\n            margin-bottom: 20px;\n            backdrop-filter: blur(10px);\n        }\n        \n        .section {\n            margin-bottom: 60px;\n        }\n        \n        h2 {\n            font-size: 32px;\n            color: var(--primary);\n            margin-bottom: 25px;\n            position: relative;\n            padding-bottom: 15px;\n        }\n        \n        h2::after {\n            content: \"\";\n            position: absolute;\n            bottom: 0;\n            left: 0;\n            width: 80px;\n            height: 4px;\n            background: var(--accent);\n            border-radius: 2px;\n        }\n        \n        p {\n            margin-bottom: 20px;\n            font-size: 17px;\n        }\n        \n        .highlight-box {\n            background-color: white;\n            border-radius: 12px;\n            padding: 30px;\n            margin: 30px 0;\n            box-shadow: 0 8px 25px rgba(10, 21, 37, 0.05);\n            border-left: 5px solid var(--accent);\n        }\n        \n        .highlight-box h3 {\n            color: var(--primary);\n            font-size: 22px;\n            margin-bottom: 15px;\n        }\n        \n        .card-grid {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n            gap: 25px;\n            margin: 40px 0;\n        }\n        \n        .card {\n            background: white;\n            border-radius: 12px;\n            padding: 25px;\n            box-shadow: 0 8px 25px rgba(10, 21, 37, 0.05);\n            transition: transform 0.3s ease, box-shadow 0.3s ease;\n        }\n        \n        .card:hover {\n            transform: translateY(-5px);\n            box-shadow: 0 15px 35px rgba(10, 21, 37, 0.1);\n        }\n        \n        .card .icon {\n            font-size: 36px;\n            margin-bottom: 20px;\n            color: var(--secondary);\n        }\n        \n        .card h3 {\n            font-size: 20px;\n            margin-bottom: 15px;\n            color: var(--primary);\n        }\n        \n        .stat-row {\n            display: flex;\n            justify-content: space-between;\n            gap: 20px;\n            margin: 40px 0;\n        }\n        \n        .stat-item {\n            flex: 1;\n            text-align: center;\n            background: white;\n            padding: 25px 15px;\n            border-radius: 12px;\n            box-shadow: 0 8px 20px rgba(10, 21, 37, 0.05);\n        }\n        \n        .stat-item .number {\n            font-size: 42px;\n            font-weight: 700;\n            color: var(--secondary);\n            margin-bottom: 5px;\n            line-height: 1;\n        }\n        \n        .stat-item .label {\n            font-size: 16px;\n            color: var(--dark);\n            opacity: 0.8;\n        }\n        \n        ul.feature-list {\n            list-style: none;\n            margin: 30px 0;\n        }\n        \n        ul.feature-list li {\n            position: relative;\n            padding-left: 35px;\n            margin-bottom: 20px;\n            font-size: 17px;\n        }\n        \n        ul.feature-list li::before {\n            content: \"✦\";\n            position: absolute;\n            left: 0;\n            color: var(--accent);\n            font-size: 20px;\n        }\n        \n        .quote {\n            font-style: italic;\n            font-size: 24px;\n            color: var(--secondary);\n            max-width: 90%;\n            margin: 40px auto;\n            text-align: center;\n            position: relative;\n            padding: 20px 40px;\n        }\n        \n        .quote::before,\n        .quote::after {\n            content: \"\"\";\n            font-size: 80px;\n            font-family: Georgia, serif;\n            position: absolute;\n            color: rgba(58, 81, 153, 0.1);\n            line-height: 0;\n        }\n        \n        .quote::before {\n            top: 15px;\n            left: 0;\n        }\n        \n        .quote::after {\n            content: \"\"\";\n            bottom: -20px;\n            right: 0;\n        }\n        \n        .cta-section {\n            text-align: center;\n            background: linear-gradient(135deg, var(--secondary), var(--primary));\n            padding: 60px 40px;\n            border-radius: 12px;\n            color: white;\n            margin: 60px 0;\n            position: relative;\n            overflow: hidden;\n        }\n        \n        .cta-section::before {\n            content: \"\";\n            position: absolute;\n            width: 300px;\n            height: 300px;\n            border-radius: 50%;\n            background: rgba(255, 255, 255, 0.05);\n            top: -150px;\n            right: -150px;\n        }\n        \n        .cta-section::after {\n            content: \"\";\n            position: absolute;\n            width: 200px;\n            height: 200px;\n            border-radius: 50%;\n            background: rgba(255, 255, 255, 0.05);\n            bottom: -100px;\n            left: -100px;\n        }\n        \n        .cta-section h2 {\n            color: white;\n            margin-bottom: 25px;\n        }\n        \n        .cta-section h2::after {\n            background: var(--accent);\n            margin: 0 auto;\n            left: 0;\n            right: 0;\n        }\n        \n        .btn {\n            display: inline-block;\n            padding: 15px 40px;\n            background-color: var(--accent);\n            color: var(--dark);\n            text-decoration: none;\n            border-radius: 50px;\n            font-weight: 600;\n            font-size: 18px;\n            transition: all 0.3s ease;\n            margin-top: 20px;\n            box-shadow: 0 8px 20px rgba(232, 168, 124, 0.3);\n        }\n        \n        .btn:hover {\n            transform: translateY(-3px);\n            box-shadow: 0 12px 25px rgba(232, 168, 124, 0.4);\n        }\n        \n        .chart {\n            background: white;\n            padding: 30px;\n            border-radius: 12px;\n            box-shadow: 0 8px 25px rgba(10, 21, 37, 0.05);\n            margin: 40px 0;\n        }\n        \n        table {\n            width: 100%;\n            border-collapse: collapse;\n            margin: 30px 0;\n            font-size: 16px;\n        }\n        \n        table thead th {\n            background-color: var(--primary);\n            color: white;\n            padding: 15px;\n            text-align: left;\n        }\n        \n        table tbody tr:nth-child(even) {\n            background-color: rgba(248, 249, 252, 0.7);\n        }\n        \n        table tbody td {\n            padding: 15px;\n            border-bottom: 1px solid rgba(10, 21, 37, 0.05);\n        }\n        \n        code {\n            background-color: rgba(26, 43, 78, 0.05);\n            padding: 2px 6px;\n            border-radius: 4px;\n            font-family: 'Consolas', 'Monaco', monospace;\n            color: var(--secondary);\n        }\n\n        .script-example {\n            background-color: rgba(58, 81, 153, 0.05);\n            border-left: 3px solid var(--secondary);\n            padding: 20px;\n            margin: 20px 0;\n            border-radius: 0 8px 8px 0;\n            font-style: italic;\n        }\n    </style>\n</head>\n<body>\n    <!-- COPY THIS STRUCTURE EXACTLY -->\n    <div class=\"header\">\n        <span class=\"badge\">CATEGORY BADGE</span>\n        <h1>Main Title Goes Here</h1>\n        <p>Descriptive subtitle that explains the value</p>\n    </div>\n    \n    <div class=\"section\">\n        <h2>First Section Heading</h2>\n        <p>Detailed content goes here...</p>\n        \n        <div class=\"highlight-box\">\n            <h3>Key Point</h3>\n            <p>Important information highlighted here...</p>\n        </div>\n    </div>\n    \n    <!-- ALWAYS INCLUDE CARD GRID SECTION -->\n    <div class=\"section\">\n        <h2>Card Grid Section</h2>\n        <p>Introduction to the cards goes here...</p>\n        \n        <div class=\"card-grid\">\n            <div class=\"card\">\n                <div class=\"icon\">🔍</div>\n                <h3>Card Title</h3>\n                <p>Card content goes here...</p>\n            </div>\n            <!-- More cards -->\n        </div>\n    </div>\n    \n    <!-- ALWAYS INCLUDE FEATURE LIST -->\n    <div class=\"section\">\n        <h2>Feature List Section</h2>\n        <p>Introduction to features...</p>\n        \n        <ul class=\"feature-list\">\n            <li>Feature item one...</li>\n            <!-- More features -->\n        </ul>\n    </div>\n    \n    <!-- ALWAYS INCLUDE QUOTE -->\n    <div class=\"quote\">\n        \"An insightful quote that reinforces the main message of the document.\"\n    </div>\n    \n    <!-- ALWAYS INCLUDE CTA SECTION -->\n    <div class=\"cta-section\">\n        <h2>Call to Action Heading</h2>\n        <p>Description of what action to take...</p>\n        <a href=\"#\" class=\"btn\">Action Button</a>\n    </div>\n    \n    <!-- More sections as needed -->\n</body>\n</html>\n```\n\nCRITICAL OUTPUT REQUIREMENTS:\n1. Follow this structure EXACTLY - especially the header, cards, feature lists, quote, and CTA sections\n2. Keep ALL the styling including the gradients, shadows, borders, and decorative elements\n3. Use the exact same CSS variables and color scheme\n4. Include the decorative pseudo-elements (::before, ::after) for visual interest\n5. Match the font sizing and spacing exactly \n6. Ensure all interactive elements have hover states\n7. DO NOT include any footers, headers, page numbers, or copyright notices\n8. When using this template, simply replace the placeholder content with relevant information\n9. Maintain the exact card grid layout with icons and hover effects\n10. Keep the quote styling with the large decorative quotation marks\n11. Include the stat-row display when appropriate\n\nFor ANY content you create using this template:\n- Preserve ALL the styling and visual elements\n- Only change the actual TEXT content, not the structure or design\n- Ensure the header has the badge, title, and subtitle\n- Use beautiful typography with proper hierarchy\n- Include at least one card grid section with icons\n- Include at least one feature list with styled bullets\n- Always include the quote with decorative quotation marks\n- Always include the CTA section with gradient background and button\n- NEVER add copyright notices, page numbers, or footers\n\nThis is not just about content - it is about PERFECT visual execution of the specified design system."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        3780,
+        900
+      ],
+      "id": "b2ccd39d-7bd1-49ea-b6cd-12abee4c82ac",
+      "name": "Research Metaprompt"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this to search the internet for research",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization",
+              "valueProvider": "fieldValue",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            {
+              "name": "query"
+            },
+            {
+              "name": "max_results",
+              "valueProvider": "fieldValue",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        4040,
+        1160
+      ],
+      "id": "f7ca996a-a492-4f41-ae8d-b191318deee7",
+      "name": "Tavily1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pdf.co/v1/pdf/convert/from/html",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "itsssssjack@outlook.com_hoVaBIY9w2B97CPRqrQOOnGv4XjqYUVw1sJ280w2PDieNkbPs9lJLyRQG45y32PU"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "html",
+              "value": "={{ $('Research Metaprompt').item.json.output }}"
+            },
+            {
+              "name": "name",
+              "value": "dental_practice_leadership_guide.pdf"
+            },
+            {
+              "name": "margins",
+              "value": "20mm 15mm 20mm 15mm"
+            },
+            {
+              "name": "paperSize",
+              "value": "A4"
+            },
+            {
+              "name": "orientation",
+              "value": "Portrait"
+            },
+            {
+              "name": "printBackground",
+              "value": "true"
+            },
+            {
+              "name": "mediaType",
+              "value": "print"
+            },
+            {
+              "name": "header",
+              "value": "<div style=\"width:100%; text-align:center; color:#888; font-size:10px;\">Premium Dental Practice Management Guide</div>"
+            },
+            {
+              "name": "footer",
+              "value": "<div style=\"width:100%; display:flex; justify-content:space-between; color:#888; font-size:9px;\"><span>© 2025 Dental Excellence</span><span>Page <span class=\"pageNumber\"></span> of <span class=\"totalPages\"></span></span></div>"
+            },
+            {
+              "name": "async",
+              "value": "false"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4200,
+        900
+      ],
+      "id": "9c81d174-da90-4c3d-b5f4-b46ae9a10882",
+      "name": "HTTP Request1"
+    }
+  ],
+  "pinData": {
+    "Code": [
+      {
+        "json": {
+          "idea_1": {
+            "concise_summary": "Recent discussions on whether a group of average men could defeat a gorilla have reignited interest in animal vs. human strength dynamics.",
+            "angle_approach": "Looking at the recent viral debate about men versus gorillas, it's intriguing to reflect on how misconceptions of strength can influence business decisions and perceptions in the dental field.",
+            "details": "- Wildlife experts assert that approximately 30-50 unarmed men may be required to potentially overwhelm a gorilla due to their immense strength and size.\n- Gorillas possess bone-crushing power, which is significantly greater than that of an average human.\n- A viral tweet by MrBeast on social media has drawn millions into the debate regarding how many men it would take to defeat a gorilla, with varied expert opinions shared across platforms.",
+            "relevance": "Understanding the strength dynamics can translate to better strategies for dentists in their marketing and patient interactions. Addressing misconceptions can be crucial when positioning services to patients, especially when it comes to competitive marketing."
+          },
+          "idea_2": {
+            "concise_summary": "The '100 men vs. gorilla' debate serves as a pop-culture phenomenon that challenges our understanding of physical capabilities among species.",
+            "angle_approach": "In a world where strength is often misrepresented, reflecting on the '100 men versus gorilla' discussion can lead to meaningful insights on how dental professionals market their services. Are we sometimes neglecting the power of community when positioning ourselves against larger competitors?",
+            "details": "- Recent articles highlight that while an overwhelming number of humans could, in theory, take down a gorilla, the practical implications would be fraught with difficulty and ethical considerations.\n- The debate has attracted views from notable public figures and gone viral, suggesting a strong public interest in animal behavior and strength comparisons.\n- Experts reiterate the gorilla's innate advantages in any confrontational scenario, underlining the absurdity of the original question.",
+            "relevance": "This debate can parallel the competitive landscape in dentistry where practices need to effectively communicate their unique strengths to attract patients, rather than simply relying on numbers."
+          },
+          "idea_3": {
+            "concise_summary": "Discussions surrounding human versus gorilla fighting power have uncovered insights into human aggression and societal perceptions.",
+            "angle_approach": "Applying the insights from the gorilla debate encourages dental practice owners to rethink their approaches to handling patients and competitors alike. What lessons can we derive from redefining strength and aggression?",
+            "details": "- Research indicates that humans exhibit complexities in aggression when compared to primates, often driven by societal and environmental factors.\n- The gorilla's response to threats is often correlated with its instinctive nature of self-preservation and territory defense, which could lead to reflections on how humans protect their interests in business.\n- Comparisons have been made not only between human capabilities and those of gorillas but also within the context of how societal structures influence perceptions of strength and vulnerability.",
+            "relevance": "These insights can help dental practice owners develop more empathetic communication strategies with patients and navigate competitive challenges more effectively."
+          },
+          "Tone of voice": "Professional.",
+          "Topic": "What does the science say about how many men it would take to defeat a gorilla?",
+          "Platform": "LinkedIn",
+          "Avatar": "Dental practice owners.",
+          "problem you solve": "",
+          "CTA": "",
+          "Make Content on": ""
+        }
+      }
+    ],
+    "AI Agent1": [
+      {
+        "json": {
+          "output": {
+            "state": "Recent debates about whether a group of average men could defeat a gorilla highlight how easily misconceptions about strength and power spread—and how these misconceptions can shape business perceptions, including in dentistry.\n\nWildlife experts estimate that it would take 30 to 50 unarmed men to overpower a gorilla, whose bone-crushing strength far surpasses that of an average human. This viral discussion, sparked by a tweet from MrBeast, has drawn millions into a conversation that extends beyond animal strength to how we assess and present our own capabilities.\n\nSo, what can dental practice owners learn from this? Just as many underestimate the true power of a gorilla, patients may have misconceptions about your practice's value or offerings. Misunderstandings can lead to missed opportunities in patient acquisition and retention.\n\nAre your marketing messages clearly communicating your unique strengths? Do your patient interactions address common misconceptions and build trust?\n\nTaking a step back to understand where gaps in perception exist—and addressing them strategically—can make the difference between standing out or getting lost in the noise.\n\nLet's discuss how clarifying these strengths can transform your practice's growth strategy. What misconceptions are you encountering from patients, and how are you addressing them? \n\nLooking forward to your thoughts and experiences on this! 💡\n\n#DentalMarketing #PatientEngagement #BusinessStrategy #DentalPracticeGrowth #CommunicationInsights"
+          }
+        }
+      }
+    ],
+    "AI Agent2": [
+      {
+        "json": {
+          "output": {
+            "state": "In discussions about how many men it might take to defeat a gorilla, science offers a grounded perspective rather than sensational myths. Gorillas are incredibly strong—far stronger than an average human male, with estimates suggesting a gorilla can have the strength of up to 10 adult men in specific physical feats. This means that even a team would face daunting challenges against a gorilla’s raw power and agility.\n\nFor dental practice owners, this analogy serves as a reminder of the value of strength in numbers and strategy. Just as confronting a gorilla alone isn’t advisable, running a successful practice without a strong, coordinated team and strategic planning is equally unwise.\n\nHave you ever faced a challenge in your practice that felt like taking on a gorilla? How did your team’s combined strength and strategic approach make the difference?\n\nStrong teams win battles and build thriving practices. Let’s use this as motivation to invest in building our teams, sharing expertise, and supporting each other.\n\nWhat’s your experience with teamwork overcoming big challenges? Share your stories—let’s learn from each other! 💪🦍",
+            "cities": [
+              "#DentalPractice",
+              " #Teamwork",
+              " #Leadership",
+              " #StrengthInNumbers",
+              " #PracticeManagement"
+            ]
+          }
+        }
+      }
+    ],
+    "AI Agent3": [
+      {
+        "json": {
+          "output": {
+            "state": "When it comes to strength and combat capability, science clearly shows that a single gorilla far outweighs the physical power of a single man. Gorillas can lift up to 10 times their body weight, possess immense muscle strength, and have powerful bites. So how many men would it realistically take to defeat one gorilla? Experts suggest it would require multiple skilled and determined individuals working together, with a number likely exceeding three or four to safely and effectively manage such a powerful animal.\n\nFor dental practice owners, this might seem like a rare scenario, but the lesson is valuable. Just as it takes a strong team effort and careful strategy to manage a gorilla, growing and maintaining a successful dental practice demands collaboration, planning, and the right support system.\n\nHave you ever faced seemingly 'impossible' challenges in your practice where teamwork made all the difference? Share your experiences.\n\nRemember, no one can succeed alone, whether in managing strength or building a dental practice. Let’s explore how we can foster stronger teams and strategies to tackle the toughest challenges together. 💪\n\n#DentalPractice #Teamwork #Leadership #PracticeManagement #GrowthStrategy"
+          }
+        }
+      }
+    ],
+    "Edit Fields": [
+      {
+        "json": {
+          "Tone of voice": "Professional.",
+          "Topic": "What does the science say about how many men it would take to defeat a gorilla?",
+          "Platform": "LinkedIn",
+          "Avatar": "Dental practice owners."
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tavily": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompter": {
+      "main": [
+        [
+          {
+            "node": "💎 Generate Images",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "💎 Generate Images": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        []
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent2": {
+      "main": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent2",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "AI Agent3",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent3": {
+      "main": [
+        [
+          {
+            "node": "Research Metaprompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Research Metaprompt",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research Metaprompt": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tavily1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Research Metaprompt",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "7b198188-2f28-4db2-8809-42f7d3840027",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1ad5536c7c55ace0cd2d13b5ee509a9d5436e829bf5adf69ed3e58c359b43097"
+  },
+  "id": "HaipErbXcdMzTlJg",
+  "tags": []
+}
