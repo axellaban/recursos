@@ -1,0 +1,862 @@
+{
+  "name": "🔥 RAG System :: Reglamento de Golf + Shop:: GEMINI FILE SEARCH",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Doc Upload",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "File",
+              "fieldType": "file",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        672,
+        400
+      ],
+      "id": "942768b8-1198-4019-8630-9461e521abbd",
+      "name": "On form submission",
+      "webhookId": "2e20e6c8-8736-44d5-83c5-a9f2eae405f4"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        736,
+        96
+      ],
+      "id": "febfeffc-76a5-4ce9-88f2-57a404abbf89",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/fileSearchStores",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "displayName",
+              "value": "knowledgebase"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        928,
+        96
+      ],
+      "id": "b43cda38-1e79-449f-bebf-cef29d90076d",
+      "name": "Create File Store",
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "Exg4RaBiSNaNNh97",
+          "name": "Google File Search 12/2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://generativelanguage.googleapis.com/upload/v1beta/files",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "File",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        880,
+        400
+      ],
+      "id": "0899f08c-2192-4d88-9f41-31b3375ac161",
+      "name": "Upload File",
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "Exg4RaBiSNaNNh97",
+          "name": "Google File Search 12/2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/fileSearchStores/knowledgebase-i0dhxkg4a88s:importFile",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "file_name",
+              "value": "={{ $json.file.name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1072,
+        400
+      ],
+      "id": "312f3db4-d2e4-46e5-8cfa-18e91e7d62fa",
+      "name": "Import File",
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "Exg4RaBiSNaNNh97",
+          "name": "Google File Search 12/2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "source": "googleSheets",
+        "documentId": {
+          "__rl": true,
+          "value": "1deG-LrBnqLhSb4yDKlXLGijyZWAGjQeYk6NNP16rDI8",
+          "mode": "list",
+          "cachedResultName": "Copia de RAG Evaluation\n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1deG-LrBnqLhSb4yDKlXLGijyZWAGjQeYk6NNP16rDI8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1deG-LrBnqLhSb4yDKlXLGijyZWAGjQeYk6NNP16rDI8/edit#gid=0"
+        }
+      },
+      "type": "n8n-nodes-base.evaluationTrigger",
+      "typeVersion": 4.7,
+      "position": [
+        656,
+        992
+      ],
+      "id": "73733d81-85a2-4cd6-b151-c70bc8738f83",
+      "name": "When fetching a dataset row",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRiV61jfKaQsuZzo",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "##  Create Store",
+        "height": 288,
+        "width": 608,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        592,
+        0
+      ],
+      "id": "ef729c27-dd26-41d1-8954-c8ba17fd2ab9",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "##  Upload File\n",
+        "height": 288,
+        "width": 704,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        592,
+        304
+      ],
+      "id": "89c9d673-1dd6-4e6a-83b1-117ac08c0bcd",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        704,
+        672
+      ],
+      "id": "5024dc99-db49-4a1b-9752-be0e16894345",
+      "name": "When chat message received",
+      "webhookId": "f61815ce-f800-4913-a5d3-69303910022f"
+    },
+    {
+      "parameters": {
+        "content": "##  Query\n",
+        "height": 288,
+        "width": 704,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        592,
+        608
+      ],
+      "id": "9783db2a-16e3-4df5-84fa-8088d470e53d",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "##  Query\n",
+        "height": 288,
+        "width": 1056,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        592,
+        912
+      ],
+      "id": "2f49641d-2616-4372-83a8-c3ed76ae30ad",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        { \"text\": \"{{ $fromAI(\"query\",\"the question the user needs an answer to\") }}\" }\n      ]\n    }\n  ],\n  \"tools\": [\n    {\n      \"file_search\": {\n        \"file_search_store_names\": [\n          \"fileSearchStores/knowledgebase-i0dhxkg4a88s\"\n        ]\n      }\n    }\n  ]\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.3,
+      "position": [
+        1104,
+        800
+      ],
+      "id": "30f639e4-f641-4165-ace3-dab1a8c7b78c",
+      "name": "Knowledge Base",
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "Exg4RaBiSNaNNh97",
+          "name": "Google File Search 12/2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=Eres un agente RAG útil. Tu trabajo es responder la pregunta del usuario utilizando tu herramienta de Base de Conocimientos para asegurarte de que todas tus respuestas estén fundamentadas en la verdad. Por favor, cita tus fuentes cuando des tus respuestas.\n\n\n\nCuando envíes una consulta a la herramienta de Base de Conocimientos, envía únicamente texto. Sin signos de puntuación, comillas, ni saltos de línea."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        880,
+        672
+      ],
+      "id": "fbc38357-df79-473a-b01f-1916763da0e8",
+      "name": "RAG Agent"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.Input }}",
+        "options": {
+          "systemMessage": "=Eres un agente RAG útil. Tu trabajo es responder la pregunta del usuario utilizando tu herramienta de Base de Conocimientos para asegurarte de que todas tus respuestas estén fundamentadas en la verdad. Por favor, cita tus fuentes cuando des tus respuestas.\n\nCuando envíes una consulta a la herramienta de Base de Conocimientos, envía únicamente texto. Sin signos de puntuación, comillas, ni saltos de línea."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3,
+      "position": [
+        848,
+        976
+      ],
+      "id": "7cd4c14c-5d96-4dd8-8565-316862b63b0a",
+      "name": "Eval Agent"
+    },
+    {
+      "parameters": {
+        "source": "googleSheets",
+        "documentId": {
+          "__rl": true,
+          "value": "1deG-LrBnqLhSb4yDKlXLGijyZWAGjQeYk6NNP16rDI8",
+          "mode": "list",
+          "cachedResultName": "RAG Evaluation",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1deG-LrBnqLhSb4yDKlXLGijyZWAGjQeYk6NNP16rDI8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1deG-LrBnqLhSb4yDKlXLGijyZWAGjQeYk6NNP16rDI8/edit#gid=0"
+        },
+        "outputs": {
+          "values": [
+            {
+              "outputName": "Score",
+              "outputValue": "={{ $json.Correctness }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.evaluation",
+      "typeVersion": 4.8,
+      "position": [
+        1456,
+        992
+      ],
+      "id": "ff02d9ed-013a-4969-9945-4151d15692ba",
+      "name": "Set Metrics",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRiV61jfKaQsuZzo",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "setMetrics",
+        "expectedAnswer": "={{ $('When fetching a dataset row').item.json['Expected Answer'] }}",
+        "actualAnswer": "={{ $json.output }}",
+        "prompt": "=Eres un evaluador factual experto que evalúa la exactitud de las respuestas en comparación con verdades fundamentales (datos de referencia) establecidas.\n\nEvalúa la exactitud factual de una salida dada en comparación con la verdad fundamental proporcionada en una escala del 1 al 5. Usa un razonamiento detallado para analizar exhaustivamente todas las afirmaciones antes de determinar la puntuación final.\n\n# Criterios de Puntuación\n\n- 5: Altamente similar - La salida y la verdad fundamental son casi idénticas, con solo diferencias menores e insignificantes.\n- 4: Algo similar - La salida es en gran medida similar a la verdad fundamental, pero tiene algunas diferencias notables.\n- 3: Moderadamente similar - Hay algunas diferencias evidentes, pero la esencia principal se captura en la salida.\n- 2: Ligeramente similar - La salida solo captura algunos elementos de la verdad fundamental y contiene varias diferencias.\n- 1: No similar - La salida es significativamente diferente de la verdad fundamental, con pocos o ningún elemento coincidente.\n\n# Pasos de Evaluación\n\n1. Identifica y enumera los elementos clave presentes tanto en la salida como en la verdad fundamental.\n2. Compara estos elementos clave para evaluar sus similitudes y diferencias, considerando tanto el contenido como la estructura.\n3. Analiza el significado semántico transmitido tanto por la salida como por la verdad fundamental, observando cualquier desviación significativa.\n4. Considera la exactitud factual de los detalles específicos, incluyendo nombres, fechas, números y relaciones.\n5. Evalúa si la salida mantiene la integridad factual de la verdad fundamental, incluso si está expresada de manera diferente.\n6. Determina el nivel general de similitud y exactitud de acuerdo con los criterios definidos.\n\n# Formato de Salida\n\nProporciona:\n- Un análisis detallado de la comparación (razonamiento extendido)\n- Un resumen de una oración destacando las diferencias clave (no las similitudes)\n- La puntuación de similitud final como un número entero (1, 2, 3, 4 o 5)\n\nSigue siempre el formato JSON a continuación y no devuelvas nada más:\n{\n  \"extended_reasoning\": \"<análisis detallado paso a paso de la exactitud factual y la similitud>\",\n  \"reasoning_summary\": \"<resumen de una oración enfocado en las diferencias clave>\",\n  \"score\": <número: entero del 1 al 5>\n}\n\n# Ejemplos\n\n**Ejemplo 1:**\n\nEntrada:\n- Salida: \"El gato se sentó en el tapete.\"\n- Verdad Fundamental: \"El felino está sentado en la alfombra.\"\n\nSalida Esperada:\n{\n  \"extended_reasoning\": \"Necesito comparar 'El gato se sentó en el tapete' con 'El felino está sentado en la alfombra'. Primero, debo identificar los elementos clave: ambos describen a un animal ('gato' vs 'felino') en una posición ('se sentó' vs 'está sentado') sobre una superficie ('tapete' vs 'alfombra'). El sujeto es semánticamente idéntico: 'gato' y 'felino' se refieren al mismo animal. La acción también es semánticamente equivalente: 'se sentó' y 'está sentado' describen la misma posición, aunque una está en tiempo pasado y la otra en presente continuo. La ubicación difiere en la formulación específica ('tapete' vs 'alfombra'), pero ambas se refieren a cubiertas de piso que cumplen la misma función. La estructura básica y el significado de ambas oraciones se conservan, aunque usan un vocabulario diferente y un tiempo verbal ligeramente distinto. La información central que se transmite es la misma, pero hay diferencias notables en la redacción.\",\n  \"reasoning_summary\": \"Las oraciones difieren en la elección del vocabulario ('gato' vs 'felino', 'tapete' vs 'alfombra') y el tiempo verbal ('se sentó' vs 'está sentado').\",\n  \"score\": 3\n}\n\n**Ejemplo 2:**\n\nEntrada:\n- Salida: \"El rápido zorro marrón salta sobre el perro perezoso.\"\n- Verdad Fundamental: \"Un veloz animal castaño brinca sobre un canino dormido.\"\n\nSalida Esperada:\n{\n  \"extended_reasoning\": \"Necesito comparar 'El rápido zorro marrón salta sobre el perro perezoso' con 'Un veloz animal castaño brinca sobre un canino dormido'. Empezando por los sujetos: 'rápido zorro marrón' vs 'veloz animal castaño'. Ambos describen a la misma entidad (un zorro es un tipo de animal) con los mismos atributos (rápido/veloz y marrón/castaño). La acción se describe como 'salta' vs 'brinca', que son verbos sinónimos que describen el mismo movimiento. El objeto en ambas oraciones es un perro, descrito como 'perezoso' en una y 'dormido' en la otra, que son conceptos relacionados (un perro dormido podría percibirse como perezoso). La estructura sigue el mismo patrón: sujeto + acción + sobre + objeto. Las oraciones transmiten la misma escena con elecciones de palabras ligeramente diferentes que mantienen el significado central. El nivel de especificidad difiere ligeramente ('zorro' vs 'animal', 'perro' vs 'canino'), pero la información subyacente y las imágenes siguen siendo muy similares.\",\n  \"reasoning_summary\": \"Las oraciones usan terminología diferente pero sinónima ('rápido' vs 'veloz', 'salta' vs 'brinca', 'perezoso' vs 'dormido') y niveles variables de especificidad ('zorro' vs 'animal', 'perro' vs 'canino').\",\n  \"score\": 4\n}\n\n# Notas\n\n- Concéntrate principalmente en la exactitud factual y la similitud semántica, no en el estilo de escritura o las diferencias de redacción.\n- Identifica diferencias específicas en lugar de hacer evaluaciones generales.\n- Presta especial atención a fechas, números, nombres, ubicaciones y relaciones causales cuando estén presentes.\n- Considera la importancia de cada diferencia en el contexto de la información general.\n- Sé consistente en tu enfoque de puntuación a lo largo de las diferentes evaluaciones.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.evaluation",
+      "typeVersion": 4.8,
+      "position": [
+        1152,
+        992
+      ],
+      "id": "83b77974-523b-4edd-a359-9afa3d6fc992",
+      "name": "Evaluation"
+    },
+    {
+      "parameters": {
+        "content": "# 🛠️ Setup Guide  \n**Author:** [Nate Herk](https://www.youtube.com/@nateherk)\n\nFollow the steps below to get this Gemini-powered file Q&A system running smoothly:\n\n### ✅ Step 1: Get Your [Gemini API Key](https://aistudio.google.com/app/apikey)  \nGrab your Gemini API key and plug it into the HTTP Request node that powers the agent's responses.\n\n### ✅ Step 2: Link Your File Store  \nMake sure the **name of your file store** is correctly linked in both the `Import File` HTTP Request and the `Knowledge Base` HTTP Request. This ensures your documents get stored and referenced properly.\n\n### ✅ Step 3: Upload Your PDFs  \nChoose the PDFs you want to use for testing. If you want to use the same ones from the tutorial, check the Skool post where I’ve uploaded all three.\n\n### ✅ Step 4: Query the Agent  \nStart chatting with your agent and test out the responses. If you're feeling adventurous, run an evaluation to dig deeper into how well it’s working.\n\nIf you want to run the evaluation, you can also use the same **Google Sheet sample dataset** I used.  \n👉 [Click here to make a copy](https://docs.google.com/spreadsheets/d/1zf9jK8OdSrV4qMLwBjqrfML2tPx2SJmdqmxa4QN5TXU/copy)\n\n### 💡 Bonus Tip  \nWatch the [YouTube tutorial](https://www.youtube.com/@nateherk) for a full walkthrough with examples and file setup!\n",
+        "height": 704,
+        "width": 576
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "6dd661e1-7b04-4840-8f15-df46d0b396a0",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        880,
+        832
+      ],
+      "id": "631b3f27-e575-4c62-83c8-e0f72db9112b",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "gETDMYu4S0FMW7aL",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 15
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        992,
+        816
+      ],
+      "id": "abb449cd-7521-4302-b29d-1b2bbdef0e26",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "url": "https://generativelanguage.googleapis.com/v1beta/fileSearchStores",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googlePalmApi",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1280,
+        96
+      ],
+      "id": "d242c5b4-6e65-4bdf-a949-dc4e4315ef81",
+      "name": "Listas file Stores",
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "Exg4RaBiSNaNNh97",
+          "name": "Google File Search 12/2025"
+        },
+        "googlePalmApi": {
+          "id": "EpovenHE9Q08SxTD",
+          "name": "Files"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://generativelanguage.googleapis.com/v1beta/{{ $json['fileSearchStores[0].name'] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "googlePalmApi",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "force",
+              "value": "true"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1632,
+        96
+      ],
+      "id": "1a775820-4168-478a-9b40-69ac698d56cd",
+      "name": "Eiliminar File Stores",
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "Exg4RaBiSNaNNh97",
+          "name": "Google File Search 12/2025"
+        },
+        "googlePalmApi": {
+          "id": "EpovenHE9Q08SxTD",
+          "name": "Files"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "fileSearchStores[0].name, fileSearchStores[0].displayName, fileSearchStores[0].createTime, fileSearchStores[0].updateTime, fileSearchStores[0].activeDocumentsCount, fileSearchStores[0].sizeBytes",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1472,
+        96
+      ],
+      "id": "e7412e27-7e7a-4f47-bcb8-8fdfc906b3b9",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "content": "##  Eliminar Store",
+        "height": 288,
+        "width": 608,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1216,
+        0
+      ],
+      "id": "ec9386ba-b169-4f6c-b690-cd04d4198317",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "##  List files",
+        "height": 288,
+        "width": 272,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1840,
+        0
+      ],
+      "id": "883ab6c3-b351-429e-baee-e6f29912da09",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "url": "https://generativelanguage.googleapis.com/v1beta/files",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        1904,
+        96
+      ],
+      "id": "0d4879c5-3d84-4233-a4ea-235be99e50e3",
+      "name": "Listar Archivos",
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "Exg4RaBiSNaNNh97",
+          "name": "Google File Search 12/2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        832,
+        1104
+      ],
+      "id": "87797fe3-063e-4291-98e0-21d455d364a7",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "gETDMYu4S0FMW7aL",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        { \"text\": \"{{ $fromAI(\"query\",\"the question the user needs an answer to\") }}\" }\n      ]\n    }\n  ],\n  \"tools\": [\n    {\n      \"file_search\": {\n        \"file_search_store_names\": [\n          \"fileSearchStores/knowledgebase-i0dhxkg4a88s\"\n        ]\n      }\n    }\n  ]\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.3,
+      "position": [
+        1040,
+        1136
+      ],
+      "id": "8a3b325c-8500-4284-92dd-5dade320171d",
+      "name": "Knowledge Base2",
+      "credentials": {
+        "httpQueryAuth": {
+          "id": "Exg4RaBiSNaNNh97",
+          "name": "Google File Search 12/2025"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        1312,
+        1152
+      ],
+      "id": "39bef7ba-7906-4acc-8e9f-cfbe8fa5f119",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "gETDMYu4S0FMW7aL",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1deG-LrBnqLhSb4yDKlXLGijyZWAGjQeYk6NNP16rDI8",
+          "mode": "list",
+          "cachedResultName": "RAG Evaluation",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1deG-LrBnqLhSb4yDKlXLGijyZWAGjQeYk6NNP16rDI8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 708781135,
+          "mode": "list",
+          "cachedResultName": "golf",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1deG-LrBnqLhSb4yDKlXLGijyZWAGjQeYk6NNP16rDI8/edit#gid=708781135"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        1216,
+        784
+      ],
+      "id": "476353c7-8a64-441a-98b0-c688935bceeb",
+      "name": "Catálogo Pro Shop (Inventario)",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRiV61jfKaQsuZzo",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Upload File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Create File Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload File": {
+      "main": [
+        [
+          {
+            "node": "Import File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When fetching a dataset row": {
+      "main": [
+        [
+          {
+            "node": "Eval Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "RAG Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Knowledge Base": {
+      "ai_tool": [
+        [
+          {
+            "node": "RAG Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Eval Agent": {
+      "main": [
+        [
+          {
+            "node": "Evaluation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Evaluation": {
+      "main": [
+        [
+          {
+            "node": "Set Metrics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "RAG Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "RAG Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Eiliminar File Stores": {
+      "main": [
+        []
+      ]
+    },
+    "Listas file Stores": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Eiliminar File Stores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Eval Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Knowledge Base2": {
+      "ai_tool": [
+        [
+          {
+            "node": "Eval Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Evaluation",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Catálogo Pro Shop (Inventario)": {
+      "ai_tool": [
+        [
+          {
+            "node": "RAG Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "800775e3-da3f-4db9-b25e-337c3ea9b63f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "95f2c14480e4616acd44a57dc42e46becb2a148250af03601e0bfcc6c120c57d"
+  },
+  "id": "GW47bL69c8zAB1C3",
+  "tags": []
+}

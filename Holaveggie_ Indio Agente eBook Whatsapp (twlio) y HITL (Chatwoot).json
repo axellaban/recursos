@@ -1,0 +1,511 @@
+{
+  "name": "Holaveggie: Indio Agente eBook Whatsapp (twlio) y HITL (Chatwoot)",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Mensaje del usuario: {{ $('Datos de Entrada').item.json.contenido }} {{ $('Webhook').item.json.body.attachments[0]?.file_type === 'image' ? 'PAGO HECHO!' : '' }}\n\nNombre del usuario: {{ $('Datos de Entrada').item.json.usuario }}\n",
+        "options": {
+          "systemMessage": "=# 🎯 Rol\nYou are **Indio**, el gato asistente oficial de *HolaVeggie* y del ebook *“El Gran Recetario Plant-Based”*.  \nTu misión: explicar de qué trata el ebook, cómo comprarlo y entregar el enlace de descarga cuando corresponda.  \n\n---\n\n# 🧭 Personalidad\nSimpático, alegre, empático.  \nComunicación clara, cálida y divertida.  \nUsá emojis naturales (🐾🌿💚🍋☀️).  \nCerrá cada mensaje con gratitud o una invitación amable.\nUsá siempre tuteo: \"cuéntame\", \"quieres\", \"puedes\".\n\n---\n\n# ⚙️ Reglas clave\n- Cuando entregues la muestra gratuita, usá ÚNICAMENTE el texto exacto de esa sección. No agregues texto antes, durante ni después. El mensaje de la muestra va solo, sin añadidos.\n- No inventes precios, alias ni enlaces, ni ofrezcas links a nada.  \n- Si la persona dice \"Quiero aprovecharla\" debes responder con la informacion de pago asi puede pagar y corto y al pie.\n- Ofrece a la persona info sobre el ebook o la muestra gratuita.\n- Luego ofrece los metodos de pago.\n- Entregá el link del ebook **solo si recibís el mensaje del usuario “PAGO HECHO” y el email con el cual hizo el pago**.  \n- Respondé siempre con calidez.\n- Si alguien pregunta por garantía o reembolso, \n  confirmá que ofrecemos reembolso total \n  si no están satisfechos. Sin preguntas.\n\n---\n\n# 💰 Precio y formas de pago (NO MODIFICAR)\n> 💰 Precio: 9 USD\n> 📧 PayPal: `https://paypal.me/AXELLABANARZUBI/9`\n> 🏦 El pago va a nombre de *Axel Laban Arzubi*, \n> fundador de HolaVeggie.\n> (Podés verificarlo en holaveggie.com.ar) ✅\n> ⚡ El precio de lanzamiento de 9 USD \n> es por tiempo limitado.\n> 🔒 Sin riesgo: si no te convence, \n> te devolvemos el dinero. Sin preguntas.\n\n\n---\n\n# 🔄 Secuencia de venta  \n- Si la persona escribe \"MUESTRA\" o pide la muestra \ngratuita, enviala de inmediato sin hacer preguntas previas. \nUsa el texto EXACTO definido en la sección \n\"Muestra gratuita\". Nada más.\n- En mensajes donde el usuario muestre interés pero NO haya pedido aún los datos de pago, agregá este CTA una sola vez: \"Si quieres que te reserve el precio de hoy, decime QUIERO MI COPIA y te paso cómo pagar.\"\n- NO agregues este CTA si ya estás mostrando \n  los datos de pago o si el usuario ya dijo \n  QUIERO MI COPIA.\n\n---\n\n# 🎁 Muestra gratuita (TEXTO EXACTO)\n- Cuando alguien pida la muestra o escriba \"MUESTRA\", \nrespondé ÚNICAMENTE con este texto. Sin agregar palabras antes ni después. Sin saludos adicionales. Sin CTAs extras. SOLO este texto, nada más:\n\n> 🎁 Aquí va tu muestra gratuita 👇\n>\n> https://drive.google.com/file/d/1qZu4qPi32sw8ynzzGO2ZzymkoE8heG2x/view?usp=sharing  \n>\n> Es un fragmento real del libro — una receta completa \n> y guía de proteínas vegetales, de las 120 que tiene \n> el recetario completo.\n>\n> Cuando lo veas, me dices qué te pareció 🐱\n\n---\n\n# 📩 Entrega automática del ebook\nSolo brindas acceso al ebook si recibis el mensaje **“PAGO HECHO”** y el email del comprador.\nEn ese caso, respondé **exactamente** con este texto:\n\n> ✅ ¡Pago confirmado!  \n> 🌱 Gracias por confiar en *HolaVeggie*.  \n> Acá tienes tu acceso al *Gran Recetario Plant-Based* 💚  \n> 📁 Descargalo desde este link:  \n> 👉 https://drive.google.com/drive/folders/1bqvkfEbWzMqHlNS1ucpVE8ybYyVcP2HF?usp=sharing  \n> Es un archivo seguro de Google Drive, \n> el mismo que usan millones de personas. 🔒\n> Incluye dos versiones:  \n> 📖 PDF interactivo en alta calidad (para compu o celular)  \n> 📱 PDF liviano optimizado para Kindle o apps de lectura digital  \n> Más de 350 páginas con recetas, hacks y secretos de cocina plant-based.  \n> 💚 Hecho con amor, para que cocines más rico, fácil y consciente.\n\n---\n\n# 📚 Sobre el ebook\nEste ebook es una guía completa, práctica y fácil de seguir para adoptar una alimentación y estilo de vida plant-based.\nReúne filosofía, nutrientes clave, recetas por continente, consejos de cocina, planificación semanal y guías de sustituciones, con el objetivo de inspirar, educar y crear comunidad en torno a la cocina basada en plantas.\nCombina explicaciones claras, recetas sencillas y recorridos culinarios culturales para que la transición sea simple y disfrutable.\n\nIdeal para vos si...\nQuieres una guía estructurada y accesible para comenzar o consolidar tu alimentación plant-based, con interés en comer más saludable y aprender nuevas recetas y conceptos nutricionales.\n\n📋 Cómo aprovecharlo al máximo\n- Alinea tu mentalidad leyendo la filosofía introductoria.\n- Aprende sobre nutrientes clave y desmontá mitos comunes.\n- Organiza tu cocina y tus ingredientes básicos.\n- Explora recetas por regiones del mundo para sumar variedad.\n- Aplica consejos de meal prep y planificación semanal.\n- Usa las guías de sustituciones para recrear sabores familiares sin productos animales.\n- Participa en la comunidad para compartir experiencias.\n-Explora secciones extra sobre frutas y postres.\n\n---\n\n# ❓ Preguntas frecuentes\n**¿Cuántas páginas tiene?** 363.  \n**¿Tiene fotos?** Sí, diseño visual cuidado y fotográfico.  \n**¿Sirve si no soy vegano/a?** Sí, está pensado para cualquiera que quiera comer más plantas.\n**¿Puedo imprimirlo?** Sí, para uso personal.\n**¿Tiene recetas sin gluten o sin azúcar?** Sí, y ofrece sustitutos en las guías.\n**¿Es apto para Kindle?** Sí, es un PDF que se puede leer muy bien en Kindle o apps de lectura digital.\n**¿Puedo regalarlo?** Sí, se puede enviar a otra persona.\n**¿Tiene versión impresa?** No, solo digital.\n**¿Y si tengo algún problema?** Escribí a hola@holaveggie.com.ar\n y lo resolvemos cuanto antes.\n\n---\n\n# 🪶 Resumen del rol\n💬 Informar con precisión y ternura gatuna.  \n🛍️ Vender el ebook con alegría y claridad.  \n📩 Entregar el link cuando se haya realizado el pago"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "af8205b7-5ac8-4c52-9ed9-b4d93e25f6ce",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Datos de Entrada').item.json.chatId }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        480,
+        176
+      ],
+      "id": "ecd6ea32-9fec-4382-9c21-4775e8b97db4",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "94156fcc-868e-4852-92ef-ddac9d219b88",
+              "leftValue": "={{ $json.etiqueta_off }}",
+              "rightValue": false,
+              "operator": {
+                "type": "boolean",
+                "operation": "false",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        176,
+        16
+      ],
+      "id": "3c4ead2d-c2b7-4998-9911-a054f830351e",
+      "name": "If Bot On"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "aa2ffe5a-09e1-4fa5-963d-b25d7cb92a3f",
+              "leftValue": "={{ $json.body.event === 'message_created' && $json.body.conversation.messages[0].sender_type === 'Contact' && $json.body.message_type === 'incoming' }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -128,
+        32
+      ],
+      "id": "07918d95-8190-4818-94cc-f00959779bac",
+      "name": "Filtrar Mensajes"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d68a5623-b82c-46af-812e-cf6ba16b25d5",
+              "name": "serverUrl",
+              "value": "https://customersupport-chatwoot.fu6abb.easypanel.host",
+              "type": "string"
+            },
+            {
+              "id": "e4bb5166-9ed5-43ba-8783-548b5abda461",
+              "name": "accountId",
+              "value": "={{ $json.body.account.id }}",
+              "type": "string"
+            },
+            {
+              "id": "8ced4b6d-c41f-409a-8c67-dee3585cab6c",
+              "name": "conversationId",
+              "value": "={{ $json.body.conversation.id }}",
+              "type": "string"
+            },
+            {
+              "id": "588f073a-c30e-4c9e-b488-3ebc2d6f3cf0",
+              "name": "mensajeId",
+              "value": "={{ $json.body.id }}",
+              "type": "string"
+            },
+            {
+              "id": "845cd6fa-aa5b-46aa-9e88-b14d8f31dd58",
+              "name": "chatId",
+              "value": "={{ $json.body.sender.phone_number }}",
+              "type": "string"
+            },
+            {
+              "id": "5e392035-afd5-4bd4-b296-8f568dfffe92",
+              "name": "contenido",
+              "value": "={{ $json.body.content }}",
+              "type": "string"
+            },
+            {
+              "id": "f8899564-45bc-49ed-96ca-6be1945ce898",
+              "name": "usuario",
+              "value": "={{ $json.body.sender.name }}",
+              "type": "string"
+            },
+            {
+              "id": "58f1dba0-fc0c-4f55-ad1f-a1038b5ae06f",
+              "name": "etiqueta_off",
+              "value": "={{ $json.body?.conversation?.labels?.includes('bot_off') ? true : false }}",
+              "type": "boolean"
+            },
+            {
+              "id": "969085f3-3484-4225-a309-8283aa2a0963",
+              "name": "telefono",
+              "value": "={{ $json.body.conversation.contact_inbox.source_id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        32,
+        16
+      ],
+      "id": "322c05f9-936a-4443-a74b-ce28309652cc",
+      "name": "Datos de Entrada"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook-chatwoot",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -304,
+        32
+      ],
+      "id": "0af8c97e-cc49-412c-a156-8c4d27e2e948",
+      "name": "Webhook",
+      "webhookId": "4236d126-00b3-41fa-a83c-dbd7e3595540"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Datos de Entrada').item.json.serverUrl }}/api/v1/accounts/{{ $('Datos de Entrada').item.json.accountId }}/conversations/{{ $('Datos de Entrada').item.json.conversationId }}/messages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"content\": {{ JSON.stringify($json.output) }},  \n  \"private\": false,  \n  \"message_type\": \"outgoing\",  \n  \"sender\": \n  {    \n      \"type\": \"bot\"  \n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        720,
+        0
+      ],
+      "id": "bbfde823-1bf2-4a35-803b-5616cdfb2737",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "fayRMRpmWSyxki4L",
+          "name": "chatwoot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        336,
+        176
+      ],
+      "id": "05e3cb31-2015-4647-bb58-d6d7a09e0cba",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "EpovenHE9Q08SxTD",
+          "name": "Files"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 🤖 Agent",
+        "height": 480,
+        "width": 1376
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -400,
+        -112
+      ],
+      "typeVersion": 1,
+      "id": "59ce5621-ceba-46c5-9fa2-4d7d7bc280f3",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "# 😃 HITL",
+        "height": 240,
+        "width": 496,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -176,
+        -64
+      ],
+      "typeVersion": 1,
+      "id": "1ac72416-68d3-4e39-b496-8441b1518f03",
+      "name": "Sticky Note1"
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "n8n-n8n.fu6abb.easypanel.host",
+            "user-agent": "rest-client/2.1.0 (linux-musl x86_64) ruby/3.4.4p34",
+            "content-length": "3894",
+            "accept": "application/json",
+            "accept-encoding": "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
+            "content-type": "application/json",
+            "x-forwarded-for": "172.18.0.1",
+            "x-forwarded-host": "n8n-n8n.fu6abb.easypanel.host",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "8913111457fb",
+            "x-real-ip": "172.18.0.1"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "account": {
+              "id": 1,
+              "name": "AI LABS"
+            },
+            "additional_attributes": {},
+            "content_attributes": {},
+            "content_type": "text",
+            "content": "¡Me encanta tu decisión, Laban! 😺💚 Te cuento cómo conseguir tu copia del Gran Recetario Plant-Based:\n\nPara Argentina:\n💵 Valor: 28.500 ARS\n🏦 Transferencia a nombre de Axel Laban Arzubi\n🔗 Alias: holaveggiemp\n\nPara compras internacionales:\n🌎 19 USD vía PayPal\n📧 Link: https://paypal.me/AXELLABANARZUBI?locale.x=es_XC&country.x=AR\n\nApenas realices el pago, avisame con el mensaje “PAGO HECHO” y tu email así te envío el acceso al ebook.\n\n¡Gracias por sumarte a la cocina plant-based! ¿Listo para dar el próximo paso?",
+            "conversation": {
+              "additional_attributes": {},
+              "can_reply": true,
+              "channel": "Channel::TwilioSms",
+              "contact_inbox": {
+                "id": 1,
+                "contact_id": 1,
+                "inbox_id": 1,
+                "source_id": "whatsapp:+5491164090022",
+                "created_at": "2026-02-05T22:42:33.523Z",
+                "updated_at": "2026-02-05T22:42:33.523Z",
+                "hmac_verified": false,
+                "pubsub_token": "KEb1GZPrZAZVPoThShGEiNPn"
+              },
+              "id": 1,
+              "inbox_id": 1,
+              "messages": [
+                {
+                  "id": 117,
+                  "content": "¡Me encanta tu decisión, Laban! 😺💚 Te cuento cómo conseguir tu copia del Gran Recetario Plant-Based:\n\nPara Argentina:  \n💵 Valor: 28.500 ARS  \n🏦 Transferencia a nombre de Axel Laban Arzubi  \n🔗 Alias: holaveggiemp\n\nPara compras internacionales:  \n🌎 19 USD vía PayPal  \n📧 Link: https://paypal.me/AXELLABANARZUBI?locale.x=es_XC&country.x=AR\n\nApenas realices el pago, avisame con el mensaje “PAGO HECHO” y tu email así te envío el acceso al ebook.\n\n¡Gracias por sumarte a la cocina plant-based! ¿Listo para dar el próximo paso?",
+                  "account_id": 1,
+                  "inbox_id": 1,
+                  "conversation_id": 1,
+                  "message_type": 1,
+                  "created_at": 1775028698,
+                  "updated_at": "2026-04-01T07:31:38.737Z",
+                  "private": false,
+                  "status": "sent",
+                  "source_id": null,
+                  "content_type": "text",
+                  "content_attributes": {},
+                  "sender_type": "User",
+                  "sender_id": 1,
+                  "external_source_ids": {},
+                  "additional_attributes": {},
+                  "processed_message_content": "¡Me encanta tu decisión, Laban! 😺💚 Te cuento cómo conseguir tu copia del Gran Recetario Plant-Based:\n\nPara Argentina:  \n💵 Valor: 28.500 ARS  \n🏦 Transferencia a nombre de Axel Laban Arzubi  \n🔗 Alias: holaveggiemp\n\nPara compras internacionales:  \n🌎 19 USD vía PayPal  \n📧 Link: https://paypal.me/AXELLABANARZUBI?locale.x=es_XC&country.x=AR\n\nApenas realices el pago, avisame con el mensaje “PAGO HECHO” y tu email así te envío el acceso al ebook.\n\n¡Gracias por sumarte a la cocina plant-based! ¿Listo para dar el próximo paso?",
+                  "sentiment": {},
+                  "conversation": {
+                    "assignee_id": 1,
+                    "unread_count": 4,
+                    "last_activity_at": 1775028698,
+                    "contact_inbox": {
+                      "source_id": "whatsapp:+5491164090022"
+                    }
+                  },
+                  "sender": {
+                    "id": 1,
+                    "name": "Axel Laban Arzubi",
+                    "available_name": "Axel Laban Arzubi",
+                    "avatar_url": "",
+                    "type": "user",
+                    "availability_status": null,
+                    "thumbnail": ""
+                  }
+                }
+              ],
+              "labels": [],
+              "meta": {
+                "sender": {
+                  "additional_attributes": {},
+                  "custom_attributes": {},
+                  "email": null,
+                  "id": 1,
+                  "identifier": null,
+                  "name": "Laban Arzubi",
+                  "phone_number": "+5491164090022",
+                  "thumbnail": "",
+                  "blocked": false,
+                  "type": "contact"
+                },
+                "assignee": {
+                  "id": 1,
+                  "name": "Axel Laban Arzubi",
+                  "available_name": "Axel Laban Arzubi",
+                  "avatar_url": "",
+                  "type": "user",
+                  "availability_status": null,
+                  "thumbnail": ""
+                },
+                "assignee_type": "User",
+                "team": null,
+                "hmac_verified": false
+              },
+              "status": "open",
+              "custom_attributes": {},
+              "snoozed_until": null,
+              "unread_count": 4,
+              "first_reply_created_at": "2026-02-05T22:42:50.149Z",
+              "priority": null,
+              "waiting_since": 0,
+              "agent_last_seen_at": 1774335824,
+              "contact_last_seen_at": 0,
+              "last_activity_at": 1775028698,
+              "timestamp": 1775028698,
+              "created_at": 1770331353,
+              "updated_at": 1775028698.7778308
+            },
+            "created_at": "2026-04-01T07:31:38.737Z",
+            "id": 117,
+            "inbox": {
+              "id": 1,
+              "name": "indio canada"
+            },
+            "message_type": "outgoing",
+            "private": false,
+            "sender": {
+              "id": 1,
+              "name": "Axel Laban Arzubi",
+              "email": "labanarzubi@gmail.com",
+              "type": "user"
+            },
+            "source_id": null,
+            "event": "message_created"
+          },
+          "webhookUrl": "https://n8n-n8n.fu6abb.easypanel.host/webhook/webhook-chatwoot",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Bot On": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtrar Mensajes": {
+      "main": [
+        [
+          {
+            "node": "Datos de Entrada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Datos de Entrada": {
+      "main": [
+        [
+          {
+            "node": "If Bot On",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Filtrar Mensajes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "9ddeafa2-c1c4-4255-8c8d-f63cc462ad33",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "95f2c14480e4616acd44a57dc42e46becb2a148250af03601e0bfcc6c120c57d"
+  },
+  "id": "SxFTs1LbLypxU3eZkNs3s",
+  "tags": []
+}
